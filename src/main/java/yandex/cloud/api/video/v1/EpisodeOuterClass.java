@@ -133,15 +133,15 @@ public final class EpisodeOuterClass {
     long getDvrSeconds();
 
     /**
-     * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-     * @return The enum numeric value on the wire for status.
+     * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+     * @return The enum numeric value on the wire for visibilityStatus.
      */
-    int getStatusValue();
+    int getVisibilityStatusValue();
     /**
-     * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-     * @return The status.
+     * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+     * @return The visibilityStatus.
      */
-    yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus getStatus();
+    yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus getVisibilityStatus();
 
     /**
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
@@ -224,7 +224,7 @@ public final class EpisodeOuterClass {
       title_ = "";
       description_ = "";
       thumbnailId_ = "";
-      status_ = 0;
+      visibilityStatus_ = 0;
     }
 
     @java.lang.Override
@@ -327,7 +327,7 @@ public final class EpisodeOuterClass {
             case 80: {
               int rawValue = input.readEnum();
 
-              status_ = rawValue;
+              visibilityStatus_ = rawValue;
               break;
             }
             case 802: {
@@ -417,37 +417,37 @@ public final class EpisodeOuterClass {
     }
 
     /**
-     * Protobuf enum {@code yandex.cloud.video.v1.Episode.EpisodeStatus}
+     * Protobuf enum {@code yandex.cloud.video.v1.Episode.VisibilityStatus}
      */
-    public enum EpisodeStatus
+    public enum VisibilityStatus
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>EPISODE_STATUS_UNSPECIFIED = 0;</code>
+       * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
        */
-      EPISODE_STATUS_UNSPECIFIED(0),
+      VISIBILITY_STATUS_UNSPECIFIED(0),
       /**
        * <code>PUBLISHED = 1;</code>
        */
       PUBLISHED(1),
       /**
-       * <code>BANNED = 2;</code>
+       * <code>UNPUBLISHED = 2;</code>
        */
-      BANNED(2),
+      UNPUBLISHED(2),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>EPISODE_STATUS_UNSPECIFIED = 0;</code>
+       * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
        */
-      public static final int EPISODE_STATUS_UNSPECIFIED_VALUE = 0;
+      public static final int VISIBILITY_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <code>PUBLISHED = 1;</code>
        */
       public static final int PUBLISHED_VALUE = 1;
       /**
-       * <code>BANNED = 2;</code>
+       * <code>UNPUBLISHED = 2;</code>
        */
-      public static final int BANNED_VALUE = 2;
+      public static final int UNPUBLISHED_VALUE = 2;
 
 
       public final int getNumber() {
@@ -464,7 +464,7 @@ public final class EpisodeOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static EpisodeStatus valueOf(int value) {
+      public static VisibilityStatus valueOf(int value) {
         return forNumber(value);
       }
 
@@ -472,24 +472,24 @@ public final class EpisodeOuterClass {
        * @param value The numeric wire value of the corresponding enum entry.
        * @return The enum associated with the given numeric wire value.
        */
-      public static EpisodeStatus forNumber(int value) {
+      public static VisibilityStatus forNumber(int value) {
         switch (value) {
-          case 0: return EPISODE_STATUS_UNSPECIFIED;
+          case 0: return VISIBILITY_STATUS_UNSPECIFIED;
           case 1: return PUBLISHED;
-          case 2: return BANNED;
+          case 2: return UNPUBLISHED;
           default: return null;
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<EpisodeStatus>
+      public static com.google.protobuf.Internal.EnumLiteMap<VisibilityStatus>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          EpisodeStatus> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<EpisodeStatus>() {
-              public EpisodeStatus findValueByNumber(int number) {
-                return EpisodeStatus.forNumber(number);
+          VisibilityStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<VisibilityStatus>() {
+              public VisibilityStatus findValueByNumber(int number) {
+                return VisibilityStatus.forNumber(number);
               }
             };
 
@@ -510,9 +510,9 @@ public final class EpisodeOuterClass {
         return yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final EpisodeStatus[] VALUES = values();
+      private static final VisibilityStatus[] VALUES = values();
 
-      public static EpisodeStatus valueOf(
+      public static VisibilityStatus valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -526,11 +526,11 @@ public final class EpisodeOuterClass {
 
       private final int value;
 
-      private EpisodeStatus(int value) {
+      private VisibilityStatus(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Episode.EpisodeStatus)
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Episode.VisibilityStatus)
     }
 
     private int accessRightsCase_ = 0;
@@ -871,23 +871,23 @@ public final class EpisodeOuterClass {
       return dvrSeconds_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 10;
-    private int status_;
+    public static final int VISIBILITY_STATUS_FIELD_NUMBER = 10;
+    private int visibilityStatus_;
     /**
-     * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-     * @return The enum numeric value on the wire for status.
+     * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+     * @return The enum numeric value on the wire for visibilityStatus.
      */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
+    @java.lang.Override public int getVisibilityStatusValue() {
+      return visibilityStatus_;
     }
     /**
-     * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-     * @return The status.
+     * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+     * @return The visibilityStatus.
      */
-    @java.lang.Override public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus getStatus() {
+    @java.lang.Override public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus getVisibilityStatus() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus result = yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.valueOf(status_);
-      return result == null ? yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.UNRECOGNIZED : result;
+      yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus result = yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.valueOf(visibilityStatus_);
+      return result == null ? yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.UNRECOGNIZED : result;
     }
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 1000;
@@ -1045,8 +1045,8 @@ public final class EpisodeOuterClass {
       if (dvrSeconds_ != 0L) {
         output.writeInt64(9, dvrSeconds_);
       }
-      if (status_ != yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.EPISODE_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(10, status_);
+      if (visibilityStatus_ != yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.VISIBILITY_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(10, visibilityStatus_);
       }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
@@ -1099,9 +1099,9 @@ public final class EpisodeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, dvrSeconds_);
       }
-      if (status_ != yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.EPISODE_STATUS_UNSPECIFIED.getNumber()) {
+      if (visibilityStatus_ != yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.VISIBILITY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(10, status_);
+          .computeEnumSize(10, visibilityStatus_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1158,7 +1158,7 @@ public final class EpisodeOuterClass {
       }
       if (getDvrSeconds()
           != other.getDvrSeconds()) return false;
-      if (status_ != other.status_) return false;
+      if (visibilityStatus_ != other.visibilityStatus_) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -1216,8 +1216,8 @@ public final class EpisodeOuterClass {
       hash = (37 * hash) + DVR_SECONDS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDvrSeconds());
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
+      hash = (37 * hash) + VISIBILITY_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + visibilityStatus_;
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1397,7 +1397,7 @@ public final class EpisodeOuterClass {
         }
         dvrSeconds_ = 0L;
 
-        status_ = 0;
+        visibilityStatus_ = 0;
 
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
@@ -1456,7 +1456,7 @@ public final class EpisodeOuterClass {
           result.finishTime_ = finishTimeBuilder_.build();
         }
         result.dvrSeconds_ = dvrSeconds_;
-        result.status_ = status_;
+        result.visibilityStatus_ = visibilityStatus_;
         if (accessRightsCase_ == 1000) {
           if (publicAccessBuilder_ == null) {
             result.accessRights_ = accessRights_;
@@ -1563,8 +1563,8 @@ public final class EpisodeOuterClass {
         if (other.getDvrSeconds() != 0L) {
           setDvrSeconds(other.getDvrSeconds());
         }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
+        if (other.visibilityStatus_ != 0) {
+          setVisibilityStatusValue(other.getVisibilityStatusValue());
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -2372,56 +2372,56 @@ public final class EpisodeOuterClass {
         return this;
       }
 
-      private int status_ = 0;
+      private int visibilityStatus_ = 0;
       /**
-       * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-       * @return The enum numeric value on the wire for status.
+       * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+       * @return The enum numeric value on the wire for visibilityStatus.
        */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
+      @java.lang.Override public int getVisibilityStatusValue() {
+        return visibilityStatus_;
       }
       /**
-       * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-       * @param value The enum numeric value on the wire for status to set.
+       * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+       * @param value The enum numeric value on the wire for visibilityStatus to set.
        * @return This builder for chaining.
        */
-      public Builder setStatusValue(int value) {
+      public Builder setVisibilityStatusValue(int value) {
         
-        status_ = value;
+        visibilityStatus_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-       * @return The status.
+       * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+       * @return The visibilityStatus.
        */
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus getStatus() {
+      public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus getVisibilityStatus() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus result = yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.valueOf(status_);
-        return result == null ? yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus.UNRECOGNIZED : result;
+        yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus result = yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.valueOf(visibilityStatus_);
+        return result == null ? yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
-       * @param value The status to set.
+       * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
+       * @param value The visibilityStatus to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.EpisodeStatus value) {
+      public Builder setVisibilityStatus(yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        status_ = value.getNumber();
+        visibilityStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.Episode.EpisodeStatus status = 10;</code>
+       * <code>.yandex.cloud.video.v1.Episode.VisibilityStatus visibility_status = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearStatus() {
+      public Builder clearVisibilityStatus() {
         
-        status_ = 0;
+        visibilityStatus_ = 0;
         onChanged();
         return this;
       }
@@ -3860,27 +3860,28 @@ public final class EpisodeOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/video/v1/episode.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
-      "mestamp.proto\"\215\005\n\007Episode\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "mestamp.proto\"\246\005\n\007Episode\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tstream_id\030\002 \001(\t\022\017\n\007line_id\030\003 \001(\t\022\r\n\005tit" +
       "le\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022\024\n\014thumbna" +
       "il_id\030\006 \001(\t\022.\n\nstart_time\030\007 \001(\0132\032.google" +
       ".protobuf.Timestamp\022/\n\013finish_time\030\010 \001(\013" +
       "2\032.google.protobuf.Timestamp\022\023\n\013dvr_seco" +
-      "nds\030\t \001(\003\022<\n\006status\030\n \001(\0162,.yandex.cloud" +
-      ".video.v1.Episode.EpisodeStatus\022J\n\rpubli" +
-      "c_access\030\350\007 \001(\01320.yandex.cloud.video.v1." +
-      "EpisodePublicAccessRightsH\000\022S\n\022auth_syst" +
-      "em_access\030\352\007 \001(\01324.yandex.cloud.video.v1" +
-      ".EpisodeAuthSystemAccessRightsH\000\022.\n\ncrea" +
-      "ted_at\030d \001(\0132\032.google.protobuf.Timestamp" +
-      "\022.\n\nupdated_at\030e \001(\0132\032.google.protobuf.T" +
-      "imestamp\"J\n\rEpisodeStatus\022\036\n\032EPISODE_STA" +
-      "TUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001\022\n\n\006BANN" +
-      "ED\020\002B\017\n\raccess_rightsJ\006\010\351\007\020\352\007\"\033\n\031Episode" +
-      "PublicAccessRights\"\037\n\035EpisodeAuthSystemA" +
-      "ccessRightsB\\\n\031yandex.cloud.api.video.v1" +
-      "Z?github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/video/v1;videob\006proto3"
+      "nds\030\t \001(\003\022J\n\021visibility_status\030\n \001(\0162/.y" +
+      "andex.cloud.video.v1.Episode.VisibilityS" +
+      "tatus\022J\n\rpublic_access\030\350\007 \001(\01320.yandex.c" +
+      "loud.video.v1.EpisodePublicAccessRightsH" +
+      "\000\022S\n\022auth_system_access\030\352\007 \001(\01324.yandex." +
+      "cloud.video.v1.EpisodeAuthSystemAccessRi" +
+      "ghtsH\000\022.\n\ncreated_at\030d \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\"U\n\020VisibilityStat" +
+      "us\022!\n\035VISIBILITY_STATUS_UNSPECIFIED\020\000\022\r\n" +
+      "\tPUBLISHED\020\001\022\017\n\013UNPUBLISHED\020\002B\017\n\raccess_" +
+      "rightsJ\006\010\351\007\020\352\007\"\033\n\031EpisodePublicAccessRig" +
+      "hts\"\037\n\035EpisodeAuthSystemAccessRightsB\\\n\031" +
+      "yandex.cloud.api.video.v1Z?github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/vide" +
+      "o/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3892,7 +3893,7 @@ public final class EpisodeOuterClass {
     internal_static_yandex_cloud_video_v1_Episode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Episode_descriptor,
-        new java.lang.String[] { "Id", "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "Status", "PublicAccess", "AuthSystemAccess", "CreatedAt", "UpdatedAt", "AccessRights", });
+        new java.lang.String[] { "Id", "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "VisibilityStatus", "PublicAccess", "AuthSystemAccess", "CreatedAt", "UpdatedAt", "AccessRights", });
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessRights_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessRights_fieldAccessorTable = new

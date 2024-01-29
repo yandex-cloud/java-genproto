@@ -3248,7 +3248,7 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Greenplum backup that is being created.
+     * ID of the Greenplum backup that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3257,7 +3257,7 @@ public final class BackupServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Greenplum backup that is being created.
+     * ID of the Greenplum backup that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3407,7 +3407,7 @@ public final class BackupServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Greenplum backup that is being created.
+     * ID of the Greenplum backup that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3428,7 +3428,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Greenplum backup that is being created.
+     * ID of the Greenplum backup that is being deleted.
      * </pre>
      *
      * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3867,7 +3867,7 @@ public final class BackupServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Greenplum backup that is being created.
+       * ID of the Greenplum backup that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3887,7 +3887,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum backup that is being created.
+       * ID of the Greenplum backup that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3908,7 +3908,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum backup that is being created.
+       * ID of the Greenplum backup that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3927,7 +3927,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum backup that is being created.
+       * ID of the Greenplum backup that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3941,7 +3941,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Greenplum backup that is being created.
+       * ID of the Greenplum backup that is being deleted.
        * </pre>
        *
        * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4048,35 +4048,44 @@ public final class BackupServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/mdb/greenplum/v1/backup_s" +
       "ervice.proto\022\035yandex.cloud.mdb.greenplum" +
-      ".v1\032\034google/api/annotations.proto\032\035yande" +
-      "x/cloud/validation.proto\032*yandex/cloud/m" +
-      "db/greenplum/v1/backup.proto\"+\n\020GetBacku" +
-      "pRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022Lis" +
-      "tBackupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\023ListBa" +
-      "ckupsResponse\0226\n\007backups\030\001 \003(\0132%.yandex." +
-      "cloud.mdb.greenplum.v1.Backup\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\".\n\023DeleteBackupRequest\022\027\n" +
-      "\tbackup_id\030\001 \001(\tB\004\350\3071\001\"G\n\024DeleteBackupMe" +
-      "tadata\022\021\n\tbackup_id\030\001 \001(\t\022\034\n\ncluster_id\030" +
-      "\002 \001(\tB\010\212\3101\004<=502\271\002\n\rBackupService\022\220\001\n\003Ge" +
-      "t\022/.yandex.cloud.mdb.greenplum.v1.GetBac" +
-      "kupRequest\032%.yandex.cloud.mdb.greenplum." +
-      "v1.Backup\"1\202\323\344\223\002+\022)/managed-greenplum/v1" +
-      "/backups/{backup_id}\022\224\001\n\004List\0221.yandex.c" +
-      "loud.mdb.greenplum.v1.ListBackupsRequest" +
-      "\0322.yandex.cloud.mdb.greenplum.v1.ListBac" +
-      "kupsResponse\"%\202\323\344\223\002\037\022\035/managed-greenplum" +
-      "/v1/backupsBp\n!yandex.cloud.api.mdb.gree" +
-      "nplum.v1ZKgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/greenplum/v1;gree" +
-      "nplumb\006proto3"
+      ".v1\032\034google/api/annotations.proto\032 yande" +
+      "x/cloud/api/operation.proto\032&yandex/clou" +
+      "d/operation/operation.proto\032\035yandex/clou" +
+      "d/validation.proto\032*yandex/cloud/mdb/gre" +
+      "enplum/v1/backup.proto\"+\n\020GetBackupReque" +
+      "st\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBacku" +
+      "psRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\023ListBackupsR" +
+      "esponse\0226\n\007backups\030\001 \003(\0132%.yandex.cloud." +
+      "mdb.greenplum.v1.Backup\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\".\n\023DeleteBackupRequest\022\027\n\tbacku" +
+      "p_id\030\001 \001(\tB\004\350\3071\001\"G\n\024DeleteBackupMetadata" +
+      "\022\021\n\tbackup_id\030\001 \001(\t\022\034\n\ncluster_id\030\002 \001(\tB" +
+      "\010\212\3101\004<=502\377\003\n\rBackupService\022\220\001\n\003Get\022/.ya" +
+      "ndex.cloud.mdb.greenplum.v1.GetBackupReq" +
+      "uest\032%.yandex.cloud.mdb.greenplum.v1.Bac" +
+      "kup\"1\202\323\344\223\002+\022)/managed-greenplum/v1/backu" +
+      "ps/{backup_id}\022\224\001\n\004List\0221.yandex.cloud.m" +
+      "db.greenplum.v1.ListBackupsRequest\0322.yan" +
+      "dex.cloud.mdb.greenplum.v1.ListBackupsRe" +
+      "sponse\"%\202\323\344\223\002\037\022\035/managed-greenplum/v1/ba" +
+      "ckups\022\303\001\n\006Delete\0222.yandex.cloud.mdb.gree" +
+      "nplum.v1.DeleteBackupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"b\202\323\344\223\002+*)/manage" +
+      "d-greenplum/v1/backups/{backup_id}\262\322*-\n\024" +
+      "DeleteBackupMetadata\022\025google.protobuf.Em" +
+      "ptyBp\n!yandex.cloud.api.mdb.greenplum.v1" +
+      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/greenplum/v1;greenplumb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.getDescriptor(),
         });
@@ -4113,12 +4122,15 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.getDescriptor();
   }

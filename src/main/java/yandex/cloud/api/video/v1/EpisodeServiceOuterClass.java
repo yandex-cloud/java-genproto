@@ -10761,11 +10761,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -10773,34 +10781,34 @@ public final class EpisodeServiceOuterClass {
         getEpisodeIdBytes();
 
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-     * @return Whether the ban field is set.
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+     * @return Whether the publish field is set.
      */
-    boolean hasBan();
+    boolean hasPublish();
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-     * @return The ban.
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+     * @return The publish.
      */
-    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getBan();
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getPublish();
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
      */
-    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder getBanOrBuilder();
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder getPublishOrBuilder();
 
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-     * @return Whether the unban field is set.
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+     * @return Whether the unpublish field is set.
      */
-    boolean hasUnban();
+    boolean hasUnpublish();
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-     * @return The unban.
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+     * @return The unpublish.
      */
-    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getUnban();
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getUnpublish();
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
      */
-    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder getUnbanOrBuilder();
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder getUnpublishOrBuilder();
 
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest.ActionCase getActionCase();
   }
@@ -10856,32 +10864,32 @@ public final class EpisodeServiceOuterClass {
               episodeId_ = s;
               break;
             }
-            case 8002: {
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder subBuilder = null;
-              if (actionCase_ == 1000) {
-                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_).toBuilder();
+            case 8018: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder subBuilder = null;
+              if (actionCase_ == 1002) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_).toBuilder();
               }
               action_ =
-                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_);
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_);
                 action_ = subBuilder.buildPartial();
               }
-              actionCase_ = 1000;
+              actionCase_ = 1002;
               break;
             }
-            case 8010: {
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder subBuilder = null;
-              if (actionCase_ == 1001) {
-                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_).toBuilder();
+            case 8026: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder subBuilder = null;
+              if (actionCase_ == 1003) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_).toBuilder();
               }
               action_ =
-                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.parser(), extensionRegistry);
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_);
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_);
                 action_ = subBuilder.buildPartial();
               }
-              actionCase_ = 1001;
+              actionCase_ = 1003;
               break;
             }
             default: {
@@ -10921,8 +10929,8 @@ public final class EpisodeServiceOuterClass {
     public enum ActionCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      BAN(1000),
-      UNBAN(1001),
+      PUBLISH(1002),
+      UNPUBLISH(1003),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -10940,8 +10948,8 @@ public final class EpisodeServiceOuterClass {
 
       public static ActionCase forNumber(int value) {
         switch (value) {
-          case 1000: return BAN;
-          case 1001: return UNBAN;
+          case 1002: return PUBLISH;
+          case 1003: return UNPUBLISH;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -10960,6 +10968,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -10977,6 +10989,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -10995,66 +11011,66 @@ public final class EpisodeServiceOuterClass {
       }
     }
 
-    public static final int BAN_FIELD_NUMBER = 1000;
+    public static final int PUBLISH_FIELD_NUMBER = 1002;
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-     * @return Whether the ban field is set.
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+     * @return Whether the publish field is set.
      */
     @java.lang.Override
-    public boolean hasBan() {
-      return actionCase_ == 1000;
+    public boolean hasPublish() {
+      return actionCase_ == 1002;
     }
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-     * @return The ban.
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+     * @return The publish.
      */
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getBan() {
-      if (actionCase_ == 1000) {
-         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_;
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getPublish() {
+      if (actionCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_;
       }
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+     * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder getBanOrBuilder() {
-      if (actionCase_ == 1000) {
-         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_;
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder getPublishOrBuilder() {
+      if (actionCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_;
       }
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
     }
 
-    public static final int UNBAN_FIELD_NUMBER = 1001;
+    public static final int UNPUBLISH_FIELD_NUMBER = 1003;
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-     * @return Whether the unban field is set.
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+     * @return Whether the unpublish field is set.
      */
     @java.lang.Override
-    public boolean hasUnban() {
-      return actionCase_ == 1001;
+    public boolean hasUnpublish() {
+      return actionCase_ == 1003;
     }
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-     * @return The unban.
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+     * @return The unpublish.
      */
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getUnban() {
-      if (actionCase_ == 1001) {
-         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_;
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getUnpublish() {
+      if (actionCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_;
       }
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+     * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder getUnbanOrBuilder() {
-      if (actionCase_ == 1001) {
-         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_;
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder getUnpublishOrBuilder() {
+      if (actionCase_ == 1003) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_;
       }
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11074,11 +11090,11 @@ public final class EpisodeServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(episodeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, episodeId_);
       }
-      if (actionCase_ == 1000) {
-        output.writeMessage(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_);
+      if (actionCase_ == 1002) {
+        output.writeMessage(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_);
       }
-      if (actionCase_ == 1001) {
-        output.writeMessage(1001, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_);
+      if (actionCase_ == 1003) {
+        output.writeMessage(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_);
       }
       unknownFields.writeTo(output);
     }
@@ -11092,13 +11108,13 @@ public final class EpisodeServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(episodeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, episodeId_);
       }
-      if (actionCase_ == 1000) {
+      if (actionCase_ == 1002) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_);
+          .computeMessageSize(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_);
       }
-      if (actionCase_ == 1001) {
+      if (actionCase_ == 1003) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1001, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_);
+          .computeMessageSize(1003, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11119,13 +11135,13 @@ public final class EpisodeServiceOuterClass {
           .equals(other.getEpisodeId())) return false;
       if (!getActionCase().equals(other.getActionCase())) return false;
       switch (actionCase_) {
-        case 1000:
-          if (!getBan()
-              .equals(other.getBan())) return false;
+        case 1002:
+          if (!getPublish()
+              .equals(other.getPublish())) return false;
           break;
-        case 1001:
-          if (!getUnban()
-              .equals(other.getUnban())) return false;
+        case 1003:
+          if (!getUnpublish()
+              .equals(other.getUnpublish())) return false;
           break;
         case 0:
         default:
@@ -11144,13 +11160,13 @@ public final class EpisodeServiceOuterClass {
       hash = (37 * hash) + EPISODE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEpisodeId().hashCode();
       switch (actionCase_) {
-        case 1000:
-          hash = (37 * hash) + BAN_FIELD_NUMBER;
-          hash = (53 * hash) + getBan().hashCode();
+        case 1002:
+          hash = (37 * hash) + PUBLISH_FIELD_NUMBER;
+          hash = (53 * hash) + getPublish().hashCode();
           break;
-        case 1001:
-          hash = (37 * hash) + UNBAN_FIELD_NUMBER;
-          hash = (53 * hash) + getUnban().hashCode();
+        case 1003:
+          hash = (37 * hash) + UNPUBLISH_FIELD_NUMBER;
+          hash = (53 * hash) + getUnpublish().hashCode();
           break;
         case 0:
         default:
@@ -11319,18 +11335,18 @@ public final class EpisodeServiceOuterClass {
       public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest buildPartial() {
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest(this);
         result.episodeId_ = episodeId_;
-        if (actionCase_ == 1000) {
-          if (banBuilder_ == null) {
+        if (actionCase_ == 1002) {
+          if (publishBuilder_ == null) {
             result.action_ = action_;
           } else {
-            result.action_ = banBuilder_.build();
+            result.action_ = publishBuilder_.build();
           }
         }
-        if (actionCase_ == 1001) {
-          if (unbanBuilder_ == null) {
+        if (actionCase_ == 1003) {
+          if (unpublishBuilder_ == null) {
             result.action_ = action_;
           } else {
-            result.action_ = unbanBuilder_.build();
+            result.action_ = unpublishBuilder_.build();
           }
         }
         result.actionCase_ = actionCase_;
@@ -11387,12 +11403,12 @@ public final class EpisodeServiceOuterClass {
           onChanged();
         }
         switch (other.getActionCase()) {
-          case BAN: {
-            mergeBan(other.getBan());
+          case PUBLISH: {
+            mergePublish(other.getPublish());
             break;
           }
-          case UNBAN: {
-            mergeUnban(other.getUnban());
+          case UNPUBLISH: {
+            mergeUnpublish(other.getUnpublish());
             break;
           }
           case ACTION_NOT_SET: {
@@ -11445,6 +11461,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -11461,6 +11481,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -11478,6 +11502,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -11493,6 +11521,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -11503,6 +11535,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -11520,285 +11556,285 @@ public final class EpisodeServiceOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder> banBuilder_;
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder> publishBuilder_;
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-       * @return Whether the ban field is set.
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+       * @return Whether the publish field is set.
        */
       @java.lang.Override
-      public boolean hasBan() {
-        return actionCase_ == 1000;
+      public boolean hasPublish() {
+        return actionCase_ == 1002;
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
-       * @return The ban.
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
+       * @return The publish.
        */
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getBan() {
-        if (banBuilder_ == null) {
-          if (actionCase_ == 1000) {
-            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_;
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getPublish() {
+        if (publishBuilder_ == null) {
+          if (actionCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_;
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
         } else {
-          if (actionCase_ == 1000) {
-            return banBuilder_.getMessage();
+          if (actionCase_ == 1002) {
+            return publishBuilder_.getMessage();
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
         }
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
-      public Builder setBan(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction value) {
-        if (banBuilder_ == null) {
+      public Builder setPublish(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction value) {
+        if (publishBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           action_ = value;
           onChanged();
         } else {
-          banBuilder_.setMessage(value);
+          publishBuilder_.setMessage(value);
         }
-        actionCase_ = 1000;
+        actionCase_ = 1002;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
-      public Builder setBan(
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder builderForValue) {
-        if (banBuilder_ == null) {
+      public Builder setPublish(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder builderForValue) {
+        if (publishBuilder_ == null) {
           action_ = builderForValue.build();
           onChanged();
         } else {
-          banBuilder_.setMessage(builderForValue.build());
+          publishBuilder_.setMessage(builderForValue.build());
         }
-        actionCase_ = 1000;
+        actionCase_ = 1002;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
-      public Builder mergeBan(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction value) {
-        if (banBuilder_ == null) {
-          if (actionCase_ == 1000 &&
-              action_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance()) {
-            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_)
+      public Builder mergePublish(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction value) {
+        if (publishBuilder_ == null) {
+          if (actionCase_ == 1002 &&
+              action_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance()) {
+            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_)
                 .mergeFrom(value).buildPartial();
           } else {
             action_ = value;
           }
           onChanged();
         } else {
-          if (actionCase_ == 1000) {
-            banBuilder_.mergeFrom(value);
+          if (actionCase_ == 1002) {
+            publishBuilder_.mergeFrom(value);
           }
-          banBuilder_.setMessage(value);
+          publishBuilder_.setMessage(value);
         }
-        actionCase_ = 1000;
+        actionCase_ = 1002;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
-      public Builder clearBan() {
-        if (banBuilder_ == null) {
-          if (actionCase_ == 1000) {
+      public Builder clearPublish() {
+        if (publishBuilder_ == null) {
+          if (actionCase_ == 1002) {
             actionCase_ = 0;
             action_ = null;
             onChanged();
           }
         } else {
-          if (actionCase_ == 1000) {
+          if (actionCase_ == 1002) {
             actionCase_ = 0;
             action_ = null;
           }
-          banBuilder_.clear();
+          publishBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder getBanBuilder() {
-        return getBanFieldBuilder().getBuilder();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder getPublishBuilder() {
+        return getPublishFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder getBanOrBuilder() {
-        if ((actionCase_ == 1000) && (banBuilder_ != null)) {
-          return banBuilder_.getMessageOrBuilder();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder getPublishOrBuilder() {
+        if ((actionCase_ == 1002) && (publishBuilder_ != null)) {
+          return publishBuilder_.getMessageOrBuilder();
         } else {
-          if (actionCase_ == 1000) {
-            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_;
+          if (actionCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_;
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
         }
       }
       /**
-       * <code>.yandex.cloud.video.v1.BanAction ban = 1000;</code>
+       * <code>.yandex.cloud.video.v1.PublishEpisodeAction publish = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder> 
-          getBanFieldBuilder() {
-        if (banBuilder_ == null) {
-          if (!(actionCase_ == 1000)) {
-            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder> 
+          getPublishFieldBuilder() {
+        if (publishBuilder_ == null) {
+          if (!(actionCase_ == 1002)) {
+            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
           }
-          banBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder>(
-                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) action_,
+          publishBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) action_,
                   getParentForChildren(),
                   isClean());
           action_ = null;
         }
-        actionCase_ = 1000;
+        actionCase_ = 1002;
         onChanged();;
-        return banBuilder_;
+        return publishBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder> unbanBuilder_;
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder> unpublishBuilder_;
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-       * @return Whether the unban field is set.
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+       * @return Whether the unpublish field is set.
        */
       @java.lang.Override
-      public boolean hasUnban() {
-        return actionCase_ == 1001;
+      public boolean hasUnpublish() {
+        return actionCase_ == 1003;
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
-       * @return The unban.
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
+       * @return The unpublish.
        */
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getUnban() {
-        if (unbanBuilder_ == null) {
-          if (actionCase_ == 1001) {
-            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_;
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getUnpublish() {
+        if (unpublishBuilder_ == null) {
+          if (actionCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_;
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
         } else {
-          if (actionCase_ == 1001) {
-            return unbanBuilder_.getMessage();
+          if (actionCase_ == 1003) {
+            return unpublishBuilder_.getMessage();
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
         }
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
-      public Builder setUnban(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction value) {
-        if (unbanBuilder_ == null) {
+      public Builder setUnpublish(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction value) {
+        if (unpublishBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           action_ = value;
           onChanged();
         } else {
-          unbanBuilder_.setMessage(value);
+          unpublishBuilder_.setMessage(value);
         }
-        actionCase_ = 1001;
+        actionCase_ = 1003;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
-      public Builder setUnban(
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder builderForValue) {
-        if (unbanBuilder_ == null) {
+      public Builder setUnpublish(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder builderForValue) {
+        if (unpublishBuilder_ == null) {
           action_ = builderForValue.build();
           onChanged();
         } else {
-          unbanBuilder_.setMessage(builderForValue.build());
+          unpublishBuilder_.setMessage(builderForValue.build());
         }
-        actionCase_ = 1001;
+        actionCase_ = 1003;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
-      public Builder mergeUnban(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction value) {
-        if (unbanBuilder_ == null) {
-          if (actionCase_ == 1001 &&
-              action_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance()) {
-            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_)
+      public Builder mergeUnpublish(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction value) {
+        if (unpublishBuilder_ == null) {
+          if (actionCase_ == 1003 &&
+              action_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance()) {
+            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_)
                 .mergeFrom(value).buildPartial();
           } else {
             action_ = value;
           }
           onChanged();
         } else {
-          if (actionCase_ == 1001) {
-            unbanBuilder_.mergeFrom(value);
+          if (actionCase_ == 1003) {
+            unpublishBuilder_.mergeFrom(value);
           }
-          unbanBuilder_.setMessage(value);
+          unpublishBuilder_.setMessage(value);
         }
-        actionCase_ = 1001;
+        actionCase_ = 1003;
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
-      public Builder clearUnban() {
-        if (unbanBuilder_ == null) {
-          if (actionCase_ == 1001) {
+      public Builder clearUnpublish() {
+        if (unpublishBuilder_ == null) {
+          if (actionCase_ == 1003) {
             actionCase_ = 0;
             action_ = null;
             onChanged();
           }
         } else {
-          if (actionCase_ == 1001) {
+          if (actionCase_ == 1003) {
             actionCase_ = 0;
             action_ = null;
           }
-          unbanBuilder_.clear();
+          unpublishBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder getUnbanBuilder() {
-        return getUnbanFieldBuilder().getBuilder();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder getUnpublishBuilder() {
+        return getUnpublishFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder getUnbanOrBuilder() {
-        if ((actionCase_ == 1001) && (unbanBuilder_ != null)) {
-          return unbanBuilder_.getMessageOrBuilder();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder getUnpublishOrBuilder() {
+        if ((actionCase_ == 1003) && (unpublishBuilder_ != null)) {
+          return unpublishBuilder_.getMessageOrBuilder();
         } else {
-          if (actionCase_ == 1001) {
-            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_;
+          if (actionCase_ == 1003) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_;
           }
-          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
         }
       }
       /**
-       * <code>.yandex.cloud.video.v1.UnbanAction unban = 1001;</code>
+       * <code>.yandex.cloud.video.v1.UnpublishEpisodeAction unpublish = 1003;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder> 
-          getUnbanFieldBuilder() {
-        if (unbanBuilder_ == null) {
-          if (!(actionCase_ == 1001)) {
-            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder> 
+          getUnpublishFieldBuilder() {
+        if (unpublishBuilder_ == null) {
+          if (!(actionCase_ == 1003)) {
+            action_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
           }
-          unbanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder>(
-                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) action_,
+          unpublishBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) action_,
                   getParentForChildren(),
                   isClean());
           action_ = null;
         }
-        actionCase_ = 1001;
+        actionCase_ = 1003;
         onChanged();;
-        return unbanBuilder_;
+        return unpublishBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11853,30 +11889,30 @@ public final class EpisodeServiceOuterClass {
 
   }
 
-  public interface BanActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BanAction)
+  public interface PublishEpisodeActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.PublishEpisodeAction)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code yandex.cloud.video.v1.BanAction}
+   * Protobuf type {@code yandex.cloud.video.v1.PublishEpisodeAction}
    */
-  public static final class BanAction extends
+  public static final class PublishEpisodeAction extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BanAction)
-      BanActionOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.PublishEpisodeAction)
+      PublishEpisodeActionOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use BanAction.newBuilder() to construct.
-    private BanAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PublishEpisodeAction.newBuilder() to construct.
+    private PublishEpisodeAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private BanAction() {
+    private PublishEpisodeAction() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new BanAction();
+      return new PublishEpisodeAction();
     }
 
     @java.lang.Override
@@ -11884,7 +11920,7 @@ public final class EpisodeServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BanAction(
+    private PublishEpisodeAction(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11923,15 +11959,15 @@ public final class EpisodeServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BanAction_descriptor;
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BanAction_fieldAccessorTable
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_PublishEpisodeAction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder.class);
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11967,10 +12003,10 @@ public final class EpisodeServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction)) {
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) obj;
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -11988,69 +12024,69 @@ public final class EpisodeServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(byte[] data)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseDelimitedFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12063,7 +12099,7 @@ public final class EpisodeServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction prototype) {
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12079,26 +12115,26 @@ public final class EpisodeServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code yandex.cloud.video.v1.BanAction}
+     * Protobuf type {@code yandex.cloud.video.v1.PublishEpisodeAction}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BanAction)
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanActionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.PublishEpisodeAction)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BanAction_descriptor;
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BanAction_fieldAccessorTable
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_PublishEpisodeAction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.Builder.class);
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.newBuilder()
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12122,17 +12158,17 @@ public final class EpisodeServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_BanAction_descriptor;
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction build() {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction result = buildPartial();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12140,8 +12176,8 @@ public final class EpisodeServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction buildPartial() {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction(this);
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction(this);
         onBuilt();
         return result;
       }
@@ -12180,16 +12216,16 @@ public final class EpisodeServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) {
-          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction)other);
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction other) {
-        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12205,11 +12241,11 @@ public final class EpisodeServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction parsedMessage = null;
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -12231,70 +12267,70 @@ public final class EpisodeServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BanAction)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.PublishEpisodeAction)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BanAction)
-    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.PublishEpisodeAction)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction();
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction();
     }
 
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getDefaultInstance() {
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BanAction>
-        PARSER = new com.google.protobuf.AbstractParser<BanAction>() {
+    private static final com.google.protobuf.Parser<PublishEpisodeAction>
+        PARSER = new com.google.protobuf.AbstractParser<PublishEpisodeAction>() {
       @java.lang.Override
-      public BanAction parsePartialFrom(
+      public PublishEpisodeAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BanAction(input, extensionRegistry);
+        return new PublishEpisodeAction(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<BanAction> parser() {
+    public static com.google.protobuf.Parser<PublishEpisodeAction> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<BanAction> getParserForType() {
+    public com.google.protobuf.Parser<PublishEpisodeAction> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BanAction getDefaultInstanceForType() {
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PublishEpisodeAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface UnbanActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.UnbanAction)
+  public interface UnpublishEpisodeActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.UnpublishEpisodeAction)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code yandex.cloud.video.v1.UnbanAction}
+   * Protobuf type {@code yandex.cloud.video.v1.UnpublishEpisodeAction}
    */
-  public static final class UnbanAction extends
+  public static final class UnpublishEpisodeAction extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.UnbanAction)
-      UnbanActionOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.UnpublishEpisodeAction)
+      UnpublishEpisodeActionOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use UnbanAction.newBuilder() to construct.
-    private UnbanAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UnpublishEpisodeAction.newBuilder() to construct.
+    private UnpublishEpisodeAction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private UnbanAction() {
+    private UnpublishEpisodeAction() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new UnbanAction();
+      return new UnpublishEpisodeAction();
     }
 
     @java.lang.Override
@@ -12302,7 +12338,7 @@ public final class EpisodeServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private UnbanAction(
+    private UnpublishEpisodeAction(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -12341,15 +12377,15 @@ public final class EpisodeServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnbanAction_descriptor;
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnbanAction_fieldAccessorTable
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder.class);
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -12385,10 +12421,10 @@ public final class EpisodeServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction)) {
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) obj;
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) obj;
 
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -12406,69 +12442,69 @@ public final class EpisodeServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(byte[] data)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseDelimitedFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parseFrom(
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12481,7 +12517,7 @@ public final class EpisodeServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction prototype) {
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12497,26 +12533,26 @@ public final class EpisodeServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code yandex.cloud.video.v1.UnbanAction}
+     * Protobuf type {@code yandex.cloud.video.v1.UnpublishEpisodeAction}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.UnbanAction)
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanActionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.UnpublishEpisodeAction)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnbanAction_descriptor;
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnbanAction_fieldAccessorTable
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.Builder.class);
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.newBuilder()
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12540,17 +12576,17 @@ public final class EpisodeServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnbanAction_descriptor;
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction build() {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction result = buildPartial();
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12558,8 +12594,8 @@ public final class EpisodeServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction buildPartial() {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction(this);
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction(this);
         onBuilt();
         return result;
       }
@@ -12598,16 +12634,16 @@ public final class EpisodeServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) {
-          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction)other);
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction other) {
-        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12623,11 +12659,11 @@ public final class EpisodeServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction parsedMessage = null;
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -12649,41 +12685,41 @@ public final class EpisodeServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.UnbanAction)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.UnpublishEpisodeAction)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.UnbanAction)
-    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.UnpublishEpisodeAction)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction();
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction();
     }
 
-    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getDefaultInstance() {
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UnbanAction>
-        PARSER = new com.google.protobuf.AbstractParser<UnbanAction>() {
+    private static final com.google.protobuf.Parser<UnpublishEpisodeAction>
+        PARSER = new com.google.protobuf.AbstractParser<UnpublishEpisodeAction>() {
       @java.lang.Override
-      public UnbanAction parsePartialFrom(
+      public UnpublishEpisodeAction parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UnbanAction(input, extensionRegistry);
+        return new UnpublishEpisodeAction(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<UnbanAction> parser() {
+    public static com.google.protobuf.Parser<UnpublishEpisodeAction> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<UnbanAction> getParserForType() {
+    public com.google.protobuf.Parser<UnpublishEpisodeAction> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnbanAction getDefaultInstanceForType() {
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UnpublishEpisodeAction getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15438,15 +15474,15 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_BanAction_descriptor;
+    internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_BanAction_fieldAccessorTable;
+      internal_static_yandex_cloud_video_v1_PublishEpisodeAction_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_UnbanAction_descriptor;
+    internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_UnbanAction_fieldAccessorTable;
+      internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor;
   private static final 
@@ -15517,44 +15553,46 @@ public final class EpisodeServiceOuterClass {
       "ess_rightsJ\006\010\351\007\020\352\007\"+\n\025UpdateEpisodeMetad" +
       "ata\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteEpisode" +
       "Request\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025DeleteEpi" +
-      "sodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\243\001\n\033Per" +
+      "sodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\321\001\n\033Per" +
       "formEpisodeActionRequest\022\022\n\nepisode_id\030\001" +
-      " \001(\t\0220\n\003ban\030\350\007 \001(\0132 .yandex.cloud.video." +
-      "v1.BanActionH\000\0224\n\005unban\030\351\007 \001(\0132\".yandex." +
-      "cloud.video.v1.UnbanActionH\000B\010\n\006action\"\013" +
-      "\n\tBanAction\"\r\n\013UnbanAction\"2\n\034PerformEpi" +
-      "sodeActionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"l" +
-      "\n\032GetEpisodePlayerURLRequest\022\022\n\nepisode_" +
-      "id\030\001 \001(\t\022:\n\006params\030\002 \001(\0132*.yandex.cloud." +
-      "video.v1.EpisodePlayerParams\"E\n\023EpisodeP" +
-      "layerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 " +
-      "\001(\010\022\016\n\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerU" +
-      "RLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002" +
-      " \001(\t2\344\006\n\016EpisodeService\022Q\n\003Get\022(.yandex." +
-      "cloud.video.v1.GetEpisodeRequest\032\036.yande" +
-      "x.cloud.video.v1.Episode\"\000\022a\n\004List\022*.yan" +
-      "dex.cloud.video.v1.ListEpisodesRequest\032+" +
-      ".yandex.cloud.video.v1.ListEpisodesRespo" +
-      "nse\"\000\022~\n\006Create\022+.yandex.cloud.video.v1." +
-      "CreateEpisodeRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"$\262\322* \n\025CreateEpisodeMeta" +
-      "data\022\007Episode\022~\n\006Update\022+.yandex.cloud.v" +
-      "ideo.v1.UpdateEpisodeRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"$\262\322* \n\025UpdateEpi" +
-      "sodeMetadata\022\007Episode\022\214\001\n\006Delete\022+.yande" +
-      "x.cloud.video.v1.DeleteEpisodeRequest\032!." +
-      "yandex.cloud.operation.Operation\"2\262\322*.\n\025" +
-      "DeleteEpisodeMetadata\022\025google.protobuf.E" +
-      "mpty\022\223\001\n\rPerformAction\0222.yandex.cloud.vi" +
-      "deo.v1.PerformEpisodeActionRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"+\262\322*\'\n\034Per" +
-      "formEpisodeActionMetadata\022\007Episode\022w\n\014Ge" +
-      "tPlayerURL\0221.yandex.cloud.video.v1.GetEp" +
-      "isodePlayerURLRequest\0322.yandex.cloud.vid" +
-      "eo.v1.GetEpisodePlayerURLResponse\"\000B\\\n\031y" +
-      "andex.cloud.api.video.v1Z?github.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/video" +
-      "/v1;videob\006proto3"
+      " \001(\t\022?\n\007publish\030\352\007 \001(\0132+.yandex.cloud.vi" +
+      "deo.v1.PublishEpisodeActionH\000\022C\n\tunpubli" +
+      "sh\030\353\007 \001(\0132-.yandex.cloud.video.v1.Unpubl" +
+      "ishEpisodeActionH\000B\010\n\006actionJ\006\010\350\007\020\351\007J\006\010\351" +
+      "\007\020\352\007\"\026\n\024PublishEpisodeAction\"\030\n\026Unpublis" +
+      "hEpisodeAction\"2\n\034PerformEpisodeActionMe" +
+      "tadata\022\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetEpisode" +
+      "PlayerURLRequest\022\022\n\nepisode_id\030\001 \001(\t\022:\n\006" +
+      "params\030\002 \001(\0132*.yandex.cloud.video.v1.Epi" +
+      "sodePlayerParams\"E\n\023EpisodePlayerParams\022" +
+      "\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidde" +
+      "n\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResponse\022\022" +
+      "\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344\006\n\016Epi" +
+      "sodeService\022Q\n\003Get\022(.yandex.cloud.video." +
+      "v1.GetEpisodeRequest\032\036.yandex.cloud.vide" +
+      "o.v1.Episode\"\000\022a\n\004List\022*.yandex.cloud.vi" +
+      "deo.v1.ListEpisodesRequest\032+.yandex.clou" +
+      "d.video.v1.ListEpisodesResponse\"\000\022~\n\006Cre" +
+      "ate\022+.yandex.cloud.video.v1.CreateEpisod" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"$\262\322* \n\025CreateEpisodeMetadata\022\007Episod" +
+      "e\022~\n\006Update\022+.yandex.cloud.video.v1.Upda" +
+      "teEpisodeRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"$\262\322* \n\025UpdateEpisodeMetadata" +
+      "\022\007Episode\022\214\001\n\006Delete\022+.yandex.cloud.vide" +
+      "o.v1.DeleteEpisodeRequest\032!.yandex.cloud" +
+      ".operation.Operation\"2\262\322*.\n\025DeleteEpisod" +
+      "eMetadata\022\025google.protobuf.Empty\022\223\001\n\rPer" +
+      "formAction\0222.yandex.cloud.video.v1.Perfo" +
+      "rmEpisodeActionRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"+\262\322*\'\n\034PerformEpisodeA" +
+      "ctionMetadata\022\007Episode\022w\n\014GetPlayerURL\0221" +
+      ".yandex.cloud.video.v1.GetEpisodePlayerU" +
+      "RLRequest\0322.yandex.cloud.video.v1.GetEpi" +
+      "sodePlayerURLResponse\"\000B\\\n\031yandex.cloud." +
+      "api.video.v1Z?github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/video/v1;videob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15636,18 +15674,18 @@ public final class EpisodeServiceOuterClass {
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_descriptor,
-        new java.lang.String[] { "EpisodeId", "Ban", "Unban", "Action", });
-    internal_static_yandex_cloud_video_v1_BanAction_descriptor =
+        new java.lang.String[] { "EpisodeId", "Publish", "Unpublish", "Action", });
+    internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_yandex_cloud_video_v1_BanAction_fieldAccessorTable = new
+    internal_static_yandex_cloud_video_v1_PublishEpisodeAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_BanAction_descriptor,
+        internal_static_yandex_cloud_video_v1_PublishEpisodeAction_descriptor,
         new java.lang.String[] { });
-    internal_static_yandex_cloud_video_v1_UnbanAction_descriptor =
+    internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_yandex_cloud_video_v1_UnbanAction_fieldAccessorTable = new
+    internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_UnbanAction_descriptor,
+        internal_static_yandex_cloud_video_v1_UnpublishEpisodeAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor =
       getDescriptor().getMessageTypes().get(14);

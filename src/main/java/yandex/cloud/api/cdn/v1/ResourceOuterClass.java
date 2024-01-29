@@ -648,15 +648,16 @@ public final class ResourceOuterClass {
     DONT_USE(1),
     /**
      * <pre>
-     * Works only if you have already pointed your domain name to the protected IP address in your DNS
+     * The option is deprecated. Works only if you have already pointed your domain name to the protected IP address in your DNS.
      * </pre>
      *
-     * <code>LETS_ENCRYPT_GCORE = 2;</code>
+     * <code>LETS_ENCRYPT_GCORE = 2 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     LETS_ENCRYPT_GCORE(2),
     /**
      * <pre>
-     * Add your SSL certificate by uploading the certificate in PEM format and your private key
+     * Add your SSL certificate by uploading the certificate in PEM format and your private key.
      * </pre>
      *
      * <code>CM = 3;</code>
@@ -683,15 +684,15 @@ public final class ResourceOuterClass {
     public static final int DONT_USE_VALUE = 1;
     /**
      * <pre>
-     * Works only if you have already pointed your domain name to the protected IP address in your DNS
+     * The option is deprecated. Works only if you have already pointed your domain name to the protected IP address in your DNS.
      * </pre>
      *
-     * <code>LETS_ENCRYPT_GCORE = 2;</code>
+     * <code>LETS_ENCRYPT_GCORE = 2 [deprecated = true];</code>
      */
-    public static final int LETS_ENCRYPT_GCORE_VALUE = 2;
+    @java.lang.Deprecated public static final int LETS_ENCRYPT_GCORE_VALUE = 2;
     /**
      * <pre>
-     * Add your SSL certificate by uploading the certificate in PEM format and your private key
+     * Add your SSL certificate by uploading the certificate in PEM format and your private key.
      * </pre>
      *
      * <code>CM = 3;</code>
@@ -810,11 +811,12 @@ public final class ResourceOuterClass {
     READY(1),
     /**
      * <pre>
-     * SSL certificate is creating.
+     * The option is deprecated. SSL certificate is creating.
      * </pre>
      *
-     * <code>CREATING = 2;</code>
+     * <code>CREATING = 2 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     CREATING(2),
     UNRECOGNIZED(-1),
     ;
@@ -837,12 +839,12 @@ public final class ResourceOuterClass {
     public static final int READY_VALUE = 1;
     /**
      * <pre>
-     * SSL certificate is creating.
+     * The option is deprecated. SSL certificate is creating.
      * </pre>
      *
-     * <code>CREATING = 2;</code>
+     * <code>CREATING = 2 [deprecated = true];</code>
      */
-    public static final int CREATING_VALUE = 2;
+    @java.lang.Deprecated public static final int CREATING_VALUE = 2;
 
 
     public final int getNumber() {
@@ -29923,14 +29925,14 @@ public final class ResourceOuterClass {
       "D\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DISABLE_IP" +
       "_SIGNING\020\002*V\n\nPolicyType\022\033\n\027POLICY_TYPE_" +
       "UNSPECIFIED\020\000\022\025\n\021POLICY_TYPE_ALLOW\020\001\022\024\n\020" +
-      "POLICY_TYPE_DENY\020\002*h\n\022SSLCertificateType" +
+      "POLICY_TYPE_DENY\020\002*l\n\022SSLCertificateType" +
       "\022$\n SSL_CERTIFICATE_TYPE_UNSPECIFIED\020\000\022\014" +
-      "\n\010DONT_USE\020\001\022\026\n\022LETS_ENCRYPT_GCORE\020\002\022\006\n\002" +
-      "CM\020\003*W\n\024SSLCertificateStatus\022&\n\"SSL_CERT" +
-      "IFICATE_STATUS_UNSPECIFIED\020\000\022\t\n\005READY\020\001\022" +
-      "\014\n\010CREATING\020\002BV\n\027yandex.cloud.api.cdn.v1" +
-      "Z;github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/cdn/v1;cdnb\006proto3"
+      "\n\010DONT_USE\020\001\022\032\n\022LETS_ENCRYPT_GCORE\020\002\032\002\010\001" +
+      "\022\006\n\002CM\020\003*[\n\024SSLCertificateStatus\022&\n\"SSL_" +
+      "CERTIFICATE_STATUS_UNSPECIFIED\020\000\022\t\n\005READ" +
+      "Y\020\001\022\020\n\010CREATING\020\002\032\002\010\001BV\n\027yandex.cloud.ap" +
+      "i.cdn.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/cdn/v1;cdnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

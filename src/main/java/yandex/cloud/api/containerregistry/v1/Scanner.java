@@ -3814,6 +3814,46 @@ public final class Scanner {
      */
     com.google.protobuf.ByteString
         getFixedByBytes();
+
+    /**
+     * <pre>
+     * The place where vulnerability is originated (OS, lang package, etc.)
+     * </pre>
+     *
+     * <code>string origin = 7;</code>
+     * @return The origin.
+     */
+    java.lang.String getOrigin();
+    /**
+     * <pre>
+     * The place where vulnerability is originated (OS, lang package, etc.)
+     * </pre>
+     *
+     * <code>string origin = 7;</code>
+     * @return The bytes for origin.
+     */
+    com.google.protobuf.ByteString
+        getOriginBytes();
+
+    /**
+     * <pre>
+     * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+     * </pre>
+     *
+     * <code>string type = 8;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+     * </pre>
+     *
+     * <code>string type = 8;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
   }
   /**
    * <pre>
@@ -3838,6 +3878,8 @@ public final class Scanner {
       source_ = "";
       version_ = "";
       fixedBy_ = "";
+      origin_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -3904,6 +3946,18 @@ public final class Scanner {
               java.lang.String s = input.readStringRequireUtf8();
 
               fixedBy_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              origin_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
               break;
             }
             default: {
@@ -4214,6 +4268,98 @@ public final class Scanner {
       }
     }
 
+    public static final int ORIGIN_FIELD_NUMBER = 7;
+    private volatile java.lang.Object origin_;
+    /**
+     * <pre>
+     * The place where vulnerability is originated (OS, lang package, etc.)
+     * </pre>
+     *
+     * <code>string origin = 7;</code>
+     * @return The origin.
+     */
+    @java.lang.Override
+    public java.lang.String getOrigin() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        origin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The place where vulnerability is originated (OS, lang package, etc.)
+     * </pre>
+     *
+     * <code>string origin = 7;</code>
+     * @return The bytes for origin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginBytes() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        origin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+     * </pre>
+     *
+     * <code>string type = 8;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+     * </pre>
+     *
+     * <code>string type = 8;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4246,6 +4392,12 @@ public final class Scanner {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fixedBy_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(origin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, origin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4272,6 +4424,12 @@ public final class Scanner {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fixedBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(origin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, origin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4300,6 +4458,10 @@ public final class Scanner {
           .equals(other.getVersion())) return false;
       if (!getFixedBy()
           .equals(other.getFixedBy())) return false;
+      if (!getOrigin()
+          .equals(other.getOrigin())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4323,6 +4485,10 @@ public final class Scanner {
       hash = (53 * hash) + getVersion().hashCode();
       hash = (37 * hash) + FIXED_BY_FIELD_NUMBER;
       hash = (53 * hash) + getFixedBy().hashCode();
+      hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
+      hash = (53 * hash) + getOrigin().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4472,6 +4638,10 @@ public final class Scanner {
 
         fixedBy_ = "";
 
+        origin_ = "";
+
+        type_ = "";
+
         return this;
       }
 
@@ -4504,6 +4674,8 @@ public final class Scanner {
         result.source_ = source_;
         result.version_ = version_;
         result.fixedBy_ = fixedBy_;
+        result.origin_ = origin_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -4574,6 +4746,14 @@ public final class Scanner {
         }
         if (!other.getFixedBy().isEmpty()) {
           fixedBy_ = other.fixedBy_;
+          onChanged();
+        }
+        if (!other.getOrigin().isEmpty()) {
+          origin_ = other.origin_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -5180,6 +5360,198 @@ public final class Scanner {
         onChanged();
         return this;
       }
+
+      private java.lang.Object origin_ = "";
+      /**
+       * <pre>
+       * The place where vulnerability is originated (OS, lang package, etc.)
+       * </pre>
+       *
+       * <code>string origin = 7;</code>
+       * @return The origin.
+       */
+      public java.lang.String getOrigin() {
+        java.lang.Object ref = origin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          origin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The place where vulnerability is originated (OS, lang package, etc.)
+       * </pre>
+       *
+       * <code>string origin = 7;</code>
+       * @return The bytes for origin.
+       */
+      public com.google.protobuf.ByteString
+          getOriginBytes() {
+        java.lang.Object ref = origin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          origin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The place where vulnerability is originated (OS, lang package, etc.)
+       * </pre>
+       *
+       * <code>string origin = 7;</code>
+       * @param value The origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrigin(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        origin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The place where vulnerability is originated (OS, lang package, etc.)
+       * </pre>
+       *
+       * <code>string origin = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrigin() {
+        
+        origin_ = getDefaultInstance().getOrigin();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The place where vulnerability is originated (OS, lang package, etc.)
+       * </pre>
+       *
+       * <code>string origin = 7;</code>
+       * @param value The bytes for origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        origin_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+       * </pre>
+       *
+       * <code>string type = 8;</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+       * </pre>
+       *
+       * <code>string type = 8;</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+       * </pre>
+       *
+       * <code>string type = 8;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+       * </pre>
+       *
+       * <code>string type = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of vulnerability origin - name of OS if origin="os" or package type (jar, gobinary, etc.) if origin="lang"
+       * </pre>
+       *
+       * <code>string type = 8;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5284,13 +5656,14 @@ public final class Scanner {
       "erity\022\030\n\024SEVERITY_UNSPECIFIED\020\000\022\014\n\010CRITI" +
       "CAL\020\001\022\010\n\004HIGH\020\002\022\n\n\006MEDIUM\020\003\022\007\n\003LOW\020\004\022\016\n\n" +
       "NEGLIGIBLE\020\005\022\r\n\tUNDEFINED\020\006B\025\n\rvulnerabi" +
-      "lity\022\004\300\3011\001\"v\n\024PackageVulnerability\022\014\n\004na" +
-      "me\030\001 \001(\t\022\014\n\004link\030\002 \001(\t\022\017\n\007package\030\003 \001(\t\022" +
-      "\016\n\006source\030\004 \001(\t\022\017\n\007version\030\005 \001(\t\022\020\n\010fixe" +
-      "d_by\030\006 \001(\tB\200\001\n%yandex.cloud.api.containe" +
-      "rregistry.v1ZWgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/containerregistry" +
-      "/v1;containerregistryb\006proto3"
+      "lity\022\004\300\3011\001\"\224\001\n\024PackageVulnerability\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\014\n\004link\030\002 \001(\t\022\017\n\007package\030\003 \001(\t" +
+      "\022\016\n\006source\030\004 \001(\t\022\017\n\007version\030\005 \001(\t\022\020\n\010fix" +
+      "ed_by\030\006 \001(\t\022\016\n\006origin\030\007 \001(\t\022\014\n\004type\030\010 \001(" +
+      "\tB\200\001\n%yandex.cloud.api.containerregistry" +
+      ".v1ZWgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/containerregistry/v1;conta" +
+      "inerregistryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5321,7 +5694,7 @@ public final class Scanner {
     internal_static_yandex_cloud_containerregistry_v1_PackageVulnerability_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_PackageVulnerability_descriptor,
-        new java.lang.String[] { "Name", "Link", "Package", "Source", "Version", "FixedBy", });
+        new java.lang.String[] { "Name", "Link", "Package", "Source", "Version", "FixedBy", "Origin", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

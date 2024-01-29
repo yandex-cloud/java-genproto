@@ -7772,6 +7772,16 @@ public final class PolicyOuterClass {
        * @return The afterBackup.
        */
       boolean getAfterBackup();
+
+      /**
+       * <pre>
+       * If true, retention rules will be applied before backup is finished.
+       * </pre>
+       *
+       * <code>bool before_backup = 3;</code>
+       * @return The beforeBackup.
+       */
+      boolean getBeforeBackup();
     }
     /**
      * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.Retention}
@@ -7832,6 +7842,11 @@ public final class PolicyOuterClass {
               case 16: {
 
                 afterBackup_ = input.readBool();
+                break;
+              }
+              case 24: {
+
+                beforeBackup_ = input.readBool();
                 break;
               }
               default: {
@@ -9154,6 +9169,21 @@ public final class PolicyOuterClass {
         return afterBackup_;
       }
 
+      public static final int BEFORE_BACKUP_FIELD_NUMBER = 3;
+      private boolean beforeBackup_;
+      /**
+       * <pre>
+       * If true, retention rules will be applied before backup is finished.
+       * </pre>
+       *
+       * <code>bool before_backup = 3;</code>
+       * @return The beforeBackup.
+       */
+      @java.lang.Override
+      public boolean getBeforeBackup() {
+        return beforeBackup_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9174,6 +9204,9 @@ public final class PolicyOuterClass {
         if (afterBackup_ != false) {
           output.writeBool(2, afterBackup_);
         }
+        if (beforeBackup_ != false) {
+          output.writeBool(3, beforeBackup_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -9190,6 +9223,10 @@ public final class PolicyOuterClass {
         if (afterBackup_ != false) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(2, afterBackup_);
+        }
+        if (beforeBackup_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, beforeBackup_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -9210,6 +9247,8 @@ public final class PolicyOuterClass {
             .equals(other.getRulesList())) return false;
         if (getAfterBackup()
             != other.getAfterBackup()) return false;
+        if (getBeforeBackup()
+            != other.getBeforeBackup()) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -9228,6 +9267,9 @@ public final class PolicyOuterClass {
         hash = (37 * hash) + AFTER_BACKUP_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getAfterBackup());
+        hash = (37 * hash) + BEFORE_BACKUP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getBeforeBackup());
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9370,6 +9412,8 @@ public final class PolicyOuterClass {
           }
           afterBackup_ = false;
 
+          beforeBackup_ = false;
+
           return this;
         }
 
@@ -9407,6 +9451,7 @@ public final class PolicyOuterClass {
             result.rules_ = rulesBuilder_.build();
           }
           result.afterBackup_ = afterBackup_;
+          result.beforeBackup_ = beforeBackup_;
           onBuilt();
           return result;
         }
@@ -9483,6 +9528,9 @@ public final class PolicyOuterClass {
           }
           if (other.getAfterBackup() != false) {
             setAfterBackup(other.getAfterBackup());
+          }
+          if (other.getBeforeBackup() != false) {
+            setBeforeBackup(other.getBeforeBackup());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -9865,6 +9913,49 @@ public final class PolicyOuterClass {
         public Builder clearAfterBackup() {
           
           afterBackup_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean beforeBackup_ ;
+        /**
+         * <pre>
+         * If true, retention rules will be applied before backup is finished.
+         * </pre>
+         *
+         * <code>bool before_backup = 3;</code>
+         * @return The beforeBackup.
+         */
+        @java.lang.Override
+        public boolean getBeforeBackup() {
+          return beforeBackup_;
+        }
+        /**
+         * <pre>
+         * If true, retention rules will be applied before backup is finished.
+         * </pre>
+         *
+         * <code>bool before_backup = 3;</code>
+         * @param value The beforeBackup to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBeforeBackup(boolean value) {
+          
+          beforeBackup_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * If true, retention rules will be applied before backup is finished.
+         * </pre>
+         *
+         * <code>bool before_backup = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBeforeBackup() {
+          
+          beforeBackup_ = false;
           onChanged();
           return this;
         }
@@ -20456,7 +20547,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\357\036\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\206\037\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -20502,71 +20593,72 @@ public final class PolicyOuterClass {
       "_DEFINED\020\002\032!\n\021ArchiveProperties\022\014\n\004name\030" +
       "\001 \001(\t\032$\n\021PerformanceWindow\022\017\n\007enabled\030\001 " +
       "\001(\010\032)\n\tTimeOfDay\022\014\n\004hour\030\001 \001(\003\022\016\n\006minute" +
-      "\030\002 \001(\003\032\270\002\n\tRetention\022M\n\005rules\030\001 \003(\0132>.ya" +
+      "\030\002 \001(\003\032\317\002\n\tRetention\022M\n\005rules\030\001 \003(\0132>.ya" +
       "ndex.cloud.backup.v1.PolicySettings.Rete" +
       "ntion.RetentionRule\022\024\n\014after_backup\030\002 \001(" +
-      "\010\032\305\001\n\rRetentionRule\022H\n\nbackup_set\030\001 \003(\0162" +
-      "4.yandex.cloud.backup.v1.PolicySettings." +
-      "RepeatePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex." +
-      "cloud.backup.v1.PolicySettings.IntervalH" +
-      "\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\3011" +
-      "\001\032\341\n\n\nScheduling\022X\n\013backup_sets\030\001 \003(\0132;." +
-      "yandex.cloud.backup.v1.PolicySettings.Sc" +
-      "heduling.BackupSetB\006\202\3101\002>0\022\017\n\007enabled\030\002 " +
-      "\001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003\022M\n\016ran" +
-      "d_max_delay\030\004 \001(\0132/.yandex.cloud.backup." +
-      "v1.PolicySettings.IntervalB\004\350\3071\001\022N\n\006sche" +
-      "me\030\005 \001(\01628.yandex.cloud.backup.v1.Policy" +
-      "Settings.Scheduling.SchemeB\004\350\3071\001\022K\n\021week" +
-      "ly_backup_day\030\006 \001(\0162*.yandex.cloud.backu" +
-      "p.v1.PolicySettings.DayB\004\350\3071\001\032\265\006\n\tBackup" +
-      "Set\022P\n\004time\030\001 \001(\0132@.yandex.cloud.backup." +
-      "v1.PolicySettings.Scheduling.BackupSet.T" +
-      "imeH\000\022m\n\024since_last_exec_time\030\002 \001(\0132M.ya" +
-      "ndex.cloud.backup.v1.PolicySettings.Sche" +
-      "duling.BackupSet.SinceLastExecTimeH\000\032\372\003\n" +
-      "\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex.cloud.b" +
-      "ackup.v1.PolicySettings.DayB\004\220\3101\001\022C\n\trep" +
-      "eat_at\030\002 \003(\01320.yandex.cloud.backup.v1.Po" +
-      "licySettings.TimeOfDay\022E\n\014repeat_every\030\003" +
+      "\010\022\025\n\rbefore_backup\030\003 \001(\010\032\305\001\n\rRetentionRu" +
+      "le\022H\n\nbackup_set\030\001 \003(\01624.yandex.cloud.ba" +
+      "ckup.v1.PolicySettings.RepeatePeriod\022B\n\007" +
+      "max_age\030\002 \001(\0132/.yandex.cloud.backup.v1.P" +
+      "olicySettings.IntervalH\000\022\023\n\tmax_count\030\003 " +
+      "\001(\003H\000B\021\n\tcondition\022\004\300\3011\001\032\341\n\n\nScheduling\022" +
+      "X\n\013backup_sets\030\001 \003(\0132;.yandex.cloud.back" +
+      "up.v1.PolicySettings.Scheduling.BackupSe" +
+      "tB\006\202\3101\002>0\022\017\n\007enabled\030\002 \001(\010\022\034\n\024max_parall" +
+      "el_backups\030\003 \001(\003\022M\n\016rand_max_delay\030\004 \001(\013" +
+      "2/.yandex.cloud.backup.v1.PolicySettings" +
+      ".IntervalB\004\350\3071\001\022N\n\006scheme\030\005 \001(\01628.yandex" +
+      ".cloud.backup.v1.PolicySettings.Scheduli" +
+      "ng.SchemeB\004\350\3071\001\022K\n\021weekly_backup_day\030\006 \001" +
+      "(\0162*.yandex.cloud.backup.v1.PolicySettin" +
+      "gs.DayB\004\350\3071\001\032\265\006\n\tBackupSet\022P\n\004time\030\001 \001(\013" +
+      "2@.yandex.cloud.backup.v1.PolicySettings" +
+      ".Scheduling.BackupSet.TimeH\000\022m\n\024since_la" +
+      "st_exec_time\030\002 \001(\0132M.yandex.cloud.backup" +
+      ".v1.PolicySettings.Scheduling.BackupSet." +
+      "SinceLastExecTimeH\000\032\372\003\n\004Time\022B\n\010weekdays" +
+      "\030\001 \003(\0162*.yandex.cloud.backup.v1.PolicySe" +
+      "ttings.DayB\004\220\3101\001\022C\n\trepeat_at\030\002 \003(\01320.ya" +
+      "ndex.cloud.backup.v1.PolicySettings.Time" +
+      "OfDay\022E\n\014repeat_every\030\003 \001(\0132/.yandex.clo" +
+      "ud.backup.v1.PolicySettings.Interval\022C\n\t" +
+      "time_from\030\004 \001(\01320.yandex.cloud.backup.v1" +
+      ".PolicySettings.TimeOfDay\022A\n\007time_to\030\005 \001" +
+      "(\01320.yandex.cloud.backup.v1.PolicySettin" +
+      "gs.TimeOfDay\022\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n" +
+      "\031include_last_day_of_month\030\007 \001(\010\022\024\n\006mont" +
+      "hs\030\010 \003(\003B\004\220\3101\001\022H\n\004type\030\t \001(\01624.yandex.cl" +
+      "oud.backup.v1.PolicySettings.RepeatePeri" +
+      "odB\004\350\3071\001\032Y\n\021SinceLastExecTime\022D\n\005delay\030\001" +
       " \001(\0132/.yandex.cloud.backup.v1.PolicySett" +
-      "ings.Interval\022C\n\ttime_from\030\004 \001(\01320.yande" +
-      "x.cloud.backup.v1.PolicySettings.TimeOfD" +
-      "ay\022A\n\007time_to\030\005 \001(\01320.yandex.cloud.backu" +
-      "p.v1.PolicySettings.TimeOfDay\022\027\n\tmonthda" +
-      "ys\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last_day_of_mo" +
-      "nth\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101\001\022H\n\004type\030" +
-      "\t \001(\01624.yandex.cloud.backup.v1.PolicySet" +
-      "tings.RepeatePeriodB\004\350\3071\001\032Y\n\021SinceLastEx" +
-      "ecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud.bac" +
-      "kup.v1.PolicySettings.IntervalB\004\350\3071\001B\017\n\007" +
-      "setting\022\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPE" +
-      "CIFIED\020\000\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n" +
-      "\022ALWAYS_INCREMENTAL\020\003\022\026\n\022WEEKLY_INCREMEN" +
-      "TAL\020\004\022!\n\035WEEKLY_FULL_DAILY_INCREMENTAL\020\005" +
-      "\022\n\n\006CUSTOM\020\006\022\007\n\003CDP\020\007\"R\n\013Compression\022\033\n\027" +
-      "COMPRESSION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n" +
-      "\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeri" +
-      "od\022\036\n\032REPEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HO" +
-      "URLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY" +
-      "\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY" +
-      "\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSD" +
-      "AY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY" +
-      "\020\007\"v\n\024ChangedBlockTracking\022&\n\"CHANGED_BL" +
-      "OCK_TRACKING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENA" +
-      "BLED\020\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE" +
-      "\020\003J\004\010\r\020\016J\004\010\016\020\017\"\213\002\n\021PolicyApplication\022\021\n\t" +
-      "policy_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002" +
-      " \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620." +
-      "yandex.cloud.backup.v1.PolicyApplication" +
-      ".Status\022.\n\ncreated_at\030\005 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\"C\n\006Status\022\026\n\022STATUS_UNSP" +
-      "ECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABL" +
-      "ED\020\003*J\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016" +
-      "\n\nVERSION_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003" +
-      "B_\n\032yandex.cloud.api.backup.v1ZAgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/backup/v1;backupb\006proto3"
+      "ings.IntervalB\004\350\3071\001B\017\n\007setting\022\004\300\3011\001\"\245\001\n" +
+      "\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n\006SIMPL" +
+      "E\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INCREMENT" +
+      "AL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WEEKLY_F" +
+      "ULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020\006\022\007\n\003C" +
+      "DP\020\007\"R\n\013Compression\022\033\n\027COMPRESSION_UNSPE" +
+      "CIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022" +
+      "\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n\032REPEATE_PER" +
+      "IOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002" +
+      "\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_" +
+      "UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r" +
+      "\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022" +
+      "\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024ChangedBloc" +
+      "kTracking\022&\n\"CHANGED_BLOCK_TRACKING_UNSP" +
+      "ECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001\022\022\n\016ENABLE_" +
+      "AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\213\002" +
+      "\n\021PolicyApplication\022\021\n\tpolicy_id\030\001 \001(\t\022\033" +
+      "\n\023compute_instance_id\030\002 \001(\t\022\017\n\007enabled\030\003" +
+      " \001(\010\022@\n\006status\030\004 \001(\01620.yandex.cloud.back" +
+      "up.v1.PolicyApplication.Status\022.\n\ncreate" +
+      "d_at\030\005 \001(\0132\032.google.protobuf.Timestamp\"C" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001" +
+      "\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n" +
+      "\022FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n" +
+      "\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud." +
+      "api.backup.v1ZAgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/backup/v1;backup" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20633,7 +20725,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_descriptor,
-        new java.lang.String[] { "Rules", "AfterBackup", });
+        new java.lang.String[] { "Rules", "AfterBackup", "BeforeBackup", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_RetentionRule_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Retention_RetentionRule_fieldAccessorTable = new

@@ -3713,7 +3713,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return Whether the analyzeTimeout field is set.
      */
     boolean hasAnalyzeTimeout();
@@ -3722,7 +3722,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return The analyzeTimeout.
      */
     com.google.protobuf.Int64Value getAnalyzeTimeout();
@@ -3731,7 +3731,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder();
 
@@ -3740,7 +3740,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return Whether the vacuumTimeout field is set.
      */
     boolean hasVacuumTimeout();
@@ -3749,7 +3749,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return The vacuumTimeout.
      */
     com.google.protobuf.Int64Value getVacuumTimeout();
@@ -3758,7 +3758,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder();
   }
@@ -3911,7 +3911,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return Whether the analyzeTimeout field is set.
      */
     @java.lang.Override
@@ -3923,7 +3923,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return The analyzeTimeout.
      */
     @java.lang.Override
@@ -3935,7 +3935,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder() {
@@ -3949,7 +3949,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return Whether the vacuumTimeout field is set.
      */
     @java.lang.Override
@@ -3961,7 +3961,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      * @return The vacuumTimeout.
      */
     @java.lang.Override
@@ -3973,7 +3973,7 @@ public final class Config {
      * in seconds 24*60*60-1 = 86399
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder() {
@@ -4482,7 +4482,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        * @return Whether the analyzeTimeout field is set.
        */
       public boolean hasAnalyzeTimeout() {
@@ -4493,7 +4493,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        * @return The analyzeTimeout.
        */
       public com.google.protobuf.Int64Value getAnalyzeTimeout() {
@@ -4508,7 +4508,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder setAnalyzeTimeout(com.google.protobuf.Int64Value value) {
         if (analyzeTimeoutBuilder_ == null) {
@@ -4528,7 +4528,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder setAnalyzeTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -4546,7 +4546,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder mergeAnalyzeTimeout(com.google.protobuf.Int64Value value) {
         if (analyzeTimeoutBuilder_ == null) {
@@ -4568,7 +4568,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder clearAnalyzeTimeout() {
         if (analyzeTimeoutBuilder_ == null) {
@@ -4586,7 +4586,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getAnalyzeTimeoutBuilder() {
         
@@ -4598,7 +4598,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder() {
         if (analyzeTimeoutBuilder_ != null) {
@@ -4613,7 +4613,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -4637,7 +4637,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        * @return Whether the vacuumTimeout field is set.
        */
       public boolean hasVacuumTimeout() {
@@ -4648,7 +4648,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        * @return The vacuumTimeout.
        */
       public com.google.protobuf.Int64Value getVacuumTimeout() {
@@ -4663,7 +4663,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder setVacuumTimeout(com.google.protobuf.Int64Value value) {
         if (vacuumTimeoutBuilder_ == null) {
@@ -4683,7 +4683,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder setVacuumTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -4701,7 +4701,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder mergeVacuumTimeout(com.google.protobuf.Int64Value value) {
         if (vacuumTimeoutBuilder_ == null) {
@@ -4723,7 +4723,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public Builder clearVacuumTimeout() {
         if (vacuumTimeoutBuilder_ == null) {
@@ -4741,7 +4741,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getVacuumTimeoutBuilder() {
         
@@ -4753,7 +4753,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder() {
         if (vacuumTimeoutBuilder_ != null) {
@@ -4768,7 +4768,7 @@ public final class Config {
        * in seconds 24*60*60-1 = 86399
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -29479,51 +29479,66 @@ public final class Config {
       "rtAt\022\027\n\005hours\030\001 \001(\003B\010\372\3071\0040-23\022\031\n\007minutes" +
       "\030\002 \001(\003B\010\372\3071\0040-59\"_\n\nTableSizes\022Q\n\006starts" +
       "\030\001 \003(\01328.yandex.cloud.mdb.greenplum.v1.B" +
-      "ackgroundActivityStartAtB\007\202\3101\003<=4\"\340\001\n\020An" +
+      "ackgroundActivityStartAtB\007\202\3101\003<=4\"\346\001\n\020An" +
       "alyzeAndVacuum\022G\n\005start\030\001 \001(\01328.yandex.c" +
       "loud.mdb.greenplum.v1.BackgroundActivity" +
-      "StartAt\022A\n\017analyze_timeout\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\013\372\3071\0070-86399\022@\n\016va" +
-      "cuum_timeout\030\003 \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\013\372\3071\0070-86399\"\251\001\n\032BackgroundActiv" +
-      "itiesConfig\022>\n\013table_sizes\030\001 \001(\0132).yande" +
-      "x.cloud.mdb.greenplum.v1.TableSizes\022K\n\022a" +
-      "nalyze_and_vacuum\030\002 \001(\0132/.yandex.cloud.m" +
-      "db.greenplum.v1.AnalyzeAndVacuum\"U\n\026Mast" +
-      "erSubclusterConfig\022;\n\tresources\030\001 \001(\0132(." +
-      "yandex.cloud.mdb.greenplum.v1.Resources\"" +
-      "V\n\027SegmentSubclusterConfig\022;\n\tresources\030" +
-      "\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
-      "sources\"\226\005\n\020GreenplumConfig6\0224\n\017max_conn" +
-      "ections\030\001 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022B\n\035gp_workfile_l" +
-      "imit_per_segment\030\003 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022@\n\033gp_workfile_limit_per_que" +
-      "ry\030\004 \001(\0132\033.google.protobuf.Int64Value\022F\n" +
-      "!gp_workfile_limit_files_per_query\030\005 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022>\n\031max_pre" +
-      "pared_transactions\030\006 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022;\n\027gp_workfile_compression" +
-      "\030\007 \001(\0132\032.google.protobuf.BoolValue\0226\n\021ma" +
-      "x_statement_mem\030\010 \001(\0132\033.google.protobuf." +
-      "Int64Value\022B\n\rlog_statement\030\t \001(\0162+.yand" +
-      "ex.cloud.mdb.greenplum.v1.LogStatement\022H" +
-      "\n$gp_add_column_inherits_table_setting\030\n" +
-      " \001(\0132\032.google.protobuf.BoolValue\"\323\003\n\023Gre" +
-      "enplumConfig6_17\0224\n\017max_connections\030\001 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022;\n\026max_sl" +
-      "ot_wal_keep_size\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022B\n\035gp_workfile_limit_per_seg" +
-      "ment\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "@\n\033gp_workfile_limit_per_query\030\004 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022F\n!gp_workfile" +
-      "_limit_files_per_query\030\005 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022>\n\031max_prepared_transa" +
-      "ctions\030\006 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022;\n\027gp_workfile_compression\030\007 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\"\317\004\n\023GreenplumConf" +
-      "ig6_19\0224\n\017max_connections\030\001 \001(\0132\033.google" +
+      "StartAt\022D\n\017analyze_timeout\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\016\372\3071\n7200-86399\022C\n" +
+      "\016vacuum_timeout\030\003 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\016\372\3071\n7200-86399\"\251\001\n\032Backgroun" +
+      "dActivitiesConfig\022>\n\013table_sizes\030\001 \001(\0132)" +
+      ".yandex.cloud.mdb.greenplum.v1.TableSize" +
+      "s\022K\n\022analyze_and_vacuum\030\002 \001(\0132/.yandex.c" +
+      "loud.mdb.greenplum.v1.AnalyzeAndVacuum\"U" +
+      "\n\026MasterSubclusterConfig\022;\n\tresources\030\001 " +
+      "\001(\0132(.yandex.cloud.mdb.greenplum.v1.Reso" +
+      "urces\"V\n\027SegmentSubclusterConfig\022;\n\treso" +
+      "urces\030\001 \001(\0132(.yandex.cloud.mdb.greenplum" +
+      ".v1.Resources\"\226\005\n\020GreenplumConfig6\0224\n\017ma" +
+      "x_connections\030\001 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022;\n\026max_slot_wal_keep_size\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022B\n\035gp_work" +
+      "file_limit_per_segment\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022@\n\033gp_workfile_limit_p" +
+      "er_query\030\004 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022F\n!gp_workfile_limit_files_per_query" +
+      "\030\005 \001(\0132\033.google.protobuf.Int64Value\022>\n\031m" +
+      "ax_prepared_transactions\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022;\n\027gp_workfile_compr" +
+      "ession\030\007 \001(\0132\032.google.protobuf.BoolValue" +
+      "\0226\n\021max_statement_mem\030\010 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022B\n\rlog_statement\030\t \001(\0162" +
+      "+.yandex.cloud.mdb.greenplum.v1.LogState" +
+      "ment\022H\n$gp_add_column_inherits_table_set" +
+      "ting\030\n \001(\0132\032.google.protobuf.BoolValue\"\323" +
+      "\003\n\023GreenplumConfig6_17\0224\n\017max_connection" +
+      "s\030\001 \001(\0132\033.google.protobuf.Int64Value\022;\n\026" +
+      "max_slot_wal_keep_size\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022B\n\035gp_workfile_limit_p" +
+      "er_segment\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022@\n\033gp_workfile_limit_per_query\030\004 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022F\n!gp_wo" +
+      "rkfile_limit_files_per_query\030\005 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022>\n\031max_prepared_" +
+      "transactions\030\006 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022;\n\027gp_workfile_compression\030\007 \001(\013" +
+      "2\032.google.protobuf.BoolValue\"\317\004\n\023Greenpl" +
+      "umConfig6_19\0224\n\017max_connections\030\001 \001(\0132\033." +
+      "google.protobuf.Int64Value\022;\n\026max_slot_w" +
+      "al_keep_size\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022B\n\035gp_workfile_limit_per_segment" +
+      "\030\003 \001(\0132\033.google.protobuf.Int64Value\022@\n\033g" +
+      "p_workfile_limit_per_query\030\004 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022F\n!gp_workfile_lim" +
+      "it_files_per_query\030\005 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022>\n\031max_prepared_transactio" +
+      "ns\030\006 \001(\0132\033.google.protobuf.Int64Value\022;\n" +
+      "\027gp_workfile_compression\030\007 \001(\0132\032.google." +
+      "protobuf.BoolValue\0226\n\021max_statement_mem\030" +
+      "\010 \001(\0132\033.google.protobuf.Int64Value\022B\n\rlo" +
+      "g_statement\030\t \001(\0162+.yandex.cloud.mdb.gre" +
+      "enplum.v1.LogStatement\"\231\005\n\023GreenplumConf" +
+      "ig6_21\0224\n\017max_connections\030\001 \001(\0132\033.google" +
       ".protobuf.Int64Value\022;\n\026max_slot_wal_kee" +
       "p_size\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
       "e\022B\n\035gp_workfile_limit_per_segment\030\003 \001(\013" +
@@ -29537,84 +29552,70 @@ public final class Config {
       "uf.BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132" +
       "\033.google.protobuf.Int64Value\022B\n\rlog_stat" +
       "ement\030\t \001(\0162+.yandex.cloud.mdb.greenplum" +
-      ".v1.LogStatement\"\231\005\n\023GreenplumConfig6_21" +
-      "\0224\n\017max_connections\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022;\n\026max_slot_wal_keep_size" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022B\n\035g" +
-      "p_workfile_limit_per_segment\030\003 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022@\n\033gp_workfile_l" +
-      "imit_per_query\030\004 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022F\n!gp_workfile_limit_files_per" +
-      "_query\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022>\n\031max_prepared_transactions\030\006 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022;\n\027gp_workfile" +
-      "_compression\030\007 \001(\0132\032.google.protobuf.Boo" +
-      "lValue\0226\n\021max_statement_mem\030\010 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022B\n\rlog_statement\030" +
-      "\t \001(\0162+.yandex.cloud.mdb.greenplum.v1.Lo" +
-      "gStatement\022H\n$gp_add_column_inherits_tab" +
-      "le_setting\030\n \001(\0132\032.google.protobuf.BoolV" +
-      "alue\"\231\005\n\023GreenplumConfig6_22\0224\n\017max_conn" +
-      "ections\030\001 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022B\n\035gp_workfile_l" +
-      "imit_per_segment\030\003 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022@\n\033gp_workfile_limit_per_que" +
-      "ry\030\004 \001(\0132\033.google.protobuf.Int64Value\022F\n" +
-      "!gp_workfile_limit_files_per_query\030\005 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022>\n\031max_pre" +
-      "pared_transactions\030\006 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022;\n\027gp_workfile_compression" +
-      "\030\007 \001(\0132\032.google.protobuf.BoolValue\0226\n\021ma" +
-      "x_statement_mem\030\010 \001(\0132\033.google.protobuf." +
-      "Int64Value\022B\n\rlog_statement\030\t \001(\0162+.yand" +
-      "ex.cloud.mdb.greenplum.v1.LogStatement\022H" +
-      "\n$gp_add_column_inherits_table_setting\030\n" +
-      " \001(\0132\032.google.protobuf.BoolValue\"\201\002\n\026Gre" +
-      "enplumConfigSet6_17\022R\n\020effective_config\030" +
-      "\001 \001(\01322.yandex.cloud.mdb.greenplum.v1.Gr" +
-      "eenplumConfig6_17B\004\350\3071\001\022G\n\013user_config\030\002" +
-      " \001(\01322.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumConfig6_17\022J\n\016default_config\030\003 \001(\013" +
-      "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig6_17\"\201\002\n\026GreenplumConfigSet6_19\022" +
-      "R\n\020effective_config\030\001 \001(\01322.yandex.cloud" +
-      ".mdb.greenplum.v1.GreenplumConfig6_19B\004\350" +
-      "\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud." +
-      "mdb.greenplum.v1.GreenplumConfig6_19\022J\n\016" +
-      "default_config\030\003 \001(\01322.yandex.cloud.mdb." +
-      "greenplum.v1.GreenplumConfig6_19\"\201\002\n\026Gre" +
-      "enplumConfigSet6_21\022R\n\020effective_config\030" +
-      "\001 \001(\01322.yandex.cloud.mdb.greenplum.v1.Gr" +
-      "eenplumConfig6_21B\004\350\3071\001\022G\n\013user_config\030\002" +
-      " \001(\01322.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumConfig6_21\022J\n\016default_config\030\003 \001(\013" +
-      "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig6_21\"\201\002\n\026GreenplumConfigSet6_22\022" +
-      "R\n\020effective_config\030\001 \001(\01322.yandex.cloud" +
-      ".mdb.greenplum.v1.GreenplumConfig6_22B\004\350" +
-      "\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud." +
-      "mdb.greenplum.v1.GreenplumConfig6_22\022J\n\016" +
-      "default_config\030\003 \001(\01322.yandex.cloud.mdb." +
-      "greenplum.v1.GreenplumConfig6_22\"\365\001\n\023Gre" +
-      "enplumConfigSet6\022O\n\020effective_config\030\001 \001" +
-      "(\0132/.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfig6B\004\350\3071\001\022D\n\013user_config\030\002 \001(\0132/" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config6\022G\n\016default_config\030\003 \001(\0132/.yandex" +
+      ".v1.LogStatement\022H\n$gp_add_column_inheri" +
+      "ts_table_setting\030\n \001(\0132\032.google.protobuf" +
+      ".BoolValue\"\231\005\n\023GreenplumConfig6_22\0224\n\017ma" +
+      "x_connections\030\001 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022;\n\026max_slot_wal_keep_size\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022B\n\035gp_work" +
+      "file_limit_per_segment\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022@\n\033gp_workfile_limit_p" +
+      "er_query\030\004 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022F\n!gp_workfile_limit_files_per_query" +
+      "\030\005 \001(\0132\033.google.protobuf.Int64Value\022>\n\031m" +
+      "ax_prepared_transactions\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022;\n\027gp_workfile_compr" +
+      "ession\030\007 \001(\0132\032.google.protobuf.BoolValue" +
+      "\0226\n\021max_statement_mem\030\010 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022B\n\rlog_statement\030\t \001(\0162" +
+      "+.yandex.cloud.mdb.greenplum.v1.LogState" +
+      "ment\022H\n$gp_add_column_inherits_table_set" +
+      "ting\030\n \001(\0132\032.google.protobuf.BoolValue\"\201" +
+      "\002\n\026GreenplumConfigSet6_17\022R\n\020effective_c" +
+      "onfig\030\001 \001(\01322.yandex.cloud.mdb.greenplum" +
+      ".v1.GreenplumConfig6_17B\004\350\3071\001\022G\n\013user_co" +
+      "nfig\030\002 \001(\01322.yandex.cloud.mdb.greenplum." +
+      "v1.GreenplumConfig6_17\022J\n\016default_config" +
+      "\030\003 \001(\01322.yandex.cloud.mdb.greenplum.v1.G" +
+      "reenplumConfig6_17\"\201\002\n\026GreenplumConfigSe" +
+      "t6_19\022R\n\020effective_config\030\001 \001(\01322.yandex" +
       ".cloud.mdb.greenplum.v1.GreenplumConfig6" +
-      "\"\215\002\n\031ConnectionPoolerConfigSet\022U\n\020effect" +
-      "ive_config\030\001 \001(\01325.yandex.cloud.mdb.gree" +
-      "nplum.v1.ConnectionPoolerConfigB\004\350\3071\001\022J\n" +
-      "\013user_config\030\002 \001(\01325.yandex.cloud.mdb.gr" +
-      "eenplum.v1.ConnectionPoolerConfig\022M\n\016def" +
-      "ault_config\030\003 \001(\01325.yandex.cloud.mdb.gre" +
-      "enplum.v1.ConnectionPoolerConfig*R\n\014LogS" +
-      "tatement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022" +
-      "\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003ALL\020\004Bp\n!" +
-      "yandex.cloud.api.mdb.greenplum.v1ZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/greenplum/v1;greenplumb\006proto3"
+      "_19B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex." +
+      "cloud.mdb.greenplum.v1.GreenplumConfig6_" +
+      "19\022J\n\016default_config\030\003 \001(\01322.yandex.clou" +
+      "d.mdb.greenplum.v1.GreenplumConfig6_19\"\201" +
+      "\002\n\026GreenplumConfigSet6_21\022R\n\020effective_c" +
+      "onfig\030\001 \001(\01322.yandex.cloud.mdb.greenplum" +
+      ".v1.GreenplumConfig6_21B\004\350\3071\001\022G\n\013user_co" +
+      "nfig\030\002 \001(\01322.yandex.cloud.mdb.greenplum." +
+      "v1.GreenplumConfig6_21\022J\n\016default_config" +
+      "\030\003 \001(\01322.yandex.cloud.mdb.greenplum.v1.G" +
+      "reenplumConfig6_21\"\201\002\n\026GreenplumConfigSe" +
+      "t6_22\022R\n\020effective_config\030\001 \001(\01322.yandex" +
+      ".cloud.mdb.greenplum.v1.GreenplumConfig6" +
+      "_22B\004\350\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex." +
+      "cloud.mdb.greenplum.v1.GreenplumConfig6_" +
+      "22\022J\n\016default_config\030\003 \001(\01322.yandex.clou" +
+      "d.mdb.greenplum.v1.GreenplumConfig6_22\"\365" +
+      "\001\n\023GreenplumConfigSet6\022O\n\020effective_conf" +
+      "ig\030\001 \001(\0132/.yandex.cloud.mdb.greenplum.v1" +
+      ".GreenplumConfig6B\004\350\3071\001\022D\n\013user_config\030\002" +
+      " \001(\0132/.yandex.cloud.mdb.greenplum.v1.Gre" +
+      "enplumConfig6\022G\n\016default_config\030\003 \001(\0132/." +
+      "yandex.cloud.mdb.greenplum.v1.GreenplumC" +
+      "onfig6\"\215\002\n\031ConnectionPoolerConfigSet\022U\n\020" +
+      "effective_config\030\001 \001(\01325.yandex.cloud.md" +
+      "b.greenplum.v1.ConnectionPoolerConfigB\004\350" +
+      "\3071\001\022J\n\013user_config\030\002 \001(\01325.yandex.cloud." +
+      "mdb.greenplum.v1.ConnectionPoolerConfig\022" +
+      "M\n\016default_config\030\003 \001(\01325.yandex.cloud.m" +
+      "db.greenplum.v1.ConnectionPoolerConfig*R" +
+      "\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPECIF" +
+      "IED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003ALL" +
+      "\020\004Bp\n!yandex.cloud.api.mdb.greenplum.v1Z" +
+      "Kgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/greenplum/v1;greenplumb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
