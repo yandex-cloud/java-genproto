@@ -8321,51 +8321,51 @@ public final class EndpointServiceOuterClass {
       "_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"k\n\025ListE" +
       "ndpointsResponse\0229\n\tendpoints\030\001 \003(\0132&.ya" +
       "ndex.cloud.datatransfer.v1.Endpoint\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\217\002\n\025CreateEndpointR" +
+      "ext_page_token\030\002 \001(\t\"\225\002\n\025CreateEndpointR" +
       "equest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022" +
       "\023\n\013description\030\003 \001(\t\022O\n\006labels\030\004 \003(\0132?.y" +
       "andex.cloud.datatransfer.v1.CreateEndpoi" +
       "ntRequest.LabelsEntry\022@\n\010settings\0304 \001(\0132" +
       "..yandex.cloud.datatransfer.v1.EndpointS" +
       "ettings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"-\n\026CreateEndpointMetadata" +
-      "\022\023\n\013endpoint_id\030\001 \001(\t\"\302\002\n\025UpdateEndpoint" +
-      "Request\022\023\n\013endpoint_id\030\n \001(\t\022\014\n\004name\030\013 \001" +
-      "(\t\022\023\n\013description\030\014 \001(\t\022O\n\006labels\030\r \003(\0132" +
-      "?.yandex.cloud.datatransfer.v1.UpdateEnd" +
-      "pointRequest.LabelsEntry\022@\n\010settings\0304 \001" +
-      "(\0132..yandex.cloud.datatransfer.v1.Endpoi" +
-      "ntSettings\022/\n\013update_mask\030< \001(\0132\032.google" +
-      ".protobuf.FieldMask\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateEndp" +
-      "ointMetadata\022\023\n\013endpoint_id\030\001 \001(\t\",\n\025Del" +
-      "eteEndpointRequest\022\023\n\013endpoint_id\030\001 \001(\t\"" +
-      "-\n\026DeleteEndpointMetadata\022\023\n\013endpoint_id" +
-      "\030\001 \001(\t2\275\006\n\017EndpointService\022\203\001\n\003Get\0220.yan" +
-      "dex.cloud.datatransfer.v1.GetEndpointReq" +
-      "uest\032&.yandex.cloud.datatransfer.v1.Endp" +
-      "oint\"\"\202\323\344\223\002\034\022\032/v1/endpoint/{endpoint_id}" +
-      "\022\227\001\n\004List\0222.yandex.cloud.datatransfer.v1" +
-      ".ListEndpointsRequest\0323.yandex.cloud.dat" +
-      "atransfer.v1.ListEndpointsResponse\"&\202\323\344\223" +
-      "\002 \022\036/v1/endpoints/list/{folder_id}\022\237\001\n\006C" +
-      "reate\0223.yandex.cloud.datatransfer.v1.Cre" +
-      "ateEndpointRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"=\202\323\344\223\002\021\"\014/v1/endpoint:\001*\262\322" +
-      "*\"\n\026CreateEndpointMetadata\022\010Endpoint\022\255\001\n" +
-      "\006Update\0223.yandex.cloud.datatransfer.v1.U" +
-      "pdateEndpointRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"K\202\323\344\223\002\0372\032/v1/endpoint/{e" +
-      "ndpoint_id}:\001*\262\322*\"\n\026UpdateEndpointMetada" +
-      "ta\022\010Endpoint\022\267\001\n\006Delete\0223.yandex.cloud.d" +
-      "atatransfer.v1.DeleteEndpointRequest\032!.y" +
-      "andex.cloud.operation.Operation\"U\202\323\344\223\002\034*" +
-      "\032/v1/endpoint/{endpoint_id}\262\322*/\n\026DeleteE" +
-      "ndpointMetadata\022\025google.protobuf.EmptyBq" +
-      "\n yandex.cloud.api.datatransfer.v1ZMgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/datatransfer/v1;datatransferb\006proto" +
-      "3"
+      "alue\030\002 \001(\t:\0028\001J\004\010\005\0204\"-\n\026CreateEndpointMe" +
+      "tadata\022\023\n\013endpoint_id\030\001 \001(\t\"\324\002\n\025UpdateEn" +
+      "dpointRequest\022\023\n\013endpoint_id\030\n \001(\t\022\014\n\004na" +
+      "me\030\013 \001(\t\022\023\n\013description\030\014 \001(\t\022O\n\006labels\030" +
+      "\r \003(\0132?.yandex.cloud.datatransfer.v1.Upd" +
+      "ateEndpointRequest.LabelsEntry\022@\n\010settin" +
+      "gs\0304 \001(\0132..yandex.cloud.datatransfer.v1." +
+      "EndpointSettings\022/\n\013update_mask\030< \001(\0132\032." +
+      "google.protobuf.FieldMask\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\001\020\nJ\004" +
+      "\010\016\0204J\004\0105\020<\"-\n\026UpdateEndpointMetadata\022\023\n\013" +
+      "endpoint_id\030\001 \001(\t\",\n\025DeleteEndpointReque" +
+      "st\022\023\n\013endpoint_id\030\001 \001(\t\"-\n\026DeleteEndpoin" +
+      "tMetadata\022\023\n\013endpoint_id\030\001 \001(\t2\275\006\n\017Endpo" +
+      "intService\022\203\001\n\003Get\0220.yandex.cloud.datatr" +
+      "ansfer.v1.GetEndpointRequest\032&.yandex.cl" +
+      "oud.datatransfer.v1.Endpoint\"\"\202\323\344\223\002\034\022\032/v" +
+      "1/endpoint/{endpoint_id}\022\227\001\n\004List\0222.yand" +
+      "ex.cloud.datatransfer.v1.ListEndpointsRe" +
+      "quest\0323.yandex.cloud.datatransfer.v1.Lis" +
+      "tEndpointsResponse\"&\202\323\344\223\002 \022\036/v1/endpoint" +
+      "s/list/{folder_id}\022\237\001\n\006Create\0223.yandex.c" +
+      "loud.datatransfer.v1.CreateEndpointReque" +
+      "st\032!.yandex.cloud.operation.Operation\"=\202" +
+      "\323\344\223\002\021\"\014/v1/endpoint:\001*\262\322*\"\n\026CreateEndpoi" +
+      "ntMetadata\022\010Endpoint\022\255\001\n\006Update\0223.yandex" +
+      ".cloud.datatransfer.v1.UpdateEndpointReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "K\202\323\344\223\002\0372\032/v1/endpoint/{endpoint_id}:\001*\262\322" +
+      "*\"\n\026UpdateEndpointMetadata\022\010Endpoint\022\267\001\n" +
+      "\006Delete\0223.yandex.cloud.datatransfer.v1.D" +
+      "eleteEndpointRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"U\202\323\344\223\002\034*\032/v1/endpoint/{e" +
+      "ndpoint_id}\262\322*/\n\026DeleteEndpointMetadata\022" +
+      "\025google.protobuf.EmptyBq\n yandex.cloud.a" +
+      "pi.datatransfer.v1ZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/datatransfe" +
+      "r/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

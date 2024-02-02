@@ -1457,6 +1457,16 @@ public final class Parsers {
      * @return The addRestColumn.
      */
     boolean getAddRestColumn();
+
+    /**
+     * <pre>
+     * Unescape string values
+     * </pre>
+     *
+     * <code>bool unescape_string_values = 7;</code>
+     * @return The unescapeStringValues.
+     */
+    boolean getUnescapeStringValues();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.GenericParserCommon}
@@ -1524,6 +1534,11 @@ public final class Parsers {
             case 24: {
 
               addRestColumn_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              unescapeStringValues_ = input.readBool();
               break;
             }
             default: {
@@ -1614,6 +1629,21 @@ public final class Parsers {
       return addRestColumn_;
     }
 
+    public static final int UNESCAPE_STRING_VALUES_FIELD_NUMBER = 7;
+    private boolean unescapeStringValues_;
+    /**
+     * <pre>
+     * Unescape string values
+     * </pre>
+     *
+     * <code>bool unescape_string_values = 7;</code>
+     * @return The unescapeStringValues.
+     */
+    @java.lang.Override
+    public boolean getUnescapeStringValues() {
+      return unescapeStringValues_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1637,6 +1667,9 @@ public final class Parsers {
       if (addRestColumn_ != false) {
         output.writeBool(3, addRestColumn_);
       }
+      if (unescapeStringValues_ != false) {
+        output.writeBool(7, unescapeStringValues_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1657,6 +1690,10 @@ public final class Parsers {
       if (addRestColumn_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, addRestColumn_);
+      }
+      if (unescapeStringValues_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, unescapeStringValues_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1682,6 +1719,8 @@ public final class Parsers {
           != other.getNullKeysAllowed()) return false;
       if (getAddRestColumn()
           != other.getAddRestColumn()) return false;
+      if (getUnescapeStringValues()
+          != other.getUnescapeStringValues()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1703,6 +1742,9 @@ public final class Parsers {
       hash = (37 * hash) + ADD_REST_COLUMN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAddRestColumn());
+      hash = (37 * hash) + UNESCAPE_STRING_VALUES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnescapeStringValues());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1846,6 +1888,8 @@ public final class Parsers {
 
         addRestColumn_ = false;
 
+        unescapeStringValues_ = false;
+
         return this;
       }
 
@@ -1879,6 +1923,7 @@ public final class Parsers {
         }
         result.nullKeysAllowed_ = nullKeysAllowed_;
         result.addRestColumn_ = addRestColumn_;
+        result.unescapeStringValues_ = unescapeStringValues_;
         onBuilt();
         return result;
       }
@@ -1935,6 +1980,9 @@ public final class Parsers {
         }
         if (other.getAddRestColumn() != false) {
           setAddRestColumn(other.getAddRestColumn());
+        }
+        if (other.getUnescapeStringValues() != false) {
+          setUnescapeStringValues(other.getUnescapeStringValues());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2166,6 +2214,49 @@ public final class Parsers {
       public Builder clearAddRestColumn() {
         
         addRestColumn_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unescapeStringValues_ ;
+      /**
+       * <pre>
+       * Unescape string values
+       * </pre>
+       *
+       * <code>bool unescape_string_values = 7;</code>
+       * @return The unescapeStringValues.
+       */
+      @java.lang.Override
+      public boolean getUnescapeStringValues() {
+        return unescapeStringValues_;
+      }
+      /**
+       * <pre>
+       * Unescape string values
+       * </pre>
+       *
+       * <code>bool unescape_string_values = 7;</code>
+       * @param value The unescapeStringValues to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnescapeStringValues(boolean value) {
+        
+        unescapeStringValues_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unescape string values
+       * </pre>
+       *
+       * <code>bool unescape_string_values = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnescapeStringValues() {
+        
+        unescapeStringValues_ = false;
         onChanged();
         return this;
       }
@@ -3090,7 +3181,7 @@ public final class Parsers {
       "\n3yandex/cloud/datatransfer/v1/endpoint/" +
       "parsers.proto\022%yandex.cloud.datatransfer" +
       ".v1.endpoint\0322yandex/cloud/datatransfer/" +
-      "v1/endpoint/common.proto\"\361\002\n\006Parser\022Q\n\013j" +
+      "v1/endpoint/common.proto\"\375\002\n\006Parser\022Q\n\013j" +
       "son_parser\030\001 \001(\0132:.yandex.cloud.datatran" +
       "sfer.v1.endpoint.GenericParserCommonH\000\022\\" +
       "\n\026audit_trails_v1_parser\030\002 \001(\0132:.yandex." +
@@ -3099,17 +3190,18 @@ public final class Parsers {
       "(\01329.yandex.cloud.datatransfer.v1.endpoi" +
       "nt.CloudLoggingParserH\000\022Q\n\013tskv_parser\030\006" +
       " \001(\0132:.yandex.cloud.datatransfer.v1.endp" +
-      "oint.GenericParserCommonH\000B\010\n\006parser\"\221\001\n" +
-      "\023GenericParserCommon\022F\n\013data_schema\030\001 \001(" +
-      "\01321.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.DataSchema\022\031\n\021null_keys_allowed\030\002 \001(\010\022" +
-      "\027\n\017add_rest_column\030\003 \001(\010\"\025\n\023AuditTrailsV" +
-      "1Parser\"\024\n\022CloudLoggingParserB\247\001\n)yandex" +
-      ".cloud.api.datatransfer.v1.endpointZRgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/datatransfer/v1/endpoint;endpoint\252" +
-      "\002%Yandex.Cloud.Datatransfer.V1.EndPointb" +
-      "\006proto3"
+      "oint.GenericParserCommonH\000B\010\n\006parserJ\004\010\003" +
+      "\020\004J\004\010\005\020\006\"\267\001\n\023GenericParserCommon\022F\n\013data" +
+      "_schema\030\001 \001(\01321.yandex.cloud.datatransfe" +
+      "r.v1.endpoint.DataSchema\022\031\n\021null_keys_al" +
+      "lowed\030\002 \001(\010\022\027\n\017add_rest_column\030\003 \001(\010\022\036\n\026" +
+      "unescape_string_values\030\007 \001(\010J\004\010\004\020\007\"\025\n\023Au" +
+      "ditTrailsV1Parser\"\024\n\022CloudLoggingParserB" +
+      "\247\001\n)yandex.cloud.api.datatransfer.v1.end" +
+      "pointZRgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/datatransfer/v1/endpoint" +
+      ";endpoint\252\002%Yandex.Cloud.Datatransfer.V1" +
+      ".EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3127,7 +3219,7 @@ public final class Parsers {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_GenericParserCommon_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_GenericParserCommon_descriptor,
-        new java.lang.String[] { "DataSchema", "NullKeysAllowed", "AddRestColumn", });
+        new java.lang.String[] { "DataSchema", "NullKeysAllowed", "AddRestColumn", "UnescapeStringValues", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AuditTrailsV1Parser_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_AuditTrailsV1Parser_fieldAccessorTable = new

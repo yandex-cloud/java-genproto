@@ -50,6 +50,18 @@ public final class Mongo {
     long getPort();
 
     /**
+     * <code>string replica_set = 5;</code>
+     * @return The replicaSet.
+     */
+    java.lang.String getReplicaSet();
+    /**
+     * <code>string replica_set = 5;</code>
+     * @return The bytes for replicaSet.
+     */
+    com.google.protobuf.ByteString
+        getReplicaSetBytes();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      * @return Whether the tlsMode field is set.
      */
@@ -63,18 +75,6 @@ public final class Mongo {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
-
-    /**
-     * <code>string replica_set = 5;</code>
-     * @return The replicaSet.
-     */
-    java.lang.String getReplicaSet();
-    /**
-     * <code>string replica_set = 5;</code>
-     * @return The bytes for replicaSet.
-     */
-    com.google.protobuf.ByteString
-        getReplicaSetBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseMongo}
@@ -238,32 +238,6 @@ public final class Mongo {
       return port_;
     }
 
-    public static final int TLS_MODE_FIELD_NUMBER = 6;
-    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return Whether the tlsMode field is set.
-     */
-    @java.lang.Override
-    public boolean hasTlsMode() {
-      return tlsMode_ != null;
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return The tlsMode.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
-      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
-      return getTlsMode();
-    }
-
     public static final int REPLICA_SET_FIELD_NUMBER = 5;
     private volatile java.lang.Object replicaSet_;
     /**
@@ -300,6 +274,32 @@ public final class Mongo {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TLS_MODE_FIELD_NUMBER = 6;
+    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return Whether the tlsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasTlsMode() {
+      return tlsMode_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return The tlsMode.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
+      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
+      return getTlsMode();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -375,13 +375,13 @@ public final class Mongo {
           .equals(other.getHostsList())) return false;
       if (getPort()
           != other.getPort()) return false;
+      if (!getReplicaSet()
+          .equals(other.getReplicaSet())) return false;
       if (hasTlsMode() != other.hasTlsMode()) return false;
       if (hasTlsMode()) {
         if (!getTlsMode()
             .equals(other.getTlsMode())) return false;
       }
-      if (!getReplicaSet()
-          .equals(other.getReplicaSet())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -400,12 +400,12 @@ public final class Mongo {
       hash = (37 * hash) + PORT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPort());
+      hash = (37 * hash) + REPLICA_SET_FIELD_NUMBER;
+      hash = (53 * hash) + getReplicaSet().hashCode();
       if (hasTlsMode()) {
         hash = (37 * hash) + TLS_MODE_FIELD_NUMBER;
         hash = (53 * hash) + getTlsMode().hashCode();
       }
-      hash = (37 * hash) + REPLICA_SET_FIELD_NUMBER;
-      hash = (53 * hash) + getReplicaSet().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -543,14 +543,14 @@ public final class Mongo {
         bitField0_ = (bitField0_ & ~0x00000001);
         port_ = 0L;
 
+        replicaSet_ = "";
+
         if (tlsModeBuilder_ == null) {
           tlsMode_ = null;
         } else {
           tlsMode_ = null;
           tlsModeBuilder_ = null;
         }
-        replicaSet_ = "";
-
         return this;
       }
 
@@ -584,12 +584,12 @@ public final class Mongo {
         }
         result.hosts_ = hosts_;
         result.port_ = port_;
+        result.replicaSet_ = replicaSet_;
         if (tlsModeBuilder_ == null) {
           result.tlsMode_ = tlsMode_;
         } else {
           result.tlsMode_ = tlsModeBuilder_.build();
         }
-        result.replicaSet_ = replicaSet_;
         onBuilt();
         return result;
       }
@@ -651,12 +651,12 @@ public final class Mongo {
         if (other.getPort() != 0L) {
           setPort(other.getPort());
         }
-        if (other.hasTlsMode()) {
-          mergeTlsMode(other.getTlsMode());
-        }
         if (!other.getReplicaSet().isEmpty()) {
           replicaSet_ = other.replicaSet_;
           onChanged();
+        }
+        if (other.hasTlsMode()) {
+          mergeTlsMode(other.getTlsMode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -829,6 +829,82 @@ public final class Mongo {
         return this;
       }
 
+      private java.lang.Object replicaSet_ = "";
+      /**
+       * <code>string replica_set = 5;</code>
+       * @return The replicaSet.
+       */
+      public java.lang.String getReplicaSet() {
+        java.lang.Object ref = replicaSet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          replicaSet_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string replica_set = 5;</code>
+       * @return The bytes for replicaSet.
+       */
+      public com.google.protobuf.ByteString
+          getReplicaSetBytes() {
+        java.lang.Object ref = replicaSet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          replicaSet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string replica_set = 5;</code>
+       * @param value The replicaSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplicaSet(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        replicaSet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string replica_set = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReplicaSet() {
+        
+        replicaSet_ = getDefaultInstance().getReplicaSet();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string replica_set = 5;</code>
+       * @param value The bytes for replicaSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplicaSetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        replicaSet_ = value;
+        onChanged();
+        return this;
+      }
+
       private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
@@ -946,82 +1022,6 @@ public final class Mongo {
           tlsMode_ = null;
         }
         return tlsModeBuilder_;
-      }
-
-      private java.lang.Object replicaSet_ = "";
-      /**
-       * <code>string replica_set = 5;</code>
-       * @return The replicaSet.
-       */
-      public java.lang.String getReplicaSet() {
-        java.lang.Object ref = replicaSet_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          replicaSet_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string replica_set = 5;</code>
-       * @return The bytes for replicaSet.
-       */
-      public com.google.protobuf.ByteString
-          getReplicaSetBytes() {
-        java.lang.Object ref = replicaSet_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          replicaSet_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string replica_set = 5;</code>
-       * @param value The replicaSet to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReplicaSet(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        replicaSet_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string replica_set = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReplicaSet() {
-        
-        replicaSet_ = getDefaultInstance().getReplicaSet();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string replica_set = 5;</code>
-       * @param value The bytes for replicaSet to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReplicaSetBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        replicaSet_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4095,47 +4095,6 @@ public final class Mongo {
 
     /**
      * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
-
-    /**
-     * <pre>
      * List of collections for replication. Empty list implies replication of all
      * tables on the deployment. Allowed to use * as collection name.
      * </pre>
@@ -4241,6 +4200,47 @@ public final class Mongo {
      * @return The secondaryPreferredMode.
      */
     boolean getSecondaryPreferredMode();
+
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoSource}
@@ -4256,9 +4256,9 @@ public final class Mongo {
     }
     private MongoSource() {
       subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       collections_ = java.util.Collections.emptyList();
       excludedCollections_ = java.util.Collections.emptyList();
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -4312,18 +4312,18 @@ public final class Mongo {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 collections_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               collections_.add(
                   input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.parser(), extensionRegistry));
               break;
             }
             case 58: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 excludedCollections_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               excludedCollections_.add(
                   input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.parser(), extensionRegistry));
@@ -4336,9 +4336,9 @@ public final class Mongo {
             }
             case 90: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroups_.add(s);
               break;
@@ -4358,13 +4358,13 @@ public final class Mongo {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           collections_ = java.util.Collections.unmodifiableList(collections_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           excludedCollections_ = java.util.Collections.unmodifiableList(excludedCollections_);
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -4446,57 +4446,6 @@ public final class Mongo {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 11;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 11;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
     }
 
     public static final int COLLECTIONS_FIELD_NUMBER = 6;
@@ -4644,6 +4593,57 @@ public final class Mongo {
       return secondaryPreferredMode_;
     }
 
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 11;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4734,14 +4734,14 @@ public final class Mongo {
       }
       if (!getSubnetId()
           .equals(other.getSubnetId())) return false;
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getCollectionsList()
           .equals(other.getCollectionsList())) return false;
       if (!getExcludedCollectionsList()
           .equals(other.getExcludedCollectionsList())) return false;
       if (getSecondaryPreferredMode()
           != other.getSecondaryPreferredMode()) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4759,10 +4759,6 @@ public final class Mongo {
       }
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
-      }
       if (getCollectionsCount() > 0) {
         hash = (37 * hash) + COLLECTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getCollectionsList().hashCode();
@@ -4774,6 +4770,10 @@ public final class Mongo {
       hash = (37 * hash) + SECONDARY_PREFERRED_MODE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSecondaryPreferredMode());
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4917,22 +4917,22 @@ public final class Mongo {
         }
         subnetId_ = "";
 
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (collectionsBuilder_ == null) {
           collections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           collectionsBuilder_.clear();
         }
         if (excludedCollectionsBuilder_ == null) {
           excludedCollections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           excludedCollectionsBuilder_.clear();
         }
         secondaryPreferredMode_ = false;
 
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -4966,30 +4966,30 @@ public final class Mongo {
           result.connection_ = connectionBuilder_.build();
         }
         result.subnetId_ = subnetId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
         if (collectionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             collections_ = java.util.Collections.unmodifiableList(collections_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.collections_ = collections_;
         } else {
           result.collections_ = collectionsBuilder_.build();
         }
         if (excludedCollectionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             excludedCollections_ = java.util.Collections.unmodifiableList(excludedCollections_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.excludedCollections_ = excludedCollections_;
         } else {
           result.excludedCollections_ = excludedCollectionsBuilder_.build();
         }
         result.secondaryPreferredMode_ = secondaryPreferredMode_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -5045,21 +5045,11 @@ public final class Mongo {
           subnetId_ = other.subnetId_;
           onChanged();
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (collectionsBuilder_ == null) {
           if (!other.collections_.isEmpty()) {
             if (collections_.isEmpty()) {
               collections_ = other.collections_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureCollectionsIsMutable();
               collections_.addAll(other.collections_);
@@ -5072,7 +5062,7 @@ public final class Mongo {
               collectionsBuilder_.dispose();
               collectionsBuilder_ = null;
               collections_ = other.collections_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               collectionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCollectionsFieldBuilder() : null;
@@ -5085,7 +5075,7 @@ public final class Mongo {
           if (!other.excludedCollections_.isEmpty()) {
             if (excludedCollections_.isEmpty()) {
               excludedCollections_ = other.excludedCollections_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureExcludedCollectionsIsMutable();
               excludedCollections_.addAll(other.excludedCollections_);
@@ -5098,7 +5088,7 @@ public final class Mongo {
               excludedCollectionsBuilder_.dispose();
               excludedCollectionsBuilder_ = null;
               excludedCollections_ = other.excludedCollections_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000002);
               excludedCollectionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getExcludedCollectionsFieldBuilder() : null;
@@ -5109,6 +5099,16 @@ public final class Mongo {
         }
         if (other.getSecondaryPreferredMode() != false) {
           setSecondaryPreferredMode(other.getSecondaryPreferredMode());
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5335,158 +5335,12 @@ public final class Mongo {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 11;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-
       private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> collections_ =
         java.util.Collections.emptyList();
       private void ensureCollectionsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           collections_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection>(collections_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5691,7 +5545,7 @@ public final class Mongo {
       public Builder clearCollections() {
         if (collectionsBuilder_ == null) {
           collections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           collectionsBuilder_.clear();
@@ -5803,7 +5657,7 @@ public final class Mongo {
           collectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder>(
                   collections_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           collections_ = null;
@@ -5814,9 +5668,9 @@ public final class Mongo {
       private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection> excludedCollections_ =
         java.util.Collections.emptyList();
       private void ensureExcludedCollectionsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           excludedCollections_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection>(excludedCollections_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -6021,7 +5875,7 @@ public final class Mongo {
       public Builder clearExcludedCollections() {
         if (excludedCollectionsBuilder_ == null) {
           excludedCollections_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           excludedCollectionsBuilder_.clear();
@@ -6133,7 +5987,7 @@ public final class Mongo {
           excludedCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollection.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoCollectionOrBuilder>(
                   excludedCollections_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           excludedCollections_ = null;
@@ -6180,6 +6034,152 @@ public final class Mongo {
       public Builder clearSecondaryPreferredMode() {
         
         secondaryPreferredMode_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 11;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
         onChanged();
         return this;
       }
@@ -6256,6 +6256,37 @@ public final class Mongo {
     yandex.cloud.api.datatransfer.v1.endpoint.Mongo.MongoConnectionOrBuilder getConnectionOrBuilder();
 
     /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+     * @return The cleanupPolicy.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
+
+    /**
      * <code>string subnet_id = 7;</code>
      * @return The subnetId.
      */
@@ -6307,37 +6338,6 @@ public final class Mongo {
      */
     com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index);
-
-    /**
-     * <pre>
-     * Database name
-     * </pre>
-     *
-     * <code>string database = 2;</code>
-     * @return The database.
-     */
-    java.lang.String getDatabase();
-    /**
-     * <pre>
-     * Database name
-     * </pre>
-     *
-     * <code>string database = 2;</code>
-     * @return The bytes for database.
-     */
-    com.google.protobuf.ByteString
-        getDatabaseBytes();
-
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
-     */
-    int getCleanupPolicyValue();
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-     * @return The cleanupPolicy.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MongoTarget}
@@ -6352,10 +6352,10 @@ public final class Mongo {
       super(builder);
     }
     private MongoTarget() {
-      subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       cleanupPolicy_ = 0;
+      subnetId_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -6490,6 +6490,71 @@ public final class Mongo {
       return getConnection();
     }
 
+    public static final int DATABASE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object database_;
+    /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     * @return The database.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database name
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     * @return The bytes for database.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 6;
+    private int cleanupPolicy_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    @java.lang.Override public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+     * @return The cleanupPolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+    }
+
     public static final int SUBNET_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object subnetId_;
     /**
@@ -6579,71 +6644,6 @@ public final class Mongo {
       return securityGroups_.getByteString(index);
     }
 
-    public static final int DATABASE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object database_;
-    /**
-     * <pre>
-     * Database name
-     * </pre>
-     *
-     * <code>string database = 2;</code>
-     * @return The database.
-     */
-    @java.lang.Override
-    public java.lang.String getDatabase() {
-      java.lang.Object ref = database_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        database_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Database name
-     * </pre>
-     *
-     * <code>string database = 2;</code>
-     * @return The bytes for database.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDatabaseBytes() {
-      java.lang.Object ref = database_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        database_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLEANUP_POLICY_FIELD_NUMBER = 6;
-    private int cleanupPolicy_;
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
-     */
-    @java.lang.Override public int getCleanupPolicyValue() {
-      return cleanupPolicy_;
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-     * @return The cleanupPolicy.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6724,13 +6724,13 @@ public final class Mongo {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (!getSubnetId()
           .equals(other.getSubnetId())) return false;
       if (!getSecurityGroupsList()
           .equals(other.getSecurityGroupsList())) return false;
-      if (!getDatabase()
-          .equals(other.getDatabase())) return false;
-      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6746,16 +6746,16 @@ public final class Mongo {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
       }
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
       if (getSecurityGroupsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
-      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatabase().hashCode();
-      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
-      hash = (53 * hash) + cleanupPolicy_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6895,14 +6895,14 @@ public final class Mongo {
           connection_ = null;
           connectionBuilder_ = null;
         }
-        subnetId_ = "";
-
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         cleanupPolicy_ = 0;
 
+        subnetId_ = "";
+
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6935,14 +6935,14 @@ public final class Mongo {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
+        result.database_ = database_;
+        result.cleanupPolicy_ = cleanupPolicy_;
         result.subnetId_ = subnetId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroups_ = securityGroups_;
-        result.database_ = database_;
-        result.cleanupPolicy_ = cleanupPolicy_;
         onBuilt();
         return result;
       }
@@ -6994,6 +6994,13 @@ public final class Mongo {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
         if (!other.getSubnetId().isEmpty()) {
           subnetId_ = other.subnetId_;
           onChanged();
@@ -7007,13 +7014,6 @@ public final class Mongo {
             securityGroups_.addAll(other.securityGroups_);
           }
           onChanged();
-        }
-        if (!other.getDatabase().isEmpty()) {
-          database_ = other.database_;
-          onChanged();
-        }
-        if (other.cleanupPolicy_ != 0) {
-          setCleanupPolicyValue(other.getCleanupPolicyValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7162,6 +7162,156 @@ public final class Mongo {
           connection_ = null;
         }
         return connectionBuilder_;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database name
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
+       */
+      @java.lang.Override public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+       * @return The cleanupPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object subnetId_ = "";
@@ -7385,156 +7535,6 @@ public final class Mongo {
         onChanged();
         return this;
       }
-
-      private java.lang.Object database_ = "";
-      /**
-       * <pre>
-       * Database name
-       * </pre>
-       *
-       * <code>string database = 2;</code>
-       * @return The database.
-       */
-      public java.lang.String getDatabase() {
-        java.lang.Object ref = database_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          database_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database name
-       * </pre>
-       *
-       * <code>string database = 2;</code>
-       * @return The bytes for database.
-       */
-      public com.google.protobuf.ByteString
-          getDatabaseBytes() {
-        java.lang.Object ref = database_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          database_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database name
-       * </pre>
-       *
-       * <code>string database = 2;</code>
-       * @param value The database to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDatabase(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        database_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database name
-       * </pre>
-       *
-       * <code>string database = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDatabase() {
-        
-        database_ = getDefaultInstance().getDatabase();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database name
-       * </pre>
-       *
-       * <code>string database = 2;</code>
-       * @param value The bytes for database to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDatabaseBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        database_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int cleanupPolicy_ = 0;
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-       * @return The enum numeric value on the wire for cleanupPolicy.
-       */
-      @java.lang.Override public int getCleanupPolicyValue() {
-        return cleanupPolicy_;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-       * @param value The enum numeric value on the wire for cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicyValue(int value) {
-        
-        cleanupPolicy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-       * @return The cleanupPolicy.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.valueOf(cleanupPolicy_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-       * @param value The cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        cleanupPolicy_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.CleanupPolicy cleanup_policy = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCleanupPolicy() {
-        
-        cleanupPolicy_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7630,40 +7630,41 @@ public final class Mongo {
       "\n1yandex/cloud/datatransfer/v1/endpoint/" +
       "mongo.proto\022%yandex.cloud.datatransfer.v" +
       "1.endpoint\0322yandex/cloud/datatransfer/v1" +
-      "/endpoint/common.proto\"\204\001\n\016OnPremiseMong" +
-      "o\022\r\n\005hosts\030\001 \003(\t\022\014\n\004port\030\002 \001(\003\022@\n\010tls_mo" +
-      "de\030\006 \001(\0132..yandex.cloud.datatransfer.v1." +
-      "endpoint.TLSMode\022\023\n\013replica_set\030\005 \001(\t\"\356\001" +
-      "\n\026MongoConnectionOptions\022\030\n\016mdb_cluster_" +
-      "id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(\01325.yandex." +
-      "cloud.datatransfer.v1.endpoint.OnPremise" +
-      "MongoH\000\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132" +
-      "-.yandex.cloud.datatransfer.v1.endpoint." +
-      "Secret\022\023\n\013auth_source\030\005 \001(\tB\t\n\007address\"|" +
-      "\n\017MongoConnection\022[\n\022connection_options\030" +
-      "\003 \001(\0132=.yandex.cloud.datatransfer.v1.end" +
-      "point.MongoConnectionOptionsH\000B\014\n\nconnec" +
-      "tion\"A\n\017MongoCollection\022\025\n\rdatabase_name" +
-      "\030\001 \001(\t\022\027\n\017collection_name\030\002 \001(\t\"\312\002\n\013Mong" +
-      "oSource\022J\n\nconnection\030\001 \001(\01326.yandex.clo" +
-      "ud.datatransfer.v1.endpoint.MongoConnect" +
-      "ion\022\021\n\tsubnet_id\030\002 \001(\t\022\027\n\017security_group" +
-      "s\030\013 \003(\t\022K\n\013collections\030\006 \003(\01326.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.MongoCollec" +
-      "tion\022T\n\024excluded_collections\030\007 \003(\01326.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.Mongo" +
-      "Collection\022 \n\030secondary_preferred_mode\030\010" +
-      " \001(\010\"\345\001\n\013MongoTarget\022J\n\nconnection\030\001 \001(\013" +
+      "/endpoint/common.proto\"\212\001\n\016OnPremiseMong" +
+      "o\022\r\n\005hosts\030\001 \003(\t\022\014\n\004port\030\002 \001(\003\022\023\n\013replic" +
+      "a_set\030\005 \001(\t\022@\n\010tls_mode\030\006 \001(\0132..yandex.c" +
+      "loud.datatransfer.v1.endpoint.TLSModeJ\004\010" +
+      "\003\020\005\"\356\001\n\026MongoConnectionOptions\022\030\n\016mdb_cl" +
+      "uster_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(\01325.y" +
+      "andex.cloud.datatransfer.v1.endpoint.OnP" +
+      "remiseMongoH\000\022\014\n\004user\030\003 \001(\t\022?\n\010password\030" +
+      "\004 \001(\0132-.yandex.cloud.datatransfer.v1.end" +
+      "point.Secret\022\023\n\013auth_source\030\005 \001(\tB\t\n\007add" +
+      "ress\"\202\001\n\017MongoConnection\022[\n\022connection_o" +
+      "ptions\030\003 \001(\0132=.yandex.cloud.datatransfer" +
+      ".v1.endpoint.MongoConnectionOptionsH\000B\014\n" +
+      "\nconnectionJ\004\010\001\020\003\"A\n\017MongoCollection\022\025\n\r" +
+      "database_name\030\001 \001(\t\022\027\n\017collection_name\030\002" +
+      " \001(\t\"\326\002\n\013MongoSource\022J\n\nconnection\030\001 \001(\013" +
       "26.yandex.cloud.datatransfer.v1.endpoint" +
-      ".MongoConnection\022\021\n\tsubnet_id\030\007 \001(\t\022\027\n\017s" +
-      "ecurity_groups\030\010 \003(\t\022\020\n\010database\030\002 \001(\t\022L" +
-      "\n\016cleanup_policy\030\006 \001(\01624.yandex.cloud.da" +
-      "tatransfer.v1.endpoint.CleanupPolicyB\247\001\n" +
-      ")yandex.cloud.api.datatransfer.v1.endpoi" +
-      "ntZRgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/datatransfer/v1/endpoint;en" +
-      "dpoint\252\002%Yandex.Cloud.Datatransfer.V1.En" +
-      "dPointb\006proto3"
+      ".MongoConnection\022\021\n\tsubnet_id\030\002 \001(\t\022K\n\013c" +
+      "ollections\030\006 \003(\01326.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.MongoCollection\022T\n\024excl" +
+      "uded_collections\030\007 \003(\01326.yandex.cloud.da" +
+      "tatransfer.v1.endpoint.MongoCollection\022 " +
+      "\n\030secondary_preferred_mode\030\010 \001(\010\022\027\n\017secu" +
+      "rity_groups\030\013 \003(\tJ\004\010\003\020\006J\004\010\t\020\013\"\353\001\n\013MongoT" +
+      "arget\022J\n\nconnection\030\001 \001(\01326.yandex.cloud" +
+      ".datatransfer.v1.endpoint.MongoConnectio" +
+      "n\022\020\n\010database\030\002 \001(\t\022L\n\016cleanup_policy\030\006 " +
+      "\001(\01624.yandex.cloud.datatransfer.v1.endpo" +
+      "int.CleanupPolicy\022\021\n\tsubnet_id\030\007 \001(\t\022\027\n\017" +
+      "security_groups\030\010 \003(\tJ\004\010\003\020\006B\247\001\n)yandex.c" +
+      "loud.api.datatransfer.v1.endpointZRgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/datatransfer/v1/endpoint;endpoint\252\002%" +
+      "Yandex.Cloud.Datatransfer.V1.EndPointb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7675,7 +7676,7 @@ public final class Mongo {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMongo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMongo_descriptor,
-        new java.lang.String[] { "Hosts", "Port", "TlsMode", "ReplicaSet", });
+        new java.lang.String[] { "Hosts", "Port", "ReplicaSet", "TlsMode", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoConnectionOptions_fieldAccessorTable = new
@@ -7699,13 +7700,13 @@ public final class Mongo {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoSource_descriptor,
-        new java.lang.String[] { "Connection", "SubnetId", "SecurityGroups", "Collections", "ExcludedCollections", "SecondaryPreferredMode", });
+        new java.lang.String[] { "Connection", "SubnetId", "Collections", "ExcludedCollections", "SecondaryPreferredMode", "SecurityGroups", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoTarget_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MongoTarget_descriptor,
-        new java.lang.String[] { "Connection", "SubnetId", "SecurityGroups", "Database", "CleanupPolicy", });
+        new java.lang.String[] { "Connection", "Database", "CleanupPolicy", "SubnetId", "SecurityGroups", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

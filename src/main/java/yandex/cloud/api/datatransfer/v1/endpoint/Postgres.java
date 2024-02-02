@@ -66,25 +66,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * 
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-     * @return The enum numeric value on the wire for sequenceSet.
-     */
-    int getSequenceSetValue();
-    /**
-     * <pre>
-     * 
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-     * @return The sequenceSet.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet();
-
-    /**
-     * <pre>
      * Tables
      * 
      * CREATE TABLE ...
@@ -246,29 +227,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The enum numeric value on the wire for materializedView.
-     */
-    int getMaterializedViewValue();
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The materializedView.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView();
-
-    /**
-     * <pre>
      * Functions
      * 
      * CREATE FUNCTION ...
@@ -427,6 +385,48 @@ public final class Postgres {
      * @return The cast.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getCast();
+
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The enum numeric value on the wire for materializedView.
+     */
+    int getMaterializedViewValue();
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The materializedView.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView();
+
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The enum numeric value on the wire for sequenceSet.
+     */
+    int getSequenceSetValue();
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The sequenceSet.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings}
@@ -443,7 +443,6 @@ public final class Postgres {
     private PostgresObjectTransferSettings() {
       sequence_ = 0;
       sequenceOwnedBy_ = 0;
-      sequenceSet_ = 0;
       table_ = 0;
       primaryKey_ = 0;
       fkConstraint_ = 0;
@@ -451,7 +450,6 @@ public final class Postgres {
       constraint_ = 0;
       index_ = 0;
       view_ = 0;
-      materializedView_ = 0;
       function_ = 0;
       trigger_ = 0;
       type_ = 0;
@@ -459,6 +457,8 @@ public final class Postgres {
       collation_ = 0;
       policy_ = 0;
       cast_ = 0;
+      materializedView_ = 0;
+      sequenceSet_ = 0;
     }
 
     @java.lang.Override
@@ -693,33 +693,6 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
-    public static final int SEQUENCE_SET_FIELD_NUMBER = 18;
-    private int sequenceSet_;
-    /**
-     * <pre>
-     * 
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-     * @return The enum numeric value on the wire for sequenceSet.
-     */
-    @java.lang.Override public int getSequenceSetValue() {
-      return sequenceSet_;
-    }
-    /**
-     * <pre>
-     * 
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-     * @return The sequenceSet.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-    }
-
     public static final int TABLE_FIELD_NUMBER = 3;
     private int table_;
     /**
@@ -934,37 +907,6 @@ public final class Postgres {
     @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getView() {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(view_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-    }
-
-    public static final int MATERIALIZED_VIEW_FIELD_NUMBER = 17;
-    private int materializedView_;
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The enum numeric value on the wire for materializedView.
-     */
-    @java.lang.Override public int getMaterializedViewValue() {
-      return materializedView_;
-    }
-    /**
-     * <pre>
-     * Materialized views
-     * 
-     * CREATE MATERIALIZED VIEW ...
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-     * @return The materializedView.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
@@ -1185,6 +1127,64 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
     }
 
+    public static final int MATERIALIZED_VIEW_FIELD_NUMBER = 17;
+    private int materializedView_;
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The enum numeric value on the wire for materializedView.
+     */
+    @java.lang.Override public int getMaterializedViewValue() {
+      return materializedView_;
+    }
+    /**
+     * <pre>
+     * Materialized views
+     * 
+     * CREATE MATERIALIZED VIEW ...
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+     * @return The materializedView.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
+    public static final int SEQUENCE_SET_FIELD_NUMBER = 18;
+    private int sequenceSet_;
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The enum numeric value on the wire for sequenceSet.
+     */
+    @java.lang.Override public int getSequenceSetValue() {
+      return sequenceSet_;
+    }
+    /**
+     * <pre>
+     * 
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+     * @return The sequenceSet.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1351,7 +1351,6 @@ public final class Postgres {
 
       if (sequence_ != other.sequence_) return false;
       if (sequenceOwnedBy_ != other.sequenceOwnedBy_) return false;
-      if (sequenceSet_ != other.sequenceSet_) return false;
       if (table_ != other.table_) return false;
       if (primaryKey_ != other.primaryKey_) return false;
       if (fkConstraint_ != other.fkConstraint_) return false;
@@ -1359,7 +1358,6 @@ public final class Postgres {
       if (constraint_ != other.constraint_) return false;
       if (index_ != other.index_) return false;
       if (view_ != other.view_) return false;
-      if (materializedView_ != other.materializedView_) return false;
       if (function_ != other.function_) return false;
       if (trigger_ != other.trigger_) return false;
       if (type_ != other.type_) return false;
@@ -1367,6 +1365,8 @@ public final class Postgres {
       if (collation_ != other.collation_) return false;
       if (policy_ != other.policy_) return false;
       if (cast_ != other.cast_) return false;
+      if (materializedView_ != other.materializedView_) return false;
+      if (sequenceSet_ != other.sequenceSet_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1382,8 +1382,6 @@ public final class Postgres {
       hash = (53 * hash) + sequence_;
       hash = (37 * hash) + SEQUENCE_OWNED_BY_FIELD_NUMBER;
       hash = (53 * hash) + sequenceOwnedBy_;
-      hash = (37 * hash) + SEQUENCE_SET_FIELD_NUMBER;
-      hash = (53 * hash) + sequenceSet_;
       hash = (37 * hash) + TABLE_FIELD_NUMBER;
       hash = (53 * hash) + table_;
       hash = (37 * hash) + PRIMARY_KEY_FIELD_NUMBER;
@@ -1398,8 +1396,6 @@ public final class Postgres {
       hash = (53 * hash) + index_;
       hash = (37 * hash) + VIEW_FIELD_NUMBER;
       hash = (53 * hash) + view_;
-      hash = (37 * hash) + MATERIALIZED_VIEW_FIELD_NUMBER;
-      hash = (53 * hash) + materializedView_;
       hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
       hash = (53 * hash) + function_;
       hash = (37 * hash) + TRIGGER_FIELD_NUMBER;
@@ -1414,6 +1410,10 @@ public final class Postgres {
       hash = (53 * hash) + policy_;
       hash = (37 * hash) + CAST_FIELD_NUMBER;
       hash = (53 * hash) + cast_;
+      hash = (37 * hash) + MATERIALIZED_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + materializedView_;
+      hash = (37 * hash) + SEQUENCE_SET_FIELD_NUMBER;
+      hash = (53 * hash) + sequenceSet_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1551,8 +1551,6 @@ public final class Postgres {
 
         sequenceOwnedBy_ = 0;
 
-        sequenceSet_ = 0;
-
         table_ = 0;
 
         primaryKey_ = 0;
@@ -1567,8 +1565,6 @@ public final class Postgres {
 
         view_ = 0;
 
-        materializedView_ = 0;
-
         function_ = 0;
 
         trigger_ = 0;
@@ -1582,6 +1578,10 @@ public final class Postgres {
         policy_ = 0;
 
         cast_ = 0;
+
+        materializedView_ = 0;
+
+        sequenceSet_ = 0;
 
         return this;
       }
@@ -1611,7 +1611,6 @@ public final class Postgres {
         yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings result = new yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettings(this);
         result.sequence_ = sequence_;
         result.sequenceOwnedBy_ = sequenceOwnedBy_;
-        result.sequenceSet_ = sequenceSet_;
         result.table_ = table_;
         result.primaryKey_ = primaryKey_;
         result.fkConstraint_ = fkConstraint_;
@@ -1619,7 +1618,6 @@ public final class Postgres {
         result.constraint_ = constraint_;
         result.index_ = index_;
         result.view_ = view_;
-        result.materializedView_ = materializedView_;
         result.function_ = function_;
         result.trigger_ = trigger_;
         result.type_ = type_;
@@ -1627,6 +1625,8 @@ public final class Postgres {
         result.collation_ = collation_;
         result.policy_ = policy_;
         result.cast_ = cast_;
+        result.materializedView_ = materializedView_;
+        result.sequenceSet_ = sequenceSet_;
         onBuilt();
         return result;
       }
@@ -1681,9 +1681,6 @@ public final class Postgres {
         if (other.sequenceOwnedBy_ != 0) {
           setSequenceOwnedByValue(other.getSequenceOwnedByValue());
         }
-        if (other.sequenceSet_ != 0) {
-          setSequenceSetValue(other.getSequenceSetValue());
-        }
         if (other.table_ != 0) {
           setTableValue(other.getTableValue());
         }
@@ -1705,9 +1702,6 @@ public final class Postgres {
         if (other.view_ != 0) {
           setViewValue(other.getViewValue());
         }
-        if (other.materializedView_ != 0) {
-          setMaterializedViewValue(other.getMaterializedViewValue());
-        }
         if (other.function_ != 0) {
           setFunctionValue(other.getFunctionValue());
         }
@@ -1728,6 +1722,12 @@ public final class Postgres {
         }
         if (other.cast_ != 0) {
           setCastValue(other.getCastValue());
+        }
+        if (other.materializedView_ != 0) {
+          setMaterializedViewValue(other.getMaterializedViewValue());
+        }
+        if (other.sequenceSet_ != 0) {
+          setSequenceSetValue(other.getSequenceSetValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1922,80 +1922,6 @@ public final class Postgres {
       public Builder clearSequenceOwnedBy() {
         
         sequenceOwnedBy_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int sequenceSet_ = 0;
-      /**
-       * <pre>
-       * 
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-       * @return The enum numeric value on the wire for sequenceSet.
-       */
-      @java.lang.Override public int getSequenceSetValue() {
-        return sequenceSet_;
-      }
-      /**
-       * <pre>
-       * 
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-       * @param value The enum numeric value on the wire for sequenceSet to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSequenceSetValue(int value) {
-        
-        sequenceSet_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-       * @return The sequenceSet.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * 
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-       * @param value The sequenceSet to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSequenceSet(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        sequenceSet_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSequenceSet() {
-        
-        sequenceSet_ = 0;
         onChanged();
         return this;
       }
@@ -2588,90 +2514,6 @@ public final class Postgres {
         return this;
       }
 
-      private int materializedView_ = 0;
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return The enum numeric value on the wire for materializedView.
-       */
-      @java.lang.Override public int getMaterializedViewValue() {
-        return materializedView_;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @param value The enum numeric value on the wire for materializedView to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterializedViewValue(int value) {
-        
-        materializedView_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return The materializedView.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @param value The materializedView to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaterializedView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        materializedView_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Materialized views
-       * 
-       * CREATE MATERIALIZED VIEW ...
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaterializedView() {
-        
-        materializedView_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int function_ = 0;
       /**
        * <pre>
@@ -3259,6 +3101,164 @@ public final class Postgres {
         onChanged();
         return this;
       }
+
+      private int materializedView_ = 0;
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return The enum numeric value on the wire for materializedView.
+       */
+      @java.lang.Override public int getMaterializedViewValue() {
+        return materializedView_;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @param value The enum numeric value on the wire for materializedView to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterializedViewValue(int value) {
+        
+        materializedView_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return The materializedView.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getMaterializedView() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(materializedView_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @param value The materializedView to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaterializedView(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        materializedView_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Materialized views
+       * 
+       * CREATE MATERIALIZED VIEW ...
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage materialized_view = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaterializedView() {
+        
+        materializedView_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sequenceSet_ = 0;
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return The enum numeric value on the wire for sequenceSet.
+       */
+      @java.lang.Override public int getSequenceSetValue() {
+        return sequenceSet_;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @param value The enum numeric value on the wire for sequenceSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceSetValue(int value) {
+        
+        sequenceSet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return The sequenceSet.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage getSequenceSet() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage result = yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.valueOf(sequenceSet_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @param value The sequenceSet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceSet(yandex.cloud.api.datatransfer.v1.endpoint.Common.ObjectTransferStage value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        sequenceSet_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ObjectTransferStage sequence_set = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceSet() {
+        
+        sequenceSet_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3317,6 +3317,36 @@ public final class Postgres {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Will be used if the cluster ID is not specified.
+     * </pre>
+     *
+     * <code>int64 port = 2;</code>
+     * @return The port.
+     */
+    long getPort();
+
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
@@ -3340,16 +3370,6 @@ public final class Postgres {
      */
     com.google.protobuf.ByteString
         getHostsBytes(int index);
-
-    /**
-     * <pre>
-     * Will be used if the cluster ID is not specified.
-     * </pre>
-     *
-     * <code>int64 port = 2;</code>
-     * @return The port.
-     */
-    long getPort();
 
     /**
      * <pre>
@@ -3377,26 +3397,6 @@ public final class Postgres {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
-
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The subnetId.
-     */
-    java.lang.String getSubnetId();
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The bytes for subnetId.
-     */
-    com.google.protobuf.ByteString
-        getSubnetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremisePostgres}
@@ -3411,8 +3411,8 @@ public final class Postgres {
       super(builder);
     }
     private OnPremisePostgres() {
-      hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       subnetId_ = "";
+      hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3514,41 +3514,6 @@ public final class Postgres {
               yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres.class, yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres.Builder.class);
     }
 
-    public static final int HOSTS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList hosts_;
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @return A list containing the hosts.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getHostsList() {
-      return hosts_;
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @return The count of hosts.
-     */
-    public int getHostsCount() {
-      return hosts_.size();
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @param index The index of the element to return.
-     * @return The hosts at the given index.
-     */
-    public java.lang.String getHosts(int index) {
-      return hosts_.get(index);
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hosts at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getHostsBytes(int index) {
-      return hosts_.getByteString(index);
-    }
-
     public static final int PORT_FIELD_NUMBER = 2;
     private long port_;
     /**
@@ -3562,44 +3527,6 @@ public final class Postgres {
     @java.lang.Override
     public long getPort() {
       return port_;
-    }
-
-    public static final int TLS_MODE_FIELD_NUMBER = 6;
-    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return Whether the tlsMode field is set.
-     */
-    @java.lang.Override
-    public boolean hasTlsMode() {
-      return tlsMode_ != null;
-    }
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return The tlsMode.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
-      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
-    }
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
-      return getTlsMode();
     }
 
     public static final int SUBNET_ID_FIELD_NUMBER = 4;
@@ -3646,6 +3573,79 @@ public final class Postgres {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int HOSTS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList hosts_;
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @return A list containing the hosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostsList() {
+      return hosts_;
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @return The count of hosts.
+     */
+    public int getHostsCount() {
+      return hosts_.size();
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @param index The index of the element to return.
+     * @return The hosts at the given index.
+     */
+    public java.lang.String getHosts(int index) {
+      return hosts_.get(index);
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getHostsBytes(int index) {
+      return hosts_.getByteString(index);
+    }
+
+    public static final int TLS_MODE_FIELD_NUMBER = 6;
+    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return Whether the tlsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasTlsMode() {
+      return tlsMode_ != null;
+    }
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return The tlsMode.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
+      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
+    }
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
+      return getTlsMode();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3717,17 +3717,17 @@ public final class Postgres {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres other = (yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres) obj;
 
-      if (!getHostsList()
-          .equals(other.getHostsList())) return false;
       if (getPort()
           != other.getPort()) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getHostsList()
+          .equals(other.getHostsList())) return false;
       if (hasTlsMode() != other.hasTlsMode()) return false;
       if (hasTlsMode()) {
         if (!getTlsMode()
             .equals(other.getTlsMode())) return false;
       }
-      if (!getSubnetId()
-          .equals(other.getSubnetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3739,19 +3739,19 @@ public final class Postgres {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPort());
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
       if (getHostsCount() > 0) {
         hash = (37 * hash) + HOSTS_FIELD_NUMBER;
         hash = (53 * hash) + getHostsList().hashCode();
       }
-      hash = (37 * hash) + PORT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPort());
       if (hasTlsMode()) {
         hash = (37 * hash) + TLS_MODE_FIELD_NUMBER;
         hash = (53 * hash) + getTlsMode().hashCode();
       }
-      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3885,18 +3885,18 @@ public final class Postgres {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         port_ = 0L;
 
+        subnetId_ = "";
+
+        hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (tlsModeBuilder_ == null) {
           tlsMode_ = null;
         } else {
           tlsMode_ = null;
           tlsModeBuilder_ = null;
         }
-        subnetId_ = "";
-
         return this;
       }
 
@@ -3924,18 +3924,18 @@ public final class Postgres {
       public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres result = new yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres(this);
         int from_bitField0_ = bitField0_;
+        result.port_ = port_;
+        result.subnetId_ = subnetId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           hosts_ = hosts_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.hosts_ = hosts_;
-        result.port_ = port_;
         if (tlsModeBuilder_ == null) {
           result.tlsMode_ = tlsMode_;
         } else {
           result.tlsMode_ = tlsModeBuilder_.build();
         }
-        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -3984,6 +3984,13 @@ public final class Postgres {
 
       public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres other) {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Postgres.OnPremisePostgres.getDefaultInstance()) return this;
+        if (other.getPort() != 0L) {
+          setPort(other.getPort());
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
         if (!other.hosts_.isEmpty()) {
           if (hosts_.isEmpty()) {
             hosts_ = other.hosts_;
@@ -3994,15 +4001,8 @@ public final class Postgres {
           }
           onChanged();
         }
-        if (other.getPort() != 0L) {
-          setPort(other.getPort());
-        }
         if (other.hasTlsMode()) {
           mergeTlsMode(other.getTlsMode());
-        }
-        if (!other.getSubnetId().isEmpty()) {
-          subnetId_ = other.subnetId_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4033,6 +4033,145 @@ public final class Postgres {
         return this;
       }
       private int bitField0_;
+
+      private long port_ ;
+      /**
+       * <pre>
+       * Will be used if the cluster ID is not specified.
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public long getPort() {
+        return port_;
+      }
+      /**
+       * <pre>
+       * Will be used if the cluster ID is not specified.
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(long value) {
+        
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Will be used if the cluster ID is not specified.
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        
+        port_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
 
       private com.google.protobuf.LazyStringList hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHostsIsMutable() {
@@ -4140,49 +4279,6 @@ public final class Postgres {
   checkByteStringIsUtf8(value);
         ensureHostsIsMutable();
         hosts_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private long port_ ;
-      /**
-       * <pre>
-       * Will be used if the cluster ID is not specified.
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @return The port.
-       */
-      @java.lang.Override
-      public long getPort() {
-        return port_;
-      }
-      /**
-       * <pre>
-       * Will be used if the cluster ID is not specified.
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @param value The port to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPort(long value) {
-        
-        port_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Will be used if the cluster ID is not specified.
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPort() {
-        
-        port_ = 0L;
         onChanged();
         return this;
       }
@@ -4340,102 +4436,6 @@ public final class Postgres {
           tlsMode_ = null;
         }
         return tlsModeBuilder_;
-      }
-
-      private java.lang.Object subnetId_ = "";
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The subnetId.
-       */
-      public java.lang.String getSubnetId() {
-        java.lang.Object ref = subnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The bytes for subnetId.
-       */
-      public com.google.protobuf.ByteString
-          getSubnetIdBytes() {
-        java.lang.Object ref = subnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubnetId() {
-        
-        subnetId_ = getDefaultInstance().getSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The bytes for subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subnetId_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5546,47 +5546,6 @@ public final class Postgres {
 
     /**
      * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
-
-    /**
-     * <pre>
      * Database name
      * </pre>
      *
@@ -5817,6 +5776,47 @@ public final class Postgres {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresObjectTransferSettings object_transfer_settings = 13;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresObjectTransferSettingsOrBuilder getObjectTransferSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresSource}
@@ -5831,12 +5831,12 @@ public final class Postgres {
       super(builder);
     }
     private PostgresSource() {
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       serviceSchema_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -5910,18 +5910,18 @@ public final class Postgres {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 includeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               includeTables_.add(s);
               break;
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 excludeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               excludeTables_.add(s);
               break;
@@ -5952,9 +5952,9 @@ public final class Postgres {
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroups_.add(s);
               break;
@@ -5974,13 +5974,13 @@ public final class Postgres {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           includeTables_ = includeTables_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           excludeTables_ = excludeTables_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -6036,57 +6036,6 @@ public final class Postgres {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
-    }
-
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -6447,6 +6396,57 @@ public final class Postgres {
       return getObjectTransferSettings();
     }
 
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6569,8 +6569,6 @@ public final class Postgres {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getDatabase()
           .equals(other.getDatabase())) return false;
       if (!getUser()
@@ -6593,6 +6591,8 @@ public final class Postgres {
         if (!getObjectTransferSettings()
             .equals(other.getObjectTransferSettings())) return false;
       }
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6607,10 +6607,6 @@ public final class Postgres {
       if (hasConnection()) {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
-      }
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
@@ -6636,6 +6632,10 @@ public final class Postgres {
       if (hasObjectTransferSettings()) {
         hash = (37 * hash) + OBJECT_TRANSFER_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getObjectTransferSettings().hashCode();
+      }
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6776,8 +6776,6 @@ public final class Postgres {
           connection_ = null;
           connectionBuilder_ = null;
         }
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         user_ = "";
@@ -6789,9 +6787,9 @@ public final class Postgres {
           passwordBuilder_ = null;
         }
         includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         slotByteLagLimit_ = 0L;
 
         serviceSchema_ = "";
@@ -6802,6 +6800,8 @@ public final class Postgres {
           objectTransferSettings_ = null;
           objectTransferSettingsBuilder_ = null;
         }
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -6834,11 +6834,6 @@ public final class Postgres {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -6846,14 +6841,14 @@ public final class Postgres {
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           includeTables_ = includeTables_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.includeTables_ = includeTables_;
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           excludeTables_ = excludeTables_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.excludeTables_ = excludeTables_;
         result.slotByteLagLimit_ = slotByteLagLimit_;
@@ -6863,6 +6858,11 @@ public final class Postgres {
         } else {
           result.objectTransferSettings_ = objectTransferSettingsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -6914,16 +6914,6 @@ public final class Postgres {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
           onChanged();
@@ -6938,7 +6928,7 @@ public final class Postgres {
         if (!other.includeTables_.isEmpty()) {
           if (includeTables_.isEmpty()) {
             includeTables_ = other.includeTables_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIncludeTablesIsMutable();
             includeTables_.addAll(other.includeTables_);
@@ -6948,7 +6938,7 @@ public final class Postgres {
         if (!other.excludeTables_.isEmpty()) {
           if (excludeTables_.isEmpty()) {
             excludeTables_ = other.excludeTables_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureExcludeTablesIsMutable();
             excludeTables_.addAll(other.excludeTables_);
@@ -6964,6 +6954,16 @@ public final class Postgres {
         }
         if (other.hasObjectTransferSettings()) {
           mergeObjectTransferSettings(other.getObjectTransferSettings());
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7148,152 +7148,6 @@ public final class Postgres {
           connection_ = null;
         }
         return connectionBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -7645,9 +7499,9 @@ public final class Postgres {
 
       private com.google.protobuf.LazyStringList includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIncludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           includeTables_ = new com.google.protobuf.LazyStringArrayList(includeTables_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -7788,7 +7642,7 @@ public final class Postgres {
        */
       public Builder clearIncludeTables() {
         includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7818,9 +7672,9 @@ public final class Postgres {
 
       private com.google.protobuf.LazyStringList excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           excludeTables_ = new com.google.protobuf.LazyStringArrayList(excludeTables_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -7961,7 +7815,7 @@ public final class Postgres {
        */
       public Builder clearExcludeTables() {
         excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8290,6 +8144,152 @@ public final class Postgres {
         }
         return objectTransferSettingsBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8373,47 +8373,6 @@ public final class Postgres {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.PostgresConnection connection = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder getConnectionOrBuilder();
-
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
 
     /**
      * <pre>
@@ -8502,6 +8461,47 @@ public final class Postgres {
      * @return The cleanupPolicy.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy getCleanupPolicy();
+
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.PostgresTarget}
@@ -8516,10 +8516,10 @@ public final class Postgres {
       super(builder);
     }
     private PostgresTarget() {
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       cleanupPolicy_ = 0;
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -8677,57 +8677,6 @@ public final class Postgres {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Postgres.PostgresConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
-    }
-
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -8889,6 +8838,57 @@ public final class Postgres {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.CleanupPolicy.UNRECOGNIZED : result;
     }
 
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8976,8 +8976,6 @@ public final class Postgres {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getDatabase()
           .equals(other.getDatabase())) return false;
       if (!getUser()
@@ -8988,6 +8986,8 @@ public final class Postgres {
             .equals(other.getPassword())) return false;
       }
       if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9003,10 +9003,6 @@ public final class Postgres {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
       }
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
-      }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
       hash = (37 * hash) + USER_FIELD_NUMBER;
@@ -9017,6 +9013,10 @@ public final class Postgres {
       }
       hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
       hash = (53 * hash) + cleanupPolicy_;
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9156,8 +9156,6 @@ public final class Postgres {
           connection_ = null;
           connectionBuilder_ = null;
         }
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         user_ = "";
@@ -9170,6 +9168,8 @@ public final class Postgres {
         }
         cleanupPolicy_ = 0;
 
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -9202,11 +9202,6 @@ public final class Postgres {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -9215,6 +9210,11 @@ public final class Postgres {
           result.password_ = passwordBuilder_.build();
         }
         result.cleanupPolicy_ = cleanupPolicy_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -9266,16 +9266,6 @@ public final class Postgres {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
           onChanged();
@@ -9289,6 +9279,16 @@ public final class Postgres {
         }
         if (other.cleanupPolicy_ != 0) {
           setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9473,152 +9473,6 @@ public final class Postgres {
           connection_ = null;
         }
         return connectionBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 7;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -10046,6 +9900,152 @@ public final class Postgres {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 7;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10141,68 +10141,69 @@ public final class Postgres {
       ".yandex.cloud.datatransfer.v1.endpoint.O" +
       "bjectTransferStage\022U\n\021sequence_owned_by\030" +
       "\002 \001(\0162:.yandex.cloud.datatransfer.v1.end" +
-      "point.ObjectTransferStage\022P\n\014sequence_se" +
-      "t\030\022 \001(\0162:.yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.ObjectTransferStage\022I\n\005table\030\003 \001" +
-      "(\0162:.yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.ObjectTransferStage\022O\n\013primary_key\030\004 " +
-      "\001(\0162:.yandex.cloud.datatransfer.v1.endpo" +
-      "int.ObjectTransferStage\022Q\n\rfk_constraint" +
-      "\030\005 \001(\0162:.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.ObjectTransferStage\022R\n\016default_va" +
-      "lues\030\006 \001(\0162:.yandex.cloud.datatransfer.v" +
-      "1.endpoint.ObjectTransferStage\022N\n\nconstr" +
-      "aint\030\007 \001(\0162:.yandex.cloud.datatransfer.v" +
-      "1.endpoint.ObjectTransferStage\022I\n\005index\030" +
-      "\010 \001(\0162:.yandex.cloud.datatransfer.v1.end" +
-      "point.ObjectTransferStage\022H\n\004view\030\t \001(\0162" +
-      ":.yandex.cloud.datatransfer.v1.endpoint." +
-      "ObjectTransferStage\022U\n\021materialized_view" +
-      "\030\021 \001(\0162:.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.ObjectTransferStage\022L\n\010function\030\n" +
-      " \001(\0162:.yandex.cloud.datatransfer.v1.endp" +
-      "oint.ObjectTransferStage\022K\n\007trigger\030\013 \001(" +
+      "point.ObjectTransferStage\022I\n\005table\030\003 \001(\016" +
+      "2:.yandex.cloud.datatransfer.v1.endpoint" +
+      ".ObjectTransferStage\022O\n\013primary_key\030\004 \001(" +
       "\0162:.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.ObjectTransferStage\022H\n\004type\030\014 \001(\0162:.ya" +
+      "t.ObjectTransferStage\022Q\n\rfk_constraint\030\005" +
+      " \001(\0162:.yandex.cloud.datatransfer.v1.endp" +
+      "oint.ObjectTransferStage\022R\n\016default_valu" +
+      "es\030\006 \001(\0162:.yandex.cloud.datatransfer.v1." +
+      "endpoint.ObjectTransferStage\022N\n\nconstrai" +
+      "nt\030\007 \001(\0162:.yandex.cloud.datatransfer.v1." +
+      "endpoint.ObjectTransferStage\022I\n\005index\030\010 " +
+      "\001(\0162:.yandex.cloud.datatransfer.v1.endpo" +
+      "int.ObjectTransferStage\022H\n\004view\030\t \001(\0162:." +
+      "yandex.cloud.datatransfer.v1.endpoint.Ob" +
+      "jectTransferStage\022L\n\010function\030\n \001(\0162:.ya" +
       "ndex.cloud.datatransfer.v1.endpoint.Obje" +
-      "ctTransferStage\022H\n\004rule\030\r \001(\0162:.yandex.c" +
-      "loud.datatransfer.v1.endpoint.ObjectTran" +
-      "sferStage\022M\n\tcollation\030\016 \001(\0162:.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.ObjectTrans" +
-      "ferStage\022J\n\006policy\030\017 \001(\0162:.yandex.cloud." +
-      "datatransfer.v1.endpoint.ObjectTransferS" +
-      "tage\022H\n\004cast\030\020 \001(\0162:.yandex.cloud.datatr" +
-      "ansfer.v1.endpoint.ObjectTransferStage\"\205" +
-      "\001\n\021OnPremisePostgres\022\r\n\005hosts\030\005 \003(\t\022\014\n\004p" +
-      "ort\030\002 \001(\003\022@\n\010tls_mode\030\006 \001(\0132..yandex.clo" +
-      "ud.datatransfer.v1.endpoint.TLSMode\022\021\n\ts" +
-      "ubnet_id\030\004 \001(\t\"\214\001\n\022PostgresConnection\022\030\n" +
-      "\016mdb_cluster_id\030\001 \001(\tH\000\022N\n\non_premise\030\002 " +
-      "\001(\01328.yandex.cloud.datatransfer.v1.endpo" +
-      "int.OnPremisePostgresH\000B\014\n\nconnection\"\247\003" +
-      "\n\016PostgresSource\022M\n\nconnection\030\001 \001(\01329.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Pos" +
-      "tgresConnection\022\027\n\017security_groups\030\016 \003(\t" +
-      "\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010pass" +
-      "word\030\004 \001(\0132-.yandex.cloud.datatransfer.v" +
-      "1.endpoint.Secret\022\026\n\016include_tables\030\005 \003(" +
-      "\t\022\026\n\016exclude_tables\030\006 \003(\t\022\033\n\023slot_byte_l" +
-      "ag_limit\030\010 \001(\003\022\026\n\016service_schema\030\t \001(\t\022g" +
-      "\n\030object_transfer_settings\030\r \001(\0132E.yande" +
-      "x.cloud.datatransfer.v1.endpoint.Postgre" +
-      "sObjectTransferSettings\"\247\002\n\016PostgresTarg" +
-      "et\022M\n\nconnection\030\001 \001(\01329.yandex.cloud.da" +
-      "tatransfer.v1.endpoint.PostgresConnectio" +
-      "n\022\027\n\017security_groups\030\007 \003(\t\022\020\n\010database\030\002" +
-      " \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Sec" +
-      "ret\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.clo" +
-      "ud.datatransfer.v1.endpoint.CleanupPolic" +
-      "yB\247\001\n)yandex.cloud.api.datatransfer.v1.e" +
-      "ndpointZRgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/datatransfer/v1/endpoi" +
-      "nt;endpoint\252\002%Yandex.Cloud.Datatransfer." +
-      "V1.EndPointb\006proto3"
+      "ctTransferStage\022K\n\007trigger\030\013 \001(\0162:.yande" +
+      "x.cloud.datatransfer.v1.endpoint.ObjectT" +
+      "ransferStage\022H\n\004type\030\014 \001(\0162:.yandex.clou" +
+      "d.datatransfer.v1.endpoint.ObjectTransfe" +
+      "rStage\022H\n\004rule\030\r \001(\0162:.yandex.cloud.data" +
+      "transfer.v1.endpoint.ObjectTransferStage" +
+      "\022M\n\tcollation\030\016 \001(\0162:.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.ObjectTransferStage\022" +
+      "J\n\006policy\030\017 \001(\0162:.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.ObjectTransferStage\022H\n\004c" +
+      "ast\030\020 \001(\0162:.yandex.cloud.datatransfer.v1" +
+      ".endpoint.ObjectTransferStage\022U\n\021materia" +
+      "lized_view\030\021 \001(\0162:.yandex.cloud.datatran" +
+      "sfer.v1.endpoint.ObjectTransferStage\022P\n\014" +
+      "sequence_set\030\022 \001(\0162:.yandex.cloud.datatr" +
+      "ansfer.v1.endpoint.ObjectTransferStage\"\221" +
+      "\001\n\021OnPremisePostgres\022\014\n\004port\030\002 \001(\003\022\021\n\tsu" +
+      "bnet_id\030\004 \001(\t\022\r\n\005hosts\030\005 \003(\t\022@\n\010tls_mode" +
+      "\030\006 \001(\0132..yandex.cloud.datatransfer.v1.en" +
+      "dpoint.TLSModeJ\004\010\001\020\002J\004\010\003\020\004\"\214\001\n\022PostgresC" +
+      "onnection\022\030\n\016mdb_cluster_id\030\001 \001(\tH\000\022N\n\no" +
+      "n_premise\030\002 \001(\01328.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.OnPremisePostgresH\000B\014\n\nc" +
+      "onnection\"\263\003\n\016PostgresSource\022M\n\nconnecti" +
+      "on\030\001 \001(\01329.yandex.cloud.datatransfer.v1." +
+      "endpoint.PostgresConnection\022\020\n\010database\030" +
+      "\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-." +
+      "yandex.cloud.datatransfer.v1.endpoint.Se" +
+      "cret\022\026\n\016include_tables\030\005 \003(\t\022\026\n\016exclude_" +
+      "tables\030\006 \003(\t\022\033\n\023slot_byte_lag_limit\030\010 \001(" +
+      "\003\022\026\n\016service_schema\030\t \001(\t\022g\n\030object_tran" +
+      "sfer_settings\030\r \001(\0132E.yandex.cloud.datat" +
+      "ransfer.v1.endpoint.PostgresObjectTransf" +
+      "erSettings\022\027\n\017security_groups\030\016 \003(\tJ\004\010\007\020" +
+      "\010J\004\010\n\020\r\"\255\002\n\016PostgresTarget\022M\n\nconnection" +
+      "\030\001 \001(\01329.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.PostgresConnection\022\020\n\010database\030\002 " +
+      "\001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010password\030\004 \001(\0132-.ya" +
+      "ndex.cloud.datatransfer.v1.endpoint.Secr" +
+      "et\022L\n\016cleanup_policy\030\005 \001(\01624.yandex.clou" +
+      "d.datatransfer.v1.endpoint.CleanupPolicy" +
+      "\022\027\n\017security_groups\030\007 \003(\tJ\004\010\006\020\007B\247\001\n)yand" +
+      "ex.cloud.api.datatransfer.v1.endpointZRg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/datatransfer/v1/endpoint;endpoin" +
+      "t\252\002%Yandex.Cloud.Datatransfer.V1.EndPoin" +
+      "tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10214,13 +10215,13 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresObjectTransferSettings_descriptor,
-        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "SequenceSet", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "MaterializedView", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", });
+        new java.lang.String[] { "Sequence", "SequenceOwnedBy", "Table", "PrimaryKey", "FkConstraint", "DefaultValues", "Constraint", "Index", "View", "Function", "Trigger", "Type", "Rule", "Collation", "Policy", "Cast", "MaterializedView", "SequenceSet", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremisePostgres_descriptor,
-        new java.lang.String[] { "Hosts", "Port", "TlsMode", "SubnetId", });
+        new java.lang.String[] { "Port", "SubnetId", "Hosts", "TlsMode", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresConnection_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresConnection_fieldAccessorTable = new
@@ -10232,13 +10233,13 @@ public final class Postgres {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresSource_descriptor,
-        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "IncludeTables", "ExcludeTables", "SlotByteLagLimit", "ServiceSchema", "ObjectTransferSettings", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "IncludeTables", "ExcludeTables", "SlotByteLagLimit", "ServiceSchema", "ObjectTransferSettings", "SecurityGroups", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_PostgresTarget_descriptor,
-        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "CleanupPolicy", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "CleanupPolicy", "SecurityGroups", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

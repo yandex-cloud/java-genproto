@@ -131,6 +131,123 @@ public final class Ydb {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy)
   }
 
+  /**
+   * Protobuf enum {@code yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression}
+   */
+  public enum YdbDefaultCompression
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_UNSPECIFIED = 0;</code>
+     */
+    YDB_DEFAULT_COMPRESSION_UNSPECIFIED(0),
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_DISABLED = 1;</code>
+     */
+    YDB_DEFAULT_COMPRESSION_DISABLED(1),
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_LZ4 = 2;</code>
+     */
+    YDB_DEFAULT_COMPRESSION_LZ4(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_UNSPECIFIED = 0;</code>
+     */
+    public static final int YDB_DEFAULT_COMPRESSION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_DISABLED = 1;</code>
+     */
+    public static final int YDB_DEFAULT_COMPRESSION_DISABLED_VALUE = 1;
+    /**
+     * <code>YDB_DEFAULT_COMPRESSION_LZ4 = 2;</code>
+     */
+    public static final int YDB_DEFAULT_COMPRESSION_LZ4_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static YdbDefaultCompression valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static YdbDefaultCompression forNumber(int value) {
+      switch (value) {
+        case 0: return YDB_DEFAULT_COMPRESSION_UNSPECIFIED;
+        case 1: return YDB_DEFAULT_COMPRESSION_DISABLED;
+        case 2: return YDB_DEFAULT_COMPRESSION_LZ4;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<YdbDefaultCompression>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        YdbDefaultCompression> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<YdbDefaultCompression>() {
+            public YdbDefaultCompression findValueByNumber(int number) {
+              return YdbDefaultCompression.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datatransfer.v1.endpoint.Ydb.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final YdbDefaultCompression[] VALUES = values();
+
+    public static YdbDefaultCompression valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private YdbDefaultCompression(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression)
+  }
+
   public interface YdbSourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datatransfer.v1.endpoint.YdbSource)
       com.google.protobuf.MessageOrBuilder {
@@ -176,18 +293,6 @@ public final class Ydb {
         getInstanceBytes();
 
     /**
-     * <code>string service_account_id = 6;</code>
-     * @return The serviceAccountId.
-     */
-    java.lang.String getServiceAccountId();
-    /**
-     * <code>string service_account_id = 6;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    com.google.protobuf.ByteString
-        getServiceAccountIdBytes();
-
-    /**
      * <code>repeated string paths = 5;</code>
      * @return A list containing the paths.
      */
@@ -213,6 +318,18 @@ public final class Ydb {
         getPathsBytes(int index);
 
     /**
+     * <code>string service_account_id = 6;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <code>string service_account_id = 6;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
      * <pre>
      * Network interface for endpoint. If none will assume public ipv4
      * </pre>
@@ -231,6 +348,26 @@ public final class Ydb {
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * Authorization Key
+     * </pre>
+     *
+     * <code>string sa_key_content = 33;</code>
+     * @return The saKeyContent.
+     */
+    java.lang.String getSaKeyContent();
+    /**
+     * <pre>
+     * Authorization Key
+     * </pre>
+     *
+     * <code>string sa_key_content = 33;</code>
+     * @return The bytes for saKeyContent.
+     */
+    com.google.protobuf.ByteString
+        getSaKeyContentBytes();
 
     /**
      * <pre>
@@ -275,23 +412,23 @@ public final class Ydb {
 
     /**
      * <pre>
-     * Authorization Key
+     * Pre-created change feed
      * </pre>
      *
-     * <code>string sa_key_content = 33;</code>
-     * @return The saKeyContent.
+     * <code>string changefeed_custom_name = 35;</code>
+     * @return The changefeedCustomName.
      */
-    java.lang.String getSaKeyContent();
+    java.lang.String getChangefeedCustomName();
     /**
      * <pre>
-     * Authorization Key
+     * Pre-created change feed
      * </pre>
      *
-     * <code>string sa_key_content = 33;</code>
-     * @return The bytes for saKeyContent.
+     * <code>string changefeed_custom_name = 35;</code>
+     * @return The bytes for changefeedCustomName.
      */
     com.google.protobuf.ByteString
-        getSaKeyContentBytes();
+        getChangefeedCustomNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbSource}
@@ -308,11 +445,12 @@ public final class Ydb {
     private YdbSource() {
       database_ = "";
       instance_ = "";
-      serviceAccountId_ = "";
       paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
       subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       saKeyContent_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      changefeedCustomName_ = "";
     }
 
     @java.lang.Override
@@ -392,6 +530,12 @@ public final class Ydb {
                 mutable_bitField0_ |= 0x00000002;
               }
               securityGroups_.add(s);
+              break;
+            }
+            case 282: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              changefeedCustomName_ = s;
               break;
             }
             default: {
@@ -524,6 +668,41 @@ public final class Ydb {
       }
     }
 
+    public static final int PATHS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList paths_;
+    /**
+     * <code>repeated string paths = 5;</code>
+     * @return A list containing the paths.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPathsList() {
+      return paths_;
+    }
+    /**
+     * <code>repeated string paths = 5;</code>
+     * @return The count of paths.
+     */
+    public int getPathsCount() {
+      return paths_.size();
+    }
+    /**
+     * <code>repeated string paths = 5;</code>
+     * @param index The index of the element to return.
+     * @return The paths at the given index.
+     */
+    public java.lang.String getPaths(int index) {
+      return paths_.get(index);
+    }
+    /**
+     * <code>repeated string paths = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the paths at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPathsBytes(int index) {
+      return paths_.getByteString(index);
+    }
+
     public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object serviceAccountId_;
     /**
@@ -560,41 +739,6 @@ public final class Ydb {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int PATHS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList paths_;
-    /**
-     * <code>repeated string paths = 5;</code>
-     * @return A list containing the paths.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getPathsList() {
-      return paths_;
-    }
-    /**
-     * <code>repeated string paths = 5;</code>
-     * @return The count of paths.
-     */
-    public int getPathsCount() {
-      return paths_.size();
-    }
-    /**
-     * <code>repeated string paths = 5;</code>
-     * @param index The index of the element to return.
-     * @return The paths at the given index.
-     */
-    public java.lang.String getPaths(int index) {
-      return paths_.get(index);
-    }
-    /**
-     * <code>repeated string paths = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the paths at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getPathsBytes(int index) {
-      return paths_.getByteString(index);
     }
 
     public static final int SUBNET_ID_FIELD_NUMBER = 30;
@@ -637,6 +781,52 @@ public final class Ydb {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SA_KEY_CONTENT_FIELD_NUMBER = 33;
+    private volatile java.lang.Object saKeyContent_;
+    /**
+     * <pre>
+     * Authorization Key
+     * </pre>
+     *
+     * <code>string sa_key_content = 33;</code>
+     * @return The saKeyContent.
+     */
+    @java.lang.Override
+    public java.lang.String getSaKeyContent() {
+      java.lang.Object ref = saKeyContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        saKeyContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Authorization Key
+     * </pre>
+     *
+     * <code>string sa_key_content = 33;</code>
+     * @return The bytes for saKeyContent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSaKeyContentBytes() {
+      java.lang.Object ref = saKeyContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        saKeyContent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -694,46 +884,46 @@ public final class Ydb {
       return securityGroups_.getByteString(index);
     }
 
-    public static final int SA_KEY_CONTENT_FIELD_NUMBER = 33;
-    private volatile java.lang.Object saKeyContent_;
+    public static final int CHANGEFEED_CUSTOM_NAME_FIELD_NUMBER = 35;
+    private volatile java.lang.Object changefeedCustomName_;
     /**
      * <pre>
-     * Authorization Key
+     * Pre-created change feed
      * </pre>
      *
-     * <code>string sa_key_content = 33;</code>
-     * @return The saKeyContent.
+     * <code>string changefeed_custom_name = 35;</code>
+     * @return The changefeedCustomName.
      */
     @java.lang.Override
-    public java.lang.String getSaKeyContent() {
-      java.lang.Object ref = saKeyContent_;
+    public java.lang.String getChangefeedCustomName() {
+      java.lang.Object ref = changefeedCustomName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        saKeyContent_ = s;
+        changefeedCustomName_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Authorization Key
+     * Pre-created change feed
      * </pre>
      *
-     * <code>string sa_key_content = 33;</code>
-     * @return The bytes for saKeyContent.
+     * <code>string changefeed_custom_name = 35;</code>
+     * @return The bytes for changefeedCustomName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getSaKeyContentBytes() {
-      java.lang.Object ref = saKeyContent_;
+        getChangefeedCustomNameBytes() {
+      java.lang.Object ref = changefeedCustomName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        saKeyContent_ = b;
+        changefeedCustomName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -775,6 +965,9 @@ public final class Ydb {
       for (int i = 0; i < securityGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 34, securityGroups_.getRaw(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, changefeedCustomName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -815,6 +1008,9 @@ public final class Ydb {
         size += dataSize;
         size += 2 * getSecurityGroupsList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changefeedCustomName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, changefeedCustomName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -834,16 +1030,18 @@ public final class Ydb {
           .equals(other.getDatabase())) return false;
       if (!getInstance()
           .equals(other.getInstance())) return false;
-      if (!getServiceAccountId()
-          .equals(other.getServiceAccountId())) return false;
       if (!getPathsList()
           .equals(other.getPathsList())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
       if (!getSubnetId()
           .equals(other.getSubnetId())) return false;
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getSaKeyContent()
           .equals(other.getSaKeyContent())) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
+      if (!getChangefeedCustomName()
+          .equals(other.getChangefeedCustomName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -859,20 +1057,22 @@ public final class Ydb {
       hash = (53 * hash) + getDatabase().hashCode();
       hash = (37 * hash) + INSTANCE_FIELD_NUMBER;
       hash = (53 * hash) + getInstance().hashCode();
-      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceAccountId().hashCode();
       if (getPathsCount() > 0) {
         hash = (37 * hash) + PATHS_FIELD_NUMBER;
         hash = (53 * hash) + getPathsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + SA_KEY_CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSaKeyContent().hashCode();
       if (getSecurityGroupsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
-      hash = (37 * hash) + SA_KEY_CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getSaKeyContent().hashCode();
+      hash = (37 * hash) + CHANGEFEED_CUSTOM_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getChangefeedCustomName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1010,15 +1210,17 @@ public final class Ydb {
 
         instance_ = "";
 
-        serviceAccountId_ = "";
-
         paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        serviceAccountId_ = "";
+
         subnetId_ = "";
+
+        saKeyContent_ = "";
 
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        saKeyContent_ = "";
+        changefeedCustomName_ = "";
 
         return this;
       }
@@ -1049,19 +1251,20 @@ public final class Ydb {
         int from_bitField0_ = bitField0_;
         result.database_ = database_;
         result.instance_ = instance_;
-        result.serviceAccountId_ = serviceAccountId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           paths_ = paths_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.paths_ = paths_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.subnetId_ = subnetId_;
+        result.saKeyContent_ = saKeyContent_;
         if (((bitField0_ & 0x00000002) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.securityGroups_ = securityGroups_;
-        result.saKeyContent_ = saKeyContent_;
+        result.changefeedCustomName_ = changefeedCustomName_;
         onBuilt();
         return result;
       }
@@ -1118,10 +1321,6 @@ public final class Ydb {
           instance_ = other.instance_;
           onChanged();
         }
-        if (!other.getServiceAccountId().isEmpty()) {
-          serviceAccountId_ = other.serviceAccountId_;
-          onChanged();
-        }
         if (!other.paths_.isEmpty()) {
           if (paths_.isEmpty()) {
             paths_ = other.paths_;
@@ -1132,8 +1331,16 @@ public final class Ydb {
           }
           onChanged();
         }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
         if (!other.getSubnetId().isEmpty()) {
           subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.getSaKeyContent().isEmpty()) {
+          saKeyContent_ = other.saKeyContent_;
           onChanged();
         }
         if (!other.securityGroups_.isEmpty()) {
@@ -1146,8 +1353,8 @@ public final class Ydb {
           }
           onChanged();
         }
-        if (!other.getSaKeyContent().isEmpty()) {
-          saKeyContent_ = other.saKeyContent_;
+        if (!other.getChangefeedCustomName().isEmpty()) {
+          changefeedCustomName_ = other.changefeedCustomName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1372,82 +1579,6 @@ public final class Ydb {
         return this;
       }
 
-      private java.lang.Object serviceAccountId_ = "";
-      /**
-       * <code>string service_account_id = 6;</code>
-       * @return The serviceAccountId.
-       */
-      public java.lang.String getServiceAccountId() {
-        java.lang.Object ref = serviceAccountId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceAccountId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string service_account_id = 6;</code>
-       * @return The bytes for serviceAccountId.
-       */
-      public com.google.protobuf.ByteString
-          getServiceAccountIdBytes() {
-        java.lang.Object ref = serviceAccountId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceAccountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string service_account_id = 6;</code>
-       * @param value The serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string service_account_id = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServiceAccountId() {
-        
-        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string service_account_id = 6;</code>
-       * @param value The bytes for serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.LazyStringList paths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePathsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
@@ -1558,6 +1689,82 @@ public final class Ydb {
         return this;
       }
 
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <code>string service_account_id = 6;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_account_id = 6;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_account_id = 6;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_id = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_id = 6;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
@@ -1650,6 +1857,102 @@ public final class Ydb {
   checkByteStringIsUtf8(value);
         
         subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object saKeyContent_ = "";
+      /**
+       * <pre>
+       * Authorization Key
+       * </pre>
+       *
+       * <code>string sa_key_content = 33;</code>
+       * @return The saKeyContent.
+       */
+      public java.lang.String getSaKeyContent() {
+        java.lang.Object ref = saKeyContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          saKeyContent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization Key
+       * </pre>
+       *
+       * <code>string sa_key_content = 33;</code>
+       * @return The bytes for saKeyContent.
+       */
+      public com.google.protobuf.ByteString
+          getSaKeyContentBytes() {
+        java.lang.Object ref = saKeyContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          saKeyContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization Key
+       * </pre>
+       *
+       * <code>string sa_key_content = 33;</code>
+       * @param value The saKeyContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaKeyContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        saKeyContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization Key
+       * </pre>
+       *
+       * <code>string sa_key_content = 33;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSaKeyContent() {
+        
+        saKeyContent_ = getDefaultInstance().getSaKeyContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization Key
+       * </pre>
+       *
+       * <code>string sa_key_content = 33;</code>
+       * @param value The bytes for saKeyContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaKeyContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        saKeyContent_ = value;
         onChanged();
         return this;
       }
@@ -1800,22 +2103,22 @@ public final class Ydb {
         return this;
       }
 
-      private java.lang.Object saKeyContent_ = "";
+      private java.lang.Object changefeedCustomName_ = "";
       /**
        * <pre>
-       * Authorization Key
+       * Pre-created change feed
        * </pre>
        *
-       * <code>string sa_key_content = 33;</code>
-       * @return The saKeyContent.
+       * <code>string changefeed_custom_name = 35;</code>
+       * @return The changefeedCustomName.
        */
-      public java.lang.String getSaKeyContent() {
-        java.lang.Object ref = saKeyContent_;
+      public java.lang.String getChangefeedCustomName() {
+        java.lang.Object ref = changefeedCustomName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          saKeyContent_ = s;
+          changefeedCustomName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1823,20 +2126,20 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Authorization Key
+       * Pre-created change feed
        * </pre>
        *
-       * <code>string sa_key_content = 33;</code>
-       * @return The bytes for saKeyContent.
+       * <code>string changefeed_custom_name = 35;</code>
+       * @return The bytes for changefeedCustomName.
        */
       public com.google.protobuf.ByteString
-          getSaKeyContentBytes() {
-        java.lang.Object ref = saKeyContent_;
+          getChangefeedCustomNameBytes() {
+        java.lang.Object ref = changefeedCustomName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          saKeyContent_ = b;
+          changefeedCustomName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1844,54 +2147,54 @@ public final class Ydb {
       }
       /**
        * <pre>
-       * Authorization Key
+       * Pre-created change feed
        * </pre>
        *
-       * <code>string sa_key_content = 33;</code>
-       * @param value The saKeyContent to set.
+       * <code>string changefeed_custom_name = 35;</code>
+       * @param value The changefeedCustomName to set.
        * @return This builder for chaining.
        */
-      public Builder setSaKeyContent(
+      public Builder setChangefeedCustomName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        saKeyContent_ = value;
+        changefeedCustomName_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Authorization Key
+       * Pre-created change feed
        * </pre>
        *
-       * <code>string sa_key_content = 33;</code>
+       * <code>string changefeed_custom_name = 35;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSaKeyContent() {
+      public Builder clearChangefeedCustomName() {
         
-        saKeyContent_ = getDefaultInstance().getSaKeyContent();
+        changefeedCustomName_ = getDefaultInstance().getChangefeedCustomName();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Authorization Key
+       * Pre-created change feed
        * </pre>
        *
-       * <code>string sa_key_content = 33;</code>
-       * @param value The bytes for saKeyContent to set.
+       * <code>string changefeed_custom_name = 35;</code>
+       * @param value The bytes for changefeedCustomName to set.
        * @return This builder for chaining.
        */
-      public Builder setSaKeyContentBytes(
+      public Builder setChangefeedCustomNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        saKeyContent_ = value;
+        changefeedCustomName_ = value;
         onChanged();
         return this;
       }
@@ -1993,18 +2296,6 @@ public final class Ydb {
         getInstanceBytes();
 
     /**
-     * <code>string service_account_id = 11;</code>
-     * @return The serviceAccountId.
-     */
-    java.lang.String getServiceAccountId();
-    /**
-     * <code>string service_account_id = 11;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    com.google.protobuf.ByteString
-        getServiceAccountIdBytes();
-
-    /**
      * <pre>
      * Path extension for database, each table will be layouted into this path
      * </pre>
@@ -2025,6 +2316,37 @@ public final class Ydb {
         getPathBytes();
 
     /**
+     * <code>string service_account_id = 11;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <code>string service_account_id = 11;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Cleanup policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <pre>
+     * Cleanup policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+     * @return The cleanupPolicy.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy();
+
+    /**
      * <pre>
      * Network interface for endpoint. If none will assume public ipv4
      * </pre>
@@ -2043,6 +2365,26 @@ public final class Ydb {
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * SA content
+     * </pre>
+     *
+     * <code>string sa_key_content = 32;</code>
+     * @return The saKeyContent.
+     */
+    java.lang.String getSaKeyContent();
+    /**
+     * <pre>
+     * SA content
+     * </pre>
+     *
+     * <code>string sa_key_content = 32;</code>
+     * @return The bytes for saKeyContent.
+     */
+    com.google.protobuf.ByteString
+        getSaKeyContentBytes();
 
     /**
      * <pre>
@@ -2087,45 +2429,6 @@ public final class Ydb {
 
     /**
      * <pre>
-     * SA content
-     * </pre>
-     *
-     * <code>string sa_key_content = 32;</code>
-     * @return The saKeyContent.
-     */
-    java.lang.String getSaKeyContent();
-    /**
-     * <pre>
-     * SA content
-     * </pre>
-     *
-     * <code>string sa_key_content = 32;</code>
-     * @return The bytes for saKeyContent.
-     */
-    com.google.protobuf.ByteString
-        getSaKeyContentBytes();
-
-    /**
-     * <pre>
-     * Cleanup policy
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
-     */
-    int getCleanupPolicyValue();
-    /**
-     * <pre>
-     * Cleanup policy
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-     * @return The cleanupPolicy.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy();
-
-    /**
-     * <pre>
      * Should create column-oriented table (OLAP). By default it creates row-oriented
      * (OLTP)
      * </pre>
@@ -2134,6 +2437,25 @@ public final class Ydb {
      * @return The isTableColumnOriented.
      */
     boolean getIsTableColumnOriented();
+
+    /**
+     * <pre>
+     * Compression that will be used for default columns family on YDB table creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+     * @return The enum numeric value on the wire for defaultCompression.
+     */
+    int getDefaultCompressionValue();
+    /**
+     * <pre>
+     * Compression that will be used for default columns family on YDB table creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+     * @return The defaultCompression.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression getDefaultCompression();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbTarget}
@@ -2150,12 +2472,13 @@ public final class Ydb {
     private YdbTarget() {
       database_ = "";
       instance_ = "";
-      serviceAccountId_ = "";
       path_ = "";
-      subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      saKeyContent_ = "";
+      serviceAccountId_ = "";
       cleanupPolicy_ = 0;
+      subnetId_ = "";
+      saKeyContent_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      defaultCompression_ = 0;
     }
 
     @java.lang.Override
@@ -2243,6 +2566,12 @@ public final class Ydb {
             case 272: {
 
               isTableColumnOriented_ = input.readBool();
+              break;
+            }
+            case 280: {
+              int rawValue = input.readEnum();
+
+              defaultCompression_ = rawValue;
               break;
             }
             default: {
@@ -2372,44 +2701,6 @@ public final class Ydb {
       }
     }
 
-    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 11;
-    private volatile java.lang.Object serviceAccountId_;
-    /**
-     * <code>string service_account_id = 11;</code>
-     * @return The serviceAccountId.
-     */
-    @java.lang.Override
-    public java.lang.String getServiceAccountId() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serviceAccountId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string service_account_id = 11;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceAccountIdBytes() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serviceAccountId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int PATH_FIELD_NUMBER = 10;
     private volatile java.lang.Object path_;
     /**
@@ -2456,6 +2747,71 @@ public final class Ydb {
       }
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <code>string service_account_id = 11;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_account_id = 11;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 21;
+    private int cleanupPolicy_;
+    /**
+     * <pre>
+     * Cleanup policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    @java.lang.Override public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <pre>
+     * Cleanup policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+     * @return The cleanupPolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.UNRECOGNIZED : result;
+    }
+
     public static final int SUBNET_ID_FIELD_NUMBER = 30;
     private volatile java.lang.Object subnetId_;
     /**
@@ -2496,6 +2852,52 @@ public final class Ydb {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SA_KEY_CONTENT_FIELD_NUMBER = 32;
+    private volatile java.lang.Object saKeyContent_;
+    /**
+     * <pre>
+     * SA content
+     * </pre>
+     *
+     * <code>string sa_key_content = 32;</code>
+     * @return The saKeyContent.
+     */
+    @java.lang.Override
+    public java.lang.String getSaKeyContent() {
+      java.lang.Object ref = saKeyContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        saKeyContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SA content
+     * </pre>
+     *
+     * <code>string sa_key_content = 32;</code>
+     * @return The bytes for saKeyContent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSaKeyContentBytes() {
+      java.lang.Object ref = saKeyContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        saKeyContent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2553,79 +2955,6 @@ public final class Ydb {
       return securityGroups_.getByteString(index);
     }
 
-    public static final int SA_KEY_CONTENT_FIELD_NUMBER = 32;
-    private volatile java.lang.Object saKeyContent_;
-    /**
-     * <pre>
-     * SA content
-     * </pre>
-     *
-     * <code>string sa_key_content = 32;</code>
-     * @return The saKeyContent.
-     */
-    @java.lang.Override
-    public java.lang.String getSaKeyContent() {
-      java.lang.Object ref = saKeyContent_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        saKeyContent_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * SA content
-     * </pre>
-     *
-     * <code>string sa_key_content = 32;</code>
-     * @return The bytes for saKeyContent.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSaKeyContentBytes() {
-      java.lang.Object ref = saKeyContent_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        saKeyContent_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLEANUP_POLICY_FIELD_NUMBER = 21;
-    private int cleanupPolicy_;
-    /**
-     * <pre>
-     * Cleanup policy
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
-     */
-    @java.lang.Override public int getCleanupPolicyValue() {
-      return cleanupPolicy_;
-    }
-    /**
-     * <pre>
-     * Cleanup policy
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-     * @return The cleanupPolicy.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.valueOf(cleanupPolicy_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.UNRECOGNIZED : result;
-    }
-
     public static final int IS_TABLE_COLUMN_ORIENTED_FIELD_NUMBER = 34;
     private boolean isTableColumnOriented_;
     /**
@@ -2640,6 +2969,33 @@ public final class Ydb {
     @java.lang.Override
     public boolean getIsTableColumnOriented() {
       return isTableColumnOriented_;
+    }
+
+    public static final int DEFAULT_COMPRESSION_FIELD_NUMBER = 35;
+    private int defaultCompression_;
+    /**
+     * <pre>
+     * Compression that will be used for default columns family on YDB table creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+     * @return The enum numeric value on the wire for defaultCompression.
+     */
+    @java.lang.Override public int getDefaultCompressionValue() {
+      return defaultCompression_;
+    }
+    /**
+     * <pre>
+     * Compression that will be used for default columns family on YDB table creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+     * @return The defaultCompression.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression getDefaultCompression() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.valueOf(defaultCompression_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2682,6 +3038,9 @@ public final class Ydb {
       }
       if (isTableColumnOriented_ != false) {
         output.writeBool(34, isTableColumnOriented_);
+      }
+      if (defaultCompression_ != yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.YDB_DEFAULT_COMPRESSION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(35, defaultCompression_);
       }
       unknownFields.writeTo(output);
     }
@@ -2726,6 +3085,10 @@ public final class Ydb {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(34, isTableColumnOriented_);
       }
+      if (defaultCompression_ != yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.YDB_DEFAULT_COMPRESSION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(35, defaultCompression_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2745,19 +3108,20 @@ public final class Ydb {
           .equals(other.getDatabase())) return false;
       if (!getInstance()
           .equals(other.getInstance())) return false;
-      if (!getServiceAccountId()
-          .equals(other.getServiceAccountId())) return false;
       if (!getPath()
           .equals(other.getPath())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (!getSubnetId()
           .equals(other.getSubnetId())) return false;
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getSaKeyContent()
           .equals(other.getSaKeyContent())) return false;
-      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (getIsTableColumnOriented()
           != other.getIsTableColumnOriented()) return false;
+      if (defaultCompression_ != other.defaultCompression_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2773,23 +3137,25 @@ public final class Ydb {
       hash = (53 * hash) + getDatabase().hashCode();
       hash = (37 * hash) + INSTANCE_FIELD_NUMBER;
       hash = (53 * hash) + getInstance().hashCode();
-      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + PATH_FIELD_NUMBER;
       hash = (53 * hash) + getPath().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + SA_KEY_CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getSaKeyContent().hashCode();
       if (getSecurityGroupsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
-      hash = (37 * hash) + SA_KEY_CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getSaKeyContent().hashCode();
-      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
-      hash = (53 * hash) + cleanupPolicy_;
       hash = (37 * hash) + IS_TABLE_COLUMN_ORIENTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsTableColumnOriented());
+      hash = (37 * hash) + DEFAULT_COMPRESSION_FIELD_NUMBER;
+      hash = (53 * hash) + defaultCompression_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2927,19 +3293,21 @@ public final class Ydb {
 
         instance_ = "";
 
-        serviceAccountId_ = "";
-
         path_ = "";
 
-        subnetId_ = "";
-
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        saKeyContent_ = "";
+        serviceAccountId_ = "";
 
         cleanupPolicy_ = 0;
 
+        subnetId_ = "";
+
+        saKeyContent_ = "";
+
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         isTableColumnOriented_ = false;
+
+        defaultCompression_ = 0;
 
         return this;
       }
@@ -2970,17 +3338,18 @@ public final class Ydb {
         int from_bitField0_ = bitField0_;
         result.database_ = database_;
         result.instance_ = instance_;
-        result.serviceAccountId_ = serviceAccountId_;
         result.path_ = path_;
+        result.serviceAccountId_ = serviceAccountId_;
+        result.cleanupPolicy_ = cleanupPolicy_;
         result.subnetId_ = subnetId_;
+        result.saKeyContent_ = saKeyContent_;
         if (((bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.securityGroups_ = securityGroups_;
-        result.saKeyContent_ = saKeyContent_;
-        result.cleanupPolicy_ = cleanupPolicy_;
         result.isTableColumnOriented_ = isTableColumnOriented_;
+        result.defaultCompression_ = defaultCompression_;
         onBuilt();
         return result;
       }
@@ -3037,16 +3406,23 @@ public final class Ydb {
           instance_ = other.instance_;
           onChanged();
         }
-        if (!other.getServiceAccountId().isEmpty()) {
-          serviceAccountId_ = other.serviceAccountId_;
-          onChanged();
-        }
         if (!other.getPath().isEmpty()) {
           path_ = other.path_;
           onChanged();
         }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
         if (!other.getSubnetId().isEmpty()) {
           subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.getSaKeyContent().isEmpty()) {
+          saKeyContent_ = other.saKeyContent_;
           onChanged();
         }
         if (!other.securityGroups_.isEmpty()) {
@@ -3059,15 +3435,11 @@ public final class Ydb {
           }
           onChanged();
         }
-        if (!other.getSaKeyContent().isEmpty()) {
-          saKeyContent_ = other.saKeyContent_;
-          onChanged();
-        }
-        if (other.cleanupPolicy_ != 0) {
-          setCleanupPolicyValue(other.getCleanupPolicyValue());
-        }
         if (other.getIsTableColumnOriented() != false) {
           setIsTableColumnOriented(other.getIsTableColumnOriented());
+        }
+        if (other.defaultCompression_ != 0) {
+          setDefaultCompressionValue(other.getDefaultCompressionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3291,82 +3663,6 @@ public final class Ydb {
         return this;
       }
 
-      private java.lang.Object serviceAccountId_ = "";
-      /**
-       * <code>string service_account_id = 11;</code>
-       * @return The serviceAccountId.
-       */
-      public java.lang.String getServiceAccountId() {
-        java.lang.Object ref = serviceAccountId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceAccountId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string service_account_id = 11;</code>
-       * @return The bytes for serviceAccountId.
-       */
-      public com.google.protobuf.ByteString
-          getServiceAccountIdBytes() {
-        java.lang.Object ref = serviceAccountId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceAccountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string service_account_id = 11;</code>
-       * @param value The serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string service_account_id = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServiceAccountId() {
-        
-        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string service_account_id = 11;</code>
-       * @param value The bytes for serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object path_ = "";
       /**
        * <pre>
@@ -3463,6 +3759,156 @@ public final class Ydb {
         return this;
       }
 
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <code>string service_account_id = 11;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_account_id = 11;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_account_id = 11;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_id = 11;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <pre>
+       * Cleanup policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
+       */
+      @java.lang.Override public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+       * @return The cleanupPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cleanup policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
@@ -3555,6 +4001,102 @@ public final class Ydb {
   checkByteStringIsUtf8(value);
         
         subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object saKeyContent_ = "";
+      /**
+       * <pre>
+       * SA content
+       * </pre>
+       *
+       * <code>string sa_key_content = 32;</code>
+       * @return The saKeyContent.
+       */
+      public java.lang.String getSaKeyContent() {
+        java.lang.Object ref = saKeyContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          saKeyContent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SA content
+       * </pre>
+       *
+       * <code>string sa_key_content = 32;</code>
+       * @return The bytes for saKeyContent.
+       */
+      public com.google.protobuf.ByteString
+          getSaKeyContentBytes() {
+        java.lang.Object ref = saKeyContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          saKeyContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SA content
+       * </pre>
+       *
+       * <code>string sa_key_content = 32;</code>
+       * @param value The saKeyContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaKeyContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        saKeyContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SA content
+       * </pre>
+       *
+       * <code>string sa_key_content = 32;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSaKeyContent() {
+        
+        saKeyContent_ = getDefaultInstance().getSaKeyContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SA content
+       * </pre>
+       *
+       * <code>string sa_key_content = 32;</code>
+       * @param value The bytes for saKeyContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSaKeyContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        saKeyContent_ = value;
         onChanged();
         return this;
       }
@@ -3705,176 +4247,6 @@ public final class Ydb {
         return this;
       }
 
-      private java.lang.Object saKeyContent_ = "";
-      /**
-       * <pre>
-       * SA content
-       * </pre>
-       *
-       * <code>string sa_key_content = 32;</code>
-       * @return The saKeyContent.
-       */
-      public java.lang.String getSaKeyContent() {
-        java.lang.Object ref = saKeyContent_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          saKeyContent_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SA content
-       * </pre>
-       *
-       * <code>string sa_key_content = 32;</code>
-       * @return The bytes for saKeyContent.
-       */
-      public com.google.protobuf.ByteString
-          getSaKeyContentBytes() {
-        java.lang.Object ref = saKeyContent_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          saKeyContent_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SA content
-       * </pre>
-       *
-       * <code>string sa_key_content = 32;</code>
-       * @param value The saKeyContent to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSaKeyContent(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        saKeyContent_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SA content
-       * </pre>
-       *
-       * <code>string sa_key_content = 32;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSaKeyContent() {
-        
-        saKeyContent_ = getDefaultInstance().getSaKeyContent();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SA content
-       * </pre>
-       *
-       * <code>string sa_key_content = 32;</code>
-       * @param value The bytes for saKeyContent to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSaKeyContentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        saKeyContent_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int cleanupPolicy_ = 0;
-      /**
-       * <pre>
-       * Cleanup policy
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-       * @return The enum numeric value on the wire for cleanupPolicy.
-       */
-      @java.lang.Override public int getCleanupPolicyValue() {
-        return cleanupPolicy_;
-      }
-      /**
-       * <pre>
-       * Cleanup policy
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-       * @param value The enum numeric value on the wire for cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicyValue(int value) {
-        
-        cleanupPolicy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Cleanup policy
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-       * @return The cleanupPolicy.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.valueOf(cleanupPolicy_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Cleanup policy
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-       * @param value The cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        cleanupPolicy_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Cleanup policy
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbCleanupPolicy cleanup_policy = 21;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCleanupPolicy() {
-        
-        cleanupPolicy_ = 0;
-        onChanged();
-        return this;
-      }
-
       private boolean isTableColumnOriented_ ;
       /**
        * <pre>
@@ -3917,6 +4289,80 @@ public final class Ydb {
       public Builder clearIsTableColumnOriented() {
         
         isTableColumnOriented_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int defaultCompression_ = 0;
+      /**
+       * <pre>
+       * Compression that will be used for default columns family on YDB table creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+       * @return The enum numeric value on the wire for defaultCompression.
+       */
+      @java.lang.Override public int getDefaultCompressionValue() {
+        return defaultCompression_;
+      }
+      /**
+       * <pre>
+       * Compression that will be used for default columns family on YDB table creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+       * @param value The enum numeric value on the wire for defaultCompression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCompressionValue(int value) {
+        
+        defaultCompression_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Compression that will be used for default columns family on YDB table creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+       * @return The defaultCompression.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression getDefaultCompression() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression result = yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.valueOf(defaultCompression_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Compression that will be used for default columns family on YDB table creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+       * @param value The defaultCompression to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCompression(yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbDefaultCompression value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        defaultCompression_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Compression that will be used for default columns family on YDB table creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.YdbDefaultCompression default_compression = 35;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCompression() {
+        
+        defaultCompression_ = 0;
         onChanged();
         return this;
       }
@@ -3994,25 +4440,33 @@ public final class Ydb {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/datatransfer/v1/endpoint/" +
       "ydb.proto\022%yandex.cloud.datatransfer.v1." +
-      "endpoint\"\236\001\n\tYdbSource\022\020\n\010database\030\001 \001(\t" +
-      "\022\020\n\010instance\030\002 \001(\t\022\032\n\022service_account_id" +
-      "\030\006 \001(\t\022\r\n\005paths\030\005 \003(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
-      "\022\027\n\017security_groups\030\" \003(\t\022\026\n\016sa_key_cont" +
-      "ent\030! \001(\t\"\220\002\n\tYdbTarget\022\020\n\010database\030\001 \001(" +
-      "\t\022\020\n\010instance\030\002 \001(\t\022\032\n\022service_account_i" +
-      "d\030\013 \001(\t\022\014\n\004path\030\n \001(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
-      "\022\027\n\017security_groups\030! \003(\t\022\026\n\016sa_key_cont" +
-      "ent\030  \001(\t\022O\n\016cleanup_policy\030\025 \001(\01627.yand" +
-      "ex.cloud.datatransfer.v1.endpoint.YdbCle" +
-      "anupPolicy\022 \n\030is_table_column_oriented\030\"" +
-      " \001(\010*t\n\020YdbCleanupPolicy\022\"\n\036YDB_CLEANUP_" +
-      "POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANUP_POLI" +
-      "CY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLICY_DROP" +
-      "\020\002B\247\001\n)yandex.cloud.api.datatransfer.v1." +
-      "endpointZRgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/datatransfer/v1/endpo" +
-      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
-      ".V1.EndPointb\006proto3"
+      "endpoint\"\320\001\n\tYdbSource\022\020\n\010database\030\001 \001(\t" +
+      "\022\020\n\010instance\030\002 \001(\t\022\r\n\005paths\030\005 \003(\t\022\032\n\022ser" +
+      "vice_account_id\030\006 \001(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
+      "\022\026\n\016sa_key_content\030! \001(\t\022\027\n\017security_gro" +
+      "ups\030\" \003(\t\022\036\n\026changefeed_custom_name\030# \001(" +
+      "\tJ\004\010\003\020\005J\004\010\007\020\036J\004\010\037\020!\"\203\003\n\tYdbTarget\022\020\n\010dat" +
+      "abase\030\001 \001(\t\022\020\n\010instance\030\002 \001(\t\022\014\n\004path\030\n " +
+      "\001(\t\022\032\n\022service_account_id\030\013 \001(\t\022O\n\016clean" +
+      "up_policy\030\025 \001(\01627.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.YdbCleanupPolicy\022\021\n\tsubn" +
+      "et_id\030\036 \001(\t\022\026\n\016sa_key_content\030  \001(\t\022\027\n\017s" +
+      "ecurity_groups\030! \003(\t\022 \n\030is_table_column_" +
+      "oriented\030\" \001(\010\022Y\n\023default_compression\030# " +
+      "\001(\0162<.yandex.cloud.datatransfer.v1.endpo" +
+      "int.YdbDefaultCompressionJ\004\010\003\020\nJ\004\010\014\020\025J\004\010" +
+      "\026\020\036J\004\010\037\020 *t\n\020YdbCleanupPolicy\022\"\n\036YDB_CLE" +
+      "ANUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANUP" +
+      "_POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLICY" +
+      "_DROP\020\002*\207\001\n\025YdbDefaultCompression\022\'\n#YDB" +
+      "_DEFAULT_COMPRESSION_UNSPECIFIED\020\000\022$\n YD" +
+      "B_DEFAULT_COMPRESSION_DISABLED\020\001\022\037\n\033YDB_" +
+      "DEFAULT_COMPRESSION_LZ4\020\002B\247\001\n)yandex.clo" +
+      "ud.api.datatransfer.v1.endpointZRgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/datatransfer/v1/endpoint;endpoint\252\002%Ya" +
+      "ndex.Cloud.Datatransfer.V1.EndPointb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4023,13 +4477,13 @@ public final class Ydb {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbSource_descriptor,
-        new java.lang.String[] { "Database", "Instance", "ServiceAccountId", "Paths", "SubnetId", "SecurityGroups", "SaKeyContent", });
+        new java.lang.String[] { "Database", "Instance", "Paths", "ServiceAccountId", "SubnetId", "SaKeyContent", "SecurityGroups", "ChangefeedCustomName", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_descriptor,
-        new java.lang.String[] { "Database", "Instance", "ServiceAccountId", "Path", "SubnetId", "SecurityGroups", "SaKeyContent", "CleanupPolicy", "IsTableColumnOriented", });
+        new java.lang.String[] { "Database", "Instance", "Path", "ServiceAccountId", "CleanupPolicy", "SubnetId", "SaKeyContent", "SecurityGroups", "IsTableColumnOriented", "DefaultCompression", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

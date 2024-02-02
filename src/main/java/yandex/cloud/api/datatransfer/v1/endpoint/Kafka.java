@@ -1201,6 +1201,26 @@ public final class Kafka {
 
     /**
      * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <pre>
      * TLS settings for broker connection. Disabled by default.
      * </pre>
      *
@@ -1225,26 +1245,6 @@ public final class Kafka {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
-
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The subnetId.
-     */
-    java.lang.String getSubnetId();
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The bytes for subnetId.
-     */
-    com.google.protobuf.ByteString
-        getSubnetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseKafka}
@@ -1408,44 +1408,6 @@ public final class Kafka {
       return brokerUrls_.getByteString(index);
     }
 
-    public static final int TLS_MODE_FIELD_NUMBER = 5;
-    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
-    /**
-     * <pre>
-     * TLS settings for broker connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
-     * @return Whether the tlsMode field is set.
-     */
-    @java.lang.Override
-    public boolean hasTlsMode() {
-      return tlsMode_ != null;
-    }
-    /**
-     * <pre>
-     * TLS settings for broker connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
-     * @return The tlsMode.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
-      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
-    }
-    /**
-     * <pre>
-     * TLS settings for broker connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
-      return getTlsMode();
-    }
-
     public static final int SUBNET_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object subnetId_;
     /**
@@ -1490,6 +1452,44 @@ public final class Kafka {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TLS_MODE_FIELD_NUMBER = 5;
+    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
+    /**
+     * <pre>
+     * TLS settings for broker connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
+     * @return Whether the tlsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasTlsMode() {
+      return tlsMode_ != null;
+    }
+    /**
+     * <pre>
+     * TLS settings for broker connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
+     * @return The tlsMode.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
+      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
+    }
+    /**
+     * <pre>
+     * TLS settings for broker connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
+      return getTlsMode();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1556,13 +1556,13 @@ public final class Kafka {
 
       if (!getBrokerUrlsList()
           .equals(other.getBrokerUrlsList())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
       if (hasTlsMode() != other.hasTlsMode()) return false;
       if (hasTlsMode()) {
         if (!getTlsMode()
             .equals(other.getTlsMode())) return false;
       }
-      if (!getSubnetId()
-          .equals(other.getSubnetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1578,12 +1578,12 @@ public final class Kafka {
         hash = (37 * hash) + BROKER_URLS_FIELD_NUMBER;
         hash = (53 * hash) + getBrokerUrlsList().hashCode();
       }
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
       if (hasTlsMode()) {
         hash = (37 * hash) + TLS_MODE_FIELD_NUMBER;
         hash = (53 * hash) + getTlsMode().hashCode();
       }
-      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1719,14 +1719,14 @@ public final class Kafka {
         super.clear();
         brokerUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        subnetId_ = "";
+
         if (tlsModeBuilder_ == null) {
           tlsMode_ = null;
         } else {
           tlsMode_ = null;
           tlsModeBuilder_ = null;
         }
-        subnetId_ = "";
-
         return this;
       }
 
@@ -1759,12 +1759,12 @@ public final class Kafka {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.brokerUrls_ = brokerUrls_;
+        result.subnetId_ = subnetId_;
         if (tlsModeBuilder_ == null) {
           result.tlsMode_ = tlsMode_;
         } else {
           result.tlsMode_ = tlsModeBuilder_.build();
         }
-        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -1823,12 +1823,12 @@ public final class Kafka {
           }
           onChanged();
         }
-        if (other.hasTlsMode()) {
-          mergeTlsMode(other.getTlsMode());
-        }
         if (!other.getSubnetId().isEmpty()) {
           subnetId_ = other.subnetId_;
           onChanged();
+        }
+        if (other.hasTlsMode()) {
+          mergeTlsMode(other.getTlsMode());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2006,6 +2006,102 @@ public final class Kafka {
         return this;
       }
 
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
       private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder> tlsModeBuilder_;
@@ -2159,102 +2255,6 @@ public final class Kafka {
           tlsMode_ = null;
         }
         return tlsModeBuilder_;
-      }
-
-      private java.lang.Object subnetId_ = "";
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The subnetId.
-       */
-      public java.lang.String getSubnetId() {
-        java.lang.Object ref = subnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The bytes for subnetId.
-       */
-      public com.google.protobuf.ByteString
-          getSubnetIdBytes() {
-        java.lang.Object ref = subnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubnetId() {
-        
-        subnetId_ = getDefaultInstance().getSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The bytes for subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subnetId_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3402,6 +3402,25 @@ public final class Kafka {
 
     /**
      * <pre>
+     * SASL mechanism for authentication
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+     * @return The enum numeric value on the wire for mechanism.
+     */
+    int getMechanismValue();
+    /**
+     * <pre>
+     * SASL mechanism for authentication
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+     * @return The mechanism.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism();
+
+    /**
+     * <pre>
      * Password for user
      * </pre>
      *
@@ -3426,25 +3445,6 @@ public final class Kafka {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
-
-    /**
-     * <pre>
-     * SASL mechanism for authentication
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-     * @return The enum numeric value on the wire for mechanism.
-     */
-    int getMechanismValue();
-    /**
-     * <pre>
-     * SASL mechanism for authentication
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-     * @return The mechanism.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaSaslSecurity}
@@ -3596,6 +3596,33 @@ public final class Kafka {
       }
     }
 
+    public static final int MECHANISM_FIELD_NUMBER = 3;
+    private int mechanism_;
+    /**
+     * <pre>
+     * SASL mechanism for authentication
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+     * @return The enum numeric value on the wire for mechanism.
+     */
+    @java.lang.Override public int getMechanismValue() {
+      return mechanism_;
+    }
+    /**
+     * <pre>
+     * SASL mechanism for authentication
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+     * @return The mechanism.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism result = yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.valueOf(mechanism_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.UNRECOGNIZED : result;
+    }
+
     public static final int PASSWORD_FIELD_NUMBER = 4;
     private yandex.cloud.api.datatransfer.v1.endpoint.Common.Secret password_;
     /**
@@ -3632,33 +3659,6 @@ public final class Kafka {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
       return getPassword();
-    }
-
-    public static final int MECHANISM_FIELD_NUMBER = 3;
-    private int mechanism_;
-    /**
-     * <pre>
-     * SASL mechanism for authentication
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-     * @return The enum numeric value on the wire for mechanism.
-     */
-    @java.lang.Override public int getMechanismValue() {
-      return mechanism_;
-    }
-    /**
-     * <pre>
-     * SASL mechanism for authentication
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-     * @return The mechanism.
-     */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism result = yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.valueOf(mechanism_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3721,12 +3721,12 @@ public final class Kafka {
 
       if (!getUser()
           .equals(other.getUser())) return false;
+      if (mechanism_ != other.mechanism_) return false;
       if (hasPassword() != other.hasPassword()) return false;
       if (hasPassword()) {
         if (!getPassword()
             .equals(other.getPassword())) return false;
       }
-      if (mechanism_ != other.mechanism_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3740,12 +3740,12 @@ public final class Kafka {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUser().hashCode();
+      hash = (37 * hash) + MECHANISM_FIELD_NUMBER;
+      hash = (53 * hash) + mechanism_;
       if (hasPassword()) {
         hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getPassword().hashCode();
       }
-      hash = (37 * hash) + MECHANISM_FIELD_NUMBER;
-      hash = (53 * hash) + mechanism_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3881,14 +3881,14 @@ public final class Kafka {
         super.clear();
         user_ = "";
 
+        mechanism_ = 0;
+
         if (passwordBuilder_ == null) {
           password_ = null;
         } else {
           password_ = null;
           passwordBuilder_ = null;
         }
-        mechanism_ = 0;
-
         return this;
       }
 
@@ -3916,12 +3916,12 @@ public final class Kafka {
       public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSaslSecurity buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSaslSecurity result = new yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaSaslSecurity(this);
         result.user_ = user_;
+        result.mechanism_ = mechanism_;
         if (passwordBuilder_ == null) {
           result.password_ = password_;
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        result.mechanism_ = mechanism_;
         onBuilt();
         return result;
       }
@@ -3974,11 +3974,11 @@ public final class Kafka {
           user_ = other.user_;
           onChanged();
         }
-        if (other.hasPassword()) {
-          mergePassword(other.getPassword());
-        }
         if (other.mechanism_ != 0) {
           setMechanismValue(other.getMechanismValue());
+        }
+        if (other.hasPassword()) {
+          mergePassword(other.getPassword());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4101,6 +4101,80 @@ public final class Kafka {
   checkByteStringIsUtf8(value);
         
         user_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int mechanism_ = 0;
+      /**
+       * <pre>
+       * SASL mechanism for authentication
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+       * @return The enum numeric value on the wire for mechanism.
+       */
+      @java.lang.Override public int getMechanismValue() {
+        return mechanism_;
+      }
+      /**
+       * <pre>
+       * SASL mechanism for authentication
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+       * @param value The enum numeric value on the wire for mechanism to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMechanismValue(int value) {
+        
+        mechanism_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SASL mechanism for authentication
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+       * @return The mechanism.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism result = yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.valueOf(mechanism_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * SASL mechanism for authentication
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+       * @param value The mechanism to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMechanism(yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mechanism_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SASL mechanism for authentication
+       * </pre>
+       *
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMechanism() {
+        
+        mechanism_ = 0;
         onChanged();
         return this;
       }
@@ -4258,80 +4332,6 @@ public final class Kafka {
           password_ = null;
         }
         return passwordBuilder_;
-      }
-
-      private int mechanism_ = 0;
-      /**
-       * <pre>
-       * SASL mechanism for authentication
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-       * @return The enum numeric value on the wire for mechanism.
-       */
-      @java.lang.Override public int getMechanismValue() {
-        return mechanism_;
-      }
-      /**
-       * <pre>
-       * SASL mechanism for authentication
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-       * @param value The enum numeric value on the wire for mechanism to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMechanismValue(int value) {
-        
-        mechanism_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SASL mechanism for authentication
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-       * @return The mechanism.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism getMechanism() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism result = yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.valueOf(mechanism_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * SASL mechanism for authentication
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-       * @param value The mechanism to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMechanism(yandex.cloud.api.datatransfer.v1.endpoint.Kafka.KafkaMechanism value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        mechanism_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SASL mechanism for authentication
-       * </pre>
-       *
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.KafkaMechanism mechanism = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMechanism() {
-        
-        mechanism_ = 0;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10208,50 +10208,50 @@ public final class Kafka {
       "lizers.proto\"\211\001\n\026KafkaConnectionOptions\022" +
       "\024\n\ncluster_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(" +
       "\01325.yandex.cloud.datatransfer.v1.endpoin" +
-      "t.OnPremiseKafkaH\000B\014\n\nconnection\"z\n\016OnPr" +
-      "emiseKafka\022\023\n\013broker_urls\030\001 \003(\t\022@\n\010tls_m" +
-      "ode\030\005 \001(\0132..yandex.cloud.datatransfer.v1" +
-      ".endpoint.TLSMode\022\021\n\tsubnet_id\030\004 \001(\t\"\243\001\n" +
-      "\tKafkaAuth\022H\n\004sasl\030\001 \001(\01328.yandex.cloud." +
-      "datatransfer.v1.endpoint.KafkaSaslSecuri" +
-      "tyH\000\022@\n\007no_auth\030\002 \001(\0132-.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.NoAuthH\000B\n\n\010securi" +
-      "ty\"\254\001\n\021KafkaSaslSecurity\022\014\n\004user\030\001 \001(\t\022?" +
-      "\n\010password\030\004 \001(\0132-.yandex.cloud.datatran" +
-      "sfer.v1.endpoint.Secret\022H\n\tmechanism\030\003 \001" +
-      "(\01625.yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.KafkaMechanism\"\374\002\n\013KafkaSource\022Q\n\ncon" +
-      "nection\030\001 \001(\0132=.yandex.cloud.datatransfe" +
-      "r.v1.endpoint.KafkaConnectionOptions\022>\n\004" +
-      "auth\030\002 \001(\01320.yandex.cloud.datatransfer.v" +
-      "1.endpoint.KafkaAuth\022\027\n\017security_groups\030" +
-      "\003 \003(\t\022\026\n\ntopic_name\030\004 \001(\tB\002\030\001\022U\n\013transfo" +
-      "rmer\030\005 \001(\0132@.yandex.cloud.datatransfer.v" +
-      "1.endpoint.DataTransformationOptions\022=\n\006" +
-      "parser\030\007 \001(\0132-.yandex.cloud.datatransfer" +
-      ".v1.endpoint.Parser\022\023\n\013topic_names\030\010 \003(\t" +
-      "\"\331\002\n\013KafkaTarget\022Q\n\nconnection\030\001 \001(\0132=.y" +
-      "andex.cloud.datatransfer.v1.endpoint.Kaf" +
-      "kaConnectionOptions\022>\n\004auth\030\002 \001(\01320.yand" +
-      "ex.cloud.datatransfer.v1.endpoint.KafkaA" +
-      "uth\022\027\n\017security_groups\030\003 \003(\t\022W\n\016topic_se" +
-      "ttings\030\007 \001(\0132?.yandex.cloud.datatransfer" +
-      ".v1.endpoint.KafkaTargetTopicSettings\022E\n" +
-      "\nserializer\030\010 \001(\01321.yandex.cloud.datatra" +
-      "nsfer.v1.endpoint.Serializer\"\216\001\n\030KafkaTa" +
-      "rgetTopicSettings\022H\n\005topic\030\001 \001(\01327.yande" +
-      "x.cloud.datatransfer.v1.endpoint.KafkaTa" +
-      "rgetTopicH\000\022\026\n\014topic_prefix\030\002 \001(\tH\000B\020\n\016t" +
-      "opic_settings\"=\n\020KafkaTargetTopic\022\022\n\ntop" +
-      "ic_name\030\001 \001(\t\022\025\n\rsave_tx_order\030\002 \001(\010*i\n\016" +
-      "KafkaMechanism\022\037\n\033KAFKA_MECHANISM_UNSPEC" +
-      "IFIED\020\000\022\032\n\026KAFKA_MECHANISM_SHA256\020\001\022\032\n\026K" +
-      "AFKA_MECHANISM_SHA512\020\002B\247\001\n)yandex.cloud" +
-      ".api.datatransfer.v1.endpointZRgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "datatransfer/v1/endpoint;endpoint\252\002%Yand" +
-      "ex.Cloud.Datatransfer.V1.EndPointb\006proto" +
-      "3"
+      "t.OnPremiseKafkaH\000B\014\n\nconnection\"\200\001\n\016OnP" +
+      "remiseKafka\022\023\n\013broker_urls\030\001 \003(\t\022\021\n\tsubn" +
+      "et_id\030\004 \001(\t\022@\n\010tls_mode\030\005 \001(\0132..yandex.c" +
+      "loud.datatransfer.v1.endpoint.TLSModeJ\004\010" +
+      "\002\020\004\"\243\001\n\tKafkaAuth\022H\n\004sasl\030\001 \001(\01328.yandex" +
+      ".cloud.datatransfer.v1.endpoint.KafkaSas" +
+      "lSecurityH\000\022@\n\007no_auth\030\002 \001(\0132-.yandex.cl" +
+      "oud.datatransfer.v1.endpoint.NoAuthH\000B\n\n" +
+      "\010security\"\262\001\n\021KafkaSaslSecurity\022\014\n\004user\030" +
+      "\001 \001(\t\022H\n\tmechanism\030\003 \001(\01625.yandex.cloud." +
+      "datatransfer.v1.endpoint.KafkaMechanism\022" +
+      "?\n\010password\030\004 \001(\0132-.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.SecretJ\004\010\002\020\003\"\202\003\n\013Kafka" +
+      "Source\022Q\n\nconnection\030\001 \001(\0132=.yandex.clou" +
+      "d.datatransfer.v1.endpoint.KafkaConnecti" +
+      "onOptions\022>\n\004auth\030\002 \001(\01320.yandex.cloud.d" +
+      "atatransfer.v1.endpoint.KafkaAuth\022\027\n\017sec" +
+      "urity_groups\030\003 \003(\t\022\026\n\ntopic_name\030\004 \001(\tB\002" +
+      "\030\001\022U\n\013transformer\030\005 \001(\0132@.yandex.cloud.d" +
+      "atatransfer.v1.endpoint.DataTransformati" +
+      "onOptions\022=\n\006parser\030\007 \001(\0132-.yandex.cloud" +
+      ".datatransfer.v1.endpoint.Parser\022\023\n\013topi" +
+      "c_names\030\010 \003(\tJ\004\010\006\020\007\"\337\002\n\013KafkaTarget\022Q\n\nc" +
+      "onnection\030\001 \001(\0132=.yandex.cloud.datatrans" +
+      "fer.v1.endpoint.KafkaConnectionOptions\022>" +
+      "\n\004auth\030\002 \001(\01320.yandex.cloud.datatransfer" +
+      ".v1.endpoint.KafkaAuth\022\027\n\017security_group" +
+      "s\030\003 \003(\t\022W\n\016topic_settings\030\007 \001(\0132?.yandex" +
+      ".cloud.datatransfer.v1.endpoint.KafkaTar" +
+      "getTopicSettings\022E\n\nserializer\030\010 \001(\01321.y" +
+      "andex.cloud.datatransfer.v1.endpoint.Ser" +
+      "ializerJ\004\010\004\020\007\"\216\001\n\030KafkaTargetTopicSettin" +
+      "gs\022H\n\005topic\030\001 \001(\01327.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.KafkaTargetTopicH\000\022\026\n\014" +
+      "topic_prefix\030\002 \001(\tH\000B\020\n\016topic_settings\"=" +
+      "\n\020KafkaTargetTopic\022\022\n\ntopic_name\030\001 \001(\t\022\025" +
+      "\n\rsave_tx_order\030\002 \001(\010*i\n\016KafkaMechanism\022" +
+      "\037\n\033KAFKA_MECHANISM_UNSPECIFIED\020\000\022\032\n\026KAFK" +
+      "A_MECHANISM_SHA256\020\001\022\032\n\026KAFKA_MECHANISM_" +
+      "SHA512\020\002B\247\001\n)yandex.cloud.api.datatransf" +
+      "er.v1.endpointZRgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/datatransfer/v1" +
+      "/endpoint;endpoint\252\002%Yandex.Cloud.Datatr" +
+      "ansfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10271,7 +10271,7 @@ public final class Kafka {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseKafka_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseKafka_descriptor,
-        new java.lang.String[] { "BrokerUrls", "TlsMode", "SubnetId", });
+        new java.lang.String[] { "BrokerUrls", "SubnetId", "TlsMode", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaAuth_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaAuth_fieldAccessorTable = new
@@ -10283,7 +10283,7 @@ public final class Kafka {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSaslSecurity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSaslSecurity_descriptor,
-        new java.lang.String[] { "User", "Password", "Mechanism", });
+        new java.lang.String[] { "User", "Mechanism", "Password", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSource_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSource_fieldAccessorTable = new

@@ -19,6 +19,36 @@ public final class Mysql {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Database port
+     * </pre>
+     *
+     * <code>int64 port = 2;</code>
+     * @return The port.
+     */
+    long getPort();
+
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * Network interface for endpoint. If none will assume public ipv4
+     * </pre>
+     *
+     * <code>string subnet_id = 4;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
      * <code>repeated string hosts = 5;</code>
      * @return A list containing the hosts.
      */
@@ -42,16 +72,6 @@ public final class Mysql {
      */
     com.google.protobuf.ByteString
         getHostsBytes(int index);
-
-    /**
-     * <pre>
-     * Database port
-     * </pre>
-     *
-     * <code>int64 port = 2;</code>
-     * @return The port.
-     */
-    long getPort();
 
     /**
      * <pre>
@@ -79,26 +99,6 @@ public final class Mysql {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder();
-
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The subnetId.
-     */
-    java.lang.String getSubnetId();
-    /**
-     * <pre>
-     * Network interface for endpoint. If none will assume public ipv4
-     * </pre>
-     *
-     * <code>string subnet_id = 4;</code>
-     * @return The bytes for subnetId.
-     */
-    com.google.protobuf.ByteString
-        getSubnetIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.OnPremiseMysql}
@@ -113,8 +113,8 @@ public final class Mysql {
       super(builder);
     }
     private OnPremiseMysql() {
-      hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       subnetId_ = "";
+      hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -216,41 +216,6 @@ public final class Mysql {
               yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.class, yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.Builder.class);
     }
 
-    public static final int HOSTS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList hosts_;
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @return A list containing the hosts.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getHostsList() {
-      return hosts_;
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @return The count of hosts.
-     */
-    public int getHostsCount() {
-      return hosts_.size();
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @param index The index of the element to return.
-     * @return The hosts at the given index.
-     */
-    public java.lang.String getHosts(int index) {
-      return hosts_.get(index);
-    }
-    /**
-     * <code>repeated string hosts = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the hosts at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getHostsBytes(int index) {
-      return hosts_.getByteString(index);
-    }
-
     public static final int PORT_FIELD_NUMBER = 2;
     private long port_;
     /**
@@ -264,44 +229,6 @@ public final class Mysql {
     @java.lang.Override
     public long getPort() {
       return port_;
-    }
-
-    public static final int TLS_MODE_FIELD_NUMBER = 6;
-    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return Whether the tlsMode field is set.
-     */
-    @java.lang.Override
-    public boolean hasTlsMode() {
-      return tlsMode_ != null;
-    }
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     * @return The tlsMode.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
-      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
-    }
-    /**
-     * <pre>
-     * TLS settings for server connection. Disabled by default.
-     * </pre>
-     *
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
-      return getTlsMode();
     }
 
     public static final int SUBNET_ID_FIELD_NUMBER = 4;
@@ -348,6 +275,79 @@ public final class Mysql {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int HOSTS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList hosts_;
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @return A list containing the hosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostsList() {
+      return hosts_;
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @return The count of hosts.
+     */
+    public int getHostsCount() {
+      return hosts_.size();
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @param index The index of the element to return.
+     * @return The hosts at the given index.
+     */
+    public java.lang.String getHosts(int index) {
+      return hosts_.get(index);
+    }
+    /**
+     * <code>repeated string hosts = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the hosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getHostsBytes(int index) {
+      return hosts_.getByteString(index);
+    }
+
+    public static final int TLS_MODE_FIELD_NUMBER = 6;
+    private yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode tlsMode_;
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return Whether the tlsMode field is set.
+     */
+    @java.lang.Override
+    public boolean hasTlsMode() {
+      return tlsMode_ != null;
+    }
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     * @return The tlsMode.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode getTlsMode() {
+      return tlsMode_ == null ? yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSMode.getDefaultInstance() : tlsMode_;
+    }
+    /**
+     * <pre>
+     * TLS settings for server connection. Disabled by default.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.TLSMode tls_mode = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.TLSModeOrBuilder getTlsModeOrBuilder() {
+      return getTlsMode();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -419,17 +419,17 @@ public final class Mysql {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql other = (yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql) obj;
 
-      if (!getHostsList()
-          .equals(other.getHostsList())) return false;
       if (getPort()
           != other.getPort()) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getHostsList()
+          .equals(other.getHostsList())) return false;
       if (hasTlsMode() != other.hasTlsMode()) return false;
       if (hasTlsMode()) {
         if (!getTlsMode()
             .equals(other.getTlsMode())) return false;
       }
-      if (!getSubnetId()
-          .equals(other.getSubnetId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -441,19 +441,19 @@ public final class Mysql {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPort());
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
       if (getHostsCount() > 0) {
         hash = (37 * hash) + HOSTS_FIELD_NUMBER;
         hash = (53 * hash) + getHostsList().hashCode();
       }
-      hash = (37 * hash) + PORT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getPort());
       if (hasTlsMode()) {
         hash = (37 * hash) + TLS_MODE_FIELD_NUMBER;
         hash = (53 * hash) + getTlsMode().hashCode();
       }
-      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubnetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -587,18 +587,18 @@ public final class Mysql {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         port_ = 0L;
 
+        subnetId_ = "";
+
+        hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (tlsModeBuilder_ == null) {
           tlsMode_ = null;
         } else {
           tlsMode_ = null;
           tlsModeBuilder_ = null;
         }
-        subnetId_ = "";
-
         return this;
       }
 
@@ -626,18 +626,18 @@ public final class Mysql {
       public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql result = new yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql(this);
         int from_bitField0_ = bitField0_;
+        result.port_ = port_;
+        result.subnetId_ = subnetId_;
         if (((bitField0_ & 0x00000001) != 0)) {
           hosts_ = hosts_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.hosts_ = hosts_;
-        result.port_ = port_;
         if (tlsModeBuilder_ == null) {
           result.tlsMode_ = tlsMode_;
         } else {
           result.tlsMode_ = tlsModeBuilder_.build();
         }
-        result.subnetId_ = subnetId_;
         onBuilt();
         return result;
       }
@@ -686,6 +686,13 @@ public final class Mysql {
 
       public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql other) {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Mysql.OnPremiseMysql.getDefaultInstance()) return this;
+        if (other.getPort() != 0L) {
+          setPort(other.getPort());
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
         if (!other.hosts_.isEmpty()) {
           if (hosts_.isEmpty()) {
             hosts_ = other.hosts_;
@@ -696,15 +703,8 @@ public final class Mysql {
           }
           onChanged();
         }
-        if (other.getPort() != 0L) {
-          setPort(other.getPort());
-        }
         if (other.hasTlsMode()) {
           mergeTlsMode(other.getTlsMode());
-        }
-        if (!other.getSubnetId().isEmpty()) {
-          subnetId_ = other.subnetId_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -735,6 +735,145 @@ public final class Mysql {
         return this;
       }
       private int bitField0_;
+
+      private long port_ ;
+      /**
+       * <pre>
+       * Database port
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public long getPort() {
+        return port_;
+      }
+      /**
+       * <pre>
+       * Database port
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(long value) {
+        
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database port
+       * </pre>
+       *
+       * <code>int64 port = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        
+        port_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Network interface for endpoint. If none will assume public ipv4
+       * </pre>
+       *
+       * <code>string subnet_id = 4;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
 
       private com.google.protobuf.LazyStringList hosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureHostsIsMutable() {
@@ -842,49 +981,6 @@ public final class Mysql {
   checkByteStringIsUtf8(value);
         ensureHostsIsMutable();
         hosts_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private long port_ ;
-      /**
-       * <pre>
-       * Database port
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @return The port.
-       */
-      @java.lang.Override
-      public long getPort() {
-        return port_;
-      }
-      /**
-       * <pre>
-       * Database port
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @param value The port to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPort(long value) {
-        
-        port_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database port
-       * </pre>
-       *
-       * <code>int64 port = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPort() {
-        
-        port_ = 0L;
         onChanged();
         return this;
       }
@@ -1042,102 +1138,6 @@ public final class Mysql {
           tlsMode_ = null;
         }
         return tlsModeBuilder_;
-      }
-
-      private java.lang.Object subnetId_ = "";
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The subnetId.
-       */
-      public java.lang.String getSubnetId() {
-        java.lang.Object ref = subnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return The bytes for subnetId.
-       */
-      public com.google.protobuf.ByteString
-          getSubnetIdBytes() {
-        java.lang.Object ref = subnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubnetId() {
-        
-        subnetId_ = getDefaultInstance().getSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Network interface for endpoint. If none will assume public ipv4
-       * </pre>
-       *
-       * <code>string subnet_id = 4;</code>
-       * @param value The bytes for subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subnetId_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3256,47 +3256,6 @@ public final class Mysql {
 
     /**
      * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
-
-    /**
-     * <pre>
      * Database name
      * 
      * You can leave it empty, then it will be possible to transfer tables from several
@@ -3320,32 +3279,6 @@ public final class Mysql {
      */
     com.google.protobuf.ByteString
         getDatabaseBytes();
-
-    /**
-     * <pre>
-     * Database for service tables
-     * 
-     * Default: data source database. Here created technical tables (__tm_keeper,
-     * __tm_gtid_keeper).
-     * </pre>
-     *
-     * <code>string service_database = 15;</code>
-     * @return The serviceDatabase.
-     */
-    java.lang.String getServiceDatabase();
-    /**
-     * <pre>
-     * Database for service tables
-     * 
-     * Default: data source database. Here created technical tables (__tm_keeper,
-     * __tm_gtid_keeper).
-     * </pre>
-     *
-     * <code>string service_database = 15;</code>
-     * @return The bytes for serviceDatabase.
-     */
-    com.google.protobuf.ByteString
-        getServiceDatabaseBytes();
 
     /**
      * <pre>
@@ -3393,56 +3326,6 @@ public final class Mysql {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Secret password = 4;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
-
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @return A list containing the includeTablesRegex.
-     */
-    java.util.List<java.lang.String>
-        getIncludeTablesRegexList();
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @return The count of includeTablesRegex.
-     */
-    int getIncludeTablesRegexCount();
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @param index The index of the element to return.
-     * @return The includeTablesRegex at the given index.
-     */
-    java.lang.String getIncludeTablesRegex(int index);
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the includeTablesRegex at the given index.
-     */
-    com.google.protobuf.ByteString
-        getIncludeTablesRegexBytes(int index);
-
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @return A list containing the excludeTablesRegex.
-     */
-    java.util.List<java.lang.String>
-        getExcludeTablesRegexList();
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @return The count of excludeTablesRegex.
-     */
-    int getExcludeTablesRegexCount();
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @param index The index of the element to return.
-     * @return The excludeTablesRegex at the given index.
-     */
-    java.lang.String getExcludeTablesRegex(int index);
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the excludeTablesRegex at the given index.
-     */
-    com.google.protobuf.ByteString
-        getExcludeTablesRegexBytes(int index);
 
     /**
      * <pre>
@@ -3502,6 +3385,123 @@ public final class Mysql {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlObjectTransferSettings object_transfer_settings = 11;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettingsOrBuilder getObjectTransferSettingsOrBuilder();
+
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @return A list containing the includeTablesRegex.
+     */
+    java.util.List<java.lang.String>
+        getIncludeTablesRegexList();
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @return The count of includeTablesRegex.
+     */
+    int getIncludeTablesRegexCount();
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the element to return.
+     * @return The includeTablesRegex at the given index.
+     */
+    java.lang.String getIncludeTablesRegex(int index);
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includeTablesRegex at the given index.
+     */
+    com.google.protobuf.ByteString
+        getIncludeTablesRegexBytes(int index);
+
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return A list containing the excludeTablesRegex.
+     */
+    java.util.List<java.lang.String>
+        getExcludeTablesRegexList();
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return The count of excludeTablesRegex.
+     */
+    int getExcludeTablesRegexCount();
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the element to return.
+     * @return The excludeTablesRegex at the given index.
+     */
+    java.lang.String getExcludeTablesRegex(int index);
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludeTablesRegex at the given index.
+     */
+    com.google.protobuf.ByteString
+        getExcludeTablesRegexBytes(int index);
+
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
+     */
+    java.lang.String getServiceDatabase();
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
+     */
+    com.google.protobuf.ByteString
+        getServiceDatabaseBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlSource}
@@ -3516,13 +3516,13 @@ public final class Mysql {
       super(builder);
     }
     private MysqlSource() {
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
-      serviceDatabase_ = "";
       user_ = "";
+      timezone_ = "";
       includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      timezone_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceDatabase_ = "";
     }
 
     @java.lang.Override
@@ -3615,27 +3615,27 @@ public final class Mysql {
             }
             case 98: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               includeTablesRegex_.add(s);
               break;
             }
             case 106: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               excludeTablesRegex_.add(s);
               break;
             }
             case 114: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroups_.add(s);
               break;
@@ -3661,13 +3661,13 @@ public final class Mysql {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -3725,57 +3725,6 @@ public final class Mysql {
       return getConnection();
     }
 
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 14;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
-    }
-
     public static final int DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object database_;
     /**
@@ -3822,58 +3771,6 @@ public final class Mysql {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         database_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SERVICE_DATABASE_FIELD_NUMBER = 15;
-    private volatile java.lang.Object serviceDatabase_;
-    /**
-     * <pre>
-     * Database for service tables
-     * 
-     * Default: data source database. Here created technical tables (__tm_keeper,
-     * __tm_gtid_keeper).
-     * </pre>
-     *
-     * <code>string service_database = 15;</code>
-     * @return The serviceDatabase.
-     */
-    @java.lang.Override
-    public java.lang.String getServiceDatabase() {
-      java.lang.Object ref = serviceDatabase_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serviceDatabase_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Database for service tables
-     * 
-     * Default: data source database. Here created technical tables (__tm_keeper,
-     * __tm_gtid_keeper).
-     * </pre>
-     *
-     * <code>string service_database = 15;</code>
-     * @return The bytes for serviceDatabase.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceDatabaseBytes() {
-      java.lang.Object ref = serviceDatabase_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serviceDatabase_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3962,76 +3859,6 @@ public final class Mysql {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
       return getPassword();
-    }
-
-    public static final int INCLUDE_TABLES_REGEX_FIELD_NUMBER = 12;
-    private com.google.protobuf.LazyStringList includeTablesRegex_;
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @return A list containing the includeTablesRegex.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getIncludeTablesRegexList() {
-      return includeTablesRegex_;
-    }
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @return The count of includeTablesRegex.
-     */
-    public int getIncludeTablesRegexCount() {
-      return includeTablesRegex_.size();
-    }
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @param index The index of the element to return.
-     * @return The includeTablesRegex at the given index.
-     */
-    public java.lang.String getIncludeTablesRegex(int index) {
-      return includeTablesRegex_.get(index);
-    }
-    /**
-     * <code>repeated string include_tables_regex = 12;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the includeTablesRegex at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getIncludeTablesRegexBytes(int index) {
-      return includeTablesRegex_.getByteString(index);
-    }
-
-    public static final int EXCLUDE_TABLES_REGEX_FIELD_NUMBER = 13;
-    private com.google.protobuf.LazyStringList excludeTablesRegex_;
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @return A list containing the excludeTablesRegex.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getExcludeTablesRegexList() {
-      return excludeTablesRegex_;
-    }
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @return The count of excludeTablesRegex.
-     */
-    public int getExcludeTablesRegexCount() {
-      return excludeTablesRegex_.size();
-    }
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @param index The index of the element to return.
-     * @return The excludeTablesRegex at the given index.
-     */
-    public java.lang.String getExcludeTablesRegex(int index) {
-      return excludeTablesRegex_.get(index);
-    }
-    /**
-     * <code>repeated string exclude_tables_regex = 13;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the excludeTablesRegex at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getExcludeTablesRegexBytes(int index) {
-      return excludeTablesRegex_.getByteString(index);
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 8;
@@ -4128,6 +3955,179 @@ public final class Mysql {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlObjectTransferSettingsOrBuilder getObjectTransferSettingsOrBuilder() {
       return getObjectTransferSettings();
+    }
+
+    public static final int INCLUDE_TABLES_REGEX_FIELD_NUMBER = 12;
+    private com.google.protobuf.LazyStringList includeTablesRegex_;
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @return A list containing the includeTablesRegex.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIncludeTablesRegexList() {
+      return includeTablesRegex_;
+    }
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @return The count of includeTablesRegex.
+     */
+    public int getIncludeTablesRegexCount() {
+      return includeTablesRegex_.size();
+    }
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the element to return.
+     * @return The includeTablesRegex at the given index.
+     */
+    public java.lang.String getIncludeTablesRegex(int index) {
+      return includeTablesRegex_.get(index);
+    }
+    /**
+     * <code>repeated string include_tables_regex = 12;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the includeTablesRegex at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getIncludeTablesRegexBytes(int index) {
+      return includeTablesRegex_.getByteString(index);
+    }
+
+    public static final int EXCLUDE_TABLES_REGEX_FIELD_NUMBER = 13;
+    private com.google.protobuf.LazyStringList excludeTablesRegex_;
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return A list containing the excludeTablesRegex.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExcludeTablesRegexList() {
+      return excludeTablesRegex_;
+    }
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @return The count of excludeTablesRegex.
+     */
+    public int getExcludeTablesRegexCount() {
+      return excludeTablesRegex_.size();
+    }
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the element to return.
+     * @return The excludeTablesRegex at the given index.
+     */
+    public java.lang.String getExcludeTablesRegex(int index) {
+      return excludeTablesRegex_.get(index);
+    }
+    /**
+     * <code>repeated string exclude_tables_regex = 13;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the excludeTablesRegex at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getExcludeTablesRegexBytes(int index) {
+      return excludeTablesRegex_.getByteString(index);
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 14;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
+    public static final int SERVICE_DATABASE_FIELD_NUMBER = 15;
+    private volatile java.lang.Object serviceDatabase_;
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     * @return The serviceDatabase.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceDatabase() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database for service tables
+     * 
+     * Default: data source database. Here created technical tables (__tm_keeper,
+     * __tm_gtid_keeper).
+     * </pre>
+     *
+     * <code>string service_database = 15;</code>
+     * @return The bytes for serviceDatabase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceDatabaseBytes() {
+      java.lang.Object ref = serviceDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4251,12 +4251,8 @@ public final class Mysql {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getDatabase()
           .equals(other.getDatabase())) return false;
-      if (!getServiceDatabase()
-          .equals(other.getServiceDatabase())) return false;
       if (!getUser()
           .equals(other.getUser())) return false;
       if (hasPassword() != other.hasPassword()) return false;
@@ -4264,10 +4260,6 @@ public final class Mysql {
         if (!getPassword()
             .equals(other.getPassword())) return false;
       }
-      if (!getIncludeTablesRegexList()
-          .equals(other.getIncludeTablesRegexList())) return false;
-      if (!getExcludeTablesRegexList()
-          .equals(other.getExcludeTablesRegexList())) return false;
       if (!getTimezone()
           .equals(other.getTimezone())) return false;
       if (hasObjectTransferSettings() != other.hasObjectTransferSettings()) return false;
@@ -4275,6 +4267,14 @@ public final class Mysql {
         if (!getObjectTransferSettings()
             .equals(other.getObjectTransferSettings())) return false;
       }
+      if (!getIncludeTablesRegexList()
+          .equals(other.getIncludeTablesRegexList())) return false;
+      if (!getExcludeTablesRegexList()
+          .equals(other.getExcludeTablesRegexList())) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
+      if (!getServiceDatabase()
+          .equals(other.getServiceDatabase())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4290,19 +4290,19 @@ public final class Mysql {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
       }
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
-      }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
-      hash = (37 * hash) + SERVICE_DATABASE_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceDatabase().hashCode();
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUser().hashCode();
       if (hasPassword()) {
         hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getPassword().hashCode();
+      }
+      hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
+      hash = (53 * hash) + getTimezone().hashCode();
+      if (hasObjectTransferSettings()) {
+        hash = (37 * hash) + OBJECT_TRANSFER_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getObjectTransferSettings().hashCode();
       }
       if (getIncludeTablesRegexCount() > 0) {
         hash = (37 * hash) + INCLUDE_TABLES_REGEX_FIELD_NUMBER;
@@ -4312,12 +4312,12 @@ public final class Mysql {
         hash = (37 * hash) + EXCLUDE_TABLES_REGEX_FIELD_NUMBER;
         hash = (53 * hash) + getExcludeTablesRegexList().hashCode();
       }
-      hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
-      hash = (53 * hash) + getTimezone().hashCode();
-      if (hasObjectTransferSettings()) {
-        hash = (37 * hash) + OBJECT_TRANSFER_SETTINGS_FIELD_NUMBER;
-        hash = (53 * hash) + getObjectTransferSettings().hashCode();
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceDatabase().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4457,11 +4457,7 @@ public final class Mysql {
           connection_ = null;
           connectionBuilder_ = null;
         }
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
-
-        serviceDatabase_ = "";
 
         user_ = "";
 
@@ -4471,10 +4467,6 @@ public final class Mysql {
           password_ = null;
           passwordBuilder_ = null;
         }
-        includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
         timezone_ = "";
 
         if (objectTransferSettingsBuilder_ == null) {
@@ -4483,6 +4475,14 @@ public final class Mysql {
           objectTransferSettings_ = null;
           objectTransferSettingsBuilder_ = null;
         }
+        includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serviceDatabase_ = "";
+
         return this;
       }
 
@@ -4515,35 +4515,35 @@ public final class Mysql {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
-        result.serviceDatabase_ = serviceDatabase_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
           result.password_ = password_;
         } else {
           result.password_ = passwordBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.includeTablesRegex_ = includeTablesRegex_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.excludeTablesRegex_ = excludeTablesRegex_;
         result.timezone_ = timezone_;
         if (objectTransferSettingsBuilder_ == null) {
           result.objectTransferSettings_ = objectTransferSettings_;
         } else {
           result.objectTransferSettings_ = objectTransferSettingsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          includeTablesRegex_ = includeTablesRegex_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.includeTablesRegex_ = includeTablesRegex_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          excludeTablesRegex_ = excludeTablesRegex_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.excludeTablesRegex_ = excludeTablesRegex_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.securityGroups_ = securityGroups_;
+        result.serviceDatabase_ = serviceDatabase_;
         onBuilt();
         return result;
       }
@@ -4595,22 +4595,8 @@ public final class Mysql {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
-          onChanged();
-        }
-        if (!other.getServiceDatabase().isEmpty()) {
-          serviceDatabase_ = other.serviceDatabase_;
           onChanged();
         }
         if (!other.getUser().isEmpty()) {
@@ -4620,10 +4606,17 @@ public final class Mysql {
         if (other.hasPassword()) {
           mergePassword(other.getPassword());
         }
+        if (!other.getTimezone().isEmpty()) {
+          timezone_ = other.timezone_;
+          onChanged();
+        }
+        if (other.hasObjectTransferSettings()) {
+          mergeObjectTransferSettings(other.getObjectTransferSettings());
+        }
         if (!other.includeTablesRegex_.isEmpty()) {
           if (includeTablesRegex_.isEmpty()) {
             includeTablesRegex_ = other.includeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIncludeTablesRegexIsMutable();
             includeTablesRegex_.addAll(other.includeTablesRegex_);
@@ -4633,19 +4626,26 @@ public final class Mysql {
         if (!other.excludeTablesRegex_.isEmpty()) {
           if (excludeTablesRegex_.isEmpty()) {
             excludeTablesRegex_ = other.excludeTablesRegex_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureExcludeTablesRegexIsMutable();
             excludeTablesRegex_.addAll(other.excludeTablesRegex_);
           }
           onChanged();
         }
-        if (!other.getTimezone().isEmpty()) {
-          timezone_ = other.timezone_;
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
           onChanged();
         }
-        if (other.hasObjectTransferSettings()) {
-          mergeObjectTransferSettings(other.getObjectTransferSettings());
+        if (!other.getServiceDatabase().isEmpty()) {
+          serviceDatabase_ = other.serviceDatabase_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4832,152 +4832,6 @@ public final class Mysql {
         return connectionBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 14;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object database_ = "";
       /**
        * <pre>
@@ -5085,117 +4939,6 @@ public final class Mysql {
   checkByteStringIsUtf8(value);
         
         database_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serviceDatabase_ = "";
-      /**
-       * <pre>
-       * Database for service tables
-       * 
-       * Default: data source database. Here created technical tables (__tm_keeper,
-       * __tm_gtid_keeper).
-       * </pre>
-       *
-       * <code>string service_database = 15;</code>
-       * @return The serviceDatabase.
-       */
-      public java.lang.String getServiceDatabase() {
-        java.lang.Object ref = serviceDatabase_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceDatabase_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database for service tables
-       * 
-       * Default: data source database. Here created technical tables (__tm_keeper,
-       * __tm_gtid_keeper).
-       * </pre>
-       *
-       * <code>string service_database = 15;</code>
-       * @return The bytes for serviceDatabase.
-       */
-      public com.google.protobuf.ByteString
-          getServiceDatabaseBytes() {
-        java.lang.Object ref = serviceDatabase_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceDatabase_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database for service tables
-       * 
-       * Default: data source database. Here created technical tables (__tm_keeper,
-       * __tm_gtid_keeper).
-       * </pre>
-       *
-       * <code>string service_database = 15;</code>
-       * @param value The serviceDatabase to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceDatabase(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceDatabase_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database for service tables
-       * 
-       * Default: data source database. Here created technical tables (__tm_keeper,
-       * __tm_gtid_keeper).
-       * </pre>
-       *
-       * <code>string service_database = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServiceDatabase() {
-        
-        serviceDatabase_ = getDefaultInstance().getServiceDatabase();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database for service tables
-       * 
-       * Default: data source database. Here created technical tables (__tm_keeper,
-       * __tm_gtid_keeper).
-       * </pre>
-       *
-       * <code>string service_database = 15;</code>
-       * @param value The bytes for serviceDatabase to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceDatabaseBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceDatabase_ = value;
         onChanged();
         return this;
       }
@@ -5449,226 +5192,6 @@ public final class Mysql {
           password_ = null;
         }
         return passwordBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureIncludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(includeTablesRegex_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @return A list containing the includeTablesRegex.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getIncludeTablesRegexList() {
-        return includeTablesRegex_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @return The count of includeTablesRegex.
-       */
-      public int getIncludeTablesRegexCount() {
-        return includeTablesRegex_.size();
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param index The index of the element to return.
-       * @return The includeTablesRegex at the given index.
-       */
-      public java.lang.String getIncludeTablesRegex(int index) {
-        return includeTablesRegex_.get(index);
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the includeTablesRegex at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getIncludeTablesRegexBytes(int index) {
-        return includeTablesRegex_.getByteString(index);
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param index The index to set the value at.
-       * @param value The includeTablesRegex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIncludeTablesRegex(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIncludeTablesRegexIsMutable();
-        includeTablesRegex_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param value The includeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addIncludeTablesRegex(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIncludeTablesRegexIsMutable();
-        includeTablesRegex_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param values The includeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllIncludeTablesRegex(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureIncludeTablesRegexIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, includeTablesRegex_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIncludeTablesRegex() {
-        includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string include_tables_regex = 12;</code>
-       * @param value The bytes of the includeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addIncludeTablesRegexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureIncludeTablesRegexIsMutable();
-        includeTablesRegex_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureExcludeTablesRegexIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(excludeTablesRegex_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @return A list containing the excludeTablesRegex.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getExcludeTablesRegexList() {
-        return excludeTablesRegex_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @return The count of excludeTablesRegex.
-       */
-      public int getExcludeTablesRegexCount() {
-        return excludeTablesRegex_.size();
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param index The index of the element to return.
-       * @return The excludeTablesRegex at the given index.
-       */
-      public java.lang.String getExcludeTablesRegex(int index) {
-        return excludeTablesRegex_.get(index);
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the excludeTablesRegex at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getExcludeTablesRegexBytes(int index) {
-        return excludeTablesRegex_.getByteString(index);
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param index The index to set the value at.
-       * @param value The excludeTablesRegex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExcludeTablesRegex(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExcludeTablesRegexIsMutable();
-        excludeTablesRegex_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param value The excludeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addExcludeTablesRegex(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExcludeTablesRegexIsMutable();
-        excludeTablesRegex_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param values The excludeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllExcludeTablesRegex(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureExcludeTablesRegexIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, excludeTablesRegex_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExcludeTablesRegex() {
-        excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string exclude_tables_regex = 13;</code>
-       * @param value The bytes of the excludeTablesRegex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addExcludeTablesRegexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureExcludeTablesRegexIsMutable();
-        excludeTablesRegex_.add(value);
-        onChanged();
-        return this;
       }
 
       private java.lang.Object timezone_ = "";
@@ -5954,6 +5477,483 @@ public final class Mysql {
         }
         return objectTransferSettingsBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIncludeTablesRegexIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          includeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(includeTablesRegex_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @return A list containing the includeTablesRegex.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIncludeTablesRegexList() {
+        return includeTablesRegex_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @return The count of includeTablesRegex.
+       */
+      public int getIncludeTablesRegexCount() {
+        return includeTablesRegex_.size();
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index of the element to return.
+       * @return The includeTablesRegex at the given index.
+       */
+      public java.lang.String getIncludeTablesRegex(int index) {
+        return includeTablesRegex_.get(index);
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the includeTablesRegex at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getIncludeTablesRegexBytes(int index) {
+        return includeTablesRegex_.getByteString(index);
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param index The index to set the value at.
+       * @param value The includeTablesRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeTablesRegex(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIncludeTablesRegexIsMutable();
+        includeTablesRegex_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param value The includeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIncludeTablesRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIncludeTablesRegexIsMutable();
+        includeTablesRegex_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param values The includeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIncludeTablesRegex(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIncludeTablesRegexIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, includeTablesRegex_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeTablesRegex() {
+        includeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string include_tables_regex = 12;</code>
+       * @param value The bytes of the includeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIncludeTablesRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureIncludeTablesRegexIsMutable();
+        includeTablesRegex_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExcludeTablesRegexIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          excludeTablesRegex_ = new com.google.protobuf.LazyStringArrayList(excludeTablesRegex_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return A list containing the excludeTablesRegex.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExcludeTablesRegexList() {
+        return excludeTablesRegex_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return The count of excludeTablesRegex.
+       */
+      public int getExcludeTablesRegexCount() {
+        return excludeTablesRegex_.size();
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index of the element to return.
+       * @return The excludeTablesRegex at the given index.
+       */
+      public java.lang.String getExcludeTablesRegex(int index) {
+        return excludeTablesRegex_.get(index);
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the excludeTablesRegex at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getExcludeTablesRegexBytes(int index) {
+        return excludeTablesRegex_.getByteString(index);
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param index The index to set the value at.
+       * @param value The excludeTablesRegex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludeTablesRegex(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludeTablesRegexIsMutable();
+        excludeTablesRegex_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param value The excludeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludeTablesRegex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExcludeTablesRegexIsMutable();
+        excludeTablesRegex_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param values The excludeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExcludeTablesRegex(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExcludeTablesRegexIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, excludeTablesRegex_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludeTablesRegex() {
+        excludeTablesRegex_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string exclude_tables_regex = 13;</code>
+       * @param value The bytes of the excludeTablesRegex to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExcludeTablesRegexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExcludeTablesRegexIsMutable();
+        excludeTablesRegex_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 14;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceDatabase_ = "";
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       * @return The serviceDatabase.
+       */
+      public java.lang.String getServiceDatabase() {
+        java.lang.Object ref = serviceDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       * @return The bytes for serviceDatabase.
+       */
+      public com.google.protobuf.ByteString
+          getServiceDatabaseBytes() {
+        java.lang.Object ref = serviceDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       * @param value The serviceDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceDatabase() {
+        
+        serviceDatabase_ = getDefaultInstance().getServiceDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database for service tables
+       * 
+       * Default: data source database. Here created technical tables (__tm_keeper,
+       * __tm_gtid_keeper).
+       * </pre>
+       *
+       * <code>string service_database = 15;</code>
+       * @param value The bytes for serviceDatabase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceDatabase_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6037,47 +6037,6 @@ public final class Mysql {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.MysqlConnection connection = 1;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder getConnectionOrBuilder();
-
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
 
     /**
      * <pre>
@@ -6262,6 +6221,47 @@ public final class Mysql {
      */
     com.google.protobuf.ByteString
         getServiceDatabaseBytes();
+
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.MysqlTarget}
@@ -6276,13 +6276,13 @@ public final class Mysql {
       super(builder);
     }
     private MysqlTarget() {
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       database_ = "";
       user_ = "";
       sqlMode_ = "";
       timezone_ = "";
       cleanupPolicy_ = 0;
       serviceDatabase_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -6463,57 +6463,6 @@ public final class Mysql {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Mysql.MysqlConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
-    }
-
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 16;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <pre>
-     * Security groups
-     * </pre>
-     *
-     * <code>repeated string security_groups = 16;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
     }
 
     public static final int DATABASE_FIELD_NUMBER = 2;
@@ -6854,6 +6803,57 @@ public final class Mysql {
       }
     }
 
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 16;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * Security groups
+     * </pre>
+     *
+     * <code>repeated string security_groups = 16;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6966,8 +6966,6 @@ public final class Mysql {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getDatabase()
           .equals(other.getDatabase())) return false;
       if (!getUser()
@@ -6986,6 +6984,8 @@ public final class Mysql {
       if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (!getServiceDatabase()
           .equals(other.getServiceDatabase())) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7000,10 +7000,6 @@ public final class Mysql {
       if (hasConnection()) {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
-      }
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
@@ -7024,6 +7020,10 @@ public final class Mysql {
       hash = (53 * hash) + cleanupPolicy_;
       hash = (37 * hash) + SERVICE_DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getServiceDatabase().hashCode();
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7163,8 +7163,6 @@ public final class Mysql {
           connection_ = null;
           connectionBuilder_ = null;
         }
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         database_ = "";
 
         user_ = "";
@@ -7185,6 +7183,8 @@ public final class Mysql {
 
         serviceDatabase_ = "";
 
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -7217,11 +7217,6 @@ public final class Mysql {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
         result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -7234,6 +7229,11 @@ public final class Mysql {
         result.timezone_ = timezone_;
         result.cleanupPolicy_ = cleanupPolicy_;
         result.serviceDatabase_ = serviceDatabase_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -7285,16 +7285,6 @@ public final class Mysql {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (!other.getDatabase().isEmpty()) {
           database_ = other.database_;
           onChanged();
@@ -7322,6 +7312,16 @@ public final class Mysql {
         }
         if (!other.getServiceDatabase().isEmpty()) {
           serviceDatabase_ = other.serviceDatabase_;
+          onChanged();
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7507,152 +7507,6 @@ public final class Mysql {
           connection_ = null;
         }
         return connectionBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Security groups
-       * </pre>
-       *
-       * <code>repeated string security_groups = 16;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
       }
 
       private java.lang.Object database_ = "";
@@ -8478,6 +8332,152 @@ public final class Mysql {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security groups
+       * </pre>
+       *
+       * <code>repeated string security_groups = 16;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8568,47 +8568,48 @@ public final class Mysql {
       "\n1yandex/cloud/datatransfer/v1/endpoint/" +
       "mysql.proto\022%yandex.cloud.datatransfer.v" +
       "1.endpoint\0322yandex/cloud/datatransfer/v1" +
-      "/endpoint/common.proto\"\202\001\n\016OnPremiseMysq" +
-      "l\022\r\n\005hosts\030\005 \003(\t\022\014\n\004port\030\002 \001(\003\022@\n\010tls_mo" +
-      "de\030\006 \001(\0132..yandex.cloud.datatransfer.v1." +
-      "endpoint.TLSMode\022\021\n\tsubnet_id\030\004 \001(\t\"\206\001\n\017" +
-      "MysqlConnection\022\030\n\016mdb_cluster_id\030\001 \001(\tH" +
-      "\000\022K\n\non_premise\030\002 \001(\01325.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.OnPremiseMysqlH\000B\014" +
-      "\n\nconnection\"\315\002\n\033MysqlObjectTransferSett" +
-      "ings\022H\n\004view\030\001 \001(\0162:.yandex.cloud.datatr" +
-      "ansfer.v1.endpoint.ObjectTransferStage\022K" +
-      "\n\007routine\030\002 \001(\0162:.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.ObjectTransferStage\022K\n\007t" +
-      "rigger\030\003 \001(\0162:.yandex.cloud.datatransfer" +
-      ".v1.endpoint.ObjectTransferStage\022J\n\006tabl" +
-      "es\030\004 \001(\0162:.yandex.cloud.datatransfer.v1." +
-      "endpoint.ObjectTransferStage\"\241\003\n\013MysqlSo" +
-      "urce\022J\n\nconnection\030\001 \001(\01326.yandex.cloud." +
-      "datatransfer.v1.endpoint.MysqlConnection" +
-      "\022\027\n\017security_groups\030\016 \003(\t\022\020\n\010database\030\002 " +
-      "\001(\t\022\030\n\020service_database\030\017 \001(\t\022\014\n\004user\030\003 " +
-      "\001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.Secret\022\034\n\024include_" +
-      "tables_regex\030\014 \003(\t\022\034\n\024exclude_tables_reg" +
-      "ex\030\r \003(\t\022\020\n\010timezone\030\010 \001(\t\022d\n\030object_tra" +
-      "nsfer_settings\030\013 \001(\0132B.yandex.cloud.data" +
-      "transfer.v1.endpoint.MysqlObjectTransfer" +
-      "Settings\"\377\002\n\013MysqlTarget\022J\n\nconnection\030\001" +
-      " \001(\01326.yandex.cloud.datatransfer.v1.endp" +
-      "oint.MysqlConnection\022\027\n\017security_groups\030" +
-      "\020 \003(\t\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n" +
-      "\010password\030\004 \001(\0132-.yandex.cloud.datatrans" +
-      "fer.v1.endpoint.Secret\022\020\n\010sql_mode\030\005 \001(\t" +
-      "\022\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010time" +
-      "zone\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624.yan" +
-      "dex.cloud.datatransfer.v1.endpoint.Clean" +
-      "upPolicy\022\030\n\020service_database\030\017 \001(\tB\247\001\n)y" +
-      "andex.cloud.api.datatransfer.v1.endpoint" +
-      "ZRgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/datatransfer/v1/endpoint;endp" +
-      "oint\252\002%Yandex.Cloud.Datatransfer.V1.EndP" +
-      "ointb\006proto3"
+      "/endpoint/common.proto\"\216\001\n\016OnPremiseMysq" +
+      "l\022\014\n\004port\030\002 \001(\003\022\021\n\tsubnet_id\030\004 \001(\t\022\r\n\005ho" +
+      "sts\030\005 \003(\t\022@\n\010tls_mode\030\006 \001(\0132..yandex.clo" +
+      "ud.datatransfer.v1.endpoint.TLSModeJ\004\010\001\020" +
+      "\002J\004\010\003\020\004\"\206\001\n\017MysqlConnection\022\030\n\016mdb_clust" +
+      "er_id\030\001 \001(\tH\000\022K\n\non_premise\030\002 \001(\01325.yand" +
+      "ex.cloud.datatransfer.v1.endpoint.OnPrem" +
+      "iseMysqlH\000B\014\n\nconnection\"\315\002\n\033MysqlObject" +
+      "TransferSettings\022H\n\004view\030\001 \001(\0162:.yandex." +
+      "cloud.datatransfer.v1.endpoint.ObjectTra" +
+      "nsferStage\022K\n\007routine\030\002 \001(\0162:.yandex.clo" +
+      "ud.datatransfer.v1.endpoint.ObjectTransf" +
+      "erStage\022K\n\007trigger\030\003 \001(\0162:.yandex.cloud." +
+      "datatransfer.v1.endpoint.ObjectTransferS" +
+      "tage\022J\n\006tables\030\004 \001(\0162:.yandex.cloud.data" +
+      "transfer.v1.endpoint.ObjectTransferStage" +
+      "\"\255\003\n\013MysqlSource\022J\n\nconnection\030\001 \001(\01326.y" +
+      "andex.cloud.datatransfer.v1.endpoint.Mys" +
+      "qlConnection\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003" +
+      " \001(\t\022?\n\010password\030\004 \001(\0132-.yandex.cloud.da" +
+      "tatransfer.v1.endpoint.Secret\022\020\n\010timezon" +
+      "e\030\010 \001(\t\022d\n\030object_transfer_settings\030\013 \001(" +
+      "\0132B.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.MysqlObjectTransferSettings\022\034\n\024include" +
+      "_tables_regex\030\014 \003(\t\022\034\n\024exclude_tables_re" +
+      "gex\030\r \003(\t\022\027\n\017security_groups\030\016 \003(\t\022\030\n\020se" +
+      "rvice_database\030\017 \001(\tJ\004\010\005\020\010J\004\010\t\020\013\"\205\003\n\013Mys" +
+      "qlTarget\022J\n\nconnection\030\001 \001(\01326.yandex.cl" +
+      "oud.datatransfer.v1.endpoint.MysqlConnec" +
+      "tion\022\020\n\010database\030\002 \001(\t\022\014\n\004user\030\003 \001(\t\022?\n\010" +
+      "password\030\004 \001(\0132-.yandex.cloud.datatransf" +
+      "er.v1.endpoint.Secret\022\020\n\010sql_mode\030\005 \001(\t\022" +
+      "\036\n\026skip_constraint_checks\030\006 \001(\010\022\020\n\010timez" +
+      "one\030\007 \001(\t\022L\n\016cleanup_policy\030\010 \001(\01624.yand" +
+      "ex.cloud.datatransfer.v1.endpoint.Cleanu" +
+      "pPolicy\022\030\n\020service_database\030\017 \001(\t\022\027\n\017sec" +
+      "urity_groups\030\020 \003(\tJ\004\010\t\020\017B\247\001\n)yandex.clou" +
+      "d.api.datatransfer.v1.endpointZRgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/datatransfer/v1/endpoint;endpoint\252\002%Yan" +
+      "dex.Cloud.Datatransfer.V1.EndPointb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8620,7 +8621,7 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMysql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_OnPremiseMysql_descriptor,
-        new java.lang.String[] { "Hosts", "Port", "TlsMode", "SubnetId", });
+        new java.lang.String[] { "Port", "SubnetId", "Hosts", "TlsMode", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlConnection_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlConnection_fieldAccessorTable = new
@@ -8638,13 +8639,13 @@ public final class Mysql {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlSource_descriptor,
-        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "ServiceDatabase", "User", "Password", "IncludeTablesRegex", "ExcludeTablesRegex", "Timezone", "ObjectTransferSettings", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "Timezone", "ObjectTransferSettings", "IncludeTablesRegex", "ExcludeTablesRegex", "SecurityGroups", "ServiceDatabase", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_MysqlTarget_descriptor,
-        new java.lang.String[] { "Connection", "SecurityGroups", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", "CleanupPolicy", "ServiceDatabase", });
+        new java.lang.String[] { "Connection", "Database", "User", "Password", "SqlMode", "SkipConstraintChecks", "Timezone", "CleanupPolicy", "ServiceDatabase", "SecurityGroups", });
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
 

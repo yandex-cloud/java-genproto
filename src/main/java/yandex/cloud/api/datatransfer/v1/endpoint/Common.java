@@ -324,10 +324,6 @@ public final class Common {
      */
     COLUMN_TYPE_UNSPECIFIED(0),
     /**
-     * <code>INT64 = 14;</code>
-     */
-    INT64(14),
-    /**
      * <code>INT32 = 1;</code>
      */
     INT32(1),
@@ -379,6 +375,10 @@ public final class Common {
      * <code>DATETIME = 13;</code>
      */
     DATETIME(13),
+    /**
+     * <code>INT64 = 14;</code>
+     */
+    INT64(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -386,10 +386,6 @@ public final class Common {
      * <code>COLUMN_TYPE_UNSPECIFIED = 0;</code>
      */
     public static final int COLUMN_TYPE_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>INT64 = 14;</code>
-     */
-    public static final int INT64_VALUE = 14;
     /**
      * <code>INT32 = 1;</code>
      */
@@ -442,6 +438,10 @@ public final class Common {
      * <code>DATETIME = 13;</code>
      */
     public static final int DATETIME_VALUE = 13;
+    /**
+     * <code>INT64 = 14;</code>
+     */
+    public static final int INT64_VALUE = 14;
 
 
     public final int getNumber() {
@@ -469,7 +469,6 @@ public final class Common {
     public static ColumnType forNumber(int value) {
       switch (value) {
         case 0: return COLUMN_TYPE_UNSPECIFIED;
-        case 14: return INT64;
         case 1: return INT32;
         case 2: return INT16;
         case 3: return INT8;
@@ -483,6 +482,7 @@ public final class Common {
         case 11: return UTF8;
         case 12: return ANY;
         case 13: return DATETIME;
+        case 14: return INT64;
         default: return null;
       }
     }
@@ -5329,26 +5329,6 @@ public final class Common {
 
     /**
      * <pre>
-     * Service account
-     * </pre>
-     *
-     * <code>string service_account_id = 8;</code>
-     * @return The serviceAccountId.
-     */
-    java.lang.String getServiceAccountId();
-    /**
-     * <pre>
-     * Service account
-     * </pre>
-     *
-     * <code>string service_account_id = 8;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    com.google.protobuf.ByteString
-        getServiceAccountIdBytes();
-
-    /**
-     * <pre>
      * Number of retries
      * </pre>
      *
@@ -5416,6 +5396,26 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getInvocationTimeoutBytes();
+
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.DataTransformationOptions}
@@ -5431,10 +5431,10 @@ public final class Common {
     }
     private DataTransformationOptions() {
       cloudFunction_ = "";
-      serviceAccountId_ = "";
       bufferSize_ = "";
       bufferFlushInterval_ = "";
       invocationTimeout_ = "";
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -5574,52 +5574,6 @@ public final class Common {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         cloudFunction_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object serviceAccountId_;
-    /**
-     * <pre>
-     * Service account
-     * </pre>
-     *
-     * <code>string service_account_id = 8;</code>
-     * @return The serviceAccountId.
-     */
-    @java.lang.Override
-    public java.lang.String getServiceAccountId() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serviceAccountId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Service account
-     * </pre>
-     *
-     * <code>string service_account_id = 8;</code>
-     * @return The bytes for serviceAccountId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServiceAccountIdBytes() {
-      java.lang.Object ref = serviceAccountId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serviceAccountId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5779,6 +5733,52 @@ public final class Common {
       }
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Service account
+     * </pre>
+     *
+     * <code>string service_account_id = 8;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5856,8 +5856,6 @@ public final class Common {
 
       if (!getCloudFunction()
           .equals(other.getCloudFunction())) return false;
-      if (!getServiceAccountId()
-          .equals(other.getServiceAccountId())) return false;
       if (getNumberOfRetries()
           != other.getNumberOfRetries()) return false;
       if (!getBufferSize()
@@ -5866,6 +5864,8 @@ public final class Common {
           .equals(other.getBufferFlushInterval())) return false;
       if (!getInvocationTimeout()
           .equals(other.getInvocationTimeout())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5879,8 +5879,6 @@ public final class Common {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CLOUD_FUNCTION_FIELD_NUMBER;
       hash = (53 * hash) + getCloudFunction().hashCode();
-      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (37 * hash) + NUMBER_OF_RETRIES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNumberOfRetries());
@@ -5890,6 +5888,8 @@ public final class Common {
       hash = (53 * hash) + getBufferFlushInterval().hashCode();
       hash = (37 * hash) + INVOCATION_TIMEOUT_FIELD_NUMBER;
       hash = (53 * hash) + getInvocationTimeout().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6025,8 +6025,6 @@ public final class Common {
         super.clear();
         cloudFunction_ = "";
 
-        serviceAccountId_ = "";
-
         numberOfRetries_ = 0L;
 
         bufferSize_ = "";
@@ -6034,6 +6032,8 @@ public final class Common {
         bufferFlushInterval_ = "";
 
         invocationTimeout_ = "";
+
+        serviceAccountId_ = "";
 
         return this;
       }
@@ -6062,11 +6062,11 @@ public final class Common {
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataTransformationOptions(this);
         result.cloudFunction_ = cloudFunction_;
-        result.serviceAccountId_ = serviceAccountId_;
         result.numberOfRetries_ = numberOfRetries_;
         result.bufferSize_ = bufferSize_;
         result.bufferFlushInterval_ = bufferFlushInterval_;
         result.invocationTimeout_ = invocationTimeout_;
+        result.serviceAccountId_ = serviceAccountId_;
         onBuilt();
         return result;
       }
@@ -6119,10 +6119,6 @@ public final class Common {
           cloudFunction_ = other.cloudFunction_;
           onChanged();
         }
-        if (!other.getServiceAccountId().isEmpty()) {
-          serviceAccountId_ = other.serviceAccountId_;
-          onChanged();
-        }
         if (other.getNumberOfRetries() != 0L) {
           setNumberOfRetries(other.getNumberOfRetries());
         }
@@ -6136,6 +6132,10 @@ public final class Common {
         }
         if (!other.getInvocationTimeout().isEmpty()) {
           invocationTimeout_ = other.invocationTimeout_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -6259,102 +6259,6 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         cloudFunction_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serviceAccountId_ = "";
-      /**
-       * <pre>
-       * Service account
-       * </pre>
-       *
-       * <code>string service_account_id = 8;</code>
-       * @return The serviceAccountId.
-       */
-      public java.lang.String getServiceAccountId() {
-        java.lang.Object ref = serviceAccountId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serviceAccountId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Service account
-       * </pre>
-       *
-       * <code>string service_account_id = 8;</code>
-       * @return The bytes for serviceAccountId.
-       */
-      public com.google.protobuf.ByteString
-          getServiceAccountIdBytes() {
-        java.lang.Object ref = serviceAccountId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serviceAccountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Service account
-       * </pre>
-       *
-       * <code>string service_account_id = 8;</code>
-       * @param value The serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serviceAccountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Service account
-       * </pre>
-       *
-       * <code>string service_account_id = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServiceAccountId() {
-        
-        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Service account
-       * </pre>
-       *
-       * <code>string service_account_id = 8;</code>
-       * @param value The bytes for serviceAccountId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServiceAccountIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -6686,6 +6590,102 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         invocationTimeout_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Service account
+       * </pre>
+       *
+       * <code>string service_account_id = 8;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -9061,31 +9061,31 @@ public final class Common {
       ".v1.endpoint.TLSConfigH\000B\n\n\010tls_mode\"#\n\t" +
       "TLSConfig\022\026\n\016ca_certificate\030\001 \001(\t\".\n\013Col" +
       "umnValue\022\026\n\014string_value\030\001 \001(\tH\000B\007\n\005valu" +
-      "e\"\272\001\n\031DataTransformationOptions\022\026\n\016cloud" +
-      "_function\030\001 \001(\t\022\032\n\022service_account_id\030\010 " +
-      "\001(\t\022\031\n\021number_of_retries\030\002 \001(\003\022\023\n\013buffer" +
-      "_size\030\003 \001(\t\022\035\n\025buffer_flush_interval\030\004 \001" +
-      "(\t\022\032\n\022invocation_timeout\030\005 \001(\t\"M\n\tFieldL" +
-      "ist\022@\n\006fields\030\002 \003(\01320.yandex.cloud.datat" +
-      "ransfer.v1.endpoint.ColSchema\"q\n\nDataSch" +
-      "ema\022B\n\006fields\030\002 \001(\01320.yandex.cloud.datat" +
-      "ransfer.v1.endpoint.FieldListH\000\022\025\n\013json_" +
-      "fields\030\001 \001(\tH\000B\010\n\006schema\"\010\n\006NoAuth*h\n\023Ob" +
-      "jectTransferStage\022%\n!OBJECT_TRANSFER_STA" +
-      "GE_UNSPECIFIED\020\000\022\017\n\013BEFORE_DATA\020\001\022\016\n\nAFT" +
-      "ER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rCleanupPolicy\022\036\n" +
-      "\032CLEANUP_POLICY_UNSPECIFIED\020\000\022\014\n\010DISABLE" +
-      "D\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*\311\001\n\nColumnTy" +
-      "pe\022\033\n\027COLUMN_TYPE_UNSPECIFIED\020\000\022\t\n\005INT64" +
-      "\020\016\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006UI" +
-      "NT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8\020" +
-      "\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022\010" +
-      "\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\rB\247\001\n)yand" +
-      "ex.cloud.api.datatransfer.v1.endpointZRg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/datatransfer/v1/endpoint;endpoin" +
-      "t\252\002%Yandex.Cloud.Datatransfer.V1.EndPoin" +
-      "tb\006proto3"
+      "e\"\300\001\n\031DataTransformationOptions\022\026\n\016cloud" +
+      "_function\030\001 \001(\t\022\031\n\021number_of_retries\030\002 \001" +
+      "(\003\022\023\n\013buffer_size\030\003 \001(\t\022\035\n\025buffer_flush_" +
+      "interval\030\004 \001(\t\022\032\n\022invocation_timeout\030\005 \001" +
+      "(\t\022\032\n\022service_account_id\030\010 \001(\tJ\004\010\006\020\010\"S\n\t" +
+      "FieldList\022@\n\006fields\030\002 \003(\01320.yandex.cloud" +
+      ".datatransfer.v1.endpoint.ColSchemaJ\004\010\001\020" +
+      "\002\"q\n\nDataSchema\022B\n\006fields\030\002 \001(\01320.yandex" +
+      ".cloud.datatransfer.v1.endpoint.FieldLis" +
+      "tH\000\022\025\n\013json_fields\030\001 \001(\tH\000B\010\n\006schema\"\010\n\006" +
+      "NoAuth*h\n\023ObjectTransferStage\022%\n!OBJECT_" +
+      "TRANSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_D" +
+      "ATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rClea" +
+      "nupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIFIED\020" +
+      "\000\022\014\n\010DISABLED\020\001\022\010\n\004DROP\020\002\022\014\n\010TRUNCATE\020\003*" +
+      "\311\001\n\nColumnType\022\033\n\027COLUMN_TYPE_UNSPECIFIE" +
+      "D\020\000\022\t\n\005INT32\020\001\022\t\n\005INT16\020\002\022\010\n\004INT8\020\003\022\n\n\006U" +
+      "INT64\020\004\022\n\n\006UINT32\020\005\022\n\n\006UINT16\020\006\022\t\n\005UINT8" +
+      "\020\007\022\n\n\006DOUBLE\020\010\022\013\n\007BOOLEAN\020\t\022\n\n\006STRING\020\n\022" +
+      "\010\n\004UTF8\020\013\022\007\n\003ANY\020\014\022\014\n\010DATETIME\020\r\022\t\n\005INT6" +
+      "4\020\016B\247\001\n)yandex.cloud.api.datatransfer.v1" +
+      ".endpointZRgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/datatransfer/v1/endp" +
+      "oint;endpoint\252\002%Yandex.Cloud.Datatransfe" +
+      "r.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9133,7 +9133,7 @@ public final class Common {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_DataTransformationOptions_descriptor,
-        new java.lang.String[] { "CloudFunction", "ServiceAccountId", "NumberOfRetries", "BufferSize", "BufferFlushInterval", "InvocationTimeout", });
+        new java.lang.String[] { "CloudFunction", "NumberOfRetries", "BufferSize", "BufferFlushInterval", "InvocationTimeout", "ServiceAccountId", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_FieldList_fieldAccessorTable = new

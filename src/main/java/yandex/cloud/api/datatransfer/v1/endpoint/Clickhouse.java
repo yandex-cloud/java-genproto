@@ -2103,26 +2103,6 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
 
     /**
-     * <pre>
-     * Database
-     * </pre>
-     *
-     * <code>string database = 8;</code>
-     * @return The database.
-     */
-    java.lang.String getDatabase();
-    /**
-     * <pre>
-     * Database
-     * </pre>
-     *
-     * <code>string database = 8;</code>
-     * @return The bytes for database.
-     */
-    com.google.protobuf.ByteString
-        getDatabaseBytes();
-
-    /**
      * <code>string user = 6;</code>
      * @return The user.
      */
@@ -2149,6 +2129,26 @@ public final class Clickhouse {
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder();
 
+    /**
+     * <pre>
+     * Database
+     * </pre>
+     *
+     * <code>string database = 8;</code>
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <pre>
+     * Database
+     * </pre>
+     *
+     * <code>string database = 8;</code>
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions.AddressCase getAddressCase();
   }
   /**
@@ -2164,8 +2164,8 @@ public final class Clickhouse {
       super(builder);
     }
     private ClickhouseConnectionOptions() {
-      database_ = "";
       user_ = "";
+      database_ = "";
     }
 
     @java.lang.Override
@@ -2399,52 +2399,6 @@ public final class Clickhouse {
       return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
     }
 
-    public static final int DATABASE_FIELD_NUMBER = 8;
-    private volatile java.lang.Object database_;
-    /**
-     * <pre>
-     * Database
-     * </pre>
-     *
-     * <code>string database = 8;</code>
-     * @return The database.
-     */
-    @java.lang.Override
-    public java.lang.String getDatabase() {
-      java.lang.Object ref = database_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        database_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Database
-     * </pre>
-     *
-     * <code>string database = 8;</code>
-     * @return The bytes for database.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDatabaseBytes() {
-      java.lang.Object ref = database_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        database_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int USER_FIELD_NUMBER = 6;
     private volatile java.lang.Object user_;
     /**
@@ -2507,6 +2461,52 @@ public final class Clickhouse {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.SecretOrBuilder getPasswordOrBuilder() {
       return getPassword();
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object database_;
+    /**
+     * <pre>
+     * Database
+     * </pre>
+     *
+     * <code>string database = 8;</code>
+     * @return The database.
+     */
+    @java.lang.Override
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Database
+     * </pre>
+     *
+     * <code>string database = 8;</code>
+     * @return The bytes for database.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2579,8 +2579,6 @@ public final class Clickhouse {
       }
       yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions other = (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions) obj;
 
-      if (!getDatabase()
-          .equals(other.getDatabase())) return false;
       if (!getUser()
           .equals(other.getUser())) return false;
       if (hasPassword() != other.hasPassword()) return false;
@@ -2588,6 +2586,8 @@ public final class Clickhouse {
         if (!getPassword()
             .equals(other.getPassword())) return false;
       }
+      if (!getDatabase()
+          .equals(other.getDatabase())) return false;
       if (!getAddressCase().equals(other.getAddressCase())) return false;
       switch (addressCase_) {
         case 5:
@@ -2612,14 +2612,14 @@ public final class Clickhouse {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatabase().hashCode();
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUser().hashCode();
       if (hasPassword()) {
         hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getPassword().hashCode();
       }
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
       switch (addressCase_) {
         case 5:
           hash = (37 * hash) + MDB_CLUSTER_ID_FIELD_NUMBER;
@@ -2765,8 +2765,6 @@ public final class Clickhouse {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        database_ = "";
-
         user_ = "";
 
         if (passwordBuilder_ == null) {
@@ -2775,6 +2773,8 @@ public final class Clickhouse {
           password_ = null;
           passwordBuilder_ = null;
         }
+        database_ = "";
+
         addressCase_ = 0;
         address_ = null;
         return this;
@@ -2813,13 +2813,13 @@ public final class Clickhouse {
             result.address_ = onPremiseBuilder_.build();
           }
         }
-        result.database_ = database_;
         result.user_ = user_;
         if (passwordBuilder_ == null) {
           result.password_ = password_;
         } else {
           result.password_ = passwordBuilder_.build();
         }
+        result.database_ = database_;
         result.addressCase_ = addressCase_;
         onBuilt();
         return result;
@@ -2869,16 +2869,16 @@ public final class Clickhouse {
 
       public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions other) {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions.getDefaultInstance()) return this;
-        if (!other.getDatabase().isEmpty()) {
-          database_ = other.database_;
-          onChanged();
-        }
         if (!other.getUser().isEmpty()) {
           user_ = other.user_;
           onChanged();
         }
         if (other.hasPassword()) {
           mergePassword(other.getPassword());
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
         }
         switch (other.getAddressCase()) {
           case MDB_CLUSTER_ID: {
@@ -3177,102 +3177,6 @@ public final class Clickhouse {
         return onPremiseBuilder_;
       }
 
-      private java.lang.Object database_ = "";
-      /**
-       * <pre>
-       * Database
-       * </pre>
-       *
-       * <code>string database = 8;</code>
-       * @return The database.
-       */
-      public java.lang.String getDatabase() {
-        java.lang.Object ref = database_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          database_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database
-       * </pre>
-       *
-       * <code>string database = 8;</code>
-       * @return The bytes for database.
-       */
-      public com.google.protobuf.ByteString
-          getDatabaseBytes() {
-        java.lang.Object ref = database_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          database_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Database
-       * </pre>
-       *
-       * <code>string database = 8;</code>
-       * @param value The database to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDatabase(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        database_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database
-       * </pre>
-       *
-       * <code>string database = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDatabase() {
-        
-        database_ = getDefaultInstance().getDatabase();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Database
-       * </pre>
-       *
-       * <code>string database = 8;</code>
-       * @param value The bytes for database to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDatabaseBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        database_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object user_ = "";
       /**
        * <code>string user = 6;</code>
@@ -3466,6 +3370,102 @@ public final class Clickhouse {
           password_ = null;
         }
         return passwordBuilder_;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <pre>
+       * Database
+       * </pre>
+       *
+       * <code>string database = 8;</code>
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database
+       * </pre>
+       *
+       * <code>string database = 8;</code>
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Database
+       * </pre>
+       *
+       * <code>string database = 8;</code>
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database
+       * </pre>
+       *
+       * <code>string database = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Database
+       * </pre>
+       *
+       * <code>string database = 8;</code>
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7945,43 +7945,6 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder();
 
     /**
-     * <code>string subnet_id = 9;</code>
-     * @return The subnetId.
-     */
-    java.lang.String getSubnetId();
-    /**
-     * <code>string subnet_id = 9;</code>
-     * @return The bytes for subnetId.
-     */
-    com.google.protobuf.ByteString
-        getSubnetIdBytes();
-
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
-
-    /**
      * <pre>
      * While list of tables for replication. If none or empty list is presented - will
      * replicate all tables. Can contain * patterns.
@@ -8070,6 +8033,43 @@ public final class Clickhouse {
      */
     com.google.protobuf.ByteString
         getExcludeTablesBytes(int index);
+
+    /**
+     * <code>string subnet_id = 9;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <code>string subnet_id = 9;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource}
@@ -8084,10 +8084,10 @@ public final class Clickhouse {
       super(builder);
     }
     private ClickhouseSource() {
-      subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      subnetId_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -8136,18 +8136,18 @@ public final class Clickhouse {
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 includeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               includeTables_.add(s);
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 excludeTables_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               excludeTables_.add(s);
               break;
@@ -8160,9 +8160,9 @@ public final class Clickhouse {
             }
             case 82: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000004;
               }
               securityGroups_.add(s);
               break;
@@ -8182,13 +8182,13 @@ public final class Clickhouse {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           includeTables_ = includeTables_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           excludeTables_ = excludeTables_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8232,79 +8232,6 @@ public final class Clickhouse {
     @java.lang.Override
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOrBuilder getConnectionOrBuilder() {
       return getConnection();
-    }
-
-    public static final int SUBNET_ID_FIELD_NUMBER = 9;
-    private volatile java.lang.Object subnetId_;
-    /**
-     * <code>string subnet_id = 9;</code>
-     * @return The subnetId.
-     */
-    @java.lang.Override
-    public java.lang.String getSubnetId() {
-      java.lang.Object ref = subnetId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        subnetId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string subnet_id = 9;</code>
-     * @return The bytes for subnetId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSubnetIdBytes() {
-      java.lang.Object ref = subnetId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        subnetId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 10;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <code>repeated string security_groups = 10;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
     }
 
     public static final int INCLUDE_TABLES_FIELD_NUMBER = 7;
@@ -8417,6 +8344,79 @@ public final class Clickhouse {
       return excludeTables_.getByteString(index);
     }
 
+    public static final int SUBNET_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <code>string subnet_id = 9;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subnet_id = 9;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <code>repeated string security_groups = 10;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8506,14 +8506,14 @@ public final class Clickhouse {
         if (!getConnection()
             .equals(other.getConnection())) return false;
       }
-      if (!getSubnetId()
-          .equals(other.getSubnetId())) return false;
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
       if (!getIncludeTablesList()
           .equals(other.getIncludeTablesList())) return false;
       if (!getExcludeTablesList()
           .equals(other.getExcludeTablesList())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8529,12 +8529,6 @@ public final class Clickhouse {
         hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
         hash = (53 * hash) + getConnection().hashCode();
       }
-      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSubnetId().hashCode();
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
-      }
       if (getIncludeTablesCount() > 0) {
         hash = (37 * hash) + INCLUDE_TABLES_FIELD_NUMBER;
         hash = (53 * hash) + getIncludeTablesList().hashCode();
@@ -8542,6 +8536,12 @@ public final class Clickhouse {
       if (getExcludeTablesCount() > 0) {
         hash = (37 * hash) + EXCLUDE_TABLES_FIELD_NUMBER;
         hash = (53 * hash) + getExcludeTablesList().hashCode();
+      }
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8682,13 +8682,13 @@ public final class Clickhouse {
           connection_ = null;
           connectionBuilder_ = null;
         }
+        includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         subnetId_ = "";
 
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -8722,22 +8722,22 @@ public final class Clickhouse {
         } else {
           result.connection_ = connectionBuilder_.build();
         }
-        result.subnetId_ = subnetId_;
         if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
+          includeTables_ = includeTables_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.securityGroups_ = securityGroups_;
+        result.includeTables_ = includeTables_;
         if (((bitField0_ & 0x00000002) != 0)) {
-          includeTables_ = includeTables_.getUnmodifiableView();
+          excludeTables_ = excludeTables_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.includeTables_ = includeTables_;
+        result.excludeTables_ = excludeTables_;
+        result.subnetId_ = subnetId_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          excludeTables_ = excludeTables_.getUnmodifiableView();
+          securityGroups_ = securityGroups_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.excludeTables_ = excludeTables_;
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -8789,24 +8789,10 @@ public final class Clickhouse {
         if (other.hasConnection()) {
           mergeConnection(other.getConnection());
         }
-        if (!other.getSubnetId().isEmpty()) {
-          subnetId_ = other.subnetId_;
-          onChanged();
-        }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
         if (!other.includeTables_.isEmpty()) {
           if (includeTables_.isEmpty()) {
             includeTables_ = other.includeTables_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIncludeTablesIsMutable();
             includeTables_.addAll(other.includeTables_);
@@ -8816,10 +8802,24 @@ public final class Clickhouse {
         if (!other.excludeTables_.isEmpty()) {
           if (excludeTables_.isEmpty()) {
             excludeTables_ = other.excludeTables_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureExcludeTablesIsMutable();
             excludeTables_.addAll(other.excludeTables_);
+          }
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
           }
           onChanged();
         }
@@ -8972,197 +8972,11 @@ public final class Clickhouse {
         return connectionBuilder_;
       }
 
-      private java.lang.Object subnetId_ = "";
-      /**
-       * <code>string subnet_id = 9;</code>
-       * @return The subnetId.
-       */
-      public java.lang.String getSubnetId() {
-        java.lang.Object ref = subnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string subnet_id = 9;</code>
-       * @return The bytes for subnetId.
-       */
-      public com.google.protobuf.ByteString
-          getSubnetIdBytes() {
-        java.lang.Object ref = subnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string subnet_id = 9;</code>
-       * @param value The subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string subnet_id = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSubnetId() {
-        
-        subnetId_ = getDefaultInstance().getSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string subnet_id = 9;</code>
-       * @param value The bytes for subnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subnetId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 10;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-
       private com.google.protobuf.LazyStringList includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureIncludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           includeTables_ = new com.google.protobuf.LazyStringArrayList(includeTables_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -9287,7 +9101,7 @@ public final class Clickhouse {
        */
       public Builder clearIncludeTables() {
         includeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9315,9 +9129,9 @@ public final class Clickhouse {
 
       private com.google.protobuf.LazyStringList excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExcludeTablesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           excludeTables_ = new com.google.protobuf.LazyStringArrayList(excludeTables_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -9442,7 +9256,7 @@ public final class Clickhouse {
        */
       public Builder clearExcludeTables() {
         excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9464,6 +9278,192 @@ public final class Clickhouse {
   checkByteStringIsUtf8(value);
         ensureExcludeTablesIsMutable();
         excludeTables_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <code>string subnet_id = 9;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 9;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 9;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 9;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 10;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
         onChanged();
         return this;
       }
@@ -9552,43 +9552,6 @@ public final class Clickhouse {
         getSubnetIdBytes();
 
     /**
-     * <code>repeated string security_groups = 51;</code>
-     * @return A list containing the securityGroups.
-     */
-    java.util.List<java.lang.String>
-        getSecurityGroupsList();
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @return The count of securityGroups.
-     */
-    int getSecurityGroupsCount();
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    java.lang.String getSecurityGroups(int index);
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index);
-
-    /**
-     * <code>string clickhouse_cluster_name = 50;</code>
-     * @return The clickhouseClusterName.
-     */
-    java.lang.String getClickhouseClusterName();
-    /**
-     * <code>string clickhouse_cluster_name = 50;</code>
-     * @return The bytes for clickhouseClusterName.
-     */
-    com.google.protobuf.ByteString
-        getClickhouseClusterNameBytes();
-
-    /**
      * <pre>
      * Alternative table names in target
      * </pre>
@@ -9633,6 +9596,17 @@ public final class Clickhouse {
         int index);
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    int getCleanupPolicyValue();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+     * @return The cleanupPolicy.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy();
+
+    /**
      * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseSharding sharding = 22;</code>
      * @return Whether the sharding field is set.
      */
@@ -9648,15 +9622,41 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder getShardingOrBuilder();
 
     /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
+     * <code>string clickhouse_cluster_name = 50;</code>
+     * @return The clickhouseClusterName.
      */
-    int getCleanupPolicyValue();
+    java.lang.String getClickhouseClusterName();
     /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-     * @return The cleanupPolicy.
+     * <code>string clickhouse_cluster_name = 50;</code>
+     * @return The bytes for clickhouseClusterName.
      */
-    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy();
+    com.google.protobuf.ByteString
+        getClickhouseClusterNameBytes();
+
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @return A list containing the securityGroups.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupsList();
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @return The count of securityGroups.
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    java.lang.String getSecurityGroups(int index);
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseTarget}
@@ -9672,10 +9672,10 @@ public final class Clickhouse {
     }
     private ClickhouseTarget() {
       subnetId_ = "";
-      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      clickhouseClusterName_ = "";
       altNames_ = java.util.Collections.emptyList();
       cleanupPolicy_ = 0;
+      clickhouseClusterName_ = "";
+      securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -9729,9 +9729,9 @@ public final class Clickhouse {
               break;
             }
             case 138: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 altNames_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               altNames_.add(
                   input.readMessage(yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.parser(), extensionRegistry));
@@ -9764,9 +9764,9 @@ public final class Clickhouse {
             }
             case 410: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 securityGroups_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               securityGroups_.add(s);
               break;
@@ -9786,10 +9786,10 @@ public final class Clickhouse {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           altNames_ = java.util.Collections.unmodifiableList(altNames_);
         }
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -9873,79 +9873,6 @@ public final class Clickhouse {
       }
     }
 
-    public static final int SECURITY_GROUPS_FIELD_NUMBER = 51;
-    private com.google.protobuf.LazyStringList securityGroups_;
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @return A list containing the securityGroups.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSecurityGroupsList() {
-      return securityGroups_;
-    }
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @return The count of securityGroups.
-     */
-    public int getSecurityGroupsCount() {
-      return securityGroups_.size();
-    }
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @param index The index of the element to return.
-     * @return The securityGroups at the given index.
-     */
-    public java.lang.String getSecurityGroups(int index) {
-      return securityGroups_.get(index);
-    }
-    /**
-     * <code>repeated string security_groups = 51;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the securityGroups at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSecurityGroupsBytes(int index) {
-      return securityGroups_.getByteString(index);
-    }
-
-    public static final int CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER = 50;
-    private volatile java.lang.Object clickhouseClusterName_;
-    /**
-     * <code>string clickhouse_cluster_name = 50;</code>
-     * @return The clickhouseClusterName.
-     */
-    @java.lang.Override
-    public java.lang.String getClickhouseClusterName() {
-      java.lang.Object ref = clickhouseClusterName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clickhouseClusterName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string clickhouse_cluster_name = 50;</code>
-     * @return The bytes for clickhouseClusterName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getClickhouseClusterNameBytes() {
-      java.lang.Object ref = clickhouseClusterName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clickhouseClusterName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int ALT_NAMES_FIELD_NUMBER = 17;
     private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> altNames_;
     /**
@@ -10006,6 +9933,25 @@ public final class Clickhouse {
       return altNames_.get(index);
     }
 
+    public static final int CLEANUP_POLICY_FIELD_NUMBER = 21;
+    private int cleanupPolicy_;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+     * @return The enum numeric value on the wire for cleanupPolicy.
+     */
+    @java.lang.Override public int getCleanupPolicyValue() {
+      return cleanupPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+     * @return The cleanupPolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.valueOf(cleanupPolicy_);
+      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.UNRECOGNIZED : result;
+    }
+
     public static final int SHARDING_FIELD_NUMBER = 22;
     private yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding sharding_;
     /**
@@ -10032,23 +9978,77 @@ public final class Clickhouse {
       return getSharding();
     }
 
-    public static final int CLEANUP_POLICY_FIELD_NUMBER = 21;
-    private int cleanupPolicy_;
+    public static final int CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER = 50;
+    private volatile java.lang.Object clickhouseClusterName_;
     /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-     * @return The enum numeric value on the wire for cleanupPolicy.
+     * <code>string clickhouse_cluster_name = 50;</code>
+     * @return The clickhouseClusterName.
      */
-    @java.lang.Override public int getCleanupPolicyValue() {
-      return cleanupPolicy_;
+    @java.lang.Override
+    public java.lang.String getClickhouseClusterName() {
+      java.lang.Object ref = clickhouseClusterName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clickhouseClusterName_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-     * @return The cleanupPolicy.
+     * <code>string clickhouse_cluster_name = 50;</code>
+     * @return The bytes for clickhouseClusterName.
      */
-    @java.lang.Override public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.valueOf(cleanupPolicy_);
-      return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.UNRECOGNIZED : result;
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClickhouseClusterNameBytes() {
+      java.lang.Object ref = clickhouseClusterName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clickhouseClusterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 51;
+    private com.google.protobuf.LazyStringList securityGroups_;
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @return A list containing the securityGroups.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @return The count of securityGroups.
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroups at the given index.
+     */
+    public java.lang.String getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <code>repeated string security_groups = 51;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroups at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupsBytes(int index) {
+      return securityGroups_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -10147,18 +10147,18 @@ public final class Clickhouse {
       }
       if (!getSubnetId()
           .equals(other.getSubnetId())) return false;
-      if (!getSecurityGroupsList()
-          .equals(other.getSecurityGroupsList())) return false;
-      if (!getClickhouseClusterName()
-          .equals(other.getClickhouseClusterName())) return false;
       if (!getAltNamesList()
           .equals(other.getAltNamesList())) return false;
+      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
       if (hasSharding() != other.hasSharding()) return false;
       if (hasSharding()) {
         if (!getSharding()
             .equals(other.getSharding())) return false;
       }
-      if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (!getClickhouseClusterName()
+          .equals(other.getClickhouseClusterName())) return false;
+      if (!getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10176,22 +10176,22 @@ public final class Clickhouse {
       }
       hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSubnetId().hashCode();
-      if (getSecurityGroupsCount() > 0) {
-        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
-        hash = (53 * hash) + getSecurityGroupsList().hashCode();
-      }
-      hash = (37 * hash) + CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getClickhouseClusterName().hashCode();
       if (getAltNamesCount() > 0) {
         hash = (37 * hash) + ALT_NAMES_FIELD_NUMBER;
         hash = (53 * hash) + getAltNamesList().hashCode();
       }
+      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + cleanupPolicy_;
       if (hasSharding()) {
         hash = (37 * hash) + SHARDING_FIELD_NUMBER;
         hash = (53 * hash) + getSharding().hashCode();
       }
-      hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
-      hash = (53 * hash) + cleanupPolicy_;
+      hash = (37 * hash) + CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClickhouseClusterName().hashCode();
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10334,24 +10334,24 @@ public final class Clickhouse {
         }
         subnetId_ = "";
 
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        clickhouseClusterName_ = "";
-
         if (altNamesBuilder_ == null) {
           altNames_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           altNamesBuilder_.clear();
         }
+        cleanupPolicy_ = 0;
+
         if (shardingBuilder_ == null) {
           sharding_ = null;
         } else {
           sharding_ = null;
           shardingBuilder_ = null;
         }
-        cleanupPolicy_ = 0;
+        clickhouseClusterName_ = "";
 
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -10385,27 +10385,27 @@ public final class Clickhouse {
           result.connection_ = connectionBuilder_.build();
         }
         result.subnetId_ = subnetId_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = securityGroups_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.securityGroups_ = securityGroups_;
-        result.clickhouseClusterName_ = clickhouseClusterName_;
         if (altNamesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             altNames_ = java.util.Collections.unmodifiableList(altNames_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.altNames_ = altNames_;
         } else {
           result.altNames_ = altNamesBuilder_.build();
         }
+        result.cleanupPolicy_ = cleanupPolicy_;
         if (shardingBuilder_ == null) {
           result.sharding_ = sharding_;
         } else {
           result.sharding_ = shardingBuilder_.build();
         }
-        result.cleanupPolicy_ = cleanupPolicy_;
+        result.clickhouseClusterName_ = clickhouseClusterName_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          securityGroups_ = securityGroups_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroups_ = securityGroups_;
         onBuilt();
         return result;
       }
@@ -10461,25 +10461,11 @@ public final class Clickhouse {
           subnetId_ = other.subnetId_;
           onChanged();
         }
-        if (!other.securityGroups_.isEmpty()) {
-          if (securityGroups_.isEmpty()) {
-            securityGroups_ = other.securityGroups_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSecurityGroupsIsMutable();
-            securityGroups_.addAll(other.securityGroups_);
-          }
-          onChanged();
-        }
-        if (!other.getClickhouseClusterName().isEmpty()) {
-          clickhouseClusterName_ = other.clickhouseClusterName_;
-          onChanged();
-        }
         if (altNamesBuilder_ == null) {
           if (!other.altNames_.isEmpty()) {
             if (altNames_.isEmpty()) {
               altNames_ = other.altNames_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureAltNamesIsMutable();
               altNames_.addAll(other.altNames_);
@@ -10492,7 +10478,7 @@ public final class Clickhouse {
               altNamesBuilder_.dispose();
               altNamesBuilder_ = null;
               altNames_ = other.altNames_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               altNamesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAltNamesFieldBuilder() : null;
@@ -10501,11 +10487,25 @@ public final class Clickhouse {
             }
           }
         }
+        if (other.cleanupPolicy_ != 0) {
+          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
         if (other.hasSharding()) {
           mergeSharding(other.getSharding());
         }
-        if (other.cleanupPolicy_ != 0) {
-          setCleanupPolicyValue(other.getCleanupPolicyValue());
+        if (!other.getClickhouseClusterName().isEmpty()) {
+          clickhouseClusterName_ = other.clickhouseClusterName_;
+          onChanged();
+        }
+        if (!other.securityGroups_.isEmpty()) {
+          if (securityGroups_.isEmpty()) {
+            securityGroups_ = other.securityGroups_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupsIsMutable();
+            securityGroups_.addAll(other.securityGroups_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10732,198 +10732,12 @@ public final class Clickhouse {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureSecurityGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @return A list containing the securityGroups.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getSecurityGroupsList() {
-        return securityGroups_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @return The count of securityGroups.
-       */
-      public int getSecurityGroupsCount() {
-        return securityGroups_.size();
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param index The index of the element to return.
-       * @return The securityGroups at the given index.
-       */
-      public java.lang.String getSecurityGroups(int index) {
-        return securityGroups_.get(index);
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the securityGroups at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getSecurityGroupsBytes(int index) {
-        return securityGroups_.getByteString(index);
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param index The index to set the value at.
-       * @param value The securityGroups to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSecurityGroups(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param value The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroups(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param values The securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllSecurityGroups(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureSecurityGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, securityGroups_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSecurityGroups() {
-        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string security_groups = 51;</code>
-       * @param value The bytes of the securityGroups to add.
-       * @return This builder for chaining.
-       */
-      public Builder addSecurityGroupsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureSecurityGroupsIsMutable();
-        securityGroups_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object clickhouseClusterName_ = "";
-      /**
-       * <code>string clickhouse_cluster_name = 50;</code>
-       * @return The clickhouseClusterName.
-       */
-      public java.lang.String getClickhouseClusterName() {
-        java.lang.Object ref = clickhouseClusterName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          clickhouseClusterName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string clickhouse_cluster_name = 50;</code>
-       * @return The bytes for clickhouseClusterName.
-       */
-      public com.google.protobuf.ByteString
-          getClickhouseClusterNameBytes() {
-        java.lang.Object ref = clickhouseClusterName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          clickhouseClusterName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string clickhouse_cluster_name = 50;</code>
-       * @param value The clickhouseClusterName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClickhouseClusterName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        clickhouseClusterName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string clickhouse_cluster_name = 50;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClickhouseClusterName() {
-        
-        clickhouseClusterName_ = getDefaultInstance().getClickhouseClusterName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string clickhouse_cluster_name = 50;</code>
-       * @param value The bytes for clickhouseClusterName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClickhouseClusterNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        clickhouseClusterName_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName> altNames_ =
         java.util.Collections.emptyList();
       private void ensureAltNamesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           altNames_ = new java.util.ArrayList<yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName>(altNames_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -11117,7 +10931,7 @@ public final class Clickhouse {
       public Builder clearAltNames() {
         if (altNamesBuilder_ == null) {
           altNames_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           altNamesBuilder_.clear();
@@ -11222,12 +11036,66 @@ public final class Clickhouse {
           altNamesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName, yandex.cloud.api.datatransfer.v1.endpoint.Common.AltName.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.AltNameOrBuilder>(
                   altNames_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           altNames_ = null;
         }
         return altNamesBuilder_;
+      }
+
+      private int cleanupPolicy_ = 0;
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * @return The enum numeric value on the wire for cleanupPolicy.
+       */
+      @java.lang.Override public int getCleanupPolicyValue() {
+        return cleanupPolicy_;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * @param value The enum numeric value on the wire for cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicyValue(int value) {
+        
+        cleanupPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * @return The cleanupPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.valueOf(cleanupPolicy_);
+        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * @param value The cleanupPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        cleanupPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCleanupPolicy() {
+        
+        cleanupPolicy_ = 0;
+        onChanged();
+        return this;
       }
 
       private yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding sharding_;
@@ -11349,56 +11217,188 @@ public final class Clickhouse {
         return shardingBuilder_;
       }
 
-      private int cleanupPolicy_ = 0;
+      private java.lang.Object clickhouseClusterName_ = "";
       /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-       * @return The enum numeric value on the wire for cleanupPolicy.
+       * <code>string clickhouse_cluster_name = 50;</code>
+       * @return The clickhouseClusterName.
        */
-      @java.lang.Override public int getCleanupPolicyValue() {
-        return cleanupPolicy_;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-       * @param value The enum numeric value on the wire for cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicyValue(int value) {
-        
-        cleanupPolicy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-       * @return The cleanupPolicy.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy getCleanupPolicy() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy result = yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.valueOf(cleanupPolicy_);
-        return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
-       * @param value The cleanupPolicy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCleanupPolicy(yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseCleanupPolicy value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public java.lang.String getClickhouseClusterName() {
+        java.lang.Object ref = clickhouseClusterName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clickhouseClusterName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
         }
-        
-        cleanupPolicy_ = value.getNumber();
+      }
+      /**
+       * <code>string clickhouse_cluster_name = 50;</code>
+       * @return The bytes for clickhouseClusterName.
+       */
+      public com.google.protobuf.ByteString
+          getClickhouseClusterNameBytes() {
+        java.lang.Object ref = clickhouseClusterName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clickhouseClusterName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string clickhouse_cluster_name = 50;</code>
+       * @param value The clickhouseClusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClickhouseClusterName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clickhouseClusterName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.yandex.cloud.datatransfer.v1.endpoint.ClickhouseCleanupPolicy cleanup_policy = 21;</code>
+       * <code>string clickhouse_cluster_name = 50;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCleanupPolicy() {
+      public Builder clearClickhouseClusterName() {
         
-        cleanupPolicy_ = 0;
+        clickhouseClusterName_ = getDefaultInstance().getClickhouseClusterName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string clickhouse_cluster_name = 50;</code>
+       * @param value The bytes for clickhouseClusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClickhouseClusterNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clickhouseClusterName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          securityGroups_ = new com.google.protobuf.LazyStringArrayList(securityGroups_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @return A list containing the securityGroups.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupsList() {
+        return securityGroups_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @return The count of securityGroups.
+       */
+      public int getSecurityGroupsCount() {
+        return securityGroups_.size();
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroups at the given index.
+       */
+      public java.lang.String getSecurityGroups(int index) {
+        return securityGroups_.get(index);
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroups at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupsBytes(int index) {
+        return securityGroups_.getByteString(index);
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroups to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroups(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param value The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroups(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param values The securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroups_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroups() {
+        securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_groups = 51;</code>
+       * @param value The bytes of the securityGroups to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupsIsMutable();
+        securityGroups_.add(value);
         onChanged();
         return this;
       }
@@ -11519,62 +11519,63 @@ public final class Clickhouse {
       "fer.v1.endpoint\032\033google/protobuf/empty.p" +
       "roto\0322yandex/cloud/datatransfer/v1/endpo" +
       "int/common.proto\".\n\017ClickhouseShard\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\r\n\005hosts\030\002 \003(\t\"\307\001\n\023OnPremiseCl" +
+      "ame\030\001 \001(\t\022\r\n\005hosts\030\002 \003(\t\"\323\001\n\023OnPremiseCl" +
       "ickhouse\022F\n\006shards\030\001 \003(\01326.yandex.cloud." +
       "datatransfer.v1.endpoint.ClickhouseShard" +
       "\022\021\n\thttp_port\030\003 \001(\003\022\023\n\013native_port\030\004 \001(\003" +
       "\022@\n\010tls_mode\030\010 \001(\0132..yandex.cloud.datatr" +
-      "ansfer.v1.endpoint.TLSMode\"\365\001\n\033Clickhous" +
-      "eConnectionOptions\022\030\n\016mdb_cluster_id\030\005 \001" +
-      "(\tH\000\022P\n\non_premise\030\002 \001(\0132:.yandex.cloud." +
-      "datatransfer.v1.endpoint.OnPremiseClickh" +
-      "ouseH\000\022\020\n\010database\030\010 \001(\t\022\014\n\004user\030\006 \001(\t\022?" +
-      "\n\010password\030\007 \001(\0132-.yandex.cloud.datatran" +
-      "sfer.v1.endpoint.SecretB\t\n\007address\"\206\001\n\024C" +
-      "lickhouseConnection\022`\n\022connection_option" +
-      "s\030\001 \001(\0132B.yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.ClickhouseConnectionOptionsH\000B\014\n" +
-      "\nconnection\"\374\004\n\022ClickhouseSharding\022f\n\021co" +
-      "lumn_value_hash\030\001 \001(\0132I.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.ClickhouseSharding" +
-      ".ColumnValueHashH\000\022f\n\016custom_mapping\030\002 \001" +
-      "(\0132L.yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.ClickhouseSharding.ColumnValueMapping" +
-      "H\000\022-\n\013transfer_id\030\003 \001(\0132\026.google.protobu" +
-      "f.EmptyH\000\022-\n\013round_robin\030\004 \001(\0132\026.google." +
-      "protobuf.EmptyH\000\032&\n\017ColumnValueHash\022\023\n\013c" +
-      "olumn_name\030\001 \001(\t\032\203\002\n\022ColumnValueMapping\022" +
-      "\023\n\013column_name\030\001 \001(\t\022j\n\007mapping\030\002 \003(\0132Y." +
-      "yandex.cloud.datatransfer.v1.endpoint.Cl" +
-      "ickhouseSharding.ColumnValueMapping.Valu" +
-      "eToShard\032l\n\014ValueToShard\022H\n\014column_value" +
-      "\030\001 \001(\01322.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.ColumnValue\022\022\n\nshard_name\030\002 \001(\tB\n" +
-      "\n\010sharding\"\277\001\n\020ClickhouseSource\022O\n\nconne" +
-      "ction\030\001 \001(\0132;.yandex.cloud.datatransfer." +
-      "v1.endpoint.ClickhouseConnection\022\021\n\tsubn" +
-      "et_id\030\t \001(\t\022\027\n\017security_groups\030\n \003(\t\022\026\n\016" +
-      "include_tables\030\007 \003(\t\022\026\n\016exclude_tables\030\010" +
-      " \003(\t\"\230\003\n\020ClickhouseTarget\022O\n\nconnection\030" +
-      "\002 \001(\0132;.yandex.cloud.datatransfer.v1.end" +
-      "point.ClickhouseConnection\022\021\n\tsubnet_id\030" +
-      "\014 \001(\t\022\027\n\017security_groups\0303 \003(\t\022\037\n\027clickh" +
-      "ouse_cluster_name\0302 \001(\t\022A\n\talt_names\030\021 \003" +
-      "(\0132..yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.AltName\022K\n\010sharding\030\026 \001(\01329.yandex.cl" +
-      "oud.datatransfer.v1.endpoint.ClickhouseS" +
-      "harding\022V\n\016cleanup_policy\030\025 \001(\0162>.yandex" +
+      "ansfer.v1.endpoint.TLSModeJ\004\010\002\020\003J\004\010\005\020\010\"\201" +
+      "\002\n\033ClickhouseConnectionOptions\022\030\n\016mdb_cl" +
+      "uster_id\030\005 \001(\tH\000\022P\n\non_premise\030\002 \001(\0132:.y" +
+      "andex.cloud.datatransfer.v1.endpoint.OnP" +
+      "remiseClickhouseH\000\022\014\n\004user\030\006 \001(\t\022?\n\010pass" +
+      "word\030\007 \001(\0132-.yandex.cloud.datatransfer.v" +
+      "1.endpoint.Secret\022\020\n\010database\030\010 \001(\tB\t\n\007a" +
+      "ddressJ\004\010\001\020\002J\004\010\003\020\005\"\206\001\n\024ClickhouseConnect" +
+      "ion\022`\n\022connection_options\030\001 \001(\0132B.yandex" +
       ".cloud.datatransfer.v1.endpoint.Clickhou" +
-      "seCleanupPolicy*\270\001\n\027ClickhouseCleanupPol" +
-      "icy\022)\n%CLICKHOUSE_CLEANUP_POLICY_UNSPECI" +
-      "FIED\020\000\022&\n\"CLICKHOUSE_CLEANUP_POLICY_DISA" +
-      "BLED\020\001\022\"\n\036CLICKHOUSE_CLEANUP_POLICY_DROP" +
-      "\020\002\022&\n\"CLICKHOUSE_CLEANUP_POLICY_TRUNCATE" +
-      "\020\003B\247\001\n)yandex.cloud.api.datatransfer.v1." +
-      "endpointZRgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/datatransfer/v1/endpo" +
-      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
-      ".V1.EndPointb\006proto3"
+      "seConnectionOptionsH\000B\014\n\nconnection\"\374\004\n\022" +
+      "ClickhouseSharding\022f\n\021column_value_hash\030" +
+      "\001 \001(\0132I.yandex.cloud.datatransfer.v1.end" +
+      "point.ClickhouseSharding.ColumnValueHash" +
+      "H\000\022f\n\016custom_mapping\030\002 \001(\0132L.yandex.clou" +
+      "d.datatransfer.v1.endpoint.ClickhouseSha" +
+      "rding.ColumnValueMappingH\000\022-\n\013transfer_i" +
+      "d\030\003 \001(\0132\026.google.protobuf.EmptyH\000\022-\n\013rou" +
+      "nd_robin\030\004 \001(\0132\026.google.protobuf.EmptyH\000" +
+      "\032&\n\017ColumnValueHash\022\023\n\013column_name\030\001 \001(\t" +
+      "\032\203\002\n\022ColumnValueMapping\022\023\n\013column_name\030\001" +
+      " \001(\t\022j\n\007mapping\030\002 \003(\0132Y.yandex.cloud.dat" +
+      "atransfer.v1.endpoint.ClickhouseSharding" +
+      ".ColumnValueMapping.ValueToShard\032l\n\014Valu" +
+      "eToShard\022H\n\014column_value\030\001 \001(\01322.yandex." +
+      "cloud.datatransfer.v1.endpoint.ColumnVal" +
+      "ue\022\022\n\nshard_name\030\002 \001(\tB\n\n\010sharding\"\305\001\n\020C" +
+      "lickhouseSource\022O\n\nconnection\030\001 \001(\0132;.ya" +
+      "ndex.cloud.datatransfer.v1.endpoint.Clic" +
+      "khouseConnection\022\026\n\016include_tables\030\007 \003(\t" +
+      "\022\026\n\016exclude_tables\030\010 \003(\t\022\021\n\tsubnet_id\030\t " +
+      "\001(\t\022\027\n\017security_groups\030\n \003(\tJ\004\010\002\020\007\"\266\003\n\020C" +
+      "lickhouseTarget\022O\n\nconnection\030\002 \001(\0132;.ya" +
+      "ndex.cloud.datatransfer.v1.endpoint.Clic" +
+      "khouseConnection\022\021\n\tsubnet_id\030\014 \001(\t\022A\n\ta" +
+      "lt_names\030\021 \003(\0132..yandex.cloud.datatransf" +
+      "er.v1.endpoint.AltName\022V\n\016cleanup_policy" +
+      "\030\025 \001(\0162>.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.ClickhouseCleanupPolicy\022K\n\010shardi" +
+      "ng\030\026 \001(\01329.yandex.cloud.datatransfer.v1." +
+      "endpoint.ClickhouseSharding\022\037\n\027clickhous" +
+      "e_cluster_name\0302 \001(\t\022\027\n\017security_groups\030" +
+      "3 \003(\tJ\004\010\001\020\002J\004\010\003\020\014J\004\010\r\020\021J\004\010\022\020\025J\004\010\027\0202*\270\001\n\027" +
+      "ClickhouseCleanupPolicy\022)\n%CLICKHOUSE_CL" +
+      "EANUP_POLICY_UNSPECIFIED\020\000\022&\n\"CLICKHOUSE" +
+      "_CLEANUP_POLICY_DISABLED\020\001\022\"\n\036CLICKHOUSE" +
+      "_CLEANUP_POLICY_DROP\020\002\022&\n\"CLICKHOUSE_CLE" +
+      "ANUP_POLICY_TRUNCATE\020\003B\247\001\n)yandex.cloud." +
+      "api.datatransfer.v1.endpointZRgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/d" +
+      "atatransfer/v1/endpoint;endpoint\252\002%Yande" +
+      "x.Cloud.Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11599,7 +11600,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_descriptor,
-        new java.lang.String[] { "MdbClusterId", "OnPremise", "Database", "User", "Password", "Address", });
+        new java.lang.String[] { "MdbClusterId", "OnPremise", "User", "Password", "Database", "Address", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_fieldAccessorTable = new
@@ -11635,13 +11636,13 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSource_descriptor,
-        new java.lang.String[] { "Connection", "SubnetId", "SecurityGroups", "IncludeTables", "ExcludeTables", });
+        new java.lang.String[] { "Connection", "IncludeTables", "ExcludeTables", "SubnetId", "SecurityGroups", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_descriptor,
-        new java.lang.String[] { "Connection", "SubnetId", "SecurityGroups", "ClickhouseClusterName", "AltNames", "Sharding", "CleanupPolicy", });
+        new java.lang.String[] { "Connection", "SubnetId", "AltNames", "CleanupPolicy", "Sharding", "ClickhouseClusterName", "SecurityGroups", });
     com.google.protobuf.EmptyProto.getDescriptor();
     yandex.cloud.api.datatransfer.v1.endpoint.Common.getDescriptor();
   }
