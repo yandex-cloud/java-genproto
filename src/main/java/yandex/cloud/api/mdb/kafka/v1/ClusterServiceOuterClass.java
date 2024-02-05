@@ -7844,6 +7844,47 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.MaintenanceWindow maintenance_window = 9;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
+
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @return A list containing the subnetIds.
+     */
+    java.util.List<java.lang.String>
+        getSubnetIdsList();
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @return The count of subnetIds.
+     */
+    int getSubnetIdsCount();
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    java.lang.String getSubnetIds(int index);
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateClusterRequest}
@@ -7862,6 +7903,7 @@ public final class ClusterServiceOuterClass {
       description_ = "";
       name_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -7979,6 +8021,15 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              subnetIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7996,6 +8047,9 @@ public final class ClusterServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8446,6 +8500,57 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int SUBNET_IDS_FIELD_NUMBER = 11;
+    private com.google.protobuf.LazyStringList subnetIds_;
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @return A list containing the subnetIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubnetIdsList() {
+      return subnetIds_;
+    }
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @return The count of subnetIds.
+     */
+    public int getSubnetIdsCount() {
+      return subnetIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    public java.lang.String getSubnetIds(int index) {
+      return subnetIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of subnets where the hosts are located or a new host is being created
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index) {
+      return subnetIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8489,6 +8594,9 @@ public final class ClusterServiceOuterClass {
       }
       if (maintenanceWindow_ != null) {
         output.writeMessage(9, getMaintenanceWindow());
+      }
+      for (int i = 0; i < subnetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, subnetIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8542,6 +8650,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getMaintenanceWindow());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subnetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubnetIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8584,6 +8700,8 @@ public final class ClusterServiceOuterClass {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
       }
+      if (!getSubnetIdsList()
+          .equals(other.getSubnetIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8623,6 +8741,10 @@ public final class ClusterServiceOuterClass {
       if (hasMaintenanceWindow()) {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
+      if (getSubnetIdsCount() > 0) {
+        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8808,6 +8930,8 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
         }
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -8861,6 +8985,11 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.subnetIds_ = subnetIds_;
         onBuilt();
         return result;
       }
@@ -8944,6 +9073,16 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (!other.subnetIds_.isEmpty()) {
+          if (subnetIds_.isEmpty()) {
+            subnetIds_ = other.subnetIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSubnetIdsIsMutable();
+            subnetIds_.addAll(other.subnetIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10073,6 +10212,152 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
         }
         return maintenanceWindowBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubnetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @return A list containing the subnetIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubnetIdsList() {
+        return subnetIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @return The count of subnetIds.
+       */
+      public int getSubnetIdsCount() {
+        return subnetIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param index The index of the element to return.
+       * @return The subnetIds at the given index.
+       */
+      public java.lang.String getSubnetIds(int index) {
+        return subnetIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the subnetIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdsBytes(int index) {
+        return subnetIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param index The index to set the value at.
+       * @param value The subnetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param value The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param values The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSubnetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubnetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subnetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetIds() {
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of subnets where the hosts are located or a new host is being created
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 11;</code>
+       * @param value The bytes of the subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -29435,7 +29720,7 @@ public final class ClusterServiceOuterClass {
       "_window\030\017 \001(\0132,.yandex.cloud.mdb.kafka.v" +
       "1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\260\004\n\024Upda" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\312\004\n\024Upda" +
       "teClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
       "1\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google" +
       ".protobuf.FieldMask\022\036\n\013description\030\003 \001(\t" +
@@ -29448,129 +29733,129 @@ public final class ClusterServiceOuterClass {
       "1\016[a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030\007" +
       " \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\022H\n\022mai" +
       "ntenance_window\030\t \001(\0132,.yandex.cloud.mdb" +
-      ".kafka.v1.MaintenanceWindow\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Up" +
-      "dateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
-      "8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\247\002\n\026ListClusterLo" +
-      "gsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time\030" +
-      "\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to_" +
-      "time\030\004 \001(\0132\032.google.protobuf.Timestamp\022\035" +
-      "\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always_next_page" +
-      "_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000" +
-      "\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022B\n\007message\030\002 \003(\01321" +
-      ".yandex.cloud.mdb.kafka.v1.LogRecord.Mes" +
-      "sageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"f\n\027ListClusterLogsResp" +
-      "onse\0222\n\004logs\030\001 \003(\0132$.yandex.cloud.mdb.ka" +
-      "fka.v1.LogRecord\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"b\n\017StreamLogRecord\0224\n\006record\030\001 \001(\0132$.y" +
-      "andex.cloud.mdb.kafka.v1.LogRecord\022\031\n\021ne" +
-      "xt_record_token\030\002 \001(\t\"\354\001\n\030StreamClusterL" +
-      "ogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_time" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007to" +
-      "_time\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
-      "er\030\006 \001(\tB\n\212\3101\006<=1000\"~\n\034ListClusterOpera" +
-      "tionsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClus" +
-      "terOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"y\n\027ListClusterHost" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListClusterH" +
-      "ostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yandex.clo" +
-      "ud.mdb.kafka.v1.Host\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
-      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_" +
-      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
-      "\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClust" +
+      ".kafka.v1.MaintenanceWindow\022\022\n\nsubnet_id" +
+      "s\030\013 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\004\010\n\020\013\"+\n\025UpdateClusterMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClust" +
       "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\")\n\023StopClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"\312\002\n\034RescheduleMaintenanceRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017res" +
-      "chedule_type\030\002 \001(\0162F.yandex.cloud.mdb.ka" +
-      "fka.v1.RescheduleMaintenanceRequest.Resc" +
-      "heduleTypeB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"n\n\016Reschedul" +
-      "eType\022\037\n\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r" +
-      "\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002" +
-      "\022\021\n\rSPECIFIC_TIME\020\003\"f\n\035RescheduleMainten" +
-      "anceMetadata\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdela" +
-      "yed_until\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp2\241\022\n\016ClusterService\022\210\001\n\003Get\022,.yandex." +
-      "cloud.mdb.kafka.v1.GetClusterRequest\032\".y" +
-      "andex.cloud.mdb.kafka.v1.Cluster\"/\202\323\344\223\002)" +
-      "\022\'/managed-kafka/v1/clusters/{cluster_id" +
-      "}\022\213\001\n\004List\022..yandex.cloud.mdb.kafka.v1.L" +
-      "istClustersRequest\032/.yandex.cloud.mdb.ka" +
-      "fka.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/ma" +
-      "naged-kafka/v1/clusters\022\247\001\n\006Create\022/.yan" +
-      "dex.cloud.mdb.kafka.v1.CreateClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"I" +
-      "\202\323\344\223\002\037\"\032/managed-kafka/v1/clusters:\001*\262\322*" +
-      " \n\025CreateClusterMetadata\022\007Cluster\022\264\001\n\006Up" +
-      "date\022/.yandex.cloud.mdb.kafka.v1.UpdateC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"V\202\323\344\223\002,2\'/managed-kafka/v1/clus" +
-      "ters/{cluster_id}:\001*\262\322* \n\025UpdateClusterM" +
-      "etadata\022\007Cluster\022\277\001\n\006Delete\022/.yandex.clo" +
-      "ud.mdb.kafka.v1.DeleteClusterRequest\032!.y" +
-      "andex.cloud.operation.Operation\"a\202\323\344\223\002)*" +
-      "\'/managed-kafka/v1/clusters/{cluster_id}" +
-      "\262\322*.\n\025DeleteClusterMetadata\022\025google.prot" +
-      "obuf.Empty\022\263\001\n\004Move\022-.yandex.cloud.mdb.k" +
-      "afka.v1.MoveClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Y\202\323\344\223\0021\",/managed-" +
-      "kafka/v1/clusters/{cluster_id}:move:\001*\262\322" +
-      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\264\001\n\005Sta" +
-      "rt\022..yandex.cloud.mdb.kafka.v1.StartClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"X\202\323\344\223\002/\"-/managed-kafka/v1/cluster" +
-      "s/{cluster_id}:start\262\322*\037\n\024StartClusterMe" +
-      "tadata\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud." +
-      "mdb.kafka.v1.StopClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"V\202\323\344\223\002.\",/man" +
-      "aged-kafka/v1/clusters/{cluster_id}:stop" +
-      "\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\351\001\n\025R" +
-      "escheduleMaintenance\0227.yandex.cloud.mdb." +
-      "kafka.v1.RescheduleMaintenanceRequest\032!." +
-      "yandex.cloud.operation.Operation\"t\202\323\344\223\002B" +
-      "\"=/managed-kafka/v1/clusters/{cluster_id" +
-      "}:rescheduleMaintenance:\001*\262\322*(\n\035Reschedu" +
-      "leMaintenanceMetadata\022\007Cluster\022\247\001\n\010ListL" +
-      "ogs\0221.yandex.cloud.mdb.kafka.v1.ListClus" +
-      "terLogsRequest\0322.yandex.cloud.mdb.kafka." +
-      "v1.ListClusterLogsResponse\"4\202\323\344\223\002.\022,/man" +
-      "aged-kafka/v1/clusters/{cluster_id}:logs" +
-      "\022\254\001\n\nStreamLogs\0223.yandex.cloud.mdb.kafka" +
-      ".v1.StreamClusterLogsRequest\032*.yandex.cl" +
-      "oud.mdb.kafka.v1.StreamLogRecord\";\202\323\344\223\0025" +
-      "\0223/managed-kafka/v1/clusters/{cluster_id" +
-      "}:stream_logs0\001\022\277\001\n\016ListOperations\0227.yan" +
-      "dex.cloud.mdb.kafka.v1.ListClusterOperat" +
-      "ionsRequest\0328.yandex.cloud.mdb.kafka.v1." +
-      "ListClusterOperationsResponse\":\202\323\344\223\0024\0222/" +
-      "managed-kafka/v1/clusters/{cluster_id}/o" +
-      "perations\022\253\001\n\tListHosts\0222.yandex.cloud.m" +
-      "db.kafka.v1.ListClusterHostsRequest\0323.ya" +
-      "ndex.cloud.mdb.kafka.v1.ListClusterHosts" +
-      "Response\"5\202\323\344\223\002/\022-/managed-kafka/v1/clus" +
-      "ters/{cluster_id}/hostsBd\n\035yandex.cloud." +
-      "api.mdb.kafka.v1ZCgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/kafka/v1;" +
-      "kafkab\006proto3"
+      "=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\"\247\002\n\026ListClusterLogsRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_" +
+      "filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\007to_time\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\035\n\tpage_size\030\005 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101" +
+      "\005<=100\022\036\n\026always_next_page_token\030\007 \001(\010\022\032" +
+      "\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000\"\256\001\n\tLogRecord" +
+      "\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022B\n\007message\030\002 \003(\01321.yandex.cloud." +
+      "mdb.kafka.v1.LogRecord.MessageEntry\032.\n\014M" +
+      "essageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"f\n\027ListClusterLogsResponse\0222\n\004logs\030\001" +
+      " \003(\0132$.yandex.cloud.mdb.kafka.v1.LogReco" +
+      "rd\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017StreamLog" +
+      "Record\0224\n\006record\030\001 \001(\0132$.yandex.cloud.md" +
+      "b.kafka.v1.LogRecord\022\031\n\021next_record_toke" +
+      "n\030\002 \001(\t\"\354\001\n\030StreamClusterLogsRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn" +
+      "_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022+\n\007to_time\030\004 \001(\0132\032." +
+      "google.protobuf.Timestamp\022\037\n\014record_toke" +
+      "n\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006" +
+      "<=1000\"~\n\034ListClusterOperationsRequest\022 " +
+      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsR" +
+      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
+      "ud.operation.Operation\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"c\n\030ListClusterHostsResponse\022." +
+      "\n\005hosts\030\001 \003(\0132\037.yandex.cloud.mdb.kafka.v" +
+      "1.Host\022\027\n\017next_page_token\030\002 \001(\t\"c\n\022MoveC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(" +
+      "\t\022\035\n\025destination_folder_id\030\003 \001(\t\"7\n\023Star" +
+      "tClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClu" +
+      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034Res" +
+      "cheduleMaintenanceRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017reschedule_type\030\002" +
+      " \001(\0162F.yandex.cloud.mdb.kafka.v1.Resched" +
+      "uleMaintenanceRequest.RescheduleTypeB\004\350\307" +
+      "1\001\0221\n\rdelayed_until\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\"n\n\016RescheduleType\022\037\n\033RESCH" +
+      "EDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022" +
+      "\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_T" +
+      "IME\020\003\"f\n\035RescheduleMaintenanceMetadata\022\022" +
+      "\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp2\241\022\n\016Cluste" +
+      "rService\022\210\001\n\003Get\022,.yandex.cloud.mdb.kafk" +
+      "a.v1.GetClusterRequest\032\".yandex.cloud.md" +
+      "b.kafka.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-kaf" +
+      "ka/v1/clusters/{cluster_id}\022\213\001\n\004List\022..y" +
+      "andex.cloud.mdb.kafka.v1.ListClustersReq" +
+      "uest\032/.yandex.cloud.mdb.kafka.v1.ListClu" +
+      "stersResponse\"\"\202\323\344\223\002\034\022\032/managed-kafka/v1" +
+      "/clusters\022\247\001\n\006Create\022/.yandex.cloud.mdb." +
+      "kafka.v1.CreateClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"I\202\323\344\223\002\037\"\032/manag" +
+      "ed-kafka/v1/clusters:\001*\262\322* \n\025CreateClust" +
+      "erMetadata\022\007Cluster\022\264\001\n\006Update\022/.yandex." +
+      "cloud.mdb.kafka.v1.UpdateClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
+      "\002,2\'/managed-kafka/v1/clusters/{cluster_" +
+      "id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clust" +
+      "er\022\277\001\n\006Delete\022/.yandex.cloud.mdb.kafka.v" +
+      "1.DeleteClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"a\202\323\344\223\002)*\'/managed-kafk" +
+      "a/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
+      "usterMetadata\022\025google.protobuf.Empty\022\263\001\n" +
+      "\004Move\022-.yandex.cloud.mdb.kafka.v1.MoveCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"Y\202\323\344\223\0021\",/managed-kafka/v1/clust" +
+      "ers/{cluster_id}:move:\001*\262\322*\036\n\023MoveCluste" +
+      "rMetadata\022\007Cluster\022\264\001\n\005Start\022..yandex.cl" +
+      "oud.mdb.kafka.v1.StartClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"X\202\323\344\223\002/\"" +
+      "-/managed-kafka/v1/clusters/{cluster_id}" +
+      ":start\262\322*\037\n\024StartClusterMetadata\022\007Cluste" +
+      "r\022\260\001\n\004Stop\022-.yandex.cloud.mdb.kafka.v1.S" +
+      "topClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"V\202\323\344\223\002.\",/managed-kafka/v1/" +
+      "clusters/{cluster_id}:stop\262\322*\036\n\023StopClus" +
+      "terMetadata\022\007Cluster\022\351\001\n\025RescheduleMaint" +
+      "enance\0227.yandex.cloud.mdb.kafka.v1.Resch" +
+      "eduleMaintenanceRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"t\202\323\344\223\002B\"=/managed-kaf" +
+      "ka/v1/clusters/{cluster_id}:rescheduleMa" +
+      "intenance:\001*\262\322*(\n\035RescheduleMaintenanceM" +
+      "etadata\022\007Cluster\022\247\001\n\010ListLogs\0221.yandex.c" +
+      "loud.mdb.kafka.v1.ListClusterLogsRequest" +
+      "\0322.yandex.cloud.mdb.kafka.v1.ListCluster" +
+      "LogsResponse\"4\202\323\344\223\002.\022,/managed-kafka/v1/" +
+      "clusters/{cluster_id}:logs\022\254\001\n\nStreamLog" +
+      "s\0223.yandex.cloud.mdb.kafka.v1.StreamClus" +
+      "terLogsRequest\032*.yandex.cloud.mdb.kafka." +
+      "v1.StreamLogRecord\";\202\323\344\223\0025\0223/managed-kaf" +
+      "ka/v1/clusters/{cluster_id}:stream_logs0" +
+      "\001\022\277\001\n\016ListOperations\0227.yandex.cloud.mdb." +
+      "kafka.v1.ListClusterOperationsRequest\0328." +
+      "yandex.cloud.mdb.kafka.v1.ListClusterOpe" +
+      "rationsResponse\":\202\323\344\223\0024\0222/managed-kafka/" +
+      "v1/clusters/{cluster_id}/operations\022\253\001\n\t" +
+      "ListHosts\0222.yandex.cloud.mdb.kafka.v1.Li" +
+      "stClusterHostsRequest\0323.yandex.cloud.mdb" +
+      ".kafka.v1.ListClusterHostsResponse\"5\202\323\344\223" +
+      "\002/\022-/managed-kafka/v1/clusters/{cluster_" +
+      "id}/hostsBd\n\035yandex.cloud.api.mdb.kafka." +
+      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29627,7 +29912,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", "SubnetIds", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

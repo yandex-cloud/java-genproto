@@ -204,6 +204,37 @@ public final class FederationServiceGrpc {
     return getAddUserAccountsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteUserAccountsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteUserAccounts",
+      requestType = yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteUserAccountsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteUserAccountsMethod;
+    if ((getDeleteUserAccountsMethod = FederationServiceGrpc.getDeleteUserAccountsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getDeleteUserAccountsMethod = FederationServiceGrpc.getDeleteUserAccountsMethod) == null) {
+          FederationServiceGrpc.getDeleteUserAccountsMethod = getDeleteUserAccountsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteUserAccounts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("DeleteUserAccounts"))
+              .build();
+        }
+      }
+    }
+    return getDeleteUserAccountsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsRequest,
       yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.ListFederatedUserAccountsResponse> getListUserAccountsMethod;
 
@@ -380,6 +411,16 @@ public final class FederationServiceGrpc {
 
     /**
      * <pre>
+     * Deletes users from the specified federation.
+     * </pre>
+     */
+    public void deleteUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteUserAccountsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists users for the specified federation.
      * </pre>
      */
@@ -442,6 +483,13 @@ public final class FederationServiceGrpc {
                 yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_USER_ACCOUNTS)))
+          .addMethod(
+            getDeleteUserAccountsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_USER_ACCOUNTS)))
           .addMethod(
             getListUserAccountsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -546,6 +594,17 @@ public final class FederationServiceGrpc {
 
     /**
      * <pre>
+     * Deletes users from the specified federation.
+     * </pre>
+     */
+    public void deleteUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteUserAccountsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists users for the specified federation.
      * </pre>
      */
@@ -643,6 +702,16 @@ public final class FederationServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation addUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddUserAccountsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes users from the specified federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteUserAccounts(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteUserAccountsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -752,6 +821,17 @@ public final class FederationServiceGrpc {
 
     /**
      * <pre>
+     * Deletes users from the specified federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteUserAccounts(
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteUserAccountsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists users for the specified federation.
      * </pre>
      */
@@ -779,8 +859,9 @@ public final class FederationServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_ADD_USER_ACCOUNTS = 5;
-  private static final int METHODID_LIST_USER_ACCOUNTS = 6;
-  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_DELETE_USER_ACCOUNTS = 6;
+  private static final int METHODID_LIST_USER_ACCOUNTS = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -821,6 +902,10 @@ public final class FederationServiceGrpc {
           break;
         case METHODID_ADD_USER_ACCOUNTS:
           serviceImpl.addUserAccounts((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.AddFederatedUserAccountsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_USER_ACCOUNTS:
+          serviceImpl.deleteUserAccounts((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_USER_ACCOUNTS:
@@ -898,6 +983,7 @@ public final class FederationServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getAddUserAccountsMethod())
+              .addMethod(getDeleteUserAccountsMethod())
               .addMethod(getListUserAccountsMethod())
               .addMethod(getListOperationsMethod())
               .build();

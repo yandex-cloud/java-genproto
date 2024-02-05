@@ -13429,6 +13429,2493 @@ public final class FederationServiceOuterClass {
 
   }
 
+  public interface DeleteFederatedUserAccountsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation to delete users from.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation to delete users from.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @return A list containing the subjectIds.
+     */
+    java.util.List<java.lang.String>
+        getSubjectIdsList();
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @return The count of subjectIds.
+     */
+    int getSubjectIdsCount();
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @param index The index of the element to return.
+     * @return The subjectIds at the given index.
+     */
+    java.lang.String getSubjectIds(int index);
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subjectIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSubjectIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest}
+   */
+  public static final class DeleteFederatedUserAccountsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest)
+      DeleteFederatedUserAccountsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFederatedUserAccountsRequest.newBuilder() to construct.
+    private DeleteFederatedUserAccountsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFederatedUserAccountsRequest() {
+      federationId_ = "";
+      subjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFederatedUserAccountsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFederatedUserAccountsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                subjectIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              subjectIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          subjectIds_ = subjectIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation to delete users from.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation to delete users from.
+     * </pre>
+     *
+     * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList subjectIds_;
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @return A list containing the subjectIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubjectIdsList() {
+      return subjectIds_;
+    }
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @return The count of subjectIds.
+     */
+    public int getSubjectIdsCount() {
+      return subjectIds_.size();
+    }
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @param index The index of the element to return.
+     * @return The subjectIds at the given index.
+     */
+    public java.lang.String getSubjectIds(int index) {
+      return subjectIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of subjects to delete.
+     * </pre>
+     *
+     * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subjectIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSubjectIdsBytes(int index) {
+      return subjectIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      for (int i = 0; i < subjectIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subjectIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subjectIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subjectIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubjectIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!getSubjectIdsList()
+          .equals(other.getSubjectIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      if (getSubjectIdsCount() > 0) {
+        hash = (37 * hash) + SUBJECT_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubjectIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        subjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.federationId_ = federationId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          subjectIds_ = subjectIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.subjectIds_ = subjectIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        if (!other.subjectIds_.isEmpty()) {
+          if (subjectIds_.isEmpty()) {
+            subjectIds_ = other.subjectIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSubjectIdsIsMutable();
+            subjectIds_.addAll(other.subjectIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation to delete users from.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete users from.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete users from.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete users from.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation to delete users from.
+       * </pre>
+       *
+       * <code>string federation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList subjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubjectIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subjectIds_ = new com.google.protobuf.LazyStringArrayList(subjectIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @return A list containing the subjectIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubjectIdsList() {
+        return subjectIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @return The count of subjectIds.
+       */
+      public int getSubjectIdsCount() {
+        return subjectIds_.size();
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param index The index of the element to return.
+       * @return The subjectIds at the given index.
+       */
+      public java.lang.String getSubjectIds(int index) {
+        return subjectIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the subjectIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectIdsBytes(int index) {
+        return subjectIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param index The index to set the value at.
+       * @param value The subjectIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubjectIdsIsMutable();
+        subjectIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param value The subjectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubjectIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubjectIdsIsMutable();
+        subjectIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param values The subjectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSubjectIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubjectIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subjectIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectIds() {
+        subjectIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects to delete.
+       * </pre>
+       *
+       * <code>repeated string subject_ids = 2 [(.yandex.cloud.size) = "1-1000", (.yandex.cloud.length) = "1-50"];</code>
+       * @param value The bytes of the subjectIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubjectIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubjectIdsIsMutable();
+        subjectIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsRequest)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFederatedUserAccountsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFederatedUserAccountsRequest>() {
+      @java.lang.Override
+      public DeleteFederatedUserAccountsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFederatedUserAccountsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFederatedUserAccountsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFederatedUserAccountsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteFederatedUserAccountsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the federation that is being altered.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    java.lang.String getFederationId();
+    /**
+     * <pre>
+     * ID of the federation that is being altered.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    com.google.protobuf.ByteString
+        getFederationIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata}
+   */
+  public static final class DeleteFederatedUserAccountsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata)
+      DeleteFederatedUserAccountsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFederatedUserAccountsMetadata.newBuilder() to construct.
+    private DeleteFederatedUserAccountsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFederatedUserAccountsMetadata() {
+      federationId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFederatedUserAccountsMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFederatedUserAccountsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              federationId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.Builder.class);
+    }
+
+    public static final int FEDERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object federationId_;
+    /**
+     * <pre>
+     * ID of the federation that is being altered.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The federationId.
+     */
+    @java.lang.Override
+    public java.lang.String getFederationId() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        federationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the federation that is being altered.
+     * </pre>
+     *
+     * <code>string federation_id = 1;</code>
+     * @return The bytes for federationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFederationIdBytes() {
+      java.lang.Object ref = federationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        federationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata) obj;
+
+      if (!getFederationId()
+          .equals(other.getFederationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFederationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        federationId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata(this);
+        result.federationId_ = federationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata.getDefaultInstance()) return this;
+        if (!other.getFederationId().isEmpty()) {
+          federationId_ = other.federationId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object federationId_ = "";
+      /**
+       * <pre>
+       * ID of the federation that is being altered.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The federationId.
+       */
+      public java.lang.String getFederationId() {
+        java.lang.Object ref = federationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          federationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that is being altered.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return The bytes for federationId.
+       */
+      public com.google.protobuf.ByteString
+          getFederationIdBytes() {
+        java.lang.Object ref = federationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          federationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the federation that is being altered.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that is being altered.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFederationId() {
+        
+        federationId_ = getDefaultInstance().getFederationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the federation that is being altered.
+       * </pre>
+       *
+       * <code>string federation_id = 1;</code>
+       * @param value The bytes for federationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFederationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        federationId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsMetadata)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFederatedUserAccountsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFederatedUserAccountsMetadata>() {
+      @java.lang.Override
+      public DeleteFederatedUserAccountsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFederatedUserAccountsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFederatedUserAccountsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFederatedUserAccountsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteFederatedUserAccountsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @return A list containing the deletedSubjects.
+     */
+    java.util.List<java.lang.String>
+        getDeletedSubjectsList();
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @return The count of deletedSubjects.
+     */
+    int getDeletedSubjectsCount();
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @param index The index of the element to return.
+     * @return The deletedSubjects at the given index.
+     */
+    java.lang.String getDeletedSubjects(int index);
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletedSubjects at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeletedSubjectsBytes(int index);
+
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @return A list containing the nonExistingSubjects.
+     */
+    java.util.List<java.lang.String>
+        getNonExistingSubjectsList();
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @return The count of nonExistingSubjects.
+     */
+    int getNonExistingSubjectsCount();
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @param index The index of the element to return.
+     * @return The nonExistingSubjects at the given index.
+     */
+    java.lang.String getNonExistingSubjects(int index);
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nonExistingSubjects at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNonExistingSubjectsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse}
+   */
+  public static final class DeleteFederatedUserAccountsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse)
+      DeleteFederatedUserAccountsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFederatedUserAccountsResponse.newBuilder() to construct.
+    private DeleteFederatedUserAccountsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFederatedUserAccountsResponse() {
+      deletedSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      nonExistingSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFederatedUserAccountsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFederatedUserAccountsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                deletedSubjects_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              deletedSubjects_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                nonExistingSubjects_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              nonExistingSubjects_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          deletedSubjects_ = deletedSubjects_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          nonExistingSubjects_ = nonExistingSubjects_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.Builder.class);
+    }
+
+    public static final int DELETED_SUBJECTS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList deletedSubjects_;
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @return A list containing the deletedSubjects.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDeletedSubjectsList() {
+      return deletedSubjects_;
+    }
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @return The count of deletedSubjects.
+     */
+    public int getDeletedSubjectsCount() {
+      return deletedSubjects_.size();
+    }
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @param index The index of the element to return.
+     * @return The deletedSubjects at the given index.
+     */
+    public java.lang.String getDeletedSubjects(int index) {
+      return deletedSubjects_.get(index);
+    }
+    /**
+     * <pre>
+     * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+     * </pre>
+     *
+     * <code>repeated string deleted_subjects = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deletedSubjects at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDeletedSubjectsBytes(int index) {
+      return deletedSubjects_.getByteString(index);
+    }
+
+    public static final int NON_EXISTING_SUBJECTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList nonExistingSubjects_;
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @return A list containing the nonExistingSubjects.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNonExistingSubjectsList() {
+      return nonExistingSubjects_;
+    }
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @return The count of nonExistingSubjects.
+     */
+    public int getNonExistingSubjectsCount() {
+      return nonExistingSubjects_.size();
+    }
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @param index The index of the element to return.
+     * @return The nonExistingSubjects at the given index.
+     */
+    public java.lang.String getNonExistingSubjects(int index) {
+      return nonExistingSubjects_.get(index);
+    }
+    /**
+     * <pre>
+     * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+     * </pre>
+     *
+     * <code>repeated string non_existing_subjects = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nonExistingSubjects at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNonExistingSubjectsBytes(int index) {
+      return nonExistingSubjects_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deletedSubjects_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, deletedSubjects_.getRaw(i));
+      }
+      for (int i = 0; i < nonExistingSubjects_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nonExistingSubjects_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < deletedSubjects_.size(); i++) {
+          dataSize += computeStringSizeNoTag(deletedSubjects_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDeletedSubjectsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nonExistingSubjects_.size(); i++) {
+          dataSize += computeStringSizeNoTag(nonExistingSubjects_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNonExistingSubjectsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse other = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse) obj;
+
+      if (!getDeletedSubjectsList()
+          .equals(other.getDeletedSubjectsList())) return false;
+      if (!getNonExistingSubjectsList()
+          .equals(other.getNonExistingSubjectsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDeletedSubjectsCount() > 0) {
+        hash = (37 * hash) + DELETED_SUBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDeletedSubjectsList().hashCode();
+      }
+      if (getNonExistingSubjectsCount() > 0) {
+        hash = (37 * hash) + NON_EXISTING_SUBJECTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNonExistingSubjectsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse)
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.class, yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        deletedSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nonExistingSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse build() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse buildPartial() {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse result = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          deletedSubjects_ = deletedSubjects_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.deletedSubjects_ = deletedSubjects_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          nonExistingSubjects_ = nonExistingSubjects_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.nonExistingSubjects_ = nonExistingSubjects_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse) {
+          return mergeFrom((yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse other) {
+        if (other == yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse.getDefaultInstance()) return this;
+        if (!other.deletedSubjects_.isEmpty()) {
+          if (deletedSubjects_.isEmpty()) {
+            deletedSubjects_ = other.deletedSubjects_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDeletedSubjectsIsMutable();
+            deletedSubjects_.addAll(other.deletedSubjects_);
+          }
+          onChanged();
+        }
+        if (!other.nonExistingSubjects_.isEmpty()) {
+          if (nonExistingSubjects_.isEmpty()) {
+            nonExistingSubjects_ = other.nonExistingSubjects_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureNonExistingSubjectsIsMutable();
+            nonExistingSubjects_.addAll(other.nonExistingSubjects_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList deletedSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDeletedSubjectsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deletedSubjects_ = new com.google.protobuf.LazyStringArrayList(deletedSubjects_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @return A list containing the deletedSubjects.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDeletedSubjectsList() {
+        return deletedSubjects_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @return The count of deletedSubjects.
+       */
+      public int getDeletedSubjectsCount() {
+        return deletedSubjects_.size();
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param index The index of the element to return.
+       * @return The deletedSubjects at the given index.
+       */
+      public java.lang.String getDeletedSubjects(int index) {
+        return deletedSubjects_.get(index);
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deletedSubjects at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDeletedSubjectsBytes(int index) {
+        return deletedSubjects_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The deletedSubjects to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletedSubjects(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDeletedSubjectsIsMutable();
+        deletedSubjects_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param value The deletedSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeletedSubjects(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDeletedSubjectsIsMutable();
+        deletedSubjects_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param values The deletedSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeletedSubjects(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDeletedSubjectsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, deletedSubjects_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletedSubjects() {
+        deletedSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects deleted by [FederationService.DeleteUserAccounts] request.
+       * </pre>
+       *
+       * <code>repeated string deleted_subjects = 1;</code>
+       * @param value The bytes of the deletedSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeletedSubjectsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDeletedSubjectsIsMutable();
+        deletedSubjects_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList nonExistingSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNonExistingSubjectsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          nonExistingSubjects_ = new com.google.protobuf.LazyStringArrayList(nonExistingSubjects_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @return A list containing the nonExistingSubjects.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNonExistingSubjectsList() {
+        return nonExistingSubjects_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @return The count of nonExistingSubjects.
+       */
+      public int getNonExistingSubjectsCount() {
+        return nonExistingSubjects_.size();
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param index The index of the element to return.
+       * @return The nonExistingSubjects at the given index.
+       */
+      public java.lang.String getNonExistingSubjects(int index) {
+        return nonExistingSubjects_.get(index);
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the nonExistingSubjects at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNonExistingSubjectsBytes(int index) {
+        return nonExistingSubjects_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The nonExistingSubjects to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNonExistingSubjects(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNonExistingSubjectsIsMutable();
+        nonExistingSubjects_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param value The nonExistingSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNonExistingSubjects(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNonExistingSubjectsIsMutable();
+        nonExistingSubjects_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param values The nonExistingSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNonExistingSubjects(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNonExistingSubjectsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, nonExistingSubjects_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNonExistingSubjects() {
+        nonExistingSubjects_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subjects found in [FederationService.DeleteUserAccounts] request that do not exist.
+       * </pre>
+       *
+       * <code>repeated string non_existing_subjects = 2;</code>
+       * @param value The bytes of the nonExistingSubjects to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNonExistingSubjectsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureNonExistingSubjectsIsMutable();
+        nonExistingSubjects_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.organizationmanager.v1.saml.DeleteFederatedUserAccountsResponse)
+    private static final yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse();
+    }
+
+    public static yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFederatedUserAccountsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFederatedUserAccountsResponse>() {
+      @java.lang.Override
+      public DeleteFederatedUserAccountsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFederatedUserAccountsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFederatedUserAccountsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFederatedUserAccountsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.organizationmanager.v1.saml.FederationServiceOuterClass.DeleteFederatedUserAccountsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListFederatedUserAccountsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.organizationmanager.v1.saml.ListFederatedUserAccountsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -17795,6 +20282,21 @@ public final class FederationServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederatedUserAccountsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17891,71 +20393,86 @@ public final class FederationServiceOuterClass {
       "serAccountsMetadata\022\025\n\rfederation_id\030\001 \001" +
       "(\t\"k\n AddFederatedUserAccountsResponse\022G" +
       "\n\ruser_accounts\030\001 \003(\01320.yandex.cloud.org" +
-      "anizationmanager.v1.UserAccount\"\242\001\n List" +
-      "FederatedUserAccountsRequest\022#\n\rfederati" +
-      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
-      "1\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1010\"\205\001\n" +
-      "!ListFederatedUserAccountsResponse\022G\n\rus" +
-      "er_accounts\030\001 \003(\01320.yandex.cloud.organiz" +
-      "ationmanager.v1.UserAccount\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"\201\001\n\037ListFederationOperation" +
-      "sRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=5" +
-      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage" +
-      "_token\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederati" +
-      "onOperationsResponse\0225\n\noperations\030\001 \003(\013" +
-      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t2\313\016\n\021FederationServi" +
-      "ce\022\276\001\n\003Get\022>.yandex.cloud.organizationma" +
-      "nager.v1.saml.GetFederationRequest\0324.yan" +
-      "dex.cloud.organizationmanager.v1.saml.Fe" +
-      "deration\"A\202\323\344\223\002;\0229/organization-manager/" +
-      "v1/saml/federations/{federation_id}\022\276\001\n\004" +
-      "List\022@.yandex.cloud.organizationmanager." +
-      "v1.saml.ListFederationsRequest\032A.yandex." +
-      "cloud.organizationmanager.v1.saml.ListFe" +
-      "derationsResponse\"1\202\323\344\223\002+\022)/organization" +
-      "-manager/v1/saml/federations\022\316\001\n\006Create\022" +
-      "A.yandex.cloud.organizationmanager.v1.sa" +
-      "ml.CreateFederationRequest\032!.yandex.clou" +
-      "d.operation.Operation\"^\202\323\344\223\002.\")/organiza" +
-      "tion-manager/v1/saml/federations:\001*\262\322*&\n" +
-      "\030CreateFederationMetadata\022\nFederation\022\336\001" +
-      "\n\006Update\022A.yandex.cloud.organizationmana" +
-      "ger.v1.saml.UpdateFederationRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"n\202\323\344\223\002>29" +
+      "anizationmanager.v1.UserAccount\"r\n\"Delet" +
+      "eFederatedUserAccountsRequest\022#\n\rfederat" +
+      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\013subject_id" +
+      "s\030\002 \003(\tB\022\202\3101\0061-1000\212\3101\0041-50\"<\n#DeleteFed" +
+      "eratedUserAccountsMetadata\022\025\n\rfederation" +
+      "_id\030\001 \001(\t\"^\n#DeleteFederatedUserAccounts" +
+      "Response\022\030\n\020deleted_subjects\030\001 \003(\t\022\035\n\025no" +
+      "n_existing_subjects\030\002 \003(\t\"\242\001\n ListFedera" +
+      "tedUserAccountsRequest\022#\n\rfederation_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=20" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1010\"\205\001\n!ListF" +
+      "ederatedUserAccountsResponse\022G\n\ruser_acc" +
+      "ounts\030\001 \003(\01320.yandex.cloud.organizationm" +
+      "anager.v1.UserAccount\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"\201\001\n\037ListFederationOperationsReque" +
+      "st\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token" +
+      "\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederationOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t2\373\020\n\021FederationService\022\276\001\n" +
+      "\003Get\022>.yandex.cloud.organizationmanager." +
+      "v1.saml.GetFederationRequest\0324.yandex.cl" +
+      "oud.organizationmanager.v1.saml.Federati" +
+      "on\"A\202\323\344\223\002;\0229/organization-manager/v1/sam" +
+      "l/federations/{federation_id}\022\276\001\n\004List\022@" +
+      ".yandex.cloud.organizationmanager.v1.sam" +
+      "l.ListFederationsRequest\032A.yandex.cloud." +
+      "organizationmanager.v1.saml.ListFederati" +
+      "onsResponse\"1\202\323\344\223\002+\022)/organization-manag" +
+      "er/v1/saml/federations\022\316\001\n\006Create\022A.yand" +
+      "ex.cloud.organizationmanager.v1.saml.Cre" +
+      "ateFederationRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"^\202\323\344\223\002.\")/organization-m" +
+      "anager/v1/saml/federations:\001*\262\322*&\n\030Creat" +
+      "eFederationMetadata\022\nFederation\022\336\001\n\006Upda" +
+      "te\022A.yandex.cloud.organizationmanager.v1" +
+      ".saml.UpdateFederationRequest\032!.yandex.c" +
+      "loud.operation.Operation\"n\202\323\344\223\002>29/organ" +
+      "ization-manager/v1/saml/federations/{fed" +
+      "eration_id}:\001*\262\322*&\n\030UpdateFederationMeta" +
+      "data\022\nFederation\022\346\001\n\006Delete\022A.yandex.clo" +
+      "ud.organizationmanager.v1.saml.DeleteFed" +
+      "erationRequest\032!.yandex.cloud.operation." +
+      "Operation\"v\202\323\344\223\002;*9/organization-manager" +
+      "/v1/saml/federations/{federation_id}\262\322*1" +
+      "\n\030DeleteFederationMetadata\022\025google.proto" +
+      "buf.Empty\022\236\002\n\017AddUserAccounts\022I.yandex.c" +
+      "loud.organizationmanager.v1.saml.AddFede" +
+      "ratedUserAccountsRequest\032!.yandex.cloud." +
+      "operation.Operation\"\234\001\202\323\344\223\002N\"I/organizat" +
+      "ion-manager/v1/saml/federations/{federat" +
+      "ion_id}:addUserAccounts:\001*\262\322*D\n AddFeder" +
+      "atedUserAccountsMetadata\022 AddFederatedUs" +
+      "erAccountsResponse\022\255\002\n\022DeleteUserAccount" +
+      "s\022L.yandex.cloud.organizationmanager.v1." +
+      "saml.DeleteFederatedUserAccountsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\245\001\202\323\344" +
+      "\223\002Q\"L/organization-manager/v1/saml/feder" +
+      "ations/{federation_id}:deleteUserAccount" +
+      "s:\001*\262\322*J\n#DeleteFederatedUserAccountsMet" +
+      "adata\022#DeleteFederatedUserAccountsRespon" +
+      "se\022\377\001\n\020ListUserAccounts\022J.yandex.cloud.o" +
+      "rganizationmanager.v1.saml.ListFederated" +
+      "UserAccountsRequest\032K.yandex.cloud.organ" +
+      "izationmanager.v1.saml.ListFederatedUser" +
+      "AccountsResponse\"R\202\323\344\223\002L\022J/organization-" +
+      "manager/v1/saml/federations/{federation_" +
+      "id}:listUserAccounts\022\365\001\n\016ListOperations\022" +
+      "I.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.ListFederationOperationsRequest\032J.yan" +
+      "dex.cloud.organizationmanager.v1.saml.Li" +
+      "stFederationOperationsResponse\"L\202\323\344\223\002F\022D" +
       "/organization-manager/v1/saml/federation" +
-      "s/{federation_id}:\001*\262\322*&\n\030UpdateFederati" +
-      "onMetadata\022\nFederation\022\346\001\n\006Delete\022A.yand" +
-      "ex.cloud.organizationmanager.v1.saml.Del" +
-      "eteFederationRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"v\202\323\344\223\002;*9/organization-m" +
-      "anager/v1/saml/federations/{federation_i" +
-      "d}\262\322*1\n\030DeleteFederationMetadata\022\025google" +
-      ".protobuf.Empty\022\236\002\n\017AddUserAccounts\022I.ya" +
-      "ndex.cloud.organizationmanager.v1.saml.A" +
-      "ddFederatedUserAccountsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\234\001\202\323\344\223\002N\"I/org" +
-      "anization-manager/v1/saml/federations/{f" +
-      "ederation_id}:addUserAccounts:\001*\262\322*D\n Ad" +
-      "dFederatedUserAccountsMetadata\022 AddFeder" +
-      "atedUserAccountsResponse\022\377\001\n\020ListUserAcc" +
-      "ounts\022J.yandex.cloud.organizationmanager" +
-      ".v1.saml.ListFederatedUserAccountsReques" +
-      "t\032K.yandex.cloud.organizationmanager.v1." +
-      "saml.ListFederatedUserAccountsResponse\"R" +
-      "\202\323\344\223\002L\022J/organization-manager/v1/saml/fe" +
-      "derations/{federation_id}:listUserAccoun" +
-      "ts\022\365\001\n\016ListOperations\022I.yandex.cloud.org" +
-      "anizationmanager.v1.saml.ListFederationO" +
-      "perationsRequest\032J.yandex.cloud.organiza" +
-      "tionmanager.v1.saml.ListFederationOperat" +
-      "ionsResponse\"L\202\323\344\223\002F\022D/organization-mana" +
-      "ger/v1/saml/federations/{federation_id}/" +
-      "operationsB\201\001\n,yandex.cloud.api.organiza" +
-      "tionmanager.v1.samlZQgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/organizati" +
-      "onmanager/v1/saml;samlb\006proto3"
+      "s/{federation_id}/operationsB\201\001\n,yandex." +
+      "cloud.api.organizationmanager.v1.samlZQg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/organizationmanager/v1/saml;saml" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18053,26 +20570,44 @@ public final class FederationServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_AddFederatedUserAccountsResponse_descriptor,
         new java.lang.String[] { "UserAccounts", });
-    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_descriptor =
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsRequest_descriptor,
+        new java.lang.String[] { "FederationId", "SubjectIds", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsMetadata_descriptor,
+        new java.lang.String[] { "FederationId", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_organizationmanager_v1_saml_DeleteFederatedUserAccountsResponse_descriptor,
+        new java.lang.String[] { "DeletedSubjects", "NonExistingSubjects", });
+    internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsRequest_descriptor,
         new java.lang.String[] { "FederationId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederatedUserAccountsResponse_descriptor,
         new java.lang.String[] { "UserAccounts", "NextPageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsRequest_descriptor,
         new java.lang.String[] { "FederationId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_saml_ListFederationOperationsResponse_descriptor,
