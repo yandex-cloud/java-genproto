@@ -1809,6 +1809,25 @@ public final class Ocr {
      */
     com.google.protobuf.ByteString
         getFullTextBytes();
+
+    /**
+     * <pre>
+     * Angle of rotate image
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+     * @return The enum numeric value on the wire for rotate.
+     */
+    int getRotateValue();
+    /**
+     * <pre>
+     * Angle of rotate image
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+     * @return The rotate.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.TextAnnotation}
@@ -1827,6 +1846,7 @@ public final class Ocr {
       entities_ = java.util.Collections.emptyList();
       tables_ = java.util.Collections.emptyList();
       fullText_ = "";
+      rotate_ = 0;
     }
 
     @java.lang.Override
@@ -1901,6 +1921,12 @@ public final class Ocr {
               java.lang.String s = input.readStringRequireUtf8();
 
               fullText_ = s;
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              rotate_ = rawValue;
               break;
             }
             default: {
@@ -2180,6 +2206,33 @@ public final class Ocr {
       }
     }
 
+    public static final int ROTATE_FIELD_NUMBER = 7;
+    private int rotate_;
+    /**
+     * <pre>
+     * Angle of rotate image
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+     * @return The enum numeric value on the wire for rotate.
+     */
+    @java.lang.Override public int getRotateValue() {
+      return rotate_;
+    }
+    /**
+     * <pre>
+     * Angle of rotate image
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+     * @return The rotate.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.ocr.v1.Ocr.Angle result = yandex.cloud.api.ai.ocr.v1.Ocr.Angle.valueOf(rotate_);
+      return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Angle.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2211,6 +2264,9 @@ public final class Ocr {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fullText_);
+      }
+      if (rotate_ != yandex.cloud.api.ai.ocr.v1.Ocr.Angle.ANGLE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, rotate_);
       }
       unknownFields.writeTo(output);
     }
@@ -2244,6 +2300,10 @@ public final class Ocr {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fullText_);
       }
+      if (rotate_ != yandex.cloud.api.ai.ocr.v1.Ocr.Angle.ANGLE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, rotate_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2271,6 +2331,7 @@ public final class Ocr {
           .equals(other.getTablesList())) return false;
       if (!getFullText()
           .equals(other.getFullText())) return false;
+      if (rotate_ != other.rotate_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2302,6 +2363,8 @@ public final class Ocr {
       }
       hash = (37 * hash) + FULL_TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getFullText().hashCode();
+      hash = (37 * hash) + ROTATE_FIELD_NUMBER;
+      hash = (53 * hash) + rotate_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2462,6 +2525,8 @@ public final class Ocr {
         }
         fullText_ = "";
 
+        rotate_ = 0;
+
         return this;
       }
 
@@ -2519,6 +2584,7 @@ public final class Ocr {
           result.tables_ = tablesBuilder_.build();
         }
         result.fullText_ = fullText_;
+        result.rotate_ = rotate_;
         onBuilt();
         return result;
       }
@@ -2654,6 +2720,9 @@ public final class Ocr {
         if (!other.getFullText().isEmpty()) {
           fullText_ = other.fullText_;
           onChanged();
+        }
+        if (other.rotate_ != 0) {
+          setRotateValue(other.getRotateValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3730,6 +3799,80 @@ public final class Ocr {
         onChanged();
         return this;
       }
+
+      private int rotate_ = 0;
+      /**
+       * <pre>
+       * Angle of rotate image
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+       * @return The enum numeric value on the wire for rotate.
+       */
+      @java.lang.Override public int getRotateValue() {
+        return rotate_;
+      }
+      /**
+       * <pre>
+       * Angle of rotate image
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+       * @param value The enum numeric value on the wire for rotate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRotateValue(int value) {
+        
+        rotate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Angle of rotate image
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+       * @return The rotate.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.ocr.v1.Ocr.Angle result = yandex.cloud.api.ai.ocr.v1.Ocr.Angle.valueOf(rotate_);
+        return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Angle.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Angle of rotate image
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+       * @param value The rotate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRotate(yandex.cloud.api.ai.ocr.v1.Ocr.Angle value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        rotate_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Angle of rotate image
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRotate() {
+        
+        rotate_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3826,25 +3969,6 @@ public final class Ocr {
      */
     com.google.protobuf.ByteString
         getTextBytes();
-
-    /**
-     * <pre>
-     * Angle of rotate image
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-     * @return The enum numeric value on the wire for rotate.
-     */
-    int getRotateValue();
-    /**
-     * <pre>
-     * Angle of rotate image
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-     * @return The rotate.
-     */
-    yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.Entity}
@@ -3861,7 +3985,6 @@ public final class Ocr {
     private Entity() {
       name_ = "";
       text_ = "";
-      rotate_ = 0;
     }
 
     @java.lang.Override
@@ -3904,12 +4027,6 @@ public final class Ocr {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              rotate_ = rawValue;
               break;
             }
             default: {
@@ -4036,33 +4153,6 @@ public final class Ocr {
       }
     }
 
-    public static final int ROTATE_FIELD_NUMBER = 3;
-    private int rotate_;
-    /**
-     * <pre>
-     * Angle of rotate image
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-     * @return The enum numeric value on the wire for rotate.
-     */
-    @java.lang.Override public int getRotateValue() {
-      return rotate_;
-    }
-    /**
-     * <pre>
-     * Angle of rotate image
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-     * @return The rotate.
-     */
-    @java.lang.Override public yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate() {
-      @SuppressWarnings("deprecation")
-      yandex.cloud.api.ai.ocr.v1.Ocr.Angle result = yandex.cloud.api.ai.ocr.v1.Ocr.Angle.valueOf(rotate_);
-      return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Angle.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4083,9 +4173,6 @@ public final class Ocr {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
-      if (rotate_ != yandex.cloud.api.ai.ocr.v1.Ocr.Angle.ANGLE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, rotate_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -4100,10 +4187,6 @@ public final class Ocr {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
-      }
-      if (rotate_ != yandex.cloud.api.ai.ocr.v1.Ocr.Angle.ANGLE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, rotate_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4124,7 +4207,6 @@ public final class Ocr {
           .equals(other.getName())) return false;
       if (!getText()
           .equals(other.getText())) return false;
-      if (rotate_ != other.rotate_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4140,8 +4222,6 @@ public final class Ocr {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
-      hash = (37 * hash) + ROTATE_FIELD_NUMBER;
-      hash = (53 * hash) + rotate_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4279,8 +4359,6 @@ public final class Ocr {
 
         text_ = "";
 
-        rotate_ = 0;
-
         return this;
       }
 
@@ -4309,7 +4387,6 @@ public final class Ocr {
         yandex.cloud.api.ai.ocr.v1.Ocr.Entity result = new yandex.cloud.api.ai.ocr.v1.Ocr.Entity(this);
         result.name_ = name_;
         result.text_ = text_;
-        result.rotate_ = rotate_;
         onBuilt();
         return result;
       }
@@ -4365,9 +4442,6 @@ public final class Ocr {
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
-        }
-        if (other.rotate_ != 0) {
-          setRotateValue(other.getRotateValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4586,80 +4660,6 @@ public final class Ocr {
   checkByteStringIsUtf8(value);
         
         text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int rotate_ = 0;
-      /**
-       * <pre>
-       * Angle of rotate image
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-       * @return The enum numeric value on the wire for rotate.
-       */
-      @java.lang.Override public int getRotateValue() {
-        return rotate_;
-      }
-      /**
-       * <pre>
-       * Angle of rotate image
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-       * @param value The enum numeric value on the wire for rotate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRotateValue(int value) {
-        
-        rotate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Angle of rotate image
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-       * @return The rotate.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Angle getRotate() {
-        @SuppressWarnings("deprecation")
-        yandex.cloud.api.ai.ocr.v1.Ocr.Angle result = yandex.cloud.api.ai.ocr.v1.Ocr.Angle.valueOf(rotate_);
-        return result == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Angle.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Angle of rotate image
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-       * @param value The rotate to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRotate(yandex.cloud.api.ai.ocr.v1.Ocr.Angle value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        rotate_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Angle of rotate image
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRotate() {
-        
-        rotate_ = 0;
         onChanged();
         return this;
       }
@@ -14617,15 +14617,15 @@ public final class Ocr {
       "\n yandex/cloud/ai/ocr/v1/ocr.proto\022\026yand" +
       "ex.cloud.ai.ocr.v1\";\n\007Polygon\0220\n\010vertice" +
       "s\030\001 \003(\0132\036.yandex.cloud.ai.ocr.v1.Vertex\"" +
-      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\322\001\n\016Text" +
+      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\201\002\n\016Text" +
       "Annotation\022\r\n\005width\030\001 \001(\003\022\016\n\006height\030\002 \001(" +
       "\003\022-\n\006blocks\030\003 \003(\0132\035.yandex.cloud.ai.ocr." +
       "v1.Block\0220\n\010entities\030\004 \003(\0132\036.yandex.clou" +
       "d.ai.ocr.v1.Entity\022-\n\006tables\030\005 \003(\0132\035.yan" +
       "dex.cloud.ai.ocr.v1.Table\022\021\n\tfull_text\030\006" +
-      " \001(\t\"S\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004text\030\002 \001" +
-      "(\t\022-\n\006rotate\030\003 \001(\0162\035.yandex.cloud.ai.ocr" +
-      ".v1.Angle\"\226\002\n\005Block\0225\n\014bounding_box\030\001 \001(" +
+      " \001(\t\022-\n\006rotate\030\007 \001(\0162\035.yandex.cloud.ai.o" +
+      "cr.v1.Angle\"$\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004t" +
+      "ext\030\002 \001(\t\"\226\002\n\005Block\0225\n\014bounding_box\030\001 \001(" +
       "\0132\037.yandex.cloud.ai.ocr.v1.Polygon\022+\n\005li" +
       "nes\030\002 \003(\0132\034.yandex.cloud.ai.ocr.v1.Line\022" +
       "A\n\tlanguages\030\003 \003(\0132..yandex.cloud.ai.ocr" +
@@ -14680,13 +14680,13 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_descriptor,
-        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", "Tables", "FullText", });
+        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", "Tables", "FullText", "Rotate", });
     internal_static_yandex_cloud_ai_ocr_v1_Entity_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_ocr_v1_Entity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Entity_descriptor,
-        new java.lang.String[] { "Name", "Text", "Rotate", });
+        new java.lang.String[] { "Name", "Text", });
     internal_static_yandex_cloud_ai_ocr_v1_Block_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ai_ocr_v1_Block_fieldAccessorTable = new

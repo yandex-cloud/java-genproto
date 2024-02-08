@@ -3188,6 +3188,50 @@ public final class DashboardServiceOuterClass {
      */
     yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.ParametrizationOrBuilder getParametrizationOrBuilder();
 
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The managedBy.
+     */
+    java.lang.String getManagedBy();
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The bytes for managedBy.
+     */
+    com.google.protobuf.ByteString
+        getManagedByBytes();
+
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The managedLink.
+     */
+    java.lang.String getManagedLink();
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The bytes for managedLink.
+     */
+    com.google.protobuf.ByteString
+        getManagedLinkBytes();
+
     public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.CreateDashboardRequest.ContainerCase getContainerCase();
   }
   /**
@@ -3207,6 +3251,8 @@ public final class DashboardServiceOuterClass {
       description_ = "";
       title_ = "";
       widgets_ = java.util.Collections.emptyList();
+      managedBy_ = "";
+      managedLink_ = "";
     }
 
     @java.lang.Override
@@ -3297,6 +3343,18 @@ public final class DashboardServiceOuterClass {
                 parametrization_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              managedBy_ = s;
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              managedLink_ = s;
               break;
             }
             default: {
@@ -3782,6 +3840,102 @@ public final class DashboardServiceOuterClass {
       return getParametrization();
     }
 
+    public static final int MANAGED_BY_FIELD_NUMBER = 26;
+    private volatile java.lang.Object managedBy_;
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The managedBy.
+     */
+    @java.lang.Override
+    public java.lang.String getManagedBy() {
+      java.lang.Object ref = managedBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managedBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The bytes for managedBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagedByBytes() {
+      java.lang.Object ref = managedBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MANAGED_LINK_FIELD_NUMBER = 27;
+    private volatile java.lang.Object managedLink_;
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The managedLink.
+     */
+    @java.lang.Override
+    public java.lang.String getManagedLink() {
+      java.lang.Object ref = managedLink_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managedLink_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The bytes for managedLink.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagedLinkBytes() {
+      java.lang.Object ref = managedLink_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managedLink_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3819,6 +3973,12 @@ public final class DashboardServiceOuterClass {
       }
       if (parametrization_ != null) {
         output.writeMessage(24, getParametrization());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, managedBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
       }
       unknownFields.writeTo(output);
     }
@@ -3859,6 +4019,12 @@ public final class DashboardServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(24, getParametrization());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, managedBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3889,6 +4055,10 @@ public final class DashboardServiceOuterClass {
         if (!getParametrization()
             .equals(other.getParametrization())) return false;
       }
+      if (!getManagedBy()
+          .equals(other.getManagedBy())) return false;
+      if (!getManagedLink()
+          .equals(other.getManagedLink())) return false;
       if (!getContainerCase().equals(other.getContainerCase())) return false;
       switch (containerCase_) {
         case 2:
@@ -3927,6 +4097,10 @@ public final class DashboardServiceOuterClass {
         hash = (37 * hash) + PARAMETRIZATION_FIELD_NUMBER;
         hash = (53 * hash) + getParametrization().hashCode();
       }
+      hash = (37 * hash) + MANAGED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getManagedBy().hashCode();
+      hash = (37 * hash) + MANAGED_LINK_FIELD_NUMBER;
+      hash = (53 * hash) + getManagedLink().hashCode();
       switch (containerCase_) {
         case 2:
           hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
@@ -4110,6 +4284,10 @@ public final class DashboardServiceOuterClass {
           parametrization_ = null;
           parametrizationBuilder_ = null;
         }
+        managedBy_ = "";
+
+        managedLink_ = "";
+
         containerCase_ = 0;
         container_ = null;
         return this;
@@ -4161,6 +4339,8 @@ public final class DashboardServiceOuterClass {
         } else {
           result.parametrization_ = parametrizationBuilder_.build();
         }
+        result.managedBy_ = managedBy_;
+        result.managedLink_ = managedLink_;
         result.containerCase_ = containerCase_;
         onBuilt();
         return result;
@@ -4252,6 +4432,14 @@ public final class DashboardServiceOuterClass {
         }
         if (other.hasParametrization()) {
           mergeParametrization(other.getParametrization());
+        }
+        if (!other.getManagedBy().isEmpty()) {
+          managedBy_ = other.managedBy_;
+          onChanged();
+        }
+        if (!other.getManagedLink().isEmpty()) {
+          managedLink_ = other.managedLink_;
+          onChanged();
         }
         switch (other.getContainerCase()) {
           case FOLDER_ID: {
@@ -5343,6 +5531,208 @@ public final class DashboardServiceOuterClass {
         }
         return parametrizationBuilder_;
       }
+
+      private java.lang.Object managedBy_ = "";
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return The managedBy.
+       */
+      public java.lang.String getManagedBy() {
+        java.lang.Object ref = managedBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managedBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return The bytes for managedBy.
+       */
+      public com.google.protobuf.ByteString
+          getManagedByBytes() {
+        java.lang.Object ref = managedBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managedBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @param value The managedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managedBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagedBy() {
+        
+        managedBy_ = getDefaultInstance().getManagedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @param value The bytes for managedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        managedBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managedLink_ = "";
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return The managedLink.
+       */
+      public java.lang.String getManagedLink() {
+        java.lang.Object ref = managedLink_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managedLink_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return The bytes for managedLink.
+       */
+      public com.google.protobuf.ByteString
+          getManagedLinkBytes() {
+        java.lang.Object ref = managedLink_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managedLink_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @param value The managedLink to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedLink(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managedLink_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagedLink() {
+        
+        managedLink_ = getDefaultInstance().getManagedLink();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @param value The bytes for managedLink to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedLinkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        managedLink_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6233,6 +6623,50 @@ public final class DashboardServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getEtagBytes();
+
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The managedBy.
+     */
+    java.lang.String getManagedBy();
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The bytes for managedBy.
+     */
+    com.google.protobuf.ByteString
+        getManagedByBytes();
+
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The managedLink.
+     */
+    java.lang.String getManagedLink();
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The bytes for managedLink.
+     */
+    com.google.protobuf.ByteString
+        getManagedLinkBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.monitoring.v3.UpdateDashboardRequest}
@@ -6253,6 +6687,8 @@ public final class DashboardServiceOuterClass {
       title_ = "";
       widgets_ = java.util.Collections.emptyList();
       etag_ = "";
+      managedBy_ = "";
+      managedLink_ = "";
     }
 
     @java.lang.Override
@@ -6349,6 +6785,18 @@ public final class DashboardServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               etag_ = s;
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              managedBy_ = s;
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              managedLink_ = s;
               break;
             }
             default: {
@@ -6827,6 +7275,102 @@ public final class DashboardServiceOuterClass {
       }
     }
 
+    public static final int MANAGED_BY_FIELD_NUMBER = 26;
+    private volatile java.lang.Object managedBy_;
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The managedBy.
+     */
+    @java.lang.Override
+    public java.lang.String getManagedBy() {
+      java.lang.Object ref = managedBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managedBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Entity that controls dashboard
+     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * </pre>
+     *
+     * <code>string managed_by = 26;</code>
+     * @return The bytes for managedBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagedByBytes() {
+      java.lang.Object ref = managedBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MANAGED_LINK_FIELD_NUMBER = 27;
+    private volatile java.lang.Object managedLink_;
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The managedLink.
+     */
+    @java.lang.Override
+    public java.lang.String getManagedLink() {
+      java.lang.Object ref = managedLink_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managedLink_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Information about entity that controls dashboard
+     * Must be valid URI
+     * </pre>
+     *
+     * <code>string managed_link = 27;</code>
+     * @return The bytes for managedLink.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagedLinkBytes() {
+      java.lang.Object ref = managedLink_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managedLink_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6867,6 +7411,12 @@ public final class DashboardServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, etag_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, managedBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
       }
       unknownFields.writeTo(output);
     }
@@ -6910,6 +7460,12 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, etag_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, managedBy_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6944,6 +7500,10 @@ public final class DashboardServiceOuterClass {
       }
       if (!getEtag()
           .equals(other.getEtag())) return false;
+      if (!getManagedBy()
+          .equals(other.getManagedBy())) return false;
+      if (!getManagedLink()
+          .equals(other.getManagedLink())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6977,6 +7537,10 @@ public final class DashboardServiceOuterClass {
       }
       hash = (37 * hash) + ETAG_FIELD_NUMBER;
       hash = (53 * hash) + getEtag().hashCode();
+      hash = (37 * hash) + MANAGED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getManagedBy().hashCode();
+      hash = (37 * hash) + MANAGED_LINK_FIELD_NUMBER;
+      hash = (53 * hash) + getManagedLink().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7156,6 +7720,10 @@ public final class DashboardServiceOuterClass {
         }
         etag_ = "";
 
+        managedBy_ = "";
+
+        managedLink_ = "";
+
         return this;
       }
 
@@ -7204,6 +7772,8 @@ public final class DashboardServiceOuterClass {
           result.parametrization_ = parametrizationBuilder_.build();
         }
         result.etag_ = etag_;
+        result.managedBy_ = managedBy_;
+        result.managedLink_ = managedLink_;
         onBuilt();
         return result;
       }
@@ -7301,6 +7871,14 @@ public final class DashboardServiceOuterClass {
         }
         if (!other.getEtag().isEmpty()) {
           etag_ = other.etag_;
+          onChanged();
+        }
+        if (!other.getManagedBy().isEmpty()) {
+          managedBy_ = other.managedBy_;
+          onChanged();
+        }
+        if (!other.getManagedLink().isEmpty()) {
+          managedLink_ = other.managedLink_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8442,6 +9020,208 @@ public final class DashboardServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         etag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managedBy_ = "";
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return The managedBy.
+       */
+      public java.lang.String getManagedBy() {
+        java.lang.Object ref = managedBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managedBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return The bytes for managedBy.
+       */
+      public com.google.protobuf.ByteString
+          getManagedByBytes() {
+        java.lang.Object ref = managedBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managedBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @param value The managedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managedBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagedBy() {
+        
+        managedBy_ = getDefaultInstance().getManagedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Entity that controls dashboard
+       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * </pre>
+       *
+       * <code>string managed_by = 26;</code>
+       * @param value The bytes for managedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        managedBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managedLink_ = "";
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return The managedLink.
+       */
+      public java.lang.String getManagedLink() {
+        java.lang.Object ref = managedLink_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managedLink_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return The bytes for managedLink.
+       */
+      public com.google.protobuf.ByteString
+          getManagedLinkBytes() {
+        java.lang.Object ref = managedLink_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managedLink_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @param value The managedLink to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedLink(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        managedLink_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagedLink() {
+        
+        managedLink_ = getDefaultInstance().getManagedLink();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about entity that controls dashboard
+       * Must be valid URI
+       * </pre>
+       *
+       * <code>string managed_link = 27;</code>
+       * @param value The bytes for managedLink to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagedLinkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        managedLink_ = value;
         onChanged();
         return this;
       }
@@ -12605,7 +13385,7 @@ public final class DashboardServiceOuterClass {
       "B\013\n\tcontainer\"l\n\026ListDashboardsResponse\022" +
       "9\n\ndashboards\030\001 \003(\0132%.yandex.cloud.monit" +
       "oring.v3.Dashboard\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\357\003\n\026CreateDashboardRequest\022!\n\tfolder" +
+      "\001(\t\"\237\004\n\026CreateDashboardRequest\022!\n\tfolder" +
       "_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030\023 \001(\tB" +
       "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
       "\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels" +
@@ -12616,62 +13396,65 @@ public final class DashboardServiceOuterClass {
       "\n\007widgets\030\027 \003(\0132\".yandex.cloud.monitorin" +
       "g.v3.Widget\022D\n\017parametrization\030\030 \001(\0132+.y" +
       "andex.cloud.monitoring.v3.Parametrizatio" +
-      "n\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001B\013\n\tcontainer\"/\n\027CreateDashboard" +
-      "Metadata\022\024\n\014dashboard_id\030\001 \001(\t\"\361\003\n\026Updat" +
-      "eDashboardRequest\022\"\n\014dashboard_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z](" +
-      "[-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description" +
-      "\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels\030\004 \003(\0132>.yan" +
-      "dex.cloud.monitoring.v3.UpdateDashboardR" +
-      "equest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017" +
-      "[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_." +
-      "/\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\0223\n\007widgets\030\006 " +
-      "\003(\0132\".yandex.cloud.monitoring.v3.Widget\022" +
-      "D\n\017parametrization\030\007 \001(\0132+.yandex.cloud." +
-      "monitoring.v3.Parametrization\022\014\n\004etag\030\010 " +
+      "n\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_link\030\033 " +
       "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"/\n\027UpdateDashboardMetadata\022\024\n" +
-      "\014dashboard_id\030\001 \001(\t\"J\n\026DeleteDashboardRe" +
-      "quest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\014\n\004etag\030\002 \001(\t\"/\n\027DeleteDashboardMetada" +
-      "ta\022\024\n\014dashboard_id\030\001 \001(\t\"\202\001\n\036ListDashboa" +
-      "rdOperationsRequest\022\"\n\014dashboard_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n" +
-      "\037ListDashboardOperationsResponse\0225\n\noper" +
-      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
-      "eration\022\027\n\017next_page_token\030\002 \001(\t2\267\010\n\020Das" +
-      "hboardService\022\217\001\n\003Get\022/.yandex.cloud.mon" +
-      "itoring.v3.GetDashboardRequest\032%.yandex." +
-      "cloud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(/" +
-      "monitoring/v3/dashboards/{dashboard_id}\022" +
-      "\220\001\n\004List\0221.yandex.cloud.monitoring.v3.Li" +
-      "stDashboardsRequest\0322.yandex.cloud.monit" +
-      "oring.v3.ListDashboardsResponse\"!\202\323\344\223\002\033\022" +
-      "\031/monitoring/v3/dashboards\022\255\001\n\006Create\0222." +
-      "yandex.cloud.monitoring.v3.CreateDashboa" +
-      "rdRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards:" +
-      "\001*\262\322*$\n\027CreateDashboardMetadata\022\tDashboa" +
-      "rd\022\274\001\n\006Update\0222.yandex.cloud.monitoring." +
-      "v3.UpdateDashboardRequest\032!.yandex.cloud" +
-      ".operation.Operation\"[\202\323\344\223\002-2(/monitorin" +
-      "g/v3/dashboards/{dashboard_id}:\001*\262\322*$\n\027U" +
-      "pdateDashboardMetadata\022\tDashboard\022\305\001\n\006De" +
-      "lete\0222.yandex.cloud.monitoring.v3.Delete" +
-      "DashboardRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"d\202\323\344\223\002**(/monitoring/v3/dash" +
-      "boards/{dashboard_id}\262\322*0\n\027DeleteDashboa" +
-      "rdMetadata\022\025google.protobuf.Empty\022\306\001\n\016Li" +
-      "stOperations\022:.yandex.cloud.monitoring.v" +
-      "3.ListDashboardOperationsRequest\032;.yande" +
-      "x.cloud.monitoring.v3.ListDashboardOpera" +
-      "tionsResponse\";\202\323\344\223\0025\0223/monitoring/v3/da" +
-      "shboards/{dashboard_id}/operationsBk\n\036ya" +
-      "ndex.cloud.api.monitoring.v3ZIgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "onitoring/v3;monitoringb\006proto3"
+      "\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\031\020\032\"/\n\027CreateD" +
+      "ashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"\241" +
+      "\004\n\026UpdateDashboardRequest\022\"\n\014dashboard_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071" +
+      " |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013des" +
+      "cription\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels\030\004 \003" +
+      "(\0132>.yandex.cloud.monitoring.v3.UpdateDa" +
+      "shboardRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004" +
+      "<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[" +
+      "a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\0223\n\007wi" +
+      "dgets\030\006 \003(\0132\".yandex.cloud.monitoring.v3" +
+      ".Widget\022D\n\017parametrization\030\007 \001(\0132+.yande" +
+      "x.cloud.monitoring.v3.Parametrization\022\014\n" +
+      "\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014manag" +
+      "ed_link\030\033 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\032\"/\n\027UpdateDash" +
+      "boardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"J\n\026D" +
+      "eleteDashboardRequest\022\"\n\014dashboard_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"/\n\027Delet" +
+      "eDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t" +
+      "\"\202\001\n\036ListDashboardOperationsRequest\022\"\n\014d" +
+      "ashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\"q\n\037ListDashboardOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t2\267\010\n\020DashboardService\022\217\001\n\003Get\022/." +
+      "yandex.cloud.monitoring.v3.GetDashboardR" +
+      "equest\032%.yandex.cloud.monitoring.v3.Dash" +
+      "board\"0\202\323\344\223\002*\022(/monitoring/v3/dashboards" +
+      "/{dashboard_id}\022\220\001\n\004List\0221.yandex.cloud." +
+      "monitoring.v3.ListDashboardsRequest\0322.ya" +
+      "ndex.cloud.monitoring.v3.ListDashboardsR" +
+      "esponse\"!\202\323\344\223\002\033\022\031/monitoring/v3/dashboar" +
+      "ds\022\255\001\n\006Create\0222.yandex.cloud.monitoring." +
+      "v3.CreateDashboardRequest\032!.yandex.cloud" +
+      ".operation.Operation\"L\202\323\344\223\002\036\"\031/monitorin" +
+      "g/v3/dashboards:\001*\262\322*$\n\027CreateDashboardM" +
+      "etadata\022\tDashboard\022\274\001\n\006Update\0222.yandex.c" +
+      "loud.monitoring.v3.UpdateDashboardReques" +
+      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
+      "\344\223\002-2(/monitoring/v3/dashboards/{dashboa" +
+      "rd_id}:\001*\262\322*$\n\027UpdateDashboardMetadata\022\t" +
+      "Dashboard\022\305\001\n\006Delete\0222.yandex.cloud.moni" +
+      "toring.v3.DeleteDashboardRequest\032!.yande" +
+      "x.cloud.operation.Operation\"d\202\323\344\223\002**(/mo" +
+      "nitoring/v3/dashboards/{dashboard_id}\262\322*" +
+      "0\n\027DeleteDashboardMetadata\022\025google.proto" +
+      "buf.Empty\022\306\001\n\016ListOperations\022:.yandex.cl" +
+      "oud.monitoring.v3.ListDashboardOperation" +
+      "sRequest\032;.yandex.cloud.monitoring.v3.Li" +
+      "stDashboardOperationsResponse\";\202\323\344\223\0025\0223/" +
+      "monitoring/v3/dashboards/{dashboard_id}/" +
+      "operationsBk\n\036yandex.cloud.api.monitorin" +
+      "g.v3ZIgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/monitoring/v3;monitoringb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12707,7 +13490,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Container", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "ManagedBy", "ManagedLink", "Container", });
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_LabelsEntry_fieldAccessorTable = new
@@ -12725,7 +13508,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_descriptor,
-        new java.lang.String[] { "DashboardId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", });
+        new java.lang.String[] { "DashboardId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", "ManagedBy", "ManagedLink", });
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_LabelsEntry_fieldAccessorTable = new

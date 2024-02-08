@@ -3,6 +3,9 @@ package yandex.cloud.api.datasphere.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing S3 configurations.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,6 +125,9 @@ public final class S3ServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing S3 configurations.
+   * </pre>
    */
   public static abstract class S3ServiceImplBase implements io.grpc.BindableService {
 
@@ -166,6 +172,9 @@ public final class S3ServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing S3 configurations.
+   * </pre>
    */
   public static final class S3ServiceStub extends io.grpc.stub.AbstractAsyncStub<S3ServiceStub> {
     private S3ServiceStub(
@@ -203,6 +212,9 @@ public final class S3ServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing S3 configurations.
+   * </pre>
    */
   public static final class S3ServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<S3ServiceBlockingStub> {
     private S3ServiceBlockingStub(
@@ -238,6 +250,9 @@ public final class S3ServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing S3 configurations.
+   * </pre>
    */
   public static final class S3ServiceFutureStub extends io.grpc.stub.AbstractFutureStub<S3ServiceFutureStub> {
     private S3ServiceFutureStub(

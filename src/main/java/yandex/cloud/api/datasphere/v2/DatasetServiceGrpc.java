@@ -3,6 +3,9 @@ package yandex.cloud.api.datasphere.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Datasets.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,6 +125,9 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Datasets.
+   * </pre>
    */
   public static abstract class DatasetServiceImplBase implements io.grpc.BindableService {
 
@@ -166,6 +172,9 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Datasets.
+   * </pre>
    */
   public static final class DatasetServiceStub extends io.grpc.stub.AbstractAsyncStub<DatasetServiceStub> {
     private DatasetServiceStub(
@@ -203,6 +212,9 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Datasets.
+   * </pre>
    */
   public static final class DatasetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingStub> {
     private DatasetServiceBlockingStub(
@@ -238,6 +250,9 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Datasets.
+   * </pre>
    */
   public static final class DatasetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DatasetServiceFutureStub> {
     private DatasetServiceFutureStub(

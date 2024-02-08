@@ -3,6 +3,9 @@ package yandex.cloud.api.datasphere.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Docker Images.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -91,6 +94,9 @@ public final class DockerImageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Docker Images.
+   * </pre>
    */
   public static abstract class DockerImageServiceImplBase implements io.grpc.BindableService {
 
@@ -118,6 +124,9 @@ public final class DockerImageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Docker Images.
+   * </pre>
    */
   public static final class DockerImageServiceStub extends io.grpc.stub.AbstractAsyncStub<DockerImageServiceStub> {
     private DockerImageServiceStub(
@@ -144,6 +153,9 @@ public final class DockerImageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Docker Images.
+   * </pre>
    */
   public static final class DockerImageServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DockerImageServiceBlockingStub> {
     private DockerImageServiceBlockingStub(
@@ -169,6 +181,9 @@ public final class DockerImageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Docker Images.
+   * </pre>
    */
   public static final class DockerImageServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DockerImageServiceFutureStub> {
     private DockerImageServiceFutureStub(
