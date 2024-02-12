@@ -815,6 +815,33 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     * @return Whether the serialPortSettings field is set.
+     */
+    boolean hasSerialPortSettings();
+    /**
+     * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     * @return The serialPortSettings.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getSerialPortSettings();
+    /**
+     * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder getSerialPortSettingsOrBuilder();
+
+    /**
+     * <pre>
      * GPU settings
      * </pre>
      *
@@ -1322,6 +1349,19 @@ public final class InstanceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(metadataOptions_);
                 metadataOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 194: {
+              yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder subBuilder = null;
+              if (serialPortSettings_ != null) {
+                subBuilder = serialPortSettings_.toBuilder();
+              }
+              serialPortSettings_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(serialPortSettings_);
+                serialPortSettings_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2582,6 +2622,44 @@ public final class InstanceOuterClass {
       return networkInterfaces_.get(index);
     }
 
+    public static final int SERIAL_PORT_SETTINGS_FIELD_NUMBER = 24;
+    private yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings serialPortSettings_;
+    /**
+     * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     * @return Whether the serialPortSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSerialPortSettings() {
+      return serialPortSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     * @return The serialPortSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getSerialPortSettings() {
+      return serialPortSettings_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDefaultInstance() : serialPortSettings_;
+    }
+    /**
+     * <pre>
+     * Serial port settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder getSerialPortSettingsOrBuilder() {
+      return getSerialPortSettings();
+    }
+
     public static final int GPU_SETTINGS_FIELD_NUMBER = 26;
     private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
     /**
@@ -3075,6 +3153,9 @@ public final class InstanceOuterClass {
       if (metadataOptions_ != null) {
         output.writeMessage(23, getMetadataOptions());
       }
+      if (serialPortSettings_ != null) {
+        output.writeMessage(24, getSerialPortSettings());
+      }
       if (gpuSettings_ != null) {
         output.writeMessage(26, getGpuSettings());
       }
@@ -3191,6 +3272,10 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, getMetadataOptions());
       }
+      if (serialPortSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getSerialPortSettings());
+      }
       if (gpuSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getGpuSettings());
@@ -3269,6 +3354,11 @@ public final class InstanceOuterClass {
           .equals(other.getFilesystemsList())) return false;
       if (!getNetworkInterfacesList()
           .equals(other.getNetworkInterfacesList())) return false;
+      if (hasSerialPortSettings() != other.hasSerialPortSettings()) return false;
+      if (hasSerialPortSettings()) {
+        if (!getSerialPortSettings()
+            .equals(other.getSerialPortSettings())) return false;
+      }
       if (hasGpuSettings() != other.hasGpuSettings()) return false;
       if (hasGpuSettings()) {
         if (!getGpuSettings()
@@ -3367,6 +3457,10 @@ public final class InstanceOuterClass {
       if (getNetworkInterfacesCount() > 0) {
         hash = (37 * hash) + NETWORK_INTERFACES_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkInterfacesList().hashCode();
+      }
+      if (hasSerialPortSettings()) {
+        hash = (37 * hash) + SERIAL_PORT_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSerialPortSettings().hashCode();
       }
       if (hasGpuSettings()) {
         hash = (37 * hash) + GPU_SETTINGS_FIELD_NUMBER;
@@ -3629,6 +3723,12 @@ public final class InstanceOuterClass {
         } else {
           networkInterfacesBuilder_.clear();
         }
+        if (serialPortSettingsBuilder_ == null) {
+          serialPortSettings_ = null;
+        } else {
+          serialPortSettings_ = null;
+          serialPortSettingsBuilder_ = null;
+        }
         if (gpuSettingsBuilder_ == null) {
           gpuSettings_ = null;
         } else {
@@ -3762,6 +3862,11 @@ public final class InstanceOuterClass {
           result.networkInterfaces_ = networkInterfaces_;
         } else {
           result.networkInterfaces_ = networkInterfacesBuilder_.build();
+        }
+        if (serialPortSettingsBuilder_ == null) {
+          result.serialPortSettings_ = serialPortSettings_;
+        } else {
+          result.serialPortSettings_ = serialPortSettingsBuilder_.build();
         }
         if (gpuSettingsBuilder_ == null) {
           result.gpuSettings_ = gpuSettings_;
@@ -3987,6 +4092,9 @@ public final class InstanceOuterClass {
               networkInterfacesBuilder_.addAllMessages(other.networkInterfaces_);
             }
           }
+        }
+        if (other.hasSerialPortSettings()) {
+          mergeSerialPortSettings(other.getSerialPortSettings());
         }
         if (other.hasGpuSettings()) {
           mergeGpuSettings(other.getGpuSettings());
@@ -6864,6 +6972,161 @@ public final class InstanceOuterClass {
           networkInterfaces_ = null;
         }
         return networkInterfacesBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings serialPortSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder> serialPortSettingsBuilder_;
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       * @return Whether the serialPortSettings field is set.
+       */
+      public boolean hasSerialPortSettings() {
+        return serialPortSettingsBuilder_ != null || serialPortSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       * @return The serialPortSettings.
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getSerialPortSettings() {
+        if (serialPortSettingsBuilder_ == null) {
+          return serialPortSettings_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDefaultInstance() : serialPortSettings_;
+        } else {
+          return serialPortSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public Builder setSerialPortSettings(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings value) {
+        if (serialPortSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serialPortSettings_ = value;
+          onChanged();
+        } else {
+          serialPortSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public Builder setSerialPortSettings(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder builderForValue) {
+        if (serialPortSettingsBuilder_ == null) {
+          serialPortSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          serialPortSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public Builder mergeSerialPortSettings(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings value) {
+        if (serialPortSettingsBuilder_ == null) {
+          if (serialPortSettings_ != null) {
+            serialPortSettings_ =
+              yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.newBuilder(serialPortSettings_).mergeFrom(value).buildPartial();
+          } else {
+            serialPortSettings_ = value;
+          }
+          onChanged();
+        } else {
+          serialPortSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public Builder clearSerialPortSettings() {
+        if (serialPortSettingsBuilder_ == null) {
+          serialPortSettings_ = null;
+          onChanged();
+        } else {
+          serialPortSettings_ = null;
+          serialPortSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder getSerialPortSettingsBuilder() {
+        
+        onChanged();
+        return getSerialPortSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder getSerialPortSettingsOrBuilder() {
+        if (serialPortSettingsBuilder_ != null) {
+          return serialPortSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return serialPortSettings_ == null ?
+              yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDefaultInstance() : serialPortSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Serial port settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings serial_port_settings = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder> 
+          getSerialPortSettingsFieldBuilder() {
+        if (serialPortSettingsBuilder_ == null) {
+          serialPortSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder>(
+                  getSerialPortSettings(),
+                  getParentForChildren(),
+                  isClean());
+          serialPortSettings_ = null;
+        }
+        return serialPortSettingsBuilder_;
       }
 
       private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
@@ -22449,6 +22712,700 @@ public final class InstanceOuterClass {
 
   }
 
+  public interface SerialPortSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.SerialPortSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Authentication and authorization in serial console when using SSH protocol
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+     * @return The enum numeric value on the wire for sshAuthorization.
+     */
+    int getSshAuthorizationValue();
+    /**
+     * <pre>
+     * Authentication and authorization in serial console when using SSH protocol
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+     * @return The sshAuthorization.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization getSshAuthorization();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.SerialPortSettings}
+   */
+  public static final class SerialPortSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.SerialPortSettings)
+      SerialPortSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SerialPortSettings.newBuilder() to construct.
+    private SerialPortSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SerialPortSettings() {
+      sshAuthorization_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SerialPortSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SerialPortSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              sshAuthorization_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_SerialPortSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.class, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization}
+     */
+    public enum SSHAuthorization
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SSH_AUTHORIZATION_UNSPECIFIED = 0;</code>
+       */
+      SSH_AUTHORIZATION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Authentication and authorization using SSH keys in instance metadata
+       * </pre>
+       *
+       * <code>INSTANCE_METADATA = 1;</code>
+       */
+      INSTANCE_METADATA(1),
+      /**
+       * <pre>
+       * Authentication and authorization using Oslogin service
+       * </pre>
+       *
+       * <code>OS_LOGIN = 2;</code>
+       */
+      OS_LOGIN(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SSH_AUTHORIZATION_UNSPECIFIED = 0;</code>
+       */
+      public static final int SSH_AUTHORIZATION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Authentication and authorization using SSH keys in instance metadata
+       * </pre>
+       *
+       * <code>INSTANCE_METADATA = 1;</code>
+       */
+      public static final int INSTANCE_METADATA_VALUE = 1;
+      /**
+       * <pre>
+       * Authentication and authorization using Oslogin service
+       * </pre>
+       *
+       * <code>OS_LOGIN = 2;</code>
+       */
+      public static final int OS_LOGIN_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SSHAuthorization valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SSHAuthorization forNumber(int value) {
+        switch (value) {
+          case 0: return SSH_AUTHORIZATION_UNSPECIFIED;
+          case 1: return INSTANCE_METADATA;
+          case 2: return OS_LOGIN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SSHAuthorization>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SSHAuthorization> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SSHAuthorization>() {
+              public SSHAuthorization findValueByNumber(int number) {
+                return SSHAuthorization.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SSHAuthorization[] VALUES = values();
+
+      public static SSHAuthorization valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SSHAuthorization(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization)
+    }
+
+    public static final int SSH_AUTHORIZATION_FIELD_NUMBER = 1;
+    private int sshAuthorization_;
+    /**
+     * <pre>
+     * Authentication and authorization in serial console when using SSH protocol
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+     * @return The enum numeric value on the wire for sshAuthorization.
+     */
+    @java.lang.Override public int getSshAuthorizationValue() {
+      return sshAuthorization_;
+    }
+    /**
+     * <pre>
+     * Authentication and authorization in serial console when using SSH protocol
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+     * @return The sshAuthorization.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization getSshAuthorization() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization result = yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.valueOf(sshAuthorization_);
+      return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sshAuthorization_ != yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.SSH_AUTHORIZATION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, sshAuthorization_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (sshAuthorization_ != yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.SSH_AUTHORIZATION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, sshAuthorization_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings other = (yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings) obj;
+
+      if (sshAuthorization_ != other.sshAuthorization_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SSH_AUTHORIZATION_FIELD_NUMBER;
+      hash = (53 * hash) + sshAuthorization_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.SerialPortSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.SerialPortSettings)
+        yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_SerialPortSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.class, yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        sshAuthorization_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings build() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings result = new yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings(this);
+        result.sshAuthorization_ = sshAuthorization_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.getDefaultInstance()) return this;
+        if (other.sshAuthorization_ != 0) {
+          setSshAuthorizationValue(other.getSshAuthorizationValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int sshAuthorization_ = 0;
+      /**
+       * <pre>
+       * Authentication and authorization in serial console when using SSH protocol
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+       * @return The enum numeric value on the wire for sshAuthorization.
+       */
+      @java.lang.Override public int getSshAuthorizationValue() {
+        return sshAuthorization_;
+      }
+      /**
+       * <pre>
+       * Authentication and authorization in serial console when using SSH protocol
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+       * @param value The enum numeric value on the wire for sshAuthorization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshAuthorizationValue(int value) {
+        
+        sshAuthorization_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authentication and authorization in serial console when using SSH protocol
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+       * @return The sshAuthorization.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization getSshAuthorization() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization result = yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.valueOf(sshAuthorization_);
+        return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Authentication and authorization in serial console when using SSH protocol
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+       * @param value The sshAuthorization to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSshAuthorization(yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings.SSHAuthorization value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        sshAuthorization_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authentication and authorization in serial console when using SSH protocol
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.SerialPortSettings.SSHAuthorization ssh_authorization = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSshAuthorization() {
+        
+        sshAuthorization_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.SerialPortSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.SerialPortSettings)
+    private static final yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SerialPortSettings>
+        PARSER = new com.google.protobuf.AbstractParser<SerialPortSettings>() {
+      @java.lang.Override
+      public SerialPortSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SerialPortSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SerialPortSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SerialPortSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.SerialPortSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_Instance_descriptor;
   private static final 
@@ -22534,6 +23491,11 @@ public final class InstanceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_MetadataOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_SerialPortSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22547,7 +23509,7 @@ public final class InstanceOuterClass {
       "\022\027yandex.cloud.compute.v1\032\036google/protob" +
       "uf/duration.proto\032\037google/protobuf/times" +
       "tamp.proto\032)yandex/cloud/compute/v1/main" +
-      "tenance.proto\"\215\014\n\010Instance\022\n\n\002id\030\001 \001(\t\022\021" +
+      "tenance.proto\"\344\014\n\010Instance\022\n\n\002id\030\001 \001(\t\022\021" +
       "\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
       "google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022" +
       "\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(\0132-.y" +
@@ -22567,83 +23529,90 @@ public final class InstanceOuterClass {
       "filesystems\030\025 \003(\0132+.yandex.cloud.compute" +
       ".v1.AttachedFilesystem\022E\n\022network_interf" +
       "aces\030\016 \003(\0132).yandex.cloud.compute.v1.Net" +
-      "workInterface\022:\n\014gpu_settings\030\032 \001(\0132$.ya" +
-      "ndex.cloud.compute.v1.GpuSettings\022\014\n\004fqd" +
-      "n\030\020 \001(\t\022D\n\021scheduling_policy\030\021 \001(\0132).yan" +
-      "dex.cloud.compute.v1.SchedulingPolicy\022\032\n" +
-      "\022service_account_id\030\022 \001(\t\022B\n\020network_set" +
-      "tings\030\023 \001(\0132(.yandex.cloud.compute.v1.Ne" +
-      "tworkSettings\022B\n\020placement_policy\030\024 \001(\0132" +
-      "(.yandex.cloud.compute.v1.PlacementPolic" +
-      "y\022\025\n\rhost_group_id\030\033 \001(\t\022\017\n\007host_id\030\034 \001(" +
-      "\t\022F\n\022maintenance_policy\030\035 \001(\0162*.yandex.c" +
-      "loud.compute.v1.MaintenancePolicy\022;\n\030mai" +
-      "ntenance_grace_period\030\036 \001(\0132\031.google.pro" +
-      "tobuf.Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Statu" +
-      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONIN" +
-      "G\020\001\022\013\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPE" +
-      "D\020\004\022\014\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPD" +
-      "ATING\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELET" +
-      "ING\020\n\"O\n\tResources\022\016\n\006memory\030\001 \001(\003\022\r\n\005co" +
-      "res\030\002 \001(\003\022\025\n\rcore_fraction\030\003 \001(\003\022\014\n\004gpus" +
-      "\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004mode\030\001 \001(\0162*." +
-      "yandex.cloud.compute.v1.AttachedDisk.Mod" +
-      "e\022\023\n\013device_name\030\002 \001(\t\022\023\n\013auto_delete\030\003 " +
-      "\001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode\022\024\n\020MODE_UNS" +
-      "PECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020" +
-      "\002\"6\n\021AttachedLocalDisk\022\014\n\004size\030\001 \001(\003\022\023\n\013" +
-      "device_name\030\002 \001(\t\"\275\001\n\022AttachedFilesystem" +
-      "\022>\n\004mode\030\001 \001(\01620.yandex.cloud.compute.v1" +
-      ".AttachedFilesystem.Mode\022\023\n\013device_name\030" +
-      "\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t\";\n\004Mode\022\024\n\020" +
-      "MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREA" +
-      "D_WRITE\020\002\"\357\001\n\020NetworkInterface\022\r\n\005index\030" +
-      "\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030" +
-      "\003 \001(\t\022C\n\022primary_v4_address\030\004 \001(\0132\'.yand" +
-      "ex.cloud.compute.v1.PrimaryAddress\022C\n\022pr" +
-      "imary_v6_address\030\005 \001(\0132\'.yandex.cloud.co" +
-      "mpute.v1.PrimaryAddress\022\032\n\022security_grou" +
-      "p_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddress\022\017\n\007addres" +
-      "s\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$.yandex" +
-      ".cloud.compute.v1.OneToOneNat\0227\n\013dns_rec" +
-      "ords\030\003 \003(\0132\".yandex.cloud.compute.v1.Dns" +
-      "Record\"\217\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022" +
-      "6\n\nip_version\030\002 \001(\0162\".yandex.cloud.compu" +
-      "te.v1.IpVersion\0227\n\013dns_records\030\003 \003(\0132\".y" +
-      "andex.cloud.compute.v1.DnsRecord\"H\n\tDnsR" +
-      "ecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_id\030\002 \001(\t" +
-      "\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020Scheduling" +
-      "Policy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017NetworkS" +
-      "ettings\022;\n\004type\030\001 \001(\0162-.yandex.cloud.com" +
-      "pute.v1.NetworkSettings.Type\"^\n\004Type\022\024\n\020" +
-      "TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFT" +
-      "WARE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERAT" +
-      "ED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_cluster_id\030\001 " +
-      "\001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022placement_gro" +
-      "up_id\030\001 \001(\t\022V\n\023host_affinity_rules\030\002 \003(\013" +
-      "29.yandex.cloud.compute.v1.PlacementPoli" +
-      "cy.HostAffinityRule\022!\n\031placement_group_p" +
-      "artition\030\003 \001(\003\032\271\001\n\020HostAffinityRule\022\013\n\003k" +
-      "ey\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.cloud.comp" +
-      "ute.v1.PlacementPolicy.HostAffinityRule." +
-      "Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024" +
-      "OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN" +
-      "\020\002\"\241\002\n\017MetadataOptions\022B\n\021gce_http_endpo" +
-      "int\030\001 \001(\0162\'.yandex.cloud.compute.v1.Meta" +
-      "dataOption\022E\n\024aws_v1_http_endpoint\030\002 \001(\016" +
-      "2\'.yandex.cloud.compute.v1.MetadataOptio" +
-      "n\022?\n\016gce_http_token\030\003 \001(\0162\'.yandex.cloud" +
-      ".compute.v1.MetadataOption\022B\n\021aws_v1_htt" +
-      "p_token\030\004 \001(\0162\'.yandex.cloud.compute.v1." +
-      "MetadataOption*;\n\tIpVersion\022\032\n\026IP_VERSIO" +
-      "N_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016M" +
-      "etadataOption\022\037\n\033METADATA_OPTION_UNSPECI" +
-      "FIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002Bb\n\033yan" +
-      "dex.cloud.api.compute.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/compu" +
-      "te/v1;computeb\006proto3"
+      "workInterface\022I\n\024serial_port_settings\030\030 " +
+      "\001(\0132+.yandex.cloud.compute.v1.SerialPort" +
+      "Settings\022:\n\014gpu_settings\030\032 \001(\0132$.yandex." +
+      "cloud.compute.v1.GpuSettings\022\014\n\004fqdn\030\020 \001" +
+      "(\t\022D\n\021scheduling_policy\030\021 \001(\0132).yandex.c" +
+      "loud.compute.v1.SchedulingPolicy\022\032\n\022serv" +
+      "ice_account_id\030\022 \001(\t\022B\n\020network_settings" +
+      "\030\023 \001(\0132(.yandex.cloud.compute.v1.Network" +
+      "Settings\022B\n\020placement_policy\030\024 \001(\0132(.yan" +
+      "dex.cloud.compute.v1.PlacementPolicy\022\025\n\r" +
+      "host_group_id\030\033 \001(\t\022\017\n\007host_id\030\034 \001(\t\022F\n\022" +
+      "maintenance_policy\030\035 \001(\0162*.yandex.cloud." +
+      "compute.v1.MaintenancePolicy\022;\n\030maintena" +
+      "nce_grace_period\030\036 \001(\0132\031.google.protobuf" +
+      ".Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013" +
+      "\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014" +
+      "\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPDATING" +
+      "\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELETING\020\n" +
+      "J\004\010\017\020\020J\004\010\031\020\032\"O\n\tResources\022\016\n\006memory\030\001 \001(" +
+      "\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003 \001(\003\022" +
+      "\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004mode\030\001" +
+      " \001(\0162*.yandex.cloud.compute.v1.AttachedD" +
+      "isk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013auto_de" +
+      "lete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode\022\024\n\020M" +
+      "ODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD" +
+      "_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004size\030\001 " +
+      "\001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022AttachedFil" +
+      "esystem\022>\n\004mode\030\001 \001(\01620.yandex.cloud.com" +
+      "pute.v1.AttachedFilesystem.Mode\022\023\n\013devic" +
+      "e_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t\";\n\004M" +
+      "ode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001" +
+      "\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterface\022\r\n" +
+      "\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsub" +
+      "net_id\030\003 \001(\t\022C\n\022primary_v4_address\030\004 \001(\013" +
+      "2\'.yandex.cloud.compute.v1.PrimaryAddres" +
+      "s\022C\n\022primary_v6_address\030\005 \001(\0132\'.yandex.c" +
+      "loud.compute.v1.PrimaryAddress\022\032\n\022securi" +
+      "ty_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddress\022\017\n" +
+      "\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$" +
+      ".yandex.cloud.compute.v1.OneToOneNat\0227\n\013" +
+      "dns_records\030\003 \003(\0132\".yandex.cloud.compute" +
+      ".v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007address" +
+      "\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex.clou" +
+      "d.compute.v1.IpVersion\0227\n\013dns_records\030\003 " +
+      "\003(\0132\".yandex.cloud.compute.v1.DnsRecord\"" +
+      "H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_i" +
+      "d\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020Sch" +
+      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017N" +
+      "etworkSettings\022;\n\004type\030\001 \001(\0162-.yandex.cl" +
+      "oud.compute.v1.NetworkSettings.Type\"^\n\004T" +
+      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022" +
+      "\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_AC" +
+      "CELERATED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_cluste" +
+      "r_id\030\001 \001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022placem" +
+      "ent_group_id\030\001 \001(\t\022V\n\023host_affinity_rule" +
+      "s\030\002 \003(\01329.yandex.cloud.compute.v1.Placem" +
+      "entPolicy.HostAffinityRule\022!\n\031placement_" +
+      "group_partition\030\003 \001(\003\032\271\001\n\020HostAffinityRu" +
+      "le\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.clo" +
+      "ud.compute.v1.PlacementPolicy.HostAffini" +
+      "tyRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Opera" +
+      "tor\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n" +
+      "\006NOT_IN\020\002\"\241\002\n\017MetadataOptions\022B\n\021gce_htt" +
+      "p_endpoint\030\001 \001(\0162\'.yandex.cloud.compute." +
+      "v1.MetadataOption\022E\n\024aws_v1_http_endpoin" +
+      "t\030\002 \001(\0162\'.yandex.cloud.compute.v1.Metada" +
+      "taOption\022?\n\016gce_http_token\030\003 \001(\0162\'.yande" +
+      "x.cloud.compute.v1.MetadataOption\022B\n\021aws" +
+      "_v1_http_token\030\004 \001(\0162\'.yandex.cloud.comp" +
+      "ute.v1.MetadataOption\"\311\001\n\022SerialPortSett" +
+      "ings\022W\n\021ssh_authorization\030\001 \001(\0162<.yandex" +
+      ".cloud.compute.v1.SerialPortSettings.SSH" +
+      "Authorization\"Z\n\020SSHAuthorization\022!\n\035SSH" +
+      "_AUTHORIZATION_UNSPECIFIED\020\000\022\025\n\021INSTANCE" +
+      "_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVersion\022\032" +
+      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
+      "IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADATA_OPT" +
+      "ION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABL" +
+      "ED\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22657,7 +23626,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "SerialPortSettings", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", });
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_fieldAccessorTable = new
@@ -22754,6 +23723,12 @@ public final class InstanceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MetadataOptions_descriptor,
         new java.lang.String[] { "GceHttpEndpoint", "AwsV1HttpEndpoint", "GceHttpToken", "AwsV1HttpToken", });
+    internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_compute_v1_SerialPortSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_SerialPortSettings_descriptor,
+        new java.lang.String[] { "SshAuthorization", });
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.compute.v1.Maintenance.getDescriptor();

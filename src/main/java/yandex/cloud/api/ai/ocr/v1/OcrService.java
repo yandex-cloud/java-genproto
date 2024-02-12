@@ -40,7 +40,7 @@ public final class OcrService {
     /**
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Supported file formats: `JPEG`, `PNG`, `PDF`.
      ** Maximum file size: 20 MB.
      ** Image size should not exceed 20M pixels (length x width).
      ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -53,7 +53,7 @@ public final class OcrService {
     /**
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Supported file formats: `JPEG`, `PNG`, `PDF`.
      ** Maximum file size: 20 MB.
      ** Image size should not exceed 20M pixels (length x width).
      ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -315,7 +315,7 @@ public final class OcrService {
     /**
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Supported file formats: `JPEG`, `PNG`, `PDF`.
      ** Maximum file size: 20 MB.
      ** Image size should not exceed 20M pixels (length x width).
      ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -340,7 +340,7 @@ public final class OcrService {
     /**
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Supported file formats: `JPEG`, `PNG`, `PDF`.
      ** Maximum file size: 20 MB.
      ** Image size should not exceed 20M pixels (length x width).
      ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -940,7 +940,7 @@ public final class OcrService {
       /**
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Supported file formats: `JPEG`, `PNG`, `PDF`.
        ** Maximum file size: 20 MB.
        ** Image size should not exceed 20M pixels (length x width).
        ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -964,7 +964,7 @@ public final class OcrService {
       /**
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Supported file formats: `JPEG`, `PNG`, `PDF`.
        ** Maximum file size: 20 MB.
        ** Image size should not exceed 20M pixels (length x width).
        ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -989,7 +989,7 @@ public final class OcrService {
       /**
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Supported file formats: `JPEG`, `PNG`, `PDF`.
        ** Maximum file size: 20 MB.
        ** Image size should not exceed 20M pixels (length x width).
        ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -1012,7 +1012,7 @@ public final class OcrService {
       /**
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Supported file formats: `JPEG`, `PNG`, `PDF`.
        ** Maximum file size: 20 MB.
        ** Image size should not exceed 20M pixels (length x width).
        ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
@@ -1030,7 +1030,7 @@ public final class OcrService {
       /**
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
-       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Supported file formats: `JPEG`, `PNG`, `PDF`.
        ** Maximum file size: 20 MB.
        ** Image size should not exceed 20M pixels (length x width).
        ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
