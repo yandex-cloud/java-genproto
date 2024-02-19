@@ -19,11 +19,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -117,6 +125,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -134,6 +146,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -456,6 +472,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -472,6 +492,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -489,6 +513,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -587,16 +623,28 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return Whether the streamId field is set.
      */
     boolean hasStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -604,16 +652,28 @@ public final class EpisodeServiceOuterClass {
         getStreamIdBytes();
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return Whether the lineId field is set.
      */
     boolean hasLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The bytes for lineId.
      */
@@ -621,17 +681,29 @@ public final class EpisodeServiceOuterClass {
         getLineIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -856,6 +928,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return Whether the streamId field is set.
      */
@@ -863,6 +939,10 @@ public final class EpisodeServiceOuterClass {
       return parentIdCase_ == 1;
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -884,6 +964,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -908,6 +992,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int LINE_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return Whether the lineId field is set.
      */
@@ -915,6 +1003,10 @@ public final class EpisodeServiceOuterClass {
       return parentIdCase_ == 2;
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The lineId.
      */
@@ -936,6 +1028,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The bytes for lineId.
      */
@@ -961,6 +1057,10 @@ public final class EpisodeServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
@@ -972,6 +1072,10 @@ public final class EpisodeServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 101;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
@@ -989,6 +1093,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -1550,6 +1658,10 @@ public final class EpisodeServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return Whether the streamId field is set.
        */
@@ -1558,6 +1670,10 @@ public final class EpisodeServiceOuterClass {
         return parentIdCase_ == 1;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -1580,6 +1696,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -1603,6 +1723,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -1618,6 +1742,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1630,6 +1758,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -1647,6 +1779,10 @@ public final class EpisodeServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return Whether the lineId field is set.
        */
@@ -1655,6 +1791,10 @@ public final class EpisodeServiceOuterClass {
         return parentIdCase_ == 2;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return The lineId.
        */
@@ -1677,6 +1817,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return The bytes for lineId.
        */
@@ -1700,6 +1844,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
@@ -1715,6 +1863,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1727,6 +1879,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
@@ -1745,6 +1901,10 @@ public final class EpisodeServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return The pageSize.
        */
@@ -1753,6 +1913,10 @@ public final class EpisodeServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1764,6 +1928,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return This builder for chaining.
        */
@@ -1776,6 +1944,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The pageToken.
        */
@@ -1792,6 +1964,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The bytes for pageToken.
        */
@@ -1809,6 +1985,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1824,6 +2004,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return This builder for chaining.
        */
@@ -1834,6 +2018,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -2144,35 +2332,63 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> 
         getEpisodesList();
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.Episode getEpisodes(int index);
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     int getEpisodesCount();
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
         getEpisodesOrBuilderList();
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder getEpisodesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2280,6 +2496,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> episodes_;
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     @java.lang.Override
@@ -2287,6 +2507,10 @@ public final class EpisodeServiceOuterClass {
       return episodes_;
     }
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     @java.lang.Override
@@ -2295,6 +2519,10 @@ public final class EpisodeServiceOuterClass {
       return episodes_;
     }
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     @java.lang.Override
@@ -2302,6 +2530,10 @@ public final class EpisodeServiceOuterClass {
       return episodes_.size();
     }
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     @java.lang.Override
@@ -2309,6 +2541,10 @@ public final class EpisodeServiceOuterClass {
       return episodes_.get(index);
     }
     /**
+     * <pre>
+     * List of episodes for specific parent_id.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
      */
     @java.lang.Override
@@ -2320,6 +2556,10 @@ public final class EpisodeServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 100;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
@@ -2337,6 +2577,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2727,6 +2971,10 @@ public final class EpisodeServiceOuterClass {
           yandex.cloud.api.video.v1.EpisodeOuterClass.Episode, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> episodesBuilder_;
 
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> getEpisodesList() {
@@ -2737,6 +2985,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public int getEpisodesCount() {
@@ -2747,6 +2999,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode getEpisodes(int index) {
@@ -2757,6 +3013,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder setEpisodes(
@@ -2774,6 +3034,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder setEpisodes(
@@ -2788,6 +3052,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder addEpisodes(yandex.cloud.api.video.v1.EpisodeOuterClass.Episode value) {
@@ -2804,6 +3072,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder addEpisodes(
@@ -2821,6 +3093,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder addEpisodes(
@@ -2835,6 +3111,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder addEpisodes(
@@ -2849,6 +3129,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder addAllEpisodes(
@@ -2864,6 +3148,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder clearEpisodes() {
@@ -2877,6 +3165,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public Builder removeEpisodes(int index) {
@@ -2890,6 +3182,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder getEpisodesBuilder(
@@ -2897,6 +3193,10 @@ public final class EpisodeServiceOuterClass {
         return getEpisodesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder getEpisodesOrBuilder(
@@ -2907,6 +3207,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeOrBuilder> 
@@ -2918,6 +3222,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder addEpisodesBuilder() {
@@ -2925,6 +3233,10 @@ public final class EpisodeServiceOuterClass {
             yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder addEpisodesBuilder(
@@ -2933,6 +3245,10 @@ public final class EpisodeServiceOuterClass {
             index, yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of episodes for specific parent_id.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Episode episodes = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.Builder> 
@@ -2956,6 +3272,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The nextPageToken.
        */
@@ -2972,6 +3292,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2989,6 +3313,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -3004,6 +3332,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return This builder for chaining.
        */
@@ -3014,6 +3346,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -3087,16 +3423,28 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return Whether the streamId field is set.
      */
     boolean hasStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return The bytes for streamId.
      */
@@ -3104,16 +3452,28 @@ public final class EpisodeServiceOuterClass {
         getStreamIdBytes();
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return Whether the lineId field is set.
      */
     boolean hasLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return The bytes for lineId.
      */
@@ -3121,11 +3481,19 @@ public final class EpisodeServiceOuterClass {
         getLineIdBytes();
 
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -3133,11 +3501,19 @@ public final class EpisodeServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3145,11 +3521,19 @@ public final class EpisodeServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -3157,67 +3541,122 @@ public final class EpisodeServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
 
     /**
+     * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+     * possible values:
+     *  * `0`: infinite dvr size, the full length of the stream allowed to display
+     *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+     * </pre>
+     *
      * <code>int64 dvr_seconds = 7;</code>
      * @return The dvrSeconds.
      */
     long getDvrSeconds();
 
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
     boolean hasPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return The publicAccess.
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams getPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
     boolean hasAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
@@ -3479,6 +3918,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int STREAM_ID_FIELD_NUMBER = 100;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return Whether the streamId field is set.
      */
@@ -3486,6 +3929,10 @@ public final class EpisodeServiceOuterClass {
       return parentIdCase_ == 100;
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return The streamId.
      */
@@ -3507,6 +3954,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 100;</code>
      * @return The bytes for streamId.
      */
@@ -3531,6 +3982,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int LINE_ID_FIELD_NUMBER = 101;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return Whether the lineId field is set.
      */
@@ -3538,6 +3993,10 @@ public final class EpisodeServiceOuterClass {
       return parentIdCase_ == 101;
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return The lineId.
      */
@@ -3559,6 +4018,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 101;</code>
      * @return The bytes for lineId.
      */
@@ -3584,6 +4047,10 @@ public final class EpisodeServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 2;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
@@ -3601,6 +4068,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -3622,6 +4093,10 @@ public final class EpisodeServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -3639,6 +4114,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3660,6 +4139,10 @@ public final class EpisodeServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
@@ -3677,6 +4160,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -3698,6 +4185,10 @@ public final class EpisodeServiceOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      * @return Whether the startTime field is set.
      */
@@ -3706,6 +4197,10 @@ public final class EpisodeServiceOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      * @return The startTime.
      */
@@ -3714,6 +4209,10 @@ public final class EpisodeServiceOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 5;</code>
      */
     @java.lang.Override
@@ -3724,6 +4223,10 @@ public final class EpisodeServiceOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      * @return Whether the finishTime field is set.
      */
@@ -3732,6 +4235,10 @@ public final class EpisodeServiceOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      * @return The finishTime.
      */
@@ -3740,6 +4247,10 @@ public final class EpisodeServiceOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 6;</code>
      */
     @java.lang.Override
@@ -3750,6 +4261,13 @@ public final class EpisodeServiceOuterClass {
     public static final int DVR_SECONDS_FIELD_NUMBER = 7;
     private long dvrSeconds_;
     /**
+     * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+     * possible values:
+     *  * `0`: infinite dvr size, the full length of the stream allowed to display
+     *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+     * </pre>
+     *
      * <code>int64 dvr_seconds = 7;</code>
      * @return The dvrSeconds.
      */
@@ -3760,6 +4278,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
@@ -3768,6 +4290,10 @@ public final class EpisodeServiceOuterClass {
       return accessRightsCase_ == 1000;
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return The publicAccess.
      */
@@ -3779,6 +4305,10 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      */
     @java.lang.Override
@@ -3791,6 +4321,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
@@ -3799,6 +4333,10 @@ public final class EpisodeServiceOuterClass {
       return accessRightsCase_ == 1002;
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
@@ -3810,6 +4348,10 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     @java.lang.Override
@@ -4397,6 +4939,10 @@ public final class EpisodeServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @return Whether the streamId field is set.
        */
@@ -4405,6 +4951,10 @@ public final class EpisodeServiceOuterClass {
         return parentIdCase_ == 100;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @return The streamId.
        */
@@ -4427,6 +4977,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @return The bytes for streamId.
        */
@@ -4450,6 +5004,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -4465,6 +5023,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @return This builder for chaining.
        */
@@ -4477,6 +5039,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 100;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -4494,6 +5060,10 @@ public final class EpisodeServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @return Whether the lineId field is set.
        */
@@ -4502,6 +5072,10 @@ public final class EpisodeServiceOuterClass {
         return parentIdCase_ == 101;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @return The lineId.
        */
@@ -4524,6 +5098,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @return The bytes for lineId.
        */
@@ -4547,6 +5125,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
@@ -4562,6 +5144,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @return This builder for chaining.
        */
@@ -4574,6 +5160,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 101;</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
@@ -4592,6 +5182,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The title.
        */
@@ -4608,6 +5202,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The bytes for title.
        */
@@ -4625,6 +5223,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -4640,6 +5242,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
@@ -4650,6 +5256,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -4668,6 +5278,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -4684,6 +5298,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -4701,6 +5319,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4716,6 +5338,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -4726,6 +5352,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4744,6 +5374,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The thumbnailId.
        */
@@ -4760,6 +5394,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The bytes for thumbnailId.
        */
@@ -4777,6 +5415,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -4792,6 +5434,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -4802,6 +5448,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -4822,6 +5472,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        * @return Whether the startTime field is set.
        */
@@ -4829,6 +5483,10 @@ public final class EpisodeServiceOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        * @return The startTime.
        */
@@ -4840,6 +5498,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -4856,6 +5518,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public Builder setStartTime(
@@ -4870,6 +5536,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -4888,6 +5558,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public Builder clearStartTime() {
@@ -4902,6 +5576,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -4910,6 +5588,10 @@ public final class EpisodeServiceOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -4921,6 +5603,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4941,6 +5627,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        * @return Whether the finishTime field is set.
        */
@@ -4948,6 +5638,10 @@ public final class EpisodeServiceOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        * @return The finishTime.
        */
@@ -4959,6 +5653,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -4975,6 +5673,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public Builder setFinishTime(
@@ -4989,6 +5691,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -5007,6 +5713,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public Builder clearFinishTime() {
@@ -5021,6 +5731,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -5029,6 +5743,10 @@ public final class EpisodeServiceOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -5040,6 +5758,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5058,6 +5780,13 @@ public final class EpisodeServiceOuterClass {
 
       private long dvrSeconds_ ;
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 7;</code>
        * @return The dvrSeconds.
        */
@@ -5066,6 +5795,13 @@ public final class EpisodeServiceOuterClass {
         return dvrSeconds_;
       }
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 7;</code>
        * @param value The dvrSeconds to set.
        * @return This builder for chaining.
@@ -5077,6 +5813,13 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 7;</code>
        * @return This builder for chaining.
        */
@@ -5090,6 +5833,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        * @return Whether the publicAccess field is set.
        */
@@ -5098,6 +5845,10 @@ public final class EpisodeServiceOuterClass {
         return accessRightsCase_ == 1000;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        * @return The publicAccess.
        */
@@ -5116,6 +5867,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder setPublicAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams value) {
@@ -5132,6 +5887,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder setPublicAccess(
@@ -5146,6 +5905,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder mergePublicAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams value) {
@@ -5168,6 +5931,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder clearPublicAccess() {
@@ -5187,12 +5954,20 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.Builder getPublicAccessBuilder() {
         return getPublicAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       @java.lang.Override
@@ -5207,6 +5982,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5231,6 +6010,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        * @return Whether the authSystemAccess field is set.
        */
@@ -5239,6 +6022,10 @@ public final class EpisodeServiceOuterClass {
         return accessRightsCase_ == 1002;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        * @return The authSystemAccess.
        */
@@ -5257,6 +6044,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
@@ -5273,6 +6064,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(
@@ -5287,6 +6082,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
@@ -5309,6 +6108,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder clearAuthSystemAccess() {
@@ -5328,12 +6131,20 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
         return getAuthSystemAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       @java.lang.Override
@@ -5348,6 +6159,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6262,11 +7077,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -6360,6 +7183,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -6377,6 +7204,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -6699,6 +7530,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -6715,6 +7550,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -6732,6 +7571,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -6747,6 +7590,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6757,6 +7604,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -6830,11 +7681,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -6842,26 +7701,46 @@ public final class EpisodeServiceOuterClass {
         getEpisodeIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -6869,11 +7748,19 @@ public final class EpisodeServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -6881,11 +7768,19 @@ public final class EpisodeServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6908,52 +7803,95 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
 
     /**
+     * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+     * possible values:
+     *  * `0`: infinite dvr size, the full length of the stream allowed to display
+     *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+     * </pre>
+     *
      * <code>int64 dvr_seconds = 8;</code>
      * @return The dvrSeconds.
      */
     long getDvrSeconds();
 
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
     boolean hasPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return The publicAccess.
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams getPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
     boolean hasAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
@@ -7181,6 +8119,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -7198,6 +8140,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -7219,6 +8165,10 @@ public final class EpisodeServiceOuterClass {
     public static final int FIELD_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask fieldMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
@@ -7227,6 +8177,10 @@ public final class EpisodeServiceOuterClass {
       return fieldMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
@@ -7235,6 +8189,10 @@ public final class EpisodeServiceOuterClass {
       return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the episode are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     @java.lang.Override
@@ -7245,6 +8203,10 @@ public final class EpisodeServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 3;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
@@ -7262,6 +8224,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Episode title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -7283,6 +8249,10 @@ public final class EpisodeServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -7300,6 +8270,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Episode description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -7321,6 +8295,10 @@ public final class EpisodeServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
@@ -7338,6 +8316,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
@@ -7385,6 +8367,10 @@ public final class EpisodeServiceOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      * @return Whether the finishTime field is set.
      */
@@ -7393,6 +8379,10 @@ public final class EpisodeServiceOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      * @return The finishTime.
      */
@@ -7401,6 +8391,10 @@ public final class EpisodeServiceOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 7;</code>
      */
     @java.lang.Override
@@ -7411,6 +8405,13 @@ public final class EpisodeServiceOuterClass {
     public static final int DVR_SECONDS_FIELD_NUMBER = 8;
     private long dvrSeconds_;
     /**
+     * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+     * possible values:
+     *  * `0`: infinite dvr size, the full length of the stream allowed to display
+     *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+     * </pre>
+     *
      * <code>int64 dvr_seconds = 8;</code>
      * @return The dvrSeconds.
      */
@@ -7421,6 +8422,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
@@ -7429,6 +8434,10 @@ public final class EpisodeServiceOuterClass {
       return accessRightsCase_ == 1000;
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      * @return The publicAccess.
      */
@@ -7440,6 +8449,10 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
      */
     @java.lang.Override
@@ -7452,6 +8465,10 @@ public final class EpisodeServiceOuterClass {
 
     public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
@@ -7460,6 +8477,10 @@ public final class EpisodeServiceOuterClass {
       return accessRightsCase_ == 1002;
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
@@ -7471,6 +8492,10 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
      */
     @java.lang.Override
@@ -8028,6 +9053,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -8044,6 +9073,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -8061,6 +9094,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -8076,6 +9113,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8086,6 +9127,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -8106,6 +9151,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return Whether the fieldMask field is set.
        */
@@ -8113,6 +9162,10 @@ public final class EpisodeServiceOuterClass {
         return fieldMaskBuilder_ != null || fieldMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return The fieldMask.
        */
@@ -8124,6 +9177,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
@@ -8140,6 +9197,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(
@@ -8154,6 +9215,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
@@ -8172,6 +9237,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder clearFieldMask() {
@@ -8186,6 +9255,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
@@ -8194,6 +9267,10 @@ public final class EpisodeServiceOuterClass {
         return getFieldMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -8205,6 +9282,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the episode are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8223,6 +9304,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The title.
        */
@@ -8239,6 +9324,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The bytes for title.
        */
@@ -8256,6 +9345,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -8271,6 +9364,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return This builder for chaining.
        */
@@ -8281,6 +9378,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -8299,6 +9400,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -8315,6 +9420,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -8332,6 +9441,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -8347,6 +9460,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -8357,6 +9474,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -8375,6 +9496,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The thumbnailId.
        */
@@ -8391,6 +9516,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The bytes for thumbnailId.
        */
@@ -8408,6 +9537,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -8423,6 +9556,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -8433,6 +9570,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -8572,6 +9713,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        * @return Whether the finishTime field is set.
        */
@@ -8579,6 +9724,10 @@ public final class EpisodeServiceOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        * @return The finishTime.
        */
@@ -8590,6 +9739,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -8606,6 +9759,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public Builder setFinishTime(
@@ -8620,6 +9777,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -8638,6 +9799,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public Builder clearFinishTime() {
@@ -8652,6 +9817,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -8660,6 +9829,10 @@ public final class EpisodeServiceOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -8671,6 +9844,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8689,6 +9866,13 @@ public final class EpisodeServiceOuterClass {
 
       private long dvrSeconds_ ;
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 8;</code>
        * @return The dvrSeconds.
        */
@@ -8697,6 +9881,13 @@ public final class EpisodeServiceOuterClass {
         return dvrSeconds_;
       }
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 8;</code>
        * @param value The dvrSeconds to set.
        * @return This builder for chaining.
@@ -8708,6 +9899,13 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
+       * possible values:
+       *  * `0`: infinite dvr size, the full length of the stream allowed to display
+       *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
+       * </pre>
+       *
        * <code>int64 dvr_seconds = 8;</code>
        * @return This builder for chaining.
        */
@@ -8721,6 +9919,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        * @return Whether the publicAccess field is set.
        */
@@ -8729,6 +9931,10 @@ public final class EpisodeServiceOuterClass {
         return accessRightsCase_ == 1000;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        * @return The publicAccess.
        */
@@ -8747,6 +9953,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder setPublicAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams value) {
@@ -8763,6 +9973,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder setPublicAccess(
@@ -8777,6 +9991,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder mergePublicAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams value) {
@@ -8799,6 +10017,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public Builder clearPublicAccess() {
@@ -8818,12 +10040,20 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.Builder getPublicAccessBuilder() {
         return getPublicAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       @java.lang.Override
@@ -8838,6 +10068,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessParams public_access = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8862,6 +10096,10 @@ public final class EpisodeServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        * @return Whether the authSystemAccess field is set.
        */
@@ -8870,6 +10108,10 @@ public final class EpisodeServiceOuterClass {
         return accessRightsCase_ == 1002;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        * @return The authSystemAccess.
        */
@@ -8888,6 +10130,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
@@ -8904,6 +10150,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(
@@ -8918,6 +10168,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
@@ -8940,6 +10194,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public Builder clearAuthSystemAccess() {
@@ -8959,12 +10217,20 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
         return getAuthSystemAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       @java.lang.Override
@@ -8979,6 +10245,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9057,11 +10327,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -9155,6 +10433,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -9172,6 +10454,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -9494,6 +10780,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -9510,6 +10800,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -9527,6 +10821,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -9542,6 +10840,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9552,6 +10854,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -9625,11 +10931,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -9723,6 +11037,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -9740,6 +11058,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -10062,6 +11384,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -10078,6 +11404,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -10095,6 +11425,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -10110,6 +11444,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10120,6 +11458,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -10193,11 +11535,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -10291,6 +11641,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -10308,6 +11662,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -10630,6 +11988,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -10646,6 +12008,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -10663,6 +12029,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -10678,6 +12048,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10688,6 +12062,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -12730,11 +14108,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -12828,6 +14214,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -12845,6 +14235,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -13167,6 +14561,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -13183,6 +14581,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -13200,6 +14602,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -13215,6 +14621,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -13225,6 +14635,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -13298,11 +14712,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
     java.lang.String getEpisodeId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -13424,6 +14846,10 @@ public final class EpisodeServiceOuterClass {
     public static final int EPISODE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object episodeId_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The episodeId.
      */
@@ -13441,6 +14867,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string episode_id = 1;</code>
      * @return The bytes for episodeId.
      */
@@ -13819,6 +15249,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object episodeId_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The episodeId.
        */
@@ -13835,6 +15269,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return The bytes for episodeId.
        */
@@ -13852,6 +15290,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The episodeId to set.
        * @return This builder for chaining.
@@ -13867,6 +15309,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -13877,6 +15323,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string episode_id = 1;</code>
        * @param value The bytes for episodeId to set.
        * @return This builder for chaining.
@@ -15525,7 +16975,7 @@ public final class EpisodeServiceOuterClass {
       "by\030f \001(\t\022\016\n\006filter\030g \001(\tB\013\n\tparent_id\"a\n" +
       "\024ListEpisodesResponse\0220\n\010episodes\030\001 \003(\0132" +
       "\036.yandex.cloud.video.v1.Episode\022\027\n\017next_" +
-      "page_token\030d \001(\t\"\265\003\n\024CreateEpisodeReques" +
+      "page_token\030d \001(\t\"\273\003\n\024CreateEpisodeReques" +
       "t\022\023\n\tstream_id\030d \001(\tH\000\022\021\n\007line_id\030e \001(\tH" +
       "\000\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\024\n" +
       "\014thumbnail_id\030\004 \001(\t\022.\n\nstart_time\030\005 \001(\0132" +
@@ -15536,63 +16986,63 @@ public final class EpisodeServiceOuterClass {
       "ccessParamsH\001\022S\n\022auth_system_access\030\352\007 \001" +
       "(\01324.yandex.cloud.video.v1.EpisodeAuthSy" +
       "stemAccessParamsH\001B\013\n\tparent_idB\017\n\racces" +
-      "s_rightsJ\006\010\351\007\020\352\007\"\033\n\031EpisodePublicAccessP" +
-      "arams\"\037\n\035EpisodeAuthSystemAccessParams\"+" +
-      "\n\025CreateEpisodeMetadata\022\022\n\nepisode_id\030\001 " +
-      "\001(\t\"\304\003\n\024UpdateEpisodeRequest\022\022\n\nepisode_" +
-      "id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013descr" +
-      "iption\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\022.\n\nst" +
-      "art_time\030\006 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022/\n\013finish_time\030\007 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpubl" +
-      "ic_access\030\350\007 \001(\01320.yandex.cloud.video.v1" +
-      ".EpisodePublicAccessParamsH\000\022S\n\022auth_sys" +
-      "tem_access\030\352\007 \001(\01324.yandex.cloud.video.v" +
-      "1.EpisodeAuthSystemAccessParamsH\000B\017\n\racc" +
-      "ess_rightsJ\006\010\351\007\020\352\007\"+\n\025UpdateEpisodeMetad" +
-      "ata\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteEpisode" +
-      "Request\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025DeleteEpi" +
-      "sodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\321\001\n\033Per" +
-      "formEpisodeActionRequest\022\022\n\nepisode_id\030\001" +
-      " \001(\t\022?\n\007publish\030\352\007 \001(\0132+.yandex.cloud.vi" +
-      "deo.v1.PublishEpisodeActionH\000\022C\n\tunpubli" +
-      "sh\030\353\007 \001(\0132-.yandex.cloud.video.v1.Unpubl" +
-      "ishEpisodeActionH\000B\010\n\006actionJ\006\010\350\007\020\351\007J\006\010\351" +
-      "\007\020\352\007\"\026\n\024PublishEpisodeAction\"\030\n\026Unpublis" +
-      "hEpisodeAction\"2\n\034PerformEpisodeActionMe" +
-      "tadata\022\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetEpisode" +
-      "PlayerURLRequest\022\022\n\nepisode_id\030\001 \001(\t\022:\n\006" +
-      "params\030\002 \001(\0132*.yandex.cloud.video.v1.Epi" +
-      "sodePlayerParams\"E\n\023EpisodePlayerParams\022" +
-      "\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidde" +
-      "n\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResponse\022\022" +
-      "\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344\006\n\016Epi" +
-      "sodeService\022Q\n\003Get\022(.yandex.cloud.video." +
-      "v1.GetEpisodeRequest\032\036.yandex.cloud.vide" +
-      "o.v1.Episode\"\000\022a\n\004List\022*.yandex.cloud.vi" +
-      "deo.v1.ListEpisodesRequest\032+.yandex.clou" +
-      "d.video.v1.ListEpisodesResponse\"\000\022~\n\006Cre" +
-      "ate\022+.yandex.cloud.video.v1.CreateEpisod" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"$\262\322* \n\025CreateEpisodeMetadata\022\007Episod" +
-      "e\022~\n\006Update\022+.yandex.cloud.video.v1.Upda" +
-      "teEpisodeRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"$\262\322* \n\025UpdateEpisodeMetadata" +
-      "\022\007Episode\022\214\001\n\006Delete\022+.yandex.cloud.vide" +
-      "o.v1.DeleteEpisodeRequest\032!.yandex.cloud" +
-      ".operation.Operation\"2\262\322*.\n\025DeleteEpisod" +
-      "eMetadata\022\025google.protobuf.Empty\022\223\001\n\rPer" +
-      "formAction\0222.yandex.cloud.video.v1.Perfo" +
-      "rmEpisodeActionRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"+\262\322*\'\n\034PerformEpisodeA" +
-      "ctionMetadata\022\007Episode\022w\n\014GetPlayerURL\0221" +
-      ".yandex.cloud.video.v1.GetEpisodePlayerU" +
-      "RLRequest\0322.yandex.cloud.video.v1.GetEpi" +
-      "sodePlayerURLResponse\"\000B\\\n\031yandex.cloud." +
-      "api.video.v1Z?github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/video/v1;videob\006p" +
-      "roto3"
+      "s_rightsJ\004\010\001\020\002J\006\010\351\007\020\352\007\"\033\n\031EpisodePublicA" +
+      "ccessParams\"\037\n\035EpisodeAuthSystemAccessPa" +
+      "rams\"+\n\025CreateEpisodeMetadata\022\022\n\nepisode" +
+      "_id\030\001 \001(\t\"\304\003\n\024UpdateEpisodeRequest\022\022\n\nep" +
+      "isode_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n" +
+      "\013description\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t" +
+      "\022.\n\nstart_time\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022/\n\013finish_time\030\007 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J" +
+      "\n\rpublic_access\030\350\007 \001(\01320.yandex.cloud.vi" +
+      "deo.v1.EpisodePublicAccessParamsH\000\022S\n\022au" +
+      "th_system_access\030\352\007 \001(\01324.yandex.cloud.v" +
+      "ideo.v1.EpisodeAuthSystemAccessParamsH\000B" +
+      "\017\n\raccess_rightsJ\006\010\351\007\020\352\007\"+\n\025UpdateEpisod" +
+      "eMetadata\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteE" +
+      "pisodeRequest\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025Del" +
+      "eteEpisodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\321" +
+      "\001\n\033PerformEpisodeActionRequest\022\022\n\nepisod" +
+      "e_id\030\001 \001(\t\022?\n\007publish\030\352\007 \001(\0132+.yandex.cl" +
+      "oud.video.v1.PublishEpisodeActionH\000\022C\n\tu" +
+      "npublish\030\353\007 \001(\0132-.yandex.cloud.video.v1." +
+      "UnpublishEpisodeActionH\000B\010\n\006actionJ\006\010\350\007\020" +
+      "\351\007J\006\010\351\007\020\352\007\"\026\n\024PublishEpisodeAction\"\030\n\026Un" +
+      "publishEpisodeAction\"2\n\034PerformEpisodeAc" +
+      "tionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetE" +
+      "pisodePlayerURLRequest\022\022\n\nepisode_id\030\001 \001" +
+      "(\t\022:\n\006params\030\002 \001(\0132*.yandex.cloud.video." +
+      "v1.EpisodePlayerParams\"E\n\023EpisodePlayerP" +
+      "arams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n" +
+      "\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResp" +
+      "onse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344" +
+      "\006\n\016EpisodeService\022Q\n\003Get\022(.yandex.cloud." +
+      "video.v1.GetEpisodeRequest\032\036.yandex.clou" +
+      "d.video.v1.Episode\"\000\022a\n\004List\022*.yandex.cl" +
+      "oud.video.v1.ListEpisodesRequest\032+.yande" +
+      "x.cloud.video.v1.ListEpisodesResponse\"\000\022" +
+      "~\n\006Create\022+.yandex.cloud.video.v1.Create" +
+      "EpisodeRequest\032!.yandex.cloud.operation." +
+      "Operation\"$\262\322* \n\025CreateEpisodeMetadata\022\007" +
+      "Episode\022~\n\006Update\022+.yandex.cloud.video.v" +
+      "1.UpdateEpisodeRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"$\262\322* \n\025UpdateEpisodeMe" +
+      "tadata\022\007Episode\022\214\001\n\006Delete\022+.yandex.clou" +
+      "d.video.v1.DeleteEpisodeRequest\032!.yandex" +
+      ".cloud.operation.Operation\"2\262\322*.\n\025Delete" +
+      "EpisodeMetadata\022\025google.protobuf.Empty\022\223" +
+      "\001\n\rPerformAction\0222.yandex.cloud.video.v1" +
+      ".PerformEpisodeActionRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"+\262\322*\'\n\034PerformEp" +
+      "isodeActionMetadata\022\007Episode\022w\n\014GetPlaye" +
+      "rURL\0221.yandex.cloud.video.v1.GetEpisodeP" +
+      "layerURLRequest\0322.yandex.cloud.video.v1." +
+      "GetEpisodePlayerURLResponse\"\000B\\\n\031yandex." +
+      "cloud.api.video.v1Z?github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/video/v1;vi" +
+      "deob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

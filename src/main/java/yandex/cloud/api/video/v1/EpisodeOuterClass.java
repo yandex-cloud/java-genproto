@@ -19,11 +19,19 @@ public final class EpisodeOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class EpisodeOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the stream. Optional, empty if the episode is linked to the line
+     * </pre>
+     *
      * <code>string stream_id = 2;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream. Optional, empty if the episode is linked to the line
+     * </pre>
+     *
      * <code>string stream_id = 2;</code>
      * @return The bytes for streamId.
      */
@@ -43,11 +59,19 @@ public final class EpisodeOuterClass {
         getStreamIdBytes();
 
     /**
+     * <pre>
+     * ID of the line. Optional, empty if the episode is linked to the stream
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
     /**
+     * <pre>
+     * ID of the line. Optional, empty if the episode is linked to the stream
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The bytes for lineId.
      */
@@ -55,11 +79,19 @@ public final class EpisodeOuterClass {
         getLineIdBytes();
 
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The bytes for title.
      */
@@ -67,11 +99,19 @@ public final class EpisodeOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -79,11 +119,19 @@ public final class EpisodeOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The bytes for thumbnailId.
      */
@@ -91,37 +139,62 @@ public final class EpisodeOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      * @return Whether the finishTime field is set.
      */
     boolean hasFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      * @return The finishTime.
      */
     com.google.protobuf.Timestamp getFinishTime();
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder();
 
     /**
      * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
      * possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
@@ -144,61 +217,109 @@ public final class EpisodeOuterClass {
     yandex.cloud.api.video.v1.EpisodeOuterClass.Episode.VisibilityStatus getVisibilityStatus();
 
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
     boolean hasPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      * @return The publicAccess.
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights getPublicAccess();
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRightsOrBuilder getPublicAccessOrBuilder();
 
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
     boolean hasAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights getAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      */
     yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRightsOrBuilder getAuthSystemAccessOrBuilder();
 
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
@@ -577,6 +698,10 @@ public final class EpisodeOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -594,6 +719,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the episode.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -615,6 +744,10 @@ public final class EpisodeOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream. Optional, empty if the episode is linked to the line
+     * </pre>
+     *
      * <code>string stream_id = 2;</code>
      * @return The streamId.
      */
@@ -632,6 +765,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream. Optional, empty if the episode is linked to the line
+     * </pre>
+     *
      * <code>string stream_id = 2;</code>
      * @return The bytes for streamId.
      */
@@ -653,6 +790,10 @@ public final class EpisodeOuterClass {
     public static final int LINE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object lineId_;
     /**
+     * <pre>
+     * ID of the line. Optional, empty if the episode is linked to the stream
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The lineId.
      */
@@ -670,6 +811,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line. Optional, empty if the episode is linked to the stream
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The bytes for lineId.
      */
@@ -691,6 +836,10 @@ public final class EpisodeOuterClass {
     public static final int TITLE_FIELD_NUMBER = 4;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The title.
      */
@@ -708,6 +857,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The bytes for title.
      */
@@ -729,6 +882,10 @@ public final class EpisodeOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
@@ -746,6 +903,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -767,6 +928,10 @@ public final class EpisodeOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The thumbnailId.
      */
@@ -784,6 +949,10 @@ public final class EpisodeOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The bytes for thumbnailId.
      */
@@ -805,6 +974,10 @@ public final class EpisodeOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return Whether the startTime field is set.
      */
@@ -813,6 +986,10 @@ public final class EpisodeOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return The startTime.
      */
@@ -821,6 +998,10 @@ public final class EpisodeOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Episode start time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      */
     @java.lang.Override
@@ -831,6 +1012,10 @@ public final class EpisodeOuterClass {
     public static final int FINISH_TIME_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp finishTime_;
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      * @return Whether the finishTime field is set.
      */
@@ -839,6 +1024,10 @@ public final class EpisodeOuterClass {
       return finishTime_ != null;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      * @return The finishTime.
      */
@@ -847,6 +1036,10 @@ public final class EpisodeOuterClass {
       return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
     /**
+     * <pre>
+     * Episode finish time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finish_time = 8;</code>
      */
     @java.lang.Override
@@ -858,6 +1051,7 @@ public final class EpisodeOuterClass {
     private long dvrSeconds_;
     /**
      * <pre>
+     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
      * possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
@@ -892,6 +1086,10 @@ public final class EpisodeOuterClass {
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      * @return Whether the publicAccess field is set.
      */
@@ -900,6 +1098,10 @@ public final class EpisodeOuterClass {
       return accessRightsCase_ == 1000;
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      * @return The publicAccess.
      */
@@ -911,6 +1113,10 @@ public final class EpisodeOuterClass {
       return yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Episode is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
      */
     @java.lang.Override
@@ -923,6 +1129,10 @@ public final class EpisodeOuterClass {
 
     public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      * @return Whether the authSystemAccess field is set.
      */
@@ -931,6 +1141,10 @@ public final class EpisodeOuterClass {
       return accessRightsCase_ == 1002;
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      * @return The authSystemAccess.
      */
@@ -942,6 +1156,10 @@ public final class EpisodeOuterClass {
       return yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
      */
     @java.lang.Override
@@ -955,6 +1173,10 @@ public final class EpisodeOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
@@ -963,6 +1185,10 @@ public final class EpisodeOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
@@ -971,6 +1197,10 @@ public final class EpisodeOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Time when episode was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     @java.lang.Override
@@ -981,6 +1211,10 @@ public final class EpisodeOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 101;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -989,6 +1223,10 @@ public final class EpisodeOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return The updatedAt.
      */
@@ -997,6 +1235,10 @@ public final class EpisodeOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Time of last episode update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      */
     @java.lang.Override
@@ -1631,6 +1873,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1647,6 +1893,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1664,6 +1914,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1679,6 +1933,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1689,6 +1947,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the episode.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1707,6 +1969,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream. Optional, empty if the episode is linked to the line
+       * </pre>
+       *
        * <code>string stream_id = 2;</code>
        * @return The streamId.
        */
@@ -1723,6 +1989,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream. Optional, empty if the episode is linked to the line
+       * </pre>
+       *
        * <code>string stream_id = 2;</code>
        * @return The bytes for streamId.
        */
@@ -1740,6 +2010,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream. Optional, empty if the episode is linked to the line
+       * </pre>
+       *
        * <code>string stream_id = 2;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -1755,6 +2029,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream. Optional, empty if the episode is linked to the line
+       * </pre>
+       *
        * <code>string stream_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1765,6 +2043,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream. Optional, empty if the episode is linked to the line
+       * </pre>
+       *
        * <code>string stream_id = 2;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -1783,6 +2065,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object lineId_ = "";
       /**
+       * <pre>
+       * ID of the line. Optional, empty if the episode is linked to the stream
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return The lineId.
        */
@@ -1799,6 +2085,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line. Optional, empty if the episode is linked to the stream
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return The bytes for lineId.
        */
@@ -1816,6 +2106,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line. Optional, empty if the episode is linked to the stream
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
@@ -1831,6 +2125,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line. Optional, empty if the episode is linked to the stream
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -1841,6 +2139,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line. Optional, empty if the episode is linked to the stream
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
@@ -1859,6 +2161,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return The title.
        */
@@ -1875,6 +2181,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return The bytes for title.
        */
@@ -1892,6 +2202,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -1907,6 +2221,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return This builder for chaining.
        */
@@ -1917,6 +2235,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -1935,6 +2257,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The description.
        */
@@ -1951,6 +2277,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The bytes for description.
        */
@@ -1968,6 +2298,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1983,6 +2317,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return This builder for chaining.
        */
@@ -1993,6 +2331,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -2011,6 +2353,10 @@ public final class EpisodeOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return The thumbnailId.
        */
@@ -2027,6 +2373,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return The bytes for thumbnailId.
        */
@@ -2044,6 +2394,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -2059,6 +2413,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -2069,6 +2427,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -2089,6 +2451,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        * @return Whether the startTime field is set.
        */
@@ -2096,6 +2462,10 @@ public final class EpisodeOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        * @return The startTime.
        */
@@ -2107,6 +2477,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -2123,6 +2497,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder setStartTime(
@@ -2137,6 +2515,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -2155,6 +2537,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder clearStartTime() {
@@ -2169,6 +2555,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -2177,6 +2567,10 @@ public final class EpisodeOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -2188,6 +2582,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode start time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2208,6 +2606,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishTimeBuilder_;
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        * @return Whether the finishTime field is set.
        */
@@ -2215,6 +2617,10 @@ public final class EpisodeOuterClass {
         return finishTimeBuilder_ != null || finishTime_ != null;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        * @return The finishTime.
        */
@@ -2226,6 +2632,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public Builder setFinishTime(com.google.protobuf.Timestamp value) {
@@ -2242,6 +2652,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public Builder setFinishTime(
@@ -2256,6 +2670,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
@@ -2274,6 +2692,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public Builder clearFinishTime() {
@@ -2288,6 +2710,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
@@ -2296,6 +2722,10 @@ public final class EpisodeOuterClass {
         return getFinishTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
@@ -2307,6 +2737,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode finish time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finish_time = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2326,6 +2760,7 @@ public final class EpisodeOuterClass {
       private long dvrSeconds_ ;
       /**
        * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
        * possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
@@ -2340,6 +2775,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
        * possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
@@ -2357,6 +2793,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
+       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
        * possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
@@ -2429,6 +2866,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRightsOrBuilder> publicAccessBuilder_;
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        * @return Whether the publicAccess field is set.
        */
@@ -2437,6 +2878,10 @@ public final class EpisodeOuterClass {
         return accessRightsCase_ == 1000;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        * @return The publicAccess.
        */
@@ -2455,6 +2900,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       public Builder setPublicAccess(yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights value) {
@@ -2471,6 +2920,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       public Builder setPublicAccess(
@@ -2485,6 +2938,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       public Builder mergePublicAccess(yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights value) {
@@ -2507,6 +2964,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       public Builder clearPublicAccess() {
@@ -2526,12 +2987,20 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodePublicAccessRights.Builder getPublicAccessBuilder() {
         return getPublicAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       @java.lang.Override
@@ -2546,6 +3015,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Episode is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodePublicAccessRights public_access = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2570,6 +3043,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights.Builder, yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRightsOrBuilder> authSystemAccessBuilder_;
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        * @return Whether the authSystemAccess field is set.
        */
@@ -2578,6 +3055,10 @@ public final class EpisodeOuterClass {
         return accessRightsCase_ == 1002;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        * @return The authSystemAccess.
        */
@@ -2596,6 +3077,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights value) {
@@ -2612,6 +3097,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       public Builder setAuthSystemAccess(
@@ -2626,6 +3115,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights value) {
@@ -2648,6 +3141,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       public Builder clearAuthSystemAccess() {
@@ -2667,12 +3164,20 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       public yandex.cloud.api.video.v1.EpisodeOuterClass.EpisodeAuthSystemAccessRights.Builder getAuthSystemAccessBuilder() {
         return getAuthSystemAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       @java.lang.Override
@@ -2687,6 +3192,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessRights auth_system_access = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2712,6 +3221,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return Whether the createdAt field is set.
        */
@@ -2719,6 +3232,10 @@ public final class EpisodeOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return The createdAt.
        */
@@ -2730,6 +3247,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2746,6 +3267,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(
@@ -2760,6 +3285,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2778,6 +3307,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder clearCreatedAt() {
@@ -2792,6 +3325,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2800,6 +3337,10 @@ public final class EpisodeOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2811,6 +3352,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when episode was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2831,6 +3376,10 @@ public final class EpisodeOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2838,6 +3387,10 @@ public final class EpisodeOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        * @return The updatedAt.
        */
@@ -2849,6 +3402,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2865,6 +3422,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder setUpdatedAt(
@@ -2879,6 +3440,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2897,6 +3462,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2911,6 +3480,10 @@ public final class EpisodeOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2919,6 +3492,10 @@ public final class EpisodeOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2930,6 +3507,10 @@ public final class EpisodeOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of last episode update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

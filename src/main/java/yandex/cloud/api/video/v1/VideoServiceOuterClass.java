@@ -19,11 +19,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -117,6 +125,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -134,6 +146,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -456,6 +472,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -472,6 +492,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -489,6 +513,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -587,11 +623,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -599,17 +643,29 @@ public final class VideoServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -787,6 +843,10 @@ public final class VideoServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -804,6 +864,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -825,6 +889,10 @@ public final class VideoServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
@@ -836,6 +904,10 @@ public final class VideoServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 101;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
@@ -853,6 +925,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -1354,6 +1430,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -1370,6 +1450,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -1387,6 +1471,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -1402,6 +1490,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1412,6 +1504,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -1430,6 +1526,10 @@ public final class VideoServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return The pageSize.
        */
@@ -1438,6 +1538,10 @@ public final class VideoServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1449,6 +1553,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return This builder for chaining.
        */
@@ -1461,6 +1569,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The pageToken.
        */
@@ -1477,6 +1589,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The bytes for pageToken.
        */
@@ -1494,6 +1610,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1509,6 +1629,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return This builder for chaining.
        */
@@ -1519,6 +1643,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1853,11 +1981,19 @@ public final class VideoServiceOuterClass {
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2005,6 +2141,10 @@ public final class VideoServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 100;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
@@ -2022,6 +2162,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2641,6 +2785,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The nextPageToken.
        */
@@ -2657,6 +2805,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2674,6 +2826,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2689,6 +2845,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return This builder for chaining.
        */
@@ -2699,6 +2859,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2772,11 +2936,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -2784,11 +2956,19 @@ public final class VideoServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -2796,11 +2976,19 @@ public final class VideoServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -2808,11 +2996,19 @@ public final class VideoServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -2820,46 +3016,136 @@ public final class VideoServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      * @return Whether the tusd field is set.
      */
     boolean hasTusd();
     /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      * @return The tusd.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams getTusd();
     /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParamsOrBuilder getTusdOrBuilder();
 
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return Whether the publicAccess field is set.
      */
     boolean hasPublicAccess();
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return The publicAccess.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams getPublicAccess();
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      * @return Whether the authSystemAccess field is set.
      */
     boolean hasAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      * @return The authSystemAccess.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess();
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
@@ -2907,6 +3193,7 @@ public final class VideoServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2939,6 +3226,19 @@ public final class VideoServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 8002: {
@@ -3007,6 +3307,18 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3098,6 +3410,10 @@ public final class VideoServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -3115,6 +3431,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -3136,6 +3456,10 @@ public final class VideoServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 2;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
@@ -3153,6 +3477,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -3174,6 +3502,10 @@ public final class VideoServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The description.
      */
@@ -3191,6 +3523,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 3;</code>
      * @return The bytes for description.
      */
@@ -3212,6 +3548,10 @@ public final class VideoServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
@@ -3229,6 +3569,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -3247,8 +3591,109 @@ public final class VideoServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int TUSD_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      * @return Whether the tusd field is set.
      */
@@ -3257,6 +3702,10 @@ public final class VideoServiceOuterClass {
       return sourceCase_ == 1000;
     }
     /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      * @return The tusd.
      */
@@ -3268,6 +3717,10 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Upload video using the tus protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
      */
     @java.lang.Override
@@ -3280,6 +3733,10 @@ public final class VideoServiceOuterClass {
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return Whether the publicAccess field is set.
      */
@@ -3288,6 +3745,10 @@ public final class VideoServiceOuterClass {
       return accessRightsCase_ == 2000;
     }
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return The publicAccess.
      */
@@ -3299,6 +3760,10 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Video is available to everyone.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      */
     @java.lang.Override
@@ -3311,6 +3776,10 @@ public final class VideoServiceOuterClass {
 
     public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 2002;
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      * @return Whether the authSystemAccess field is set.
      */
@@ -3319,6 +3788,10 @@ public final class VideoServiceOuterClass {
       return accessRightsCase_ == 2002;
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      * @return The authSystemAccess.
      */
@@ -3330,6 +3803,10 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Checking access rights using the authorization system.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
      */
     @java.lang.Override
@@ -3366,6 +3843,12 @@ public final class VideoServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (sourceCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams) source_);
       }
@@ -3395,6 +3878,16 @@ public final class VideoServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, thumbnailId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       if (sourceCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
@@ -3431,6 +3924,8 @@ public final class VideoServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 1000:
@@ -3472,6 +3967,10 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (sourceCase_) {
         case 1000:
           hash = (37 * hash) + TUSD_FIELD_NUMBER;
@@ -3599,6 +4098,28 @@ public final class VideoServiceOuterClass {
         return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3633,6 +4154,7 @@ public final class VideoServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         sourceCase_ = 0;
         source_ = null;
         accessRightsCase_ = 0;
@@ -3663,10 +4185,13 @@ public final class VideoServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest buildPartial() {
         yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.CreateVideoRequest(this);
+        int from_bitField0_ = bitField0_;
         result.channelId_ = channelId_;
         result.title_ = title_;
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (sourceCase_ == 1000) {
           if (tusdBuilder_ == null) {
             result.source_ = source_;
@@ -3754,6 +4279,8 @@ public final class VideoServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getSourceCase()) {
           case TUSD: {
             mergeTusd(other.getTusd());
@@ -3834,9 +4361,14 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -3853,6 +4385,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -3870,6 +4406,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -3885,6 +4425,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3895,6 +4439,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -3913,6 +4461,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The title.
        */
@@ -3929,6 +4481,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The bytes for title.
        */
@@ -3946,6 +4502,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -3961,6 +4521,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
@@ -3971,6 +4535,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -3989,6 +4557,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The description.
        */
@@ -4005,6 +4577,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return The bytes for description.
        */
@@ -4022,6 +4598,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4037,6 +4617,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @return This builder for chaining.
        */
@@ -4047,6 +4631,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 3;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4065,6 +4653,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The thumbnailId.
        */
@@ -4081,6 +4673,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The bytes for thumbnailId.
        */
@@ -4098,6 +4694,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -4113,6 +4713,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -4123,6 +4727,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -4139,9 +4747,172 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParamsOrBuilder> tusdBuilder_;
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        * @return Whether the tusd field is set.
        */
@@ -4150,6 +4921,10 @@ public final class VideoServiceOuterClass {
         return sourceCase_ == 1000;
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        * @return The tusd.
        */
@@ -4168,6 +4943,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       public Builder setTusd(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams value) {
@@ -4184,6 +4963,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       public Builder setTusd(
@@ -4198,6 +4981,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       public Builder mergeTusd(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams value) {
@@ -4220,6 +5007,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       public Builder clearTusd() {
@@ -4239,12 +5030,20 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams.Builder getTusdBuilder() {
         return getTusdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       @java.lang.Override
@@ -4259,6 +5058,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upload video using the tus protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoTUSDParams tusd = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4283,6 +5086,10 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        * @return Whether the publicAccess field is set.
        */
@@ -4291,6 +5098,10 @@ public final class VideoServiceOuterClass {
         return accessRightsCase_ == 2000;
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        * @return The publicAccess.
        */
@@ -4309,6 +5120,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder setPublicAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams value) {
@@ -4325,6 +5140,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder setPublicAccess(
@@ -4339,6 +5158,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder mergePublicAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams value) {
@@ -4361,6 +5184,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder clearPublicAccess() {
@@ -4380,12 +5207,20 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder getPublicAccessBuilder() {
         return getPublicAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       @java.lang.Override
@@ -4400,6 +5235,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video is available to everyone.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4424,6 +5263,10 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        * @return Whether the authSystemAccess field is set.
        */
@@ -4432,6 +5275,10 @@ public final class VideoServiceOuterClass {
         return accessRightsCase_ == 2002;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        * @return The authSystemAccess.
        */
@@ -4450,6 +5297,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
@@ -4466,6 +5317,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       public Builder setAuthSystemAccess(
@@ -4480,6 +5335,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
@@ -4502,6 +5361,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       public Builder clearAuthSystemAccess() {
@@ -4521,12 +5384,20 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
         return getAuthSystemAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       @java.lang.Override
@@ -4541,6 +5412,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using the authorization system.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4623,6 +5498,18 @@ public final class VideoServiceOuterClass {
      * @return The fileSize.
      */
     long getFileSize();
+
+    /**
+     * <code>string file_name = 2;</code>
+     * @return The fileName.
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>string file_name = 2;</code>
+     * @return The bytes for fileName.
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.VideoTUSDParams}
@@ -4637,6 +5524,7 @@ public final class VideoServiceOuterClass {
       super(builder);
     }
     private VideoTUSDParams() {
+      fileName_ = "";
     }
 
     @java.lang.Override
@@ -4672,6 +5560,12 @@ public final class VideoServiceOuterClass {
             case 8: {
 
               fileSize_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fileName_ = s;
               break;
             }
             default: {
@@ -4717,6 +5611,44 @@ public final class VideoServiceOuterClass {
       return fileSize_;
     }
 
+    public static final int FILE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object fileName_;
+    /**
+     * <code>string file_name = 2;</code>
+     * @return The fileName.
+     */
+    @java.lang.Override
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fileName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string file_name = 2;</code>
+     * @return The bytes for fileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4734,6 +5666,9 @@ public final class VideoServiceOuterClass {
       if (fileSize_ != 0L) {
         output.writeInt64(1, fileSize_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fileName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4746,6 +5681,9 @@ public final class VideoServiceOuterClass {
       if (fileSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, fileSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fileName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4764,6 +5702,8 @@ public final class VideoServiceOuterClass {
 
       if (getFileSize()
           != other.getFileSize()) return false;
+      if (!getFileName()
+          .equals(other.getFileName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4778,6 +5718,8 @@ public final class VideoServiceOuterClass {
       hash = (37 * hash) + FILE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFileSize());
+      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFileName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4913,6 +5855,8 @@ public final class VideoServiceOuterClass {
         super.clear();
         fileSize_ = 0L;
 
+        fileName_ = "";
+
         return this;
       }
 
@@ -4940,6 +5884,7 @@ public final class VideoServiceOuterClass {
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams buildPartial() {
         yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams(this);
         result.fileSize_ = fileSize_;
+        result.fileName_ = fileName_;
         onBuilt();
         return result;
       }
@@ -4990,6 +5935,10 @@ public final class VideoServiceOuterClass {
         if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTUSDParams.getDefaultInstance()) return this;
         if (other.getFileSize() != 0L) {
           setFileSize(other.getFileSize());
+        }
+        if (!other.getFileName().isEmpty()) {
+          fileName_ = other.fileName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5047,6 +5996,82 @@ public final class VideoServiceOuterClass {
       public Builder clearFileSize() {
         
         fileSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fileName_ = "";
+      /**
+       * <code>string file_name = 2;</code>
+       * @return The fileName.
+       */
+      public java.lang.String getFileName() {
+        java.lang.Object ref = fileName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fileName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string file_name = 2;</code>
+       * @return The bytes for fileName.
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string file_name = 2;</code>
+       * @param value The fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string file_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileName() {
+        
+        fileName_ = getDefaultInstance().getFileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string file_name = 2;</code>
+       * @param value The bytes for fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fileName_ = value;
         onChanged();
         return this;
       }
@@ -5944,11 +6969,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -6042,6 +7075,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -6059,6 +7096,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -6381,6 +7422,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -6397,6 +7442,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -6414,6 +7463,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -6429,6 +7482,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6439,6 +7496,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -6512,11 +7573,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -6524,26 +7593,46 @@ public final class VideoServiceOuterClass {
         getVideoIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -6551,11 +7640,19 @@ public final class VideoServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -6563,16 +7660,78 @@ public final class VideoServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
     com.google.protobuf.ByteString
         getThumbnailIdBytes();
+
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
 
     /**
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -6645,6 +7804,7 @@ public final class VideoServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6690,6 +7850,19 @@ public final class VideoServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 16002: {
@@ -6744,6 +7917,18 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -6796,6 +7981,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -6813,6 +8002,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -6834,6 +8027,10 @@ public final class VideoServiceOuterClass {
     public static final int FIELD_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask fieldMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
@@ -6842,6 +8039,10 @@ public final class VideoServiceOuterClass {
       return fieldMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
@@ -6850,6 +8051,10 @@ public final class VideoServiceOuterClass {
       return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the video are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     @java.lang.Override
@@ -6860,6 +8065,10 @@ public final class VideoServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 3;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
@@ -6877,6 +8086,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Video title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -6898,6 +8111,10 @@ public final class VideoServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -6915,6 +8132,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Video description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -6936,6 +8157,10 @@ public final class VideoServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
@@ -6953,6 +8178,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6969,6 +8198,103 @@ public final class VideoServiceOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
@@ -7062,6 +8388,12 @@ public final class VideoServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (accessRightsCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_);
       }
@@ -7092,6 +8424,16 @@ public final class VideoServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, thumbnailId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       if (accessRightsCase_ == 2000) {
         size += com.google.protobuf.CodedOutputStream
@@ -7129,6 +8471,8 @@ public final class VideoServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getAccessRightsCase().equals(other.getAccessRightsCase())) return false;
       switch (accessRightsCase_) {
         case 2000:
@@ -7165,6 +8509,10 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (accessRightsCase_) {
         case 2000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
@@ -7284,6 +8632,28 @@ public final class VideoServiceOuterClass {
         return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -7324,6 +8694,7 @@ public final class VideoServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         accessRightsCase_ = 0;
         accessRights_ = null;
         return this;
@@ -7352,6 +8723,7 @@ public final class VideoServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest buildPartial() {
         yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.UpdateVideoRequest(this);
+        int from_bitField0_ = bitField0_;
         result.videoId_ = videoId_;
         if (fieldMaskBuilder_ == null) {
           result.fieldMask_ = fieldMask_;
@@ -7361,6 +8733,8 @@ public final class VideoServiceOuterClass {
         result.title_ = title_;
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (accessRightsCase_ == 2000) {
           if (publicAccessBuilder_ == null) {
             result.accessRights_ = accessRights_;
@@ -7443,6 +8817,8 @@ public final class VideoServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
@@ -7499,9 +8875,14 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -7518,6 +8899,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -7535,6 +8920,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -7550,6 +8939,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7560,6 +8953,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -7580,6 +8977,10 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return Whether the fieldMask field is set.
        */
@@ -7587,6 +8988,10 @@ public final class VideoServiceOuterClass {
         return fieldMaskBuilder_ != null || fieldMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return The fieldMask.
        */
@@ -7598,6 +9003,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
@@ -7614,6 +9023,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(
@@ -7628,6 +9041,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
@@ -7646,6 +9063,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder clearFieldMask() {
@@ -7660,6 +9081,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
@@ -7668,6 +9093,10 @@ public final class VideoServiceOuterClass {
         return getFieldMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -7679,6 +9108,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the video are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7697,6 +9130,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The title.
        */
@@ -7713,6 +9150,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The bytes for title.
        */
@@ -7730,6 +9171,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -7745,6 +9190,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return This builder for chaining.
        */
@@ -7755,6 +9204,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -7773,6 +9226,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -7789,6 +9246,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -7806,6 +9267,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -7821,6 +9286,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -7831,6 +9300,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Video description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -7849,6 +9322,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The thumbnailId.
        */
@@ -7865,6 +9342,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The bytes for thumbnailId.
        */
@@ -7882,6 +9363,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -7897,6 +9382,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -7907,6 +9396,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -7920,6 +9413,165 @@ public final class VideoServiceOuterClass {
         
         thumbnailId_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -8262,11 +9914,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -8360,6 +10020,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -8377,6 +10041,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -8699,6 +10367,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -8715,6 +10387,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -8732,6 +10408,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -8747,6 +10427,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8757,6 +10441,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -8830,11 +10518,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -8928,6 +10624,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -8945,6 +10645,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -9267,6 +10971,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -9283,6 +10991,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -9300,6 +11012,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -9315,6 +11031,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9325,6 +11045,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -9398,11 +11122,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -9496,6 +11228,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -9513,6 +11249,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -9835,6 +11575,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -9851,6 +11595,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -9868,6 +11616,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -9883,6 +11635,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9893,6 +11649,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -9966,11 +11726,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -10165,6 +11933,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -10182,6 +11954,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -10650,6 +12426,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -10666,6 +12446,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -10683,6 +12467,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -10698,6 +12486,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10708,6 +12500,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -11899,11 +13695,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -11997,6 +13801,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -12014,6 +13822,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -12336,6 +14148,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -12352,6 +14168,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -12369,6 +14189,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -12384,6 +14208,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -12394,6 +14222,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -12467,11 +14299,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
     java.lang.String getVideoId();
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -12593,6 +14433,10 @@ public final class VideoServiceOuterClass {
     public static final int VIDEO_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object videoId_;
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The videoId.
      */
@@ -12610,6 +14454,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the video.
+     * </pre>
+     *
      * <code>string video_id = 1;</code>
      * @return The bytes for videoId.
      */
@@ -12988,6 +14836,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object videoId_ = "";
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The videoId.
        */
@@ -13004,6 +14856,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return The bytes for videoId.
        */
@@ -13021,6 +14877,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The videoId to set.
        * @return This builder for chaining.
@@ -13036,6 +14896,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -13046,6 +14910,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the video.
+       * </pre>
+       *
        * <code>string video_id = 1;</code>
        * @param value The bytes for videoId to set.
        * @return This builder for chaining.
@@ -14603,6 +16471,11 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_CreateVideoRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_VideoTUSDParams_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14627,6 +16500,11 @@ public final class VideoServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_UpdateVideoRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_descriptor;
   private static final 
@@ -14697,67 +16575,73 @@ public final class VideoServiceOuterClass {
       "e \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\t\"" +
       "Z\n\021ListVideoResponse\022,\n\006videos\030\001 \003(\0132\034.y" +
       "andex.cloud.video.v1.Video\022\027\n\017next_page_" +
-      "token\030d \001(\t\"\333\002\n\022CreateVideoRequest\022\022\n\nch" +
+      "token\030d \001(\t\"\322\003\n\022CreateVideoRequest\022\022\n\nch" +
       "annel_id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\023\n\013descrip" +
-      "tion\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001(\t\0227\n\004tusd" +
-      "\030\350\007 \001(\0132&.yandex.cloud.video.v1.VideoTUS" +
-      "DParamsH\000\022H\n\rpublic_access\030\320\017 \001(\0132..yand" +
-      "ex.cloud.video.v1.VideoPublicAccessParam" +
-      "sH\001\022Q\n\022auth_system_access\030\322\017 \001(\01322.yande" +
-      "x.cloud.video.v1.VideoAuthSystemAccessPa" +
-      "ramsH\001B\010\n\006sourceB\017\n\raccess_rightsJ\006\010\321\017\020\322" +
-      "\017\"$\n\017VideoTUSDParams\022\021\n\tfile_size\030\001 \001(\003\"" +
-      "\031\n\027VideoPublicAccessParams\"\035\n\033VideoAuthS" +
-      "ystemAccessParams\"\'\n\023CreateVideoMetadata" +
-      "\022\020\n\010video_id\030\001 \001(\t\"\306\002\n\022UpdateVideoReques" +
-      "t\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022\r\n\005title\030\003 \001" +
-      "(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thumbnail_id\030" +
-      "\005 \001(\t\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.c" +
-      "loud.video.v1.VideoPublicAccessParamsH\000\022" +
-      "Q\n\022auth_system_access\030\322\017 \001(\01322.yandex.cl" +
-      "oud.video.v1.VideoAuthSystemAccessParams" +
-      "H\000B\017\n\raccess_rightsJ\006\010\321\017\020\322\017\"\'\n\023UpdateVid" +
-      "eoMetadata\022\020\n\010video_id\030\001 \001(\t\"&\n\022DeleteVi" +
-      "deoRequest\022\020\n\010video_id\030\001 \001(\t\"\'\n\023DeleteVi" +
-      "deoMetadata\022\020\n\010video_id\030\001 \001(\t\"\271\001\n\031Perfor" +
-      "mVideoActionRequest\022\020\n\010video_id\030\001 \001(\t\022=\n" +
-      "\007publish\030\350\007 \001(\0132).yandex.cloud.video.v1." +
-      "PublishVideoActionH\000\022A\n\tunpublish\030\351\007 \001(\013" +
-      "2+.yandex.cloud.video.v1.UnpublishVideoA" +
-      "ctionH\000B\010\n\006action\"\024\n\022PublishVideoAction\"" +
-      "\026\n\024UnpublishVideoAction\".\n\032PerformVideoA" +
-      "ctionMetadata\022\020\n\010video_id\030\001 \001(\t\"f\n\030GetVi" +
-      "deoPlayerURLRequest\022\020\n\010video_id\030\001 \001(\t\0228\n" +
-      "\006params\030\002 \001(\0132(.yandex.cloud.video.v1.Vi" +
-      "deoPlayerParams\"C\n\021VideoPlayerParams\022\014\n\004" +
-      "mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003" +
-      " \001(\010\"=\n\031GetVideoPlayerURLResponse\022\022\n\npla" +
-      "yer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\276\006\n\014VideoSer" +
-      "vice\022M\n\003Get\022&.yandex.cloud.video.v1.GetV" +
-      "ideoRequest\032\034.yandex.cloud.video.v1.Vide" +
-      "o\"\000\022[\n\004List\022\'.yandex.cloud.video.v1.List" +
-      "VideoRequest\032(.yandex.cloud.video.v1.Lis" +
-      "tVideoResponse\"\000\022x\n\006Create\022).yandex.clou" +
-      "d.video.v1.CreateVideoRequest\032!.yandex.c" +
-      "loud.operation.Operation\" \262\322*\034\n\023CreateVi" +
-      "deoMetadata\022\005Video\022x\n\006Update\022).yandex.cl" +
-      "oud.video.v1.UpdateVideoRequest\032!.yandex" +
-      ".cloud.operation.Operation\" \262\322*\034\n\023Update" +
-      "VideoMetadata\022\005Video\022\210\001\n\006Delete\022).yandex" +
-      ".cloud.video.v1.DeleteVideoRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"0\262\322*,\n\023Del" +
-      "eteVideoMetadata\022\025google.protobuf.Empty\022" +
-      "\215\001\n\rPerformAction\0220.yandex.cloud.video.v" +
-      "1.PerformVideoActionRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\'\262\322*#\n\032PerformVid" +
-      "eoActionMetadata\022\005Video\022s\n\014GetPlayerURL\022" +
-      "/.yandex.cloud.video.v1.GetVideoPlayerUR" +
-      "LRequest\0320.yandex.cloud.video.v1.GetVide" +
-      "oPlayerURLResponse\"\000B\\\n\031yandex.cloud.api" +
-      ".video.v1Z?github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/video/v1;videob\006prot" +
-      "o3"
+      "tion\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001(\t\022F\n\006labe" +
+      "ls\030\310\001 \003(\01325.yandex.cloud.video.v1.Create" +
+      "VideoRequest.LabelsEntry\0227\n\004tusd\030\350\007 \001(\0132" +
+      "&.yandex.cloud.video.v1.VideoTUSDParamsH" +
+      "\000\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.cloud" +
+      ".video.v1.VideoPublicAccessParamsH\001\022Q\n\022a" +
+      "uth_system_access\030\322\017 \001(\01322.yandex.cloud." +
+      "video.v1.VideoAuthSystemAccessParamsH\001\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001B\010\n\006sourceB\017\n\raccess_rightsJ\006\010\321\017\020\322\017" +
+      "\"7\n\017VideoTUSDParams\022\021\n\tfile_size\030\001 \001(\003\022\021" +
+      "\n\tfile_name\030\002 \001(\t\"\031\n\027VideoPublicAccessPa" +
+      "rams\"\035\n\033VideoAuthSystemAccessParams\"\'\n\023C" +
+      "reateVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"\275\003\n" +
+      "\022UpdateVideoRequest\022\020\n\010video_id\030\001 \001(\t\022.\n" +
+      "\nfield_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
+      "\t\022\024\n\014thumbnail_id\030\005 \001(\t\022F\n\006labels\030\310\001 \003(\013" +
+      "25.yandex.cloud.video.v1.UpdateVideoRequ" +
+      "est.LabelsEntry\022H\n\rpublic_access\030\320\017 \001(\0132" +
+      "..yandex.cloud.video.v1.VideoPublicAcces" +
+      "sParamsH\000\022Q\n\022auth_system_access\030\322\017 \001(\01322" +
+      ".yandex.cloud.video.v1.VideoAuthSystemAc" +
+      "cessParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_rightsJ\006\010\321" +
+      "\017\020\322\017\"\'\n\023UpdateVideoMetadata\022\020\n\010video_id\030" +
+      "\001 \001(\t\"&\n\022DeleteVideoRequest\022\020\n\010video_id\030" +
+      "\001 \001(\t\"\'\n\023DeleteVideoMetadata\022\020\n\010video_id" +
+      "\030\001 \001(\t\"\271\001\n\031PerformVideoActionRequest\022\020\n\010" +
+      "video_id\030\001 \001(\t\022=\n\007publish\030\350\007 \001(\0132).yande" +
+      "x.cloud.video.v1.PublishVideoActionH\000\022A\n" +
+      "\tunpublish\030\351\007 \001(\0132+.yandex.cloud.video.v" +
+      "1.UnpublishVideoActionH\000B\010\n\006action\"\024\n\022Pu" +
+      "blishVideoAction\"\026\n\024UnpublishVideoAction" +
+      "\".\n\032PerformVideoActionMetadata\022\020\n\010video_" +
+      "id\030\001 \001(\t\"f\n\030GetVideoPlayerURLRequest\022\020\n\010" +
+      "video_id\030\001 \001(\t\0228\n\006params\030\002 \001(\0132(.yandex." +
+      "cloud.video.v1.VideoPlayerParams\"C\n\021Vide" +
+      "oPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030" +
+      "\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"=\n\031GetVideoPlayerU" +
+      "RLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002" +
+      " \001(\t2\276\006\n\014VideoService\022M\n\003Get\022&.yandex.cl" +
+      "oud.video.v1.GetVideoRequest\032\034.yandex.cl" +
+      "oud.video.v1.Video\"\000\022[\n\004List\022\'.yandex.cl" +
+      "oud.video.v1.ListVideoRequest\032(.yandex.c" +
+      "loud.video.v1.ListVideoResponse\"\000\022x\n\006Cre" +
+      "ate\022).yandex.cloud.video.v1.CreateVideoR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\" \262\322*\034\n\023CreateVideoMetadata\022\005Video\022x\n\006U" +
+      "pdate\022).yandex.cloud.video.v1.UpdateVide" +
+      "oRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\" \262\322*\034\n\023UpdateVideoMetadata\022\005Video\022\210\001" +
+      "\n\006Delete\022).yandex.cloud.video.v1.DeleteV" +
+      "ideoRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"0\262\322*,\n\023DeleteVideoMetadata\022\025googl" +
+      "e.protobuf.Empty\022\215\001\n\rPerformAction\0220.yan" +
+      "dex.cloud.video.v1.PerformVideoActionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\'\262\322*#\n\032PerformVideoActionMetadata\022\005Video" +
+      "\022s\n\014GetPlayerURL\022/.yandex.cloud.video.v1" +
+      ".GetVideoPlayerURLRequest\0320.yandex.cloud" +
+      ".video.v1.GetVideoPlayerURLResponse\"\000B\\\n" +
+      "\031yandex.cloud.api.video.v1Z?github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/vid" +
+      "eo/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14790,13 +16674,19 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "Tusd", "PublicAccess", "AuthSystemAccess", "Source", "AccessRights", });
+        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "Labels", "Tusd", "PublicAccess", "AuthSystemAccess", "Source", "AccessRights", });
+    internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_VideoTUSDParams_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_VideoTUSDParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoTUSDParams_descriptor,
-        new java.lang.String[] { "FileSize", });
+        new java.lang.String[] { "FileSize", "FileName", });
     internal_static_yandex_cloud_video_v1_VideoPublicAccessParams_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_video_v1_VideoPublicAccessParams_fieldAccessorTable = new
@@ -14820,7 +16710,13 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor,
-        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "PublicAccess", "AuthSystemAccess", "AccessRights", });
+        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "Labels", "PublicAccess", "AuthSystemAccess", "AccessRights", });
+    internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_fieldAccessorTable = new

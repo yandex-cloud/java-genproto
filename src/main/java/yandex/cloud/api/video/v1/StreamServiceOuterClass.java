@@ -19,11 +19,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -117,6 +125,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -134,6 +146,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -456,6 +472,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -472,6 +492,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -489,6 +513,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -587,11 +623,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -599,17 +643,29 @@ public final class StreamServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -787,6 +843,10 @@ public final class StreamServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -804,6 +864,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -825,6 +889,10 @@ public final class StreamServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
@@ -836,6 +904,10 @@ public final class StreamServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 101;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
@@ -853,6 +925,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -1354,6 +1430,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -1370,6 +1450,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -1387,6 +1471,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -1402,6 +1490,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1412,6 +1504,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -1430,6 +1526,10 @@ public final class StreamServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return The pageSize.
        */
@@ -1438,6 +1538,10 @@ public final class StreamServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1449,6 +1553,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return This builder for chaining.
        */
@@ -1461,6 +1569,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The pageToken.
        */
@@ -1477,6 +1589,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The bytes for pageToken.
        */
@@ -1494,6 +1610,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1509,6 +1629,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return This builder for chaining.
        */
@@ -1519,6 +1643,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1829,35 +1957,63 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream> 
         getStreamsList();
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     yandex.cloud.api.video.v1.StreamOuterClass.Stream getStreams(int index);
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     int getStreamsCount();
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.StreamOuterClass.StreamOrBuilder> 
         getStreamsOrBuilderList();
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     yandex.cloud.api.video.v1.StreamOuterClass.StreamOrBuilder getStreamsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1965,6 +2121,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAMS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream> streams_;
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     @java.lang.Override
@@ -1972,6 +2132,10 @@ public final class StreamServiceOuterClass {
       return streams_;
     }
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     @java.lang.Override
@@ -1980,6 +2144,10 @@ public final class StreamServiceOuterClass {
       return streams_;
     }
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     @java.lang.Override
@@ -1987,6 +2155,10 @@ public final class StreamServiceOuterClass {
       return streams_.size();
     }
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     @java.lang.Override
@@ -1994,6 +2166,10 @@ public final class StreamServiceOuterClass {
       return streams_.get(index);
     }
     /**
+     * <pre>
+     * List of streams for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
      */
     @java.lang.Override
@@ -2005,6 +2181,10 @@ public final class StreamServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 100;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
@@ -2022,6 +2202,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2412,6 +2596,10 @@ public final class StreamServiceOuterClass {
           yandex.cloud.api.video.v1.StreamOuterClass.Stream, yandex.cloud.api.video.v1.StreamOuterClass.Stream.Builder, yandex.cloud.api.video.v1.StreamOuterClass.StreamOrBuilder> streamsBuilder_;
 
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream> getStreamsList() {
@@ -2422,6 +2610,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public int getStreamsCount() {
@@ -2432,6 +2624,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamOuterClass.Stream getStreams(int index) {
@@ -2442,6 +2638,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder setStreams(
@@ -2459,6 +2659,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder setStreams(
@@ -2473,6 +2677,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder addStreams(yandex.cloud.api.video.v1.StreamOuterClass.Stream value) {
@@ -2489,6 +2697,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder addStreams(
@@ -2506,6 +2718,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder addStreams(
@@ -2520,6 +2736,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder addStreams(
@@ -2534,6 +2754,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder addAllStreams(
@@ -2549,6 +2773,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder clearStreams() {
@@ -2562,6 +2790,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public Builder removeStreams(int index) {
@@ -2575,6 +2807,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamOuterClass.Stream.Builder getStreamsBuilder(
@@ -2582,6 +2818,10 @@ public final class StreamServiceOuterClass {
         return getStreamsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamOuterClass.StreamOrBuilder getStreamsOrBuilder(
@@ -2592,6 +2832,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.StreamOuterClass.StreamOrBuilder> 
@@ -2603,6 +2847,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamOuterClass.Stream.Builder addStreamsBuilder() {
@@ -2610,6 +2858,10 @@ public final class StreamServiceOuterClass {
             yandex.cloud.api.video.v1.StreamOuterClass.Stream.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamOuterClass.Stream.Builder addStreamsBuilder(
@@ -2618,6 +2870,10 @@ public final class StreamServiceOuterClass {
             index, yandex.cloud.api.video.v1.StreamOuterClass.Stream.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of streams for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Stream streams = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.StreamOuterClass.Stream.Builder> 
@@ -2641,6 +2897,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The nextPageToken.
        */
@@ -2657,6 +2917,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2674,6 +2938,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2689,6 +2957,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return This builder for chaining.
        */
@@ -2699,6 +2971,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2772,11 +3048,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -2784,11 +3068,19 @@ public final class StreamServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The bytes for lineId.
      */
@@ -2796,11 +3088,19 @@ public final class StreamServiceOuterClass {
         getLineIdBytes();
 
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -2808,11 +3108,19 @@ public final class StreamServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -2820,11 +3128,19 @@ public final class StreamServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
@@ -2832,31 +3148,109 @@ public final class StreamServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return Whether the onDemand field is set.
      */
     boolean hasOnDemand();
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return The onDemand.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams getOnDemand();
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder getOnDemandOrBuilder();
 
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return Whether the schedule field is set.
      */
     boolean hasSchedule();
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return The schedule.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams getSchedule();
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder getScheduleOrBuilder();
@@ -2903,6 +3297,7 @@ public final class StreamServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2941,6 +3336,19 @@ public final class StreamServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 8002: {
@@ -2995,6 +3403,18 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3047,6 +3467,10 @@ public final class StreamServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -3064,6 +3488,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -3085,6 +3513,10 @@ public final class StreamServiceOuterClass {
     public static final int LINE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object lineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The lineId.
      */
@@ -3102,6 +3534,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 2;</code>
      * @return The bytes for lineId.
      */
@@ -3123,6 +3559,10 @@ public final class StreamServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 3;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
@@ -3140,6 +3580,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -3161,6 +3605,10 @@ public final class StreamServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -3178,6 +3626,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -3199,6 +3651,10 @@ public final class StreamServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The thumbnailId.
      */
@@ -3216,6 +3672,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 5;</code>
      * @return The bytes for thumbnailId.
      */
@@ -3234,8 +3694,109 @@ public final class StreamServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return Whether the onDemand field is set.
      */
@@ -3244,6 +3805,10 @@ public final class StreamServiceOuterClass {
       return streamTypeCase_ == 1000;
     }
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return The onDemand.
      */
@@ -3255,6 +3820,10 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      */
     @java.lang.Override
@@ -3267,6 +3836,10 @@ public final class StreamServiceOuterClass {
 
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return Whether the schedule field is set.
      */
@@ -3275,6 +3848,10 @@ public final class StreamServiceOuterClass {
       return streamTypeCase_ == 1001;
     }
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return The schedule.
      */
@@ -3286,6 +3863,10 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      */
     @java.lang.Override
@@ -3325,6 +3906,12 @@ public final class StreamServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (streamTypeCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams) streamType_);
       }
@@ -3354,6 +3941,16 @@ public final class StreamServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, thumbnailId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       if (streamTypeCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
@@ -3388,6 +3985,8 @@ public final class StreamServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getStreamTypeCase().equals(other.getStreamTypeCase())) return false;
       switch (streamTypeCase_) {
         case 1000:
@@ -3422,6 +4021,10 @@ public final class StreamServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (streamTypeCase_) {
         case 1000:
           hash = (37 * hash) + ON_DEMAND_FIELD_NUMBER;
@@ -3541,6 +4144,28 @@ public final class StreamServiceOuterClass {
         return yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3577,6 +4202,7 @@ public final class StreamServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         streamTypeCase_ = 0;
         streamType_ = null;
         return this;
@@ -3605,11 +4231,14 @@ public final class StreamServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest buildPartial() {
         yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest result = new yandex.cloud.api.video.v1.StreamServiceOuterClass.CreateStreamRequest(this);
+        int from_bitField0_ = bitField0_;
         result.channelId_ = channelId_;
         result.lineId_ = lineId_;
         result.title_ = title_;
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (streamTypeCase_ == 1000) {
           if (onDemandBuilder_ == null) {
             result.streamType_ = streamType_;
@@ -3693,6 +4322,8 @@ public final class StreamServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getStreamTypeCase()) {
           case ON_DEMAND: {
             mergeOnDemand(other.getOnDemand());
@@ -3749,9 +4380,14 @@ public final class StreamServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -3768,6 +4404,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -3785,6 +4425,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -3800,6 +4444,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3810,6 +4458,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -3828,6 +4480,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object lineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return The lineId.
        */
@@ -3844,6 +4500,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return The bytes for lineId.
        */
@@ -3861,6 +4521,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
@@ -3876,6 +4540,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -3886,6 +4554,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 2;</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
@@ -3904,6 +4576,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The title.
        */
@@ -3920,6 +4596,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The bytes for title.
        */
@@ -3937,6 +4617,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -3952,6 +4636,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return This builder for chaining.
        */
@@ -3962,6 +4650,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -3980,6 +4672,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -3996,6 +4692,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -4013,6 +4713,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4028,6 +4732,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -4038,6 +4746,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4056,6 +4768,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The thumbnailId.
        */
@@ -4072,6 +4788,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return The bytes for thumbnailId.
        */
@@ -4089,6 +4809,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -4104,6 +4828,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -4114,6 +4842,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 5;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -4130,9 +4862,172 @@ public final class StreamServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder> onDemandBuilder_;
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        * @return Whether the onDemand field is set.
        */
@@ -4141,6 +5036,10 @@ public final class StreamServiceOuterClass {
         return streamTypeCase_ == 1000;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        * @return The onDemand.
        */
@@ -4159,6 +5058,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder setOnDemand(yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams value) {
@@ -4175,6 +5078,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder setOnDemand(
@@ -4189,6 +5096,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder mergeOnDemand(yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams value) {
@@ -4211,6 +5122,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder clearOnDemand() {
@@ -4230,12 +5145,20 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder getOnDemandBuilder() {
         return getOnDemandFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       @java.lang.Override
@@ -4250,6 +5173,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4274,6 +5201,10 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder> scheduleBuilder_;
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        * @return Whether the schedule field is set.
        */
@@ -4282,6 +5213,10 @@ public final class StreamServiceOuterClass {
         return streamTypeCase_ == 1001;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        * @return The schedule.
        */
@@ -4300,6 +5235,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder setSchedule(yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams value) {
@@ -4316,6 +5255,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder setSchedule(
@@ -4330,6 +5273,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder mergeSchedule(yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams value) {
@@ -4352,6 +5299,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder clearSchedule() {
@@ -4371,12 +5322,20 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder getScheduleBuilder() {
         return getScheduleFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       @java.lang.Override
@@ -4391,6 +5350,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5711,11 +6674,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -5809,6 +6780,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -5826,6 +6801,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -6148,6 +7127,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -6164,6 +7147,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -6181,6 +7168,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -6196,6 +7187,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -6206,6 +7201,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -6279,11 +7278,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -6291,26 +7298,46 @@ public final class StreamServiceOuterClass {
         getStreamIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The lineId.
      */
     java.lang.String getLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The bytes for lineId.
      */
@@ -6318,11 +7345,19 @@ public final class StreamServiceOuterClass {
         getLineIdBytes();
 
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The bytes for title.
      */
@@ -6330,11 +7365,19 @@ public final class StreamServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -6342,11 +7385,19 @@ public final class StreamServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6354,31 +7405,109 @@ public final class StreamServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return Whether the onDemand field is set.
      */
     boolean hasOnDemand();
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return The onDemand.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams getOnDemand();
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder getOnDemandOrBuilder();
 
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return Whether the schedule field is set.
      */
     boolean hasSchedule();
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return The schedule.
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams getSchedule();
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      */
     yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder getScheduleOrBuilder();
@@ -6425,6 +7554,7 @@ public final class StreamServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6476,6 +7606,19 @@ public final class StreamServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 8002: {
@@ -6530,6 +7673,18 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -6582,6 +7737,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -6599,6 +7758,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -6620,6 +7783,10 @@ public final class StreamServiceOuterClass {
     public static final int FIELD_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask fieldMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
@@ -6628,6 +7795,10 @@ public final class StreamServiceOuterClass {
       return fieldMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
@@ -6636,6 +7807,10 @@ public final class StreamServiceOuterClass {
       return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the stream are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     @java.lang.Override
@@ -6646,6 +7821,10 @@ public final class StreamServiceOuterClass {
     public static final int LINE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object lineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The lineId.
      */
@@ -6663,6 +7842,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string line_id = 3;</code>
      * @return The bytes for lineId.
      */
@@ -6684,6 +7867,10 @@ public final class StreamServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 4;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The title.
      */
@@ -6701,6 +7888,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Stream title.
+     * </pre>
+     *
      * <code>string title = 4;</code>
      * @return The bytes for title.
      */
@@ -6722,6 +7913,10 @@ public final class StreamServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The description.
      */
@@ -6739,6 +7934,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Stream description.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      * @return The bytes for description.
      */
@@ -6760,6 +7959,10 @@ public final class StreamServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The thumbnailId.
      */
@@ -6777,6 +7980,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 6;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6795,8 +8002,109 @@ public final class StreamServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return Whether the onDemand field is set.
      */
@@ -6805,6 +8113,10 @@ public final class StreamServiceOuterClass {
       return streamTypeCase_ == 1000;
     }
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      * @return The onDemand.
      */
@@ -6816,6 +8128,10 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * On demand stream. It starts immediately when a signal appears.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
      */
     @java.lang.Override
@@ -6828,6 +8144,10 @@ public final class StreamServiceOuterClass {
 
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return Whether the schedule field is set.
      */
@@ -6836,6 +8156,10 @@ public final class StreamServiceOuterClass {
       return streamTypeCase_ == 1001;
     }
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      * @return The schedule.
      */
@@ -6847,6 +8171,10 @@ public final class StreamServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
      */
     @java.lang.Override
@@ -6889,6 +8217,12 @@ public final class StreamServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (streamTypeCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams) streamType_);
       }
@@ -6922,6 +8256,16 @@ public final class StreamServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, thumbnailId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       if (streamTypeCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
@@ -6961,6 +8305,8 @@ public final class StreamServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getStreamTypeCase().equals(other.getStreamTypeCase())) return false;
       switch (streamTypeCase_) {
         case 1000:
@@ -6999,6 +8345,10 @@ public final class StreamServiceOuterClass {
       hash = (53 * hash) + getDescription().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (streamTypeCase_) {
         case 1000:
           hash = (37 * hash) + ON_DEMAND_FIELD_NUMBER;
@@ -7118,6 +8468,28 @@ public final class StreamServiceOuterClass {
         return yandex.cloud.api.video.v1.StreamServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -7160,6 +8532,7 @@ public final class StreamServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         streamTypeCase_ = 0;
         streamType_ = null;
         return this;
@@ -7188,6 +8561,7 @@ public final class StreamServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest buildPartial() {
         yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest result = new yandex.cloud.api.video.v1.StreamServiceOuterClass.UpdateStreamRequest(this);
+        int from_bitField0_ = bitField0_;
         result.streamId_ = streamId_;
         if (fieldMaskBuilder_ == null) {
           result.fieldMask_ = fieldMask_;
@@ -7198,6 +8572,8 @@ public final class StreamServiceOuterClass {
         result.title_ = title_;
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (streamTypeCase_ == 1000) {
           if (onDemandBuilder_ == null) {
             result.streamType_ = streamType_;
@@ -7284,6 +8660,8 @@ public final class StreamServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getStreamTypeCase()) {
           case ON_DEMAND: {
             mergeOnDemand(other.getOnDemand());
@@ -7340,9 +8718,14 @@ public final class StreamServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -7359,6 +8742,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -7376,6 +8763,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -7391,6 +8782,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7401,6 +8796,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -7421,6 +8820,10 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return Whether the fieldMask field is set.
        */
@@ -7428,6 +8831,10 @@ public final class StreamServiceOuterClass {
         return fieldMaskBuilder_ != null || fieldMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return The fieldMask.
        */
@@ -7439,6 +8846,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
@@ -7455,6 +8866,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(
@@ -7469,6 +8884,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
@@ -7487,6 +8906,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder clearFieldMask() {
@@ -7501,6 +8924,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
@@ -7509,6 +8936,10 @@ public final class StreamServiceOuterClass {
         return getFieldMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -7520,6 +8951,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the stream are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7538,6 +8973,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object lineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return The lineId.
        */
@@ -7554,6 +8993,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return The bytes for lineId.
        */
@@ -7571,6 +9014,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @param value The lineId to set.
        * @return This builder for chaining.
@@ -7586,6 +9033,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -7596,6 +9047,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string line_id = 3;</code>
        * @param value The bytes for lineId to set.
        * @return This builder for chaining.
@@ -7614,6 +9069,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return The title.
        */
@@ -7630,6 +9089,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return The bytes for title.
        */
@@ -7647,6 +9110,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -7662,6 +9129,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @return This builder for chaining.
        */
@@ -7672,6 +9143,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream title.
+       * </pre>
+       *
        * <code>string title = 4;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -7690,6 +9165,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The description.
        */
@@ -7706,6 +9185,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return The bytes for description.
        */
@@ -7723,6 +9206,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -7738,6 +9225,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @return This builder for chaining.
        */
@@ -7748,6 +9239,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Stream description.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -7766,6 +9261,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return The thumbnailId.
        */
@@ -7782,6 +9281,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return The bytes for thumbnailId.
        */
@@ -7799,6 +9302,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -7814,6 +9321,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -7824,6 +9335,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 6;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -7840,9 +9355,172 @@ public final class StreamServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParamsOrBuilder> onDemandBuilder_;
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        * @return Whether the onDemand field is set.
        */
@@ -7851,6 +9529,10 @@ public final class StreamServiceOuterClass {
         return streamTypeCase_ == 1000;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        * @return The onDemand.
        */
@@ -7869,6 +9551,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder setOnDemand(yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams value) {
@@ -7885,6 +9571,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder setOnDemand(
@@ -7899,6 +9589,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder mergeOnDemand(yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams value) {
@@ -7921,6 +9615,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public Builder clearOnDemand() {
@@ -7940,12 +9638,20 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.OnDemandParams.Builder getOnDemandBuilder() {
         return getOnDemandFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       @java.lang.Override
@@ -7960,6 +9666,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * On demand stream. It starts immediately when a signal appears.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.OnDemandParams on_demand = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7984,6 +9694,10 @@ public final class StreamServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder, yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParamsOrBuilder> scheduleBuilder_;
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        * @return Whether the schedule field is set.
        */
@@ -7992,6 +9706,10 @@ public final class StreamServiceOuterClass {
         return streamTypeCase_ == 1001;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        * @return The schedule.
        */
@@ -8010,6 +9728,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder setSchedule(yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams value) {
@@ -8026,6 +9748,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder setSchedule(
@@ -8040,6 +9766,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder mergeSchedule(yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams value) {
@@ -8062,6 +9792,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public Builder clearSchedule() {
@@ -8081,12 +9815,20 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       public yandex.cloud.api.video.v1.StreamServiceOuterClass.ScheduleParams.Builder getScheduleBuilder() {
         return getScheduleFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       @java.lang.Override
@@ -8101,6 +9843,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ScheduleParams schedule = 1001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8179,11 +9925,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -8277,6 +10031,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -8294,6 +10052,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -8616,6 +10378,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -8632,6 +10398,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -8649,6 +10419,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -8664,6 +10438,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8674,6 +10452,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -8747,11 +10529,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -8845,6 +10635,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -8862,6 +10656,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -9184,6 +10982,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -9200,6 +11002,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -9217,6 +11023,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -9232,6 +11042,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9242,6 +11056,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -9315,11 +11133,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -9413,6 +11239,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -9430,6 +11260,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -9752,6 +11586,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -9768,6 +11606,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -9785,6 +11627,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -9800,6 +11646,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9810,6 +11660,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -9883,11 +11737,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -10082,6 +11944,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -10099,6 +11965,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -10567,6 +12437,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -10583,6 +12457,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -10600,6 +12478,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -10615,6 +12497,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10625,6 +12511,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -11816,11 +13706,19 @@ public final class StreamServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
     java.lang.String getStreamId();
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -11914,6 +13812,10 @@ public final class StreamServiceOuterClass {
     public static final int STREAM_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamId_;
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The streamId.
      */
@@ -11931,6 +13833,10 @@ public final class StreamServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the stream.
+     * </pre>
+     *
      * <code>string stream_id = 1;</code>
      * @return The bytes for streamId.
      */
@@ -12253,6 +14159,10 @@ public final class StreamServiceOuterClass {
 
       private java.lang.Object streamId_ = "";
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The streamId.
        */
@@ -12269,6 +14179,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return The bytes for streamId.
        */
@@ -12286,6 +14200,10 @@ public final class StreamServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The streamId to set.
        * @return This builder for chaining.
@@ -12301,6 +14219,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -12311,6 +14233,10 @@ public final class StreamServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the stream.
+       * </pre>
+       *
        * <code>string stream_id = 1;</code>
        * @param value The bytes for streamId to set.
        * @return This builder for chaining.
@@ -12400,6 +14326,11 @@ public final class StreamServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_CreateStreamRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_OnDemandParams_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12419,6 +14350,11 @@ public final class StreamServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_UpdateStreamRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_UpdateStreamMetadata_descriptor;
   private static final 
@@ -12475,25 +14411,31 @@ public final class StreamServiceOuterClass {
       " \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\t\"^" +
       "\n\023ListStreamsResponse\022.\n\007streams\030\001 \003(\0132\035" +
       ".yandex.cloud.video.v1.Stream\022\027\n\017next_pa" +
-      "ge_token\030d \001(\t\"\374\001\n\023CreateStreamRequest\022\022" +
+      "ge_token\030d \001(\t\"\364\002\n\023CreateStreamRequest\022\022" +
       "\n\nchannel_id\030\001 \001(\t\022\017\n\007line_id\030\002 \001(\t\022\r\n\005t" +
       "itle\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thumb" +
-      "nail_id\030\005 \001(\t\022;\n\ton_demand\030\350\007 \001(\0132%.yand" +
-      "ex.cloud.video.v1.OnDemandParamsH\000\022:\n\010sc" +
-      "hedule\030\351\007 \001(\0132%.yandex.cloud.video.v1.Sc" +
-      "heduleParamsH\000B\r\n\013stream_type\"\020\n\016OnDeman" +
+      "nail_id\030\005 \001(\t\022G\n\006labels\030\310\001 \003(\01326.yandex." +
+      "cloud.video.v1.CreateStreamRequest.Label" +
+      "sEntry\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.clou" +
+      "d.video.v1.OnDemandParamsH\000\022:\n\010schedule\030" +
+      "\351\007 \001(\0132%.yandex.cloud.video.v1.ScheduleP" +
+      "aramsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\r\n\013stream_type\"\020\n\016OnDeman" +
       "dParams\"q\n\016ScheduleParams\022.\n\nstart_time\030" +
       "\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fin" +
       "ish_time\030\002 \001(\0132\032.google.protobuf.Timesta" +
       "mp\")\n\024CreateStreamMetadata\022\021\n\tstream_id\030" +
-      "\001 \001(\t\"\253\002\n\023UpdateStreamRequest\022\021\n\tstream_" +
+      "\001 \001(\t\"\243\003\n\023UpdateStreamRequest\022\021\n\tstream_" +
       "id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.pr" +
       "otobuf.FieldMask\022\017\n\007line_id\030\003 \001(\t\022\r\n\005tit" +
       "le\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022\024\n\014thumbna" +
-      "il_id\030\006 \001(\t\022;\n\ton_demand\030\350\007 \001(\0132%.yandex" +
-      ".cloud.video.v1.OnDemandParamsH\000\022:\n\010sche" +
-      "dule\030\351\007 \001(\0132%.yandex.cloud.video.v1.Sche" +
-      "duleParamsH\000B\r\n\013stream_type\")\n\024UpdateStr" +
+      "il_id\030\006 \001(\t\022G\n\006labels\030\310\001 \003(\01326.yandex.cl" +
+      "oud.video.v1.UpdateStreamRequest.LabelsE" +
+      "ntry\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.cloud." +
+      "video.v1.OnDemandParamsH\000\022:\n\010schedule\030\351\007" +
+      " \001(\0132%.yandex.cloud.video.v1.SchedulePar" +
+      "amsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001B\r\n\013stream_type\")\n\024UpdateStr" +
       "eamMetadata\022\021\n\tstream_id\030\001 \001(\t\"(\n\023Delete" +
       "StreamRequest\022\021\n\tstream_id\030\001 \001(\t\")\n\024Dele" +
       "teStreamMetadata\022\021\n\tstream_id\030\001 \001(\t\"\257\001\n\032" +
@@ -12558,7 +14500,13 @@ public final class StreamServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateStreamRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateStreamRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "LineId", "Title", "Description", "ThumbnailId", "OnDemand", "Schedule", "StreamType", });
+        new java.lang.String[] { "ChannelId", "LineId", "Title", "Description", "ThumbnailId", "Labels", "OnDemand", "Schedule", "StreamType", });
+    internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_CreateStreamRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_CreateStreamRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_OnDemandParams_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_OnDemandParams_fieldAccessorTable = new
@@ -12582,7 +14530,13 @@ public final class StreamServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateStreamRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamRequest_descriptor,
-        new java.lang.String[] { "StreamId", "FieldMask", "LineId", "Title", "Description", "ThumbnailId", "OnDemand", "Schedule", "StreamType", });
+        new java.lang.String[] { "StreamId", "FieldMask", "LineId", "Title", "Description", "ThumbnailId", "Labels", "OnDemand", "Schedule", "StreamType", });
+    internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_UpdateStreamRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_UpdateStreamRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_UpdateStreamMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_video_v1_UpdateStreamMetadata_fieldAccessorTable = new

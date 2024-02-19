@@ -3,6 +3,9 @@ package yandex.cloud.api.video.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Episode management service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -277,10 +280,16 @@ public final class EpisodeServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Episode management service.
+   * </pre>
    */
   public static abstract class EpisodeServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> responseObserver) {
@@ -288,6 +297,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List episodes for stream or line.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse> responseObserver) {
@@ -295,6 +307,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create episode.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -302,6 +317,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update episode.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -309,6 +327,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete episode.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -316,6 +337,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the episode.
+     * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -323,6 +347,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns url to the player.
+     * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse> responseObserver) {
@@ -385,6 +412,9 @@ public final class EpisodeServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Episode management service.
+   * </pre>
    */
   public static final class EpisodeServiceStub extends io.grpc.stub.AbstractAsyncStub<EpisodeServiceStub> {
     private EpisodeServiceStub(
@@ -399,6 +429,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> responseObserver) {
@@ -407,6 +440,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List episodes for stream or line.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse> responseObserver) {
@@ -415,6 +451,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create episode.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -423,6 +462,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update episode.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -431,6 +473,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete episode.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -439,6 +484,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the episode.
+     * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -447,6 +495,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns url to the player.
+     * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse> responseObserver) {
@@ -456,6 +507,9 @@ public final class EpisodeServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Episode management service.
+   * </pre>
    */
   public static final class EpisodeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EpisodeServiceBlockingStub> {
     private EpisodeServiceBlockingStub(
@@ -470,6 +524,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -477,6 +534,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List episodes for stream or line.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse list(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -484,6 +544,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create episode.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -491,6 +554,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update episode.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -498,6 +564,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete episode.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -505,6 +574,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the episode.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -512,6 +584,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns url to the player.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -520,6 +595,9 @@ public final class EpisodeServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Episode management service.
+   * </pre>
    */
   public static final class EpisodeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EpisodeServiceFutureStub> {
     private EpisodeServiceFutureStub(
@@ -534,6 +612,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> get(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request) {
@@ -542,6 +623,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List episodes for stream or line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesResponse> list(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.ListEpisodesRequest request) {
@@ -550,6 +634,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create episode.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest request) {
@@ -558,6 +645,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update episode.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest request) {
@@ -566,6 +656,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete episode.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.DeleteEpisodeRequest request) {
@@ -574,6 +667,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the episode.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.PerformEpisodeActionRequest request) {
@@ -582,6 +678,9 @@ public final class EpisodeServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns url to the player.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse> getPlayerURL(
         yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request) {

@@ -19,11 +19,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -117,6 +125,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -134,6 +146,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -456,6 +472,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -472,6 +492,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -489,6 +513,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -587,11 +623,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -599,17 +643,29 @@ public final class StreamLineServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -787,6 +843,10 @@ public final class StreamLineServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -804,6 +864,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -825,6 +889,10 @@ public final class StreamLineServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
@@ -836,6 +904,10 @@ public final class StreamLineServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 101;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
@@ -853,6 +925,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -1354,6 +1430,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -1370,6 +1450,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -1387,6 +1471,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -1402,6 +1490,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1412,6 +1504,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -1430,6 +1526,10 @@ public final class StreamLineServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return The pageSize.
        */
@@ -1438,6 +1538,10 @@ public final class StreamLineServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1449,6 +1553,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return This builder for chaining.
        */
@@ -1461,6 +1569,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The pageToken.
        */
@@ -1477,6 +1589,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The bytes for pageToken.
        */
@@ -1494,6 +1610,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1509,6 +1629,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return This builder for chaining.
        */
@@ -1519,6 +1643,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1829,35 +1957,63 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> 
         getStreamLinesList();
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine getStreamLines(int index);
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     int getStreamLinesCount();
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
         getStreamLinesOrBuilderList();
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder getStreamLinesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1965,6 +2121,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> streamLines_;
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     @java.lang.Override
@@ -1972,6 +2132,10 @@ public final class StreamLineServiceOuterClass {
       return streamLines_;
     }
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     @java.lang.Override
@@ -1980,6 +2144,10 @@ public final class StreamLineServiceOuterClass {
       return streamLines_;
     }
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     @java.lang.Override
@@ -1987,6 +2155,10 @@ public final class StreamLineServiceOuterClass {
       return streamLines_.size();
     }
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     @java.lang.Override
@@ -1994,6 +2166,10 @@ public final class StreamLineServiceOuterClass {
       return streamLines_.get(index);
     }
     /**
+     * <pre>
+     * List of lines for channel.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
      */
     @java.lang.Override
@@ -2005,6 +2181,10 @@ public final class StreamLineServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 100;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
@@ -2022,6 +2202,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2412,6 +2596,10 @@ public final class StreamLineServiceOuterClass {
           yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> streamLinesBuilder_;
 
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> getStreamLinesList() {
@@ -2422,6 +2610,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public int getStreamLinesCount() {
@@ -2432,6 +2624,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine getStreamLines(int index) {
@@ -2442,6 +2638,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder setStreamLines(
@@ -2459,6 +2659,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder setStreamLines(
@@ -2473,6 +2677,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder addStreamLines(yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine value) {
@@ -2489,6 +2697,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder addStreamLines(
@@ -2506,6 +2718,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder addStreamLines(
@@ -2520,6 +2736,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder addStreamLines(
@@ -2534,6 +2754,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder addAllStreamLines(
@@ -2549,6 +2773,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder clearStreamLines() {
@@ -2562,6 +2790,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public Builder removeStreamLines(int index) {
@@ -2575,6 +2807,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder getStreamLinesBuilder(
@@ -2582,6 +2818,10 @@ public final class StreamLineServiceOuterClass {
         return getStreamLinesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder getStreamLinesOrBuilder(
@@ -2592,6 +2832,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLineOrBuilder> 
@@ -2603,6 +2847,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder addStreamLinesBuilder() {
@@ -2610,6 +2858,10 @@ public final class StreamLineServiceOuterClass {
             yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder addStreamLinesBuilder(
@@ -2618,6 +2870,10 @@ public final class StreamLineServiceOuterClass {
             index, yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of lines for channel.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.StreamLine stream_lines = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine.Builder> 
@@ -2641,6 +2897,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The nextPageToken.
        */
@@ -2657,6 +2917,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2674,6 +2938,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2689,6 +2957,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return This builder for chaining.
        */
@@ -2699,6 +2971,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2772,11 +3048,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -2784,11 +3068,19 @@ public final class StreamLineServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -2796,11 +3088,19 @@ public final class StreamLineServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 3;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 3;</code>
      * @return The bytes for thumbnailId.
      */
@@ -2808,106 +3108,271 @@ public final class StreamLineServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return Whether the rtmpPush field is set.
      */
     boolean hasRtmpPush();
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return The rtmpPush.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams getRtmpPush();
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParamsOrBuilder getRtmpPushOrBuilder();
 
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return Whether the srtPush field is set.
      */
     boolean hasSrtPush();
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return The srtPush.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams getSrtPush();
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParamsOrBuilder getSrtPushOrBuilder();
 
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return Whether the rtmpPull field is set.
      */
     boolean hasRtmpPull();
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return The rtmpPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams getRtmpPull();
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParamsOrBuilder getRtmpPullOrBuilder();
 
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return Whether the srtPull field is set.
      */
     boolean hasSrtPull();
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return The srtPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams getSrtPull();
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParamsOrBuilder getSrtPullOrBuilder();
 
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return Whether the tcpPull field is set.
      */
     boolean hasTcpPull();
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return The tcpPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams getTcpPull();
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParamsOrBuilder getTcpPullOrBuilder();
 
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     * @return Whether the rtspPull field is set.
+     */
+    boolean hasRtspPull();
+    /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     * @return The rtspPull.
+     */
+    yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams getRtspPull();
+    /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     */
+    yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder getRtspPullOrBuilder();
+
+    /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      * @return Whether the manualLine field is set.
      */
     boolean hasManualLine();
     /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      * @return The manualLine.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams getManualLine();
     /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParamsOrBuilder getManualLineOrBuilder();
 
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      * @return Whether the autoLine field is set.
      */
     boolean hasAutoLine();
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      * @return The autoLine.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams getAutoLine();
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParamsOrBuilder getAutoLineOrBuilder();
@@ -2954,6 +3419,7 @@ public final class StreamLineServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2980,6 +3446,19 @@ public final class StreamLineServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 8002: {
@@ -3052,6 +3531,20 @@ public final class StreamLineServiceOuterClass {
               inputParamsCase_ = 1004;
               break;
             }
+            case 8050: {
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder subBuilder = null;
+              if (inputParamsCase_ == 1006) {
+                subBuilder = ((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_).toBuilder();
+              }
+              inputParams_ =
+                  input.readMessage(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_);
+                inputParams_ = subBuilder.buildPartial();
+              }
+              inputParamsCase_ = 1006;
+              break;
+            }
             case 16002: {
               yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams.Builder subBuilder = null;
               if (lineTypeParamsCase_ == 2000) {
@@ -3104,6 +3597,18 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3122,6 +3627,7 @@ public final class StreamLineServiceOuterClass {
       RTMP_PULL(1002),
       SRT_PULL(1003),
       TCP_PULL(1004),
+      RTSP_PULL(1006),
       INPUTPARAMS_NOT_SET(0);
       private final int value;
       private InputParamsCase(int value) {
@@ -3144,6 +3650,7 @@ public final class StreamLineServiceOuterClass {
           case 1002: return RTMP_PULL;
           case 1003: return SRT_PULL;
           case 1004: return TCP_PULL;
+          case 1006: return RTSP_PULL;
           case 0: return INPUTPARAMS_NOT_SET;
           default: return null;
         }
@@ -3203,6 +3710,10 @@ public final class StreamLineServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -3220,6 +3731,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -3241,6 +3756,10 @@ public final class StreamLineServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 2;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The title.
      */
@@ -3258,6 +3777,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
@@ -3279,6 +3802,10 @@ public final class StreamLineServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 3;</code>
      * @return The thumbnailId.
      */
@@ -3296,6 +3823,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 3;</code>
      * @return The bytes for thumbnailId.
      */
@@ -3314,8 +3845,109 @@ public final class StreamLineServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int RTMP_PUSH_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return Whether the rtmpPush field is set.
      */
@@ -3324,6 +3956,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1000;
     }
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return The rtmpPush.
      */
@@ -3335,6 +3971,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      */
     @java.lang.Override
@@ -3347,6 +3987,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int SRT_PUSH_FIELD_NUMBER = 1001;
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return Whether the srtPush field is set.
      */
@@ -3355,6 +3999,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1001;
     }
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return The srtPush.
      */
@@ -3366,6 +4014,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      */
     @java.lang.Override
@@ -3378,6 +4030,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int RTMP_PULL_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return Whether the rtmpPull field is set.
      */
@@ -3386,6 +4042,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1002;
     }
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return The rtmpPull.
      */
@@ -3397,6 +4057,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      */
     @java.lang.Override
@@ -3409,6 +4073,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int SRT_PULL_FIELD_NUMBER = 1003;
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return Whether the srtPull field is set.
      */
@@ -3417,6 +4085,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1003;
     }
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return The srtPull.
      */
@@ -3428,6 +4100,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      */
     @java.lang.Override
@@ -3440,6 +4116,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int TCP_PULL_FIELD_NUMBER = 1004;
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return Whether the tcpPull field is set.
      */
@@ -3448,6 +4128,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1004;
     }
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return The tcpPull.
      */
@@ -3459,6 +4143,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      */
     @java.lang.Override
@@ -3469,8 +4157,55 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.getDefaultInstance();
     }
 
+    public static final int RTSP_PULL_FIELD_NUMBER = 1006;
+    /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     * @return Whether the rtspPull field is set.
+     */
+    @java.lang.Override
+    public boolean hasRtspPull() {
+      return inputParamsCase_ == 1006;
+    }
+    /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     * @return The rtspPull.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams getRtspPull() {
+      if (inputParamsCase_ == 1006) {
+         return (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_;
+      }
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder getRtspPullOrBuilder() {
+      if (inputParamsCase_ == 1006) {
+         return (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_;
+      }
+      return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+    }
+
     public static final int MANUAL_LINE_FIELD_NUMBER = 2000;
     /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      * @return Whether the manualLine field is set.
      */
@@ -3479,6 +4214,10 @@ public final class StreamLineServiceOuterClass {
       return lineTypeParamsCase_ == 2000;
     }
     /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      * @return The manualLine.
      */
@@ -3490,6 +4229,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Manual control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
      */
     @java.lang.Override
@@ -3502,6 +4245,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int AUTO_LINE_FIELD_NUMBER = 2001;
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      * @return Whether the autoLine field is set.
      */
@@ -3510,6 +4257,10 @@ public final class StreamLineServiceOuterClass {
       return lineTypeParamsCase_ == 2001;
     }
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      * @return The autoLine.
      */
@@ -3521,6 +4272,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Automatic control of stream.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
      */
     @java.lang.Override
@@ -3554,6 +4309,12 @@ public final class StreamLineServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (inputParamsCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams) inputParams_);
       }
@@ -3568,6 +4329,9 @@ public final class StreamLineServiceOuterClass {
       }
       if (inputParamsCase_ == 1004) {
         output.writeMessage(1004, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams) inputParams_);
+      }
+      if (inputParamsCase_ == 1006) {
+        output.writeMessage(1006, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_);
       }
       if (lineTypeParamsCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams) lineTypeParams_);
@@ -3593,6 +4357,16 @@ public final class StreamLineServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, thumbnailId_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
+      }
       if (inputParamsCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1000, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams) inputParams_);
@@ -3612,6 +4386,10 @@ public final class StreamLineServiceOuterClass {
       if (inputParamsCase_ == 1004) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1004, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams) inputParams_);
+      }
+      if (inputParamsCase_ == 1006) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1006, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_);
       }
       if (lineTypeParamsCase_ == 2000) {
         size += com.google.protobuf.CodedOutputStream
@@ -3642,6 +4420,8 @@ public final class StreamLineServiceOuterClass {
           .equals(other.getTitle())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getInputParamsCase().equals(other.getInputParamsCase())) return false;
       switch (inputParamsCase_) {
         case 1000:
@@ -3663,6 +4443,10 @@ public final class StreamLineServiceOuterClass {
         case 1004:
           if (!getTcpPull()
               .equals(other.getTcpPull())) return false;
+          break;
+        case 1006:
+          if (!getRtspPull()
+              .equals(other.getRtspPull())) return false;
           break;
         case 0:
         default:
@@ -3697,6 +4481,10 @@ public final class StreamLineServiceOuterClass {
       hash = (53 * hash) + getTitle().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (inputParamsCase_) {
         case 1000:
           hash = (37 * hash) + RTMP_PUSH_FIELD_NUMBER;
@@ -3717,6 +4505,10 @@ public final class StreamLineServiceOuterClass {
         case 1004:
           hash = (37 * hash) + TCP_PULL_FIELD_NUMBER;
           hash = (53 * hash) + getTcpPull().hashCode();
+          break;
+        case 1006:
+          hash = (37 * hash) + RTSP_PULL_FIELD_NUMBER;
+          hash = (53 * hash) + getRtspPull().hashCode();
           break;
         case 0:
         default:
@@ -3840,6 +4632,28 @@ public final class StreamLineServiceOuterClass {
         return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3872,6 +4686,7 @@ public final class StreamLineServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         inputParamsCase_ = 0;
         inputParams_ = null;
         lineTypeParamsCase_ = 0;
@@ -3902,9 +4717,12 @@ public final class StreamLineServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest buildPartial() {
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest(this);
+        int from_bitField0_ = bitField0_;
         result.channelId_ = channelId_;
         result.title_ = title_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (inputParamsCase_ == 1000) {
           if (rtmpPushBuilder_ == null) {
             result.inputParams_ = inputParams_;
@@ -3938,6 +4756,13 @@ public final class StreamLineServiceOuterClass {
             result.inputParams_ = inputParams_;
           } else {
             result.inputParams_ = tcpPullBuilder_.build();
+          }
+        }
+        if (inputParamsCase_ == 1006) {
+          if (rtspPullBuilder_ == null) {
+            result.inputParams_ = inputParams_;
+          } else {
+            result.inputParams_ = rtspPullBuilder_.build();
           }
         }
         if (lineTypeParamsCase_ == 2000) {
@@ -4016,6 +4841,8 @@ public final class StreamLineServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getInputParamsCase()) {
           case RTMP_PUSH: {
             mergeRtmpPush(other.getRtmpPush());
@@ -4035,6 +4862,10 @@ public final class StreamLineServiceOuterClass {
           }
           case TCP_PULL: {
             mergeTcpPull(other.getTcpPull());
+            break;
+          }
+          case RTSP_PULL: {
+            mergeRtspPull(other.getRtspPull());
             break;
           }
           case INPUTPARAMS_NOT_SET: {
@@ -4112,9 +4943,14 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -4131,6 +4967,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -4148,6 +4988,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -4163,6 +5007,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4173,6 +5021,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -4191,6 +5043,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The title.
        */
@@ -4207,6 +5063,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return The bytes for title.
        */
@@ -4224,6 +5084,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -4239,6 +5103,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
@@ -4249,6 +5117,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 2;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -4267,6 +5139,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 3;</code>
        * @return The thumbnailId.
        */
@@ -4283,6 +5159,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 3;</code>
        * @return The bytes for thumbnailId.
        */
@@ -4300,6 +5180,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 3;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -4315,6 +5199,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -4325,6 +5213,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 3;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -4341,9 +5233,172 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParamsOrBuilder> rtmpPushBuilder_;
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        * @return Whether the rtmpPush field is set.
        */
@@ -4352,6 +5407,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1000;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        * @return The rtmpPush.
        */
@@ -4370,6 +5429,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder setRtmpPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams value) {
@@ -4386,6 +5449,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder setRtmpPush(
@@ -4400,6 +5467,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder mergeRtmpPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams value) {
@@ -4422,6 +5493,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder clearRtmpPush() {
@@ -4441,12 +5516,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.Builder getRtmpPushBuilder() {
         return getRtmpPushFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       @java.lang.Override
@@ -4461,6 +5544,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4485,6 +5572,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParamsOrBuilder> srtPushBuilder_;
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        * @return Whether the srtPush field is set.
        */
@@ -4493,6 +5584,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1001;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        * @return The srtPush.
        */
@@ -4511,6 +5606,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder setSrtPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams value) {
@@ -4527,6 +5626,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder setSrtPush(
@@ -4541,6 +5644,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder mergeSrtPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams value) {
@@ -4563,6 +5670,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder clearSrtPush() {
@@ -4582,12 +5693,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.Builder getSrtPushBuilder() {
         return getSrtPushFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       @java.lang.Override
@@ -4602,6 +5721,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4626,6 +5749,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParamsOrBuilder> rtmpPullBuilder_;
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        * @return Whether the rtmpPull field is set.
        */
@@ -4634,6 +5761,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1002;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        * @return The rtmpPull.
        */
@@ -4652,6 +5783,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder setRtmpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams value) {
@@ -4668,6 +5803,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder setRtmpPull(
@@ -4682,6 +5821,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder mergeRtmpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams value) {
@@ -4704,6 +5847,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder clearRtmpPull() {
@@ -4723,12 +5870,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.Builder getRtmpPullBuilder() {
         return getRtmpPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       @java.lang.Override
@@ -4743,6 +5898,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4767,6 +5926,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParamsOrBuilder> srtPullBuilder_;
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        * @return Whether the srtPull field is set.
        */
@@ -4775,6 +5938,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1003;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        * @return The srtPull.
        */
@@ -4793,6 +5960,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder setSrtPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams value) {
@@ -4809,6 +5980,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder setSrtPull(
@@ -4823,6 +5998,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder mergeSrtPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams value) {
@@ -4845,6 +6024,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder clearSrtPull() {
@@ -4864,12 +6047,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.Builder getSrtPullBuilder() {
         return getSrtPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       @java.lang.Override
@@ -4884,6 +6075,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4908,6 +6103,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParamsOrBuilder> tcpPullBuilder_;
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        * @return Whether the tcpPull field is set.
        */
@@ -4916,6 +6115,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1004;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        * @return The tcpPull.
        */
@@ -4934,6 +6137,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder setTcpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams value) {
@@ -4950,6 +6157,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder setTcpPull(
@@ -4964,6 +6175,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder mergeTcpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams value) {
@@ -4986,6 +6201,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder clearTcpPull() {
@@ -5005,12 +6224,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.Builder getTcpPullBuilder() {
         return getTcpPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       @java.lang.Override
@@ -5025,6 +6252,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5047,8 +6278,189 @@ public final class StreamLineServiceOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder> rtspPullBuilder_;
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       * @return Whether the rtspPull field is set.
+       */
+      @java.lang.Override
+      public boolean hasRtspPull() {
+        return inputParamsCase_ == 1006;
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       * @return The rtspPull.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams getRtspPull() {
+        if (rtspPullBuilder_ == null) {
+          if (inputParamsCase_ == 1006) {
+            return (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_;
+          }
+          return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+        } else {
+          if (inputParamsCase_ == 1006) {
+            return rtspPullBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      public Builder setRtspPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams value) {
+        if (rtspPullBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputParams_ = value;
+          onChanged();
+        } else {
+          rtspPullBuilder_.setMessage(value);
+        }
+        inputParamsCase_ = 1006;
+        return this;
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      public Builder setRtspPull(
+          yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder builderForValue) {
+        if (rtspPullBuilder_ == null) {
+          inputParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          rtspPullBuilder_.setMessage(builderForValue.build());
+        }
+        inputParamsCase_ = 1006;
+        return this;
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      public Builder mergeRtspPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams value) {
+        if (rtspPullBuilder_ == null) {
+          if (inputParamsCase_ == 1006 &&
+              inputParams_ != yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance()) {
+            inputParams_ = yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.newBuilder((yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            inputParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (inputParamsCase_ == 1006) {
+            rtspPullBuilder_.mergeFrom(value);
+          }
+          rtspPullBuilder_.setMessage(value);
+        }
+        inputParamsCase_ = 1006;
+        return this;
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      public Builder clearRtspPull() {
+        if (rtspPullBuilder_ == null) {
+          if (inputParamsCase_ == 1006) {
+            inputParamsCase_ = 0;
+            inputParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (inputParamsCase_ == 1006) {
+            inputParamsCase_ = 0;
+            inputParams_ = null;
+          }
+          rtspPullBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder getRtspPullBuilder() {
+        return getRtspPullFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder getRtspPullOrBuilder() {
+        if ((inputParamsCase_ == 1006) && (rtspPullBuilder_ != null)) {
+          return rtspPullBuilder_.getMessageOrBuilder();
+        } else {
+          if (inputParamsCase_ == 1006) {
+            return (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_;
+          }
+          return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder> 
+          getRtspPullFieldBuilder() {
+        if (rtspPullBuilder_ == null) {
+          if (!(inputParamsCase_ == 1006)) {
+            inputParams_ = yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
+          }
+          rtspPullBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder>(
+                  (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams) inputParams_,
+                  getParentForChildren(),
+                  isClean());
+          inputParams_ = null;
+        }
+        inputParamsCase_ = 1006;
+        onChanged();;
+        return rtspPullBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParamsOrBuilder> manualLineBuilder_;
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        * @return Whether the manualLine field is set.
        */
@@ -5057,6 +6469,10 @@ public final class StreamLineServiceOuterClass {
         return lineTypeParamsCase_ == 2000;
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        * @return The manualLine.
        */
@@ -5075,6 +6491,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       public Builder setManualLine(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams value) {
@@ -5091,6 +6511,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       public Builder setManualLine(
@@ -5105,6 +6529,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       public Builder mergeManualLine(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams value) {
@@ -5127,6 +6555,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       public Builder clearManualLine() {
@@ -5146,12 +6578,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ManualLineParams.Builder getManualLineBuilder() {
         return getManualLineFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       @java.lang.Override
@@ -5166,6 +6606,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Manual control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.ManualLineParams manual_line = 2000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5190,6 +6634,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParamsOrBuilder> autoLineBuilder_;
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        * @return Whether the autoLine field is set.
        */
@@ -5198,6 +6646,10 @@ public final class StreamLineServiceOuterClass {
         return lineTypeParamsCase_ == 2001;
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        * @return The autoLine.
        */
@@ -5216,6 +6668,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       public Builder setAutoLine(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams value) {
@@ -5232,6 +6688,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       public Builder setAutoLine(
@@ -5246,6 +6706,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       public Builder mergeAutoLine(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams value) {
@@ -5268,6 +6732,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       public Builder clearAutoLine() {
@@ -5287,12 +6755,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.AutoLineParams.Builder getAutoLineBuilder() {
         return getAutoLineFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       @java.lang.Override
@@ -5307,6 +6783,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Automatic control of stream.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.AutoLineParams auto_line = 2001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5385,11 +6865,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -5483,6 +6971,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -5500,6 +6992,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -5822,6 +7318,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -5838,6 +7338,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -5855,6 +7359,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -5870,6 +7378,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5880,6 +7392,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -5953,11 +7469,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -5965,26 +7489,46 @@ public final class StreamLineServiceOuterClass {
         getStreamLineIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -5992,11 +7536,19 @@ public final class StreamLineServiceOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6004,91 +7556,217 @@ public final class StreamLineServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return Whether the rtmpPush field is set.
      */
     boolean hasRtmpPush();
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return The rtmpPush.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams getRtmpPush();
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParamsOrBuilder getRtmpPushOrBuilder();
 
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return Whether the srtPush field is set.
      */
     boolean hasSrtPush();
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return The srtPush.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams getSrtPush();
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParamsOrBuilder getSrtPushOrBuilder();
 
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return Whether the rtmpPull field is set.
      */
     boolean hasRtmpPull();
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return The rtmpPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams getRtmpPull();
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParamsOrBuilder getRtmpPullOrBuilder();
 
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return Whether the srtPull field is set.
      */
     boolean hasSrtPull();
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return The srtPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams getSrtPull();
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParamsOrBuilder getSrtPullOrBuilder();
 
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return Whether the tcpPull field is set.
      */
     boolean hasTcpPull();
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return The tcpPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams getTcpPull();
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParamsOrBuilder getTcpPullOrBuilder();
 
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      * @return Whether the rtspPull field is set.
      */
     boolean hasRtspPull();
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      * @return The rtspPull.
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams getRtspPull();
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      */
     yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder getRtspPullOrBuilder();
@@ -6133,6 +7811,7 @@ public final class StreamLineServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6172,6 +7851,19 @@ public final class StreamLineServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               thumbnailId_ = s;
+              break;
+            }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
               break;
             }
             case 8002: {
@@ -6282,6 +7974,18 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -6342,6 +8046,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -6359,6 +8067,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -6380,6 +8092,10 @@ public final class StreamLineServiceOuterClass {
     public static final int FIELD_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask fieldMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return Whether the fieldMask field is set.
      */
@@ -6388,6 +8104,10 @@ public final class StreamLineServiceOuterClass {
       return fieldMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      * @return The fieldMask.
      */
@@ -6396,6 +8116,10 @@ public final class StreamLineServiceOuterClass {
       return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the line are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     @java.lang.Override
@@ -6406,6 +8130,10 @@ public final class StreamLineServiceOuterClass {
     public static final int TITLE_FIELD_NUMBER = 3;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
@@ -6423,6 +8151,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Line title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -6444,6 +8176,10 @@ public final class StreamLineServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The thumbnailId.
      */
@@ -6461,6 +8197,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 4;</code>
      * @return The bytes for thumbnailId.
      */
@@ -6479,8 +8219,109 @@ public final class StreamLineServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int RTMP_PUSH_FIELD_NUMBER = 1000;
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return Whether the rtmpPush field is set.
      */
@@ -6489,6 +8330,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1000;
     }
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      * @return The rtmpPush.
      */
@@ -6500,6 +8345,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * RTMP push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
      */
     @java.lang.Override
@@ -6512,6 +8361,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int SRT_PUSH_FIELD_NUMBER = 1001;
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return Whether the srtPush field is set.
      */
@@ -6520,6 +8373,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1001;
     }
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      * @return The srtPush.
      */
@@ -6531,6 +8388,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * SRT push input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
      */
     @java.lang.Override
@@ -6543,6 +8404,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int RTMP_PULL_FIELD_NUMBER = 1002;
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return Whether the rtmpPull field is set.
      */
@@ -6551,6 +8416,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1002;
     }
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      * @return The rtmpPull.
      */
@@ -6562,6 +8431,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * RTMP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
      */
     @java.lang.Override
@@ -6574,6 +8447,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int SRT_PULL_FIELD_NUMBER = 1003;
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return Whether the srtPull field is set.
      */
@@ -6582,6 +8459,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1003;
     }
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      * @return The srtPull.
      */
@@ -6593,6 +8474,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * SRT pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
      */
     @java.lang.Override
@@ -6605,6 +8490,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int TCP_PULL_FIELD_NUMBER = 1004;
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return Whether the tcpPull field is set.
      */
@@ -6613,6 +8502,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1004;
     }
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      * @return The tcpPull.
      */
@@ -6624,6 +8517,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * TCP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
      */
     @java.lang.Override
@@ -6636,6 +8533,10 @@ public final class StreamLineServiceOuterClass {
 
     public static final int RTSP_PULL_FIELD_NUMBER = 1006;
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      * @return Whether the rtspPull field is set.
      */
@@ -6644,6 +8545,10 @@ public final class StreamLineServiceOuterClass {
       return inputParamsCase_ == 1006;
     }
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      * @return The rtspPull.
      */
@@ -6655,6 +8560,10 @@ public final class StreamLineServiceOuterClass {
       return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * RTSP pull input type.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
      */
     @java.lang.Override
@@ -6691,6 +8600,12 @@ public final class StreamLineServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, thumbnailId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       if (inputParamsCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams) inputParams_);
       }
@@ -6730,6 +8645,16 @@ public final class StreamLineServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thumbnailId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, thumbnailId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       if (inputParamsCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
@@ -6781,6 +8706,8 @@ public final class StreamLineServiceOuterClass {
           .equals(other.getTitle())) return false;
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!getInputParamsCase().equals(other.getInputParamsCase())) return false;
       switch (inputParamsCase_) {
         case 1000:
@@ -6831,6 +8758,10 @@ public final class StreamLineServiceOuterClass {
       hash = (53 * hash) + getTitle().hashCode();
       hash = (37 * hash) + THUMBNAIL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getThumbnailId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       switch (inputParamsCase_) {
         case 1000:
           hash = (37 * hash) + RTMP_PUSH_FIELD_NUMBER;
@@ -6966,6 +8897,28 @@ public final class StreamLineServiceOuterClass {
         return yandex.cloud.api.video.v1.StreamLineServiceOuterClass.internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -7004,6 +8957,7 @@ public final class StreamLineServiceOuterClass {
 
         thumbnailId_ = "";
 
+        internalGetMutableLabels().clear();
         inputParamsCase_ = 0;
         inputParams_ = null;
         return this;
@@ -7032,6 +8986,7 @@ public final class StreamLineServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest buildPartial() {
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest result = new yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest(this);
+        int from_bitField0_ = bitField0_;
         result.streamLineId_ = streamLineId_;
         if (fieldMaskBuilder_ == null) {
           result.fieldMask_ = fieldMask_;
@@ -7040,6 +8995,8 @@ public final class StreamLineServiceOuterClass {
         }
         result.title_ = title_;
         result.thumbnailId_ = thumbnailId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         if (inputParamsCase_ == 1000) {
           if (rtmpPushBuilder_ == null) {
             result.inputParams_ = inputParams_;
@@ -7146,6 +9103,8 @@ public final class StreamLineServiceOuterClass {
           thumbnailId_ = other.thumbnailId_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         switch (other.getInputParamsCase()) {
           case RTMP_PUSH: {
             mergeRtmpPush(other.getRtmpPush());
@@ -7218,9 +9177,14 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -7237,6 +9201,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -7254,6 +9222,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -7269,6 +9241,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7279,6 +9255,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -7299,6 +9279,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> fieldMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return Whether the fieldMask field is set.
        */
@@ -7306,6 +9290,10 @@ public final class StreamLineServiceOuterClass {
         return fieldMaskBuilder_ != null || fieldMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        * @return The fieldMask.
        */
@@ -7317,6 +9305,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
@@ -7333,6 +9325,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder setFieldMask(
@@ -7347,6 +9343,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
@@ -7365,6 +9365,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public Builder clearFieldMask() {
@@ -7379,6 +9383,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
@@ -7387,6 +9395,10 @@ public final class StreamLineServiceOuterClass {
         return getFieldMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -7398,6 +9410,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the line are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask field_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7416,6 +9432,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The title.
        */
@@ -7432,6 +9452,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The bytes for title.
        */
@@ -7449,6 +9473,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -7464,6 +9492,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return This builder for chaining.
        */
@@ -7474,6 +9506,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Line title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -7492,6 +9528,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The thumbnailId.
        */
@@ -7508,6 +9548,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return The bytes for thumbnailId.
        */
@@ -7525,6 +9569,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -7540,6 +9588,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -7550,6 +9602,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 4;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -7566,9 +9622,172 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParamsOrBuilder> rtmpPushBuilder_;
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        * @return Whether the rtmpPush field is set.
        */
@@ -7577,6 +9796,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1000;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        * @return The rtmpPush.
        */
@@ -7595,6 +9818,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder setRtmpPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams value) {
@@ -7611,6 +9838,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder setRtmpPush(
@@ -7625,6 +9856,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder mergeRtmpPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams value) {
@@ -7647,6 +9882,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public Builder clearRtmpPush() {
@@ -7666,12 +9905,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPushParams.Builder getRtmpPushBuilder() {
         return getRtmpPushFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       @java.lang.Override
@@ -7686,6 +9933,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPushParams rtmp_push = 1000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7710,6 +9961,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParamsOrBuilder> srtPushBuilder_;
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        * @return Whether the srtPush field is set.
        */
@@ -7718,6 +9973,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1001;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        * @return The srtPush.
        */
@@ -7736,6 +9995,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder setSrtPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams value) {
@@ -7752,6 +10015,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder setSrtPush(
@@ -7766,6 +10033,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder mergeSrtPush(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams value) {
@@ -7788,6 +10059,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public Builder clearSrtPush() {
@@ -7807,12 +10082,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPushParams.Builder getSrtPushBuilder() {
         return getSrtPushFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       @java.lang.Override
@@ -7827,6 +10110,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT push input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPushParams srt_push = 1001;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7851,6 +10138,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParamsOrBuilder> rtmpPullBuilder_;
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        * @return Whether the rtmpPull field is set.
        */
@@ -7859,6 +10150,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1002;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        * @return The rtmpPull.
        */
@@ -7877,6 +10172,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder setRtmpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams value) {
@@ -7893,6 +10192,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder setRtmpPull(
@@ -7907,6 +10210,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder mergeRtmpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams value) {
@@ -7929,6 +10236,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public Builder clearRtmpPull() {
@@ -7948,12 +10259,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTMPPullParams.Builder getRtmpPullBuilder() {
         return getRtmpPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       @java.lang.Override
@@ -7968,6 +10287,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTMP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTMPPullParams rtmp_pull = 1002;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7992,6 +10315,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParamsOrBuilder> srtPullBuilder_;
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        * @return Whether the srtPull field is set.
        */
@@ -8000,6 +10327,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1003;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        * @return The srtPull.
        */
@@ -8018,6 +10349,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder setSrtPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams value) {
@@ -8034,6 +10369,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder setSrtPull(
@@ -8048,6 +10387,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder mergeSrtPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams value) {
@@ -8070,6 +10413,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public Builder clearSrtPull() {
@@ -8089,12 +10436,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.SRTPullParams.Builder getSrtPullBuilder() {
         return getSrtPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       @java.lang.Override
@@ -8109,6 +10464,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * SRT pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.SRTPullParams srt_pull = 1003;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8133,6 +10492,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParamsOrBuilder> tcpPullBuilder_;
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        * @return Whether the tcpPull field is set.
        */
@@ -8141,6 +10504,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1004;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        * @return The tcpPull.
        */
@@ -8159,6 +10526,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder setTcpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams value) {
@@ -8175,6 +10546,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder setTcpPull(
@@ -8189,6 +10564,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder mergeTcpPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams value) {
@@ -8211,6 +10590,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public Builder clearTcpPull() {
@@ -8230,12 +10613,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.TCPPullParams.Builder getTcpPullBuilder() {
         return getTcpPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       @java.lang.Override
@@ -8250,6 +10641,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * TCP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.TCPPullParams tcp_pull = 1004;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8274,6 +10669,10 @@ public final class StreamLineServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder, yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParamsOrBuilder> rtspPullBuilder_;
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        * @return Whether the rtspPull field is set.
        */
@@ -8282,6 +10681,10 @@ public final class StreamLineServiceOuterClass {
         return inputParamsCase_ == 1006;
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        * @return The rtspPull.
        */
@@ -8300,6 +10703,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       public Builder setRtspPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams value) {
@@ -8316,6 +10723,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       public Builder setRtspPull(
@@ -8330,6 +10741,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       public Builder mergeRtspPull(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams value) {
@@ -8352,6 +10767,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       public Builder clearRtspPull() {
@@ -8371,12 +10790,20 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.RTSPPullParams.Builder getRtspPullBuilder() {
         return getRtspPullFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       @java.lang.Override
@@ -8391,6 +10818,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * RTSP pull input type.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.RTSPPullParams rtsp_pull = 1006;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8469,11 +10900,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -8567,6 +11006,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -8584,6 +11027,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -8906,6 +11353,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -8922,6 +11373,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -8939,6 +11394,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -8954,6 +11413,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8964,6 +11427,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -9037,11 +11504,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -9135,6 +11610,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -9152,6 +11631,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -9474,6 +11957,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -9490,6 +11977,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -9507,6 +11998,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -9522,6 +12017,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9532,6 +12031,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -9605,11 +12108,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -9703,6 +12214,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -9720,6 +12235,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -10042,6 +12561,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -10058,6 +12581,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -10075,6 +12602,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -10090,6 +12621,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10100,6 +12635,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -10173,11 +12712,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -10372,6 +12919,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -10389,6 +12940,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -10857,6 +13412,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -10873,6 +13432,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -10890,6 +13453,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -10905,6 +13472,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10915,6 +13486,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -11270,11 +13845,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -11368,6 +13951,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -11385,6 +13972,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -11707,6 +14298,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -11723,6 +14318,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -11740,6 +14339,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -11755,6 +14358,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -11765,6 +14372,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -16618,11 +19229,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -16716,6 +19335,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -16733,6 +19356,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -17055,6 +19682,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -17071,6 +19702,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -17088,6 +19723,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -17103,6 +19742,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -17113,6 +19756,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -17186,11 +19833,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -17284,6 +19939,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -17301,6 +19960,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -17623,6 +20286,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -17639,6 +20306,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -17656,6 +20327,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -17671,6 +20346,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -17681,6 +20360,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -17754,11 +20437,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
     java.lang.String getStreamLineId();
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -17852,6 +20543,10 @@ public final class StreamLineServiceOuterClass {
     public static final int STREAM_LINE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object streamLineId_;
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The streamLineId.
      */
@@ -17869,6 +20564,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the line.
+     * </pre>
+     *
      * <code>string stream_line_id = 1;</code>
      * @return The bytes for streamLineId.
      */
@@ -18191,6 +20890,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object streamLineId_ = "";
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The streamLineId.
        */
@@ -18207,6 +20910,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return The bytes for streamLineId.
        */
@@ -18224,6 +20931,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The streamLineId to set.
        * @return This builder for chaining.
@@ -18239,6 +20950,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -18249,6 +20964,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the line.
+       * </pre>
+       *
        * <code>string stream_line_id = 1;</code>
        * @param value The bytes for streamLineId to set.
        * @return This builder for chaining.
@@ -18338,6 +21057,11 @@ public final class StreamLineServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18347,6 +21071,11 @@ public final class StreamLineServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_descriptor;
   private static final 
@@ -18458,83 +21187,90 @@ public final class StreamLineServiceOuterClass {
       "der_by\030f \001(\t\022\016\n\006filter\030g \001(\t\"k\n\027ListStre" +
       "amLinesResponse\0227\n\014stream_lines\030\001 \003(\0132!." +
       "yandex.cloud.video.v1.StreamLine\022\027\n\017next" +
-      "_page_token\030d \001(\t\"\237\004\n\027CreateStreamLineRe" +
+      "_page_token\030d \001(\t\"\330\005\n\027CreateStreamLineRe" +
       "quest\022\022\n\nchannel_id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t" +
-      "\022\024\n\014thumbnail_id\030\003 \001(\t\022;\n\trtmp_push\030\350\007 \001" +
-      "(\0132%.yandex.cloud.video.v1.RTMPPushParam" +
-      "sH\000\0229\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.vi" +
-      "deo.v1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001" +
-      "(\0132%.yandex.cloud.video.v1.RTMPPullParam" +
-      "sH\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.vi" +
-      "deo.v1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(" +
-      "\0132$.yandex.cloud.video.v1.TCPPullParamsH" +
-      "\000\022?\n\013manual_line\030\320\017 \001(\0132\'.yandex.cloud.v" +
-      "ideo.v1.ManualLineParamsH\001\022;\n\tauto_line\030" +
-      "\321\017 \001(\0132%.yandex.cloud.video.v1.AutoLineP" +
-      "aramsH\001B\016\n\014input_paramsB\022\n\020line_type_par" +
-      "ams\"2\n\030CreateStreamLineMetadata\022\026\n\016strea" +
-      "m_line_id\030\001 \001(\t\"\376\003\n\027UpdateStreamLineRequ" +
-      "est\022\026\n\016stream_line_id\030\001 \001(\t\022.\n\nfield_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022\r\n\005t" +
-      "itle\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001(\t\022;\n\trtmp" +
-      "_push\030\350\007 \001(\0132%.yandex.cloud.video.v1.RTM" +
-      "PPushParamsH\000\0229\n\010srt_push\030\351\007 \001(\0132$.yande" +
-      "x.cloud.video.v1.SRTPushParamsH\000\022;\n\trtmp" +
-      "_pull\030\352\007 \001(\0132%.yandex.cloud.video.v1.RTM" +
-      "PPullParamsH\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yande" +
-      "x.cloud.video.v1.SRTPullParamsH\000\0229\n\010tcp_" +
-      "pull\030\354\007 \001(\0132$.yandex.cloud.video.v1.TCPP" +
-      "ullParamsH\000\022;\n\trtsp_pull\030\356\007 \001(\0132%.yandex" +
-      ".cloud.video.v1.RTSPPullParamsH\000B\016\n\014inpu" +
-      "t_params\"2\n\030UpdateStreamLineMetadata\022\026\n\016" +
-      "stream_line_id\030\001 \001(\t\"1\n\027DeleteStreamLine" +
-      "Request\022\026\n\016stream_line_id\030\001 \001(\t\"2\n\030Delet" +
-      "eStreamLineMetadata\022\026\n\016stream_line_id\030\001 " +
-      "\001(\t\"\270\001\n\030PerformLineActionRequest\022\026\n\016stre" +
-      "am_line_id\030\001 \001(\t\022:\n\010activate\030\350\007 \001(\0132%.ya" +
-      "ndex.cloud.video.v1.ActivateActionH\000\022>\n\n" +
-      "deactivate\030\351\007 \001(\0132\'.yandex.cloud.video.v" +
-      "1.DeactivateActionH\000B\010\n\006action\"3\n\031Perfor" +
-      "mLineActionMetadata\022\026\n\016stream_line_id\030\001 " +
-      "\001(\t\"\020\n\016RTMPPushParams\"\017\n\rSRTPushParams\"\035" +
-      "\n\016RTMPPullParams\022\013\n\003url\030\001 \001(\t\"\034\n\rSRTPull" +
-      "Params\022\013\n\003url\030\001 \001(\t\"\034\n\rTCPPullParams\022\013\n\003" +
-      "url\030\002 \001(\t\"\035\n\016RTSPPullParams\022\013\n\003url\030\001 \001(\t" +
-      "\"\022\n\020ManualLineParams\"\020\n\016AutoLineParams\"\020" +
-      "\n\016ActivateAction\"\022\n\020DeactivateAction\"-\n\023" +
-      "GetStreamKeyRequest\022\026\n\016stream_line_id\030\001 " +
-      "\001(\t\"0\n\026UpdateStreamKeyRequest\022\026\n\016stream_" +
-      "line_id\030\001 \001(\t\"1\n\027UpdateStreamKeyMetadata" +
-      "\022\026\n\016stream_line_id\030\001 \001(\t2\211\010\n\021StreamLineS" +
-      "ervice\022W\n\003Get\022+.yandex.cloud.video.v1.Ge" +
-      "tStreamLineRequest\032!.yandex.cloud.video." +
-      "v1.StreamLine\"\000\022g\n\004List\022-.yandex.cloud.v" +
-      "ideo.v1.ListStreamLinesRequest\032..yandex." +
-      "cloud.video.v1.ListStreamLinesResponse\"\000" +
-      "\022\207\001\n\006Create\022..yandex.cloud.video.v1.Crea" +
-      "teStreamLineRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"*\262\322*&\n\030CreateStreamLineMe" +
-      "tadata\022\nStreamLine\022\207\001\n\006Update\022..yandex.c" +
-      "loud.video.v1.UpdateStreamLineRequest\032!." +
-      "yandex.cloud.operation.Operation\"*\262\322*&\n\030" +
-      "UpdateStreamLineMetadata\022\nStreamLine\022\222\001\n" +
-      "\006Delete\022..yandex.cloud.video.v1.DeleteSt" +
-      "reamLineRequest\032!.yandex.cloud.operation" +
-      ".Operation\"5\262\322*1\n\030DeleteStreamLineMetada" +
-      "ta\022\025google.protobuf.Empty\022\220\001\n\rPerformAct" +
-      "ion\022/.yandex.cloud.video.v1.PerformLineA" +
-      "ctionRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"+\262\322*\'\n\031PerformLineActionMetadata" +
-      "\022\nStreamLine\022b\n\014GetStreamKey\022*.yandex.cl" +
-      "oud.video.v1.GetStreamKeyRequest\032$.yande" +
-      "x.cloud.video.v1.PushStreamKey\"\000\022\221\001\n\017Upd" +
-      "ateStreamKey\022-.yandex.cloud.video.v1.Upd" +
-      "ateStreamKeyRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\",\262\322*(\n\027UpdateStreamKeyMet" +
-      "adata\022\rPushStreamKeyB\\\n\031yandex.cloud.api" +
-      ".video.v1Z?github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/video/v1;videob\006prot" +
-      "o3"
+      "\022\024\n\014thumbnail_id\030\003 \001(\t\022K\n\006labels\030\310\001 \003(\0132" +
+      ":.yandex.cloud.video.v1.CreateStreamLine" +
+      "Request.LabelsEntry\022;\n\trtmp_push\030\350\007 \001(\0132" +
+      "%.yandex.cloud.video.v1.RTMPPushParamsH\000" +
+      "\0229\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.video" +
+      ".v1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132" +
+      "%.yandex.cloud.video.v1.RTMPPullParamsH\000" +
+      "\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.video" +
+      ".v1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$" +
+      ".yandex.cloud.video.v1.TCPPullParamsH\000\022;" +
+      "\n\trtsp_pull\030\356\007 \001(\0132%.yandex.cloud.video." +
+      "v1.RTSPPullParamsH\000\022?\n\013manual_line\030\320\017 \001(" +
+      "\0132\'.yandex.cloud.video.v1.ManualLinePara" +
+      "msH\001\022;\n\tauto_line\030\321\017 \001(\0132%.yandex.cloud." +
+      "video.v1.AutoLineParamsH\001\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014inpu" +
+      "t_paramsB\022\n\020line_type_params\"2\n\030CreateSt" +
+      "reamLineMetadata\022\026\n\016stream_line_id\030\001 \001(\t" +
+      "\"\372\004\n\027UpdateStreamLineRequest\022\026\n\016stream_l" +
+      "ine_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\024\n\014t" +
+      "humbnail_id\030\004 \001(\t\022K\n\006labels\030\310\001 \003(\0132:.yan" +
+      "dex.cloud.video.v1.UpdateStreamLineReque" +
+      "st.LabelsEntry\022;\n\trtmp_push\030\350\007 \001(\0132%.yan" +
+      "dex.cloud.video.v1.RTMPPushParamsH\000\0229\n\010s" +
+      "rt_push\030\351\007 \001(\0132$.yandex.cloud.video.v1.S" +
+      "RTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132%.yan" +
+      "dex.cloud.video.v1.RTMPPullParamsH\000\0229\n\010s" +
+      "rt_pull\030\353\007 \001(\0132$.yandex.cloud.video.v1.S" +
+      "RTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$.yand" +
+      "ex.cloud.video.v1.TCPPullParamsH\000\022;\n\trts" +
+      "p_pull\030\356\007 \001(\0132%.yandex.cloud.video.v1.RT" +
+      "SPPullParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014input_params\"2\n" +
+      "\030UpdateStreamLineMetadata\022\026\n\016stream_line" +
+      "_id\030\001 \001(\t\"1\n\027DeleteStreamLineRequest\022\026\n\016" +
+      "stream_line_id\030\001 \001(\t\"2\n\030DeleteStreamLine" +
+      "Metadata\022\026\n\016stream_line_id\030\001 \001(\t\"\270\001\n\030Per" +
+      "formLineActionRequest\022\026\n\016stream_line_id\030" +
+      "\001 \001(\t\022:\n\010activate\030\350\007 \001(\0132%.yandex.cloud." +
+      "video.v1.ActivateActionH\000\022>\n\ndeactivate\030" +
+      "\351\007 \001(\0132\'.yandex.cloud.video.v1.Deactivat" +
+      "eActionH\000B\010\n\006action\"3\n\031PerformLineAction" +
+      "Metadata\022\026\n\016stream_line_id\030\001 \001(\t\"\020\n\016RTMP" +
+      "PushParams\"\017\n\rSRTPushParams\"\035\n\016RTMPPullP" +
+      "arams\022\013\n\003url\030\001 \001(\t\"\034\n\rSRTPullParams\022\013\n\003u" +
+      "rl\030\001 \001(\t\"\034\n\rTCPPullParams\022\013\n\003url\030\002 \001(\t\"\035" +
+      "\n\016RTSPPullParams\022\013\n\003url\030\001 \001(\t\"\022\n\020ManualL" +
+      "ineParams\"\020\n\016AutoLineParams\"\020\n\016ActivateA" +
+      "ction\"\022\n\020DeactivateAction\"-\n\023GetStreamKe" +
+      "yRequest\022\026\n\016stream_line_id\030\001 \001(\t\"0\n\026Upda" +
+      "teStreamKeyRequest\022\026\n\016stream_line_id\030\001 \001" +
+      "(\t\"1\n\027UpdateStreamKeyMetadata\022\026\n\016stream_" +
+      "line_id\030\001 \001(\t2\211\010\n\021StreamLineService\022W\n\003G" +
+      "et\022+.yandex.cloud.video.v1.GetStreamLine" +
+      "Request\032!.yandex.cloud.video.v1.StreamLi" +
+      "ne\"\000\022g\n\004List\022-.yandex.cloud.video.v1.Lis" +
+      "tStreamLinesRequest\032..yandex.cloud.video" +
+      ".v1.ListStreamLinesResponse\"\000\022\207\001\n\006Create" +
+      "\022..yandex.cloud.video.v1.CreateStreamLin" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"*\262\322*&\n\030CreateStreamLineMetadata\022\nStr" +
+      "eamLine\022\207\001\n\006Update\022..yandex.cloud.video." +
+      "v1.UpdateStreamLineRequest\032!.yandex.clou" +
+      "d.operation.Operation\"*\262\322*&\n\030UpdateStrea" +
+      "mLineMetadata\022\nStreamLine\022\222\001\n\006Delete\022..y" +
+      "andex.cloud.video.v1.DeleteStreamLineReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "5\262\322*1\n\030DeleteStreamLineMetadata\022\025google." +
+      "protobuf.Empty\022\220\001\n\rPerformAction\022/.yande" +
+      "x.cloud.video.v1.PerformLineActionReques" +
+      "t\032!.yandex.cloud.operation.Operation\"+\262\322" +
+      "*\'\n\031PerformLineActionMetadata\022\nStreamLin" +
+      "e\022b\n\014GetStreamKey\022*.yandex.cloud.video.v" +
+      "1.GetStreamKeyRequest\032$.yandex.cloud.vid" +
+      "eo.v1.PushStreamKey\"\000\022\221\001\n\017UpdateStreamKe" +
+      "y\022-.yandex.cloud.video.v1.UpdateStreamKe" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\",\262\322*(\n\027UpdateStreamKeyMetadata\022\rPush" +
+      "StreamKeyB\\\n\031yandex.cloud.api.video.v1Z?" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18567,7 +21303,13 @@ public final class StreamLineServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "ThumbnailId", "RtmpPush", "SrtPush", "RtmpPull", "SrtPull", "TcpPull", "ManualLine", "AutoLine", "InputParams", "LineTypeParams", });
+        new java.lang.String[] { "ChannelId", "Title", "ThumbnailId", "Labels", "RtmpPush", "SrtPush", "RtmpPull", "SrtPull", "TcpPull", "RtspPull", "ManualLine", "AutoLine", "InputParams", "LineTypeParams", });
+    internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_CreateStreamLineRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_CreateStreamLineMetadata_fieldAccessorTable = new
@@ -18579,7 +21321,13 @@ public final class StreamLineServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor,
-        new java.lang.String[] { "StreamLineId", "FieldMask", "Title", "ThumbnailId", "RtmpPush", "SrtPush", "RtmpPull", "SrtPull", "TcpPull", "RtspPull", "InputParams", });
+        new java.lang.String[] { "StreamLineId", "FieldMask", "Title", "ThumbnailId", "Labels", "RtmpPush", "SrtPush", "RtmpPull", "SrtPull", "TcpPull", "RtspPull", "InputParams", });
+    internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_UpdateStreamLineRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_UpdateStreamLineMetadata_fieldAccessorTable = new

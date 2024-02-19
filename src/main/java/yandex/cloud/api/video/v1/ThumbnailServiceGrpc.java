@@ -188,6 +188,9 @@ public final class ThumbnailServiceGrpc {
   public static abstract class ThumbnailServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * List thumbnails for channel.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse> responseObserver) {
@@ -195,6 +198,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create thumbnail.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -202,6 +208,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate urls for download images.
+     * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse> responseObserver) {
@@ -209,6 +218,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate url for upload image.
+     * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse> responseObserver) {
@@ -264,6 +276,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List thumbnails for channel.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse> responseObserver) {
@@ -272,6 +287,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create thumbnail.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -280,6 +298,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate urls for download images.
+     * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse> responseObserver) {
@@ -288,6 +309,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate url for upload image.
+     * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse> responseObserver) {
@@ -311,6 +335,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List thumbnails for channel.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse list(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -318,6 +345,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create thumbnail.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -325,6 +355,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate urls for download images.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -332,6 +365,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate url for upload image.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -354,6 +390,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List thumbnails for channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailResponse> list(
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ListThumbnailRequest request) {
@@ -362,6 +401,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create thumbnail.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.CreateThumbnailRequest request) {
@@ -370,6 +412,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate urls for download images.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse> batchGenerateDownloadURLs(
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request) {
@@ -378,6 +423,9 @@ public final class ThumbnailServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate url for upload image.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse> generateUploadURL(
         yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request) {

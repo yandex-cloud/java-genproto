@@ -312,6 +312,9 @@ public final class StreamLineServiceGrpc {
   public static abstract class StreamLineServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specific stream line.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> responseObserver) {
@@ -319,6 +322,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List lines for channel.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse> responseObserver) {
@@ -326,6 +332,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create stream line.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +342,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update stream line.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -340,6 +352,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete stream line.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -347,6 +362,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the line.
+     * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -354,6 +372,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns unique stream key.
+     * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey> responseObserver) {
@@ -361,6 +382,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Change stream key.
+     * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -444,6 +468,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific stream line.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> responseObserver) {
@@ -452,6 +479,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List lines for channel.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse> responseObserver) {
@@ -460,6 +490,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create stream line.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -468,6 +501,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update stream line.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -476,6 +512,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete stream line.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -484,6 +523,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the line.
+     * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -492,6 +534,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns unique stream key.
+     * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey> responseObserver) {
@@ -500,6 +545,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Change stream key.
+     * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -523,6 +571,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific stream line.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -530,6 +581,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List lines for channel.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse list(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -537,6 +591,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create stream line.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -544,6 +601,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update stream line.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -551,6 +611,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete stream line.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -558,6 +621,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the line.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -565,6 +631,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns unique stream key.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -572,6 +641,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Change stream key.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -594,6 +666,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific stream line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> get(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request) {
@@ -602,6 +677,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List lines for channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesResponse> list(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.ListStreamLinesRequest request) {
@@ -610,6 +688,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create stream line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.CreateStreamLineRequest request) {
@@ -618,6 +699,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update stream line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamLineRequest request) {
@@ -626,6 +710,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete stream line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.DeleteStreamLineRequest request) {
@@ -634,6 +721,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Perform an action on the line.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.PerformLineActionRequest request) {
@@ -642,6 +732,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns unique stream key.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey> getStreamKey(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request) {
@@ -650,6 +743,9 @@ public final class StreamLineServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Change stream key.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateStreamKey(
         yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request) {

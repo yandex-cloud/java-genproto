@@ -19,11 +19,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -31,17 +39,29 @@ public final class ThumbnailServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -147,6 +167,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -164,6 +188,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -185,6 +213,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 100;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of the results per page to return. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 100;</code>
      * @return The pageSize.
      */
@@ -196,6 +228,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 101;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The pageToken.
      */
@@ -213,6 +249,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token for getting the next page of the result.
+     * </pre>
+     *
      * <code>string page_token = 101;</code>
      * @return The bytes for pageToken.
      */
@@ -570,6 +610,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -586,6 +630,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -603,6 +651,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -618,6 +670,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -628,6 +684,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -646,6 +706,10 @@ public final class ThumbnailServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return The pageSize.
        */
@@ -654,6 +718,10 @@ public final class ThumbnailServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -665,6 +733,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of the results per page to return. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 100;</code>
        * @return This builder for chaining.
        */
@@ -677,6 +749,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The pageToken.
        */
@@ -693,6 +769,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return The bytes for pageToken.
        */
@@ -710,6 +790,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -725,6 +809,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @return This builder for chaining.
        */
@@ -735,6 +823,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token for getting the next page of the result.
+       * </pre>
+       *
        * <code>string page_token = 101;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -808,35 +900,63 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> 
         getThumbnailsList();
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail getThumbnails(int index);
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     int getThumbnailsCount();
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.ThumbnailOuterClass.ThumbnailOrBuilder> 
         getThumbnailsOrBuilderList();
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     yandex.cloud.api.video.v1.ThumbnailOuterClass.ThumbnailOrBuilder getThumbnailsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -944,6 +1064,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int THUMBNAILS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> thumbnails_;
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     @java.lang.Override
@@ -951,6 +1075,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnails_;
     }
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     @java.lang.Override
@@ -959,6 +1087,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnails_;
     }
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     @java.lang.Override
@@ -966,6 +1098,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnails_.size();
     }
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     @java.lang.Override
@@ -973,6 +1109,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnails_.get(index);
     }
     /**
+     * <pre>
+     * List of thumbnails.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
      */
     @java.lang.Override
@@ -984,6 +1124,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 100;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The nextPageToken.
      */
@@ -1001,6 +1145,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page.
+     * </pre>
+     *
      * <code>string next_page_token = 100;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1391,6 +1539,10 @@ public final class ThumbnailServiceOuterClass {
           yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail, yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder, yandex.cloud.api.video.v1.ThumbnailOuterClass.ThumbnailOrBuilder> thumbnailsBuilder_;
 
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> getThumbnailsList() {
@@ -1401,6 +1553,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public int getThumbnailsCount() {
@@ -1411,6 +1567,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail getThumbnails(int index) {
@@ -1421,6 +1581,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder setThumbnails(
@@ -1438,6 +1602,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder setThumbnails(
@@ -1452,6 +1620,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder addThumbnails(yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail value) {
@@ -1468,6 +1640,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder addThumbnails(
@@ -1485,6 +1661,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder addThumbnails(
@@ -1499,6 +1679,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder addThumbnails(
@@ -1513,6 +1697,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder addAllThumbnails(
@@ -1528,6 +1716,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder clearThumbnails() {
@@ -1541,6 +1733,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public Builder removeThumbnails(int index) {
@@ -1554,6 +1750,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder getThumbnailsBuilder(
@@ -1561,6 +1761,10 @@ public final class ThumbnailServiceOuterClass {
         return getThumbnailsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailOuterClass.ThumbnailOrBuilder getThumbnailsOrBuilder(
@@ -1571,6 +1775,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.ThumbnailOuterClass.ThumbnailOrBuilder> 
@@ -1582,6 +1790,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder addThumbnailsBuilder() {
@@ -1589,6 +1801,10 @@ public final class ThumbnailServiceOuterClass {
             yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder addThumbnailsBuilder(
@@ -1597,6 +1813,10 @@ public final class ThumbnailServiceOuterClass {
             index, yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of thumbnails.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.Thumbnail thumbnails = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail.Builder> 
@@ -1620,6 +1840,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The nextPageToken.
        */
@@ -1636,6 +1860,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return The bytes for nextPageToken.
        */
@@ -1653,6 +1881,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -1668,6 +1900,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @return This builder for chaining.
        */
@@ -1678,6 +1914,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page.
+       * </pre>
+       *
        * <code>string next_page_token = 100;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -1751,11 +1991,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -1849,6 +2097,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -1866,6 +2118,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -2188,6 +2444,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -2204,6 +2464,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -2221,6 +2485,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -2236,6 +2504,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2246,6 +2518,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -2319,11 +2595,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -2417,6 +2701,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
@@ -2434,6 +2722,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -2756,6 +3048,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The thumbnailId.
        */
@@ -2772,6 +3068,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The bytes for thumbnailId.
        */
@@ -2789,6 +3089,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -2804,6 +3108,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2814,6 +3122,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -2887,11 +3199,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -2899,23 +3219,39 @@ public final class ThumbnailServiceOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @return A list containing the thumbnailIds.
      */
     java.util.List<java.lang.String>
         getThumbnailIdsList();
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @return The count of thumbnailIds.
      */
     int getThumbnailIdsCount();
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
      */
     java.lang.String getThumbnailIds(int index);
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
@@ -3024,6 +3360,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The channelId.
      */
@@ -3041,6 +3381,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string channel_id = 1;</code>
      * @return The bytes for channelId.
      */
@@ -3062,6 +3406,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int THUMBNAIL_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList thumbnailIds_;
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @return A list containing the thumbnailIds.
      */
@@ -3070,6 +3418,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnailIds_;
     }
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @return The count of thumbnailIds.
      */
@@ -3077,6 +3429,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnailIds_.size();
     }
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The thumbnailIds at the given index.
@@ -3085,6 +3441,10 @@ public final class ThumbnailServiceOuterClass {
       return thumbnailIds_.get(index);
     }
     /**
+     * <pre>
+     * List of thumbnails IDs.
+     * </pre>
+     *
      * <code>repeated string thumbnail_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the thumbnailIds at the given index.
@@ -3434,6 +3794,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The channelId.
        */
@@ -3450,6 +3814,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return The bytes for channelId.
        */
@@ -3467,6 +3835,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -3482,6 +3854,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3492,6 +3868,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string channel_id = 1;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -3516,6 +3896,10 @@ public final class ThumbnailServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @return A list containing the thumbnailIds.
        */
@@ -3524,6 +3908,10 @@ public final class ThumbnailServiceOuterClass {
         return thumbnailIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @return The count of thumbnailIds.
        */
@@ -3531,6 +3919,10 @@ public final class ThumbnailServiceOuterClass {
         return thumbnailIds_.size();
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param index The index of the element to return.
        * @return The thumbnailIds at the given index.
@@ -3539,6 +3931,10 @@ public final class ThumbnailServiceOuterClass {
         return thumbnailIds_.get(index);
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the thumbnailIds at the given index.
@@ -3548,6 +3944,10 @@ public final class ThumbnailServiceOuterClass {
         return thumbnailIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param index The index to set the value at.
        * @param value The thumbnailIds to set.
@@ -3564,6 +3964,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param value The thumbnailIds to add.
        * @return This builder for chaining.
@@ -3579,6 +3983,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param values The thumbnailIds to add.
        * @return This builder for chaining.
@@ -3592,6 +4000,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @return This builder for chaining.
        */
@@ -3602,6 +4014,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of thumbnails IDs.
+       * </pre>
+       *
        * <code>repeated string thumbnail_ids = 2;</code>
        * @param value The bytes of the thumbnailIds to add.
        * @return This builder for chaining.
@@ -3675,24 +4091,44 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL> 
         getDownloadUrlsList();
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL getDownloadUrls(int index);
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     int getDownloadUrlsCount();
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURLOrBuilder> 
         getDownloadUrlsOrBuilderList();
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURLOrBuilder getDownloadUrlsOrBuilder(
@@ -3792,6 +4228,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int DOWNLOAD_URLS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL> downloadUrls_;
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     @java.lang.Override
@@ -3799,6 +4239,10 @@ public final class ThumbnailServiceOuterClass {
       return downloadUrls_;
     }
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     @java.lang.Override
@@ -3807,6 +4251,10 @@ public final class ThumbnailServiceOuterClass {
       return downloadUrls_;
     }
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     @java.lang.Override
@@ -3814,6 +4262,10 @@ public final class ThumbnailServiceOuterClass {
       return downloadUrls_.size();
     }
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     @java.lang.Override
@@ -3821,6 +4273,10 @@ public final class ThumbnailServiceOuterClass {
       return downloadUrls_.get(index);
     }
     /**
+     * <pre>
+     * List of download urls.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
      */
     @java.lang.Override
@@ -4184,6 +4640,10 @@ public final class ThumbnailServiceOuterClass {
           yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.Builder, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURLOrBuilder> downloadUrlsBuilder_;
 
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL> getDownloadUrlsList() {
@@ -4194,6 +4654,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public int getDownloadUrlsCount() {
@@ -4204,6 +4668,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL getDownloadUrls(int index) {
@@ -4214,6 +4682,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder setDownloadUrls(
@@ -4231,6 +4703,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder setDownloadUrls(
@@ -4245,6 +4721,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder addDownloadUrls(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL value) {
@@ -4261,6 +4741,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder addDownloadUrls(
@@ -4278,6 +4762,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder addDownloadUrls(
@@ -4292,6 +4780,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder addDownloadUrls(
@@ -4306,6 +4798,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder addAllDownloadUrls(
@@ -4321,6 +4817,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder clearDownloadUrls() {
@@ -4334,6 +4834,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public Builder removeDownloadUrls(int index) {
@@ -4347,6 +4851,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.Builder getDownloadUrlsBuilder(
@@ -4354,6 +4862,10 @@ public final class ThumbnailServiceOuterClass {
         return getDownloadUrlsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURLOrBuilder getDownloadUrlsOrBuilder(
@@ -4364,6 +4876,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURLOrBuilder> 
@@ -4375,6 +4891,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.Builder addDownloadUrlsBuilder() {
@@ -4382,6 +4902,10 @@ public final class ThumbnailServiceOuterClass {
             yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.Builder addDownloadUrlsBuilder(
@@ -4390,6 +4914,10 @@ public final class ThumbnailServiceOuterClass {
             index, yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of download urls.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.video.v1.ThumbnailDownloadURL download_urls = 1;</code>
        */
       public java.util.List<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.ThumbnailDownloadURL.Builder> 
@@ -4468,11 +4996,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -4480,11 +5016,19 @@ public final class ThumbnailServiceOuterClass {
         getThumbnailIdBytes();
 
     /**
+     * <pre>
+     * Download url.
+     * </pre>
+     *
      * <code>string download_url = 2;</code>
      * @return The downloadUrl.
      */
     java.lang.String getDownloadUrl();
     /**
+     * <pre>
+     * Download url.
+     * </pre>
+     *
      * <code>string download_url = 2;</code>
      * @return The bytes for downloadUrl.
      */
@@ -4585,6 +5129,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
@@ -4602,6 +5150,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -4623,6 +5175,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int DOWNLOAD_URL_FIELD_NUMBER = 2;
     private volatile java.lang.Object downloadUrl_;
     /**
+     * <pre>
+     * Download url.
+     * </pre>
+     *
      * <code>string download_url = 2;</code>
      * @return The downloadUrl.
      */
@@ -4640,6 +5196,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Download url.
+     * </pre>
+     *
      * <code>string download_url = 2;</code>
      * @return The bytes for downloadUrl.
      */
@@ -4979,6 +5539,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The thumbnailId.
        */
@@ -4995,6 +5559,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The bytes for thumbnailId.
        */
@@ -5012,6 +5580,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -5027,6 +5599,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5037,6 +5613,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -5055,6 +5635,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object downloadUrl_ = "";
       /**
+       * <pre>
+       * Download url.
+       * </pre>
+       *
        * <code>string download_url = 2;</code>
        * @return The downloadUrl.
        */
@@ -5071,6 +5655,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Download url.
+       * </pre>
+       *
        * <code>string download_url = 2;</code>
        * @return The bytes for downloadUrl.
        */
@@ -5088,6 +5676,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Download url.
+       * </pre>
+       *
        * <code>string download_url = 2;</code>
        * @param value The downloadUrl to set.
        * @return This builder for chaining.
@@ -5103,6 +5695,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Download url.
+       * </pre>
+       *
        * <code>string download_url = 2;</code>
        * @return This builder for chaining.
        */
@@ -5113,6 +5709,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Download url.
+       * </pre>
+       *
        * <code>string download_url = 2;</code>
        * @param value The bytes for downloadUrl to set.
        * @return This builder for chaining.
@@ -5186,11 +5786,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
     java.lang.String getThumbnailId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -5284,6 +5892,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int THUMBNAIL_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object thumbnailId_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The thumbnailId.
      */
@@ -5301,6 +5913,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string thumbnail_id = 1;</code>
      * @return The bytes for thumbnailId.
      */
@@ -5623,6 +6239,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object thumbnailId_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The thumbnailId.
        */
@@ -5639,6 +6259,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return The bytes for thumbnailId.
        */
@@ -5656,6 +6280,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The thumbnailId to set.
        * @return This builder for chaining.
@@ -5671,6 +6299,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5681,6 +6313,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string thumbnail_id = 1;</code>
        * @param value The bytes for thumbnailId to set.
        * @return This builder for chaining.
@@ -5754,11 +6390,19 @@ public final class ThumbnailServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Upload url.
+     * </pre>
+     *
      * <code>string upload_url = 1;</code>
      * @return The uploadUrl.
      */
     java.lang.String getUploadUrl();
     /**
+     * <pre>
+     * Upload url.
+     * </pre>
+     *
      * <code>string upload_url = 1;</code>
      * @return The bytes for uploadUrl.
      */
@@ -5852,6 +6496,10 @@ public final class ThumbnailServiceOuterClass {
     public static final int UPLOAD_URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object uploadUrl_;
     /**
+     * <pre>
+     * Upload url.
+     * </pre>
+     *
      * <code>string upload_url = 1;</code>
      * @return The uploadUrl.
      */
@@ -5869,6 +6517,10 @@ public final class ThumbnailServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Upload url.
+     * </pre>
+     *
      * <code>string upload_url = 1;</code>
      * @return The bytes for uploadUrl.
      */
@@ -6191,6 +6843,10 @@ public final class ThumbnailServiceOuterClass {
 
       private java.lang.Object uploadUrl_ = "";
       /**
+       * <pre>
+       * Upload url.
+       * </pre>
+       *
        * <code>string upload_url = 1;</code>
        * @return The uploadUrl.
        */
@@ -6207,6 +6863,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upload url.
+       * </pre>
+       *
        * <code>string upload_url = 1;</code>
        * @return The bytes for uploadUrl.
        */
@@ -6224,6 +6884,10 @@ public final class ThumbnailServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upload url.
+       * </pre>
+       *
        * <code>string upload_url = 1;</code>
        * @param value The uploadUrl to set.
        * @return This builder for chaining.
@@ -6239,6 +6903,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload url.
+       * </pre>
+       *
        * <code>string upload_url = 1;</code>
        * @return This builder for chaining.
        */
@@ -6249,6 +6917,10 @@ public final class ThumbnailServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upload url.
+       * </pre>
+       *
        * <code>string upload_url = 1;</code>
        * @param value The bytes for uploadUrl to set.
        * @return This builder for chaining.

@@ -3,6 +3,9 @@ package yandex.cloud.api.video.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Channel management service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class ChannelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Channel management service.
+   * </pre>
    */
   public static abstract class ChannelServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ChannelOuterClass.Channel> responseObserver) {
@@ -226,6 +235,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List channels for organization.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse> responseObserver) {
@@ -233,6 +245,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create channel.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -240,6 +255,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update channel.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -247,6 +265,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete channel.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -295,6 +316,9 @@ public final class ChannelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Channel management service.
+   * </pre>
    */
   public static final class ChannelServiceStub extends io.grpc.stub.AbstractAsyncStub<ChannelServiceStub> {
     private ChannelServiceStub(
@@ -309,6 +333,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ChannelOuterClass.Channel> responseObserver) {
@@ -317,6 +344,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List channels for organization.
+     * </pre>
      */
     public void list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse> responseObserver) {
@@ -325,6 +355,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create channel.
+     * </pre>
      */
     public void create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +366,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update channel.
+     * </pre>
      */
     public void update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -341,6 +377,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete channel.
+     * </pre>
      */
     public void delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -350,6 +389,9 @@ public final class ChannelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Channel management service.
+   * </pre>
    */
   public static final class ChannelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ChannelServiceBlockingStub> {
     private ChannelServiceBlockingStub(
@@ -364,6 +406,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.ChannelOuterClass.Channel get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +416,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List channels for organization.
+     * </pre>
      */
     public yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse list(yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +426,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create channel.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +436,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update channel.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete channel.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +457,9 @@ public final class ChannelServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Channel management service.
+   * </pre>
    */
   public static final class ChannelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ChannelServiceFutureStub> {
     private ChannelServiceFutureStub(
@@ -414,6 +474,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specific channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ChannelOuterClass.Channel> get(
         yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request) {
@@ -422,6 +485,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List channels for organization.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsResponse> list(
         yandex.cloud.api.video.v1.ChannelServiceOuterClass.ListChannelsRequest request) {
@@ -430,6 +496,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Create channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.video.v1.ChannelServiceOuterClass.CreateChannelRequest request) {
@@ -438,6 +507,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.video.v1.ChannelServiceOuterClass.UpdateChannelRequest request) {
@@ -446,6 +518,9 @@ public final class ChannelServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Delete channel.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.video.v1.ChannelServiceOuterClass.DeleteChannelRequest request) {

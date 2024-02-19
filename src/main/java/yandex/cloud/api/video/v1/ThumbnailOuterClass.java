@@ -19,11 +19,19 @@ public final class ThumbnailOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class ThumbnailOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the channel where the thumbnail was created.
+     * </pre>
+     *
      * <code>string channel_id = 2;</code>
      * @return The channelId.
      */
     java.lang.String getChannelId();
     /**
+     * <pre>
+     * ID of the channel where the thumbnail was created.
+     * </pre>
+     *
      * <code>string channel_id = 2;</code>
      * @return The bytes for channelId.
      */
@@ -43,16 +59,28 @@ public final class ThumbnailOuterClass {
         getChannelIdBytes();
 
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
@@ -164,6 +192,10 @@ public final class ThumbnailOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -181,6 +213,10 @@ public final class ThumbnailOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the thumbnail.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -202,6 +238,10 @@ public final class ThumbnailOuterClass {
     public static final int CHANNEL_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object channelId_;
     /**
+     * <pre>
+     * ID of the channel where the thumbnail was created.
+     * </pre>
+     *
      * <code>string channel_id = 2;</code>
      * @return The channelId.
      */
@@ -219,6 +259,10 @@ public final class ThumbnailOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel where the thumbnail was created.
+     * </pre>
+     *
      * <code>string channel_id = 2;</code>
      * @return The bytes for channelId.
      */
@@ -240,6 +284,10 @@ public final class ThumbnailOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
@@ -248,6 +296,10 @@ public final class ThumbnailOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
@@ -256,6 +308,10 @@ public final class ThumbnailOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Time when thumbnail was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     @java.lang.Override
@@ -614,6 +670,10 @@ public final class ThumbnailOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -630,6 +690,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -647,6 +711,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -662,6 +730,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -672,6 +744,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the thumbnail.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -690,6 +766,10 @@ public final class ThumbnailOuterClass {
 
       private java.lang.Object channelId_ = "";
       /**
+       * <pre>
+       * ID of the channel where the thumbnail was created.
+       * </pre>
+       *
        * <code>string channel_id = 2;</code>
        * @return The channelId.
        */
@@ -706,6 +786,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel where the thumbnail was created.
+       * </pre>
+       *
        * <code>string channel_id = 2;</code>
        * @return The bytes for channelId.
        */
@@ -723,6 +807,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel where the thumbnail was created.
+       * </pre>
+       *
        * <code>string channel_id = 2;</code>
        * @param value The channelId to set.
        * @return This builder for chaining.
@@ -738,6 +826,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel where the thumbnail was created.
+       * </pre>
+       *
        * <code>string channel_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -748,6 +840,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel where the thumbnail was created.
+       * </pre>
+       *
        * <code>string channel_id = 2;</code>
        * @param value The bytes for channelId to set.
        * @return This builder for chaining.
@@ -768,6 +864,10 @@ public final class ThumbnailOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return Whether the createdAt field is set.
        */
@@ -775,6 +875,10 @@ public final class ThumbnailOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return The createdAt.
        */
@@ -786,6 +890,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -802,6 +910,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(
@@ -816,6 +928,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -834,6 +950,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder clearCreatedAt() {
@@ -848,6 +968,10 @@ public final class ThumbnailOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -856,6 +980,10 @@ public final class ThumbnailOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -867,6 +995,10 @@ public final class ThumbnailOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when thumbnail was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

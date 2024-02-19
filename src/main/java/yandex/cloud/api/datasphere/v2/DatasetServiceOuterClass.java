@@ -1479,19 +1479,19 @@ public final class DatasetServiceOuterClass {
       "ject_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"^\n\030Deactivat" +
       "eDatasetRequest\022 \n\ndataset_id\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\022 \n\nproject_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=502\353\002\n\016DatasetService\022\247\001\n\010Activate\0222.ya" +
+      "=502\354\002\n\016DatasetService\022\250\001\n\010Activate\0222.ya" +
       "ndex.cloud.datasphere.v2.ActivateDataset" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"D\202\323\344\223\002#\"\036/datasphere/v2/docker/activa" +
-      "te:\001*\262\322*\027\022\025google.protobuf.Empty\022\256\001\n\nDea" +
-      "ctivate\0224.yandex.cloud.datasphere.v2.Dea" +
-      "ctivateDatasetRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"G\202\323\344\223\002&\"!/datasphere/v2" +
-      "/dataset/deactivate:\001*\262\322*\027\022\025google.proto" +
-      "buf.EmptyBk\n\036yandex.cloud.api.datasphere" +
-      ".v2ZIgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/datasphere/v2;datasphereb\006" +
-      "proto3"
+      "on\"E\202\323\344\223\002$\"\037/datasphere/v2/dataset/activ" +
+      "ate:\001*\262\322*\027\022\025google.protobuf.Empty\022\256\001\n\nDe" +
+      "activate\0224.yandex.cloud.datasphere.v2.De" +
+      "activateDatasetRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"G\202\323\344\223\002&\"!/datasphere/v" +
+      "2/dataset/deactivate:\001*\262\322*\027\022\025google.prot" +
+      "obuf.EmptyBk\n\036yandex.cloud.api.dataspher" +
+      "e.v2ZIgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/datasphere/v2;datasphereb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

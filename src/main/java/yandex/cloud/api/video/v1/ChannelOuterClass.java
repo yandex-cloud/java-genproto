@@ -19,11 +19,19 @@ public final class ChannelOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class ChannelOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the organization where channel should be created.
+     * </pre>
+     *
      * <code>string organization_id = 2;</code>
      * @return The organizationId.
      */
     java.lang.String getOrganizationId();
     /**
+     * <pre>
+     * ID of the organization where channel should be created.
+     * </pre>
+     *
      * <code>string organization_id = 2;</code>
      * @return The bytes for organizationId.
      */
@@ -43,11 +59,19 @@ public final class ChannelOuterClass {
         getOrganizationIdBytes();
 
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -55,11 +79,19 @@ public final class ChannelOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -67,36 +99,118 @@ public final class ChannelOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
+   * <pre>
+   * Root entity for content separation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.Channel}
    */
   public static final class Channel extends
@@ -135,6 +249,7 @@ public final class ChannelOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -195,6 +310,19 @@ public final class ChannelOuterClass {
 
               break;
             }
+            case 1602: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -219,6 +347,18 @@ public final class ChannelOuterClass {
       return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_Channel_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 200:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -230,6 +370,10 @@ public final class ChannelOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -247,6 +391,10 @@ public final class ChannelOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -268,6 +416,10 @@ public final class ChannelOuterClass {
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object organizationId_;
     /**
+     * <pre>
+     * ID of the organization where channel should be created.
+     * </pre>
+     *
      * <code>string organization_id = 2;</code>
      * @return The organizationId.
      */
@@ -285,6 +437,10 @@ public final class ChannelOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the organization where channel should be created.
+     * </pre>
+     *
      * <code>string organization_id = 2;</code>
      * @return The bytes for organizationId.
      */
@@ -306,6 +462,10 @@ public final class ChannelOuterClass {
     public static final int TITLE_FIELD_NUMBER = 3;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The title.
      */
@@ -323,6 +483,10 @@ public final class ChannelOuterClass {
       }
     }
     /**
+     * <pre>
+     * Channel title.
+     * </pre>
+     *
      * <code>string title = 3;</code>
      * @return The bytes for title.
      */
@@ -344,6 +508,10 @@ public final class ChannelOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -361,6 +529,10 @@ public final class ChannelOuterClass {
       }
     }
     /**
+     * <pre>
+     * Channel description.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -382,6 +554,10 @@ public final class ChannelOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
@@ -390,6 +566,10 @@ public final class ChannelOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return The createdAt.
      */
@@ -398,6 +578,10 @@ public final class ChannelOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Time when channel was created.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      */
     @java.lang.Override
@@ -408,6 +592,10 @@ public final class ChannelOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 101;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -416,6 +604,10 @@ public final class ChannelOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      * @return The updatedAt.
      */
@@ -424,11 +616,112 @@ public final class ChannelOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Time of last channel update.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 200;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 200;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -463,6 +756,12 @@ public final class ChannelOuterClass {
       if (updatedAt_ != null) {
         output.writeMessage(101, getUpdatedAt());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          200);
       unknownFields.writeTo(output);
     }
 
@@ -491,6 +790,16 @@ public final class ChannelOuterClass {
       if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(101, getUpdatedAt());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(200, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -525,6 +834,8 @@ public final class ChannelOuterClass {
         if (!getUpdatedAt()
             .equals(other.getUpdatedAt())) return false;
       }
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -551,6 +862,10 @@ public final class ChannelOuterClass {
       if (hasUpdatedAt()) {
         hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -648,6 +963,10 @@ public final class ChannelOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Root entity for content separation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.Channel}
      */
     public static final class Builder extends
@@ -659,6 +978,28 @@ public final class ChannelOuterClass {
         return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_Channel_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 200:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -705,6 +1046,7 @@ public final class ChannelOuterClass {
           updatedAt_ = null;
           updatedAtBuilder_ = null;
         }
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -731,6 +1073,7 @@ public final class ChannelOuterClass {
       @java.lang.Override
       public yandex.cloud.api.video.v1.ChannelOuterClass.Channel buildPartial() {
         yandex.cloud.api.video.v1.ChannelOuterClass.Channel result = new yandex.cloud.api.video.v1.ChannelOuterClass.Channel(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.organizationId_ = organizationId_;
         result.title_ = title_;
@@ -745,6 +1088,8 @@ public final class ChannelOuterClass {
         } else {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -815,6 +1160,8 @@ public final class ChannelOuterClass {
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -843,9 +1190,14 @@ public final class ChannelOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -862,6 +1214,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -879,6 +1235,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -894,6 +1254,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -904,6 +1268,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -922,6 +1290,10 @@ public final class ChannelOuterClass {
 
       private java.lang.Object organizationId_ = "";
       /**
+       * <pre>
+       * ID of the organization where channel should be created.
+       * </pre>
+       *
        * <code>string organization_id = 2;</code>
        * @return The organizationId.
        */
@@ -938,6 +1310,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the organization where channel should be created.
+       * </pre>
+       *
        * <code>string organization_id = 2;</code>
        * @return The bytes for organizationId.
        */
@@ -955,6 +1331,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the organization where channel should be created.
+       * </pre>
+       *
        * <code>string organization_id = 2;</code>
        * @param value The organizationId to set.
        * @return This builder for chaining.
@@ -970,6 +1350,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the organization where channel should be created.
+       * </pre>
+       *
        * <code>string organization_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -980,6 +1364,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the organization where channel should be created.
+       * </pre>
+       *
        * <code>string organization_id = 2;</code>
        * @param value The bytes for organizationId to set.
        * @return This builder for chaining.
@@ -998,6 +1386,10 @@ public final class ChannelOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The title.
        */
@@ -1014,6 +1406,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return The bytes for title.
        */
@@ -1031,6 +1427,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -1046,6 +1446,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @return This builder for chaining.
        */
@@ -1056,6 +1460,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel title.
+       * </pre>
+       *
        * <code>string title = 3;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -1074,6 +1482,10 @@ public final class ChannelOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1090,6 +1502,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1107,6 +1523,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1122,6 +1542,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1132,6 +1556,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Channel description.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1152,6 +1580,10 @@ public final class ChannelOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1159,6 +1591,10 @@ public final class ChannelOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        * @return The createdAt.
        */
@@ -1170,6 +1606,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1186,6 +1626,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder setCreatedAt(
@@ -1200,6 +1644,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1218,6 +1666,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public Builder clearCreatedAt() {
@@ -1232,6 +1684,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1240,6 +1696,10 @@ public final class ChannelOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1251,6 +1711,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time when channel was created.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1271,6 +1735,10 @@ public final class ChannelOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -1278,6 +1746,10 @@ public final class ChannelOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        * @return The updatedAt.
        */
@@ -1289,6 +1761,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1305,6 +1781,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder setUpdatedAt(
@@ -1319,6 +1799,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1337,6 +1821,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public Builder clearUpdatedAt() {
@@ -1351,6 +1839,10 @@ public final class ChannelOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -1359,6 +1851,10 @@ public final class ChannelOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -1370,6 +1866,10 @@ public final class ChannelOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of last channel update.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1384,6 +1884,165 @@ public final class ChannelOuterClass {
           updatedAt_ = null;
         }
         return updatedAtBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 200;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1443,6 +2102,11 @@ public final class ChannelOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_Channel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1454,14 +2118,17 @@ public final class ChannelOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/video/v1/channel.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
-      "mestamp.proto\"\262\001\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
+      "mestamp.proto\"\236\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
       "\017organization_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n" +
       "\013description\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032" +
       ".google.protobuf.Timestamp\022.\n\nupdated_at" +
-      "\030e \001(\0132\032.google.protobuf.TimestampB\\\n\031ya" +
-      "ndex.cloud.api.video.v1Z?github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/video/" +
-      "v1;videob\006proto3"
+      "\030e \001(\0132\032.google.protobuf.Timestamp\022;\n\006la" +
+      "bels\030\310\001 \003(\0132*.yandex.cloud.video.v1.Chan" +
+      "nel.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.a" +
+      "pi.video.v1Z?github.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/video/v1;videob\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1473,7 +2140,13 @@ public final class ChannelOuterClass {
     internal_static_yandex_cloud_video_v1_Channel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Channel_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "CreatedAt", "UpdatedAt", });
+        new java.lang.String[] { "Id", "OrganizationId", "Title", "Description", "CreatedAt", "UpdatedAt", "Labels", });
+    internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_video_v1_Channel_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_Channel_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
