@@ -47,6 +47,54 @@ public final class AgentSelectorOuterClass {
     com.google.protobuf.ByteString
         getAgentIdBytes();
 
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return Whether the matchByFilter field is set.
+     */
+    boolean hasMatchByFilter();
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return The matchByFilter.
+     */
+    java.lang.String getMatchByFilter();
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return The bytes for matchByFilter.
+     */
+    com.google.protobuf.ByteString
+        getMatchByFilterBytes();
+
+    /**
+     * <pre>
+     * Select anonymoud (i.e. not registered) agents.
+     * </pre>
+     *
+     * <code>bool anonymous_agent = 3;</code>
+     * @return Whether the anonymousAgent field is set.
+     */
+    boolean hasAnonymousAgent();
+    /**
+     * <pre>
+     * Select anonymoud (i.e. not registered) agents.
+     * </pre>
+     *
+     * <code>bool anonymous_agent = 3;</code>
+     * @return The anonymousAgent.
+     */
+    boolean getAnonymousAgent();
+
     public yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector.AgentCase getAgentCase();
   }
   /**
@@ -105,6 +153,17 @@ public final class AgentSelectorOuterClass {
               agent_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              agentCase_ = 2;
+              agent_ = s;
+              break;
+            }
+            case 24: {
+              agent_ = input.readBool();
+              agentCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -143,6 +202,8 @@ public final class AgentSelectorOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       AGENT_ID(1),
+      MATCH_BY_FILTER(2),
+      ANONYMOUS_AGENT(3),
       AGENT_NOT_SET(0);
       private final int value;
       private AgentCase(int value) {
@@ -161,6 +222,8 @@ public final class AgentSelectorOuterClass {
       public static AgentCase forNumber(int value) {
         switch (value) {
           case 1: return AGENT_ID;
+          case 2: return MATCH_BY_FILTER;
+          case 3: return ANONYMOUS_AGENT;
           case 0: return AGENT_NOT_SET;
           default: return null;
         }
@@ -240,6 +303,99 @@ public final class AgentSelectorOuterClass {
       }
     }
 
+    public static final int MATCH_BY_FILTER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return Whether the matchByFilter field is set.
+     */
+    public boolean hasMatchByFilter() {
+      return agentCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return The matchByFilter.
+     */
+    public java.lang.String getMatchByFilter() {
+      java.lang.Object ref = "";
+      if (agentCase_ == 2) {
+        ref = agent_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (agentCase_ == 2) {
+          agent_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Selection by filter string.
+     * </pre>
+     *
+     * <code>string match_by_filter = 2;</code>
+     * @return The bytes for matchByFilter.
+     */
+    public com.google.protobuf.ByteString
+        getMatchByFilterBytes() {
+      java.lang.Object ref = "";
+      if (agentCase_ == 2) {
+        ref = agent_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (agentCase_ == 2) {
+          agent_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ANONYMOUS_AGENT_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Select anonymoud (i.e. not registered) agents.
+     * </pre>
+     *
+     * <code>bool anonymous_agent = 3;</code>
+     * @return Whether the anonymousAgent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnonymousAgent() {
+      return agentCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Select anonymoud (i.e. not registered) agents.
+     * </pre>
+     *
+     * <code>bool anonymous_agent = 3;</code>
+     * @return The anonymousAgent.
+     */
+    @java.lang.Override
+    public boolean getAnonymousAgent() {
+      if (agentCase_ == 3) {
+        return (java.lang.Boolean) agent_;
+      }
+      return false;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -257,6 +413,13 @@ public final class AgentSelectorOuterClass {
       if (agentCase_ == 1) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agent_);
       }
+      if (agentCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agent_);
+      }
+      if (agentCase_ == 3) {
+        output.writeBool(
+            3, (boolean)((java.lang.Boolean) agent_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -268,6 +431,14 @@ public final class AgentSelectorOuterClass {
       size = 0;
       if (agentCase_ == 1) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agent_);
+      }
+      if (agentCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agent_);
+      }
+      if (agentCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              3, (boolean)((java.lang.Boolean) agent_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -290,6 +461,14 @@ public final class AgentSelectorOuterClass {
           if (!getAgentId()
               .equals(other.getAgentId())) return false;
           break;
+        case 2:
+          if (!getMatchByFilter()
+              .equals(other.getMatchByFilter())) return false;
+          break;
+        case 3:
+          if (getAnonymousAgent()
+              != other.getAnonymousAgent()) return false;
+          break;
         case 0:
         default:
       }
@@ -308,6 +487,15 @@ public final class AgentSelectorOuterClass {
         case 1:
           hash = (37 * hash) + AGENT_ID_FIELD_NUMBER;
           hash = (53 * hash) + getAgentId().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + MATCH_BY_FILTER_FIELD_NUMBER;
+          hash = (53 * hash) + getMatchByFilter().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + ANONYMOUS_AGENT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAnonymousAgent());
           break;
         case 0:
         default:
@@ -481,6 +669,12 @@ public final class AgentSelectorOuterClass {
         if (agentCase_ == 1) {
           result.agent_ = agent_;
         }
+        if (agentCase_ == 2) {
+          result.agent_ = agent_;
+        }
+        if (agentCase_ == 3) {
+          result.agent_ = agent_;
+        }
         result.agentCase_ = agentCase_;
         onBuilt();
         return result;
@@ -535,6 +729,16 @@ public final class AgentSelectorOuterClass {
             agentCase_ = 1;
             agent_ = other.agent_;
             onChanged();
+            break;
+          }
+          case MATCH_BY_FILTER: {
+            agentCase_ = 2;
+            agent_ = other.agent_;
+            onChanged();
+            break;
+          }
+          case ANONYMOUS_AGENT: {
+            setAnonymousAgent(other.getAnonymousAgent());
             break;
           }
           case AGENT_NOT_SET: {
@@ -705,6 +909,184 @@ public final class AgentSelectorOuterClass {
         onChanged();
         return this;
       }
+
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @return Whether the matchByFilter field is set.
+       */
+      @java.lang.Override
+      public boolean hasMatchByFilter() {
+        return agentCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @return The matchByFilter.
+       */
+      @java.lang.Override
+      public java.lang.String getMatchByFilter() {
+        java.lang.Object ref = "";
+        if (agentCase_ == 2) {
+          ref = agent_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (agentCase_ == 2) {
+            agent_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @return The bytes for matchByFilter.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMatchByFilterBytes() {
+        java.lang.Object ref = "";
+        if (agentCase_ == 2) {
+          ref = agent_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (agentCase_ == 2) {
+            agent_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @param value The matchByFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchByFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  agentCase_ = 2;
+        agent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatchByFilter() {
+        if (agentCase_ == 2) {
+          agentCase_ = 0;
+          agent_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Selection by filter string.
+       * </pre>
+       *
+       * <code>string match_by_filter = 2;</code>
+       * @param value The bytes for matchByFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatchByFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        agentCase_ = 2;
+        agent_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Select anonymoud (i.e. not registered) agents.
+       * </pre>
+       *
+       * <code>bool anonymous_agent = 3;</code>
+       * @return Whether the anonymousAgent field is set.
+       */
+      public boolean hasAnonymousAgent() {
+        return agentCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Select anonymoud (i.e. not registered) agents.
+       * </pre>
+       *
+       * <code>bool anonymous_agent = 3;</code>
+       * @return The anonymousAgent.
+       */
+      public boolean getAnonymousAgent() {
+        if (agentCase_ == 3) {
+          return (java.lang.Boolean) agent_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * Select anonymoud (i.e. not registered) agents.
+       * </pre>
+       *
+       * <code>bool anonymous_agent = 3;</code>
+       * @param value The anonymousAgent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAnonymousAgent(boolean value) {
+        agentCase_ = 3;
+        agent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Select anonymoud (i.e. not registered) agents.
+       * </pre>
+       *
+       * <code>bool anonymous_agent = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAnonymousAgent() {
+        if (agentCase_ == 3) {
+          agentCase_ = 0;
+          agent_ = null;
+          onChanged();
+        }
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -774,11 +1156,13 @@ public final class AgentSelectorOuterClass {
     java.lang.String[] descriptorData = {
       "\n9yandex/cloud/loadtesting/api/v1/test/a" +
       "gent_selector.proto\022$yandex.cloud.loadte" +
-      "sting.api.v1.test\",\n\rAgentSelector\022\022\n\010ag" +
-      "ent_id\030\001 \001(\tH\000B\007\n\005agentBy\n(yandex.cloud." +
-      "api.loadtesting.api.v1.testZMgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/lo" +
-      "adtesting/api/v1/test;testb\006proto3"
+      "sting.api.v1.test\"b\n\rAgentSelector\022\022\n\010ag" +
+      "ent_id\030\001 \001(\tH\000\022\031\n\017match_by_filter\030\002 \001(\tH" +
+      "\000\022\031\n\017anonymous_agent\030\003 \001(\010H\000B\007\n\005agentBy\n" +
+      "(yandex.cloud.api.loadtesting.api.v1.tes" +
+      "tZMgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/loadtesting/api/v1/test;test" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -789,7 +1173,7 @@ public final class AgentSelectorOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_test_AgentSelector_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_test_AgentSelector_descriptor,
-        new java.lang.String[] { "AgentId", "Agent", });
+        new java.lang.String[] { "AgentId", "MatchByFilter", "AnonymousAgent", "Agent", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

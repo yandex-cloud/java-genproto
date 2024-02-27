@@ -10392,6 +10392,27 @@ public final class PolicyOuterClass {
          */
         yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.SinceLastExecTimeOrBuilder getSinceLastExecTimeOrBuilder();
 
+        /**
+         * <pre>
+         * BackupSet type -- one of incr, full, differential or auto.
+         * if custom scheme is used the BackupSet type should be specified
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+         * @return The enum numeric value on the wire for type.
+         */
+        int getTypeValue();
+        /**
+         * <pre>
+         * BackupSet type -- one of incr, full, differential or auto.
+         * if custom scheme is used the BackupSet type should be specified
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+         * @return The type.
+         */
+        yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type getType();
+
         public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.SettingCase getSettingCase();
       }
       /**
@@ -10407,6 +10428,7 @@ public final class PolicyOuterClass {
           super(builder);
         }
         private BackupSet() {
+          type_ = 0;
         }
 
         @java.lang.Override
@@ -10467,6 +10489,12 @@ public final class PolicyOuterClass {
                   settingCase_ = 2;
                   break;
                 }
+                case 24: {
+                  int rawValue = input.readEnum();
+
+                  type_ = rawValue;
+                  break;
+                }
                 default: {
                   if (!parseUnknownField(
                       input, unknownFields, extensionRegistry, tag)) {
@@ -10497,6 +10525,141 @@ public final class PolicyOuterClass {
           return yandex.cloud.api.backup.v1.PolicyOuterClass.internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.class, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Builder.class);
+        }
+
+        /**
+         * Protobuf enum {@code yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type}
+         */
+        public enum Type
+            implements com.google.protobuf.ProtocolMessageEnum {
+          /**
+           * <code>TYPE_UNSPECIFIED = 0;</code>
+           */
+          TYPE_UNSPECIFIED(0),
+          /**
+           * <code>TYPE_AUTO = 1;</code>
+           */
+          TYPE_AUTO(1),
+          /**
+           * <code>TYPE_FULL = 2;</code>
+           */
+          TYPE_FULL(2),
+          /**
+           * <code>TYPE_INCREMENTAL = 3;</code>
+           */
+          TYPE_INCREMENTAL(3),
+          /**
+           * <code>TYPE_DIFFERENTIAL = 4;</code>
+           */
+          TYPE_DIFFERENTIAL(4),
+          UNRECOGNIZED(-1),
+          ;
+
+          /**
+           * <code>TYPE_UNSPECIFIED = 0;</code>
+           */
+          public static final int TYPE_UNSPECIFIED_VALUE = 0;
+          /**
+           * <code>TYPE_AUTO = 1;</code>
+           */
+          public static final int TYPE_AUTO_VALUE = 1;
+          /**
+           * <code>TYPE_FULL = 2;</code>
+           */
+          public static final int TYPE_FULL_VALUE = 2;
+          /**
+           * <code>TYPE_INCREMENTAL = 3;</code>
+           */
+          public static final int TYPE_INCREMENTAL_VALUE = 3;
+          /**
+           * <code>TYPE_DIFFERENTIAL = 4;</code>
+           */
+          public static final int TYPE_DIFFERENTIAL_VALUE = 4;
+
+
+          public final int getNumber() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalArgumentException(
+                  "Can't get the number of an unknown enum value.");
+            }
+            return value;
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           * @deprecated Use {@link #forNumber(int)} instead.
+           */
+          @java.lang.Deprecated
+          public static Type valueOf(int value) {
+            return forNumber(value);
+          }
+
+          /**
+           * @param value The numeric wire value of the corresponding enum entry.
+           * @return The enum associated with the given numeric wire value.
+           */
+          public static Type forNumber(int value) {
+            switch (value) {
+              case 0: return TYPE_UNSPECIFIED;
+              case 1: return TYPE_AUTO;
+              case 2: return TYPE_FULL;
+              case 3: return TYPE_INCREMENTAL;
+              case 4: return TYPE_DIFFERENTIAL;
+              default: return null;
+            }
+          }
+
+          public static com.google.protobuf.Internal.EnumLiteMap<Type>
+              internalGetValueMap() {
+            return internalValueMap;
+          }
+          private static final com.google.protobuf.Internal.EnumLiteMap<
+              Type> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+                  public Type findValueByNumber(int number) {
+                    return Type.forNumber(number);
+                  }
+                };
+
+          public final com.google.protobuf.Descriptors.EnumValueDescriptor
+              getValueDescriptor() {
+            if (this == UNRECOGNIZED) {
+              throw new java.lang.IllegalStateException(
+                  "Can't get the descriptor of an unrecognized enum value.");
+            }
+            return getDescriptor().getValues().get(ordinal());
+          }
+          public final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptorForType() {
+            return getDescriptor();
+          }
+          public static final com.google.protobuf.Descriptors.EnumDescriptor
+              getDescriptor() {
+            return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.getDescriptor().getEnumTypes().get(0);
+          }
+
+          private static final Type[] VALUES = values();
+
+          public static Type valueOf(
+              com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            if (desc.getType() != getDescriptor()) {
+              throw new java.lang.IllegalArgumentException(
+                "EnumValueDescriptor is not for this type.");
+            }
+            if (desc.getIndex() == -1) {
+              return UNRECOGNIZED;
+            }
+            return VALUES[desc.getIndex()];
+          }
+
+          private final int value;
+
+          private Type(int value) {
+            this.value = value;
+          }
+
+          // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type)
         }
 
         public interface TimeOrBuilder extends
@@ -14103,6 +14266,35 @@ public final class PolicyOuterClass {
           return yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.SinceLastExecTime.getDefaultInstance();
         }
 
+        public static final int TYPE_FIELD_NUMBER = 3;
+        private int type_;
+        /**
+         * <pre>
+         * BackupSet type -- one of incr, full, differential or auto.
+         * if custom scheme is used the BackupSet type should be specified
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+         * @return The enum numeric value on the wire for type.
+         */
+        @java.lang.Override public int getTypeValue() {
+          return type_;
+        }
+        /**
+         * <pre>
+         * BackupSet type -- one of incr, full, differential or auto.
+         * if custom scheme is used the BackupSet type should be specified
+         * </pre>
+         *
+         * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+         * @return The type.
+         */
+        @java.lang.Override public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type getType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type result = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.valueOf(type_);
+          return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.UNRECOGNIZED : result;
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -14123,6 +14315,9 @@ public final class PolicyOuterClass {
           if (settingCase_ == 2) {
             output.writeMessage(2, (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.SinceLastExecTime) setting_);
           }
+          if (type_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.TYPE_UNSPECIFIED.getNumber()) {
+            output.writeEnum(3, type_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -14140,6 +14335,10 @@ public final class PolicyOuterClass {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(2, (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.SinceLastExecTime) setting_);
           }
+          if (type_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.TYPE_UNSPECIFIED.getNumber()) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(3, type_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -14155,6 +14354,7 @@ public final class PolicyOuterClass {
           }
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet other = (yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet) obj;
 
+          if (type_ != other.type_) return false;
           if (!getSettingCase().equals(other.getSettingCase())) return false;
           switch (settingCase_) {
             case 1:
@@ -14179,6 +14379,8 @@ public final class PolicyOuterClass {
           }
           int hash = 41;
           hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + type_;
           switch (settingCase_) {
             case 1:
               hash = (37 * hash) + TIME_FIELD_NUMBER;
@@ -14324,6 +14526,8 @@ public final class PolicyOuterClass {
           @java.lang.Override
           public Builder clear() {
             super.clear();
+            type_ = 0;
+
             settingCase_ = 0;
             setting_ = null;
             return this;
@@ -14366,6 +14570,7 @@ public final class PolicyOuterClass {
                 result.setting_ = sinceLastExecTimeBuilder_.build();
               }
             }
+            result.type_ = type_;
             result.settingCase_ = settingCase_;
             onBuilt();
             return result;
@@ -14415,6 +14620,9 @@ public final class PolicyOuterClass {
 
           public Builder mergeFrom(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet other) {
             if (other == yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.getDefaultInstance()) return this;
+            if (other.type_ != 0) {
+              setTypeValue(other.getTypeValue());
+            }
             switch (other.getSettingCase()) {
               case TIME: {
                 mergeTime(other.getTime());
@@ -14752,6 +14960,85 @@ public final class PolicyOuterClass {
             settingCase_ = 2;
             onChanged();;
             return sinceLastExecTimeBuilder_;
+          }
+
+          private int type_ = 0;
+          /**
+           * <pre>
+           * BackupSet type -- one of incr, full, differential or auto.
+           * if custom scheme is used the BackupSet type should be specified
+           * </pre>
+           *
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+           * @return The enum numeric value on the wire for type.
+           */
+          @java.lang.Override public int getTypeValue() {
+            return type_;
+          }
+          /**
+           * <pre>
+           * BackupSet type -- one of incr, full, differential or auto.
+           * if custom scheme is used the BackupSet type should be specified
+           * </pre>
+           *
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+           * @param value The enum numeric value on the wire for type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setTypeValue(int value) {
+            
+            type_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * BackupSet type -- one of incr, full, differential or auto.
+           * if custom scheme is used the BackupSet type should be specified
+           * </pre>
+           *
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+           * @return The type.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type getType() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type result = yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.valueOf(type_);
+            return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type.UNRECOGNIZED : result;
+          }
+          /**
+           * <pre>
+           * BackupSet type -- one of incr, full, differential or auto.
+           * if custom scheme is used the BackupSet type should be specified
+           * </pre>
+           *
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+           * @param value The type to set.
+           * @return This builder for chaining.
+           */
+          public Builder setType(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Scheduling.BackupSet.Type value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            
+            type_ = value.getNumber();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * BackupSet type -- one of incr, full, differential or auto.
+           * if custom scheme is used the BackupSet type should be specified
+           * </pre>
+           *
+           * <code>.yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Type type = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearType() {
+            
+            type_ = 0;
+            onChanged();
+            return this;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -20456,7 +20743,7 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\366\036\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\257 \n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
@@ -20510,7 +20797,7 @@ public final class PolicyOuterClass {
       ".RepeatePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex" +
       ".cloud.backup.v1.PolicySettings.Interval" +
       "H\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\301" +
-      "1\001J\004\010\002\020\003\032\341\n\n\nScheduling\022X\n\013backup_sets\030\001" +
+      "1\001J\004\010\002\020\003\032\232\014\n\nScheduling\022X\n\013backup_sets\030\001" +
       " \003(\0132;.yandex.cloud.backup.v1.PolicySett" +
       "ings.Scheduling.BackupSetB\006\202\3101\002>0\022\017\n\007ena" +
       "bled\030\002 \001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003" +
@@ -20519,13 +20806,15 @@ public final class PolicyOuterClass {
       "N\n\006scheme\030\005 \001(\01628.yandex.cloud.backup.v1" +
       ".PolicySettings.Scheduling.SchemeB\004\350\3071\001\022" +
       "K\n\021weekly_backup_day\030\006 \001(\0162*.yandex.clou" +
-      "d.backup.v1.PolicySettings.DayB\004\350\3071\001\032\265\006\n" +
+      "d.backup.v1.PolicySettings.DayB\004\350\3071\001\032\356\007\n" +
       "\tBackupSet\022P\n\004time\030\001 \001(\0132@.yandex.cloud." +
       "backup.v1.PolicySettings.Scheduling.Back" +
       "upSet.TimeH\000\022m\n\024since_last_exec_time\030\002 \001" +
       "(\0132M.yandex.cloud.backup.v1.PolicySettin" +
       "gs.Scheduling.BackupSet.SinceLastExecTim" +
-      "eH\000\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex." +
+      "eH\000\022N\n\004type\030\003 \001(\0162@.yandex.cloud.backup." +
+      "v1.PolicySettings.Scheduling.BackupSet.T" +
+      "ype\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex." +
       "cloud.backup.v1.PolicySettings.DayB\004\220\3101\001" +
       "\022C\n\trepeat_at\030\002 \003(\01320.yandex.cloud.backu" +
       "p.v1.PolicySettings.TimeOfDay\022E\n\014repeat_" +
@@ -20540,33 +20829,36 @@ public final class PolicyOuterClass {
       "licySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021Sinc" +
       "eLastExecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cl" +
       "oud.backup.v1.PolicySettings.IntervalB\004\350" +
-      "\3071\001B\017\n\007setting\022\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEM" +
-      "E_UNSPECIFIED\020\000\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FU" +
-      "LL\020\002\022\026\n\022ALWAYS_INCREMENTAL\020\003\022\026\n\022WEEKLY_I" +
-      "NCREMENTAL\020\004\022!\n\035WEEKLY_FULL_DAILY_INCREM" +
-      "ENTAL\020\005\022\n\n\006CUSTOM\020\006\022\007\n\003CDP\020\007\"R\n\013Compress" +
-      "ion\022\033\n\027COMPRESSION_UNSPECIFIED\020\000\022\n\n\006NORM" +
-      "AL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepe" +
-      "atePeriod\022\036\n\032REPEATE_PERIOD_UNSPECIFIED\020" +
-      "\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007" +
-      "MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n" +
-      "\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n" +
-      "\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n" +
-      "\006SUNDAY\020\007\"v\n\024ChangedBlockTracking\022&\n\"CHA" +
-      "NGED_BLOCK_TRACKING_UNSPECIFIED\020\000\022\022\n\016USE" +
-      "_IF_ENABLED\020\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_" +
-      "NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\213\002\n\021PolicyApplicat" +
-      "ion\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute_instan" +
-      "ce_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status\030\004" +
-      " \001(\01620.yandex.cloud.backup.v1.PolicyAppl" +
-      "ication.Status\022.\n\ncreated_at\030\005 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"C\n\006Status\022\026\n\022STAT" +
-      "US_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n" +
-      "\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMAT_UNSPECIF" +
-      "IED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n" +
-      "\004AUTO\020\003B_\n\032yandex.cloud.api.backup.v1ZAg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/backup/v1;backupb\006proto3"
+      "\3071\001\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYP" +
+      "E_AUTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMEN" +
+      "TAL\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022" +
+      "\004\300\3011\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000" +
+      "\022\n\n\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_" +
+      "INCREMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n" +
+      "\035WEEKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUST" +
+      "OM\020\006\022\007\n\003CDP\020\007\"R\n\013Compression\022\033\n\027COMPRESS" +
+      "ION_UNSPECIFIED\020\000\022\n\n\006NORMAL\020\001\022\010\n\004HIGH\020\002\022" +
+      "\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRepeatePeriod\022\036\n\032RE" +
+      "PEATE_PERIOD_UNSPECIFIED\020\000\022\n\n\006HOURLY\020\001\022\t" +
+      "\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013\n\007MONTHLY\020\004\"v\n\003Da" +
+      "y\022\023\n\017DAY_UNSPECIFIED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TU" +
+      "ESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006" +
+      "FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024Ch" +
+      "angedBlockTracking\022&\n\"CHANGED_BLOCK_TRAC" +
+      "KING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001\022\022" +
+      "\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016" +
+      "J\004\010\016\020\017\"\213\002\n\021PolicyApplication\022\021\n\tpolicy_i" +
+      "d\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017\n\007" +
+      "enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex.c" +
+      "loud.backup.v1.PolicyApplication.Status\022" +
+      ".\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\"C\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006" +
+      "Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSIO" +
+      "N_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yand" +
+      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/backup/" +
+      "v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20651,7 +20943,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_descriptor,
-        new java.lang.String[] { "Time", "SinceLastExecTime", "Setting", });
+        new java.lang.String[] { "Time", "SinceLastExecTime", "Type", "Setting", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_Time_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_Time_fieldAccessorTable = new

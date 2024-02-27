@@ -77,6 +77,73 @@ public final class ConfigOuterClass {
      */
     com.google.protobuf.ByteString
         getYamlStringBytes();
+
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * UA or SA that created the config.
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     * @return The createdBy.
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * UA or SA that created the config.
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     * @return The bytes for createdBy.
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
   }
   /**
    * <pre>
@@ -98,6 +165,8 @@ public final class ConfigOuterClass {
       id_ = "";
       folderId_ = "";
       yamlString_ = "";
+      name_ = "";
+      createdBy_ = "";
     }
 
     @java.lang.Override
@@ -146,6 +215,31 @@ public final class ConfigOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               yamlString_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdBy_ = s;
               break;
             }
             default: {
@@ -318,6 +412,136 @@ public final class ConfigOuterClass {
       }
     }
 
+    public static final int NAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int CREATED_BY_FIELD_NUMBER = 12;
+    private volatile java.lang.Object createdBy_;
+    /**
+     * <pre>
+     * UA or SA that created the config.
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     * @return The createdBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UA or SA that created the config.
+     * </pre>
+     *
+     * <code>string created_by = 12;</code>
+     * @return The bytes for createdBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -341,6 +565,15 @@ public final class ConfigOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yamlString_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, yamlString_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, name_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(11, getCreatedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, createdBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -358,6 +591,16 @@ public final class ConfigOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yamlString_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, yamlString_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, name_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getCreatedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, createdBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -380,6 +623,15 @@ public final class ConfigOuterClass {
           .equals(other.getFolderId())) return false;
       if (!getYamlString()
           .equals(other.getYamlString())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -397,6 +649,14 @@ public final class ConfigOuterClass {
       hash = (53 * hash) + getFolderId().hashCode();
       hash = (37 * hash) + YAML_STRING_FIELD_NUMBER;
       hash = (53 * hash) + getYamlString().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -540,6 +800,16 @@ public final class ConfigOuterClass {
 
         yamlString_ = "";
 
+        name_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        createdBy_ = "";
+
         return this;
       }
 
@@ -569,6 +839,13 @@ public final class ConfigOuterClass {
         result.id_ = id_;
         result.folderId_ = folderId_;
         result.yamlString_ = yamlString_;
+        result.name_ = name_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        result.createdBy_ = createdBy_;
         onBuilt();
         return result;
       }
@@ -627,6 +904,17 @@ public final class ConfigOuterClass {
         }
         if (!other.getYamlString().isEmpty()) {
           yamlString_ = other.yamlString_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -945,6 +1233,353 @@ public final class ConfigOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * UA or SA that created the config.
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       * @return The createdBy.
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UA or SA that created the config.
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       * @return The bytes for createdBy.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UA or SA that created the config.
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UA or SA that created the config.
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedBy() {
+        
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UA or SA that created the config.
+       * </pre>
+       *
+       * <code>string created_by = 12;</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1014,23 +1649,28 @@ public final class ConfigOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/loadtesting/api/v1/config" +
       "/config.proto\022&yandex.cloud.loadtesting." +
-      "api.v1.config\"<\n\006Config\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
-      "older_id\030\002 \001(\t\022\023\n\013yaml_string\030\003 \001(\tB\177\n*y" +
-      "andex.cloud.api.loadtesting.api.v1.confi" +
-      "gZQgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/loadtesting/api/v1/config;co" +
-      "nfigb\006proto3"
+      "api.v1.config\032\037google/protobuf/timestamp" +
+      ".proto\"\224\001\n\006Config\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_" +
+      "id\030\002 \001(\t\022\023\n\013yaml_string\030\003 \001(\t\022\014\n\004name\030\n " +
+      "\001(\t\022.\n\ncreated_at\030\013 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\022\n\ncreated_by\030\014 \001(\tJ\004\010\004\020\nB\177\n" +
+      "*yandex.cloud.api.loadtesting.api.v1.con" +
+      "figZQgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/loadtesting/api/v1/config;" +
+      "configb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_yandex_cloud_loadtesting_api_v1_config_Config_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_loadtesting_api_v1_config_Config_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_config_Config_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "YamlString", });
+        new java.lang.String[] { "Id", "FolderId", "YamlString", "Name", "CreatedAt", "CreatedBy", });
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -209,6 +209,26 @@ public final class SummaryOuterClass {
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePointOrBuilder getImbalancePointOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the agent that executed the test.
+     * </pre>
+     *
+     * <code>string assigned_agent_id = 9;</code>
+     * @return The assignedAgentId.
+     */
+    java.lang.String getAssignedAgentId();
+    /**
+     * <pre>
+     * ID of the agent that executed the test.
+     * </pre>
+     *
+     * <code>string assigned_agent_id = 9;</code>
+     * @return The bytes for assignedAgentId.
+     */
+    com.google.protobuf.ByteString
+        getAssignedAgentIdBytes();
   }
   /**
    * <pre>
@@ -230,6 +250,7 @@ public final class SummaryOuterClass {
       status_ = 0;
       createdBy_ = "";
       error_ = "";
+      assignedAgentId_ = "";
     }
 
     @java.lang.Override
@@ -335,6 +356,12 @@ public final class SummaryOuterClass {
                 imbalancePoint_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assignedAgentId_ = s;
               break;
             }
             default: {
@@ -670,6 +697,52 @@ public final class SummaryOuterClass {
       return getImbalancePoint();
     }
 
+    public static final int ASSIGNED_AGENT_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object assignedAgentId_;
+    /**
+     * <pre>
+     * ID of the agent that executed the test.
+     * </pre>
+     *
+     * <code>string assigned_agent_id = 9;</code>
+     * @return The assignedAgentId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssignedAgentId() {
+      java.lang.Object ref = assignedAgentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assignedAgentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the agent that executed the test.
+     * </pre>
+     *
+     * <code>string assigned_agent_id = 9;</code>
+     * @return The bytes for assignedAgentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssignedAgentIdBytes() {
+      java.lang.Object ref = assignedAgentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assignedAgentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -707,6 +780,9 @@ public final class SummaryOuterClass {
       }
       if (imbalancePoint_ != null) {
         output.writeMessage(8, getImbalancePoint());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedAgentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, assignedAgentId_);
       }
       unknownFields.writeTo(output);
     }
@@ -746,6 +822,9 @@ public final class SummaryOuterClass {
       if (imbalancePoint_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getImbalancePoint());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedAgentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, assignedAgentId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -789,6 +868,8 @@ public final class SummaryOuterClass {
         if (!getImbalancePoint()
             .equals(other.getImbalancePoint())) return false;
       }
+      if (!getAssignedAgentId()
+          .equals(other.getAssignedAgentId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -825,6 +906,8 @@ public final class SummaryOuterClass {
         hash = (37 * hash) + IMBALANCE_POINT_FIELD_NUMBER;
         hash = (53 * hash) + getImbalancePoint().hashCode();
       }
+      hash = (37 * hash) + ASSIGNED_AGENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssignedAgentId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -994,6 +1077,8 @@ public final class SummaryOuterClass {
           imbalancePoint_ = null;
           imbalancePointBuilder_ = null;
         }
+        assignedAgentId_ = "";
+
         return this;
       }
 
@@ -1044,6 +1129,7 @@ public final class SummaryOuterClass {
         } else {
           result.imbalancePoint_ = imbalancePointBuilder_.build();
         }
+        result.assignedAgentId_ = assignedAgentId_;
         onBuilt();
         return result;
       }
@@ -1117,6 +1203,10 @@ public final class SummaryOuterClass {
         }
         if (other.hasImbalancePoint()) {
           mergeImbalancePoint(other.getImbalancePoint());
+        }
+        if (!other.getAssignedAgentId().isEmpty()) {
+          assignedAgentId_ = other.assignedAgentId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2120,6 +2210,102 @@ public final class SummaryOuterClass {
         }
         return imbalancePointBuilder_;
       }
+
+      private java.lang.Object assignedAgentId_ = "";
+      /**
+       * <pre>
+       * ID of the agent that executed the test.
+       * </pre>
+       *
+       * <code>string assigned_agent_id = 9;</code>
+       * @return The assignedAgentId.
+       */
+      public java.lang.String getAssignedAgentId() {
+        java.lang.Object ref = assignedAgentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assignedAgentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the agent that executed the test.
+       * </pre>
+       *
+       * <code>string assigned_agent_id = 9;</code>
+       * @return The bytes for assignedAgentId.
+       */
+      public com.google.protobuf.ByteString
+          getAssignedAgentIdBytes() {
+        java.lang.Object ref = assignedAgentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assignedAgentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the agent that executed the test.
+       * </pre>
+       *
+       * <code>string assigned_agent_id = 9;</code>
+       * @param value The assignedAgentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssignedAgentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assignedAgentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the agent that executed the test.
+       * </pre>
+       *
+       * <code>string assigned_agent_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssignedAgentId() {
+        
+        assignedAgentId_ = getDefaultInstance().getAssignedAgentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the agent that executed the test.
+       * </pre>
+       *
+       * <code>string assigned_agent_id = 9;</code>
+       * @param value The bytes for assignedAgentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssignedAgentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assignedAgentId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2192,7 +2378,7 @@ public final class SummaryOuterClass {
       "pi.v1.test\032:yandex/cloud/loadtesting/api" +
       "/v1/test/imbalance_point.proto\0321yandex/c" +
       "loud/loadtesting/api/v1/test/status.prot" +
-      "o\032\037google/protobuf/timestamp.proto\"\337\002\n\007S" +
+      "o\032\037google/protobuf/timestamp.proto\"\372\002\n\007S" +
       "ummary\022<\n\006status\030\001 \001(\0162,.yandex.cloud.lo" +
       "adtesting.api.v1.test.Status\022.\n\ncreated_" +
       "at\030\002 \001(\0132\032.google.protobuf.Timestamp\022\022\n\n" +
@@ -2201,10 +2387,11 @@ public final class SummaryOuterClass {
       "\005 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013is_" +
       "finished\030\006 \001(\010\022\r\n\005error\030\007 \001(\t\022M\n\017imbalan" +
       "ce_point\030\010 \001(\01324.yandex.cloud.loadtestin" +
-      "g.api.v1.test.ImbalancePointBy\n(yandex.c" +
-      "loud.api.loadtesting.api.v1.testZMgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/loadtesting/api/v1/test;testb\006proto3"
+      "g.api.v1.test.ImbalancePoint\022\031\n\021assigned" +
+      "_agent_id\030\t \001(\tBy\n(yandex.cloud.api.load" +
+      "testing.api.v1.testZMgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/loadtestin" +
+      "g/api/v1/test;testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2218,7 +2405,7 @@ public final class SummaryOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_test_Summary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_test_Summary_descriptor,
-        new java.lang.String[] { "Status", "CreatedAt", "CreatedBy", "StartedAt", "FinishedAt", "IsFinished", "Error", "ImbalancePoint", });
+        new java.lang.String[] { "Status", "CreatedAt", "CreatedBy", "StartedAt", "FinishedAt", "IsFinished", "Error", "ImbalancePoint", "AssignedAgentId", });
     yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.getDescriptor();
     yandex.cloud.api.loadtesting.api.v1.test.StatusOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

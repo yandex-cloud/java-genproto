@@ -67,6 +67,26 @@ public final class ConfigServiceOuterClass {
     com.google.protobuf.ByteString
         getYamlStringBytes();
 
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
     public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest.ConfigCase getConfigCase();
   }
   /**
@@ -83,6 +103,7 @@ public final class ConfigServiceOuterClass {
     }
     private CreateConfigRequest() {
       folderId_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -125,6 +146,12 @@ public final class ConfigServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
               configCase_ = 2;
               config_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
               break;
             }
             default: {
@@ -308,6 +335,52 @@ public final class ConfigServiceOuterClass {
       }
     }
 
+    public static final int NAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the config.
+     * </pre>
+     *
+     * <code>string name = 10;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -328,6 +401,9 @@ public final class ConfigServiceOuterClass {
       if (configCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, config_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, name_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -342,6 +418,9 @@ public final class ConfigServiceOuterClass {
       }
       if (configCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, config_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -360,6 +439,8 @@ public final class ConfigServiceOuterClass {
 
       if (!getFolderId()
           .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!getConfigCase().equals(other.getConfigCase())) return false;
       switch (configCase_) {
         case 2:
@@ -382,6 +463,8 @@ public final class ConfigServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       switch (configCase_) {
         case 2:
           hash = (37 * hash) + YAML_STRING_FIELD_NUMBER;
@@ -525,6 +608,8 @@ public final class ConfigServiceOuterClass {
         super.clear();
         folderId_ = "";
 
+        name_ = "";
+
         configCase_ = 0;
         config_ = null;
         return this;
@@ -557,6 +642,7 @@ public final class ConfigServiceOuterClass {
         if (configCase_ == 2) {
           result.config_ = config_;
         }
+        result.name_ = name_;
         result.configCase_ = configCase_;
         onBuilt();
         return result;
@@ -608,6 +694,10 @@ public final class ConfigServiceOuterClass {
         if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest.getDefaultInstance()) return this;
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         switch (other.getConfigCase()) {
@@ -878,6 +968,102 @@ public final class ConfigServiceOuterClass {
   checkByteStringIsUtf8(value);
         configCase_ = 2;
         config_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the config.
+       * </pre>
+       *
+       * <code>string name = 10;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
         onChanged();
         return this;
       }
@@ -2200,6 +2386,26 @@ public final class ConfigServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListConfigsRequest}
@@ -2216,6 +2422,7 @@ public final class ConfigServiceOuterClass {
     private ListConfigsRequest() {
       folderId_ = "";
       pageToken_ = "";
+      filter_ = "";
     }
 
     @java.lang.Override
@@ -2263,6 +2470,12 @@ public final class ConfigServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
               break;
             }
             default: {
@@ -2409,6 +2622,52 @@ public final class ConfigServiceOuterClass {
       }
     }
 
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2432,6 +2691,9 @@ public final class ConfigServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2450,6 +2712,9 @@ public final class ConfigServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2472,6 +2737,8 @@ public final class ConfigServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2490,6 +2757,8 @@ public final class ConfigServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2629,6 +2898,8 @@ public final class ConfigServiceOuterClass {
 
         pageToken_ = "";
 
+        filter_ = "";
+
         return this;
       }
 
@@ -2658,6 +2929,7 @@ public final class ConfigServiceOuterClass {
         result.folderId_ = folderId_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
         onBuilt();
         return result;
       }
@@ -2715,6 +2987,10 @@ public final class ConfigServiceOuterClass {
         }
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2991,6 +3267,102 @@ public final class ConfigServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
         onChanged();
         return this;
       }
@@ -4165,6 +4537,1214 @@ public final class ConfigServiceOuterClass {
 
   }
 
+  public interface DeleteConfigRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.DeleteConfigRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the config to deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    java.lang.String getConfigId();
+    /**
+     * <pre>
+     * ID of the config to deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    com.google.protobuf.ByteString
+        getConfigIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteConfigRequest}
+   */
+  public static final class DeleteConfigRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.DeleteConfigRequest)
+      DeleteConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteConfigRequest.newBuilder() to construct.
+    private DeleteConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteConfigRequest() {
+      configId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteConfigRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteConfigRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              configId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.Builder.class);
+    }
+
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object configId_;
+    /**
+     * <pre>
+     * ID of the config to deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigId() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the config to deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigIdBytes() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest other = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest) obj;
+
+      if (!getConfigId()
+          .equals(other.getConfigId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteConfigRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.DeleteConfigRequest)
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        configId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest result = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest(this);
+        result.configId_ = configId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest.getDefaultInstance()) return this;
+        if (!other.getConfigId().isEmpty()) {
+          configId_ = other.configId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object configId_ = "";
+      /**
+       * <pre>
+       * ID of the config to deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The configId.
+       */
+      public java.lang.String getConfigId() {
+        java.lang.Object ref = configId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config to deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The bytes for configId.
+       */
+      public com.google.protobuf.ByteString
+          getConfigIdBytes() {
+        java.lang.Object ref = configId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config to deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config to deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigId() {
+        
+        configId_ = getDefaultInstance().getConfigId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config to deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The bytes for configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.DeleteConfigRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.DeleteConfigRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteConfigRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteConfigRequest>() {
+      @java.lang.Override
+      public DeleteConfigRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteConfigRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteConfigRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteConfigRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteConfigMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the config that is being deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    java.lang.String getConfigId();
+    /**
+     * <pre>
+     * ID of the config that is being deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    com.google.protobuf.ByteString
+        getConfigIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata}
+   */
+  public static final class DeleteConfigMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata)
+      DeleteConfigMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteConfigMetadata.newBuilder() to construct.
+    private DeleteConfigMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteConfigMetadata() {
+      configId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteConfigMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteConfigMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              configId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.Builder.class);
+    }
+
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object configId_;
+    /**
+     * <pre>
+     * ID of the config that is being deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigId() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the config that is being deleted.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigIdBytes() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata other = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata) obj;
+
+      if (!getConfigId()
+          .equals(other.getConfigId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata)
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        configId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata build() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata result = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata(this);
+        result.configId_ = configId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata.getDefaultInstance()) return this;
+        if (!other.getConfigId().isEmpty()) {
+          configId_ = other.configId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object configId_ = "";
+      /**
+       * <pre>
+       * ID of the config that is being deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The configId.
+       */
+      public java.lang.String getConfigId() {
+        java.lang.Object ref = configId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config that is being deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The bytes for configId.
+       */
+      public com.google.protobuf.ByteString
+          getConfigIdBytes() {
+        java.lang.Object ref = configId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config that is being deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config that is being deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigId() {
+        
+        configId_ = getDefaultInstance().getConfigId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config that is being deleted.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The bytes for configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.DeleteConfigMetadata)
+    private static final yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteConfigMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteConfigMetadata>() {
+      @java.lang.Override
+      public DeleteConfigMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteConfigMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteConfigMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteConfigMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.DeleteConfigMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigRequest_descriptor;
   private static final 
@@ -4190,6 +5770,16 @@ public final class ConfigServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4205,32 +5795,41 @@ public final class ConfigServiceOuterClass {
       "andex/cloud/operation/operation.proto\032 y" +
       "andex/cloud/api/operation.proto\032\035yandex/" +
       "cloud/validation.proto\0323yandex/cloud/loa" +
-      "dtesting/api/v1/config/config.proto\"W\n\023C" +
+      "dtesting/api/v1/config/config.proto\"k\n\023C" +
       "reateConfigRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\025\n\013yaml_string\030\002 \001(\tH\000B\010\n\006co" +
-      "nfig\")\n\024CreateConfigMetadata\022\021\n\tconfig_i" +
-      "d\030\001 \001(\t\"%\n\020GetConfigRequest\022\021\n\tconfig_id" +
-      "\030\001 \001(\t\"N\n\022ListConfigsRequest\022\021\n\tfolder_i" +
-      "d\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token" +
-      "\030\003 \001(\t\"o\n\023ListConfigsResponse\022?\n\007configs" +
-      "\030\001 \003(\0132..yandex.cloud.loadtesting.api.v1" +
-      ".config.Config\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\371\003\n\rConfigService\022\262\001\n\006Create\0224.yandex.cl" +
-      "oud.loadtesting.api.v1.CreateConfigReque" +
-      "st\032!.yandex.cloud.operation.Operation\"O\202" +
-      "\323\344\223\002 \"\033/loadtesting/api/v1/configs:\001*\262\322*" +
-      "%\n\024CreateConfigMetadata\022\rconfig.Config\022\231" +
-      "\001\n\003Get\0221.yandex.cloud.loadtesting.api.v1" +
-      ".GetConfigRequest\032..yandex.cloud.loadtes" +
-      "ting.api.v1.config.Config\"/\202\323\344\223\002)\022\'/load" +
-      "testing/api/v1/configs/{config_id}\022\226\001\n\004L" +
-      "ist\0223.yandex.cloud.loadtesting.api.v1.Li" +
-      "stConfigsRequest\0324.yandex.cloud.loadtest" +
-      "ing.api.v1.ListConfigsResponse\"#\202\323\344\223\002\035\022\033" +
-      "/loadtesting/api/v1/configsBv\n#yandex.cl" +
-      "oud.api.loadtesting.api.v1ZOgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/loa" +
-      "dtesting/api/v1;loadtestingb\006proto3"
+      "\3071\001\212\3101\004<=50\022\025\n\013yaml_string\030\002 \001(\tH\000\022\014\n\004na" +
+      "me\030\n \001(\tB\010\n\006configJ\004\010\003\020\n\")\n\024CreateConfig" +
+      "Metadata\022\021\n\tconfig_id\030\001 \001(\t\"%\n\020GetConfig" +
+      "Request\022\021\n\tconfig_id\030\001 \001(\t\"j\n\022ListConfig" +
+      "sRequest\022\021\n\tfolder_id\030\001 \001(\t\022\021\n\tpage_size" +
+      "\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"o\n\023ListConfigsResponse\022?\n" +
+      "\007configs\030\001 \003(\0132..yandex.cloud.loadtestin" +
+      "g.api.v1.config.Config\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"(\n\023DeleteConfigRequest\022\021\n\tconfig" +
+      "_id\030\001 \001(\t\")\n\024DeleteConfigMetadata\022\021\n\tcon" +
+      "fig_id\030\001 \001(\t2\277\005\n\rConfigService\022\262\001\n\006Creat" +
+      "e\0224.yandex.cloud.loadtesting.api.v1.Crea" +
+      "teConfigRequest\032!.yandex.cloud.operation" +
+      ".Operation\"O\202\323\344\223\002 \"\033/loadtesting/api/v1/" +
+      "configs:\001*\262\322*%\n\024CreateConfigMetadata\022\rco" +
+      "nfig.Config\022\231\001\n\003Get\0221.yandex.cloud.loadt" +
+      "esting.api.v1.GetConfigRequest\032..yandex." +
+      "cloud.loadtesting.api.v1.config.Config\"/" +
+      "\202\323\344\223\002)\022\'/loadtesting/api/v1/configs/{con" +
+      "fig_id}\022\226\001\n\004List\0223.yandex.cloud.loadtest" +
+      "ing.api.v1.ListConfigsRequest\0324.yandex.c" +
+      "loud.loadtesting.api.v1.ListConfigsRespo" +
+      "nse\"#\202\323\344\223\002\035\022\033/loadtesting/api/v1/configs" +
+      "\022\303\001\n\006Delete\0224.yandex.cloud.loadtesting.a" +
+      "pi.v1.DeleteConfigRequest\032!.yandex.cloud" +
+      ".operation.Operation\"`\202\323\344\223\002)*\'/loadtesti" +
+      "ng/api/v1/configs/{config_id}\262\322*-\n\024Delet" +
+      "eConfigMetadata\022\025google.protobuf.EmptyBv" +
+      "\n#yandex.cloud.api.loadtesting.api.v1ZOg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/loadtesting/api/v1;loadtestingb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4246,7 +5845,7 @@ public final class ConfigServiceOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigRequest_descriptor,
-        new java.lang.String[] { "FolderId", "YamlString", "Config", });
+        new java.lang.String[] { "FolderId", "YamlString", "Name", "Config", });
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigMetadata_fieldAccessorTable = new
@@ -4264,13 +5863,25 @@ public final class ConfigServiceOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor,
         new java.lang.String[] { "Configs", "NextPageToken", });
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigRequest_descriptor,
+        new java.lang.String[] { "ConfigId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_DeleteConfigMetadata_descriptor,
+        new java.lang.String[] { "ConfigId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

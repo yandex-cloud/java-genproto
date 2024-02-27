@@ -3191,7 +3191,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -3201,7 +3201,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -3845,7 +3845,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -3867,7 +3867,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -5536,7 +5536,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -5557,7 +5557,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -5579,7 +5579,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -5599,7 +5599,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -5614,7 +5614,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -6627,7 +6627,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -6637,7 +6637,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -7280,7 +7280,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -7302,7 +7302,7 @@ public final class DashboardServiceOuterClass {
     /**
      * <pre>
      * Entity that controls dashboard
-     * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+     * Must match the regular expression "[&#92;w &#92;-]{1,100}"
      * </pre>
      *
      * <code>string managed_by = 26;</code>
@@ -9028,7 +9028,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -9049,7 +9049,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -9071,7 +9071,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -9091,7 +9091,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>
@@ -9106,7 +9106,7 @@ public final class DashboardServiceOuterClass {
       /**
        * <pre>
        * Entity that controls dashboard
-       * Must match the regular expression "[a-zA-Z0-9_&#92;-&#92;W]{1,100}"
+       * Must match the regular expression "[&#92;w &#92;-]{1,100}"
        * </pre>
        *
        * <code>string managed_by = 26;</code>

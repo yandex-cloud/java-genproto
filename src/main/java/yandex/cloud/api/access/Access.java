@@ -163,7 +163,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -179,7 +179,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -322,7 +322,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -350,7 +350,7 @@ public final class Access {
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
      *
-     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -758,7 +758,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -785,7 +785,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -813,7 +813,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -839,7 +839,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -860,7 +860,7 @@ public final class Access {
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
        *
-       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -9198,38 +9198,38 @@ public final class Access {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/access/access.proto\022\023yand" +
       "ex.cloud.access\032\035yandex/cloud/validation" +
-      ".proto\"@\n\007Subject\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\033\n\004type\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"c\n\rAcce" +
-      "ssBinding\022\035\n\007role_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0223\n\007subject\030\002 \001(\0132\034.yandex.cloud.access." +
-      "SubjectB\004\350\3071\001\"|\n\031ListAccessBindingsReque" +
-      "st\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBinding" +
-      "sResponse\022;\n\017access_bindings\030\001 \003(\0132\".yan" +
-      "dex.cloud.access.AccessBinding\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"\206\001\n\030SetAccessBindingsReq" +
-      "uest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "G\n\017access_bindings\030\002 \003(\0132\".yandex.cloud." +
-      "access.AccessBindingB\n\202\3101\006<=1000\"0\n\031SetA" +
-      "ccessBindingsMetadata\022\023\n\013resource_id\030\001 \001" +
-      "(\t\"\224\001\n\033UpdateAccessBindingsRequest\022!\n\013re" +
-      "source_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access_" +
-      "binding_deltas\030\002 \003(\0132\'.yandex.cloud.acce" +
-      "ss.AccessBindingDeltaB\n\202\3101\0061-1000\"3\n\034Upd" +
-      "ateAccessBindingsMetadata\022\023\n\013resource_id" +
-      "\030\001 \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action\030" +
-      "\001 \001(\0162(.yandex.cloud.access.AccessBindin" +
-      "gActionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\"." +
-      "yandex.cloud.access.AccessBindingB\004\350\3071\001\"" +
-      "b\n\035AccessBindingsOperationResult\022A\n\020effe" +
-      "ctive_deltas\030\001 \003(\0132\'.yandex.cloud.access" +
-      ".AccessBindingDelta*Q\n\023AccessBindingActi" +
-      "on\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED\020" +
-      "\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud.a" +
-      "pi.accessZ>github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/access;accessb\006proto" +
-      "3"
+      ".proto\"A\n\007Subject\022\031\n\002id\030\001 \001(\tB\r\350\3071\001\212\3101\005<" +
+      "=100\022\033\n\004type\030\002 \001(\tB\r\350\3071\001\212\3101\005<=100\"c\n\rAcc" +
+      "essBinding\022\035\n\007role_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0223\n\007subject\030\002 \001(\0132\034.yandex.cloud.access" +
+      ".SubjectB\004\350\3071\001\"|\n\031ListAccessBindingsRequ" +
+      "est\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"r\n\032ListAccessBindin" +
+      "gsResponse\022;\n\017access_bindings\030\001 \003(\0132\".ya" +
+      "ndex.cloud.access.AccessBinding\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\206\001\n\030SetAccessBindingsRe" +
+      "quest\022!\n\013resource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022G\n\017access_bindings\030\002 \003(\0132\".yandex.cloud" +
+      ".access.AccessBindingB\n\202\3101\006<=1000\"0\n\031Set" +
+      "AccessBindingsMetadata\022\023\n\013resource_id\030\001 " +
+      "\001(\t\"\224\001\n\033UpdateAccessBindingsRequest\022!\n\013r" +
+      "esource_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\025access" +
+      "_binding_deltas\030\002 \003(\0132\'.yandex.cloud.acc" +
+      "ess.AccessBindingDeltaB\n\202\3101\0061-1000\"3\n\034Up" +
+      "dateAccessBindingsMetadata\022\023\n\013resource_i" +
+      "d\030\001 \001(\t\"\226\001\n\022AccessBindingDelta\022>\n\006action" +
+      "\030\001 \001(\0162(.yandex.cloud.access.AccessBindi" +
+      "ngActionB\004\350\3071\001\022@\n\016access_binding\030\002 \001(\0132\"" +
+      ".yandex.cloud.access.AccessBindingB\004\350\3071\001" +
+      "\"b\n\035AccessBindingsOperationResult\022A\n\020eff" +
+      "ective_deltas\030\001 \003(\0132\'.yandex.cloud.acces" +
+      "s.AccessBindingDelta*Q\n\023AccessBindingAct" +
+      "ion\022%\n!ACCESS_BINDING_ACTION_UNSPECIFIED" +
+      "\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002BY\n\027yandex.cloud." +
+      "api.accessZ>github.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/access;accessb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

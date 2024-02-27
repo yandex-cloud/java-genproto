@@ -17446,6 +17446,33 @@ public final class Stt {
      */
     yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder();
 
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     * @return Whether the speakerLabeling field is set.
+     */
+    boolean hasSpeakerLabeling();
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     * @return The speakerLabeling.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling();
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder();
+
     public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.AudioSourceCase getAudioSourceCase();
   }
   /**
@@ -17539,6 +17566,19 @@ public final class Stt {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(speechAnalysis_);
                 speechAnalysis_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder subBuilder = null;
+              if (speakerLabeling_ != null) {
+                subBuilder = speakerLabeling_.toBuilder();
+              }
+              speakerLabeling_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(speakerLabeling_);
+                speakerLabeling_ = subBuilder.buildPartial();
               }
 
               break;
@@ -17823,6 +17863,44 @@ public final class Stt {
       return getSpeechAnalysis();
     }
 
+    public static final int SPEAKER_LABELING_FIELD_NUMBER = 6;
+    private yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions speakerLabeling_;
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     * @return Whether the speakerLabeling field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeakerLabeling() {
+      return speakerLabeling_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     * @return The speakerLabeling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling() {
+      return speakerLabeling_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+    }
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder() {
+      return getSpeakerLabeling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17853,6 +17931,9 @@ public final class Stt {
       if (speechAnalysis_ != null) {
         output.writeMessage(5, getSpeechAnalysis());
       }
+      if (speakerLabeling_ != null) {
+        output.writeMessage(6, getSpeakerLabeling());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17881,6 +17962,10 @@ public final class Stt {
       if (speechAnalysis_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSpeechAnalysis());
+      }
+      if (speakerLabeling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSpeakerLabeling());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17911,6 +17996,11 @@ public final class Stt {
       if (hasSpeechAnalysis()) {
         if (!getSpeechAnalysis()
             .equals(other.getSpeechAnalysis())) return false;
+      }
+      if (hasSpeakerLabeling() != other.hasSpeakerLabeling()) return false;
+      if (hasSpeakerLabeling()) {
+        if (!getSpeakerLabeling()
+            .equals(other.getSpeakerLabeling())) return false;
       }
       if (!getAudioSourceCase().equals(other.getAudioSourceCase())) return false;
       switch (audioSourceCase_) {
@@ -17947,6 +18037,10 @@ public final class Stt {
       if (hasSpeechAnalysis()) {
         hash = (37 * hash) + SPEECH_ANALYSIS_FIELD_NUMBER;
         hash = (53 * hash) + getSpeechAnalysis().hashCode();
+      }
+      if (hasSpeakerLabeling()) {
+        hash = (37 * hash) + SPEAKER_LABELING_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeakerLabeling().hashCode();
       }
       switch (audioSourceCase_) {
         case 1:
@@ -18111,6 +18205,12 @@ public final class Stt {
           speechAnalysis_ = null;
           speechAnalysisBuilder_ = null;
         }
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = null;
+        } else {
+          speakerLabeling_ = null;
+          speakerLabelingBuilder_ = null;
+        }
         audioSourceCase_ = 0;
         audioSource_ = null;
         return this;
@@ -18159,6 +18259,11 @@ public final class Stt {
           result.speechAnalysis_ = speechAnalysis_;
         } else {
           result.speechAnalysis_ = speechAnalysisBuilder_.build();
+        }
+        if (speakerLabelingBuilder_ == null) {
+          result.speakerLabeling_ = speakerLabeling_;
+        } else {
+          result.speakerLabeling_ = speakerLabelingBuilder_.build();
         }
         result.audioSourceCase_ = audioSourceCase_;
         onBuilt();
@@ -18217,6 +18322,9 @@ public final class Stt {
         }
         if (other.hasSpeechAnalysis()) {
           mergeSpeechAnalysis(other.getSpeechAnalysis());
+        }
+        if (other.hasSpeakerLabeling()) {
+          mergeSpeakerLabeling(other.getSpeakerLabeling());
         }
         switch (other.getAudioSourceCase()) {
           case CONTENT: {
@@ -18921,6 +19029,161 @@ public final class Stt {
           speechAnalysis_ = null;
         }
         return speechAnalysisBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions speakerLabeling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder> speakerLabelingBuilder_;
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       * @return Whether the speakerLabeling field is set.
+       */
+      public boolean hasSpeakerLabeling() {
+        return speakerLabelingBuilder_ != null || speakerLabeling_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       * @return The speakerLabeling.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling() {
+        if (speakerLabelingBuilder_ == null) {
+          return speakerLabeling_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+        } else {
+          return speakerLabelingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public Builder setSpeakerLabeling(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions value) {
+        if (speakerLabelingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          speakerLabeling_ = value;
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public Builder setSpeakerLabeling(
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder builderForValue) {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = builderForValue.build();
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public Builder mergeSpeakerLabeling(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions value) {
+        if (speakerLabelingBuilder_ == null) {
+          if (speakerLabeling_ != null) {
+            speakerLabeling_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.newBuilder(speakerLabeling_).mergeFrom(value).buildPartial();
+          } else {
+            speakerLabeling_ = value;
+          }
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public Builder clearSpeakerLabeling() {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = null;
+          onChanged();
+        } else {
+          speakerLabeling_ = null;
+          speakerLabelingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder getSpeakerLabelingBuilder() {
+        
+        onChanged();
+        return getSpeakerLabelingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder() {
+        if (speakerLabelingBuilder_ != null) {
+          return speakerLabelingBuilder_.getMessageOrBuilder();
+        } else {
+          return speakerLabeling_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder> 
+          getSpeakerLabelingFieldBuilder() {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabelingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder>(
+                  getSpeakerLabeling(),
+                  getParentForChildren(),
+                  isClean());
+          speakerLabeling_ = null;
+        }
+        return speakerLabelingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -44603,118 +44866,120 @@ public final class Stt {
       "eechkit.stt.v3.AudioChunkH\000\0227\n\rsilence_c" +
       "hunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceChu" +
       "nkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.Eou" +
-      "H\000B\007\n\005Event\"\237\002\n\024RecognizeFileRequest\022\021\n\007" +
+      "H\000B\007\n\005Event\"\343\002\n\024RecognizeFileRequest\022\021\n\007" +
       "content\030\001 \001(\014H\000\022\r\n\003uri\030\002 \001(\tH\000\022D\n\021recogn" +
       "ition_model\030\003 \001(\0132).speechkit.stt.v3.Rec" +
       "ognitionModelOptions\022N\n\026recognition_clas" +
       "sifier\030\004 \001(\0132..speechkit.stt.v3.Recognit" +
       "ionClassifierOptions\022@\n\017speech_analysis\030" +
       "\005 \001(\0132\'.speechkit.stt.v3.SpeechAnalysisO" +
-      "ptionsB\r\n\013AudioSource\"@\n\004Word\022\014\n\004text\030\001 " +
-      "\001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_time_m" +
-      "s\030\003 \001(\003\"@\n\022LanguageEstimation\022\025\n\rlanguag" +
-      "e_code\030\001 \001(\t\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Al" +
-      "ternative\022%\n\005words\030\001 \003(\0132\026.speechkit.stt" +
-      ".v3.Word\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_time_ms\030" +
-      "\003 \001(\003\022\023\n\013end_time_ms\030\004 \001(\003\022\022\n\nconfidence" +
-      "\030\005 \001(\001\0227\n\tlanguages\030\006 \003(\0132$.speechkit.st" +
-      "t.v3.LanguageEstimation\"\034\n\tEouUpdate\022\017\n\007" +
-      "time_ms\030\002 \001(\003\"a\n\021AlternativeUpdate\0223\n\014al" +
-      "ternatives\030\001 \003(\0132\035.speechkit.stt.v3.Alte" +
-      "rnative\022\027\n\013channel_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014Aud" +
-      "ioCursors\022\030\n\020received_data_ms\030\001 \001(\003\022\025\n\rr" +
-      "eset_time_ms\030\002 \001(\003\022\027\n\017partial_time_ms\030\003 " +
-      "\001(\003\022\025\n\rfinal_time_ms\030\004 \001(\003\022\023\n\013final_inde" +
-      "x\030\005 \001(\003\022\023\n\013eou_time_ms\030\006 \001(\003\"n\n\017FinalRef" +
-      "inement\022\023\n\013final_index\030\001 \001(\003\022>\n\017normaliz" +
-      "ed_text\030\002 \001(\0132#.speechkit.stt.v3.Alterna" +
-      "tiveUpdateH\000B\006\n\004Type\"L\n\nStatusCode\022-\n\tco" +
-      "de_type\030\001 \001(\0162\032.speechkit.stt.v3.CodeTyp" +
-      "e\022\017\n\007message\030\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uui" +
-      "d\030\001 \001(\t\022\027\n\017user_request_id\030\002 \001(\t\"K\n\017Phra" +
-      "seHighlight\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_" +
-      "ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"?\n\032Recogni" +
-      "tionClassifierLabel\022\r\n\005label\030\001 \001(\t\022\022\n\nco" +
-      "nfidence\030\002 \001(\001\"\246\001\n\033RecognitionClassifier" +
-      "Result\022\022\n\nclassifier\030\001 \001(\t\0225\n\nhighlights" +
-      "\030\002 \003(\0132!.speechkit.stt.v3.PhraseHighligh" +
-      "t\022<\n\006labels\030\003 \003(\0132,.speechkit.stt.v3.Rec" +
-      "ognitionClassifierLabel\"\307\002\n\033RecognitionC" +
-      "lassifierUpdate\022M\n\013window_type\030\001 \001(\01628.s" +
-      "peechkit.stt.v3.RecognitionClassifierUpd" +
-      "ate.WindowType\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n" +
-      "\013end_time_ms\030\003 \001(\003\022H\n\021classifier_result\030" +
-      "\004 \001(\0132-.speechkit.stt.v3.RecognitionClas" +
-      "sifierResult\"c\n\nWindowType\022\037\n\027WINDOW_TYP" +
-      "E_UNSPECIFIED\020\000\032\002\010\001\022\022\n\016LAST_UTTERANCE\020\001\022" +
-      "\016\n\nLAST_FINAL\020\002\022\020\n\014LAST_PARTIAL\020\003\"\273\001\n\025De" +
-      "scriptiveStatistics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030" +
-      "\002 \001(\001\022\014\n\004mean\030\003 \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquan" +
-      "tiles\030\005 \003(\01320.speechkit.stt.v3.Descripti" +
-      "veStatistics.Quantile\032(\n\010Quantile\022\r\n\005lev" +
-      "el\030\001 \001(\001\022\r\n\005value\030\002 \001(\001\"D\n\026AudioSegmentB" +
-      "oundaries\022\025\n\rstart_time_ms\030\001 \001(\003\022\023\n\013end_" +
-      "time_ms\030\002 \001(\003\"\207\006\n\017SpeakerAnalysis\022\023\n\013spe" +
-      "aker_tag\030\001 \001(\t\022A\n\013window_type\030\002 \001(\0162,.sp" +
-      "eechkit.stt.v3.SpeakerAnalysis.WindowTyp" +
-      "e\022C\n\021speech_boundaries\030\003 \001(\0132(.speechkit" +
-      ".stt.v3.AudioSegmentBoundaries\022\027\n\017total_" +
-      "speech_ms\030\004 \001(\003\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n" +
-      "\020total_silence_ms\030\006 \001(\003\022\025\n\rsilence_ratio" +
-      "\030\007 \001(\001\022\023\n\013words_count\030\010 \001(\003\022\025\n\rletters_c" +
-      "ount\030\t \001(\003\022A\n\020words_per_second\030\n \001(\0132\'.s" +
-      "peechkit.stt.v3.DescriptiveStatistics\022C\n" +
-      "\022letters_per_second\030\013 \001(\0132\'.speechkit.st" +
-      "t.v3.DescriptiveStatistics\022D\n\023words_per_" +
-      "utterance\030\014 \001(\0132\'.speechkit.stt.v3.Descr" +
-      "iptiveStatistics\022F\n\025letters_per_utteranc" +
-      "e\030\r \001(\0132\'.speechkit.stt.v3.DescriptiveSt" +
-      "atistics\022\027\n\017utterance_count\030\016 \001(\003\022N\n\035utt" +
-      "erance_duration_estimation\030\017 \001(\0132\'.speec" +
-      "hkit.stt.v3.DescriptiveStatistics\"L\n\nWin" +
-      "dowType\022\037\n\027WINDOW_TYPE_UNSPECIFIED\020\000\032\002\010\001" +
-      "\022\t\n\005TOTAL\020\001\022\022\n\016LAST_UTTERANCE\020\002\"\205\006\n\024Conv" +
-      "ersationAnalysis\022I\n\027conversation_boundar" +
-      "ies\030\001 \001(\0132(.speechkit.stt.v3.AudioSegmen" +
-      "tBoundaries\022.\n&total_simultaneous_silenc" +
-      "e_duration_ms\030\002 \001(\003\022(\n total_simultaneou" +
-      "s_silence_ratio\030\003 \001(\001\022Y\n(simultaneous_si" +
-      "lence_duration_estimation\030\004 \001(\0132\'.speech" +
-      "kit.stt.v3.DescriptiveStatistics\022-\n%tota" +
-      "l_simultaneous_speech_duration_ms\030\005 \001(\003\022" +
-      "\'\n\037total_simultaneous_speech_ratio\030\006 \001(\001" +
-      "\022X\n\'simultaneous_speech_duration_estimat" +
-      "ion\030\007 \001(\0132\'.speechkit.stt.v3.Descriptive" +
-      "Statistics\022W\n\022speaker_interrupts\030\010 \003(\0132;" +
-      ".speechkit.stt.v3.ConversationAnalysis.I" +
-      "nterruptsEvaluation\022 \n\030total_speech_dura" +
-      "tion_ms\030\t \001(\003\022\032\n\022total_speech_ratio\030\n \001(" +
-      "\001\032\243\001\n\024InterruptsEvaluation\022\023\n\013speaker_ta" +
-      "g\030\001 \001(\t\022\030\n\020interrupts_count\030\002 \001(\003\022\036\n\026int" +
-      "errupts_duration_ms\030\003 \001(\003\022<\n\ninterrupts\030" +
-      "\004 \003(\0132(.speechkit.stt.v3.AudioSegmentBou" +
-      "ndaries\"\245\005\n\021StreamingResponse\0223\n\014session" +
-      "_uuid\030\001 \001(\0132\035.speechkit.stt.v3.SessionUu" +
-      "id\0225\n\raudio_cursors\030\002 \001(\0132\036.speechkit.st" +
-      "t.v3.AudioCursors\022\035\n\025response_wall_time_" +
-      "ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit.st" +
-      "t.v3.AlternativeUpdateH\000\0224\n\005final\030\005 \001(\0132" +
-      "#.speechkit.stt.v3.AlternativeUpdateH\000\0221" +
-      "\n\neou_update\030\006 \001(\0132\033.speechkit.stt.v3.Eo" +
-      "uUpdateH\000\022=\n\020final_refinement\030\007 \001(\0132!.sp" +
-      "eechkit.stt.v3.FinalRefinementH\000\0223\n\013stat" +
-      "us_code\030\010 \001(\0132\034.speechkit.stt.v3.StatusC" +
-      "odeH\000\022J\n\021classifier_update\030\n \001(\0132-.speec" +
-      "hkit.stt.v3.RecognitionClassifierUpdateH" +
-      "\000\022=\n\020speaker_analysis\030\013 \001(\0132!.speechkit." +
-      "stt.v3.SpeakerAnalysisH\000\022G\n\025conversation" +
-      "_analysis\030\014 \001(\0132&.speechkit.stt.v3.Conve" +
-      "rsationAnalysisH\000\022\023\n\013channel_tag\030\t \001(\tB\007" +
-      "\n\005Event*O\n\010CodeType\022\035\n\025CODE_TYPE_UNSPECI" +
-      "FIED\020\000\032\002\010\001\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006" +
-      "CLOSED\020\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/ai/stt/v3;sttb\006proto3"
+      "ptions\022B\n\020speaker_labeling\030\006 \001(\0132(.speec" +
+      "hkit.stt.v3.SpeakerLabelingOptionsB\r\n\013Au" +
+      "dioSource\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rstart" +
+      "_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@\n\022L" +
+      "anguageEstimation\022\025\n\rlanguage_code\030\001 \001(\t" +
+      "\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternative\022%\n" +
+      "\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word\022\014\n\004" +
+      "text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end" +
+      "_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tla" +
+      "nguages\030\006 \003(\0132$.speechkit.stt.v3.Languag" +
+      "eEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(" +
+      "\003\"a\n\021AlternativeUpdate\0223\n\014alternatives\030\001" +
+      " \003(\0132\035.speechkit.stt.v3.Alternative\022\027\n\013c" +
+      "hannel_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n" +
+      "\020received_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms" +
+      "\030\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal" +
+      "_time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013e" +
+      "ou_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013f" +
+      "inal_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(" +
+      "\0132#.speechkit.stt.v3.AlternativeUpdateH\000" +
+      "B\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(" +
+      "\0162\032.speechkit.stt.v3.CodeType\022\017\n\007message" +
+      "\030\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017u" +
+      "ser_request_id\030\002 \001(\t\"K\n\017PhraseHighlight\022" +
+      "\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013" +
+      "end_time_ms\030\003 \001(\003\"?\n\032RecognitionClassifi" +
+      "erLabel\022\r\n\005label\030\001 \001(\t\022\022\n\nconfidence\030\002 \001" +
+      "(\001\"\246\001\n\033RecognitionClassifierResult\022\022\n\ncl" +
+      "assifier\030\001 \001(\t\0225\n\nhighlights\030\002 \003(\0132!.spe" +
+      "echkit.stt.v3.PhraseHighlight\022<\n\006labels\030" +
+      "\003 \003(\0132,.speechkit.stt.v3.RecognitionClas" +
+      "sifierLabel\"\307\002\n\033RecognitionClassifierUpd" +
+      "ate\022M\n\013window_type\030\001 \001(\01628.speechkit.stt" +
+      ".v3.RecognitionClassifierUpdate.WindowTy" +
+      "pe\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_time_ms" +
+      "\030\003 \001(\003\022H\n\021classifier_result\030\004 \001(\0132-.spee" +
+      "chkit.stt.v3.RecognitionClassifierResult" +
+      "\"c\n\nWindowType\022\037\n\027WINDOW_TYPE_UNSPECIFIE" +
+      "D\020\000\032\002\010\001\022\022\n\016LAST_UTTERANCE\020\001\022\016\n\nLAST_FINA" +
+      "L\020\002\022\020\n\014LAST_PARTIAL\020\003\"\273\001\n\025DescriptiveSta" +
+      "tistics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\014\n\004mea" +
+      "n\030\003 \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquantiles\030\005 \003(\0132" +
+      "0.speechkit.stt.v3.DescriptiveStatistics" +
+      ".Quantile\032(\n\010Quantile\022\r\n\005level\030\001 \001(\001\022\r\n\005" +
+      "value\030\002 \001(\001\"D\n\026AudioSegmentBoundaries\022\025\n" +
+      "\rstart_time_ms\030\001 \001(\003\022\023\n\013end_time_ms\030\002 \001(" +
+      "\003\"\207\006\n\017SpeakerAnalysis\022\023\n\013speaker_tag\030\001 \001" +
+      "(\t\022A\n\013window_type\030\002 \001(\0162,.speechkit.stt." +
+      "v3.SpeakerAnalysis.WindowType\022C\n\021speech_" +
+      "boundaries\030\003 \001(\0132(.speechkit.stt.v3.Audi" +
+      "oSegmentBoundaries\022\027\n\017total_speech_ms\030\004 " +
+      "\001(\003\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n\020total_silen" +
+      "ce_ms\030\006 \001(\003\022\025\n\rsilence_ratio\030\007 \001(\001\022\023\n\013wo" +
+      "rds_count\030\010 \001(\003\022\025\n\rletters_count\030\t \001(\003\022A" +
+      "\n\020words_per_second\030\n \001(\0132\'.speechkit.stt" +
+      ".v3.DescriptiveStatistics\022C\n\022letters_per" +
+      "_second\030\013 \001(\0132\'.speechkit.stt.v3.Descrip" +
+      "tiveStatistics\022D\n\023words_per_utterance\030\014 " +
+      "\001(\0132\'.speechkit.stt.v3.DescriptiveStatis" +
+      "tics\022F\n\025letters_per_utterance\030\r \001(\0132\'.sp" +
+      "eechkit.stt.v3.DescriptiveStatistics\022\027\n\017" +
+      "utterance_count\030\016 \001(\003\022N\n\035utterance_durat" +
+      "ion_estimation\030\017 \001(\0132\'.speechkit.stt.v3." +
+      "DescriptiveStatistics\"L\n\nWindowType\022\037\n\027W" +
+      "INDOW_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\t\n\005TOTAL\020\001\022" +
+      "\022\n\016LAST_UTTERANCE\020\002\"\205\006\n\024ConversationAnal" +
+      "ysis\022I\n\027conversation_boundaries\030\001 \001(\0132(." +
+      "speechkit.stt.v3.AudioSegmentBoundaries\022" +
+      ".\n&total_simultaneous_silence_duration_m" +
+      "s\030\002 \001(\003\022(\n total_simultaneous_silence_ra" +
+      "tio\030\003 \001(\001\022Y\n(simultaneous_silence_durati" +
+      "on_estimation\030\004 \001(\0132\'.speechkit.stt.v3.D" +
+      "escriptiveStatistics\022-\n%total_simultaneo" +
+      "us_speech_duration_ms\030\005 \001(\003\022\'\n\037total_sim" +
+      "ultaneous_speech_ratio\030\006 \001(\001\022X\n\'simultan" +
+      "eous_speech_duration_estimation\030\007 \001(\0132\'." +
+      "speechkit.stt.v3.DescriptiveStatistics\022W" +
+      "\n\022speaker_interrupts\030\010 \003(\0132;.speechkit.s" +
+      "tt.v3.ConversationAnalysis.InterruptsEva" +
+      "luation\022 \n\030total_speech_duration_ms\030\t \001(" +
+      "\003\022\032\n\022total_speech_ratio\030\n \001(\001\032\243\001\n\024Interr" +
+      "uptsEvaluation\022\023\n\013speaker_tag\030\001 \001(\t\022\030\n\020i" +
+      "nterrupts_count\030\002 \001(\003\022\036\n\026interrupts_dura" +
+      "tion_ms\030\003 \001(\003\022<\n\ninterrupts\030\004 \003(\0132(.spee" +
+      "chkit.stt.v3.AudioSegmentBoundaries\"\245\005\n\021" +
+      "StreamingResponse\0223\n\014session_uuid\030\001 \001(\0132" +
+      "\035.speechkit.stt.v3.SessionUuid\0225\n\raudio_" +
+      "cursors\030\002 \001(\0132\036.speechkit.stt.v3.AudioCu" +
+      "rsors\022\035\n\025response_wall_time_ms\030\003 \001(\003\0226\n\007" +
+      "partial\030\004 \001(\0132#.speechkit.stt.v3.Alterna" +
+      "tiveUpdateH\000\0224\n\005final\030\005 \001(\0132#.speechkit." +
+      "stt.v3.AlternativeUpdateH\000\0221\n\neou_update" +
+      "\030\006 \001(\0132\033.speechkit.stt.v3.EouUpdateH\000\022=\n" +
+      "\020final_refinement\030\007 \001(\0132!.speechkit.stt." +
+      "v3.FinalRefinementH\000\0223\n\013status_code\030\010 \001(" +
+      "\0132\034.speechkit.stt.v3.StatusCodeH\000\022J\n\021cla" +
+      "ssifier_update\030\n \001(\0132-.speechkit.stt.v3." +
+      "RecognitionClassifierUpdateH\000\022=\n\020speaker" +
+      "_analysis\030\013 \001(\0132!.speechkit.stt.v3.Speak" +
+      "erAnalysisH\000\022G\n\025conversation_analysis\030\014 " +
+      "\001(\0132&.speechkit.stt.v3.ConversationAnaly" +
+      "sisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005Event*O\n\010C" +
+      "odeType\022\035\n\025CODE_TYPE_UNSPECIFIED\020\000\032\002\010\001\022\013" +
+      "\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032" +
+      "yandex.cloud.api.ai.stt.v3Z>github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ai/" +
+      "stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -44833,7 +45098,7 @@ public final class Stt {
     internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor,
-        new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "AudioSource", });
+        new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", "AudioSource", });
     internal_static_speechkit_stt_v3_Word_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_Word_fieldAccessorTable = new
