@@ -17727,6 +17727,42 @@ public final class BucketOuterClass {
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentTransitionOrBuilder getNoncurrentTransitionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     * @return Whether the noncurrentDeleteMarkers field is set.
+     */
+    boolean hasNoncurrentDeleteMarkers();
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     * @return The noncurrentDeleteMarkers.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getNoncurrentDeleteMarkers();
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder getNoncurrentDeleteMarkersOrBuilder();
   }
   /**
    * <pre>
@@ -17867,6 +17903,19 @@ public final class BucketOuterClass {
               }
               noncurrentTransitions_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentTransition.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder subBuilder = null;
+              if (noncurrentDeleteMarkers_ != null) {
+                subBuilder = noncurrentDeleteMarkers_.toBuilder();
+              }
+              noncurrentDeleteMarkers_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(noncurrentDeleteMarkers_);
+                noncurrentDeleteMarkers_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -18598,6 +18647,702 @@ public final class BucketOuterClass {
 
       @java.lang.Override
       public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.AfterDays getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface NoncurrentDeleteMarkersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       * @return Whether the noncurrentDays field is set.
+       */
+      boolean hasNoncurrentDays();
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       * @return The noncurrentDays.
+       */
+      com.google.protobuf.Int64Value getNoncurrentDays();
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getNoncurrentDaysOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers}
+     */
+    public static final class NoncurrentDeleteMarkers extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers)
+        NoncurrentDeleteMarkersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use NoncurrentDeleteMarkers.newBuilder() to construct.
+      private NoncurrentDeleteMarkers(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private NoncurrentDeleteMarkers() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new NoncurrentDeleteMarkers();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private NoncurrentDeleteMarkers(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (noncurrentDays_ != null) {
+                  subBuilder = noncurrentDays_.toBuilder();
+                }
+                noncurrentDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(noncurrentDays_);
+                  noncurrentDays_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.class, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder.class);
+      }
+
+      public static final int NONCURRENT_DAYS_FIELD_NUMBER = 1;
+      private com.google.protobuf.Int64Value noncurrentDays_;
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       * @return Whether the noncurrentDays field is set.
+       */
+      @java.lang.Override
+      public boolean hasNoncurrentDays() {
+        return noncurrentDays_ != null;
+      }
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       * @return The noncurrentDays.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getNoncurrentDays() {
+        return noncurrentDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : noncurrentDays_;
+      }
+      /**
+       * <pre>
+       * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+       * the delete marker expires.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getNoncurrentDaysOrBuilder() {
+        return getNoncurrentDays();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (noncurrentDays_ != null) {
+          output.writeMessage(1, getNoncurrentDays());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (noncurrentDays_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getNoncurrentDays());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers other = (yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers) obj;
+
+        if (hasNoncurrentDays() != other.hasNoncurrentDays()) return false;
+        if (hasNoncurrentDays()) {
+          if (!getNoncurrentDays()
+              .equals(other.getNoncurrentDays())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasNoncurrentDays()) {
+          hash = (37 * hash) + NONCURRENT_DAYS_FIELD_NUMBER;
+          hash = (53 * hash) + getNoncurrentDays().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers)
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.class, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (noncurrentDaysBuilder_ == null) {
+            noncurrentDays_ = null;
+          } else {
+            noncurrentDays_ = null;
+            noncurrentDaysBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getDefaultInstanceForType() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers build() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers buildPartial() {
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers result = new yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers(this);
+          if (noncurrentDaysBuilder_ == null) {
+            result.noncurrentDays_ = noncurrentDays_;
+          } else {
+            result.noncurrentDays_ = noncurrentDaysBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers) {
+            return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers other) {
+          if (other == yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.getDefaultInstance()) return this;
+          if (other.hasNoncurrentDays()) {
+            mergeNoncurrentDays(other.getNoncurrentDays());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value noncurrentDays_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> noncurrentDaysBuilder_;
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         * @return Whether the noncurrentDays field is set.
+         */
+        public boolean hasNoncurrentDays() {
+          return noncurrentDaysBuilder_ != null || noncurrentDays_ != null;
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         * @return The noncurrentDays.
+         */
+        public com.google.protobuf.Int64Value getNoncurrentDays() {
+          if (noncurrentDaysBuilder_ == null) {
+            return noncurrentDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : noncurrentDays_;
+          } else {
+            return noncurrentDaysBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public Builder setNoncurrentDays(com.google.protobuf.Int64Value value) {
+          if (noncurrentDaysBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            noncurrentDays_ = value;
+            onChanged();
+          } else {
+            noncurrentDaysBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public Builder setNoncurrentDays(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (noncurrentDaysBuilder_ == null) {
+            noncurrentDays_ = builderForValue.build();
+            onChanged();
+          } else {
+            noncurrentDaysBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public Builder mergeNoncurrentDays(com.google.protobuf.Int64Value value) {
+          if (noncurrentDaysBuilder_ == null) {
+            if (noncurrentDays_ != null) {
+              noncurrentDays_ =
+                com.google.protobuf.Int64Value.newBuilder(noncurrentDays_).mergeFrom(value).buildPartial();
+            } else {
+              noncurrentDays_ = value;
+            }
+            onChanged();
+          } else {
+            noncurrentDaysBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public Builder clearNoncurrentDays() {
+          if (noncurrentDaysBuilder_ == null) {
+            noncurrentDays_ = null;
+            onChanged();
+          } else {
+            noncurrentDays_ = null;
+            noncurrentDaysBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getNoncurrentDaysBuilder() {
+          
+          onChanged();
+          return getNoncurrentDaysFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getNoncurrentDaysOrBuilder() {
+          if (noncurrentDaysBuilder_ != null) {
+            return noncurrentDaysBuilder_.getMessageOrBuilder();
+          } else {
+            return noncurrentDays_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : noncurrentDays_;
+          }
+        }
+        /**
+         * <pre>
+         * Time period, in number of days since the version of a delete marker was classified as non-current, after which
+         * the delete marker expires.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value noncurrent_days = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getNoncurrentDaysFieldBuilder() {
+          if (noncurrentDaysBuilder_ == null) {
+            noncurrentDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getNoncurrentDays(),
+                    getParentForChildren(),
+                    isClean());
+            noncurrentDays_ = null;
+          }
+          return noncurrentDaysBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers)
+      private static final yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers();
+      }
+
+      public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<NoncurrentDeleteMarkers>
+          PARSER = new com.google.protobuf.AbstractParser<NoncurrentDeleteMarkers>() {
+        @java.lang.Override
+        public NoncurrentDeleteMarkers parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new NoncurrentDeleteMarkers(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<NoncurrentDeleteMarkers> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<NoncurrentDeleteMarkers> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -26150,6 +26895,53 @@ public final class BucketOuterClass {
       return noncurrentTransitions_.get(index);
     }
 
+    public static final int NONCURRENT_DELETE_MARKERS_FIELD_NUMBER = 9;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers noncurrentDeleteMarkers_;
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     * @return Whether the noncurrentDeleteMarkers field is set.
+     */
+    @java.lang.Override
+    public boolean hasNoncurrentDeleteMarkers() {
+      return noncurrentDeleteMarkers_ != null;
+    }
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     * @return The noncurrentDeleteMarkers.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getNoncurrentDeleteMarkers() {
+      return noncurrentDeleteMarkers_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.getDefaultInstance() : noncurrentDeleteMarkers_;
+    }
+    /**
+     * <pre>
+     * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+     * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+     * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+     * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder getNoncurrentDeleteMarkersOrBuilder() {
+      return getNoncurrentDeleteMarkers();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -26187,6 +26979,9 @@ public final class BucketOuterClass {
       }
       for (int i = 0; i < noncurrentTransitions_.size(); i++) {
         output.writeMessage(8, noncurrentTransitions_.get(i));
+      }
+      if (noncurrentDeleteMarkers_ != null) {
+        output.writeMessage(9, getNoncurrentDeleteMarkers());
       }
       unknownFields.writeTo(output);
     }
@@ -26228,6 +27023,10 @@ public final class BucketOuterClass {
       for (int i = 0; i < noncurrentTransitions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, noncurrentTransitions_.get(i));
+      }
+      if (noncurrentDeleteMarkers_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getNoncurrentDeleteMarkers());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -26275,6 +27074,11 @@ public final class BucketOuterClass {
       }
       if (!getNoncurrentTransitionsList()
           .equals(other.getNoncurrentTransitionsList())) return false;
+      if (hasNoncurrentDeleteMarkers() != other.hasNoncurrentDeleteMarkers()) return false;
+      if (hasNoncurrentDeleteMarkers()) {
+        if (!getNoncurrentDeleteMarkers()
+            .equals(other.getNoncurrentDeleteMarkers())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -26316,6 +27120,10 @@ public final class BucketOuterClass {
       if (getNoncurrentTransitionsCount() > 0) {
         hash = (37 * hash) + NONCURRENT_TRANSITIONS_FIELD_NUMBER;
         hash = (53 * hash) + getNoncurrentTransitionsList().hashCode();
+      }
+      if (hasNoncurrentDeleteMarkers()) {
+        hash = (37 * hash) + NONCURRENT_DELETE_MARKERS_FIELD_NUMBER;
+        hash = (53 * hash) + getNoncurrentDeleteMarkers().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -26501,6 +27309,12 @@ public final class BucketOuterClass {
         } else {
           noncurrentTransitionsBuilder_.clear();
         }
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          noncurrentDeleteMarkers_ = null;
+        } else {
+          noncurrentDeleteMarkers_ = null;
+          noncurrentDeleteMarkersBuilder_ = null;
+        }
         return this;
       }
 
@@ -26571,6 +27385,11 @@ public final class BucketOuterClass {
           result.noncurrentTransitions_ = noncurrentTransitions_;
         } else {
           result.noncurrentTransitions_ = noncurrentTransitionsBuilder_.build();
+        }
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          result.noncurrentDeleteMarkers_ = noncurrentDeleteMarkers_;
+        } else {
+          result.noncurrentDeleteMarkers_ = noncurrentDeleteMarkersBuilder_.build();
         }
         onBuilt();
         return result;
@@ -26689,6 +27508,9 @@ public final class BucketOuterClass {
               noncurrentTransitionsBuilder_.addAllMessages(other.noncurrentTransitions_);
             }
           }
+        }
+        if (other.hasNoncurrentDeleteMarkers()) {
+          mergeNoncurrentDeleteMarkers(other.getNoncurrentDeleteMarkers());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -28394,6 +29216,188 @@ public final class BucketOuterClass {
           noncurrentTransitions_ = null;
         }
         return noncurrentTransitionsBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers noncurrentDeleteMarkers_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder> noncurrentDeleteMarkersBuilder_;
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       * @return Whether the noncurrentDeleteMarkers field is set.
+       */
+      public boolean hasNoncurrentDeleteMarkers() {
+        return noncurrentDeleteMarkersBuilder_ != null || noncurrentDeleteMarkers_ != null;
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       * @return The noncurrentDeleteMarkers.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers getNoncurrentDeleteMarkers() {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          return noncurrentDeleteMarkers_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.getDefaultInstance() : noncurrentDeleteMarkers_;
+        } else {
+          return noncurrentDeleteMarkersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public Builder setNoncurrentDeleteMarkers(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers value) {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          noncurrentDeleteMarkers_ = value;
+          onChanged();
+        } else {
+          noncurrentDeleteMarkersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public Builder setNoncurrentDeleteMarkers(
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder builderForValue) {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          noncurrentDeleteMarkers_ = builderForValue.build();
+          onChanged();
+        } else {
+          noncurrentDeleteMarkersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public Builder mergeNoncurrentDeleteMarkers(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers value) {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          if (noncurrentDeleteMarkers_ != null) {
+            noncurrentDeleteMarkers_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.newBuilder(noncurrentDeleteMarkers_).mergeFrom(value).buildPartial();
+          } else {
+            noncurrentDeleteMarkers_ = value;
+          }
+          onChanged();
+        } else {
+          noncurrentDeleteMarkersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public Builder clearNoncurrentDeleteMarkers() {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          noncurrentDeleteMarkers_ = null;
+          onChanged();
+        } else {
+          noncurrentDeleteMarkers_ = null;
+          noncurrentDeleteMarkersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder getNoncurrentDeleteMarkersBuilder() {
+        
+        onChanged();
+        return getNoncurrentDeleteMarkersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder getNoncurrentDeleteMarkersOrBuilder() {
+        if (noncurrentDeleteMarkersBuilder_ != null) {
+          return noncurrentDeleteMarkersBuilder_.getMessageOrBuilder();
+        } else {
+          return noncurrentDeleteMarkers_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.getDefaultInstance() : noncurrentDeleteMarkers_;
+        }
+      }
+      /**
+       * <pre>
+       * Expiration rule for non-current delete markers of an objects in a bucket with versioning
+       * enabled ([Bucket.versioning] is `VERSIONING_ENABLED`) or suspended (`VERSIONING_SUSPENDED`).
+       * Works in the same way as noncurrent_expiration rule, but only for delete markers.
+       * At expiration, the non-current delete marker of the object is deleted and cannot be recovered.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.NoncurrentDeleteMarkers noncurrent_delete_markers = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder> 
+          getNoncurrentDeleteMarkersFieldBuilder() {
+        if (noncurrentDeleteMarkersBuilder_ == null) {
+          noncurrentDeleteMarkersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkers.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.NoncurrentDeleteMarkersOrBuilder>(
+                  getNoncurrentDeleteMarkers(),
+                  getParentForChildren(),
+                  isClean());
+          noncurrentDeleteMarkers_ = null;
+        }
+        return noncurrentDeleteMarkersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -41399,6 +42403,11 @@ public final class BucketOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_LifecycleRule_AfterDays_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentExpiration_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -41557,7 +42566,7 @@ public final class BucketOuterClass {
       "irect\030\002 \001(\01321.yandex.cloud.storage.v1.We" +
       "bsiteSettings.Redirect\"K\n\010Protocol\022\030\n\024PR" +
       "OTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022" +
-      "\022\n\016PROTOCOL_HTTPS\020\002\"\252\014\n\rLifecycleRule\022(\n" +
+      "\022\n\016PROTOCOL_HTTPS\020\002\"\336\r\n\rLifecycleRule\022(\n" +
       "\002id\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
       "\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yande" +
       "x.cloud.storage.v1.LifecycleRule.RuleFil" +
@@ -41571,91 +42580,96 @@ public final class BucketOuterClass {
       "cloud.storage.v1.LifecycleRule.Noncurren" +
       "tExpiration\022[\n\026noncurrent_transitions\030\010 " +
       "\003(\0132;.yandex.cloud.storage.v1.LifecycleR" +
-      "ule.NoncurrentTransition\032G\n\tAfterDays\022:\n" +
-      "\025days_after_expiration\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\032L\n\024NoncurrentExpiratio" +
-      "n\0224\n\017noncurrent_days\030\001 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\032i\n\024NoncurrentTransition\022" +
-      "4\n\017noncurrent_days\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022\033\n\rstorage_class\030\002 \001(\tB\004\350\307" +
-      "1\001\032~\n\nTransition\022(\n\004date\030\001 \001(\0132\032.google." +
-      "protobuf.Timestamp\022)\n\004days\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022\033\n\rstorage_class\030\004" +
-      " \001(\tB\004\350\3071\001\032\243\001\n\nExpiration\022(\n\004date\030\001 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022)\n\004days\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022@\n\034expire" +
-      "d_object_delete_marker\030\003 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\032\315\003\n\nRuleFilter\022\016\n\006prefi" +
-      "x\030\001 \001(\t\022=\n\030object_size_greater_than\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022:\n\025object" +
-      "_size_less_than\030\003 \001(\0132\033.google.protobuf." +
-      "Int64Value\022)\n\003tag\030\004 \001(\0132\034.yandex.cloud.s" +
-      "torage.v1.Tag\022K\n\014and_operator\030\005 \001(\01325.ya" +
-      "ndex.cloud.storage.v1.LifecycleRule.Rule" +
-      "Filter.And\032\273\001\n\003And\022\016\n\006prefix\030\001 \001(\t\022=\n\030ob" +
-      "ject_size_greater_than\030\002 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022:\n\025object_size_less_th" +
-      "an\030\003 \001(\0132\033.google.protobuf.Int64Value\022)\n" +
-      "\003tag\030\004 \003(\0132\034.yandex.cloud.storage.v1.Tag" +
-      "\"\335\001\n\010Counters\022\032\n\022simple_object_size\030\001 \001(" +
-      "\003\022\033\n\023simple_object_count\030\002 \001(\003\022\032\n\022object" +
-      "s_parts_size\030\003 \001(\003\022\033\n\023objects_parts_coun" +
-      "t\030\004 \001(\003\022\036\n\026multipart_objects_size\030\005 \001(\003\022" +
-      "\037\n\027multipart_objects_count\030\006 \001(\003\022\036\n\026acti" +
-      "ve_multipart_count\030\007 \001(\003\"]\n\023OptionalSize" +
-      "ByClass\022\025\n\rstorage_class\030\001 \001(\t\022/\n\nclass_" +
-      "size\030\002 \001(\0132\033.google.protobuf.Int64Value\"" +
-      "8\n\013SizeByClass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n" +
-      "\nclass_size\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\r" +
-      "storage_class\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!." +
-      "yandex.cloud.storage.v1.Counters\"\252\004\n\013Buc" +
-      "ketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022\021\n\tused_si" +
-      "ze\030\003 \001(\003\022M\n\027storage_class_max_sizes\030\004 \003(" +
-      "\0132,.yandex.cloud.storage.v1.OptionalSize" +
-      "ByClass\022F\n\030storage_class_used_sizes\030\005 \003(" +
-      "\0132$.yandex.cloud.storage.v1.SizeByClass\022" +
-      "H\n\026storage_class_counters\030\006 \003(\0132(.yandex" +
-      ".cloud.storage.v1.CountersByClass\022;\n\025def" +
-      "ault_storage_class\030\007 \001(\0132\034.google.protob" +
-      "uf.StringValue\022M\n\026anonymous_access_flags" +
-      "\030\010 \001(\0132-.yandex.cloud.storage.v1.Anonymo" +
-      "usAccessFlags\022.\n\ncreated_at\030\t \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022.\n\nupdated_at\030\n \001(" +
-      "\0132\032.google.protobuf.Timestamp\"\301\003\n\013HTTPSC" +
-      "onfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_type\030\002 \001(\016" +
-      "2/.yandex.cloud.storage.v1.HTTPSConfig.S" +
-      "ourceType\022,\n\006issuer\030\003 \001(\0132\034.google.proto" +
-      "buf.StringValue\022-\n\007subject\030\004 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022\021\n\tdns_names\030\005 \003(" +
-      "\t\022.\n\nnot_before\030\006 \001(\0132\032.google.protobuf." +
-      "Timestamp\022-\n\tnot_after\030\007 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\026\n\016certificate_id\030\010 \001(\t" +
-      "\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_UNSPECIFIE" +
-      "D\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGED\020\001\022.\n*SOU" +
-      "RCE_TYPE_MANAGED_BY_CERTIFICATE_MANAGER\020" +
-      "\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001(\01624.yande" +
-      "x.cloud.storage.v1.ObjectLock.ObjectLock" +
-      "Status\022O\n\021default_retention\030\003 \001(\01324.yand" +
-      "ex.cloud.storage.v1.ObjectLock.DefaultRe" +
-      "tention\032\324\001\n\020DefaultRetention\022G\n\004mode\030\001 \001" +
-      "(\01629.yandex.cloud.storage.v1.ObjectLock." +
-      "DefaultRetention.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n" +
-      "\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFI" +
-      "ED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017MODE_COMPLI" +
-      "ANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020ObjectLockStat" +
-      "us\022\"\n\036OBJECT_LOCK_STATUS_UNSPECIFIED\020\000\022\037" +
-      "\n\033OBJECT_LOCK_STATUS_DISABLED\020\001\022\036\n\032OBJEC" +
-      "T_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEncryption\022A" +
-      "\n\005rules\030\001 \003(\01322.yandex.cloud.storage.v1." +
-      "Encryption.EncryptionRule\032B\n\016EncryptionR" +
-      "ule\022\031\n\021kms_master_key_id\030\001 \001(\t\022\025\n\rsse_al" +
-      "gorithm\030\002 \001(\t*s\n\nVersioning\022\032\n\026VERSIONIN" +
-      "G_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISABLED\020\001" +
-      "\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSIONING_S" +
-      "USPENDED\020\003Bb\n\033yandex.cloud.api.storage.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/storage/v1;storageb\006proto3"
+      "ule.NoncurrentTransition\022a\n\031noncurrent_d" +
+      "elete_markers\030\t \001(\0132>.yandex.cloud.stora" +
+      "ge.v1.LifecycleRule.NoncurrentDeleteMark" +
+      "ers\032G\n\tAfterDays\022:\n\025days_after_expiratio" +
+      "n\030\001 \001(\0132\033.google.protobuf.Int64Value\032O\n\027" +
+      "NoncurrentDeleteMarkers\0224\n\017noncurrent_da" +
+      "ys\030\001 \001(\0132\033.google.protobuf.Int64Value\032L\n" +
+      "\024NoncurrentExpiration\0224\n\017noncurrent_days" +
+      "\030\001 \001(\0132\033.google.protobuf.Int64Value\032i\n\024N" +
+      "oncurrentTransition\0224\n\017noncurrent_days\030\001" +
+      " \001(\0132\033.google.protobuf.Int64Value\022\033\n\rsto" +
+      "rage_class\030\002 \001(\tB\004\350\3071\001\032~\n\nTransition\022(\n\004" +
+      "date\030\001 \001(\0132\032.google.protobuf.Timestamp\022)" +
+      "\n\004days\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022\033\n\rstorage_class\030\004 \001(\tB\004\350\3071\001\032\243\001\n\nExpir" +
+      "ation\022(\n\004date\030\001 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022)\n\004days\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022@\n\034expired_object_delete_mark" +
+      "er\030\003 \001(\0132\032.google.protobuf.BoolValue\032\315\003\n" +
+      "\nRuleFilter\022\016\n\006prefix\030\001 \001(\t\022=\n\030object_si" +
+      "ze_greater_than\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022:\n\025object_size_less_than\030\003 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022)\n\003tag\030\004 " +
+      "\001(\0132\034.yandex.cloud.storage.v1.Tag\022K\n\014and" +
+      "_operator\030\005 \001(\01325.yandex.cloud.storage.v" +
+      "1.LifecycleRule.RuleFilter.And\032\273\001\n\003And\022\016" +
+      "\n\006prefix\030\001 \001(\t\022=\n\030object_size_greater_th" +
+      "an\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n" +
+      "\025object_size_less_than\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022)\n\003tag\030\004 \003(\0132\034.yandex." +
+      "cloud.storage.v1.Tag\"\335\001\n\010Counters\022\032\n\022sim" +
+      "ple_object_size\030\001 \001(\003\022\033\n\023simple_object_c" +
+      "ount\030\002 \001(\003\022\032\n\022objects_parts_size\030\003 \001(\003\022\033" +
+      "\n\023objects_parts_count\030\004 \001(\003\022\036\n\026multipart" +
+      "_objects_size\030\005 \001(\003\022\037\n\027multipart_objects" +
+      "_count\030\006 \001(\003\022\036\n\026active_multipart_count\030\007" +
+      " \001(\003\"]\n\023OptionalSizeByClass\022\025\n\rstorage_c" +
+      "lass\030\001 \001(\t\022/\n\nclass_size\030\002 \001(\0132\033.google." +
+      "protobuf.Int64Value\"8\n\013SizeByClass\022\025\n\rst" +
+      "orage_class\030\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n" +
+      "\017CountersByClass\022\025\n\rstorage_class\030\001 \001(\t\022" +
+      "3\n\010counters\030\002 \001(\0132!.yandex.cloud.storage" +
+      ".v1.Counters\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001" +
+      "(\t\022-\n\010max_size\030\002 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022\021\n\tused_size\030\003 \001(\003\022M\n\027storage_" +
+      "class_max_sizes\030\004 \003(\0132,.yandex.cloud.sto" +
+      "rage.v1.OptionalSizeByClass\022F\n\030storage_c" +
+      "lass_used_sizes\030\005 \003(\0132$.yandex.cloud.sto" +
+      "rage.v1.SizeByClass\022H\n\026storage_class_cou" +
+      "nters\030\006 \003(\0132(.yandex.cloud.storage.v1.Co" +
+      "untersByClass\022;\n\025default_storage_class\030\007" +
+      " \001(\0132\034.google.protobuf.StringValue\022M\n\026an" +
+      "onymous_access_flags\030\010 \001(\0132-.yandex.clou" +
+      "d.storage.v1.AnonymousAccessFlags\022.\n\ncre" +
+      "ated_at\030\t \001(\0132\032.google.protobuf.Timestam" +
+      "p\022.\n\nupdated_at\030\n \001(\0132\032.google.protobuf." +
+      "Timestamp\"\301\003\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022" +
+      "D\n\013source_type\030\002 \001(\0162/.yandex.cloud.stor" +
+      "age.v1.HTTPSConfig.SourceType\022,\n\006issuer\030" +
+      "\003 \001(\0132\034.google.protobuf.StringValue\022-\n\007s" +
+      "ubject\030\004 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022\021\n\tdns_names\030\005 \003(\t\022.\n\nnot_before\030\006 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022-\n\tnot_aft" +
+      "er\030\007 \001(\0132\032.google.protobuf.Timestamp\022\026\n\016" +
+      "certificate_id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SO" +
+      "URCE_TYPE_UNSPECIFIED\020\000\022\034\n\030SOURCE_TYPE_S" +
+      "ELF_MANAGED\020\001\022.\n*SOURCE_TYPE_MANAGED_BY_" +
+      "CERTIFICATE_MANAGER\020\002\"\363\003\n\nObjectLock\022D\n\006" +
+      "status\030\002 \001(\01624.yandex.cloud.storage.v1.O" +
+      "bjectLock.ObjectLockStatus\022O\n\021default_re" +
+      "tention\030\003 \001(\01324.yandex.cloud.storage.v1." +
+      "ObjectLock.DefaultRetention\032\324\001\n\020DefaultR" +
+      "etention\022G\n\004mode\030\001 \001(\01629.yandex.cloud.st" +
+      "orage.v1.ObjectLock.DefaultRetention.Mod" +
+      "e\022\016\n\004days\030\002 \001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004Mo" +
+      "de\022\024\n\020MODE_UNSPECIFIED\020\000\022\023\n\017MODE_GOVERNA" +
+      "NCE\020\001\022\023\n\017MODE_COMPLIANCE\020\002B\016\n\006period\022\004\300\301" +
+      "1\001\"w\n\020ObjectLockStatus\022\"\n\036OBJECT_LOCK_ST" +
+      "ATUS_UNSPECIFIED\020\000\022\037\n\033OBJECT_LOCK_STATUS" +
+      "_DISABLED\020\001\022\036\n\032OBJECT_LOCK_STATUS_ENABLE" +
+      "D\020\002\"\223\001\n\nEncryption\022A\n\005rules\030\001 \003(\01322.yand" +
+      "ex.cloud.storage.v1.Encryption.Encryptio" +
+      "nRule\032B\n\016EncryptionRule\022\031\n\021kms_master_ke" +
+      "y_id\030\001 \001(\t\022\025\n\rsse_algorithm\030\002 \001(\t*s\n\nVer" +
+      "sioning\022\032\n\026VERSIONING_UNSPECIFIED\020\000\022\027\n\023V" +
+      "ERSIONING_DISABLED\020\001\022\026\n\022VERSIONING_ENABL" +
+      "ED\020\002\022\030\n\024VERSIONING_SUSPENDED\020\003Bb\n\033yandex" +
+      ".cloud.api.storage.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/storage/" +
+      "v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41736,39 +42750,45 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_LifecycleRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor,
-        new java.lang.String[] { "Id", "Enabled", "Filter", "Expiration", "Transitions", "AbortIncompleteMultipartUpload", "NoncurrentExpiration", "NoncurrentTransitions", });
+        new java.lang.String[] { "Id", "Enabled", "Filter", "Expiration", "Transitions", "AbortIncompleteMultipartUpload", "NoncurrentExpiration", "NoncurrentTransitions", "NoncurrentDeleteMarkers", });
     internal_static_yandex_cloud_storage_v1_LifecycleRule_AfterDays_descriptor =
       internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_AfterDays_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_AfterDays_descriptor,
         new java.lang.String[] { "DaysAfterExpiration", });
-    internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentExpiration_descriptor =
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor =
       internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentDeleteMarkers_descriptor,
+        new java.lang.String[] { "NoncurrentDays", });
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentExpiration_descriptor =
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentExpiration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentExpiration_descriptor,
         new java.lang.String[] { "NoncurrentDays", });
     internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentTransition_descriptor =
-      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(2);
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentTransition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_NoncurrentTransition_descriptor,
         new java.lang.String[] { "NoncurrentDays", "StorageClass", });
     internal_static_yandex_cloud_storage_v1_LifecycleRule_Transition_descriptor =
-      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(3);
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_Transition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_Transition_descriptor,
         new java.lang.String[] { "Date", "Days", "StorageClass", });
     internal_static_yandex_cloud_storage_v1_LifecycleRule_Expiration_descriptor =
-      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(4);
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_Expiration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_Expiration_descriptor,
         new java.lang.String[] { "Date", "Days", "ExpiredObjectDeleteMarker", });
     internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_descriptor =
-      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(5);
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_descriptor,

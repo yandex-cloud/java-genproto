@@ -3094,6 +3094,16 @@ public final class FunctionOuterClass {
      * <code>.yandex.cloud.serverless.functions.v1.AsyncInvocationConfig async_invocation_config = 22;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.AsyncInvocationConfigOrBuilder getAsyncInvocationConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Optional size of in-memory mounted /tmp directory in bytes.
+     * </pre>
+     *
+     * <code>int64 tmpfs_size = 23;</code>
+     * @return The tmpfsSize.
+     */
+    long getTmpfsSize();
   }
   /**
    * <pre>
@@ -3338,6 +3348,11 @@ public final class FunctionOuterClass {
                 asyncInvocationConfig_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 184: {
+
+              tmpfsSize_ = input.readInt64();
               break;
             }
             default: {
@@ -4492,6 +4507,21 @@ public final class FunctionOuterClass {
       return getAsyncInvocationConfig();
     }
 
+    public static final int TMPFS_SIZE_FIELD_NUMBER = 23;
+    private long tmpfsSize_;
+    /**
+     * <pre>
+     * Optional size of in-memory mounted /tmp directory in bytes.
+     * </pre>
+     *
+     * <code>int64 tmpfs_size = 23;</code>
+     * @return The tmpfsSize.
+     */
+    @java.lang.Override
+    public long getTmpfsSize() {
+      return tmpfsSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4571,6 +4601,9 @@ public final class FunctionOuterClass {
       }
       if (asyncInvocationConfig_ != null) {
         output.writeMessage(22, getAsyncInvocationConfig());
+      }
+      if (tmpfsSize_ != 0L) {
+        output.writeInt64(23, tmpfsSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -4670,6 +4703,10 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, getAsyncInvocationConfig());
       }
+      if (tmpfsSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(23, tmpfsSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4742,6 +4779,8 @@ public final class FunctionOuterClass {
         if (!getAsyncInvocationConfig()
             .equals(other.getAsyncInvocationConfig())) return false;
       }
+      if (getTmpfsSize()
+          != other.getTmpfsSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4816,6 +4855,9 @@ public final class FunctionOuterClass {
         hash = (37 * hash) + ASYNC_INVOCATION_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getAsyncInvocationConfig().hashCode();
       }
+      hash = (37 * hash) + TMPFS_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTmpfsSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5051,6 +5093,8 @@ public final class FunctionOuterClass {
           asyncInvocationConfig_ = null;
           asyncInvocationConfigBuilder_ = null;
         }
+        tmpfsSize_ = 0L;
+
         return this;
       }
 
@@ -5144,6 +5188,7 @@ public final class FunctionOuterClass {
         } else {
           result.asyncInvocationConfig_ = asyncInvocationConfigBuilder_.build();
         }
+        result.tmpfsSize_ = tmpfsSize_;
         onBuilt();
         return result;
       }
@@ -5309,6 +5354,9 @@ public final class FunctionOuterClass {
         }
         if (other.hasAsyncInvocationConfig()) {
           mergeAsyncInvocationConfig(other.getAsyncInvocationConfig());
+        }
+        if (other.getTmpfsSize() != 0L) {
+          setTmpfsSize(other.getTmpfsSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8164,6 +8212,49 @@ public final class FunctionOuterClass {
           asyncInvocationConfig_ = null;
         }
         return asyncInvocationConfigBuilder_;
+      }
+
+      private long tmpfsSize_ ;
+      /**
+       * <pre>
+       * Optional size of in-memory mounted /tmp directory in bytes.
+       * </pre>
+       *
+       * <code>int64 tmpfs_size = 23;</code>
+       * @return The tmpfsSize.
+       */
+      @java.lang.Override
+      public long getTmpfsSize() {
+        return tmpfsSize_;
+      }
+      /**
+       * <pre>
+       * Optional size of in-memory mounted /tmp directory in bytes.
+       * </pre>
+       *
+       * <code>int64 tmpfs_size = 23;</code>
+       * @param value The tmpfsSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTmpfsSize(long value) {
+        
+        tmpfsSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional size of in-memory mounted /tmp directory in bytes.
+       * </pre>
+       *
+       * <code>int64 tmpfs_size = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTmpfsSize() {
+        
+        tmpfsSize_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19448,7 +19539,7 @@ public final class FunctionOuterClass {
       "s.v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003k" +
       "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n" +
       "\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006A" +
-      "CTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\230\t\n\007Ver" +
+      "CTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\254\t\n\007Ver" +
       "sion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n" +
       "\013description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated" +
       "_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n" +
@@ -19473,53 +19564,53 @@ public final class FunctionOuterClass {
       "mounts\030\025 \003(\01322.yandex.cloud.serverless.f" +
       "unctions.v1.StorageMount\022\\\n\027async_invoca" +
       "tion_config\030\026 \001(\0132;.yandex.cloud.serverl" +
-      "ess.functions.v1.AsyncInvocationConfig\0322" +
-      "\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032;\n\031NamedServiceAccountsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Statu" +
-      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022" +
-      "\n\n\006ACTIVE\020\002\"5\n\tResources\022(\n\006memory\030\001 \001(\003" +
-      "B\030\372\3071\024134217728-4294967296\"O\n\007Package\022\031\n" +
-      "\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030" +
-      "\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectiv" +
-      "ity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003" +
-      "(\tB\n\212\3101\002>0\220\3101\001\"\362\001\n\rScalingPolicy\022\023\n\013func" +
-      "tion_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n\013mo" +
-      "dified_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022#\n\033provisioned_instances_count\030\006 \001(\003" +
-      "\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zone_r" +
-      "equests_limit\030\010 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(" +
-      "\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024en" +
-      "vironment_variable\030\004 \001(\tH\000B\013\n\treference\"" +
-      "\340\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_" +
-      "group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
-      "_.]{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([" +
-      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_l" +
-      "evel\030\004 \001(\0162\'.yandex.cloud.logging.v1.Log" +
-      "Level.LevelB\r\n\013destination\"\237\001\n\014StorageMo" +
-      "unt\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016" +
-      "[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_" +
-      "point_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-" +
-      "9a-zA-Z]*\022\021\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncIn" +
-      "vocationConfig\022 \n\rretries_count\030\001 \001(\003B\t\372" +
-      "\3071\0050-100\022h\n\016success_target\030\002 \001(\0132J.yande" +
-      "x.cloud.serverless.functions.v1.AsyncInv" +
-      "ocationConfig.ResponseTargetB\004\350\3071\001\022h\n\016fa" +
-      "ilure_target\030\003 \001(\0132J.yandex.cloud.server" +
-      "less.functions.v1.AsyncInvocationConfig." +
-      "ResponseTargetB\004\350\3071\001\022\032\n\022service_account_" +
-      "id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014empty_tar" +
-      "get\030\001 \001(\01321.yandex.cloud.serverless.func" +
-      "tions.v1.EmptyTargetH\000\022E\n\nymq_target\030\002 \001" +
-      "(\0132/.yandex.cloud.serverless.functions.v" +
-      "1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarg" +
-      "et\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_a" +
-      "ccount_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTa" +
-      "rgetB~\n(yandex.cloud.api.serverless.func" +
-      "tions.v1ZRgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/serverless/functions/" +
-      "v1;functionsb\006proto3"
+      "ess.functions.v1.AsyncInvocationConfig\022\022" +
+      "\n\ntmpfs_size\030\027 \001(\003\0322\n\020EnvironmentEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedS" +
+      "erviceAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIF" +
+      "IED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\"5\n\tResou" +
+      "rces\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-4294" +
+      "967296\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004" +
+      "\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha25" +
+      "6\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nnetwork_id\030\001 " +
+      "\001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\362\001\n\rS" +
+      "calingPolicy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003tag" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022/\n\013modified_at\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022#\n\033provisioned_i" +
+      "nstances_count\030\006 \001(\003\022\034\n\024zone_instances_l" +
+      "imit\030\007 \001(\003\022\033\n\023zone_requests_limit\030\010 \001(\003\"" +
+      "b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(" +
+      "\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_variable\030\004" +
+      " \001(\tH\000B\013\n\treference\"\340\001\n\nLogOptions\022\020\n\010di" +
+      "sabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037" +
+      "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfol" +
+      "der_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_." +
+      "]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex." +
+      "cloud.logging.v1.LogLevel.LevelB\r\n\013desti" +
+      "nation\"\237\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001" +
+      "(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pr" +
+      "efix\030\002 \001(\t\0229\n\020mount_point_name\030\003 \001(\tB\037\350\307" +
+      "1\001\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021\n\tread_on" +
+      "ly\030\004 \001(\010\"\336\003\n\025AsyncInvocationConfig\022 \n\rre" +
+      "tries_count\030\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_" +
+      "target\030\002 \001(\0132J.yandex.cloud.serverless.f" +
+      "unctions.v1.AsyncInvocationConfig.Respon" +
+      "seTargetB\004\350\3071\001\022h\n\016failure_target\030\003 \001(\0132J" +
+      ".yandex.cloud.serverless.functions.v1.As" +
+      "yncInvocationConfig.ResponseTargetB\004\350\3071\001" +
+      "\022\032\n\022service_account_id\030\004 \001(\t\032\262\001\n\016Respons" +
+      "eTarget\022I\n\014empty_target\030\001 \001(\01321.yandex.c" +
+      "loud.serverless.functions.v1.EmptyTarget" +
+      "H\000\022E\n\nymq_target\030\002 \001(\0132/.yandex.cloud.se" +
+      "rverless.functions.v1.YMQTargetH\000B\016\n\006tar" +
+      "get\022\004\300\3011\001\"N\n\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(" +
+      "\tB\004\350\3071\001\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"\r\n\013EmptyTargetB~\n(yandex.cloud" +
+      ".api.serverless.functions.v1ZRgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/s" +
+      "erverless/functions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19546,7 +19637,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new
