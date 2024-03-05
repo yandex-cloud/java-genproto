@@ -647,7 +647,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Executes code in the specified cell or notebook.
+     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request,
@@ -658,6 +658,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns outputs of the specified cell.
+     * Deprecated
      * </pre>
      */
     public void getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request,
@@ -668,6 +669,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns state variables of the specified notebook.
+     * Deprecated
      * </pre>
      */
     public void getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request,
@@ -950,7 +952,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Executes code in the specified cell or notebook.
+     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request,
@@ -962,6 +964,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns outputs of the specified cell.
+     * Deprecated
      * </pre>
      */
     public void getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request,
@@ -973,6 +976,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns state variables of the specified notebook.
+     * Deprecated
      * </pre>
      */
     public void getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request,
@@ -1136,7 +1140,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Executes code in the specified cell or notebook.
+     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request) {
@@ -1147,6 +1151,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns outputs of the specified cell.
+     * Deprecated
      * </pre>
      */
     public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse getCellOutputs(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsRequest request) {
@@ -1157,6 +1162,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns state variables of the specified notebook.
+     * Deprecated
      * </pre>
      */
     public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse getStateVariables(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesRequest request) {
@@ -1322,7 +1328,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * Executes code in the specified cell or notebook.
+     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> execute(
@@ -1334,6 +1340,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns outputs of the specified cell.
+     * Deprecated
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.CellOutputsResponse> getCellOutputs(
@@ -1345,6 +1352,7 @@ public final class ProjectServiceGrpc {
     /**
      * <pre>
      * Returns state variables of the specified notebook.
+     * Deprecated
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetStateVariablesResponse> getStateVariables(

@@ -14860,7 +14860,8 @@ public final class ProjectServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -14869,7 +14870,8 @@ public final class ProjectServiceOuterClass {
     boolean hasNotebookId();
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -14878,7 +14880,8 @@ public final class ProjectServiceOuterClass {
     java.lang.String getNotebookId();
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -14890,30 +14893,36 @@ public final class ProjectServiceOuterClass {
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return Whether the cellId field is set.
      */
-    boolean hasCellId();
+    @java.lang.Deprecated boolean hasCellId();
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return The cellId.
      */
-    java.lang.String getCellId();
+    @java.lang.Deprecated java.lang.String getCellId();
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return The bytes for cellId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getCellIdBytes();
 
     /**
@@ -15115,7 +15124,7 @@ public final class ProjectServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NOTEBOOK_ID(2),
-      CELL_ID(3),
+      @java.lang.Deprecated CELL_ID(3),
       TARGET_NOT_SET(0);
       private final int value;
       private TargetCase(int value) {
@@ -15199,7 +15208,8 @@ public final class ProjectServiceOuterClass {
     public static final int NOTEBOOK_ID_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15210,7 +15220,8 @@ public final class ProjectServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15235,7 +15246,8 @@ public final class ProjectServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the notebook to execute.
+     * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+     * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
      * </pre>
      *
      * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15264,23 +15276,27 @@ public final class ProjectServiceOuterClass {
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return Whether the cellId field is set.
      */
-    public boolean hasCellId() {
+    @java.lang.Deprecated public boolean hasCellId() {
       return targetCase_ == 3;
     }
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return The cellId.
      */
-    public java.lang.String getCellId() {
+    @java.lang.Deprecated public java.lang.String getCellId() {
       java.lang.Object ref = "";
       if (targetCase_ == 3) {
         ref = target_;
@@ -15300,12 +15316,14 @@ public final class ProjectServiceOuterClass {
     /**
      * <pre>
      * ID of the cell to execute.
+     * Deprecated
      * </pre>
      *
-     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     * @deprecated
      * @return The bytes for cellId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getCellIdBytes() {
       java.lang.Object ref = "";
       if (targetCase_ == 3) {
@@ -15957,7 +15975,8 @@ public final class ProjectServiceOuterClass {
 
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15969,7 +15988,8 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -15995,7 +16015,8 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -16022,7 +16043,8 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -16041,7 +16063,8 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -16057,7 +16080,8 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the notebook to execute.
+       * The path to the executable notebook in the project storage. The maximum string length is 200 characters.
+       * To get the path, right-click on the notebook in JupyterLab and select `Copy path`.
        * </pre>
        *
        * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -16079,25 +16103,29 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @return Whether the cellId field is set.
        */
       @java.lang.Override
-      public boolean hasCellId() {
+      @java.lang.Deprecated public boolean hasCellId() {
         return targetCase_ == 3;
       }
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @return The cellId.
        */
       @java.lang.Override
-      public java.lang.String getCellId() {
+      @java.lang.Deprecated public java.lang.String getCellId() {
         java.lang.Object ref = "";
         if (targetCase_ == 3) {
           ref = target_;
@@ -16117,13 +16145,15 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @return The bytes for cellId.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getCellIdBytes() {
         java.lang.Object ref = "";
         if (targetCase_ == 3) {
@@ -16144,13 +16174,15 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @param value The cellId to set.
        * @return This builder for chaining.
        */
-      public Builder setCellId(
+      @java.lang.Deprecated public Builder setCellId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -16163,12 +16195,14 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearCellId() {
+      @java.lang.Deprecated public Builder clearCellId() {
         if (targetCase_ == 3) {
           targetCase_ = 0;
           target_ = null;
@@ -16179,13 +16213,15 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * ID of the cell to execute.
+       * Deprecated
        * </pre>
        *
-       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string cell_id = 3 [deprecated = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       * @deprecated
        * @param value The bytes for cellId to set.
        * @return This builder for chaining.
        */
-      public Builder setCellIdBytes(
+      @java.lang.Deprecated public Builder setCellIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -25698,123 +25734,123 @@ public final class ProjectServiceOuterClass {
       "st\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014" +
       "unit_balance\030\002 \001(\0132\033.google.protobuf.Int" +
       "64Value\",\n\026SetUnitBalanceMetadata\022\022\n\npro" +
-      "ject_id\030\001 \001(\t\"\334\001\n\027ProjectExecutionReques" +
+      "ject_id\030\001 \001(\t\"\336\001\n\027ProjectExecutionReques" +
       "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013n" +
-      "otebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007cell_id" +
-      "\030\003 \001(\tB\t\212\3101\005<=200H\000\0220\n\017input_variables\030\004" +
-      " \001(\0132\027.google.protobuf.Struct\022\035\n\025output_" +
-      "variable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~\n\030" +
-      "ProjectExecutionMetadata\022\022\n\nproject_id\030\001" +
-      " \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034" +
-      "\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target\022\004" +
-      "\300\3011\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rche" +
-      "ckpoint_id\030\001 \001(\t\0221\n\020output_variables\030\002 \001" +
-      "(\0132\027.google.protobuf.Struct\022E\n\020execution" +
-      "_status\030\003 \001(\0162+.yandex.cloud.datasphere." +
-      "v2.ExecutionStatus\"\233\001\n\022CellOutputsReques" +
-      "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007c" +
-      "ell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpoin" +
-      "t_id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\"&\n\023CellOutputsResponse\022" +
-      "\017\n\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariablesRe" +
-      "quest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\"\n\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n\016v" +
-      "ariable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004 \001" +
-      "(\t\"G\n\031GetStateVariablesResponse\022*\n\tvaria" +
-      "bles\030\001 \001(\0132\027.google.protobuf.Struct\"6\n S" +
-      "etProjectAccessBindingsMetadata\022\022\n\nproje" +
-      "ct_id\030\001 \001(\t\"9\n#UpdateProjectAccessBindin" +
-      "gsMetadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033AddRe" +
-      "sourceToProjectRequest\022 \n\nproject_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\0162" +
-      "(.yandex.cloud.datasphere.v2.ResourceTyp" +
-      "e\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n RemoveR" +
-      "esourceFromProjectRequest\022 \n\nproject_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001" +
-      "(\0162(.yandex.cloud.datasphere.v2.Resource" +
-      "Type\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001*S\n\017Execu" +
-      "tionStatus\022 \n\034EXECUTION_STATUS_UNSPECIFI" +
-      "ED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\376\027\n" +
-      "\016ProjectService\022\245\001\n\006Create\0220.yandex.clou" +
-      "d.datasphere.v2.CreateProjectRequest\032!.y" +
-      "andex.cloud.operation.Operation\"F\202\323\344\223\002\034\"" +
-      "\027/datasphere/v2/projects:\001*\262\322* \n\025CreateP" +
-      "rojectMetadata\022\007Project\022\262\001\n\006Update\0220.yan" +
-      "dex.cloud.datasphere.v2.UpdateProjectReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "S\202\323\344\223\002)2$/datasphere/v2/projects/{projec" +
-      "t_id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Pro" +
-      "ject\022\275\001\n\006Delete\0220.yandex.cloud.dataspher" +
-      "e.v2.DeleteProjectRequest\032!.yandex.cloud" +
-      ".operation.Operation\"^\202\323\344\223\002&*$/dataspher" +
-      "e/v2/projects/{project_id}\262\322*.\n\025DeletePr" +
-      "ojectMetadata\022\025google.protobuf.Empty\022\275\001\n" +
-      "\004Open\022..yandex.cloud.datasphere.v2.OpenP" +
-      "rojectRequest\032!.yandex.cloud.operation.O" +
-      "peration\"b\202\323\344\223\002.\")/datasphere/v2/project" +
-      "s/{project_id}:open:\001*\262\322**\n\023OpenProjectM" +
-      "etadata\022\023OpenProjectResponse\022\207\001\n\003Get\022-.y" +
-      "andex.cloud.datasphere.v2.GetProjectRequ" +
-      "est\032#.yandex.cloud.datasphere.v2.Project" +
-      "\",\202\323\344\223\002&\022$/datasphere/v2/projects/{proje" +
-      "ct_id}\022\212\001\n\004List\022/.yandex.cloud.dataspher" +
-      "e.v2.ListProjectsRequest\0320.yandex.cloud." +
-      "datasphere.v2.ListProjectsResponse\"\037\202\323\344\223" +
-      "\002\031\022\027/datasphere/v2/projects\022\261\001\n\016GetUnitB" +
-      "alance\0221.yandex.cloud.datasphere.v2.GetU" +
-      "nitBalanceRequest\0322.yandex.cloud.datasph" +
-      "ere.v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/" +
-      "datasphere/v2/projects/{project_id}:unit" +
-      "Balance\022\326\001\n\016SetUnitBalance\0221.yandex.clou" +
-      "d.datasphere.v2.SetUnitBalanceRequest\032!." +
-      "yandex.cloud.operation.Operation\"n\202\323\344\223\0025" +
-      "\"0/datasphere/v2/projects/{project_id}:u" +
-      "nitBalance:\001*\262\322*/\n\026SetUnitBalanceMetadat" +
-      "a\022\025google.protobuf.Empty\022\322\001\n\007Execute\0223.y" +
-      "andex.cloud.datasphere.v2.ProjectExecuti" +
-      "onRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"o\202\323\344\223\0021\",/datasphere/v2/projects/{p" +
-      "roject_id}:execute:\001*\262\322*4\n\030ProjectExecut" +
-      "ionMetadata\022\030ProjectExecutionResponse\022\253\001" +
-      "\n\016GetCellOutputs\022..yandex.cloud.datasphe" +
-      "re.v2.CellOutputsRequest\032/.yandex.cloud." +
-      "datasphere.v2.CellOutputsResponse\"8\202\323\344\223\002" +
-      "2\0220/datasphere/v2/projects/{project_id}:" +
-      "cellOutputs\022\275\001\n\021GetStateVariables\0224.yand" +
-      "ex.cloud.datasphere.v2.GetStateVariables" +
-      "Request\0325.yandex.cloud.datasphere.v2.Get" +
-      "StateVariablesResponse\";\202\323\344\223\0025\0223/datasph" +
-      "ere/v2/projects/{project_id}:stateVariab" +
-      "les\022\263\001\n\022ListAccessBindings\022..yandex.clou" +
-      "d.access.ListAccessBindingsRequest\032/.yan" +
-      "dex.cloud.access.ListAccessBindingsRespo" +
-      "nse\"<\202\323\344\223\0026\0224/datasphere/v2/projects/{re" +
-      "source_id}:accessBindings\022\346\001\n\021SetAccessB" +
-      "indings\022-.yandex.cloud.access.SetAccessB" +
-      "indingsRequest\032!.yandex.cloud.operation." +
-      "Operation\"\177\202\323\344\223\002<\"7/datasphere/v2/projec" +
-      "ts/{resource_id}:setAccessBindings:\001*\262\322*" +
-      "9\n SetProjectAccessBindingsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\363\001\n\024UpdateAccessBindi" +
-      "ngs\0220.yandex.cloud.access.UpdateAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\205\001\202\323\344\223\002?2:/datasphere/v2/projec" +
-      "ts/{resource_id}:updateAccessBindings:\001*" +
-      "\262\322*<\n#UpdateProjectAccessBindingsMetadat" +
-      "a\022\025google.protobuf.Empty\022\302\001\n\013AddResource" +
-      "\0227.yandex.cloud.datasphere.v2.AddResourc" +
-      "eToProjectRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"W\202\323\344\223\0026\"1/datasphere/v2/pro" +
-      "jects/{resource_id}:addResource:\001*\262\322*\027\022\025" +
-      "google.protobuf.Empty\022\315\001\n\016RemoveResource" +
-      "\022<.yandex.cloud.datasphere.v2.RemoveReso" +
-      "urceFromProjectRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"Z\202\323\344\223\0029\"4/datasphere/v" +
-      "2/projects/{resource_id}:removeResource:" +
-      "\001*\262\322*\027\022\025google.protobuf.EmptyBk\n\036yandex." +
-      "cloud.api.datasphere.v2ZIgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/datasp" +
-      "here/v2;datasphereb\006proto3"
+      "otebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\036\n\007cell_id" +
+      "\030\003 \001(\tB\013\030\001\212\3101\005<=200H\000\0220\n\017input_variables" +
+      "\030\004 \001(\0132\027.google.protobuf.Struct\022\035\n\025outpu" +
+      "t_variable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~" +
+      "\n\030ProjectExecutionMetadata\022\022\n\nproject_id" +
+      "\030\001 \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000" +
+      "\022\034\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target" +
+      "\022\004\300\3011\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rc" +
+      "heckpoint_id\030\001 \001(\t\0221\n\020output_variables\030\002" +
+      " \001(\0132\027.google.protobuf.Struct\022E\n\020executi" +
+      "on_status\030\003 \001(\0162+.yandex.cloud.dataspher" +
+      "e.v2.ExecutionStatus\"\233\001\n\022CellOutputsRequ" +
+      "est\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n" +
+      "\007cell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpo" +
+      "int_id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\"&\n\023CellOutputsRespons" +
+      "e\022\017\n\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariables" +
+      "Request\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\"\n\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n" +
+      "\016variable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004" +
+      " \001(\t\"G\n\031GetStateVariablesResponse\022*\n\tvar" +
+      "iables\030\001 \001(\0132\027.google.protobuf.Struct\"6\n" +
+      " SetProjectAccessBindingsMetadata\022\022\n\npro" +
+      "ject_id\030\001 \001(\t\"9\n#UpdateProjectAccessBind" +
+      "ingsMetadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033Add" +
+      "ResourceToProjectRequest\022 \n\nproject_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(" +
+      "\0162(.yandex.cloud.datasphere.v2.ResourceT" +
+      "ype\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n Remov" +
+      "eResourceFromProjectRequest\022 \n\nproject_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002" +
+      " \001(\0162(.yandex.cloud.datasphere.v2.Resour" +
+      "ceType\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001*S\n\017Exe" +
+      "cutionStatus\022 \n\034EXECUTION_STATUS_UNSPECI" +
+      "FIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\376" +
+      "\027\n\016ProjectService\022\245\001\n\006Create\0220.yandex.cl" +
+      "oud.datasphere.v2.CreateProjectRequest\032!" +
+      ".yandex.cloud.operation.Operation\"F\202\323\344\223\002" +
+      "\034\"\027/datasphere/v2/projects:\001*\262\322* \n\025Creat" +
+      "eProjectMetadata\022\007Project\022\262\001\n\006Update\0220.y" +
+      "andex.cloud.datasphere.v2.UpdateProjectR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"S\202\323\344\223\002)2$/datasphere/v2/projects/{proj" +
+      "ect_id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007P" +
+      "roject\022\275\001\n\006Delete\0220.yandex.cloud.datasph" +
+      "ere.v2.DeleteProjectRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"^\202\323\344\223\002&*$/datasph" +
+      "ere/v2/projects/{project_id}\262\322*.\n\025Delete" +
+      "ProjectMetadata\022\025google.protobuf.Empty\022\275" +
+      "\001\n\004Open\022..yandex.cloud.datasphere.v2.Ope" +
+      "nProjectRequest\032!.yandex.cloud.operation" +
+      ".Operation\"b\202\323\344\223\002.\")/datasphere/v2/proje" +
+      "cts/{project_id}:open:\001*\262\322**\n\023OpenProjec" +
+      "tMetadata\022\023OpenProjectResponse\022\207\001\n\003Get\022-" +
+      ".yandex.cloud.datasphere.v2.GetProjectRe" +
+      "quest\032#.yandex.cloud.datasphere.v2.Proje" +
+      "ct\",\202\323\344\223\002&\022$/datasphere/v2/projects/{pro" +
+      "ject_id}\022\212\001\n\004List\022/.yandex.cloud.datasph" +
+      "ere.v2.ListProjectsRequest\0320.yandex.clou" +
+      "d.datasphere.v2.ListProjectsResponse\"\037\202\323" +
+      "\344\223\002\031\022\027/datasphere/v2/projects\022\261\001\n\016GetUni" +
+      "tBalance\0221.yandex.cloud.datasphere.v2.Ge" +
+      "tUnitBalanceRequest\0322.yandex.cloud.datas" +
+      "phere.v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\022" +
+      "0/datasphere/v2/projects/{project_id}:un" +
+      "itBalance\022\326\001\n\016SetUnitBalance\0221.yandex.cl" +
+      "oud.datasphere.v2.SetUnitBalanceRequest\032" +
+      "!.yandex.cloud.operation.Operation\"n\202\323\344\223" +
+      "\0025\"0/datasphere/v2/projects/{project_id}" +
+      ":unitBalance:\001*\262\322*/\n\026SetUnitBalanceMetad" +
+      "ata\022\025google.protobuf.Empty\022\322\001\n\007Execute\0223" +
+      ".yandex.cloud.datasphere.v2.ProjectExecu" +
+      "tionRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"o\202\323\344\223\0021\",/datasphere/v2/projects/" +
+      "{project_id}:execute:\001*\262\322*4\n\030ProjectExec" +
+      "utionMetadata\022\030ProjectExecutionResponse\022" +
+      "\253\001\n\016GetCellOutputs\022..yandex.cloud.datasp" +
+      "here.v2.CellOutputsRequest\032/.yandex.clou" +
+      "d.datasphere.v2.CellOutputsResponse\"8\202\323\344" +
+      "\223\0022\0220/datasphere/v2/projects/{project_id" +
+      "}:cellOutputs\022\275\001\n\021GetStateVariables\0224.ya" +
+      "ndex.cloud.datasphere.v2.GetStateVariabl" +
+      "esRequest\0325.yandex.cloud.datasphere.v2.G" +
+      "etStateVariablesResponse\";\202\323\344\223\0025\0223/datas" +
+      "phere/v2/projects/{project_id}:stateVari" +
+      "ables\022\263\001\n\022ListAccessBindings\022..yandex.cl" +
+      "oud.access.ListAccessBindingsRequest\032/.y" +
+      "andex.cloud.access.ListAccessBindingsRes" +
+      "ponse\"<\202\323\344\223\0026\0224/datasphere/v2/projects/{" +
+      "resource_id}:accessBindings\022\346\001\n\021SetAcces" +
+      "sBindings\022-.yandex.cloud.access.SetAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\177\202\323\344\223\002<\"7/datasphere/v2/proj" +
+      "ects/{resource_id}:setAccessBindings:\001*\262" +
+      "\322*9\n SetProjectAccessBindingsMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\363\001\n\024UpdateAccessBin" +
+      "dings\0220.yandex.cloud.access.UpdateAccess" +
+      "BindingsRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\205\001\202\323\344\223\002?2:/datasphere/v2/proj" +
+      "ects/{resource_id}:updateAccessBindings:" +
+      "\001*\262\322*<\n#UpdateProjectAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\302\001\n\013AddResour" +
+      "ce\0227.yandex.cloud.datasphere.v2.AddResou" +
+      "rceToProjectRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"W\202\323\344\223\0026\"1/datasphere/v2/p" +
+      "rojects/{resource_id}:addResource:\001*\262\322*\027" +
+      "\022\025google.protobuf.Empty\022\315\001\n\016RemoveResour" +
+      "ce\022<.yandex.cloud.datasphere.v2.RemoveRe" +
+      "sourceFromProjectRequest\032!.yandex.cloud." +
+      "operation.Operation\"Z\202\323\344\223\0029\"4/datasphere" +
+      "/v2/projects/{resource_id}:removeResourc" +
+      "e:\001*\262\322*\027\022\025google.protobuf.EmptyBk\n\036yande" +
+      "x.cloud.api.datasphere.v2ZIgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/data" +
+      "sphere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
