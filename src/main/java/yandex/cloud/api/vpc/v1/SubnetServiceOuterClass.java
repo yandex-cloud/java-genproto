@@ -3067,7 +3067,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3081,7 +3080,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3094,7 +3092,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3108,7 +3105,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3665,7 +3661,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3681,7 +3676,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3696,7 +3690,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -3712,7 +3705,6 @@ public final class SubnetServiceOuterClass {
      * <pre>
      * CIDR block.
      * The range of internal addresses that are defined for this subnet.
-     * This field can be set only at Subnet resource creation time and cannot be changed.
      * For example, 10.0.0.0/22 or 192.168.0.0/24.
      * Minimum subnet size is /28, maximum subnet size is /16.
      * </pre>
@@ -4965,7 +4957,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -4981,7 +4972,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -4996,7 +4986,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5012,7 +5001,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5029,7 +5017,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5053,7 +5040,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5076,7 +5062,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5097,7 +5082,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -5115,7 +5099,6 @@ public final class SubnetServiceOuterClass {
        * <pre>
        * CIDR block.
        * The range of internal addresses that are defined for this subnet.
-       * This field can be set only at Subnet resource creation time and cannot be changed.
        * For example, 10.0.0.0/22 or 192.168.0.0/24.
        * Minimum subnet size is /28, maximum subnet size is /16.
        * </pre>
@@ -6188,6 +6171,47 @@ public final class SubnetServiceOuterClass {
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 7;</code>
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @return A list containing the v4CidrBlocks.
+     */
+    java.util.List<java.lang.String>
+        getV4CidrBlocksList();
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @return The count of v4CidrBlocks.
+     */
+    int getV4CidrBlocksCount();
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
+     */
+    java.lang.String getV4CidrBlocks(int index);
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
+     */
+    com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSubnetRequest}
@@ -6206,6 +6230,7 @@ public final class SubnetServiceOuterClass {
       name_ = "";
       description_ = "";
       routeTableId_ = "";
+      v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -6302,6 +6327,15 @@ public final class SubnetServiceOuterClass {
 
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              v4CidrBlocks_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6317,6 +6351,9 @@ public final class SubnetServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -6693,6 +6730,57 @@ public final class SubnetServiceOuterClass {
       return getDhcpOptions();
     }
 
+    public static final int V4_CIDR_BLOCKS_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList v4CidrBlocks_;
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @return A list containing the v4CidrBlocks.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getV4CidrBlocksList() {
+      return v4CidrBlocks_;
+    }
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @return The count of v4CidrBlocks.
+     */
+    public int getV4CidrBlocksCount() {
+      return v4CidrBlocks_.size();
+    }
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @param index The index of the element to return.
+     * @return The v4CidrBlocks at the given index.
+     */
+    public java.lang.String getV4CidrBlocks(int index) {
+      return v4CidrBlocks_.get(index);
+    }
+    /**
+     * <pre>
+     * New CIDR blocks which will overwrite the existing ones.
+     * </pre>
+     *
+     * <code>repeated string v4_cidr_blocks = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the v4CidrBlocks at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getV4CidrBlocksBytes(int index) {
+      return v4CidrBlocks_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6730,6 +6818,9 @@ public final class SubnetServiceOuterClass {
       }
       if (dhcpOptions_ != null) {
         output.writeMessage(7, getDhcpOptions());
+      }
+      for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, v4CidrBlocks_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -6770,6 +6861,14 @@ public final class SubnetServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDhcpOptions());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < v4CidrBlocks_.size(); i++) {
+          dataSize += computeStringSizeNoTag(v4CidrBlocks_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getV4CidrBlocksList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6805,6 +6904,8 @@ public final class SubnetServiceOuterClass {
         if (!getDhcpOptions()
             .equals(other.getDhcpOptions())) return false;
       }
+      if (!getV4CidrBlocksList()
+          .equals(other.getV4CidrBlocksList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6835,6 +6936,10 @@ public final class SubnetServiceOuterClass {
       if (hasDhcpOptions()) {
         hash = (37 * hash) + DHCP_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getDhcpOptions().hashCode();
+      }
+      if (getV4CidrBlocksCount() > 0) {
+        hash = (37 * hash) + V4_CIDR_BLOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getV4CidrBlocksList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7012,6 +7117,8 @@ public final class SubnetServiceOuterClass {
           dhcpOptions_ = null;
           dhcpOptionsBuilder_ = null;
         }
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -7055,6 +7162,11 @@ public final class SubnetServiceOuterClass {
         } else {
           result.dhcpOptions_ = dhcpOptionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          v4CidrBlocks_ = v4CidrBlocks_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.v4CidrBlocks_ = v4CidrBlocks_;
         onBuilt();
         return result;
       }
@@ -7126,6 +7238,16 @@ public final class SubnetServiceOuterClass {
         }
         if (other.hasDhcpOptions()) {
           mergeDhcpOptions(other.getDhcpOptions());
+        }
+        if (!other.v4CidrBlocks_.isEmpty()) {
+          if (v4CidrBlocks_.isEmpty()) {
+            v4CidrBlocks_ = other.v4CidrBlocks_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureV4CidrBlocksIsMutable();
+            v4CidrBlocks_.addAll(other.v4CidrBlocks_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7977,6 +8099,152 @@ public final class SubnetServiceOuterClass {
           dhcpOptions_ = null;
         }
         return dhcpOptionsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureV4CidrBlocksIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          v4CidrBlocks_ = new com.google.protobuf.LazyStringArrayList(v4CidrBlocks_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @return A list containing the v4CidrBlocks.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getV4CidrBlocksList() {
+        return v4CidrBlocks_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @return The count of v4CidrBlocks.
+       */
+      public int getV4CidrBlocksCount() {
+        return v4CidrBlocks_.size();
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param index The index of the element to return.
+       * @return The v4CidrBlocks at the given index.
+       */
+      public java.lang.String getV4CidrBlocks(int index) {
+        return v4CidrBlocks_.get(index);
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the v4CidrBlocks at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getV4CidrBlocksBytes(int index) {
+        return v4CidrBlocks_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The v4CidrBlocks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV4CidrBlocks(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param value The v4CidrBlocks to add.
+       * @return This builder for chaining.
+       */
+      public Builder addV4CidrBlocks(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param values The v4CidrBlocks to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllV4CidrBlocks(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureV4CidrBlocksIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, v4CidrBlocks_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV4CidrBlocks() {
+        v4CidrBlocks_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New CIDR blocks which will overwrite the existing ones.
+       * </pre>
+       *
+       * <code>repeated string v4_cidr_blocks = 8;</code>
+       * @param value The bytes of the v4CidrBlocks to add.
+       * @return This builder for chaining.
+       */
+      public Builder addV4CidrBlocksBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureV4CidrBlocksIsMutable();
+        v4CidrBlocks_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20699,7 +20967,7 @@ public final class SubnetServiceOuterClass {
       "50\0226\n\014dhcp_options\030\n \001(\0132 .yandex.cloud." +
       "vpc.v1.DhcpOptions\032-\n\013LabelsEntry\022\013\n\003key" +
       "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\024CreateSubne" +
-      "tMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"\311\003\n\023UpdateS" +
+      "tMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"\341\003\n\023UpdateS" +
       "ubnetRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
       "obuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z]" +
@@ -20710,87 +20978,88 @@ public final class SubnetServiceOuterClass {
       "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\016route" +
       "_table_id\030\006 \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_option" +
       "s\030\007 \001(\0132 .yandex.cloud.vpc.v1.DhcpOption" +
-      "s\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\")\n\024UpdateSubnetMetadata\022\021\n\tsubn" +
-      "et_id\030\001 \001(\t\"U\n\032AddSubnetCidrBlocksReques" +
-      "t\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016v4" +
-      "_cidr_blocks\030\002 \003(\t\"0\n\033AddSubnetCidrBlock" +
-      "sMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"X\n\035RemoveSu" +
-      "bnetCidrBlocksRequest\022\037\n\tsubnet_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\002 \003(\t\"3" +
-      "\n\036RemoveSubnetCidrBlocksMetadata\022\021\n\tsubn" +
-      "et_id\030\001 \001(\t\"6\n\023DeleteSubnetRequest\022\037\n\tsu" +
-      "bnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSub" +
-      "netMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"|\n\033ListSu" +
-      "bnetOperationsRequest\022\037\n\tsubnet_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034" +
-      "ListSubnetOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t\"a\n\021MoveSubn" +
-      "etRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"\'\n\022MoveSubnetMetadata\022\021\n\tsubnet_" +
-      "id\030\001 \001(\t\"j\n\030ListUsedAddressesRequest\022\027\n\t" +
-      "subnet_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003" +
-      "\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"i\n\031" +
-      "ListUsedAddressesResponse\0223\n\taddresses\030\001" +
-      " \003(\0132 .yandex.cloud.vpc.v1.UsedAddress\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\211\001\n\013UsedAddress\022" +
-      "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
-      "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
-      "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
-      "nce\"[\n\025RelocateSubnetRequest\022\037\n\tsubnet_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023destination_zon" +
-      "e_id\030\002 \001(\tB\004\350\3071\001\"+\n\026RelocateSubnetMetada" +
-      "ta\022\021\n\tsubnet_id\030\001 \001(\t2\200\016\n\rSubnetService\022" +
-      "n\n\003Get\022%.yandex.cloud.vpc.v1.GetSubnetRe" +
-      "quest\032\033.yandex.cloud.vpc.v1.Subnet\"#\202\323\344\223" +
-      "\002\035\022\033/vpc/v1/subnets/{subnet_id}\022r\n\004List\022" +
-      "\'.yandex.cloud.vpc.v1.ListSubnetsRequest" +
-      "\032(.yandex.cloud.vpc.v1.ListSubnetsRespon" +
-      "se\"\027\202\323\344\223\002\021\022\017/vpc/v1/subnets\022\223\001\n\006Create\022(" +
-      ".yandex.cloud.vpc.v1.CreateSubnetRequest" +
-      "\032!.yandex.cloud.operation.Operation\"<\202\323\344" +
-      "\223\002\024\"\017/vpc/v1/subnets:\001*\262\322*\036\n\024CreateSubne" +
-      "tMetadata\022\006Subnet\022\237\001\n\006Update\022(.yandex.cl" +
-      "oud.vpc.v1.UpdateSubnetRequest\032!.yandex." +
-      "cloud.operation.Operation\"H\202\323\344\223\002 2\033/vpc/" +
-      "v1/subnets/{subnet_id}:\001*\262\322*\036\n\024UpdateSub" +
-      "netMetadata\022\006Subnet\022\275\001\n\rAddCidrBlocks\022/." +
-      "yandex.cloud.vpc.v1.AddSubnetCidrBlocksR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"X\202\323\344\223\0020\"+/vpc/v1/subnets/{subnet_id}:a" +
-      "dd-cidr-blocks:\001*\262\322*\036\n\024UpdateSubnetMetad" +
-      "ata\022\006Subnet\022\306\001\n\020RemoveCidrBlocks\0222.yande" +
-      "x.cloud.vpc.v1.RemoveSubnetCidrBlocksReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "[\202\323\344\223\0023\"./vpc/v1/subnets/{subnet_id}:rem" +
-      "ove-cidr-blocks:\001*\262\322*\036\n\024UpdateSubnetMeta" +
-      "data\022\006Subnet\022\253\001\n\006Delete\022(.yandex.cloud.v" +
-      "pc.v1.DeleteSubnetRequest\032!.yandex.cloud" +
-      ".operation.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/su" +
-      "bnets/{subnet_id}\262\322*-\n\024DeleteSubnetMetad" +
-      "ata\022\025google.protobuf.Empty\022\245\001\n\016ListOpera" +
-      "tions\0220.yandex.cloud.vpc.v1.ListSubnetOp" +
-      "erationsRequest\0321.yandex.cloud.vpc.v1.Li" +
-      "stSubnetOperationsResponse\".\202\323\344\223\002(\022&/vpc" +
-      "/v1/subnets/{subnet_id}/operations\022\236\001\n\004M" +
-      "ove\022&.yandex.cloud.vpc.v1.MoveSubnetRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"K" +
-      "\202\323\344\223\002%\" /vpc/v1/subnets/{subnet_id}:move" +
-      ":\001*\262\322*\034\n\022MoveSubnetMetadata\022\006Subnet\022\256\001\n\010" +
-      "Relocate\022*.yandex.cloud.vpc.v1.RelocateS" +
-      "ubnetRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"S\202\323\344\223\002)\"$/vpc/v1/subnets/{subnet" +
-      "_id}:relocate:\001*\262\322* \n\026RelocateSubnetMeta" +
-      "data\022\006Subnet\022\241\001\n\021ListUsedAddresses\022-.yan" +
-      "dex.cloud.vpc.v1.ListUsedAddressesReques" +
-      "t\032..yandex.cloud.vpc.v1.ListUsedAddresse" +
-      "sResponse\"-\202\323\344\223\002\'\022%/vpc/v1/subnets/{subn" +
-      "et_id}/addressesBV\n\027yandex.cloud.api.vpc" +
-      ".v1Z;github.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "s\022\026\n\016v4_cidr_blocks\030\010 \003(\t\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\024Upda" +
+      "teSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"U\n\032A" +
+      "ddSubnetCidrBlocksRequest\022\037\n\tsubnet_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\002 \003" +
+      "(\t\"0\n\033AddSubnetCidrBlocksMetadata\022\021\n\tsub" +
+      "net_id\030\001 \001(\t\"X\n\035RemoveSubnetCidrBlocksRe" +
+      "quest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026" +
+      "\n\016v4_cidr_blocks\030\002 \003(\t\"3\n\036RemoveSubnetCi" +
+      "drBlocksMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"6\n\023D" +
+      "eleteSubnetRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\")\n\024DeleteSubnetMetadata\022\021\n\ts" +
+      "ubnet_id\030\001 \001(\t\"|\n\033ListSubnetOperationsRe" +
+      "quest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034ListSubnetOperat" +
+      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
+      "x.cloud.operation.Operation\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"a\n\021MoveSubnetRequest\022\037\n\tsub" +
+      "net_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinatio" +
+      "n_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\022MoveS" +
+      "ubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"j\n\030List" +
+      "UsedAddressesRequest\022\027\n\tsubnet_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003" +
+      " \001(\t\022\016\n\006filter\030\004 \001(\t\"i\n\031ListUsedAddresse" +
+      "sResponse\0223\n\taddresses\030\001 \003(\0132 .yandex.cl" +
+      "oud.vpc.v1.UsedAddress\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"\211\001\n\013UsedAddress\022\017\n\007address\030\001 \001(\t" +
+      "\0222\n\nip_version\030\002 \001(\0162\036.yandex.cloud.vpc." +
+      "v1.IpVersion\0225\n\nreferences\030\003 \003(\0132!.yande" +
+      "x.cloud.reference.Reference\"[\n\025RelocateS" +
+      "ubnetRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022!\n\023destination_zone_id\030\002 \001(\tB\004\350\3071\001" +
+      "\"+\n\026RelocateSubnetMetadata\022\021\n\tsubnet_id\030" +
+      "\001 \001(\t2\200\016\n\rSubnetService\022n\n\003Get\022%.yandex." +
+      "cloud.vpc.v1.GetSubnetRequest\032\033.yandex.c" +
+      "loud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subn" +
+      "ets/{subnet_id}\022r\n\004List\022\'.yandex.cloud.v" +
+      "pc.v1.ListSubnetsRequest\032(.yandex.cloud." +
+      "vpc.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc" +
+      "/v1/subnets\022\223\001\n\006Create\022(.yandex.cloud.vp" +
+      "c.v1.CreateSubnetRequest\032!.yandex.cloud." +
+      "operation.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/sub" +
+      "nets:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Subne" +
+      "t\022\237\001\n\006Update\022(.yandex.cloud.vpc.v1.Updat" +
+      "eSubnetRequest\032!.yandex.cloud.operation." +
+      "Operation\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subn" +
+      "et_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Sub" +
+      "net\022\275\001\n\rAddCidrBlocks\022/.yandex.cloud.vpc" +
+      ".v1.AddSubnetCidrBlocksRequest\032!.yandex." +
+      "cloud.operation.Operation\"X\202\323\344\223\0020\"+/vpc/" +
+      "v1/subnets/{subnet_id}:add-cidr-blocks:\001" +
+      "*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\306\001\n\020" +
+      "RemoveCidrBlocks\0222.yandex.cloud.vpc.v1.R" +
+      "emoveSubnetCidrBlocksRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"[\202\323\344\223\0023\"./vpc/v1" +
+      "/subnets/{subnet_id}:remove-cidr-blocks:" +
+      "\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\253\001\n" +
+      "\006Delete\022(.yandex.cloud.vpc.v1.DeleteSubn" +
+      "etRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subnet_id" +
+      "}\262\322*-\n\024DeleteSubnetMetadata\022\025google.prot" +
+      "obuf.Empty\022\245\001\n\016ListOperations\0220.yandex.c" +
+      "loud.vpc.v1.ListSubnetOperationsRequest\032" +
+      "1.yandex.cloud.vpc.v1.ListSubnetOperatio" +
+      "nsResponse\".\202\323\344\223\002(\022&/vpc/v1/subnets/{sub" +
+      "net_id}/operations\022\236\001\n\004Move\022&.yandex.clo" +
+      "ud.vpc.v1.MoveSubnetRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/" +
+      "subnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSub" +
+      "netMetadata\022\006Subnet\022\256\001\n\010Relocate\022*.yande" +
+      "x.cloud.vpc.v1.RelocateSubnetRequest\032!.y" +
+      "andex.cloud.operation.Operation\"S\202\323\344\223\002)\"" +
+      "$/vpc/v1/subnets/{subnet_id}:relocate:\001*" +
+      "\262\322* \n\026RelocateSubnetMetadata\022\006Subnet\022\241\001\n" +
+      "\021ListUsedAddresses\022-.yandex.cloud.vpc.v1" +
+      ".ListUsedAddressesRequest\032..yandex.cloud" +
+      ".vpc.v1.ListUsedAddressesResponse\"-\202\323\344\223\002" +
+      "\'\022%/vpc/v1/subnets/{subnet_id}/addresses" +
+      "BV\n\027yandex.cloud.api.vpc.v1Z;github.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/vp" +
+      "c/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20844,7 +21113,7 @@ public final class SubnetServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_descriptor,
-        new java.lang.String[] { "SubnetId", "UpdateMask", "Name", "Description", "Labels", "RouteTableId", "DhcpOptions", });
+        new java.lang.String[] { "SubnetId", "UpdateMask", "Name", "Description", "Labels", "RouteTableId", "DhcpOptions", "V4CidrBlocks", });
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_UpdateSubnetRequest_LabelsEntry_fieldAccessorTable = new
