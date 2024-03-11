@@ -260,6 +260,16 @@ public final class DnsZoneOuterClass {
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
+
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * <pre>
@@ -396,6 +406,11 @@ public final class DnsZoneOuterClass {
                 publicVisibility_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 80: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -891,6 +906,21 @@ public final class DnsZoneOuterClass {
       return getPublicVisibility();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 10;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 10;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -934,6 +964,9 @@ public final class DnsZoneOuterClass {
       }
       if (publicVisibility_ != null) {
         output.writeMessage(9, getPublicVisibility());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(10, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -981,6 +1014,10 @@ public final class DnsZoneOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getPublicVisibility());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1023,6 +1060,8 @@ public final class DnsZoneOuterClass {
         if (!getPublicVisibility()
             .equals(other.getPublicVisibility())) return false;
       }
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1060,6 +1099,9 @@ public final class DnsZoneOuterClass {
         hash = (37 * hash) + PUBLIC_VISIBILITY_FIELD_NUMBER;
         hash = (53 * hash) + getPublicVisibility().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1248,6 +1290,8 @@ public final class DnsZoneOuterClass {
           publicVisibility_ = null;
           publicVisibilityBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -1297,6 +1341,7 @@ public final class DnsZoneOuterClass {
         } else {
           result.publicVisibility_ = publicVisibilityBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -1375,6 +1420,9 @@ public final class DnsZoneOuterClass {
         }
         if (other.hasPublicVisibility()) {
           mergePublicVisibility(other.getPublicVisibility());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2531,6 +2579,49 @@ public final class DnsZoneOuterClass {
           publicVisibility_ = null;
         }
         return publicVisibilityBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4939,7 +5030,7 @@ public final class DnsZoneOuterClass {
       "\n\"yandex/cloud/dns/v1/dns_zone.proto\022\023ya" +
       "ndex.cloud.dns.v1\032\035yandex/cloud/validati" +
       "on.proto\032\037google/protobuf/timestamp.prot" +
-      "o\"\370\002\n\007DnsZone\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
+      "o\"\225\003\n\007DnsZone\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descriptio" +
       "n\030\005 \001(\t\0228\n\006labels\030\006 \003(\0132(.yandex.cloud.d" +
@@ -4947,16 +5038,16 @@ public final class DnsZoneOuterClass {
       "B\n\022private_visibility\030\010 \001(\0132&.yandex.clo" +
       "ud.dns.v1.PrivateVisibility\022@\n\021public_vi" +
       "sibility\030\t \001(\0132%.yandex.cloud.dns.v1.Pub" +
-      "licVisibility\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\tRecordSet\022\027\n\004na" +
-      "me\030\001 \001(\tB\t\212\3101\0051-254\022\026\n\004type\030\002 \001(\tB\010\212\3101\0041" +
-      "-20\022\035\n\003ttl\030\003 \001(\003B\020\372\3071\0140-2147483647\022$\n\004da" +
-      "ta\030\004 \003(\tB\026\202\3101\0051-100\212\3101\0051-255\220\3101\001\"=\n\021Priv" +
-      "ateVisibility\022(\n\013network_ids\030\001 \003(\tB\023\202\3101\005" +
-      "0-100\212\3101\00220\220\3101\001\"\022\n\020PublicVisibilityBV\n\027y" +
-      "andex.cloud.api.dns.v1Z;github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/dns/v1;" +
-      "dnsb\006proto3"
+      "licVisibility\022\033\n\023deletion_protection\030\n \001" +
+      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"\201\001\n\tRecordSet\022\027\n\004name\030\001 \001(\tB\t\212" +
+      "\3101\0051-254\022\026\n\004type\030\002 \001(\tB\010\212\3101\0041-20\022\035\n\003ttl\030" +
+      "\003 \001(\003B\020\372\3071\0140-2147483647\022$\n\004data\030\004 \003(\tB\026\202" +
+      "\3101\0051-100\212\3101\0051-255\220\3101\001\"=\n\021PrivateVisibili" +
+      "ty\022(\n\013network_ids\030\001 \003(\tB\023\202\3101\0050-100\212\3101\00220" +
+      "\220\3101\001\"\022\n\020PublicVisibilityBV\n\027yandex.cloud" +
+      ".api.dns.v1Z;github.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/dns/v1;dnsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4969,7 +5060,7 @@ public final class DnsZoneOuterClass {
     internal_static_yandex_cloud_dns_v1_DnsZone_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_DnsZone_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Zone", "PrivateVisibility", "PublicVisibility", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Zone", "PrivateVisibility", "PublicVisibility", "DeletionProtection", });
     internal_static_yandex_cloud_dns_v1_DnsZone_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dns_v1_DnsZone_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dns_v1_DnsZone_LabelsEntry_fieldAccessorTable = new

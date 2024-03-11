@@ -320,7 +320,7 @@ public final class SubclusterOuterClass {
      * Defines an autoscaling rule based on the average CPU utilization of the instance group.
      * </pre>
      *
-     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The cpuUtilizationTarget.
      */
     double getCpuUtilizationTarget();
@@ -636,7 +636,7 @@ public final class SubclusterOuterClass {
      * Defines an autoscaling rule based on the average CPU utilization of the instance group.
      * </pre>
      *
-     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+     * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "0-100"];</code>
      * @return The cpuUtilizationTarget.
      */
     @java.lang.Override
@@ -1706,7 +1706,7 @@ public final class SubclusterOuterClass {
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
        * </pre>
        *
-       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "0-100"];</code>
        * @return The cpuUtilizationTarget.
        */
       @java.lang.Override
@@ -1718,7 +1718,7 @@ public final class SubclusterOuterClass {
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
        * </pre>
        *
-       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "0-100"];</code>
        * @param value The cpuUtilizationTarget to set.
        * @return This builder for chaining.
        */
@@ -1733,7 +1733,7 @@ public final class SubclusterOuterClass {
        * Defines an autoscaling rule based on the average CPU utilization of the instance group.
        * </pre>
        *
-       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "10-100"];</code>
+       * <code>double cpu_utilization_target = 6 [(.yandex.cloud.value) = "0-100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCpuUtilizationTarget() {
@@ -5625,35 +5625,35 @@ public final class SubclusterOuterClass {
       "otobuf/timestamp.proto\032%yandex/cloud/dat" +
       "aproc/v1/common.proto\032\035yandex/cloud/vali" +
       "dation.proto\032\036google/protobuf/duration.p" +
-      "roto\"\362\002\n\021AutoscalingConfig\022\"\n\017max_hosts_" +
+      "roto\"\361\002\n\021AutoscalingConfig\022\"\n\017max_hosts_" +
       "count\030\001 \001(\003B\t\372\3071\0051-100\022\023\n\013preemptible\030\002 " +
       "\001(\010\022G\n\024measurement_duration\030\003 \001(\0132\031.goog" +
       "le.protobuf.DurationB\016\350\3071\001\372\3071\0061m-10m\022=\n\017" +
       "warmup_duration\030\004 \001(\0132\031.google.protobuf." +
       "DurationB\t\372\3071\005<=10m\022E\n\026stabilization_dur" +
       "ation\030\005 \001(\0132\031.google.protobuf.DurationB\n" +
-      "\372\3071\0061m-30m\022*\n\026cpu_utilization_target\030\006 \001" +
-      "(\001B\n\372\3071\00610-100\022)\n\024decommission_timeout\030\007" +
-      " \001(\003B\013\372\3071\0070-86400\"\200\003\n\nSubcluster\022\n\n\002id\030\001" +
-      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003" +
-      " \001(\0132\032.google.protobuf.Timestamp\022\026\n\004name" +
-      "\030\004 \001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex." +
-      "cloud.dataproc.v1.Role\0226\n\tresources\030\006 \001(" +
-      "\0132#.yandex.cloud.dataproc.v1.Resources\022\021" +
-      "\n\tsubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022\030" +
-      "\n\020assign_public_ip\030\t \001(\010\022G\n\022autoscaling_" +
-      "config\030\n \001(\0132+.yandex.cloud.dataproc.v1." +
-      "AutoscalingConfig\022\031\n\021instance_group_id\030\013" +
-      " \001(\t\"\250\001\n\004Host\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluste" +
-      "r_id\030\002 \001(\t\0220\n\006health\030\003 \001(\0162 .yandex.clou" +
-      "d.dataproc.v1.Health\022\033\n\023compute_instance" +
-      "_id\030\004 \001(\t\022,\n\004role\030\005 \001(\0162\036.yandex.cloud.d" +
-      "ataproc.v1.Role*K\n\004Role\022\024\n\020ROLE_UNSPECIF" +
-      "IED\020\000\022\016\n\nMASTERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013C" +
-      "OMPUTENODE\020\003Be\n\034yandex.cloud.api.datapro" +
-      "c.v1ZEgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/dataproc/v1;dataprocb\006pro" +
-      "to3"
+      "\372\3071\0061m-30m\022)\n\026cpu_utilization_target\030\006 \001" +
+      "(\001B\t\372\3071\0050-100\022)\n\024decommission_timeout\030\007 " +
+      "\001(\003B\013\372\3071\0070-86400\"\200\003\n\nSubcluster\022\n\n\002id\030\001 " +
+      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncreated_at\030\003 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\026\n\004name\030" +
+      "\004 \001(\tB\010\212\3101\0041-63\022,\n\004role\030\005 \001(\0162\036.yandex.c" +
+      "loud.dataproc.v1.Role\0226\n\tresources\030\006 \001(\013" +
+      "2#.yandex.cloud.dataproc.v1.Resources\022\021\n" +
+      "\tsubnet_id\030\007 \001(\t\022\023\n\013hosts_count\030\010 \001(\003\022\030\n" +
+      "\020assign_public_ip\030\t \001(\010\022G\n\022autoscaling_c" +
+      "onfig\030\n \001(\0132+.yandex.cloud.dataproc.v1.A" +
+      "utoscalingConfig\022\031\n\021instance_group_id\030\013 " +
+      "\001(\t\"\250\001\n\004Host\022\014\n\004name\030\001 \001(\t\022\025\n\rsubcluster" +
+      "_id\030\002 \001(\t\0220\n\006health\030\003 \001(\0162 .yandex.cloud" +
+      ".dataproc.v1.Health\022\033\n\023compute_instance_" +
+      "id\030\004 \001(\t\022,\n\004role\030\005 \001(\0162\036.yandex.cloud.da" +
+      "taproc.v1.Role*K\n\004Role\022\024\n\020ROLE_UNSPECIFI" +
+      "ED\020\000\022\016\n\nMASTERNODE\020\001\022\014\n\010DATANODE\020\002\022\017\n\013CO" +
+      "MPUTENODE\020\003Be\n\034yandex.cloud.api.dataproc" +
+      ".v1ZEgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/dataproc/v1;dataprocb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -8226,7 +8226,7 @@ public final class ProjectServiceOuterClass {
      * URL of the project that is being opened.
      * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
      * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-     * to fetch Datasphere web interface.
+     * to fetch DataSphere web interface.
      * </pre>
      *
      * <code>string project_url = 1;</code>
@@ -8238,7 +8238,7 @@ public final class ProjectServiceOuterClass {
      * URL of the project that is being opened.
      * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
      * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-     * to fetch Datasphere web interface.
+     * to fetch DataSphere web interface.
      * </pre>
      *
      * <code>string project_url = 1;</code>
@@ -8365,7 +8365,7 @@ public final class ProjectServiceOuterClass {
      * URL of the project that is being opened.
      * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
      * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-     * to fetch Datasphere web interface.
+     * to fetch DataSphere web interface.
      * </pre>
      *
      * <code>string project_url = 1;</code>
@@ -8389,7 +8389,7 @@ public final class ProjectServiceOuterClass {
      * URL of the project that is being opened.
      * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
      * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-     * to fetch Datasphere web interface.
+     * to fetch DataSphere web interface.
      * </pre>
      *
      * <code>string project_url = 1;</code>
@@ -8781,7 +8781,7 @@ public final class ProjectServiceOuterClass {
        * URL of the project that is being opened.
        * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
        * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-       * to fetch Datasphere web interface.
+       * to fetch DataSphere web interface.
        * </pre>
        *
        * <code>string project_url = 1;</code>
@@ -8804,7 +8804,7 @@ public final class ProjectServiceOuterClass {
        * URL of the project that is being opened.
        * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
        * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-       * to fetch Datasphere web interface.
+       * to fetch DataSphere web interface.
        * </pre>
        *
        * <code>string project_url = 1;</code>
@@ -8828,7 +8828,7 @@ public final class ProjectServiceOuterClass {
        * URL of the project that is being opened.
        * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
        * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-       * to fetch Datasphere web interface.
+       * to fetch DataSphere web interface.
        * </pre>
        *
        * <code>string project_url = 1;</code>
@@ -8850,7 +8850,7 @@ public final class ProjectServiceOuterClass {
        * URL of the project that is being opened.
        * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
        * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-       * to fetch Datasphere web interface.
+       * to fetch DataSphere web interface.
        * </pre>
        *
        * <code>string project_url = 1;</code>
@@ -8867,7 +8867,7 @@ public final class ProjectServiceOuterClass {
        * URL of the project that is being opened.
        * Make GET request to [project_url] with sessionToken query parameter equals to [session_token]
        * or POST request to [project_url] with sessionToken body parameter equals to [session_token]
-       * to fetch Datasphere web interface.
+       * to fetch DataSphere web interface.
        * </pre>
        *
        * <code>string project_url = 1;</code>

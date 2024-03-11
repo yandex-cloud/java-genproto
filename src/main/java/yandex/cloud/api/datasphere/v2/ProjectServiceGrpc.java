@@ -647,7 +647,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
+     * Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request,
@@ -952,7 +952,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
+     * Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request,
@@ -1140,7 +1140,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
+     * Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation execute(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest request) {
@@ -1328,7 +1328,7 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
-     * // Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
+     * Executes code of the specified notebook using configuration defined in the project settings. If the default project configuration is not specified, `c1.4` is used.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> execute(

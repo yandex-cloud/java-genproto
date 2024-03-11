@@ -4867,6 +4867,16 @@ public final class DnsZoneServiceOuterClass {
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
+
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.CreateDnsZoneRequest}
@@ -4979,6 +4989,11 @@ public final class DnsZoneServiceOuterClass {
                 publicVisibility_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -5392,6 +5407,21 @@ public final class DnsZoneServiceOuterClass {
       return getPublicVisibility();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5429,6 +5459,9 @@ public final class DnsZoneServiceOuterClass {
       }
       if (publicVisibility_ != null) {
         output.writeMessage(7, getPublicVisibility());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(8, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -5469,6 +5502,10 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPublicVisibility());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5504,6 +5541,8 @@ public final class DnsZoneServiceOuterClass {
         if (!getPublicVisibility()
             .equals(other.getPublicVisibility())) return false;
       }
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5535,6 +5574,9 @@ public final class DnsZoneServiceOuterClass {
         hash = (37 * hash) + PUBLIC_VISIBILITY_FIELD_NUMBER;
         hash = (53 * hash) + getPublicVisibility().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5711,6 +5753,8 @@ public final class DnsZoneServiceOuterClass {
           publicVisibility_ = null;
           publicVisibilityBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -5754,6 +5798,7 @@ public final class DnsZoneServiceOuterClass {
         } else {
           result.publicVisibility_ = publicVisibilityBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -5825,6 +5870,9 @@ public final class DnsZoneServiceOuterClass {
         }
         if (other.hasPublicVisibility()) {
           mergePublicVisibility(other.getPublicVisibility());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6736,6 +6784,49 @@ public final class DnsZoneServiceOuterClass {
         }
         return publicVisibilityBuilder_;
       }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7622,6 +7713,16 @@ public final class DnsZoneServiceOuterClass {
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
+
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.UpdateDnsZoneRequest}
@@ -7740,6 +7841,11 @@ public final class DnsZoneServiceOuterClass {
                 publicVisibility_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -8161,6 +8267,21 @@ public final class DnsZoneServiceOuterClass {
       return getPublicVisibility();
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     *Prevents accidental zone removal.
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     * @return The deletionProtection.
+     */
+    @java.lang.Override
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8198,6 +8319,9 @@ public final class DnsZoneServiceOuterClass {
       }
       if (publicVisibility_ != null) {
         output.writeMessage(7, getPublicVisibility());
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(8, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -8239,6 +8363,10 @@ public final class DnsZoneServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPublicVisibility());
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8277,6 +8405,8 @@ public final class DnsZoneServiceOuterClass {
         if (!getPublicVisibility()
             .equals(other.getPublicVisibility())) return false;
       }
+      if (getDeletionProtection()
+          != other.getDeletionProtection()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8310,6 +8440,9 @@ public final class DnsZoneServiceOuterClass {
         hash = (37 * hash) + PUBLIC_VISIBILITY_FIELD_NUMBER;
         hash = (53 * hash) + getPublicVisibility().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8490,6 +8623,8 @@ public final class DnsZoneServiceOuterClass {
           publicVisibility_ = null;
           publicVisibilityBuilder_ = null;
         }
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -8537,6 +8672,7 @@ public final class DnsZoneServiceOuterClass {
         } else {
           result.publicVisibility_ = publicVisibilityBuilder_.build();
         }
+        result.deletionProtection_ = deletionProtection_;
         onBuilt();
         return result;
       }
@@ -8607,6 +8743,9 @@ public final class DnsZoneServiceOuterClass {
         }
         if (other.hasPublicVisibility()) {
           mergePublicVisibility(other.getPublicVisibility());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9598,6 +9737,49 @@ public final class DnsZoneServiceOuterClass {
           publicVisibility_ = null;
         }
         return publicVisibilityBuilder_;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return The deletionProtection.
+       */
+      @java.lang.Override
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @param value The deletionProtection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Prevents accidental zone removal.
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23030,7 +23212,7 @@ public final class DnsZoneServiceOuterClass {
       "oken\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n" +
       "\212\3101\006<=1000\"`\n\024ListDnsZonesResponse\022/\n\tdn" +
       "s_zones\030\001 \003(\0132\034.yandex.cloud.dns.v1.DnsZ" +
-      "one\022\027\n\017next_page_token\030\002 \001(\t\"\213\004\n\024CreateD" +
+      "one\022\027\n\017next_page_token\030\002 \001(\t\"\250\004\n\024CreateD" +
       "nsZoneRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\212\3101\004<=" +
       "50\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
       "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
@@ -23042,122 +23224,124 @@ public final class DnsZoneServiceOuterClass {
       "[-a-z0-9.]*\\.\022B\n\022private_visibility\030\006 \001(" +
       "\0132&.yandex.cloud.dns.v1.PrivateVisibilit" +
       "y\022@\n\021public_visibility\030\007 \001(\0132%.yandex.cl" +
-      "oud.dns.v1.PublicVisibility\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025Cr" +
-      "eateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t" +
-      "\"\376\003\n\024UpdateDnsZoneRequest\022\033\n\013dns_zone_id" +
-      "\030\001 \001(\tB\006\212\3101\00220\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\004 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\005" +
-      " \003(\01325.yandex.cloud.dns.v1.UpdateDnsZone" +
-      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
-      "./\\@0-9a-z]*\022B\n\022private_visibility\030\006 \001(\013" +
-      "2&.yandex.cloud.dns.v1.PrivateVisibility" +
-      "\022@\n\021public_visibility\030\007 \001(\0132%.yandex.clo" +
-      "ud.dns.v1.PublicVisibility\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025Upd" +
-      "ateDnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t\"" +
-      "3\n\024DeleteDnsZoneRequest\022\033\n\013dns_zone_id\030\001" +
-      " \001(\tB\006\212\3101\00220\",\n\025DeleteDnsZoneMetadata\022\023\n" +
-      "\013dns_zone_id\030\001 \001(\t\"r\n\032GetDnsZoneRecordSe" +
-      "tRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\033\n" +
-      "\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=255\022\032\n\004type\030\003 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=10\"\226\001\n\034ListDnsZoneRecordSets" +
-      "Request\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_toke" +
-      "n\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
-      "\006<=1000\"m\n\035ListDnsZoneRecordSetsResponse" +
-      "\0223\n\013record_sets\030\001 \003(\0132\036.yandex.cloud.dns" +
-      ".v1.RecordSet\022\027\n\017next_page_token\030\002 \001(\t\"\264" +
-      "\001\n\027UpdateRecordSetsRequest\022\033\n\013dns_zone_i" +
-      "d\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.yan" +
-      "dex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022=" +
-      "\n\tadditions\030\003 \003(\0132\036.yandex.cloud.dns.v1." +
-      "RecordSetB\n\202\3101\006<=1000\"\032\n\030UpdateRecordSet" +
-      "sMetadata\"\363\001\n\027UpsertRecordSetsRequest\022\033\n" +
-      "\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030" +
-      "\002 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB\n\202" +
-      "\3101\006<=1000\022@\n\014replacements\030\003 \003(\0132\036.yandex" +
-      ".cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n\006m" +
-      "erges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Record" +
-      "SetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMetad" +
-      "ata\"u\n\rRecordSetDiff\0221\n\tadditions\030\001 \003(\0132" +
-      "\036.yandex.cloud.dns.v1.RecordSet\0221\n\tdelet" +
-      "ions\030\002 \003(\0132\036.yandex.cloud.dns.v1.RecordS" +
-      "et\"\226\001\n\034ListDnsZoneOperationsRequest\022\033\n\013d" +
-      "ns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101" +
-      "\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035L" +
-      "istDnsZoneOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t2\310\023\n\016DnsZone" +
-      "Service\022p\n\003Get\022&.yandex.cloud.dns.v1.Get" +
-      "DnsZoneRequest\032\034.yandex.cloud.dns.v1.Dns" +
-      "Zone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone_id" +
-      "}\022r\n\004List\022(.yandex.cloud.dns.v1.ListDnsZ" +
-      "onesRequest\032).yandex.cloud.dns.v1.ListDn" +
-      "sZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022\224\001" +
-      "\n\006Create\022).yandex.cloud.dns.v1.CreateDns" +
-      "ZoneRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025Cr" +
-      "eateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Update\022" +
-      ").yandex.cloud.dns.v1.UpdateDnsZoneReque" +
-      "st\032!.yandex.cloud.operation.Operation\"J\202" +
-      "\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*\262\322*" +
-      " \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n\006De" +
-      "lete\022).yandex.cloud.dns.v1.DeleteDnsZone" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_id}\262" +
-      "\322*.\n\025DeleteDnsZoneMetadata\022\025google.proto" +
-      "buf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.clou" +
-      "d.dns.v1.GetDnsZoneRecordSetRequest\032\036.ya" +
-      "ndex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(/dn" +
-      "s/v1/zones/{dns_zone_id}:getRecordSet\022\253\001" +
-      "\n\016ListRecordSets\0221.yandex.cloud.dns.v1.L" +
-      "istDnsZoneRecordSetsRequest\0322.yandex.clo" +
-      "ud.dns.v1.ListDnsZoneRecordSetsResponse\"" +
-      "2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:lis" +
-      "tRecordSets\022\311\001\n\020UpdateRecordSets\022,.yande" +
-      "x.cloud.dns.v1.UpdateRecordSetsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"d\202\323\344\223\002" +
-      "1\",/dns/v1/zones/{dns_zone_id}:updateRec" +
-      "ordSets:\001*\262\322*)\n\030UpdateRecordSetsMetadata" +
-      "\022\rRecordSetDiff\022\311\001\n\020UpsertRecordSets\022,.y" +
-      "andex.cloud.dns.v1.UpsertRecordSetsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"d\202" +
-      "\323\344\223\0021\",/dns/v1/zones/{dns_zone_id}:upser" +
-      "tRecordSets:\001*\262\322*)\n\030UpsertRecordSetsMeta" +
-      "data\022\rRecordSetDiff\022\247\001\n\016ListOperations\0221" +
-      ".yandex.cloud.dns.v1.ListDnsZoneOperatio" +
-      "nsRequest\0322.yandex.cloud.dns.v1.ListDnsZ" +
-      "oneOperationsResponse\".\202\323\344\223\002(\022&/dns/v1/z" +
-      "ones/{dns_zone_id}/operations\022\255\001\n\022ListAc" +
-      "cessBindings\022..yandex.cloud.access.ListA" +
-      "ccessBindingsRequest\032/.yandex.cloud.acce" +
-      "ss.ListAccessBindingsResponse\"6\202\323\344\223\0020\022./" +
-      "dns/v1/zones/{resource_id}:listAccessBin" +
-      "dings\022\334\001\n\021SetAccessBindings\022-.yandex.clo" +
-      "ud.access.SetAccessBindingsRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"u\202\323\344\223\0022\"-/" +
-      "dns/v1/zones/{resource_id}:setAccessBind" +
-      "ings:\001*\262\322*9\n access.SetAccessBindingsMet" +
-      "adata\022\025google.protobuf.Empty\022\350\001\n\024UpdateA" +
-      "ccessBindings\0220.yandex.cloud.access.Upda" +
-      "teAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"{\202\323\344\223\0025\"0/dns/v1/zone" +
-      "s/{resource_id}:updateAccessBindings:\001*\262" +
-      "\322*<\n#access.UpdateAccessBindingsMetadata" +
-      "\022\025google.protobuf.Empty\022\345\001\n\025UpdatePrivat" +
-      "eNetworks\0228.yandex.cloud.dns.v1.UpdateDn" +
-      "sZonePrivateNetworksRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"o\202\323\344\223\002621/dns/v1/" +
-      "zones/{dns_zone_id}:updatePrivateNetwork" +
-      "s:\001*\262\322*/\n$UpdateDnsZonePrivateNetworksMe" +
-      "tadata\022\007DnsZoneBV\n\027yandex.cloud.api.dns." +
-      "v1Z;github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/dns/v1;dnsb\006proto3"
+      "oud.dns.v1.PublicVisibility\022\033\n\023deletion_" +
+      "protection\030\010 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\",\n\025CreateDnsZone" +
+      "Metadata\022\023\n\013dns_zone_id\030\001 \001(\t\"\233\004\n\024Update" +
+      "DnsZoneRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101" +
+      "\00220\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([" +
+      "-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
+      "\004 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\005 \003(\01325.yand" +
+      "ex.cloud.dns.v1.UpdateDnsZoneRequest.Lab" +
+      "elsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9" +
+      "a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]" +
+      "*\022B\n\022private_visibility\030\006 \001(\0132&.yandex.c" +
+      "loud.dns.v1.PrivateVisibility\022@\n\021public_" +
+      "visibility\030\007 \001(\0132%.yandex.cloud.dns.v1.P" +
+      "ublicVisibility\022\033\n\023deletion_protection\030\010" +
+      " \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\",\n\025UpdateDnsZoneMetadata\022\023\n\013" +
+      "dns_zone_id\030\001 \001(\t\"3\n\024DeleteDnsZoneReques" +
+      "t\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\",\n\025Delete" +
+      "DnsZoneMetadata\022\023\n\013dns_zone_id\030\001 \001(\t\"r\n\032" +
+      "GetDnsZoneRecordSetRequest\022\033\n\013dns_zone_i" +
+      "d\030\001 \001(\tB\006\212\3101\00220\022\033\n\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<" +
+      "=255\022\032\n\004type\030\003 \001(\tB\014\350\3071\001\212\3101\004<=10\"\226\001\n\034Lis" +
+      "tDnsZoneRecordSetsRequest\022\033\n\013dns_zone_id" +
+      "\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n" +
+      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035ListDnsZone" +
+      "RecordSetsResponse\0223\n\013record_sets\030\001 \003(\0132" +
+      "\036.yandex.cloud.dns.v1.RecordSet\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\264\001\n\027UpdateRecordSetsReq" +
+      "uest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdel" +
+      "etions\030\002 \003(\0132\036.yandex.cloud.dns.v1.Recor" +
+      "dSetB\n\202\3101\006<=1000\022=\n\tadditions\030\003 \003(\0132\036.ya" +
+      "ndex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\"" +
+      "\032\n\030UpdateRecordSetsMetadata\"\363\001\n\027UpsertRe" +
+      "cordSetsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\310" +
+      "1\00220\022=\n\tdeletions\030\002 \003(\0132\036.yandex.cloud.d" +
+      "ns.v1.RecordSetB\n\202\3101\006<=1000\022@\n\014replaceme" +
+      "nts\030\003 \003(\0132\036.yandex.cloud.dns.v1.RecordSe" +
+      "tB\n\202\3101\006<=1000\022:\n\006merges\030\004 \003(\0132\036.yandex.c" +
+      "loud.dns.v1.RecordSetB\n\202\3101\006<=1000\"\032\n\030Ups" +
+      "ertRecordSetsMetadata\"u\n\rRecordSetDiff\0221" +
+      "\n\tadditions\030\001 \003(\0132\036.yandex.cloud.dns.v1." +
+      "RecordSet\0221\n\tdeletions\030\002 \003(\0132\036.yandex.cl" +
+      "oud.dns.v1.RecordSet\"\226\001\n\034ListDnsZoneOper" +
+      "ationsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\002" +
+      "20\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npag" +
+      "e_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(" +
+      "\tB\n\212\3101\006<=1000\"o\n\035ListDnsZoneOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t2\310\023\n\016DnsZoneService\022p\n\003Get\022&.yande" +
+      "x.cloud.dns.v1.GetDnsZoneRequest\032\034.yande" +
+      "x.cloud.dns.v1.DnsZone\"#\202\323\344\223\002\035\022\033/dns/v1/" +
+      "zones/{dns_zone_id}\022r\n\004List\022(.yandex.clo" +
+      "ud.dns.v1.ListDnsZonesRequest\032).yandex.c" +
+      "loud.dns.v1.ListDnsZonesResponse\"\025\202\323\344\223\002\017" +
+      "\022\r/dns/v1/zones\022\224\001\n\006Create\022).yandex.clou" +
+      "d.dns.v1.CreateDnsZoneRequest\032!.yandex.c" +
+      "loud.operation.Operation\"<\202\323\344\223\002\022\"\r/dns/v" +
+      "1/zones:\001*\262\322* \n\025CreateDnsZoneMetadata\022\007D" +
+      "nsZone\022\242\001\n\006Update\022).yandex.cloud.dns.v1." +
+      "UpdateDnsZoneRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"J\202\323\344\223\002 2\033/dns/v1/zones/{" +
+      "dns_zone_id}:\001*\262\322* \n\025UpdateDnsZoneMetada" +
+      "ta\022\007DnsZone\022\255\001\n\006Delete\022).yandex.cloud.dn" +
+      "s.v1.DeleteDnsZoneRequest\032!.yandex.cloud" +
+      ".operation.Operation\"U\202\323\344\223\002\035*\033/dns/v1/zo" +
+      "nes/{dns_zone_id}\262\322*.\n\025DeleteDnsZoneMeta" +
+      "data\022\025google.protobuf.Empty\022\221\001\n\014GetRecor" +
+      "dSet\022/.yandex.cloud.dns.v1.GetDnsZoneRec" +
+      "ordSetRequest\032\036.yandex.cloud.dns.v1.Reco" +
+      "rdSet\"0\202\323\344\223\002*\022(/dns/v1/zones/{dns_zone_i" +
+      "d}:getRecordSet\022\253\001\n\016ListRecordSets\0221.yan" +
+      "dex.cloud.dns.v1.ListDnsZoneRecordSetsRe" +
+      "quest\0322.yandex.cloud.dns.v1.ListDnsZoneR" +
+      "ecordSetsResponse\"2\202\323\344\223\002,\022*/dns/v1/zones" +
+      "/{dns_zone_id}:listRecordSets\022\311\001\n\020Update" +
+      "RecordSets\022,.yandex.cloud.dns.v1.UpdateR" +
+      "ecordSetsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"d\202\323\344\223\0021\",/dns/v1/zones/{dns_" +
+      "zone_id}:updateRecordSets:\001*\262\322*)\n\030Update" +
+      "RecordSetsMetadata\022\rRecordSetDiff\022\311\001\n\020Up" +
+      "sertRecordSets\022,.yandex.cloud.dns.v1.Ups" +
+      "ertRecordSetsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"d\202\323\344\223\0021\",/dns/v1/zones/{" +
+      "dns_zone_id}:upsertRecordSets:\001*\262\322*)\n\030Up" +
+      "sertRecordSetsMetadata\022\rRecordSetDiff\022\247\001" +
+      "\n\016ListOperations\0221.yandex.cloud.dns.v1.L" +
+      "istDnsZoneOperationsRequest\0322.yandex.clo" +
+      "ud.dns.v1.ListDnsZoneOperationsResponse\"" +
+      ".\202\323\344\223\002(\022&/dns/v1/zones/{dns_zone_id}/ope" +
+      "rations\022\255\001\n\022ListAccessBindings\022..yandex." +
+      "cloud.access.ListAccessBindingsRequest\032/" +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "esponse\"6\202\323\344\223\0020\022./dns/v1/zones/{resource" +
+      "_id}:listAccessBindings\022\334\001\n\021SetAccessBin" +
+      "dings\022-.yandex.cloud.access.SetAccessBin" +
+      "dingsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"u\202\323\344\223\0022\"-/dns/v1/zones/{resource" +
+      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
+      "tAccessBindingsMetadata\022\025google.protobuf" +
+      ".Empty\022\350\001\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"{\202\323" +
+      "\344\223\0025\"0/dns/v1/zones/{resource_id}:update" +
+      "AccessBindings:\001*\262\322*<\n#access.UpdateAcce" +
+      "ssBindingsMetadata\022\025google.protobuf.Empt" +
+      "y\022\345\001\n\025UpdatePrivateNetworks\0228.yandex.clo" +
+      "ud.dns.v1.UpdateDnsZonePrivateNetworksRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"o\202\323\344\223\002621/dns/v1/zones/{dns_zone_id}:up" +
+      "datePrivateNetworks:\001*\262\322*/\n$UpdateDnsZon" +
+      "ePrivateNetworksMetadata\022\007DnsZoneBV\n\027yan" +
+      "dex.cloud.api.dns.v1Z;github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/dns/v1;dn" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23205,7 +23389,7 @@ public final class DnsZoneServiceOuterClass {
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Zone", "PrivateVisibility", "PublicVisibility", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Zone", "PrivateVisibility", "PublicVisibility", "DeletionProtection", });
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dns_v1_CreateDnsZoneRequest_LabelsEntry_fieldAccessorTable = new
@@ -23223,7 +23407,7 @@ public final class DnsZoneServiceOuterClass {
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_descriptor,
-        new java.lang.String[] { "DnsZoneId", "UpdateMask", "Name", "Description", "Labels", "PrivateVisibility", "PublicVisibility", });
+        new java.lang.String[] { "DnsZoneId", "UpdateMask", "Name", "Description", "Labels", "PrivateVisibility", "PublicVisibility", "DeletionProtection", });
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dns_v1_UpdateDnsZoneRequest_LabelsEntry_fieldAccessorTable = new
