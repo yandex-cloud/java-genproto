@@ -452,6 +452,68 @@ public final class InstanceServiceGrpc {
     return getDetachFilesystemMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachNetworkInterfaceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AttachNetworkInterface",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachNetworkInterfaceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachNetworkInterfaceMethod;
+    if ((getAttachNetworkInterfaceMethod = InstanceServiceGrpc.getAttachNetworkInterfaceMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getAttachNetworkInterfaceMethod = InstanceServiceGrpc.getAttachNetworkInterfaceMethod) == null) {
+          InstanceServiceGrpc.getAttachNetworkInterfaceMethod = getAttachNetworkInterfaceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AttachNetworkInterface"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("AttachNetworkInterface"))
+              .build();
+        }
+      }
+    }
+    return getAttachNetworkInterfaceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachNetworkInterfaceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DetachNetworkInterface",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachNetworkInterfaceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachNetworkInterfaceMethod;
+    if ((getDetachNetworkInterfaceMethod = InstanceServiceGrpc.getDetachNetworkInterfaceMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getDetachNetworkInterfaceMethod = InstanceServiceGrpc.getDetachNetworkInterfaceMethod) == null) {
+          InstanceServiceGrpc.getDetachNetworkInterfaceMethod = getDetachNetworkInterfaceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DetachNetworkInterface"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("DetachNetworkInterface"))
+              .build();
+        }
+      }
+    }
+    return getDetachNetworkInterfaceMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getAddOneToOneNatMethod;
 
@@ -940,9 +1002,6 @@ public final class InstanceServiceGrpc {
      * <pre>
      * Attaches the filesystem to the instance.
      * The instance and the filesystem must reside in the same availability zone.
-     * To attach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * To use the instance with an attached filesystem, the latter must be mounted.
      * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
@@ -955,14 +1014,37 @@ public final class InstanceServiceGrpc {
     /**
      * <pre>
      * Detaches the filesystem from the instance.
-     * To detach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * </pre>
      */
     public void detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDetachFilesystemMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Attaches the network-interface to the instance.
+     * To attach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public void attachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAttachNetworkInterfaceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches the network-interface to the instance.
+     * To Detach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public void detachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDetachNetworkInterfaceMethod(), responseObserver);
     }
 
     /**
@@ -1166,6 +1248,20 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DETACH_FILESYSTEM)))
+          .addMethod(
+            getAttachNetworkInterfaceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ATTACH_NETWORK_INTERFACE)))
+          .addMethod(
+            getDetachNetworkInterfaceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DETACH_NETWORK_INTERFACE)))
           .addMethod(
             getAddOneToOneNatMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1396,9 +1492,6 @@ public final class InstanceServiceGrpc {
      * <pre>
      * Attaches the filesystem to the instance.
      * The instance and the filesystem must reside in the same availability zone.
-     * To attach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * To use the instance with an attached filesystem, the latter must be mounted.
      * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
@@ -1412,15 +1505,40 @@ public final class InstanceServiceGrpc {
     /**
      * <pre>
      * Detaches the filesystem from the instance.
-     * To detach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * </pre>
      */
     public void detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDetachFilesystemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Attaches the network-interface to the instance.
+     * To attach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public void attachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAttachNetworkInterfaceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches the network-interface to the instance.
+     * To Detach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public void detachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDetachNetworkInterfaceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1679,9 +1797,6 @@ public final class InstanceServiceGrpc {
      * <pre>
      * Attaches the filesystem to the instance.
      * The instance and the filesystem must reside in the same availability zone.
-     * To attach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * To use the instance with an attached filesystem, the latter must be mounted.
      * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
@@ -1694,14 +1809,37 @@ public final class InstanceServiceGrpc {
     /**
      * <pre>
      * Detaches the filesystem from the instance.
-     * To detach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDetachFilesystemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Attaches the network-interface to the instance.
+     * To attach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation attachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAttachNetworkInterfaceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches the network-interface to the instance.
+     * To Detach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation detachNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDetachNetworkInterfaceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1962,9 +2100,6 @@ public final class InstanceServiceGrpc {
      * <pre>
      * Attaches the filesystem to the instance.
      * The instance and the filesystem must reside in the same availability zone.
-     * To attach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * To use the instance with an attached filesystem, the latter must be mounted.
      * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
@@ -1978,15 +2113,40 @@ public final class InstanceServiceGrpc {
     /**
      * <pre>
      * Detaches the filesystem from the instance.
-     * To detach a filesystem, the instance must have a `STOPPED` status ([Instance.status]).
-     * To check the instance status, make a [InstanceService.Get] request.
-     * To stop the running instance, make a [InstanceService.Stop] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> detachFilesystem(
         yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDetachFilesystemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Attaches the network-interface to the instance.
+     * To attach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> attachNetworkInterface(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAttachNetworkInterfaceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches the network-interface to the instance.
+     * To Detach a network-interface, the instance must have a `STOPPED` status ([Instance.status]).
+     * To check the instance status, make a [InstanceService.Get] request.
+     * To stop the running instance, make a [InstanceService.Stop] request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> detachNetworkInterface(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDetachNetworkInterfaceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -2115,16 +2275,18 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_DETACH_DISK = 11;
   private static final int METHODID_ATTACH_FILESYSTEM = 12;
   private static final int METHODID_DETACH_FILESYSTEM = 13;
-  private static final int METHODID_ADD_ONE_TO_ONE_NAT = 14;
-  private static final int METHODID_REMOVE_ONE_TO_ONE_NAT = 15;
-  private static final int METHODID_UPDATE_NETWORK_INTERFACE = 16;
-  private static final int METHODID_LIST_OPERATIONS = 17;
-  private static final int METHODID_MOVE = 18;
-  private static final int METHODID_RELOCATE = 19;
-  private static final int METHODID_SIMULATE_MAINTENANCE_EVENT = 20;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 21;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 22;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 23;
+  private static final int METHODID_ATTACH_NETWORK_INTERFACE = 14;
+  private static final int METHODID_DETACH_NETWORK_INTERFACE = 15;
+  private static final int METHODID_ADD_ONE_TO_ONE_NAT = 16;
+  private static final int METHODID_REMOVE_ONE_TO_ONE_NAT = 17;
+  private static final int METHODID_UPDATE_NETWORK_INTERFACE = 18;
+  private static final int METHODID_LIST_OPERATIONS = 19;
+  private static final int METHODID_MOVE = 20;
+  private static final int METHODID_RELOCATE = 21;
+  private static final int METHODID_SIMULATE_MAINTENANCE_EVENT = 22;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 23;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 24;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2197,6 +2359,14 @@ public final class InstanceServiceGrpc {
           break;
         case METHODID_DETACH_FILESYSTEM:
           serviceImpl.detachFilesystem((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ATTACH_NETWORK_INTERFACE:
+          serviceImpl.attachNetworkInterface((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DETACH_NETWORK_INTERFACE:
+          serviceImpl.detachNetworkInterface((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ADD_ONE_TO_ONE_NAT:
@@ -2314,6 +2484,8 @@ public final class InstanceServiceGrpc {
               .addMethod(getDetachDiskMethod())
               .addMethod(getAttachFilesystemMethod())
               .addMethod(getDetachFilesystemMethod())
+              .addMethod(getAttachNetworkInterfaceMethod())
+              .addMethod(getDetachNetworkInterfaceMethod())
               .addMethod(getAddOneToOneNatMethod())
               .addMethod(getRemoveOneToOneNatMethod())
               .addMethod(getUpdateNetworkInterfaceMethod())

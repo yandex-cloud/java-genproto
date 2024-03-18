@@ -27815,7 +27815,7 @@ public final class TriggerOuterClass {
      * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
-     * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The size.
      */
     long getSize();
@@ -27957,7 +27957,7 @@ public final class TriggerOuterClass {
      * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
-     * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -28350,7 +28350,7 @@ public final class TriggerOuterClass {
        * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The size.
        */
       @java.lang.Override
@@ -28363,7 +28363,7 @@ public final class TriggerOuterClass {
        * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The size to set.
        * @return This builder for chaining.
        */
@@ -28379,7 +28379,7 @@ public final class TriggerOuterClass {
        * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSize() {
@@ -29407,7 +29407,7 @@ public final class TriggerOuterClass {
      * when the number of log events reaches this value, or the [cutoff] time has passed.
      * </pre>
      *
-     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-1000"];</code>
      * @return The size.
      */
     long getSize();
@@ -29545,7 +29545,7 @@ public final class TriggerOuterClass {
      * when the number of log events reaches this value, or the [cutoff] time has passed.
      * </pre>
      *
-     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-1000"];</code>
      * @return The size.
      */
     @java.lang.Override
@@ -29934,7 +29934,7 @@ public final class TriggerOuterClass {
        * when the number of log events reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-1000"];</code>
        * @return The size.
        */
       @java.lang.Override
@@ -29947,7 +29947,7 @@ public final class TriggerOuterClass {
        * when the number of log events reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-1000"];</code>
        * @param value The size to set.
        * @return This builder for chaining.
        */
@@ -29963,7 +29963,7 @@ public final class TriggerOuterClass {
        * when the number of log events reaches this value, or the [cutoff] time has passed.
        * </pre>
        *
-       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-100"];</code>
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSize() {
@@ -37708,58 +37708,59 @@ public final class TriggerOuterClass {
       "ter_queue\030\006 \001(\01324.yandex.cloud.serverles" +
       "s.triggers.v1.PutQueueMessage\"M\n\017PutQueu" +
       "eMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_ac" +
-      "count_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSet" +
-      "tings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030" +
-      "\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\"g" +
-      "\n\026CloudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B\t" +
-      "\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.google.proto" +
-      "buf.DurationB\t\372\3071\0051s-1m\"e\n\024LoggingBatchS" +
-      "ettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cuto" +
-      "ff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071" +
-      "\0051s-1m\"m\n\rRetrySettings\022\037\n\016retry_attempt" +
-      "s\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.goo" +
-      "gle.protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\232\002" +
-      "\n\rBillingBudget\022(\n\022billing_account_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\310" +
-      "1\004<=50\022W\n\017invoke_function\030e \001(\0132<.yandex" +
-      ".cloud.serverless.triggers.v1.InvokeFunc" +
-      "tionWithRetryH\000\022Y\n\020invoke_container\030g \001(" +
-      "\0132=.yandex.cloud.serverless.triggers.v1." +
-      "InvokeContainerWithRetryH\000B\016\n\006action\022\004\300\301" +
-      "1\001\"j\n\027DataStreamBatchSettings\022\031\n\004size\030\001 " +
-      "\001(\003B\013\372\3071\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.googl" +
-      "e.protobuf.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDataS" +
-      "tream\022\020\n\010endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(" +
-      "\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022service_account_id\030" +
-      "\004 \001(\t\022T\n\016batch_settings\030\005 \001(\0132<.yandex.c" +
-      "loud.serverless.triggers.v1.DataStreamBa" +
-      "tchSettings\022W\n\017invoke_function\030\r \001(\0132<.y" +
-      "andex.cloud.serverless.triggers.v1.Invok" +
-      "eFunctionWithRetryH\000\022Y\n\020invoke_container" +
-      "\030\017 \001(\0132=.yandex.cloud.serverless.trigger" +
-      "s.v1.InvokeContainerWithRetryH\000B\016\n\006actio" +
-      "n\022\004\300\3011\001\"v\n\033ObjectStorageBucketSettings\022-" +
-      "\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9a-z" +
-      "A-Z]*\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"\203\003\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016batch" +
-      "_settings\030\003 \001(\01322.yandex.cloud.serverles" +
-      "s.triggers.v1.BatchSettings\022\\\n\022attachmen" +
-      "ts_bucket\030\004 \001(\0132@.yandex.cloud.serverles" +
-      "s.triggers.v1.ObjectStorageBucketSetting" +
-      "s\022W\n\017invoke_function\030e \001(\0132<.yandex.clou" +
-      "d.serverless.triggers.v1.InvokeFunctionW" +
-      "ithRetryH\000\022Y\n\020invoke_container\030g \001(\0132=.y" +
-      "andex.cloud.serverless.triggers.v1.Invok" +
-      "eContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001*\342\001" +
-      "\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT" +
-      "_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n\016OB" +
-      "JECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006\022\016" +
-      "\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_B" +
-      "UDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.clo" +
-      "ud.api.serverless.triggers.v1ZPgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "serverless/triggers/v1;triggersb\006proto3"
+      "count_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"Z\n\rBatchSet" +
+      "tings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n\006cutof" +
+      "f\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001" +
+      "\"g\n\026CloudLogsBatchSettings\022\027\n\004size\030\001 \001(\003" +
+      "B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.google.pro" +
+      "tobuf.DurationB\t\372\3071\0051s-1m\"f\n\024LoggingBatc" +
+      "hSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-1000\0224\n\006c" +
+      "utoff\030\002 \001(\0132\031.google.protobuf.DurationB\t" +
+      "\372\3071\0051s-1m\"m\n\rRetrySettings\022\037\n\016retry_atte" +
+      "mpts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031." +
+      "google.protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001" +
+      "\"\232\002\n\rBillingBudget\022(\n\022billing_account_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB" +
+      "\010\212\3101\004<=50\022W\n\017invoke_function\030e \001(\0132<.yan" +
+      "dex.cloud.serverless.triggers.v1.InvokeF" +
+      "unctionWithRetryH\000\022Y\n\020invoke_container\030g" +
+      " \001(\0132=.yandex.cloud.serverless.triggers." +
+      "v1.InvokeContainerWithRetryH\000B\016\n\006action\022" +
+      "\004\300\3011\001\"j\n\027DataStreamBatchSettings\022\031\n\004size" +
+      "\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDa" +
+      "taStream\022\020\n\010endpoint\030\001 \001(\t\022\020\n\010database\030\002" +
+      " \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022service_account_" +
+      "id\030\004 \001(\t\022T\n\016batch_settings\030\005 \001(\0132<.yande" +
+      "x.cloud.serverless.triggers.v1.DataStrea" +
+      "mBatchSettings\022W\n\017invoke_function\030\r \001(\0132" +
+      "<.yandex.cloud.serverless.triggers.v1.In" +
+      "vokeFunctionWithRetryH\000\022Y\n\020invoke_contai" +
+      "ner\030\017 \001(\0132=.yandex.cloud.serverless.trig" +
+      "gers.v1.InvokeContainerWithRetryH\000B\016\n\006ac" +
+      "tion\022\004\300\3011\001\"v\n\033ObjectStorageBucketSetting" +
+      "s\022-\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9" +
+      "a-zA-Z]*\022(\n\022service_account_id\030\002 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"\203\003\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016ba" +
+      "tch_settings\030\003 \001(\01322.yandex.cloud.server" +
+      "less.triggers.v1.BatchSettings\022\\\n\022attach" +
+      "ments_bucket\030\004 \001(\0132@.yandex.cloud.server" +
+      "less.triggers.v1.ObjectStorageBucketSett" +
+      "ings\022W\n\017invoke_function\030e \001(\0132<.yandex.c" +
+      "loud.serverless.triggers.v1.InvokeFuncti" +
+      "onWithRetryH\000\022Y\n\020invoke_container\030g \001(\0132" +
+      "=.yandex.cloud.serverless.triggers.v1.In" +
+      "vokeContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001" +
+      "*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECI" +
+      "FIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013" +
+      "IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n" +
+      "\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020" +
+      "\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLIN" +
+      "G_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex." +
+      "cloud.api.serverless.triggers.v1ZPgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/serverless/triggers/v1;triggersb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

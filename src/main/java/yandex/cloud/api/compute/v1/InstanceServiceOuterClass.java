@@ -31695,6 +31695,3867 @@ public final class InstanceServiceOuterClass {
 
   }
 
+  public interface AttachInstanceNetworkInterfaceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * The index of the network interface
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The networkInterfaceIndex.
+     */
+    java.lang.String getNetworkInterfaceIndex();
+    /**
+     * <pre>
+     * The index of the network interface
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes();
+
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     * @return Whether the primaryV4AddressSpec field is set.
+     */
+    boolean hasPrimaryV4AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     * @return The primaryV4AddressSpec.
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec();
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder();
+
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @return A list containing the securityGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The count of securityGroupIds.
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest}
+   */
+  public static final class AttachInstanceNetworkInterfaceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest)
+      AttachInstanceNetworkInterfaceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachInstanceNetworkInterfaceRequest.newBuilder() to construct.
+    private AttachInstanceNetworkInterfaceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachInstanceNetworkInterfaceRequest() {
+      instanceId_ = "";
+      networkInterfaceIndex_ = "";
+      subnetId_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AttachInstanceNetworkInterfaceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachInstanceNetworkInterfaceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkInterfaceIndex_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder subBuilder = null;
+              if (primaryV4AddressSpec_ != null) {
+                subBuilder = primaryV4AddressSpec_.toBuilder();
+              }
+              primaryV4AddressSpec_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(primaryV4AddressSpec_);
+                primaryV4AddressSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
+    private volatile java.lang.Object networkInterfaceIndex_;
+    /**
+     * <pre>
+     * The index of the network interface
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public java.lang.String getNetworkInterfaceIndex() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkInterfaceIndex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The index of the network interface
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkInterfaceIndex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
+     * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRIMARY_V4_ADDRESS_SPEC_FIELD_NUMBER = 4;
+    private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec primaryV4AddressSpec_;
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     * @return Whether the primaryV4AddressSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrimaryV4AddressSpec() {
+      return primaryV4AddressSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     * @return The primaryV4AddressSpec.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec() {
+      return primaryV4AddressSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+    }
+    /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
+      return getPrimaryV4AddressSpec();
+    }
+
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @return A list containing the securityGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The count of securityGroupIds.
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, networkInterfaceIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subnetId_);
+      }
+      if (primaryV4AddressSpec_ != null) {
+        output.writeMessage(4, getPrimaryV4AddressSpec());
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityGroupIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, networkInterfaceIndex_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, subnetId_);
+      }
+      if (primaryV4AddressSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPrimaryV4AddressSpec());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getNetworkInterfaceIndex()
+          .equals(other.getNetworkInterfaceIndex())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (hasPrimaryV4AddressSpec() != other.hasPrimaryV4AddressSpec()) return false;
+      if (hasPrimaryV4AddressSpec()) {
+        if (!getPrimaryV4AddressSpec()
+            .equals(other.getPrimaryV4AddressSpec())) return false;
+      }
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + NETWORK_INTERFACE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkInterfaceIndex().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      if (hasPrimaryV4AddressSpec()) {
+        hash = (37 * hash) + PRIMARY_V4_ADDRESS_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getPrimaryV4AddressSpec().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        networkInterfaceIndex_ = "";
+
+        subnetId_ = "";
+
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = null;
+        } else {
+          primaryV4AddressSpec_ = null;
+          primaryV4AddressSpecBuilder_ = null;
+        }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.instanceId_ = instanceId_;
+        result.networkInterfaceIndex_ = networkInterfaceIndex_;
+        result.subnetId_ = subnetId_;
+        if (primaryV4AddressSpecBuilder_ == null) {
+          result.primaryV4AddressSpec_ = primaryV4AddressSpec_;
+        } else {
+          result.primaryV4AddressSpec_ = primaryV4AddressSpecBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getNetworkInterfaceIndex().isEmpty()) {
+          networkInterfaceIndex_ = other.networkInterfaceIndex_;
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (other.hasPrimaryV4AddressSpec()) {
+          mergePrimaryV4AddressSpec(other.getPrimaryV4AddressSpec());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object networkInterfaceIndex_ = "";
+      /**
+       * <pre>
+       * The index of the network interface
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The networkInterfaceIndex.
+       */
+      public java.lang.String getNetworkInterfaceIndex() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkInterfaceIndex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for networkInterfaceIndex.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkInterfaceIndexBytes() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkInterfaceIndex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkInterfaceIndex() {
+        
+        networkInterfaceIndex_ = getDefaultInstance().getNetworkInterfaceIndex();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
+       * <code>string subnet_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec primaryV4AddressSpec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder> primaryV4AddressSpecBuilder_;
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       * @return Whether the primaryV4AddressSpec field is set.
+       */
+      public boolean hasPrimaryV4AddressSpec() {
+        return primaryV4AddressSpecBuilder_ != null || primaryV4AddressSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       * @return The primaryV4AddressSpec.
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          return primaryV4AddressSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+        } else {
+          return primaryV4AddressSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public Builder setPrimaryV4AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          primaryV4AddressSpec_ = value;
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public Builder setPrimaryV4AddressSpec(
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder builderForValue) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public Builder mergePrimaryV4AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          if (primaryV4AddressSpec_ != null) {
+            primaryV4AddressSpec_ =
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.newBuilder(primaryV4AddressSpec_).mergeFrom(value).buildPartial();
+          } else {
+            primaryV4AddressSpec_ = value;
+          }
+          onChanged();
+        } else {
+          primaryV4AddressSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public Builder clearPrimaryV4AddressSpec() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpec_ = null;
+          onChanged();
+        } else {
+          primaryV4AddressSpec_ = null;
+          primaryV4AddressSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder getPrimaryV4AddressSpecBuilder() {
+        
+        onChanged();
+        return getPrimaryV4AddressSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
+        if (primaryV4AddressSpecBuilder_ != null) {
+          return primaryV4AddressSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return primaryV4AddressSpec_ == null ?
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder> 
+          getPrimaryV4AddressSpecFieldBuilder() {
+        if (primaryV4AddressSpecBuilder_ == null) {
+          primaryV4AddressSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder>(
+                  getPrimaryV4AddressSpec(),
+                  getParentForChildren(),
+                  isClean());
+          primaryV4AddressSpec_ = null;
+        }
+        return primaryV4AddressSpecBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @return A list containing the securityGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The count of securityGroupIds.
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceRequest)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachInstanceNetworkInterfaceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AttachInstanceNetworkInterfaceRequest>() {
+      @java.lang.Override
+      public AttachInstanceNetworkInterfaceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachInstanceNetworkInterfaceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachInstanceNetworkInterfaceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachInstanceNetworkInterfaceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AttachInstanceNetworkInterfaceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <code>string network_interface_index = 2;</code>
+     * @return The networkInterfaceIndex.
+     */
+    java.lang.String getNetworkInterfaceIndex();
+    /**
+     * <code>string network_interface_index = 2;</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata}
+   */
+  public static final class AttachInstanceNetworkInterfaceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata)
+      AttachInstanceNetworkInterfaceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachInstanceNetworkInterfaceMetadata.newBuilder() to construct.
+    private AttachInstanceNetworkInterfaceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachInstanceNetworkInterfaceMetadata() {
+      instanceId_ = "";
+      networkInterfaceIndex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AttachInstanceNetworkInterfaceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachInstanceNetworkInterfaceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkInterfaceIndex_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
+    private volatile java.lang.Object networkInterfaceIndex_;
+    /**
+     * <code>string network_interface_index = 2;</code>
+     * @return The networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public java.lang.String getNetworkInterfaceIndex() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkInterfaceIndex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string network_interface_index = 2;</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkInterfaceIndex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, networkInterfaceIndex_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, networkInterfaceIndex_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getNetworkInterfaceIndex()
+          .equals(other.getNetworkInterfaceIndex())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + NETWORK_INTERFACE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkInterfaceIndex().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        networkInterfaceIndex_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata(this);
+        result.instanceId_ = instanceId_;
+        result.networkInterfaceIndex_ = networkInterfaceIndex_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getNetworkInterfaceIndex().isEmpty()) {
+          networkInterfaceIndex_ = other.networkInterfaceIndex_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object networkInterfaceIndex_ = "";
+      /**
+       * <code>string network_interface_index = 2;</code>
+       * @return The networkInterfaceIndex.
+       */
+      public java.lang.String getNetworkInterfaceIndex() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkInterfaceIndex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string network_interface_index = 2;</code>
+       * @return The bytes for networkInterfaceIndex.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkInterfaceIndexBytes() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkInterfaceIndex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string network_interface_index = 2;</code>
+       * @param value The networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network_interface_index = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkInterfaceIndex() {
+        
+        networkInterfaceIndex_ = getDefaultInstance().getNetworkInterfaceIndex();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network_interface_index = 2;</code>
+       * @param value The bytes for networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.AttachInstanceNetworkInterfaceMetadata)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachInstanceNetworkInterfaceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AttachInstanceNetworkInterfaceMetadata>() {
+      @java.lang.Override
+      public AttachInstanceNetworkInterfaceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachInstanceNetworkInterfaceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachInstanceNetworkInterfaceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachInstanceNetworkInterfaceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceNetworkInterfaceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DetachInstanceNetworkInterfaceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The networkInterfaceIndex.
+     */
+    java.lang.String getNetworkInterfaceIndex();
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest}
+   */
+  public static final class DetachInstanceNetworkInterfaceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest)
+      DetachInstanceNetworkInterfaceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DetachInstanceNetworkInterfaceRequest.newBuilder() to construct.
+    private DetachInstanceNetworkInterfaceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DetachInstanceNetworkInterfaceRequest() {
+      instanceId_ = "";
+      networkInterfaceIndex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DetachInstanceNetworkInterfaceRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DetachInstanceNetworkInterfaceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkInterfaceIndex_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance that in which network interface is being attached to.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
+    private volatile java.lang.Object networkInterfaceIndex_;
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public java.lang.String getNetworkInterfaceIndex() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkInterfaceIndex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkInterfaceIndex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, networkInterfaceIndex_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, networkInterfaceIndex_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getNetworkInterfaceIndex()
+          .equals(other.getNetworkInterfaceIndex())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + NETWORK_INTERFACE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkInterfaceIndex().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        networkInterfaceIndex_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest(this);
+        result.instanceId_ = instanceId_;
+        result.networkInterfaceIndex_ = networkInterfaceIndex_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getNetworkInterfaceIndex().isEmpty()) {
+          networkInterfaceIndex_ = other.networkInterfaceIndex_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance that in which network interface is being attached to.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object networkInterfaceIndex_ = "";
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The networkInterfaceIndex.
+       */
+      public java.lang.String getNetworkInterfaceIndex() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkInterfaceIndex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for networkInterfaceIndex.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkInterfaceIndexBytes() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkInterfaceIndex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkInterfaceIndex() {
+        
+        networkInterfaceIndex_ = getDefaultInstance().getNetworkInterfaceIndex();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceRequest)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DetachInstanceNetworkInterfaceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DetachInstanceNetworkInterfaceRequest>() {
+      @java.lang.Override
+      public DetachInstanceNetworkInterfaceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DetachInstanceNetworkInterfaceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DetachInstanceNetworkInterfaceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DetachInstanceNetworkInterfaceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DetachInstanceNetworkInterfaceMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2;</code>
+     * @return The networkInterfaceIndex.
+     */
+    java.lang.String getNetworkInterfaceIndex();
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2;</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata}
+   */
+  public static final class DetachInstanceNetworkInterfaceMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata)
+      DetachInstanceNetworkInterfaceMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DetachInstanceNetworkInterfaceMetadata.newBuilder() to construct.
+    private DetachInstanceNetworkInterfaceMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DetachInstanceNetworkInterfaceMetadata() {
+      instanceId_ = "";
+      networkInterfaceIndex_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DetachInstanceNetworkInterfaceMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DetachInstanceNetworkInterfaceMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkInterfaceIndex_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
+    private volatile java.lang.Object networkInterfaceIndex_;
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2;</code>
+     * @return The networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public java.lang.String getNetworkInterfaceIndex() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkInterfaceIndex_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
+     * <code>string network_interface_index = 2;</code>
+     * @return The bytes for networkInterfaceIndex.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkInterfaceIndexBytes() {
+      java.lang.Object ref = networkInterfaceIndex_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkInterfaceIndex_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, networkInterfaceIndex_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkInterfaceIndex_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, networkInterfaceIndex_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!getNetworkInterfaceIndex()
+          .equals(other.getNetworkInterfaceIndex())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + NETWORK_INTERFACE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkInterfaceIndex().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        networkInterfaceIndex_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata(this);
+        result.instanceId_ = instanceId_;
+        result.networkInterfaceIndex_ = networkInterfaceIndex_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getNetworkInterfaceIndex().isEmpty()) {
+          networkInterfaceIndex_ = other.networkInterfaceIndex_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object networkInterfaceIndex_ = "";
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2;</code>
+       * @return The networkInterfaceIndex.
+       */
+      public java.lang.String getNetworkInterfaceIndex() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkInterfaceIndex_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2;</code>
+       * @return The bytes for networkInterfaceIndex.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkInterfaceIndexBytes() {
+        java.lang.Object ref = networkInterfaceIndex_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkInterfaceIndex_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2;</code>
+       * @param value The networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndex(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkInterfaceIndex() {
+        
+        networkInterfaceIndex_ = getDefaultInstance().getNetworkInterfaceIndex();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
+       * <code>string network_interface_index = 2;</code>
+       * @param value The bytes for networkInterfaceIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkInterfaceIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkInterfaceIndex_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DetachInstanceNetworkInterfaceMetadata)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DetachInstanceNetworkInterfaceMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DetachInstanceNetworkInterfaceMetadata>() {
+      @java.lang.Override
+      public DetachInstanceNetworkInterfaceMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DetachInstanceNetworkInterfaceMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DetachInstanceNetworkInterfaceMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DetachInstanceNetworkInterfaceMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceNetworkInterfaceMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AddInstanceOneToOneNatRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AddInstanceOneToOneNatRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -58964,6 +62825,26 @@ public final class InstanceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -59238,231 +63119,257 @@ public final class InstanceServiceOuterClass {
       "\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesystem\022\004\300" +
       "\3011\001\"N\n DetachInstanceFilesystemMetadata\022" +
       "\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 " +
-      "\001(\t\"\266\001\n\035AddInstanceOneToOneNatRequest\022\023\n" +
-      "\013instance_id\030\001 \001(\t\022\037\n\027network_interface_" +
-      "index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\022E\n" +
-      "\023one_to_one_nat_spec\030\004 \001(\0132(.yandex.clou" +
-      "d.compute.v1.OneToOneNatSpec\"5\n\036AddInsta" +
-      "nceOneToOneNatMetadata\022\023\n\013instance_id\030\001 " +
-      "\001(\t\"r\n RemoveInstanceOneToOneNatRequest\022" +
-      "\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_interfac" +
-      "e_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\"" +
-      "8\n!RemoveInstanceOneToOneNatMetadata\022\023\n\013" +
-      "instance_id\030\001 \001(\t\"\345\002\n%UpdateInstanceNetw" +
-      "orkInterfaceRequest\022\031\n\013instance_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022%\n\027network_interface_index\030\002 \001(\tB" +
-      "\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027pri" +
-      "mary_v4_address_spec\030\005 \001(\0132+.yandex.clou" +
-      "d.compute.v1.PrimaryAddressSpec\022L\n\027prima" +
-      "ry_v6_address_spec\030\006 \001(\0132+.yandex.cloud." +
-      "compute.v1.PrimaryAddressSpec\022\032\n\022securit" +
-      "y_group_ids\030\007 \003(\t\"^\n&UpdateInstanceNetwo" +
+      "\001(\t\"\370\001\n%AttachInstanceNetworkInterfaceRe" +
+      "quest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027netw" +
+      "ork_interface_index\030\002 \001(\tB\004\350\3071\001\022\027\n\tsubne" +
+      "t_id\030\003 \001(\tB\004\350\3071\001\022L\n\027primary_v4_address_s" +
+      "pec\030\004 \001(\0132+.yandex.cloud.compute.v1.Prim" +
+      "aryAddressSpec\022 \n\022security_group_ids\030\006 \003" +
+      "(\tB\004\350\3071\001J\004\010\005\020\006\"^\n&AttachInstanceNetworkI" +
+      "nterfaceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n" +
+      "\027network_interface_index\030\002 \001(\t\"i\n%Detach" +
+      "InstanceNetworkInterfaceRequest\022\031\n\013insta" +
+      "nce_id\030\001 \001(\tB\004\350\3071\001\022%\n\027network_interface_" +
+      "index\030\002 \001(\tB\004\350\3071\001\"^\n&DetachInstanceNetwo" +
       "rkInterfaceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
-      "\022\037\n\027network_interface_index\030\002 \001(\t\"L\n\'Sim" +
-      "ulateInstanceMaintenanceEventRequest\022!\n\013" +
-      "instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n(Simul" +
-      "ateInstanceMaintenanceEventMetadata\022\023\n\013i" +
-      "nstance_id\030\001 \001(\t\"\200\001\n\035ListInstanceOperati" +
-      "onsRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListInsta" +
-      "nceOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\347\001\n\rResourcesSpec\022" +
-      "&\n\006memory\030\001 \001(\003B\026\350\3071\001\372\3071\016<=274877906944\022" +
-      "i\n\005cores\030\002 \001(\003BZ\350\3071\001\372\3071R2,4,6,8,10,12,14" +
-      ",16,18,20,22,24,26,28,30,32,34,36,40,44," +
-      "48,52,56,60,64,68,72,76,80\022(\n\rcore_fract" +
-      "ion\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 \001" +
-      "(\003B\013\372\3071\0070,1,2,4\"\230\005\n\020AttachedDiskSpec\022<\n\004" +
-      "mode\030\001 \001(\0162..yandex.cloud.compute.v1.Att" +
-      "achedDiskSpec.Mode\022-\n\013device_name\030\002 \001(\tB" +
-      "\030\362\3071\024[a-z][a-z0-9-_]{,19}\022\023\n\013auto_delete" +
-      "\030\003 \001(\010\022G\n\tdisk_spec\030\004 \001(\01322.yandex.cloud" +
-      ".compute.v1.AttachedDiskSpec.DiskSpecH\000\022" +
-      "\033\n\007disk_id\030\005 \001(\tB\010\212\3101\004<=50H\000\032\320\002\n\010DiskSpe" +
-      "c\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
-      "61}[a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005" +
-      "<=256\022\031\n\007type_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size" +
-      "\030\004 \001(\003B\035\350\3071\001\372\3071\0254194304-4398046511104\022\022\n" +
-      "\nblock_size\030\010 \001(\003\022K\n\025disk_placement_poli" +
-      "cy\030\007 \001(\0132,.yandex.cloud.compute.v1.DiskP" +
-      "lacementPolicy\022\034\n\010image_id\030\005 \001(\tB\010\212\3101\004<=" +
-      "50H\000\022\037\n\013snapshot_id\030\006 \001(\tB\010\212\3101\004<=50H\000B\010\n" +
-      "\006source\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n" +
-      "\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002B\014\n\004disk\022\004\300\301" +
-      "1\001\"+\n\025AttachedLocalDiskSpec\022\022\n\004size\030\001 \001(" +
-      "\003B\004\350\3071\001\"\351\001\n\026AttachedFilesystemSpec\022B\n\004mo" +
-      "de\030\001 \001(\01624.yandex.cloud.compute.v1.Attac" +
-      "hedFilesystemSpec.Mode\022-\n\013device_name\030\002 " +
-      "\001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}\022\037\n\rfilesys" +
-      "tem_id\030\003 \001(\tB\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MODE_U" +
-      "NSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRIT" +
-      "E\020\002\"\357\001\n\024NetworkInterfaceSpec\022\037\n\tsubnet_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\027primary_v4_addr" +
-      "ess_spec\030\002 \001(\0132+.yandex.cloud.compute.v1" +
-      ".PrimaryAddressSpec\022L\n\027primary_v6_addres" +
-      "s_spec\030\003 \001(\0132+.yandex.cloud.compute.v1.P" +
-      "rimaryAddressSpec\022\032\n\022security_group_ids\030" +
-      "\006 \003(\t\"\256\001\n\022PrimaryAddressSpec\022\017\n\007address\030" +
-      "\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(.yan" +
-      "dex.cloud.compute.v1.OneToOneNatSpec\022@\n\020" +
-      "dns_record_specs\030\003 \003(\0132&.yandex.cloud.co" +
-      "mpute.v1.DnsRecordSpec\"\234\001\n\017OneToOneNatSp" +
-      "ec\0226\n\nip_version\030\001 \001(\0162\".yandex.cloud.co" +
-      "mpute.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022@\n\020d" +
-      "ns_record_specs\030\003 \003(\0132&.yandex.cloud.com" +
-      "pute.v1.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022" +
-      "\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022" +
-      "\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e" +
-      "\n\023MoveInstanceRequest\022!\n\013instance_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
-      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMet" +
-      "adata\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source_fol" +
-      "der_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 " +
-      "\001(\t\"\344\002\n\027RelocateInstanceRequest\022!\n\013insta" +
-      "nce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destinatio" +
-      "n_zone_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network" +
-      "_interface_specs\030\003 \003(\0132-.yandex.cloud.co" +
-      "mpute.v1.NetworkInterfaceSpecB\t\202\3101\0011\350\3071\001" +
-      "\022I\n\023boot_disk_placement\030\004 \001(\0132,.yandex.c" +
-      "loud.compute.v1.DiskPlacementPolicy\022U\n\031s" +
-      "econdary_disk_placements\030\005 \003(\01322.yandex." +
-      "cloud.compute.v1.DiskPlacementPolicyChan" +
-      "ge\"d\n\030RelocateInstanceMetadata\022\023\n\013instan" +
-      "ce_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023d" +
-      "estination_zone_id\030\003 \001(\t\"0\n\031GuestStopIns" +
-      "tanceMetadata\022\023\n\013instance_id\030\001 \001(\t\".\n\027Pr" +
-      "eemptInstanceMetadata\022\023\n\013instance_id\030\001 \001" +
-      "(\t\",\n\025CrashInstanceMetadata\022\023\n\013instance_" +
-      "id\030\001 \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004F" +
-      "ULL\020\0012\251&\n\017InstanceService\022\202\001\n\003Get\022+.yand" +
-      "ex.cloud.compute.v1.GetInstanceRequest\032!" +
-      ".yandex.cloud.compute.v1.Instance\"+\202\323\344\223\002" +
-      "%\022#/compute/v1/instances/{instance_id}\022\204" +
-      "\001\n\004List\022-.yandex.cloud.compute.v1.ListIn" +
-      "stancesRequest\032..yandex.cloud.compute.v1" +
-      ".ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute" +
-      "/v1/instances\022\243\001\n\006Create\022..yandex.cloud." +
-      "compute.v1.CreateInstanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/co" +
-      "mpute/v1/instances:\001*\262\322*\"\n\026CreateInstanc" +
-      "eMetadata\022\010Instance\022\261\001\n\006Update\022..yandex." +
-      "cloud.compute.v1.UpdateInstanceRequest\032!" +
-      ".yandex.cloud.operation.Operation\"T\202\323\344\223\002" +
-      "(2#/compute/v1/instances/{instance_id}:\001" +
-      "*\262\322*\"\n\026UpdateInstanceMetadata\022\010Instance\022" +
-      "\273\001\n\006Delete\022..yandex.cloud.compute.v1.Del" +
-      "eteInstanceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\002%*#/compute/v1/insta" +
-      "nces/{instance_id}\262\322*/\n\026DeleteInstanceMe" +
-      "tadata\022\025google.protobuf.Empty\022\330\001\n\016Update" +
-      "Metadata\0226.yandex.cloud.compute.v1.Updat" +
-      "eInstanceMetadataRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
-      "/instances/{instance_id}/updateMetadata:" +
-      "\001*\262\322**\n\036UpdateInstanceMetadataMetadata\022\010" +
-      "Instance\022\316\001\n\023GetSerialPortOutput\022;.yande" +
-      "x.cloud.compute.v1.GetInstanceSerialPort" +
-      "OutputRequest\032<.yandex.cloud.compute.v1." +
-      "GetInstanceSerialPortOutputResponse\"<\202\323\344" +
-      "\223\0026\0224/compute/v1/instances/{instance_id}" +
-      ":serialPortOutput\022\272\001\n\004Stop\022,.yandex.clou" +
-      "d.compute.v1.StopInstanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"a\202\323\344\223\002*\"(/co" +
-      "mpute/v1/instances/{instance_id}:stop\262\322*" +
-      "-\n\024StopInstanceMetadata\022\025google.protobuf" +
-      ".Empty\022\261\001\n\005Start\022-.yandex.cloud.compute." +
-      "v1.StartInstanceRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002+\")/compute/v1/" +
-      "instances/{instance_id}:start\262\322*!\n\025Start" +
-      "InstanceMetadata\022\010Instance\022\306\001\n\007Restart\022/" +
-      ".yandex.cloud.compute.v1.RestartInstance" +
+      "\022\037\n\027network_interface_index\030\002 \001(\t\"\266\001\n\035Ad" +
+      "dInstanceOneToOneNatRequest\022\023\n\013instance_" +
+      "id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 \001(" +
+      "\t\022\030\n\020internal_address\030\003 \001(\t\022E\n\023one_to_on" +
+      "e_nat_spec\030\004 \001(\0132(.yandex.cloud.compute." +
+      "v1.OneToOneNatSpec\"5\n\036AddInstanceOneToOn" +
+      "eNatMetadata\022\023\n\013instance_id\030\001 \001(\t\"r\n Rem" +
+      "oveInstanceOneToOneNatRequest\022\023\n\013instanc" +
+      "e_id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 " +
+      "\001(\t\022\030\n\020internal_address\030\003 \001(\t\"8\n!RemoveI" +
+      "nstanceOneToOneNatMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\"\345\002\n%UpdateInstanceNetworkInterfa" +
+      "ceRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%\n\027" +
+      "network_interface_index\030\002 \001(\tB\004\350\3071\001\022/\n\013u" +
+      "pdate_mask\030\003 \001(\0132\032.google.protobuf.Field" +
+      "Mask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027primary_v4_ad" +
+      "dress_spec\030\005 \001(\0132+.yandex.cloud.compute." +
+      "v1.PrimaryAddressSpec\022L\n\027primary_v6_addr" +
+      "ess_spec\030\006 \001(\0132+.yandex.cloud.compute.v1" +
+      ".PrimaryAddressSpec\022\032\n\022security_group_id" +
+      "s\030\007 \003(\t\"^\n&UpdateInstanceNetworkInterfac" +
+      "eMetadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027networ" +
+      "k_interface_index\030\002 \001(\t\"L\n\'SimulateInsta" +
+      "nceMaintenanceEventRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"?\n(SimulateInstanc" +
+      "eMaintenanceEventMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t\"\200\001\n\035ListInstanceOperationsRequest" +
+      "\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListInstanceOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"\347\001\n\rResourcesSpec\022&\n\006memory\030" +
+      "\001 \001(\003B\026\350\3071\001\372\3071\016<=274877906944\022i\n\005cores\030\002" +
+      " \001(\003BZ\350\3071\001\372\3071R2,4,6,8,10,12,14,16,18,20," +
+      "22,24,26,28,30,32,34,36,40,44,48,52,56,6" +
+      "0,64,68,72,76,80\022(\n\rcore_fraction\030\003 \001(\003B" +
+      "\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070," +
+      "1,2,4\"\230\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\016" +
+      "2..yandex.cloud.compute.v1.AttachedDiskS" +
+      "pec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z]" +
+      "[a-z0-9-_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\t" +
+      "disk_spec\030\004 \001(\01322.yandex.cloud.compute.v" +
+      "1.AttachedDiskSpec.DiskSpecH\000\022\033\n\007disk_id" +
+      "\030\005 \001(\tB\010\212\3101\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030" +
+      "\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9" +
+      "])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007t" +
+      "ype_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\307" +
+      "1\001\372\3071\0254194304-4398046511104\022\022\n\nblock_siz" +
+      "e\030\010 \001(\003\022K\n\025disk_placement_policy\030\007 \001(\0132," +
+      ".yandex.cloud.compute.v1.DiskPlacementPo" +
+      "licy\022\034\n\010image_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013sn" +
+      "apshot_id\030\006 \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n" +
+      "\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY" +
+      "\020\001\022\016\n\nREAD_WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025Atta" +
+      "chedLocalDiskSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001" +
+      "\n\026AttachedFilesystemSpec\022B\n\004mode\030\001 \001(\01624" +
+      ".yandex.cloud.compute.v1.AttachedFilesys" +
+      "temSpec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[" +
+      "a-z][a-z0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001" +
+      "(\tB\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED" +
+      "\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024Ne" +
+      "tworkInterfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022L\n\027primary_v4_address_spec\030\002" +
+      " \001(\0132+.yandex.cloud.compute.v1.PrimaryAd" +
+      "dressSpec\022L\n\027primary_v6_address_spec\030\003 \001" +
+      "(\0132+.yandex.cloud.compute.v1.PrimaryAddr" +
+      "essSpec\022\032\n\022security_group_ids\030\006 \003(\t\"\256\001\n\022" +
+      "PrimaryAddressSpec\022\017\n\007address\030\001 \001(\t\022E\n\023o" +
+      "ne_to_one_nat_spec\030\002 \001(\0132(.yandex.cloud." +
+      "compute.v1.OneToOneNatSpec\022@\n\020dns_record" +
+      "_specs\030\003 \003(\0132&.yandex.cloud.compute.v1.D" +
+      "nsRecordSpec\"\234\001\n\017OneToOneNatSpec\0226\n\nip_v" +
+      "ersion\030\001 \001(\0162\".yandex.cloud.compute.v1.I" +
+      "pVersion\022\017\n\007address\030\002 \001(\t\022@\n\020dns_record_" +
+      "specs\030\003 \003(\0132&.yandex.cloud.compute.v1.Dn" +
+      "sRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001" +
+      "(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001" +
+      "(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInst" +
+      "anceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMetadata\022\023\n\013i" +
+      "nstance_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001" +
+      "(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"\344\002\n\027Re" +
+      "locateInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zone_id\030" +
+      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network_interface" +
+      "_specs\030\003 \003(\0132-.yandex.cloud.compute.v1.N" +
+      "etworkInterfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023boot_d" +
+      "isk_placement\030\004 \001(\0132,.yandex.cloud.compu" +
+      "te.v1.DiskPlacementPolicy\022U\n\031secondary_d" +
+      "isk_placements\030\005 \003(\01322.yandex.cloud.comp" +
+      "ute.v1.DiskPlacementPolicyChange\"d\n\030Relo" +
+      "cateInstanceMetadata\022\023\n\013instance_id\030\001 \001(" +
+      "\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023destination" +
+      "_zone_id\030\003 \001(\t\"0\n\031GuestStopInstanceMetad" +
+      "ata\022\023\n\013instance_id\030\001 \001(\t\".\n\027PreemptInsta" +
+      "nceMetadata\022\023\n\013instance_id\030\001 \001(\t\",\n\025Cras" +
+      "hInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t*#" +
+      "\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\237*\n\017" +
+      "InstanceService\022\202\001\n\003Get\022+.yandex.cloud.c" +
+      "ompute.v1.GetInstanceRequest\032!.yandex.cl" +
+      "oud.compute.v1.Instance\"+\202\323\344\223\002%\022#/comput" +
+      "e/v1/instances/{instance_id}\022\204\001\n\004List\022-." +
+      "yandex.cloud.compute.v1.ListInstancesReq" +
+      "uest\032..yandex.cloud.compute.v1.ListInsta" +
+      "ncesResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/instan" +
+      "ces\022\243\001\n\006Create\022..yandex.cloud.compute.v1" +
+      ".CreateInstanceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"F\202\323\344\223\002\032\"\025/compute/v1/i" +
+      "nstances:\001*\262\322*\"\n\026CreateInstanceMetadata\022" +
+      "\010Instance\022\261\001\n\006Update\022..yandex.cloud.comp" +
+      "ute.v1.UpdateInstanceRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"T\202\323\344\223\002(2#/comput" +
+      "e/v1/instances/{instance_id}:\001*\262\322*\"\n\026Upd" +
+      "ateInstanceMetadata\022\010Instance\022\273\001\n\006Delete" +
+      "\022..yandex.cloud.compute.v1.DeleteInstanc" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"^\202\323\344\223\002%*#/compute/v1/instances/{inst" +
+      "ance_id}\262\322*/\n\026DeleteInstanceMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\330\001\n\016UpdateMetadata\0226" +
+      ".yandex.cloud.compute.v1.UpdateInstanceM" +
+      "etadataRequest\032!.yandex.cloud.operation." +
+      "Operation\"k\202\323\344\223\0027\"2/compute/v1/instances" +
+      "/{instance_id}/updateMetadata:\001*\262\322**\n\036Up" +
+      "dateInstanceMetadataMetadata\022\010Instance\022\316" +
+      "\001\n\023GetSerialPortOutput\022;.yandex.cloud.co" +
+      "mpute.v1.GetInstanceSerialPortOutputRequ" +
+      "est\032<.yandex.cloud.compute.v1.GetInstanc" +
+      "eSerialPortOutputResponse\"<\202\323\344\223\0026\0224/comp" +
+      "ute/v1/instances/{instance_id}:serialPor" +
+      "tOutput\022\272\001\n\004Stop\022,.yandex.cloud.compute." +
+      "v1.StopInstanceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"a\202\323\344\223\002*\"(/compute/v1/i" +
+      "nstances/{instance_id}:stop\262\322*-\n\024StopIns" +
+      "tanceMetadata\022\025google.protobuf.Empty\022\261\001\n" +
+      "\005Start\022-.yandex.cloud.compute.v1.StartIn" +
+      "stanceRequest\032!.yandex.cloud.operation.O" +
+      "peration\"V\202\323\344\223\002+\")/compute/v1/instances/" +
+      "{instance_id}:start\262\322*!\n\025StartInstanceMe" +
+      "tadata\022\010Instance\022\306\001\n\007Restart\022/.yandex.cl" +
+      "oud.compute.v1.RestartInstanceRequest\032!." +
+      "yandex.cloud.operation.Operation\"g\202\323\344\223\002-" +
+      "\"+/compute/v1/instances/{instance_id}:re" +
+      "start\262\322*0\n\027RestartInstanceMetadata\022\025goog" +
+      "le.protobuf.Empty\022\310\001\n\nAttachDisk\0222.yande" +
+      "x.cloud.compute.v1.AttachInstanceDiskReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "c\202\323\344\223\0023\"./compute/v1/instances/{instance" +
+      "_id}:attachDisk:\001*\262\322*&\n\032AttachInstanceDi" +
+      "skMetadata\022\010Instance\022\310\001\n\nDetachDisk\0222.ya" +
+      "ndex.cloud.compute.v1.DetachInstanceDisk" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"g\202\323\344\223\002-\"+/compute/v1/instances/{insta" +
-      "nce_id}:restart\262\322*0\n\027RestartInstanceMeta" +
-      "data\022\025google.protobuf.Empty\022\310\001\n\nAttachDi" +
-      "sk\0222.yandex.cloud.compute.v1.AttachInsta" +
-      "nceDiskRequest\032!.yandex.cloud.operation." +
-      "Operation\"c\202\323\344\223\0023\"./compute/v1/instances" +
-      "/{instance_id}:attachDisk:\001*\262\322*&\n\032Attach" +
-      "InstanceDiskMetadata\022\010Instance\022\310\001\n\nDetac" +
-      "hDisk\0222.yandex.cloud.compute.v1.DetachIn" +
-      "stanceDiskRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"c\202\323\344\223\0023\"./compute/v1/instan" +
-      "ces/{instance_id}:detachDisk:\001*\262\322*&\n\032Det" +
-      "achInstanceDiskMetadata\022\010Instance\022\340\001\n\020At" +
-      "tachFilesystem\0228.yandex.cloud.compute.v1" +
-      ".AttachInstanceFilesystemRequest\032!.yande" +
-      "x.cloud.operation.Operation\"o\202\323\344\223\0029\"4/co" +
-      "mpute/v1/instances/{instance_id}:attachF" +
-      "ilesystem:\001*\262\322*,\n AttachInstanceFilesyst" +
-      "emMetadata\022\010Instance\022\340\001\n\020DetachFilesyste" +
-      "m\0228.yandex.cloud.compute.v1.DetachInstan" +
-      "ceFilesystemRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"o\202\323\344\223\0029\"4/compute/v1/inst" +
-      "ances/{instance_id}:detachFilesystem:\001*\262" +
-      "\322*,\n DetachInstanceFilesystemMetadata\022\010I" +
-      "nstance\022\330\001\n\016AddOneToOneNat\0226.yandex.clou" +
-      "d.compute.v1.AddInstanceOneToOneNatReque" +
-      "st\032!.yandex.cloud.operation.Operation\"k\202" +
-      "\323\344\223\0027\"2/compute/v1/instances/{instance_i" +
-      "d}/addOneToOneNat:\001*\262\322**\n\036AddInstanceOne" +
-      "ToOneNatMetadata\022\010Instance\022\344\001\n\021RemoveOne" +
-      "ToOneNat\0229.yandex.cloud.compute.v1.Remov" +
-      "eInstanceOneToOneNatRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"q\202\323\344\223\002:\"5/compute" +
-      "/v1/instances/{instance_id}/removeOneToO" +
-      "neNat:\001*\262\322*-\n!RemoveInstanceOneToOneNatM" +
-      "etadata\022\010Instance\022\370\001\n\026UpdateNetworkInter" +
-      "face\022>.yandex.cloud.compute.v1.UpdateIns" +
-      "tanceNetworkInterfaceRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"{\202\323\344\223\002?2:/comput" +
-      "e/v1/instances/{instance_id}/updateNetwo" +
-      "rkInterface:\001*\262\322*2\n&UpdateInstanceNetwor" +
-      "kInterfaceMetadata\022\010Instance\022\271\001\n\016ListOpe" +
-      "rations\0226.yandex.cloud.compute.v1.ListIn" +
-      "stanceOperationsRequest\0327.yandex.cloud.c" +
-      "ompute.v1.ListInstanceOperationsResponse" +
-      "\"6\202\323\344\223\0020\022./compute/v1/instances/{instanc" +
-      "e_id}/operations\022\260\001\n\004Move\022,.yandex.cloud" +
-      ".compute.v1.MoveInstanceRequest\032!.yandex" +
-      ".cloud.operation.Operation\"W\202\323\344\223\002-\"(/com" +
-      "pute/v1/instances/{instance_id}:move:\001*\262" +
-      "\322* \n\024MoveInstanceMetadata\022\010Instance\022\300\001\n\010" +
-      "Relocate\0220.yandex.cloud.compute.v1.Reloc" +
-      "ateInstanceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"_\202\323\344\223\0021\",/compute/v1/insta" +
-      "nces/{instance_id}:relocate:\001*\262\322*$\n\030Relo" +
-      "cateInstanceMetadata\022\010Instance\022\216\002\n\030Simul" +
-      "ateMaintenanceEvent\022@.yandex.cloud.compu" +
-      "te.v1.SimulateInstanceMaintenanceEventRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\214\001\202\323\344\223\002A\"</compute/v1/instances/{instan" +
-      "ce_id}:simulateMaintenanceEvent:\001*\262\322*A\n(" +
-      "SimulateInstanceMaintenanceEventMetadata" +
-      "\022\025google.protobuf.Empty\022\265\001\n\022ListAccessBi" +
-      "ndings\022..yandex.cloud.access.ListAccessB" +
-      "indingsRequest\032/.yandex.cloud.access.Lis" +
-      "tAccessBindingsResponse\">\202\323\344\223\0028\0226/comput" +
-      "e/v1/instances/{resource_id}:listAccessB" +
-      "indings\022\364\001\n\021SetAccessBindings\022-.yandex.c" +
-      "loud.access.SetAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\214\001\202\323\344\223\002:" +
-      "\"5/compute/v1/instances/{resource_id}:se" +
-      "tAccessBindings:\001*\262\322*H\n access.SetAccess" +
-      "BindingsMetadata\022$access.AccessBindingsO" +
-      "perationResult\022\200\002\n\024UpdateAccessBindings\022" +
-      "0.yandex.cloud.access.UpdateAccessBindin" +
-      "gsRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\222\001\202\323\344\223\002=\"8/compute/v1/instances/{re" +
-      "source_id}:updateAccessBindings:\001*\262\322*K\n#" +
-      "access.UpdateAccessBindingsMetadata\022$acc" +
-      "ess.AccessBindingsOperationResultBb\n\033yan" +
-      "dex.cloud.api.compute.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/compu" +
-      "te/v1;computeb\006proto3"
+      "on\"c\202\323\344\223\0023\"./compute/v1/instances/{insta" +
+      "nce_id}:detachDisk:\001*\262\322*&\n\032DetachInstanc" +
+      "eDiskMetadata\022\010Instance\022\340\001\n\020AttachFilesy" +
+      "stem\0228.yandex.cloud.compute.v1.AttachIns" +
+      "tanceFilesystemRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"o\202\323\344\223\0029\"4/compute/v1/i" +
+      "nstances/{instance_id}:attachFilesystem:" +
+      "\001*\262\322*,\n AttachInstanceFilesystemMetadata" +
+      "\022\010Instance\022\340\001\n\020DetachFilesystem\0228.yandex" +
+      ".cloud.compute.v1.DetachInstanceFilesyst" +
+      "emRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"o\202\323\344\223\0029\"4/compute/v1/instances/{ins" +
+      "tance_id}:detachFilesystem:\001*\262\322*,\n Detac" +
+      "hInstanceFilesystemMetadata\022\010Instance\022\370\001" +
+      "\n\026AttachNetworkInterface\022>.yandex.cloud." +
+      "compute.v1.AttachInstanceNetworkInterfac" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"{\202\323\344\223\002?\":/compute/v1/instances/{inst" +
+      "ance_id}:attachNetworkInterface:\001*\262\322*2\n&" +
+      "AttachInstanceNetworkInterfaceMetadata\022\010" +
+      "Instance\022\370\001\n\026DetachNetworkInterface\022>.ya" +
+      "ndex.cloud.compute.v1.DetachInstanceNetw" +
+      "orkInterfaceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"{\202\323\344\223\002?\":/compute/v1/inst" +
+      "ances/{instance_id}:detachNetworkInterfa" +
+      "ce:\001*\262\322*2\n&DetachInstanceNetworkInterfac" +
+      "eMetadata\022\010Instance\022\330\001\n\016AddOneToOneNat\0226" +
+      ".yandex.cloud.compute.v1.AddInstanceOneT" +
+      "oOneNatRequest\032!.yandex.cloud.operation." +
+      "Operation\"k\202\323\344\223\0027\"2/compute/v1/instances" +
+      "/{instance_id}/addOneToOneNat:\001*\262\322**\n\036Ad" +
+      "dInstanceOneToOneNatMetadata\022\010Instance\022\344" +
+      "\001\n\021RemoveOneToOneNat\0229.yandex.cloud.comp" +
+      "ute.v1.RemoveInstanceOneToOneNatRequest\032" +
+      "!.yandex.cloud.operation.Operation\"q\202\323\344\223" +
+      "\002:\"5/compute/v1/instances/{instance_id}/" +
+      "removeOneToOneNat:\001*\262\322*-\n!RemoveInstance" +
+      "OneToOneNatMetadata\022\010Instance\022\370\001\n\026Update" +
+      "NetworkInterface\022>.yandex.cloud.compute." +
+      "v1.UpdateInstanceNetworkInterfaceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"{\202\323\344" +
+      "\223\002?2:/compute/v1/instances/{instance_id}" +
+      "/updateNetworkInterface:\001*\262\322*2\n&UpdateIn" +
+      "stanceNetworkInterfaceMetadata\022\010Instance" +
+      "\022\271\001\n\016ListOperations\0226.yandex.cloud.compu" +
+      "te.v1.ListInstanceOperationsRequest\0327.ya" +
+      "ndex.cloud.compute.v1.ListInstanceOperat" +
+      "ionsResponse\"6\202\323\344\223\0020\022./compute/v1/instan" +
+      "ces/{instance_id}/operations\022\260\001\n\004Move\022,." +
+      "yandex.cloud.compute.v1.MoveInstanceRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"W" +
+      "\202\323\344\223\002-\"(/compute/v1/instances/{instance_" +
+      "id}:move:\001*\262\322* \n\024MoveInstanceMetadata\022\010I" +
+      "nstance\022\300\001\n\010Relocate\0220.yandex.cloud.comp" +
+      "ute.v1.RelocateInstanceRequest\032!.yandex." +
+      "cloud.operation.Operation\"_\202\323\344\223\0021\",/comp" +
+      "ute/v1/instances/{instance_id}:relocate:" +
+      "\001*\262\322*$\n\030RelocateInstanceMetadata\022\010Instan" +
+      "ce\022\216\002\n\030SimulateMaintenanceEvent\022@.yandex" +
+      ".cloud.compute.v1.SimulateInstanceMainte" +
+      "nanceEventRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\214\001\202\323\344\223\002A\"</compute/v1/insta" +
+      "nces/{instance_id}:simulateMaintenanceEv" +
+      "ent:\001*\262\322*A\n(SimulateInstanceMaintenanceE" +
+      "ventMetadata\022\025google.protobuf.Empty\022\265\001\n\022" +
+      "ListAccessBindings\022..yandex.cloud.access" +
+      ".ListAccessBindingsRequest\032/.yandex.clou" +
+      "d.access.ListAccessBindingsResponse\">\202\323\344" +
+      "\223\0028\0226/compute/v1/instances/{resource_id}" +
+      ":listAccessBindings\022\364\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\214\001\202\323\344\223\002:\"5/compute/v1/instances/{res" +
+      "ource_id}:setAccessBindings:\001*\262\322*H\n acce" +
+      "ss.SetAccessBindingsMetadata\022$access.Acc" +
+      "essBindingsOperationResult\022\200\002\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\222\001\202\323\344\223\002=\"8/compute/v1/i" +
+      "nstances/{resource_id}:updateAccessBindi" +
+      "ngs:\001*\262\322*K\n#access.UpdateAccessBindingsM" +
+      "etadata\022$access.AccessBindingsOperationR" +
+      "esultBb\n\033yandex.cloud.api.compute.v1ZCgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59670,74 +63577,98 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "FilesystemId", });
-    internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor =
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor =
       getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "SubnetId", "PrimaryV4AddressSpec", "SecurityGroupIds", });
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_AttachInstanceNetworkInterfaceMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", });
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", });
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DetachInstanceNetworkInterfaceMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", });
+    internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor =
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "InternalAddress", "OneToOneNatSpec", });
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "InternalAddress", });
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "UpdateMask", "SubnetId", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", });
     internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventRequest_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventRequest_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_SimulateInstanceMaintenanceEventMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_descriptor,
         new java.lang.String[] { "InstanceId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_compute_v1_ResourcesSpec_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_compute_v1_ResourcesSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ResourcesSpec_descriptor,
         new java.lang.String[] { "Memory", "Cores", "CoreFraction", "Gpus", });
     internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_descriptor,
@@ -59749,79 +63680,79 @@ public final class InstanceServiceOuterClass {
         internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_DiskSpec_descriptor,
         new java.lang.String[] { "Name", "Description", "TypeId", "Size", "BlockSize", "DiskPlacementPolicy", "ImageId", "SnapshotId", "Source", });
     internal_static_yandex_cloud_compute_v1_AttachedLocalDiskSpec_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_compute_v1_AttachedLocalDiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedLocalDiskSpec_descriptor,
         new java.lang.String[] { "Size", });
     internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor,
         new java.lang.String[] { "Mode", "DeviceName", "FilesystemId", });
     internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_descriptor,
         new java.lang.String[] { "SubnetId", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_descriptor,
         new java.lang.String[] { "Address", "OneToOneNatSpec", "DnsRecordSpecs", });
     internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_descriptor,
         new java.lang.String[] { "IpVersion", "Address", "DnsRecordSpecs", });
     internal_static_yandex_cloud_compute_v1_DnsRecordSpec_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_yandex_cloud_compute_v1_DnsRecordSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DnsRecordSpec_descriptor,
         new java.lang.String[] { "Fqdn", "DnsZoneId", "Ttl", "Ptr", });
     internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MoveInstanceRequest_descriptor,
         new java.lang.String[] { "InstanceId", "DestinationFolderId", });
     internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_MoveInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "SourceFolderId", "DestinationFolderId", });
     internal_static_yandex_cloud_compute_v1_RelocateInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_compute_v1_RelocateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RelocateInstanceRequest_descriptor,
         new java.lang.String[] { "InstanceId", "DestinationZoneId", "NetworkInterfaceSpecs", "BootDiskPlacement", "SecondaryDiskPlacements", });
     internal_static_yandex_cloud_compute_v1_RelocateInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_yandex_cloud_compute_v1_RelocateInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RelocateInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "SourceZoneId", "DestinationZoneId", });
     internal_static_yandex_cloud_compute_v1_GuestStopInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_compute_v1_GuestStopInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_GuestStopInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_PreemptInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_yandex_cloud_compute_v1_PreemptInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PreemptInstanceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_CrashInstanceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_yandex_cloud_compute_v1_CrashInstanceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CrashInstanceMetadata_descriptor,

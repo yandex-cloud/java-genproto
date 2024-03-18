@@ -229,6 +229,39 @@ public final class SummaryOuterClass {
      */
     com.google.protobuf.ByteString
         getAssignedAgentIdBytes();
+
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     * @return Whether the artifacts field is set.
+     */
+    boolean hasArtifacts();
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     * @return The artifacts.
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer getArtifacts();
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder getArtifactsOrBuilder();
   }
   /**
    * <pre>
@@ -362,6 +395,19 @@ public final class SummaryOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               assignedAgentId_ = s;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder subBuilder = null;
+              if (artifacts_ != null) {
+                subBuilder = artifacts_.toBuilder();
+              }
+              artifacts_ = input.readMessage(yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(artifacts_);
+                artifacts_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -743,6 +789,50 @@ public final class SummaryOuterClass {
       }
     }
 
+    public static final int ARTIFACTS_FIELD_NUMBER = 10;
+    private yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer artifacts_;
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     * @return Whether the artifacts field is set.
+     */
+    @java.lang.Override
+    public boolean hasArtifacts() {
+      return artifacts_ != null;
+    }
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     * @return The artifacts.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer getArtifacts() {
+      return artifacts_ == null ? yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.getDefaultInstance() : artifacts_;
+    }
+    /**
+     * <pre>
+     * Test output artifacts.
+     * Link to the artifacts output target containing `.log` and other files collected
+     * during test execution.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder getArtifactsOrBuilder() {
+      return getArtifacts();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -783,6 +873,9 @@ public final class SummaryOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedAgentId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, assignedAgentId_);
+      }
+      if (artifacts_ != null) {
+        output.writeMessage(10, getArtifacts());
       }
       unknownFields.writeTo(output);
     }
@@ -825,6 +918,10 @@ public final class SummaryOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignedAgentId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, assignedAgentId_);
+      }
+      if (artifacts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getArtifacts());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -870,6 +967,11 @@ public final class SummaryOuterClass {
       }
       if (!getAssignedAgentId()
           .equals(other.getAssignedAgentId())) return false;
+      if (hasArtifacts() != other.hasArtifacts()) return false;
+      if (hasArtifacts()) {
+        if (!getArtifacts()
+            .equals(other.getArtifacts())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -908,6 +1010,10 @@ public final class SummaryOuterClass {
       }
       hash = (37 * hash) + ASSIGNED_AGENT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAssignedAgentId().hashCode();
+      if (hasArtifacts()) {
+        hash = (37 * hash) + ARTIFACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getArtifacts().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1079,6 +1185,12 @@ public final class SummaryOuterClass {
         }
         assignedAgentId_ = "";
 
+        if (artifactsBuilder_ == null) {
+          artifacts_ = null;
+        } else {
+          artifacts_ = null;
+          artifactsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1130,6 +1242,11 @@ public final class SummaryOuterClass {
           result.imbalancePoint_ = imbalancePointBuilder_.build();
         }
         result.assignedAgentId_ = assignedAgentId_;
+        if (artifactsBuilder_ == null) {
+          result.artifacts_ = artifacts_;
+        } else {
+          result.artifacts_ = artifactsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1207,6 +1324,9 @@ public final class SummaryOuterClass {
         if (!other.getAssignedAgentId().isEmpty()) {
           assignedAgentId_ = other.assignedAgentId_;
           onChanged();
+        }
+        if (other.hasArtifacts()) {
+          mergeArtifacts(other.getArtifacts());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2306,6 +2426,179 @@ public final class SummaryOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer artifacts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder> artifactsBuilder_;
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       * @return Whether the artifacts field is set.
+       */
+      public boolean hasArtifacts() {
+        return artifactsBuilder_ != null || artifacts_ != null;
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       * @return The artifacts.
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer getArtifacts() {
+        if (artifactsBuilder_ == null) {
+          return artifacts_ == null ? yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.getDefaultInstance() : artifacts_;
+        } else {
+          return artifactsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public Builder setArtifacts(yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer value) {
+        if (artifactsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          artifacts_ = value;
+          onChanged();
+        } else {
+          artifactsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public Builder setArtifacts(
+          yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder builderForValue) {
+        if (artifactsBuilder_ == null) {
+          artifacts_ = builderForValue.build();
+          onChanged();
+        } else {
+          artifactsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public Builder mergeArtifacts(yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer value) {
+        if (artifactsBuilder_ == null) {
+          if (artifacts_ != null) {
+            artifacts_ =
+              yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.newBuilder(artifacts_).mergeFrom(value).buildPartial();
+          } else {
+            artifacts_ = value;
+          }
+          onChanged();
+        } else {
+          artifactsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public Builder clearArtifacts() {
+        if (artifactsBuilder_ == null) {
+          artifacts_ = null;
+          onChanged();
+        } else {
+          artifacts_ = null;
+          artifactsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder getArtifactsBuilder() {
+        
+        onChanged();
+        return getArtifactsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder getArtifactsOrBuilder() {
+        if (artifactsBuilder_ != null) {
+          return artifactsBuilder_.getMessageOrBuilder();
+        } else {
+          return artifacts_ == null ?
+              yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.getDefaultInstance() : artifacts_;
+        }
+      }
+      /**
+       * <pre>
+       * Test output artifacts.
+       * Link to the artifacts output target containing `.log` and other files collected
+       * during test execution.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.FilePointer artifacts = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder> 
+          getArtifactsFieldBuilder() {
+        if (artifactsBuilder_ == null) {
+          artifactsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.Builder, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointerOrBuilder>(
+                  getArtifacts(),
+                  getParentForChildren(),
+                  isClean());
+          artifacts_ = null;
+        }
+        return artifactsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2375,27 +2668,31 @@ public final class SummaryOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/loadtesting/api/v1/test/s" +
       "ummary.proto\022$yandex.cloud.loadtesting.a" +
-      "pi.v1.test\032:yandex/cloud/loadtesting/api" +
-      "/v1/test/imbalance_point.proto\0321yandex/c" +
-      "loud/loadtesting/api/v1/test/status.prot" +
-      "o\032\037google/protobuf/timestamp.proto\"\372\002\n\007S" +
-      "ummary\022<\n\006status\030\001 \001(\0162,.yandex.cloud.lo" +
-      "adtesting.api.v1.test.Status\022.\n\ncreated_" +
-      "at\030\002 \001(\0132\032.google.protobuf.Timestamp\022\022\n\n" +
-      "created_by\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022/\n\013finished_at\030" +
-      "\005 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013is_" +
-      "finished\030\006 \001(\010\022\r\n\005error\030\007 \001(\t\022M\n\017imbalan" +
-      "ce_point\030\010 \001(\01324.yandex.cloud.loadtestin" +
-      "g.api.v1.test.ImbalancePoint\022\031\n\021assigned" +
-      "_agent_id\030\t \001(\tBy\n(yandex.cloud.api.load" +
-      "testing.api.v1.testZMgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/loadtestin" +
-      "g/api/v1/test;testb\006proto3"
+      "pi.v1.test\0327yandex/cloud/loadtesting/api" +
+      "/v1/test/file_pointer.proto\032:yandex/clou" +
+      "d/loadtesting/api/v1/test/imbalance_poin" +
+      "t.proto\0321yandex/cloud/loadtesting/api/v1" +
+      "/test/status.proto\032\037google/protobuf/time" +
+      "stamp.proto\"\300\003\n\007Summary\022<\n\006status\030\001 \001(\0162" +
+      ",.yandex.cloud.loadtesting.api.v1.test.S" +
+      "tatus\022.\n\ncreated_at\030\002 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022\022\n\ncreated_by\030\003 \001(\t\022.\n\nsta" +
+      "rted_at\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022/\n\013finished_at\030\005 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022\023\n\013is_finished\030\006 \001(\010\022\r\n\005error" +
+      "\030\007 \001(\t\022M\n\017imbalance_point\030\010 \001(\01324.yandex" +
+      ".cloud.loadtesting.api.v1.test.Imbalance" +
+      "Point\022\031\n\021assigned_agent_id\030\t \001(\t\022D\n\tarti" +
+      "facts\030\n \001(\01321.yandex.cloud.loadtesting.a" +
+      "pi.v1.test.FilePointerBy\n(yandex.cloud.a" +
+      "pi.loadtesting.api.v1.testZMgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/loa" +
+      "dtesting/api/v1/test;testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.getDescriptor(),
           yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.getDescriptor(),
           yandex.cloud.api.loadtesting.api.v1.test.StatusOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -2405,7 +2702,8 @@ public final class SummaryOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_test_Summary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_test_Summary_descriptor,
-        new java.lang.String[] { "Status", "CreatedAt", "CreatedBy", "StartedAt", "FinishedAt", "IsFinished", "Error", "ImbalancePoint", "AssignedAgentId", });
+        new java.lang.String[] { "Status", "CreatedAt", "CreatedBy", "StartedAt", "FinishedAt", "IsFinished", "Error", "ImbalancePoint", "AssignedAgentId", "Artifacts", });
+    yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.getDescriptor();
     yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.getDescriptor();
     yandex.cloud.api.loadtesting.api.v1.test.StatusOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

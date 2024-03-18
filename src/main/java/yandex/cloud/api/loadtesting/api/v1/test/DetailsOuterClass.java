@@ -121,6 +121,33 @@ public final class DetailsOuterClass {
      */
     com.google.protobuf.ByteString
         getLoggingLogGroupIdBytes();
+
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     * @return Whether the artifactSettings field is set.
+     */
+    boolean hasArtifactSettings();
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     * @return The artifactSettings.
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings getArtifactSettings();
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder getArtifactSettingsOrBuilder();
   }
   /**
    * <pre>
@@ -201,6 +228,19 @@ public final class DetailsOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               loggingLogGroupId_ = s;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder subBuilder = null;
+              if (artifactSettings_ != null) {
+                subBuilder = artifactSettings_.toBuilder();
+              }
+              artifactSettings_ = input.readMessage(yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(artifactSettings_);
+                artifactSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -436,6 +476,44 @@ public final class DetailsOuterClass {
       }
     }
 
+    public static final int ARTIFACT_SETTINGS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings artifactSettings_;
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     * @return Whether the artifactSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasArtifactSettings() {
+      return artifactSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     * @return The artifactSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings getArtifactSettings() {
+      return artifactSettings_ == null ? yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.getDefaultInstance() : artifactSettings_;
+    }
+    /**
+     * <pre>
+     * Settings which define where to upload test artifacts and which files should be included.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder getArtifactSettingsOrBuilder() {
+      return getArtifactSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -462,6 +540,9 @@ public final class DetailsOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loggingLogGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, loggingLogGroupId_);
       }
+      if (artifactSettings_ != null) {
+        output.writeMessage(5, getArtifactSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -483,6 +564,10 @@ public final class DetailsOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loggingLogGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, loggingLogGroupId_);
+      }
+      if (artifactSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getArtifactSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -507,6 +592,11 @@ public final class DetailsOuterClass {
           .equals(other.getTagsList())) return false;
       if (!getLoggingLogGroupId()
           .equals(other.getLoggingLogGroupId())) return false;
+      if (hasArtifactSettings() != other.hasArtifactSettings()) return false;
+      if (hasArtifactSettings()) {
+        if (!getArtifactSettings()
+            .equals(other.getArtifactSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -528,6 +618,10 @@ public final class DetailsOuterClass {
       }
       hash = (37 * hash) + LOGGING_LOG_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLoggingLogGroupId().hashCode();
+      if (hasArtifactSettings()) {
+        hash = (37 * hash) + ARTIFACT_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getArtifactSettings().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -678,6 +772,12 @@ public final class DetailsOuterClass {
         }
         loggingLogGroupId_ = "";
 
+        if (artifactSettingsBuilder_ == null) {
+          artifactSettings_ = null;
+        } else {
+          artifactSettings_ = null;
+          artifactSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -717,6 +817,11 @@ public final class DetailsOuterClass {
           result.tags_ = tagsBuilder_.build();
         }
         result.loggingLogGroupId_ = loggingLogGroupId_;
+        if (artifactSettingsBuilder_ == null) {
+          result.artifactSettings_ = artifactSettings_;
+        } else {
+          result.artifactSettings_ = artifactSettingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -802,6 +907,9 @@ public final class DetailsOuterClass {
         if (!other.getLoggingLogGroupId().isEmpty()) {
           loggingLogGroupId_ = other.loggingLogGroupId_;
           onChanged();
+        }
+        if (other.hasArtifactSettings()) {
+          mergeArtifactSettings(other.getArtifactSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1432,6 +1540,161 @@ public final class DetailsOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings artifactSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder> artifactSettingsBuilder_;
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       * @return Whether the artifactSettings field is set.
+       */
+      public boolean hasArtifactSettings() {
+        return artifactSettingsBuilder_ != null || artifactSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       * @return The artifactSettings.
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings getArtifactSettings() {
+        if (artifactSettingsBuilder_ == null) {
+          return artifactSettings_ == null ? yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.getDefaultInstance() : artifactSettings_;
+        } else {
+          return artifactSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public Builder setArtifactSettings(yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings value) {
+        if (artifactSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          artifactSettings_ = value;
+          onChanged();
+        } else {
+          artifactSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public Builder setArtifactSettings(
+          yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder builderForValue) {
+        if (artifactSettingsBuilder_ == null) {
+          artifactSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          artifactSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public Builder mergeArtifactSettings(yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings value) {
+        if (artifactSettingsBuilder_ == null) {
+          if (artifactSettings_ != null) {
+            artifactSettings_ =
+              yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.newBuilder(artifactSettings_).mergeFrom(value).buildPartial();
+          } else {
+            artifactSettings_ = value;
+          }
+          onChanged();
+        } else {
+          artifactSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public Builder clearArtifactSettings() {
+        if (artifactSettingsBuilder_ == null) {
+          artifactSettings_ = null;
+          onChanged();
+        } else {
+          artifactSettings_ = null;
+          artifactSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder getArtifactSettingsBuilder() {
+        
+        onChanged();
+        return getArtifactSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder getArtifactSettingsOrBuilder() {
+        if (artifactSettingsBuilder_ != null) {
+          return artifactSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return artifactSettings_ == null ?
+              yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.getDefaultInstance() : artifactSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Settings which define where to upload test artifacts and which files should be included.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.test.ArtifactSettings artifact_settings = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder> 
+          getArtifactSettingsFieldBuilder() {
+        if (artifactSettingsBuilder_ == null) {
+          artifactSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettings.Builder, yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.ArtifactSettingsOrBuilder>(
+                  getArtifactSettings(),
+                  getParentForChildren(),
+                  isClean());
+          artifactSettings_ = null;
+        }
+        return artifactSettingsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1502,21 +1765,25 @@ public final class DetailsOuterClass {
       "\n2yandex/cloud/loadtesting/api/v1/test/d" +
       "etails.proto\022$yandex.cloud.loadtesting.a" +
       "pi.v1.test\0320yandex/cloud/loadtesting/api" +
-      "/v1/common/tag.proto\032\035yandex/cloud/valid" +
-      "ation.proto\"\266\001\n\007Details\0222\n\004name\030\001 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\002 \001(\tB\t\212\3101\005<=256\0229\n\004tags\030\003 \003(" +
-      "\0132+.yandex.cloud.loadtesting.api.v1.comm" +
-      "on.Tag\022\034\n\024logging_log_group_id\030\004 \001(\tBy\n(" +
-      "yandex.cloud.api.loadtesting.api.v1.test" +
-      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/loadtesting/api/v1/test;testb" +
-      "\006proto3"
+      "/v1/common/tag.proto\032<yandex/cloud/loadt" +
+      "esting/api/v1/test/artifact_settings.pro" +
+      "to\032\035yandex/cloud/validation.proto\"\211\002\n\007De" +
+      "tails\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
+      "]{0,61}[a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t" +
+      "\212\3101\005<=256\0229\n\004tags\030\003 \003(\0132+.yandex.cloud.l" +
+      "oadtesting.api.v1.common.Tag\022\034\n\024logging_" +
+      "log_group_id\030\004 \001(\t\022Q\n\021artifact_settings\030" +
+      "\005 \001(\01326.yandex.cloud.loadtesting.api.v1." +
+      "test.ArtifactSettingsBy\n(yandex.cloud.ap" +
+      "i.loadtesting.api.v1.testZMgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/load" +
+      "testing/api/v1/test;testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.getDescriptor(),
+          yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_loadtesting_api_v1_test_Details_descriptor =
@@ -1524,7 +1791,7 @@ public final class DetailsOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_test_Details_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_test_Details_descriptor,
-        new java.lang.String[] { "Name", "Description", "Tags", "LoggingLogGroupId", });
+        new java.lang.String[] { "Name", "Description", "Tags", "LoggingLogGroupId", "ArtifactSettings", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
@@ -1532,6 +1799,7 @@ public final class DetailsOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.getDescriptor();
+    yandex.cloud.api.loadtesting.api.v1.test.ArtifactSettingsOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 
