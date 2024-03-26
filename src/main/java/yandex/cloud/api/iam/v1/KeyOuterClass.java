@@ -182,6 +182,33 @@ public final class KeyOuterClass {
     com.google.protobuf.ByteString
         getPublicKeyBytes();
 
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     * @return Whether the lastUsedAt field is set.
+     */
+    boolean hasLastUsedAt();
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     * @return The lastUsedAt.
+     */
+    com.google.protobuf.Timestamp getLastUsedAt();
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastUsedAtOrBuilder();
+
     public yandex.cloud.api.iam.v1.KeyOuterClass.Key.SubjectCase getSubjectCase();
   }
   /**
@@ -284,6 +311,19 @@ public final class KeyOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               publicKey_ = s;
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastUsedAt_ != null) {
+                subBuilder = lastUsedAt_.toBuilder();
+              }
+              lastUsedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastUsedAt_);
+                lastUsedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -823,6 +863,44 @@ public final class KeyOuterClass {
       }
     }
 
+    public static final int LAST_USED_AT_FIELD_NUMBER = 9;
+    private com.google.protobuf.Timestamp lastUsedAt_;
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     * @return Whether the lastUsedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastUsedAt() {
+      return lastUsedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     * @return The lastUsedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUsedAt() {
+      return lastUsedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUsedAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last use of this key.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastUsedAtOrBuilder() {
+      return getLastUsedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -858,6 +936,9 @@ public final class KeyOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, publicKey_);
       }
+      if (lastUsedAt_ != null) {
+        output.writeMessage(9, getLastUsedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -890,6 +971,10 @@ public final class KeyOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, publicKey_);
       }
+      if (lastUsedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getLastUsedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -917,6 +1002,11 @@ public final class KeyOuterClass {
       if (keyAlgorithm_ != other.keyAlgorithm_) return false;
       if (!getPublicKey()
           .equals(other.getPublicKey())) return false;
+      if (hasLastUsedAt() != other.hasLastUsedAt()) return false;
+      if (hasLastUsedAt()) {
+        if (!getLastUsedAt()
+            .equals(other.getLastUsedAt())) return false;
+      }
       if (!getSubjectCase().equals(other.getSubjectCase())) return false;
       switch (subjectCase_) {
         case 2:
@@ -953,6 +1043,10 @@ public final class KeyOuterClass {
       hash = (53 * hash) + keyAlgorithm_;
       hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getPublicKey().hashCode();
+      if (hasLastUsedAt()) {
+        hash = (37 * hash) + LAST_USED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastUsedAt().hashCode();
+      }
       switch (subjectCase_) {
         case 2:
           hash = (37 * hash) + USER_ACCOUNT_ID_FIELD_NUMBER;
@@ -1116,6 +1210,12 @@ public final class KeyOuterClass {
 
         publicKey_ = "";
 
+        if (lastUsedAtBuilder_ == null) {
+          lastUsedAt_ = null;
+        } else {
+          lastUsedAt_ = null;
+          lastUsedAtBuilder_ = null;
+        }
         subjectCase_ = 0;
         subject_ = null;
         return this;
@@ -1159,6 +1259,11 @@ public final class KeyOuterClass {
         result.description_ = description_;
         result.keyAlgorithm_ = keyAlgorithm_;
         result.publicKey_ = publicKey_;
+        if (lastUsedAtBuilder_ == null) {
+          result.lastUsedAt_ = lastUsedAt_;
+        } else {
+          result.lastUsedAt_ = lastUsedAtBuilder_.build();
+        }
         result.subjectCase_ = subjectCase_;
         onBuilt();
         return result;
@@ -1225,6 +1330,9 @@ public final class KeyOuterClass {
         if (!other.getPublicKey().isEmpty()) {
           publicKey_ = other.publicKey_;
           onChanged();
+        }
+        if (other.hasLastUsedAt()) {
+          mergeLastUsedAt(other.getLastUsedAt());
         }
         switch (other.getSubjectCase()) {
           case USER_ACCOUNT_ID: {
@@ -2045,6 +2153,161 @@ public final class KeyOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp lastUsedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastUsedAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       * @return Whether the lastUsedAt field is set.
+       */
+      public boolean hasLastUsedAt() {
+        return lastUsedAtBuilder_ != null || lastUsedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       * @return The lastUsedAt.
+       */
+      public com.google.protobuf.Timestamp getLastUsedAt() {
+        if (lastUsedAtBuilder_ == null) {
+          return lastUsedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUsedAt_;
+        } else {
+          return lastUsedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public Builder setLastUsedAt(com.google.protobuf.Timestamp value) {
+        if (lastUsedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastUsedAt_ = value;
+          onChanged();
+        } else {
+          lastUsedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public Builder setLastUsedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastUsedAtBuilder_ == null) {
+          lastUsedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastUsedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public Builder mergeLastUsedAt(com.google.protobuf.Timestamp value) {
+        if (lastUsedAtBuilder_ == null) {
+          if (lastUsedAt_ != null) {
+            lastUsedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(lastUsedAt_).mergeFrom(value).buildPartial();
+          } else {
+            lastUsedAt_ = value;
+          }
+          onChanged();
+        } else {
+          lastUsedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public Builder clearLastUsedAt() {
+        if (lastUsedAtBuilder_ == null) {
+          lastUsedAt_ = null;
+          onChanged();
+        } else {
+          lastUsedAt_ = null;
+          lastUsedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastUsedAtBuilder() {
+        
+        onChanged();
+        return getLastUsedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastUsedAtOrBuilder() {
+        if (lastUsedAtBuilder_ != null) {
+          return lastUsedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return lastUsedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastUsedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last use of this key.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_used_at = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastUsedAtFieldBuilder() {
+        if (lastUsedAtBuilder_ == null) {
+          lastUsedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastUsedAt(),
+                  getParentForChildren(),
+                  isClean());
+          lastUsedAt_ = null;
+        }
+        return lastUsedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2114,17 +2377,18 @@ public final class KeyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\035yandex/cloud/iam/v1/key.proto\022\023yandex." +
       "cloud.iam.v1\032\037google/protobuf/timestamp." +
-      "proto\"\255\002\n\003Key\022\n\n\002id\030\001 \001(\t\022\031\n\017user_accoun" +
+      "proto\"\345\002\n\003Key\022\n\n\002id\030\001 \001(\t\022\031\n\017user_accoun" +
       "t_id\030\002 \001(\tH\000\022\034\n\022service_account_id\030\003 \001(\t" +
       "H\000\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\023\n\013description\030\005 \001(\t\0229\n\rkey_a" +
       "lgorithm\030\006 \001(\0162\".yandex.cloud.iam.v1.Key" +
-      ".Algorithm\022\022\n\npublic_key\030\007 \001(\t\"B\n\tAlgori" +
-      "thm\022\031\n\025ALGORITHM_UNSPECIFIED\020\000\022\014\n\010RSA_20" +
-      "48\020\001\022\014\n\010RSA_4096\020\002B\t\n\007subjectBV\n\027yandex." +
-      "cloud.api.iam.v1Z;github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/iam/v1;iamb\006p" +
-      "roto3"
+      ".Algorithm\022\022\n\npublic_key\030\007 \001(\t\0220\n\014last_u" +
+      "sed_at\030\t \001(\0132\032.google.protobuf.Timestamp" +
+      "\"B\n\tAlgorithm\022\031\n\025ALGORITHM_UNSPECIFIED\020\000" +
+      "\022\014\n\010RSA_2048\020\001\022\014\n\010RSA_4096\020\002B\t\n\007subjectJ" +
+      "\004\010\010\020\tBV\n\027yandex.cloud.api.iam.v1Z;github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2136,7 +2400,7 @@ public final class KeyOuterClass {
     internal_static_yandex_cloud_iam_v1_Key_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_Key_descriptor,
-        new java.lang.String[] { "Id", "UserAccountId", "ServiceAccountId", "CreatedAt", "Description", "KeyAlgorithm", "PublicKey", "Subject", });
+        new java.lang.String[] { "Id", "UserAccountId", "ServiceAccountId", "CreatedAt", "Description", "KeyAlgorithm", "PublicKey", "LastUsedAt", "Subject", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

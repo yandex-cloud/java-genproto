@@ -75,6 +75,10 @@ public final class TalkProto {
     public yandex.cloud.api.speechsense.v1.TalkProto.StreamTalkRequest.EventCase getEventCase();
   }
   /**
+   * <pre>
+   * streaming request to create audio dialog
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.speechsense.v1.StreamTalkRequest}
    */
   public static final class StreamTalkRequest extends
@@ -490,6 +494,10 @@ public final class TalkProto {
       return builder;
     }
     /**
+     * <pre>
+     * streaming request to create audio dialog
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.speechsense.v1.StreamTalkRequest}
      */
     public static final class Builder extends
@@ -1101,40 +1109,35 @@ public final class TalkProto {
     yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder getMetadataOrBuilder();
 
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      * @return Whether the audio field is set.
      */
     boolean hasAudio();
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      * @return The audio.
      */
     yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest getAudio();
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      */
     yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder getAudioOrBuilder();
-
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     * @return Whether the text field is set.
-     */
-    boolean hasText();
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     * @return The text.
-     */
-    yandex.cloud.api.speechsense.v1.TextProto.TextRequest getText();
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     */
-    yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder getTextOrBuilder();
-
-    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest.PayloadCase getPayloadCase();
   }
   /**
    * <pre>
-   * request to create dialog
+   * request to create audio dialog
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkRequest}
@@ -1196,30 +1199,15 @@ public final class TalkProto {
             }
             case 18: {
               yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder subBuilder = null;
-              if (payloadCase_ == 2) {
-                subBuilder = ((yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_).toBuilder();
+              if (audio_ != null) {
+                subBuilder = audio_.toBuilder();
               }
-              payload_ =
-                  input.readMessage(yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.parser(), extensionRegistry);
+              audio_ = input.readMessage(yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_);
-                payload_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(audio_);
+                audio_ = subBuilder.buildPartial();
               }
-              payloadCase_ = 2;
-              break;
-            }
-            case 26: {
-              yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder subBuilder = null;
-              if (payloadCase_ == 3) {
-                subBuilder = ((yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_).toBuilder();
-              }
-              payload_ =
-                  input.readMessage(yandex.cloud.api.speechsense.v1.TextProto.TextRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_);
-                payload_ = subBuilder.buildPartial();
-              }
-              payloadCase_ = 3;
+
               break;
             }
             default: {
@@ -1254,47 +1242,6 @@ public final class TalkProto {
               yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest.Builder.class);
     }
 
-    private int payloadCase_ = 0;
-    private java.lang.Object payload_;
-    public enum PayloadCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      AUDIO(2),
-      TEXT(3),
-      PAYLOAD_NOT_SET(0);
-      private final int value;
-      private PayloadCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PayloadCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static PayloadCase forNumber(int value) {
-        switch (value) {
-          case 2: return AUDIO;
-          case 3: return TEXT;
-          case 0: return PAYLOAD_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public PayloadCase
-    getPayloadCase() {
-      return PayloadCase.forNumber(
-          payloadCase_);
-    }
-
     public static final int METADATA_FIELD_NUMBER = 1;
     private yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata metadata_;
     /**
@@ -1322,65 +1269,41 @@ public final class TalkProto {
     }
 
     public static final int AUDIO_FIELD_NUMBER = 2;
+    private yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest audio_;
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      * @return Whether the audio field is set.
      */
     @java.lang.Override
     public boolean hasAudio() {
-      return payloadCase_ == 2;
+      return audio_ != null;
     }
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      * @return The audio.
      */
     @java.lang.Override
     public yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest getAudio() {
-      if (payloadCase_ == 2) {
-         return (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_;
-      }
-      return yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
+      return audio_ == null ? yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance() : audio_;
     }
     /**
+     * <pre>
+     * audio payload
+     * </pre>
+     *
      * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder getAudioOrBuilder() {
-      if (payloadCase_ == 2) {
-         return (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_;
-      }
-      return yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 3;
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     * @return Whether the text field is set.
-     */
-    @java.lang.Override
-    public boolean hasText() {
-      return payloadCase_ == 3;
-    }
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     * @return The text.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.speechsense.v1.TextProto.TextRequest getText() {
-      if (payloadCase_ == 3) {
-         return (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_;
-      }
-      return yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder getTextOrBuilder() {
-      if (payloadCase_ == 3) {
-         return (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_;
-      }
-      return yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
+      return getAudio();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1400,11 +1323,8 @@ public final class TalkProto {
       if (metadata_ != null) {
         output.writeMessage(1, getMetadata());
       }
-      if (payloadCase_ == 2) {
-        output.writeMessage(2, (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_);
-      }
-      if (payloadCase_ == 3) {
-        output.writeMessage(3, (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_);
+      if (audio_ != null) {
+        output.writeMessage(2, getAudio());
       }
       unknownFields.writeTo(output);
     }
@@ -1419,13 +1339,9 @@ public final class TalkProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
       }
-      if (payloadCase_ == 2) {
+      if (audio_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_);
-      }
-      if (payloadCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_);
+          .computeMessageSize(2, getAudio());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1447,18 +1363,10 @@ public final class TalkProto {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
-      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
-      switch (payloadCase_) {
-        case 2:
-          if (!getAudio()
-              .equals(other.getAudio())) return false;
-          break;
-        case 3:
-          if (!getText()
-              .equals(other.getText())) return false;
-          break;
-        case 0:
-        default:
+      if (hasAudio() != other.hasAudio()) return false;
+      if (hasAudio()) {
+        if (!getAudio()
+            .equals(other.getAudio())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1475,17 +1383,9 @@ public final class TalkProto {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
-      switch (payloadCase_) {
-        case 2:
-          hash = (37 * hash) + AUDIO_FIELD_NUMBER;
-          hash = (53 * hash) + getAudio().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + TEXT_FIELD_NUMBER;
-          hash = (53 * hash) + getText().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasAudio()) {
+        hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+        hash = (53 * hash) + getAudio().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1584,7 +1484,7 @@ public final class TalkProto {
     }
     /**
      * <pre>
-     * request to create dialog
+     * request to create audio dialog
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkRequest}
@@ -1630,8 +1530,12 @@ public final class TalkProto {
           metadata_ = null;
           metadataBuilder_ = null;
         }
-        payloadCase_ = 0;
-        payload_ = null;
+        if (audioBuilder_ == null) {
+          audio_ = null;
+        } else {
+          audio_ = null;
+          audioBuilder_ = null;
+        }
         return this;
       }
 
@@ -1663,21 +1567,11 @@ public final class TalkProto {
         } else {
           result.metadata_ = metadataBuilder_.build();
         }
-        if (payloadCase_ == 2) {
-          if (audioBuilder_ == null) {
-            result.payload_ = payload_;
-          } else {
-            result.payload_ = audioBuilder_.build();
-          }
+        if (audioBuilder_ == null) {
+          result.audio_ = audio_;
+        } else {
+          result.audio_ = audioBuilder_.build();
         }
-        if (payloadCase_ == 3) {
-          if (textBuilder_ == null) {
-            result.payload_ = payload_;
-          } else {
-            result.payload_ = textBuilder_.build();
-          }
-        }
-        result.payloadCase_ = payloadCase_;
         onBuilt();
         return result;
       }
@@ -1729,18 +1623,8 @@ public final class TalkProto {
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
-        switch (other.getPayloadCase()) {
-          case AUDIO: {
-            mergeAudio(other.getAudio());
-            break;
-          }
-          case TEXT: {
-            mergeText(other.getText());
-            break;
-          }
-          case PAYLOAD_NOT_SET: {
-            break;
-          }
+        if (other.hasAudio()) {
+          mergeAudio(other.getAudio());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1770,21 +1654,6 @@ public final class TalkProto {
         }
         return this;
       }
-      private int payloadCase_ = 0;
-      private java.lang.Object payload_;
-      public PayloadCase
-          getPayloadCase() {
-        return PayloadCase.forNumber(
-            payloadCase_);
-      }
-
-      public Builder clearPayload() {
-        payloadCase_ = 0;
-        payload_ = null;
-        onChanged();
-        return this;
-      }
-
 
       private yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1905,35 +1774,40 @@ public final class TalkProto {
         return metadataBuilder_;
       }
 
+      private yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest audio_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder> audioBuilder_;
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        * @return Whether the audio field is set.
        */
-      @java.lang.Override
       public boolean hasAudio() {
-        return payloadCase_ == 2;
+        return audioBuilder_ != null || audio_ != null;
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        * @return The audio.
        */
-      @java.lang.Override
       public yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest getAudio() {
         if (audioBuilder_ == null) {
-          if (payloadCase_ == 2) {
-            return (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_;
-          }
-          return yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
+          return audio_ == null ? yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance() : audio_;
         } else {
-          if (payloadCase_ == 2) {
-            return audioBuilder_.getMessage();
-          }
-          return yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
+          return audioBuilder_.getMessage();
         }
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       public Builder setAudio(yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest value) {
@@ -1941,250 +1815,118 @@ public final class TalkProto {
           if (value == null) {
             throw new NullPointerException();
           }
-          payload_ = value;
+          audio_ = value;
           onChanged();
         } else {
           audioBuilder_.setMessage(value);
         }
-        payloadCase_ = 2;
+
         return this;
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       public Builder setAudio(
           yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder builderForValue) {
         if (audioBuilder_ == null) {
-          payload_ = builderForValue.build();
+          audio_ = builderForValue.build();
           onChanged();
         } else {
           audioBuilder_.setMessage(builderForValue.build());
         }
-        payloadCase_ = 2;
+
         return this;
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       public Builder mergeAudio(yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest value) {
         if (audioBuilder_ == null) {
-          if (payloadCase_ == 2 &&
-              payload_ != yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance()) {
-            payload_ = yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.newBuilder((yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_)
-                .mergeFrom(value).buildPartial();
+          if (audio_ != null) {
+            audio_ =
+              yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.newBuilder(audio_).mergeFrom(value).buildPartial();
           } else {
-            payload_ = value;
+            audio_ = value;
           }
           onChanged();
         } else {
-          if (payloadCase_ == 2) {
-            audioBuilder_.mergeFrom(value);
-          }
-          audioBuilder_.setMessage(value);
+          audioBuilder_.mergeFrom(value);
         }
-        payloadCase_ = 2;
+
         return this;
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       public Builder clearAudio() {
         if (audioBuilder_ == null) {
-          if (payloadCase_ == 2) {
-            payloadCase_ = 0;
-            payload_ = null;
-            onChanged();
-          }
+          audio_ = null;
+          onChanged();
         } else {
-          if (payloadCase_ == 2) {
-            payloadCase_ = 0;
-            payload_ = null;
-          }
-          audioBuilder_.clear();
+          audio_ = null;
+          audioBuilder_ = null;
         }
+
         return this;
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       public yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder getAudioBuilder() {
+        
+        onChanged();
         return getAudioFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
-      @java.lang.Override
       public yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder getAudioOrBuilder() {
-        if ((payloadCase_ == 2) && (audioBuilder_ != null)) {
+        if (audioBuilder_ != null) {
           return audioBuilder_.getMessageOrBuilder();
         } else {
-          if (payloadCase_ == 2) {
-            return (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_;
-          }
-          return yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
+          return audio_ == null ?
+              yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance() : audio_;
         }
       }
       /**
+       * <pre>
+       * audio payload
+       * </pre>
+       *
        * <code>.yandex.cloud.speechsense.v1.AudioRequest audio = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder> 
           getAudioFieldBuilder() {
         if (audioBuilder_ == null) {
-          if (!(payloadCase_ == 2)) {
-            payload_ = yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.getDefaultInstance();
-          }
           audioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest.Builder, yandex.cloud.api.speechsense.v1.AudioProto.AudioRequestOrBuilder>(
-                  (yandex.cloud.api.speechsense.v1.AudioProto.AudioRequest) payload_,
+                  getAudio(),
                   getParentForChildren(),
                   isClean());
-          payload_ = null;
+          audio_ = null;
         }
-        payloadCase_ = 2;
-        onChanged();;
         return audioBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.speechsense.v1.TextProto.TextRequest, yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder> textBuilder_;
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       * @return Whether the text field is set.
-       */
-      @java.lang.Override
-      public boolean hasText() {
-        return payloadCase_ == 3;
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       * @return The text.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.speechsense.v1.TextProto.TextRequest getText() {
-        if (textBuilder_ == null) {
-          if (payloadCase_ == 3) {
-            return (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_;
-          }
-          return yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
-        } else {
-          if (payloadCase_ == 3) {
-            return textBuilder_.getMessage();
-          }
-          return yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      public Builder setText(yandex.cloud.api.speechsense.v1.TextProto.TextRequest value) {
-        if (textBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          payload_ = value;
-          onChanged();
-        } else {
-          textBuilder_.setMessage(value);
-        }
-        payloadCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      public Builder setText(
-          yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder builderForValue) {
-        if (textBuilder_ == null) {
-          payload_ = builderForValue.build();
-          onChanged();
-        } else {
-          textBuilder_.setMessage(builderForValue.build());
-        }
-        payloadCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      public Builder mergeText(yandex.cloud.api.speechsense.v1.TextProto.TextRequest value) {
-        if (textBuilder_ == null) {
-          if (payloadCase_ == 3 &&
-              payload_ != yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance()) {
-            payload_ = yandex.cloud.api.speechsense.v1.TextProto.TextRequest.newBuilder((yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            payload_ = value;
-          }
-          onChanged();
-        } else {
-          if (payloadCase_ == 3) {
-            textBuilder_.mergeFrom(value);
-          }
-          textBuilder_.setMessage(value);
-        }
-        payloadCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      public Builder clearText() {
-        if (textBuilder_ == null) {
-          if (payloadCase_ == 3) {
-            payloadCase_ = 0;
-            payload_ = null;
-            onChanged();
-          }
-        } else {
-          if (payloadCase_ == 3) {
-            payloadCase_ = 0;
-            payload_ = null;
-          }
-          textBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder getTextBuilder() {
-        return getTextFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder getTextOrBuilder() {
-        if ((payloadCase_ == 3) && (textBuilder_ != null)) {
-          return textBuilder_.getMessageOrBuilder();
-        } else {
-          if (payloadCase_ == 3) {
-            return (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_;
-          }
-          return yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.speechsense.v1.TextRequest text = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.speechsense.v1.TextProto.TextRequest, yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder> 
-          getTextFieldBuilder() {
-        if (textBuilder_ == null) {
-          if (!(payloadCase_ == 3)) {
-            payload_ = yandex.cloud.api.speechsense.v1.TextProto.TextRequest.getDefaultInstance();
-          }
-          textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.speechsense.v1.TextProto.TextRequest, yandex.cloud.api.speechsense.v1.TextProto.TextRequest.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextRequestOrBuilder>(
-                  (yandex.cloud.api.speechsense.v1.TextProto.TextRequest) payload_,
-                  getParentForChildren(),
-                  isClean());
-          payload_ = null;
-        }
-        payloadCase_ = 3;
-        onChanged();;
-        return textBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2234,6 +1976,2218 @@ public final class TalkProto {
 
     @java.lang.Override
     public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadTalkResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadTalkResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The talkId.
+     */
+    java.lang.String getTalkId();
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The bytes for talkId.
+     */
+    com.google.protobuf.ByteString
+        getTalkIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkResponse}
+   */
+  public static final class UploadTalkResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadTalkResponse)
+      UploadTalkResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadTalkResponse.newBuilder() to construct.
+    private UploadTalkResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadTalkResponse() {
+      talkId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadTalkResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadTalkResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              talkId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.Builder.class);
+    }
+
+    public static final int TALK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object talkId_;
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The talkId.
+     */
+    @java.lang.Override
+    public java.lang.String getTalkId() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        talkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The bytes for talkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTalkIdBytes() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        talkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, talkId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, talkId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse other = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) obj;
+
+      if (!getTalkId()
+          .equals(other.getTalkId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadTalkResponse)
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        talkId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse build() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse result = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse(this);
+        result.talkId_ = talkId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.getDefaultInstance()) return this;
+        if (!other.getTalkId().isEmpty()) {
+          talkId_ = other.talkId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object talkId_ = "";
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return The talkId.
+       */
+      public java.lang.String getTalkId() {
+        java.lang.Object ref = talkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          talkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return The bytes for talkId.
+       */
+      public com.google.protobuf.ByteString
+          getTalkIdBytes() {
+        java.lang.Object ref = talkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          talkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @param value The talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkId() {
+        
+        talkId_ = getDefaultInstance().getTalkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @param value The bytes for talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadTalkResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadTalkResponse)
+    private static final yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadTalkResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UploadTalkResponse>() {
+      @java.lang.Override
+      public UploadTalkResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadTalkResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadTalkResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadTalkResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadTextRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadTextRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata getMetadata();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> 
+        getTextContentList();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index);
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    int getTextContentCount();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
+        getTextContentOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * request to create text based dialog
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTextRequest}
+   */
+  public static final class UploadTextRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadTextRequest)
+      UploadTextRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadTextRequest.newBuilder() to construct.
+    private UploadTextRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadTextRequest() {
+      textContent_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadTextRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadTextRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                textContent_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TextProto.TextContent>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              textContent_.add(
+                  input.readMessage(yandex.cloud.api.speechsense.v1.TextProto.TextContent.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          textContent_ = java.util.Collections.unmodifiableList(textContent_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.Builder.class);
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 1;
+    private yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata metadata_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata getMetadata() {
+      return metadata_ == null ? yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
+    public static final int TEXT_CONTENT_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> textContent_;
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> getTextContentList() {
+      return textContent_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
+        getTextContentOrBuilderList() {
+      return textContent_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    @java.lang.Override
+    public int getTextContentCount() {
+      return textContent_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index) {
+      return textContent_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
+        int index) {
+      return textContent_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (metadata_ != null) {
+        output.writeMessage(1, getMetadata());
+      }
+      for (int i = 0; i < textContent_.size(); i++) {
+        output.writeMessage(2, textContent_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMetadata());
+      }
+      for (int i = 0; i < textContent_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, textContent_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest other = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest) obj;
+
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getTextContentList()
+          .equals(other.getTextContentList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      if (getTextContentCount() > 0) {
+        hash = (37 * hash) + TEXT_CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getTextContentList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * request to create text based dialog
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTextRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadTextRequest)
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTextContentFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+        if (textContentBuilder_ == null) {
+          textContent_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          textContentBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest build() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest result = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
+        }
+        if (textContentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            textContent_ = java.util.Collections.unmodifiableList(textContent_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.textContent_ = textContent_;
+        } else {
+          result.textContent_ = textContentBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.getDefaultInstance()) return this;
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        if (textContentBuilder_ == null) {
+          if (!other.textContent_.isEmpty()) {
+            if (textContent_.isEmpty()) {
+              textContent_ = other.textContent_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTextContentIsMutable();
+              textContent_.addAll(other.textContent_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textContent_.isEmpty()) {
+            if (textContentBuilder_.isEmpty()) {
+              textContentBuilder_.dispose();
+              textContentBuilder_ = null;
+              textContent_ = other.textContent_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              textContentBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTextContentFieldBuilder() : null;
+            } else {
+              textContentBuilder_.addAllMessages(other.textContent_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       * @return The metadata.
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public Builder setMetadata(
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public Builder mergeMetadata(yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TalkMetadata metadata = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> textContent_ =
+        java.util.Collections.emptyList();
+      private void ensureTextContentIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          textContent_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TextProto.TextContent>(textContent_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> textContentBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> getTextContentList() {
+        if (textContentBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(textContent_);
+        } else {
+          return textContentBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public int getTextContentCount() {
+        if (textContentBuilder_ == null) {
+          return textContent_.size();
+        } else {
+          return textContentBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index) {
+        if (textContentBuilder_ == null) {
+          return textContent_.get(index);
+        } else {
+          return textContentBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder setTextContent(
+          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
+        if (textContentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextContentIsMutable();
+          textContent_.set(index, value);
+          onChanged();
+        } else {
+          textContentBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder setTextContent(
+          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
+        if (textContentBuilder_ == null) {
+          ensureTextContentIsMutable();
+          textContent_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textContentBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder addTextContent(yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
+        if (textContentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextContentIsMutable();
+          textContent_.add(value);
+          onChanged();
+        } else {
+          textContentBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder addTextContent(
+          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
+        if (textContentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextContentIsMutable();
+          textContent_.add(index, value);
+          onChanged();
+        } else {
+          textContentBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder addTextContent(
+          yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
+        if (textContentBuilder_ == null) {
+          ensureTextContentIsMutable();
+          textContent_.add(builderForValue.build());
+          onChanged();
+        } else {
+          textContentBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder addTextContent(
+          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
+        if (textContentBuilder_ == null) {
+          ensureTextContentIsMutable();
+          textContent_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          textContentBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder addAllTextContent(
+          java.lang.Iterable<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContent> values) {
+        if (textContentBuilder_ == null) {
+          ensureTextContentIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textContent_);
+          onChanged();
+        } else {
+          textContentBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder clearTextContent() {
+        if (textContentBuilder_ == null) {
+          textContent_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          textContentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder removeTextContent(int index) {
+        if (textContentBuilder_ == null) {
+          ensureTextContentIsMutable();
+          textContent_.remove(index);
+          onChanged();
+        } else {
+          textContentBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder getTextContentBuilder(
+          int index) {
+        return getTextContentFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
+          int index) {
+        if (textContentBuilder_ == null) {
+          return textContent_.get(index);  } else {
+          return textContentBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
+           getTextContentOrBuilderList() {
+        if (textContentBuilder_ != null) {
+          return textContentBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textContent_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder addTextContentBuilder() {
+        return getTextContentFieldBuilder().addBuilder(
+            yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder addTextContentBuilder(
+          int index) {
+        return getTextContentFieldBuilder().addBuilder(
+            index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder> 
+           getTextContentBuilderList() {
+        return getTextContentFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
+          getTextContentFieldBuilder() {
+        if (textContentBuilder_ == null) {
+          textContentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder>(
+                  textContent_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          textContent_ = null;
+        }
+        return textContentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadTextRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadTextRequest)
+    private static final yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadTextRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UploadTextRequest>() {
+      @java.lang.Override
+      public UploadTextRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadTextRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadTextRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadTextRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadTextResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadTextResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The talkId.
+     */
+    java.lang.String getTalkId();
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The bytes for talkId.
+     */
+    com.google.protobuf.ByteString
+        getTalkIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTextResponse}
+   */
+  public static final class UploadTextResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadTextResponse)
+      UploadTextResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadTextResponse.newBuilder() to construct.
+    private UploadTextResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadTextResponse() {
+      talkId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadTextResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadTextResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              talkId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.Builder.class);
+    }
+
+    public static final int TALK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object talkId_;
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The talkId.
+     */
+    @java.lang.Override
+    public java.lang.String getTalkId() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        talkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of created talk document
+     * </pre>
+     *
+     * <code>string talk_id = 1;</code>
+     * @return The bytes for talkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTalkIdBytes() {
+      java.lang.Object ref = talkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        talkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, talkId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, talkId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse other = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse) obj;
+
+      if (!getTalkId()
+          .equals(other.getTalkId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TALK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTalkId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTextResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadTextResponse)
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        talkId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse build() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse result = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse(this);
+        result.talkId_ = talkId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.getDefaultInstance()) return this;
+        if (!other.getTalkId().isEmpty()) {
+          talkId_ = other.talkId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object talkId_ = "";
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return The talkId.
+       */
+      public java.lang.String getTalkId() {
+        java.lang.Object ref = talkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          talkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return The bytes for talkId.
+       */
+      public com.google.protobuf.ByteString
+          getTalkIdBytes() {
+        java.lang.Object ref = talkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          talkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @param value The talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkId() {
+        
+        talkId_ = getDefaultInstance().getTalkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talk document
+       * </pre>
+       *
+       * <code>string talk_id = 1;</code>
+       * @param value The bytes for talkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        talkId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadTextResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadTextResponse)
+    private static final yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadTextResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UploadTextResponse>() {
+      @java.lang.Override
+      public UploadTextResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadTextResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadTextResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadTextResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3230,610 +5184,6 @@ public final class TalkProto {
 
   }
 
-  public interface UploadTalkResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadTalkResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * id of created talk document
-     * </pre>
-     *
-     * <code>string talk_id = 1;</code>
-     * @return The talkId.
-     */
-    java.lang.String getTalkId();
-    /**
-     * <pre>
-     * id of created talk document
-     * </pre>
-     *
-     * <code>string talk_id = 1;</code>
-     * @return The bytes for talkId.
-     */
-    com.google.protobuf.ByteString
-        getTalkIdBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkResponse}
-   */
-  public static final class UploadTalkResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadTalkResponse)
-      UploadTalkResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UploadTalkResponse.newBuilder() to construct.
-    private UploadTalkResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private UploadTalkResponse() {
-      talkId_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UploadTalkResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private UploadTalkResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              talkId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.Builder.class);
-    }
-
-    public static final int TALK_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object talkId_;
-    /**
-     * <pre>
-     * id of created talk document
-     * </pre>
-     *
-     * <code>string talk_id = 1;</code>
-     * @return The talkId.
-     */
-    @java.lang.Override
-    public java.lang.String getTalkId() {
-      java.lang.Object ref = talkId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        talkId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * id of created talk document
-     * </pre>
-     *
-     * <code>string talk_id = 1;</code>
-     * @return The bytes for talkId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTalkIdBytes() {
-      java.lang.Object ref = talkId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        talkId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, talkId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(talkId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, talkId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse other = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) obj;
-
-      if (!getTalkId()
-          .equals(other.getTalkId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TALK_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTalkId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadTalkResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadTalkResponse)
-        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.class, yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        talkId_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.speechsense.v1.TalkProto.internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstanceForType() {
-        return yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse build() {
-        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse buildPartial() {
-        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse result = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse(this);
-        result.talkId_ = talkId_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) {
-          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse other) {
-        if (other == yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse.getDefaultInstance()) return this;
-        if (!other.getTalkId().isEmpty()) {
-          talkId_ = other.talkId_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object talkId_ = "";
-      /**
-       * <pre>
-       * id of created talk document
-       * </pre>
-       *
-       * <code>string talk_id = 1;</code>
-       * @return The talkId.
-       */
-      public java.lang.String getTalkId() {
-        java.lang.Object ref = talkId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          talkId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * id of created talk document
-       * </pre>
-       *
-       * <code>string talk_id = 1;</code>
-       * @return The bytes for talkId.
-       */
-      public com.google.protobuf.ByteString
-          getTalkIdBytes() {
-        java.lang.Object ref = talkId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          talkId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * id of created talk document
-       * </pre>
-       *
-       * <code>string talk_id = 1;</code>
-       * @param value The talkId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTalkId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        talkId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * id of created talk document
-       * </pre>
-       *
-       * <code>string talk_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTalkId() {
-        
-        talkId_ = getDefaultInstance().getTalkId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * id of created talk document
-       * </pre>
-       *
-       * <code>string talk_id = 1;</code>
-       * @param value The bytes for talkId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTalkIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        talkId_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadTalkResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadTalkResponse)
-    private static final yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse();
-    }
-
-    public static yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<UploadTalkResponse>
-        PARSER = new com.google.protobuf.AbstractParser<UploadTalkResponse>() {
-      @java.lang.Override
-      public UploadTalkResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UploadTalkResponse(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<UploadTalkResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UploadTalkResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_StreamTalkRequest_descriptor;
   private static final 
@@ -3845,6 +5195,21 @@ public final class TalkProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3854,11 +5219,6 @@ public final class TalkProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3876,26 +5236,32 @@ public final class TalkProto {
       ".yandex.cloud.speechsense.v1.TalkMetadat" +
       "aH\000\022C\n\005audio\030\002 \001(\01322.yandex.cloud.speech" +
       "sense.v1.AudioStreamingRequestH\000B\007\n\005Even" +
-      "t\"\321\001\n\021UploadTalkRequest\022;\n\010metadata\030\001 \001(" +
+      "t\"\212\001\n\021UploadTalkRequest\022;\n\010metadata\030\001 \001(" +
       "\0132).yandex.cloud.speechsense.v1.TalkMeta" +
-      "data\022:\n\005audio\030\002 \001(\0132).yandex.cloud.speec" +
-      "hsense.v1.AudioRequestH\000\0228\n\004text\030\003 \001(\0132(" +
-      ".yandex.cloud.speechsense.v1.TextRequest" +
-      "H\000B\t\n\007payload\"\233\001\n\014TalkMetadata\022\025\n\rconnec" +
-      "tion_id\030\001 \001(\t\022E\n\006fields\030\002 \003(\01325.yandex.c" +
-      "loud.speechsense.v1.TalkMetadata.FieldsE" +
-      "ntry\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"%\n\022UploadTalkResponse\022\017\n\007tal" +
-      "k_id\030\001 \001(\t2\355\001\n\013TalkService\022s\n\016UploadAsSt" +
-      "ream\022..yandex.cloud.speechsense.v1.Strea" +
-      "mTalkRequest\032/.yandex.cloud.speechsense." +
-      "v1.UploadTalkResponse(\001\022i\n\006Upload\022..yand" +
-      "ex.cloud.speechsense.v1.UploadTalkReques" +
-      "t\032/.yandex.cloud.speechsense.v1.UploadTa" +
-      "lkResponseBy\n\037yandex.cloud.api.speechsen" +
-      "se.v1B\tTalkProtoZKgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/speechsense/v" +
-      "1;speechsenseb\006proto3"
+      "data\0228\n\005audio\030\002 \001(\0132).yandex.cloud.speec" +
+      "hsense.v1.AudioRequest\"%\n\022UploadTalkResp" +
+      "onse\022\017\n\007talk_id\030\001 \001(\t\"\220\001\n\021UploadTextRequ" +
+      "est\022;\n\010metadata\030\001 \001(\0132).yandex.cloud.spe" +
+      "echsense.v1.TalkMetadata\022>\n\014text_content" +
+      "\030\002 \003(\0132(.yandex.cloud.speechsense.v1.Tex" +
+      "tContent\"%\n\022UploadTextResponse\022\017\n\007talk_i" +
+      "d\030\001 \001(\t\"\233\001\n\014TalkMetadata\022\025\n\rconnection_i" +
+      "d\030\001 \001(\t\022E\n\006fields\030\002 \003(\01325.yandex.cloud.s" +
+      "peechsense.v1.TalkMetadata.FieldsEntry\032-" +
+      "\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\0012\334\002\n\013TalkService\022s\n\016UploadAsStream\022" +
+      "..yandex.cloud.speechsense.v1.StreamTalk" +
+      "Request\032/.yandex.cloud.speechsense.v1.Up" +
+      "loadTalkResponse(\001\022i\n\006Upload\022..yandex.cl" +
+      "oud.speechsense.v1.UploadTalkRequest\032/.y" +
+      "andex.cloud.speechsense.v1.UploadTalkRes" +
+      "ponse\022m\n\nUploadText\022..yandex.cloud.speec" +
+      "hsense.v1.UploadTextRequest\032/.yandex.clo" +
+      "ud.speechsense.v1.UploadTextResponseBy\n\037" +
+      "yandex.cloud.api.speechsense.v1B\tTalkPro" +
+      "toZKgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/speechsense/v1;speechsenseb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3914,9 +5280,27 @@ public final class TalkProto {
     internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_UploadTalkRequest_descriptor,
-        new java.lang.String[] { "Metadata", "Audio", "Text", "Payload", });
-    internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor =
+        new java.lang.String[] { "Metadata", "Audio", });
+    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor,
+        new java.lang.String[] { "TalkId", });
+    internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UploadTextRequest_descriptor,
+        new java.lang.String[] { "Metadata", "TextContent", });
+    internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UploadTextResponse_descriptor,
+        new java.lang.String[] { "TalkId", });
+    internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_speechsense_v1_TalkMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor,
@@ -3927,12 +5311,6 @@ public final class TalkProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_speechsense_v1_UploadTalkResponse_descriptor,
-        new java.lang.String[] { "TalkId", });
     yandex.cloud.api.speechsense.v1.AudioProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.TextProto.getDescriptor();
   }

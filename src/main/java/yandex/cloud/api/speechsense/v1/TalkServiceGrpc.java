@@ -77,6 +77,37 @@ public final class TalkServiceGrpc {
     return getUploadMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest,
+      yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> getUploadTextMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadText",
+      requestType = yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.class,
+      responseType = yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest,
+      yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> getUploadTextMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> getUploadTextMethod;
+    if ((getUploadTextMethod = TalkServiceGrpc.getUploadTextMethod) == null) {
+      synchronized (TalkServiceGrpc.class) {
+        if ((getUploadTextMethod = TalkServiceGrpc.getUploadTextMethod) == null) {
+          TalkServiceGrpc.getUploadTextMethod = getUploadTextMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest, yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadText"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TalkServiceMethodDescriptorSupplier("UploadText"))
+              .build();
+        }
+      }
+    }
+    return getUploadTextMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -146,6 +177,16 @@ public final class TalkServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * rpc for uploading text talk document
+     * </pre>
+     */
+    public void uploadText(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadTextMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -162,6 +203,13 @@ public final class TalkServiceGrpc {
                 yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest,
                 yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse>(
                   this, METHODID_UPLOAD)))
+          .addMethod(
+            getUploadTextMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest,
+                yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse>(
+                  this, METHODID_UPLOAD_TEXT)))
           .build();
     }
   }
@@ -202,6 +250,17 @@ public final class TalkServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUploadMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * rpc for uploading text talk document
+     * </pre>
+     */
+    public void uploadText(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadTextMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -226,6 +285,16 @@ public final class TalkServiceGrpc {
     public yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse upload(yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUploadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * rpc for uploading text talk document
+     * </pre>
+     */
+    public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse uploadText(yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadTextMethod(), getCallOptions(), request);
     }
   }
 
@@ -253,10 +322,22 @@ public final class TalkServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUploadMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * rpc for uploading text talk document
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse> uploadText(
+        yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadTextMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_UPLOAD = 0;
-  private static final int METHODID_UPLOAD_AS_STREAM = 1;
+  private static final int METHODID_UPLOAD_TEXT = 1;
+  private static final int METHODID_UPLOAD_AS_STREAM = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -278,6 +359,10 @@ public final class TalkServiceGrpc {
         case METHODID_UPLOAD:
           serviceImpl.upload((yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkProto.UploadTalkResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_TEXT:
+          serviceImpl.uploadText((yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkProto.UploadTextResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -345,6 +430,7 @@ public final class TalkServiceGrpc {
               .setSchemaDescriptor(new TalkServiceFileDescriptorSupplier())
               .addMethod(getUploadAsStreamMethod())
               .addMethod(getUploadMethod())
+              .addMethod(getUploadTextMethod())
               .build();
         }
       }

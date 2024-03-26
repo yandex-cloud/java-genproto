@@ -8510,6 +8510,33 @@ public final class Mongodb60 {
        * <code>.google.protobuf.BoolValue enable_flow_control = 1;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getEnableFlowControlOrBuilder();
+
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
+       */
+      boolean hasMinSnapshotHistoryWindowInSeconds();
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The minSnapshotHistoryWindowInSeconds.
+       */
+      com.google.protobuf.Int64Value getMinSnapshotHistoryWindowInSeconds();
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.config.MongodConfig6_0.SetParameter}
@@ -8565,6 +8592,19 @@ public final class Mongodb60 {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(enableFlowControl_);
                   enableFlowControl_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (minSnapshotHistoryWindowInSeconds_ != null) {
+                  subBuilder = minSnapshotHistoryWindowInSeconds_.toBuilder();
+                }
+                minSnapshotHistoryWindowInSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minSnapshotHistoryWindowInSeconds_);
+                  minSnapshotHistoryWindowInSeconds_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -8645,6 +8685,44 @@ public final class Mongodb60 {
         return getEnableFlowControl();
       }
 
+      public static final int MIN_SNAPSHOT_HISTORY_WINDOW_IN_SECONDS_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value minSnapshotHistoryWindowInSeconds_;
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinSnapshotHistoryWindowInSeconds() {
+        return minSnapshotHistoryWindowInSeconds_ != null;
+      }
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The minSnapshotHistoryWindowInSeconds.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMinSnapshotHistoryWindowInSeconds() {
+        return minSnapshotHistoryWindowInSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minSnapshotHistoryWindowInSeconds_;
+      }
+      /**
+       * <pre>
+       * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder() {
+        return getMinSnapshotHistoryWindowInSeconds();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -8662,6 +8740,9 @@ public final class Mongodb60 {
         if (enableFlowControl_ != null) {
           output.writeMessage(1, getEnableFlowControl());
         }
+        if (minSnapshotHistoryWindowInSeconds_ != null) {
+          output.writeMessage(2, getMinSnapshotHistoryWindowInSeconds());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -8674,6 +8755,10 @@ public final class Mongodb60 {
         if (enableFlowControl_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getEnableFlowControl());
+        }
+        if (minSnapshotHistoryWindowInSeconds_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMinSnapshotHistoryWindowInSeconds());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -8695,6 +8780,11 @@ public final class Mongodb60 {
           if (!getEnableFlowControl()
               .equals(other.getEnableFlowControl())) return false;
         }
+        if (hasMinSnapshotHistoryWindowInSeconds() != other.hasMinSnapshotHistoryWindowInSeconds()) return false;
+        if (hasMinSnapshotHistoryWindowInSeconds()) {
+          if (!getMinSnapshotHistoryWindowInSeconds()
+              .equals(other.getMinSnapshotHistoryWindowInSeconds())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -8709,6 +8799,10 @@ public final class Mongodb60 {
         if (hasEnableFlowControl()) {
           hash = (37 * hash) + ENABLE_FLOW_CONTROL_FIELD_NUMBER;
           hash = (53 * hash) + getEnableFlowControl().hashCode();
+        }
+        if (hasMinSnapshotHistoryWindowInSeconds()) {
+          hash = (37 * hash) + MIN_SNAPSHOT_HISTORY_WINDOW_IN_SECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + getMinSnapshotHistoryWindowInSeconds().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -8849,6 +8943,12 @@ public final class Mongodb60 {
             enableFlowControl_ = null;
             enableFlowControlBuilder_ = null;
           }
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            minSnapshotHistoryWindowInSeconds_ = null;
+          } else {
+            minSnapshotHistoryWindowInSeconds_ = null;
+            minSnapshotHistoryWindowInSecondsBuilder_ = null;
+          }
           return this;
         }
 
@@ -8879,6 +8979,11 @@ public final class Mongodb60 {
             result.enableFlowControl_ = enableFlowControl_;
           } else {
             result.enableFlowControl_ = enableFlowControlBuilder_.build();
+          }
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            result.minSnapshotHistoryWindowInSeconds_ = minSnapshotHistoryWindowInSeconds_;
+          } else {
+            result.minSnapshotHistoryWindowInSeconds_ = minSnapshotHistoryWindowInSecondsBuilder_.build();
           }
           onBuilt();
           return result;
@@ -8930,6 +9035,9 @@ public final class Mongodb60 {
           if (other == yandex.cloud.api.mdb.mongodb.v1.config.Mongodb60.MongodConfig6_0.SetParameter.getDefaultInstance()) return this;
           if (other.hasEnableFlowControl()) {
             mergeEnableFlowControl(other.getEnableFlowControl());
+          }
+          if (other.hasMinSnapshotHistoryWindowInSeconds()) {
+            mergeMinSnapshotHistoryWindowInSeconds(other.getMinSnapshotHistoryWindowInSeconds());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -9131,6 +9239,161 @@ public final class Mongodb60 {
             enableFlowControl_ = null;
           }
           return enableFlowControlBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value minSnapshotHistoryWindowInSeconds_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minSnapshotHistoryWindowInSecondsBuilder_;
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
+         */
+        public boolean hasMinSnapshotHistoryWindowInSeconds() {
+          return minSnapshotHistoryWindowInSecondsBuilder_ != null || minSnapshotHistoryWindowInSeconds_ != null;
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The minSnapshotHistoryWindowInSeconds.
+         */
+        public com.google.protobuf.Int64Value getMinSnapshotHistoryWindowInSeconds() {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            return minSnapshotHistoryWindowInSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minSnapshotHistoryWindowInSeconds_;
+          } else {
+            return minSnapshotHistoryWindowInSecondsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setMinSnapshotHistoryWindowInSeconds(com.google.protobuf.Int64Value value) {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minSnapshotHistoryWindowInSeconds_ = value;
+            onChanged();
+          } else {
+            minSnapshotHistoryWindowInSecondsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setMinSnapshotHistoryWindowInSeconds(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            minSnapshotHistoryWindowInSeconds_ = builderForValue.build();
+            onChanged();
+          } else {
+            minSnapshotHistoryWindowInSecondsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder mergeMinSnapshotHistoryWindowInSeconds(com.google.protobuf.Int64Value value) {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            if (minSnapshotHistoryWindowInSeconds_ != null) {
+              minSnapshotHistoryWindowInSeconds_ =
+                com.google.protobuf.Int64Value.newBuilder(minSnapshotHistoryWindowInSeconds_).mergeFrom(value).buildPartial();
+            } else {
+              minSnapshotHistoryWindowInSeconds_ = value;
+            }
+            onChanged();
+          } else {
+            minSnapshotHistoryWindowInSecondsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder clearMinSnapshotHistoryWindowInSeconds() {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            minSnapshotHistoryWindowInSeconds_ = null;
+            onChanged();
+          } else {
+            minSnapshotHistoryWindowInSeconds_ = null;
+            minSnapshotHistoryWindowInSecondsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMinSnapshotHistoryWindowInSecondsBuilder() {
+          
+          onChanged();
+          return getMinSnapshotHistoryWindowInSecondsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder() {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ != null) {
+            return minSnapshotHistoryWindowInSecondsBuilder_.getMessageOrBuilder();
+          } else {
+            return minSnapshotHistoryWindowInSeconds_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : minSnapshotHistoryWindowInSeconds_;
+          }
+        }
+        /**
+         * <pre>
+         * The minimum time window in seconds for which the storage engine keeps the snapshot history.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 2 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMinSnapshotHistoryWindowInSecondsFieldBuilder() {
+          if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
+            minSnapshotHistoryWindowInSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMinSnapshotHistoryWindowInSeconds(),
+                    getParentForChildren(),
+                    isClean());
+            minSnapshotHistoryWindowInSeconds_ = null;
+          }
+          return minSnapshotHistoryWindowInSecondsBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -21823,7 +22086,7 @@ public final class Mongodb60 {
       "\n3yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb6_0.proto\022\"yandex.cloud.mdb.mongodb." +
       "v1.config\032\036google/protobuf/wrappers.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\275\020\n\017Mon" +
+      "o\032\035yandex/cloud/validation.proto\"\223\021\n\017Mon" +
       "godConfig6_0\022L\n\007storage\030\001 \001(\0132;.yandex.c" +
       "loud.mdb.mongodb.v1.config.MongodConfig6" +
       "_0.Storage\022c\n\023operation_profiling\030\002 \001(\0132" +
@@ -21874,66 +22137,68 @@ public final class Mongodb60 {
       "mdb.mongodb.v1.config.MongodConfig6_0.Ne" +
       "twork.Compression.CompressorB\007\202\3101\0030-3\"H\n" +
       "\nCompressor\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022" +
-      "\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\032G\n\014SetPa" +
-      "rameter\0227\n\023enable_flow_control\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\"\214\007\n\021MongoCfgCon" +
-      "fig6_0\022N\n\007storage\030\001 \001(\0132=.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongoCfgConfig6_0.S" +
-      "torage\022e\n\023operation_profiling\030\002 \001(\0132H.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
-      "gConfig6_0.OperationProfiling\022J\n\003net\030\003 \001" +
-      "(\0132=.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig6_0.Network\032\252\002\n\007Storage\022]\n" +
-      "\013wired_tiger\030\001 \001(\0132H.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongoCfgConfig6_0.Storag" +
-      "e.WiredTiger\032\277\001\n\nWiredTiger\022l\n\rengine_co" +
-      "nfig\030\001 \001(\0132U.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfig6_0.Storage.WiredT" +
-      "iger.EngineConfig\032C\n\014EngineConfig\0223\n\rcac" +
-      "he_size_gb\030\001 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\032\356\001\n\022OperationProfiling\022[\n\004mode\030\001 " +
-      "\001(\0162M.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongoCfgConfig6_0.OperationProfiling.Mo" +
-      "de\022>\n\021slow_op_threshold\030\002 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MO" +
-      "DE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007" +
-      "\n\003ALL\020\003\032V\n\007Network\022K\n\030max_incoming_conne" +
-      "ctions\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\014\372\3071\01010-16384\"\336\003\n\017MongosConfig6_0\022H\n\003n" +
-      "et\030\003 \001(\0132;.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongosConfig6_0.Network\032\200\003\n\007Networ" +
-      "k\022K\n\030max_incoming_connections\030\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\014\372\3071\01010-16384\022\\" +
-      "\n\013compression\030\002 \001(\0132G.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig6_0.Network" +
-      ".Compression\032\311\001\n\013Compression\022p\n\013compress" +
-      "ors\030\001 \003(\0162R.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfig6_0.Network.Compressi" +
-      "on.CompressorB\007\202\3101\0030-3\"H\n\nCompressor\022\032\n\026" +
-      "COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004" +
-      "ZLIB\020\002\022\010\n\004ZSTD\020\003\"\372\001\n\022MongodConfigSet6_0\022" +
+      "\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\032\234\001\n\014SetP" +
+      "arameter\0227\n\023enable_flow_control\030\001 \001(\0132\032." +
+      "google.protobuf.BoolValue\022S\n&min_snapsho" +
+      "t_history_window_in_seconds\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\006\372\3071\002>0\"\214\007\n\021Mongo" +
+      "CfgConfig6_0\022N\n\007storage\030\001 \001(\0132=.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongoCfgConfi" +
+      "g6_0.Storage\022e\n\023operation_profiling\030\002 \001(" +
+      "\0132H.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfig6_0.OperationProfiling\022J\n\003n" +
+      "et\030\003 \001(\0132=.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfig6_0.Network\032\252\002\n\007Stor" +
+      "age\022]\n\013wired_tiger\030\001 \001(\0132H.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongoCfgConfig6_0." +
+      "Storage.WiredTiger\032\277\001\n\nWiredTiger\022l\n\reng" +
+      "ine_config\030\001 \001(\0132U.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig6_0.Storage." +
+      "WiredTiger.EngineConfig\032C\n\014EngineConfig\022" +
+      "3\n\rcache_size_gb\030\001 \001(\0132\034.google.protobuf" +
+      ".DoubleValue\032\356\001\n\022OperationProfiling\022[\n\004m" +
+      "ode\030\001 \001(\0162M.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfig6_0.OperationProfil" +
+      "ing.Mode\022>\n\021slow_op_threshold\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode" +
+      "\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_" +
+      "OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_incoming" +
+      "_connections\030\001 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\014\372\3071\01010-16384\"\336\003\n\017MongosConfig6_" +
+      "0\022H\n\003net\030\003 \001(\0132;.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongosConfig6_0.Network\032\200\003\n\007" +
+      "Network\022K\n\030max_incoming_connections\030\001 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\014\372\3071\01010-1" +
+      "6384\022\\\n\013compression\030\002 \001(\0132G.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongosConfig6_0.N" +
+      "etwork.Compression\032\311\001\n\013Compression\022p\n\013co" +
+      "mpressors\030\001 \003(\0162R.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongosConfig6_0.Network.Com" +
+      "pression.CompressorB\007\202\3101\0030-3\"H\n\nCompress" +
+      "or\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY" +
+      "\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\"\372\001\n\022MongodConfigS" +
+      "et6_0\022M\n\020effective_config\030\001 \001(\01323.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongodConfi" +
+      "g6_0\022H\n\013user_config\030\002 \001(\01323.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongodConfig6_0\022K" +
+      "\n\016default_config\030\003 \001(\01323.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongodConfig6_0\"\202\002\n\024" +
+      "MongoCfgConfigSet6_0\022O\n\020effective_config" +
+      "\030\001 \001(\01325.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongoCfgConfig6_0\022J\n\013user_config\030\002 \001" +
+      "(\01325.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongoCfgConfig6_0\022M\n\016default_config\030\003 \001(" +
+      "\01325.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfig6_0\"\372\001\n\022MongosConfigSet6_0\022" +
       "M\n\020effective_config\030\001 \001(\01323.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongodConfig6_0\022H" +
+      ".mdb.mongodb.v1.config.MongosConfig6_0\022H" +
       "\n\013user_config\030\002 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongodConfig6_0\022K\n\016defa" +
+      "ongodb.v1.config.MongosConfig6_0\022K\n\016defa" +
       "ult_config\030\003 \001(\01323.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongodConfig6_0\"\202\002\n\024MongoC" +
-      "fgConfigSet6_0\022O\n\020effective_config\030\001 \001(\013" +
-      "25.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngoCfgConfig6_0\022J\n\013user_config\030\002 \001(\01325.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfig6_0\022M\n\016default_config\030\003 \001(\01325.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
-      "gConfig6_0\"\372\001\n\022MongosConfigSet6_0\022M\n\020eff" +
-      "ective_config\030\001 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig6_0\022H\n\013user" +
-      "_config\030\002 \001(\01323.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongosConfig6_0\022K\n\016default_co" +
-      "nfig\030\003 \001(\01323.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongosConfig6_0Bx\n&yandex.cloud." +
-      "api.mdb.mongodb.v1.configZNgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "mongodb/v1/config;mongodbb\006proto3"
+      "odb.v1.config.MongosConfig6_0Bx\n&yandex." +
+      "cloud.api.mdb.mongodb.v1.configZNgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/mongodb/v1/config;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22006,7 +22271,7 @@ public final class Mongodb60 {
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig6_0_SetParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_config_MongodConfig6_0_SetParameter_descriptor,
-        new java.lang.String[] { "EnableFlowControl", });
+        new java.lang.String[] { "EnableFlowControl", "MinSnapshotHistoryWindowInSeconds", });
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig6_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_config_MongoCfgConfig6_0_fieldAccessorTable = new

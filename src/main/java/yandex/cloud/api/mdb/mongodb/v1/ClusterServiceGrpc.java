@@ -576,6 +576,37 @@ public final class ClusterServiceGrpc {
     return getDeleteHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHosts",
+      requestType = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+    if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+          ClusterServiceGrpc.getUpdateHostsMethod = getUpdateHostsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateHosts"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHostsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.EnableClusterShardingRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableShardingMethod;
 
@@ -1060,6 +1091,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified parameters for the host.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHostsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Enables sharding for the cluster:
      * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
@@ -1268,6 +1309,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_HOSTS)))
+          .addMethod(
+            getUpdateHostsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_HOSTS)))
           .addMethod(
             getEnableShardingMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1544,6 +1592,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified parameters for the host.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1840,6 +1899,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified parameters for the host.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Enables sharding for the cluster:
      * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
@@ -2130,6 +2199,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified parameters for the host.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateHosts(
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Enables sharding for the cluster:
      * creates 3 mongoinfra (or 3 mongocfg and 2 mongos) hosts
      * that would support adding and using shards in the cluster.
@@ -2237,14 +2317,15 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_HOSTS = 15;
   private static final int METHODID_ADD_HOSTS = 16;
   private static final int METHODID_DELETE_HOSTS = 17;
-  private static final int METHODID_ENABLE_SHARDING = 18;
-  private static final int METHODID_GET_SHARD = 19;
-  private static final int METHODID_LIST_SHARDS = 20;
-  private static final int METHODID_ADD_SHARD = 21;
-  private static final int METHODID_DELETE_SHARD = 22;
-  private static final int METHODID_RESETUP_HOSTS = 23;
-  private static final int METHODID_RESTART_HOSTS = 24;
-  private static final int METHODID_STEPDOWN_HOSTS = 25;
+  private static final int METHODID_UPDATE_HOSTS = 18;
+  private static final int METHODID_ENABLE_SHARDING = 19;
+  private static final int METHODID_GET_SHARD = 20;
+  private static final int METHODID_LIST_SHARDS = 21;
+  private static final int METHODID_ADD_SHARD = 22;
+  private static final int METHODID_DELETE_SHARD = 23;
+  private static final int METHODID_RESETUP_HOSTS = 24;
+  private static final int METHODID_RESTART_HOSTS = 25;
+  private static final int METHODID_STEPDOWN_HOSTS = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2333,6 +2414,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_DELETE_HOSTS:
           serviceImpl.deleteHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_HOSTS:
+          serviceImpl.updateHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ENABLE_SHARDING:
@@ -2446,6 +2531,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListHostsMethod())
               .addMethod(getAddHostsMethod())
               .addMethod(getDeleteHostsMethod())
+              .addMethod(getUpdateHostsMethod())
               .addMethod(getEnableShardingMethod())
               .addMethod(getGetShardMethod())
               .addMethod(getListShardsMethod())

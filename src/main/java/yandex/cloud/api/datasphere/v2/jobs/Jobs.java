@@ -11072,7 +11072,7 @@ public final class Jobs {
 
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11081,7 +11081,7 @@ public final class Jobs {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11090,7 +11090,7 @@ public final class Jobs {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11099,7 +11099,34 @@ public final class Jobs {
 
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     * @return Whether the startedAt field is set.
+     */
+    boolean hasStartedAt();
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     * @return The startedAt.
+     */
+    com.google.protobuf.Timestamp getStartedAt();
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -11108,7 +11135,7 @@ public final class Jobs {
     boolean hasFinishedAt();
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -11117,7 +11144,7 @@ public final class Jobs {
     com.google.protobuf.Timestamp getFinishedAt();
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -11588,6 +11615,19 @@ public final class Jobs {
               dataSizeBytes_ = input.readInt64();
               break;
             }
+            case 138: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startedAt_ != null) {
+                subBuilder = startedAt_.toBuilder();
+              }
+              startedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startedAt_);
+                startedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11771,7 +11811,7 @@ public final class Jobs {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11783,7 +11823,7 @@ public final class Jobs {
     }
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11795,7 +11835,7 @@ public final class Jobs {
     }
     /**
      * <pre>
-     * Creation timestamp of the job.
+     * Create job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -11805,11 +11845,49 @@ public final class Jobs {
       return getCreatedAt();
     }
 
+    public static final int STARTED_AT_FIELD_NUMBER = 17;
+    private com.google.protobuf.Timestamp startedAt_;
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     * @return Whether the startedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     * @return The startedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+    }
+    /**
+     * <pre>
+     * Start job timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+      return getStartedAt();
+    }
+
     public static final int FINISHED_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp finishedAt_;
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -11821,7 +11899,7 @@ public final class Jobs {
     }
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -11833,7 +11911,7 @@ public final class Jobs {
     }
     /**
      * <pre>
-     * Finish timestamp of the job.
+     * Finish job timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -12344,6 +12422,9 @@ public final class Jobs {
       if (dataSizeBytes_ != 0L) {
         output.writeInt64(16, dataSizeBytes_);
       }
+      if (startedAt_ != null) {
+        output.writeMessage(17, getStartedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12411,6 +12492,10 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(16, dataSizeBytes_);
       }
+      if (startedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getStartedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12436,6 +12521,11 @@ public final class Jobs {
       if (hasCreatedAt()) {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
+      }
+      if (hasStartedAt() != other.hasStartedAt()) return false;
+      if (hasStartedAt()) {
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
       }
       if (hasFinishedAt() != other.hasFinishedAt()) return false;
       if (hasFinishedAt()) {
@@ -12489,6 +12579,10 @@ public final class Jobs {
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasStartedAt()) {
+        hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getStartedAt().hashCode();
       }
       if (hasFinishedAt()) {
         hash = (37 * hash) + FINISHED_AT_FIELD_NUMBER;
@@ -12680,6 +12774,12 @@ public final class Jobs {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
         if (finishedAtBuilder_ == null) {
           finishedAt_ = null;
         } else {
@@ -12762,6 +12862,11 @@ public final class Jobs {
           result.createdAt_ = createdAt_;
         } else {
           result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (startedAtBuilder_ == null) {
+          result.startedAt_ = startedAt_;
+        } else {
+          result.startedAt_ = startedAtBuilder_.build();
         }
         if (finishedAtBuilder_ == null) {
           result.finishedAt_ = finishedAt_;
@@ -12873,6 +12978,9 @@ public final class Jobs {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasStartedAt()) {
+          mergeStartedAt(other.getStartedAt());
         }
         if (other.hasFinishedAt()) {
           mergeFinishedAt(other.getFinishedAt());
@@ -13305,7 +13413,7 @@ public final class Jobs {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13316,7 +13424,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13331,7 +13439,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13351,7 +13459,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13369,7 +13477,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13391,7 +13499,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13409,7 +13517,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13421,7 +13529,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13436,7 +13544,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Creation timestamp of the job.
+       * Create job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
@@ -13455,12 +13563,167 @@ public final class Jobs {
         return createdAtBuilder_;
       }
 
+      private com.google.protobuf.Timestamp startedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       * @return Whether the startedAt field is set.
+       */
+      public boolean hasStartedAt() {
+        return startedAtBuilder_ != null || startedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       * @return The startedAt.
+       */
+      public com.google.protobuf.Timestamp getStartedAt() {
+        if (startedAtBuilder_ == null) {
+          return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        } else {
+          return startedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startedAt_ = value;
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public Builder setStartedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (startedAt_ != null) {
+            startedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+          } else {
+            startedAt_ = value;
+          }
+          onChanged();
+        } else {
+          startedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public Builder clearStartedAt() {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+          onChanged();
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
+        
+        onChanged();
+        return getStartedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+        if (startedAtBuilder_ != null) {
+          return startedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return startedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Start job timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartedAtFieldBuilder() {
+        if (startedAtBuilder_ == null) {
+          startedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartedAt(),
+                  getParentForChildren(),
+                  isClean());
+          startedAt_ = null;
+        }
+        return startedAtBuilder_;
+      }
+
       private com.google.protobuf.Timestamp finishedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13471,7 +13734,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13486,7 +13749,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13506,7 +13769,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13524,7 +13787,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13546,7 +13809,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13564,7 +13827,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13576,7 +13839,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -13591,7 +13854,7 @@ public final class Jobs {
       }
       /**
        * <pre>
-       * Finish timestamp of the job.
+       * Finish job timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -15937,30 +16200,31 @@ public final class Jobs {
       "et_name\030\004 \001(\tH\000B\n\n\010password\"]\n\tPythonEnv" +
       "\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_modules\030\002 " +
       "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
-      "le\"\351\004\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004" +
+      "le\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004" +
       "desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\022/\n\013finished_at\030\005 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022:\n\006status\030\006 " +
-      "\001(\0162*.yandex.cloud.datasphere.v2.jobs.Jo" +
-      "bStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcreated_by_id" +
-      "\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016job_parame" +
-      "ters\030\n \001(\0132..yandex.cloud.datasphere.v2." +
-      "jobs.JobParameters\0223\n\017data_expires_at\030\013 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\024\n\014data_" +
-      "cleared\030\014 \001(\010\022;\n\014output_files\030\r \003(\0132%.ya" +
-      "ndex.cloud.datasphere.v2.jobs.File\0228\n\tlo" +
-      "g_files\030\016 \003(\0132%.yandex.cloud.datasphere." +
-      "v2.jobs.File\022?\n\020diagnostic_files\030\017 \003(\0132%" +
-      ".yandex.cloud.datasphere.v2.jobs.File\022\027\n" +
-      "\017data_size_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013r" +
-      "eturn_code\030\001 \001(\003*\201\001\n\tJobStatus\022\032\n\026JOB_ST" +
-      "ATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXEC" +
-      "UTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS" +
-      "\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex.c" +
-      "loud.api.datasphere.v2.jobsB\004JobsZNgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/datasphere/v2/jobs;datasphereb\006proto" +
-      "3"
+      "protobuf.Timestamp\022.\n\nstarted_at\030\021 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022/\n\013finished_a" +
+      "t\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006s" +
+      "tatus\030\006 \001(\0162*.yandex.cloud.datasphere.v2" +
+      ".jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcreat" +
+      "ed_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016jo" +
+      "b_parameters\030\n \001(\0132..yandex.cloud.datasp" +
+      "here.v2.jobs.JobParameters\0223\n\017data_expir" +
+      "es_at\030\013 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r " +
+      "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
+      "le\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud.dat" +
+      "asphere.v2.jobs.File\022?\n\020diagnostic_files" +
+      "\030\017 \003(\0132%.yandex.cloud.datasphere.v2.jobs" +
+      ".File\022\027\n\017data_size_bytes\030\020 \001(\003\" \n\tJobRes" +
+      "ult\022\023\n\013return_code\030\001 \001(\003*\201\001\n\tJobStatus\022\032" +
+      "\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001" +
+      "\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n" +
+      "\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#" +
+      "yandex.cloud.api.datasphere.v2.jobsB\004Job" +
+      "sZNgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/datasphere/v2/jobs;dataspher" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16032,7 +16296,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor,
-        new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", "LogFiles", "DiagnosticFiles", "DataSizeBytes", });
+        new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "StartedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", "LogFiles", "DiagnosticFiles", "DataSizeBytes", });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable = new
