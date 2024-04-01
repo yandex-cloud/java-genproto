@@ -6661,7 +6661,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the compressors.
          */
         java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfig4_2.Network.Compression.Compressor> getCompressorsList();
@@ -6674,7 +6674,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return The count of compressors.
          */
         int getCompressorsCount();
@@ -6687,7 +6687,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the element to return.
          * @return The compressors at the given index.
          */
@@ -6701,7 +6701,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the enum numeric values on the wire for compressors.
          */
         java.util.List<java.lang.Integer>
@@ -6715,7 +6715,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of compressors at the given index.
          */
@@ -6859,6 +6859,14 @@ public final class Mongodb42 {
            * <code>ZSTD = 3;</code>
            */
           ZSTD(3),
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          DISABLED(4),
           UNRECOGNIZED(-1),
           ;
 
@@ -6890,6 +6898,14 @@ public final class Mongodb42 {
            * <code>ZSTD = 3;</code>
            */
           public static final int ZSTD_VALUE = 3;
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          public static final int DISABLED_VALUE = 4;
 
 
           public final int getNumber() {
@@ -6920,6 +6936,7 @@ public final class Mongodb42 {
               case 1: return SNAPPY;
               case 2: return ZLIB;
               case 3: return ZSTD;
+              case 4: return DISABLED;
               default: return null;
             }
           }
@@ -6997,7 +7014,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the compressors.
          */
         @java.lang.Override
@@ -7014,7 +7031,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return The count of compressors.
          */
         @java.lang.Override
@@ -7030,7 +7047,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the element to return.
          * @return The compressors at the given index.
          */
@@ -7047,7 +7064,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the enum numeric values on the wire for compressors.
          */
         @java.lang.Override
@@ -7064,7 +7081,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of compressors at the given index.
          */
@@ -7420,7 +7437,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return A list containing the compressors.
            */
           public java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongodConfig4_2.Network.Compression.Compressor> getCompressorsList() {
@@ -7436,7 +7453,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return The count of compressors.
            */
           public int getCompressorsCount() {
@@ -7451,7 +7468,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the element to return.
            * @return The compressors at the given index.
            */
@@ -7467,7 +7484,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index to set the value at.
            * @param value The compressors to set.
            * @return This builder for chaining.
@@ -7491,7 +7508,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param value The compressors to add.
            * @return This builder for chaining.
            */
@@ -7513,7 +7530,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param values The compressors to add.
            * @return This builder for chaining.
            */
@@ -7535,7 +7552,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return This builder for chaining.
            */
           public Builder clearCompressors() {
@@ -7553,7 +7570,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return A list containing the enum numeric values on the wire for compressors.
            */
           public java.util.List<java.lang.Integer>
@@ -7569,7 +7586,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of compressors at the given index.
            */
@@ -7585,7 +7602,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of compressors at the given index.
            * @return This builder for chaining.
@@ -7606,7 +7623,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param value The enum numeric value on the wire for compressors to add.
            * @return This builder for chaining.
            */
@@ -7625,7 +7642,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongodConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param values The enum numeric values on the wire for compressors to add.
            * @return This builder for chaining.
            */
@@ -15657,7 +15674,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the compressors.
          */
         java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfig4_2.Network.Compression.Compressor> getCompressorsList();
@@ -15670,7 +15687,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return The count of compressors.
          */
         int getCompressorsCount();
@@ -15683,7 +15700,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the element to return.
          * @return The compressors at the given index.
          */
@@ -15697,7 +15714,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the enum numeric values on the wire for compressors.
          */
         java.util.List<java.lang.Integer>
@@ -15711,7 +15728,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of compressors at the given index.
          */
@@ -15855,6 +15872,14 @@ public final class Mongodb42 {
            * <code>ZSTD = 3;</code>
            */
           ZSTD(3),
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          DISABLED(4),
           UNRECOGNIZED(-1),
           ;
 
@@ -15886,6 +15911,14 @@ public final class Mongodb42 {
            * <code>ZSTD = 3;</code>
            */
           public static final int ZSTD_VALUE = 3;
+          /**
+           * <pre>
+           *No compression
+           * </pre>
+           *
+           * <code>DISABLED = 4;</code>
+           */
+          public static final int DISABLED_VALUE = 4;
 
 
           public final int getNumber() {
@@ -15916,6 +15949,7 @@ public final class Mongodb42 {
               case 1: return SNAPPY;
               case 2: return ZLIB;
               case 3: return ZSTD;
+              case 4: return DISABLED;
               default: return null;
             }
           }
@@ -15993,7 +16027,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the compressors.
          */
         @java.lang.Override
@@ -16010,7 +16044,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return The count of compressors.
          */
         @java.lang.Override
@@ -16026,7 +16060,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the element to return.
          * @return The compressors at the given index.
          */
@@ -16043,7 +16077,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @return A list containing the enum numeric values on the wire for compressors.
          */
         @java.lang.Override
@@ -16060,7 +16094,7 @@ public final class Mongodb42 {
          * MongoDB supports the following compressors:
          * </pre>
          *
-         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+         * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
          * @param index The index of the value to return.
          * @return The enum numeric value on the wire of compressors at the given index.
          */
@@ -16416,7 +16450,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return A list containing the compressors.
            */
           public java.util.List<yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.MongosConfig4_2.Network.Compression.Compressor> getCompressorsList() {
@@ -16432,7 +16466,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return The count of compressors.
            */
           public int getCompressorsCount() {
@@ -16447,7 +16481,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the element to return.
            * @return The compressors at the given index.
            */
@@ -16463,7 +16497,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index to set the value at.
            * @param value The compressors to set.
            * @return This builder for chaining.
@@ -16487,7 +16521,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param value The compressors to add.
            * @return This builder for chaining.
            */
@@ -16509,7 +16543,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param values The compressors to add.
            * @return This builder for chaining.
            */
@@ -16531,7 +16565,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return This builder for chaining.
            */
           public Builder clearCompressors() {
@@ -16549,7 +16583,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @return A list containing the enum numeric values on the wire for compressors.
            */
           public java.util.List<java.lang.Integer>
@@ -16565,7 +16599,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of compressors at the given index.
            */
@@ -16581,7 +16615,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of compressors at the given index.
            * @return This builder for chaining.
@@ -16602,7 +16636,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param value The enum numeric value on the wire for compressors to add.
            * @return This builder for chaining.
            */
@@ -16621,7 +16655,7 @@ public final class Mongodb42 {
            * MongoDB supports the following compressors:
            * </pre>
            *
-           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "0-3"];</code>
+           * <code>repeated .yandex.cloud.mdb.mongodb.v1.config.MongosConfig4_2.Network.Compression.Compressor compressors = 1 [(.yandex.cloud.size) = "1-3"];</code>
            * @param values The enum numeric values on the wire for compressors to add.
            * @return This builder for chaining.
            */
@@ -21823,7 +21857,7 @@ public final class Mongodb42 {
       "\n3yandex/cloud/mdb/mongodb/v1/config/mon" +
       "godb4_2.proto\022\"yandex.cloud.mdb.mongodb." +
       "v1.config\032\036google/protobuf/wrappers.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\275\020\n\017Mon" +
+      "o\032\035yandex/cloud/validation.proto\"\313\020\n\017Mon" +
       "godConfig4_2\022L\n\007storage\030\001 \001(\0132;.yandex.c" +
       "loud.mdb.mongodb.v1.config.MongodConfig4" +
       "_2.Storage\022c\n\023operation_profiling\030\002 \001(\0132" +
@@ -21865,75 +21899,76 @@ public final class Mongodb42 {
       "low_op_sample_rate\030\003 \001(\0132\034.google.protob" +
       "uf.DoubleValueB\007\372\3071\0030-1\";\n\004Mode\022\024\n\020MODE_" +
       "UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003A" +
-      "LL\020\003\032\200\003\n\007Network\022K\n\030max_incoming_connect" +
+      "LL\020\003\032\216\003\n\007Network\022K\n\030max_incoming_connect" +
       "ions\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
       "\014\372\3071\01010-16384\022\\\n\013compression\030\002 \001(\0132G.yan" +
       "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
-      "nfig4_2.Network.Compression\032\311\001\n\013Compress" +
+      "nfig4_2.Network.Compression\032\327\001\n\013Compress" +
       "ion\022p\n\013compressors\030\001 \003(\0162R.yandex.cloud." +
       "mdb.mongodb.v1.config.MongodConfig4_2.Ne" +
-      "twork.Compression.CompressorB\007\202\3101\0030-3\"H\n" +
+      "twork.Compression.CompressorB\007\202\3101\0031-3\"V\n" +
       "\nCompressor\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022" +
-      "\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\032G\n\014SetPa" +
-      "rameter\0227\n\023enable_flow_control\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\"\214\007\n\021MongoCfgCon" +
-      "fig4_2\022N\n\007storage\030\001 \001(\0132=.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongoCfgConfig4_2.S" +
-      "torage\022e\n\023operation_profiling\030\002 \001(\0132H.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
-      "gConfig4_2.OperationProfiling\022J\n\003net\030\003 \001" +
-      "(\0132=.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig4_2.Network\032\252\002\n\007Storage\022]\n" +
-      "\013wired_tiger\030\001 \001(\0132H.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongoCfgConfig4_2.Storag" +
-      "e.WiredTiger\032\277\001\n\nWiredTiger\022l\n\rengine_co" +
-      "nfig\030\001 \001(\0132U.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfig4_2.Storage.WiredT" +
-      "iger.EngineConfig\032C\n\014EngineConfig\0223\n\rcac" +
-      "he_size_gb\030\001 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\032\356\001\n\022OperationProfiling\022[\n\004mode\030\001 " +
-      "\001(\0162M.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongoCfgConfig4_2.OperationProfiling.Mo" +
-      "de\022>\n\021slow_op_threshold\030\002 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MO" +
-      "DE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007" +
-      "\n\003ALL\020\003\032V\n\007Network\022K\n\030max_incoming_conne" +
-      "ctions\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\014\372\3071\01010-16384\"\336\003\n\017MongosConfig4_2\022H\n\003n" +
-      "et\030\001 \001(\0132;.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongosConfig4_2.Network\032\200\003\n\007Networ" +
-      "k\022K\n\030max_incoming_connections\030\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\014\372\3071\01010-16384\022\\" +
-      "\n\013compression\030\002 \001(\0132G.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig4_2.Network" +
-      ".Compression\032\311\001\n\013Compression\022p\n\013compress" +
-      "ors\030\001 \003(\0162R.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfig4_2.Network.Compressi" +
-      "on.CompressorB\007\202\3101\0030-3\"H\n\nCompressor\022\032\n\026" +
-      "COMPRESSOR_UNSPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004" +
-      "ZLIB\020\002\022\010\n\004ZSTD\020\003\"\372\001\n\022MongodConfigSet4_2\022" +
-      "M\n\020effective_config\030\001 \001(\01323.yandex.cloud" +
-      ".mdb.mongodb.v1.config.MongodConfig4_2\022H" +
-      "\n\013user_config\030\002 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongodConfig4_2\022K\n\016defa" +
-      "ult_config\030\003 \001(\01323.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongodConfig4_2\"\202\002\n\024MongoC" +
-      "fgConfigSet4_2\022O\n\020effective_config\030\001 \001(\013" +
-      "25.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngoCfgConfig4_2\022J\n\013user_config\030\002 \001(\01325.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfig4_2\022M\n\016default_config\030\003 \001(\01325.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
-      "gConfig4_2\"\372\001\n\022MongosConfigSet4_2\022M\n\020eff" +
-      "ective_config\030\001 \001(\01323.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongosConfig4_2\022H\n\013user" +
-      "_config\030\002 \001(\01323.yandex.cloud.mdb.mongodb" +
-      ".v1.config.MongosConfig4_2\022K\n\016default_co" +
-      "nfig\030\003 \001(\01323.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongosConfig4_2Bx\n&yandex.cloud." +
-      "api.mdb.mongodb.v1.configZNgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
-      "mongodb/v1/config;mongodbb\006proto3"
+      "\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISAB" +
+      "LED\020\004\032G\n\014SetParameter\0227\n\023enable_flow_con" +
+      "trol\030\001 \001(\0132\032.google.protobuf.BoolValue\"\214" +
+      "\007\n\021MongoCfgConfig4_2\022N\n\007storage\030\001 \001(\0132=." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "CfgConfig4_2.Storage\022e\n\023operation_profil" +
+      "ing\030\002 \001(\0132H.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfig4_2.OperationProfil" +
+      "ing\022J\n\003net\030\003 \001(\0132=.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig4_2.Network\032" +
+      "\252\002\n\007Storage\022]\n\013wired_tiger\030\001 \001(\0132H.yande" +
+      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
+      "nfig4_2.Storage.WiredTiger\032\277\001\n\nWiredTige" +
+      "r\022l\n\rengine_config\030\001 \001(\0132U.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongoCfgConfig4_2." +
+      "Storage.WiredTiger.EngineConfig\032C\n\014Engin" +
+      "eConfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.google." +
+      "protobuf.DoubleValue\032\356\001\n\022OperationProfil" +
+      "ing\022[\n\004mode\030\001 \001(\0162M.yandex.cloud.mdb.mon" +
+      "godb.v1.config.MongoCfgConfig4_2.Operati" +
+      "onProfiling.Mode\022>\n\021slow_op_threshold\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
+      "\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007\n\003OFF\020\001\022" +
+      "\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network\022K\n\030max_" +
+      "incoming_connections\030\001 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\014\372\3071\01010-16384\"\354\003\n\017Mongos" +
+      "Config4_2\022H\n\003net\030\001 \001(\0132;.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongosConfig4_2.Netw" +
+      "ork\032\216\003\n\007Network\022K\n\030max_incoming_connecti" +
+      "ons\030\001 \001(\0132\033.google.protobuf.Int64ValueB\014" +
+      "\372\3071\01010-16384\022\\\n\013compression\030\002 \001(\0132G.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongosCon" +
+      "fig4_2.Network.Compression\032\327\001\n\013Compressi" +
+      "on\022p\n\013compressors\030\001 \003(\0162R.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongosConfig4_2.Net" +
+      "work.Compression.CompressorB\007\202\3101\0031-3\"V\n\n" +
+      "Compressor\022\032\n\026COMPRESSOR_UNSPECIFIED\020\000\022\n" +
+      "\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD\020\003\022\014\n\010DISABL" +
+      "ED\020\004\"\372\001\n\022MongodConfigSet4_2\022M\n\020effective" +
+      "_config\030\001 \001(\01323.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongodConfig4_2\022H\n\013user_confi" +
+      "g\030\002 \001(\01323.yandex.cloud.mdb.mongodb.v1.co" +
+      "nfig.MongodConfig4_2\022K\n\016default_config\030\003" +
+      " \001(\01323.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongodConfig4_2\"\202\002\n\024MongoCfgConfigSet4" +
+      "_2\022O\n\020effective_config\030\001 \001(\01325.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
+      "4_2\022J\n\013user_config\030\002 \001(\01325.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongoCfgConfig4_2\022" +
+      "M\n\016default_config\030\003 \001(\01325.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig4_2\"\372" +
+      "\001\n\022MongosConfigSet4_2\022M\n\020effective_confi" +
+      "g\030\001 \001(\01323.yandex.cloud.mdb.mongodb.v1.co" +
+      "nfig.MongosConfig4_2\022H\n\013user_config\030\002 \001(" +
+      "\01323.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongosConfig4_2\022K\n\016default_config\030\003 \001(\01323" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "osConfig4_2Bx\n&yandex.cloud.api.mdb.mong" +
+      "odb.v1.configZNgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/mdb/mongodb/v1/c" +
+      "onfig;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

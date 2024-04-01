@@ -3710,7 +3710,7 @@ public final class Config {
 
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3719,7 +3719,7 @@ public final class Config {
     boolean hasAnalyzeTimeout();
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3728,7 +3728,7 @@ public final class Config {
     com.google.protobuf.Int64Value getAnalyzeTimeout();
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3737,7 +3737,7 @@ public final class Config {
 
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3746,7 +3746,7 @@ public final class Config {
     boolean hasVacuumTimeout();
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3755,7 +3755,7 @@ public final class Config {
     com.google.protobuf.Int64Value getVacuumTimeout();
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3908,7 +3908,7 @@ public final class Config {
     private com.google.protobuf.Int64Value analyzeTimeout_;
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3920,7 +3920,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3932,7 +3932,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3946,7 +3946,7 @@ public final class Config {
     private com.google.protobuf.Int64Value vacuumTimeout_;
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3958,7 +3958,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -3970,7 +3970,7 @@ public final class Config {
     }
     /**
      * <pre>
-     * in seconds 24*60*60-1 = 86399
+     * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4479,7 +4479,7 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> analyzeTimeoutBuilder_;
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4490,7 +4490,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4505,7 +4505,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4525,7 +4525,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4543,7 +4543,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4565,7 +4565,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4583,7 +4583,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4595,7 +4595,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4610,7 +4610,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `ANALYZE` operation, in seconds. The default value is `36000`. As soon as this period expires, the `ANALYZE` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4634,7 +4634,7 @@ public final class Config {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vacuumTimeoutBuilder_;
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4645,7 +4645,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4660,7 +4660,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4680,7 +4680,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4698,7 +4698,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4720,7 +4720,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4738,7 +4738,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4750,7 +4750,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>
@@ -4765,7 +4765,7 @@ public final class Config {
       }
       /**
        * <pre>
-       * in seconds 24*60*60-1 = 86399
+       * Maximum duration of the `VACUUM` operation, in seconds. The default value is `36000`. As soon as this period expires, the `VACUUM` operation will be forced to terminate.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "7200-86399"];</code>

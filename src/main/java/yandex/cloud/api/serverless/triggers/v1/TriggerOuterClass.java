@@ -4356,6 +4356,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerWithRetryOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Timer.ActionCase getActionCase();
     }
     /**
@@ -4463,6 +4490,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 104;
                 break;
               }
+              case 842: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 105) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 105;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -4503,6 +4544,7 @@ public final class TriggerOuterClass {
         INVOKE_FUNCTION(101),
         INVOKE_FUNCTION_WITH_RETRY(103),
         INVOKE_CONTAINER_WITH_RETRY(104),
+        GATEWAY_WEBSOCKET_BROADCAST(105),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -4523,6 +4565,7 @@ public final class TriggerOuterClass {
             case 101: return INVOKE_FUNCTION;
             case 103: return INVOKE_FUNCTION_WITH_RETRY;
             case 104: return INVOKE_CONTAINER_WITH_RETRY;
+            case 105: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -4759,6 +4802,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 105;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 105;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 105) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 105) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -4788,6 +4874,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 104) {
           output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 105) {
+          output.writeMessage(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -4814,6 +4903,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 104) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 105) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(105, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -4848,6 +4941,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainerWithRetry()
                 .equals(other.getInvokeContainerWithRetry())) return false;
             break;
+          case 105:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -4878,6 +4975,10 @@ public final class TriggerOuterClass {
           case 104:
             hash = (37 * hash) + INVOKE_CONTAINER_WITH_RETRY_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainerWithRetry().hashCode();
+            break;
+          case 105:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -5074,6 +5175,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerWithRetryBuilder_.build();
             }
           }
+          if (actionCase_ == 105) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -5142,6 +5250,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER_WITH_RETRY: {
               mergeInvokeContainerWithRetry(other.getInvokeContainerWithRetry());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -5914,6 +6026,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return invokeContainerWithRetryBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 105;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 105) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 105) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 105 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 105) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 105;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 105) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 105) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 105) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 105) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 105;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 105)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 105;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6119,6 +6408,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnceOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.MessageQueue.ActionCase getActionCase();
     }
     /**
@@ -6238,6 +6554,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 102;
                 break;
               }
+              case 826: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 103) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 103;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -6277,6 +6607,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
+        GATEWAY_WEBSOCKET_BROADCAST(103),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -6296,6 +6627,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
+            case 103: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -6565,6 +6897,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 103;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 103;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -6597,6 +6972,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           output.writeMessage(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce) action_);
         }
+        if (actionCase_ == 103) {
+          output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -6627,6 +7005,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerOnce) action_);
+        }
+        if (actionCase_ == 103) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6667,6 +7049,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
             break;
+          case 103:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -6701,6 +7087,10 @@ public final class TriggerOuterClass {
           case 102:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 103:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -6912,6 +7302,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 103) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -6982,6 +7379,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -7887,6 +8288,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return invokeContainerBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 103;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 103) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 103) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 103) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 103)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 103;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8085,6 +8663,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTMessage.ActionCase getActionCase();
     }
     /**
@@ -8198,6 +8803,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 102;
                 break;
               }
+              case 826: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 103) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 103;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -8237,6 +8856,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
+        GATEWAY_WEBSOCKET_BROADCAST(103),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -8256,6 +8876,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
+            case 103: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -8533,6 +9154,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 103;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 103;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -8565,6 +9229,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           output.writeMessage(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 103) {
+          output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -8594,6 +9261,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 103) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -8631,6 +9302,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
             break;
+          case 103:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -8663,6 +9338,10 @@ public final class TriggerOuterClass {
           case 102:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 103:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -8866,6 +9545,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 103) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -8937,6 +9623,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -9783,6 +10473,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return invokeContainerBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 103;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 103) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 103) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 103) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 103)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 103;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9961,6 +10828,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage.ActionCase getActionCase();
     }
     /**
@@ -10067,6 +10961,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 102;
                 break;
               }
+              case 826: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 103) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 103;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -10106,6 +11014,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
+        GATEWAY_WEBSOCKET_BROADCAST(103),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -10125,6 +11034,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
+            case 103: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -10356,6 +11266,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 103;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 103;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -10385,6 +11338,9 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           output.writeMessage(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 103) {
+          output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -10411,6 +11367,10 @@ public final class TriggerOuterClass {
         if (actionCase_ == 102) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 103) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -10446,6 +11406,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
             break;
+          case 103:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -10476,6 +11440,10 @@ public final class TriggerOuterClass {
           case 102:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 103:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -10676,6 +11644,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 103) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -10743,6 +11718,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -11493,6 +12472,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return invokeContainerBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 103;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 103) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 103) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 103) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 103)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 103;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11740,6 +12896,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ObjectStorage.ActionCase getActionCase();
     }
     /**
@@ -11874,6 +13057,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 102;
                 break;
               }
+              case 826: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 103) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 103;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -11916,6 +13113,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
+        GATEWAY_WEBSOCKET_BROADCAST(103),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -11935,6 +13133,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
+            case 103: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -12290,6 +13489,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 103;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 103;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -12329,6 +13571,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 102) {
           output.writeMessage(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 103) {
+          output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -12372,6 +13617,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 103) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -12409,6 +13658,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
             break;
+          case 103:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -12445,6 +13698,10 @@ public final class TriggerOuterClass {
           case 102:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 103:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -12652,6 +13909,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 103) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -12733,6 +13997,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -13768,6 +15036,183 @@ public final class TriggerOuterClass {
           onChanged();;
           return invokeContainerBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 103;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 103) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 103) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 103) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 103)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 103;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14015,6 +15460,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.ContainerRegistry.ActionCase getActionCase();
     }
     /**
@@ -14149,6 +15621,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 102;
                 break;
               }
+              case 826: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 103) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 103;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -14191,6 +15677,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(102),
+        GATEWAY_WEBSOCKET_BROADCAST(103),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -14210,6 +15697,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 102: return INVOKE_CONTAINER;
+            case 103: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -14565,6 +16053,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 103;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 103;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 103) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -14604,6 +16135,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 102) {
           output.writeMessage(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 103) {
+          output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -14647,6 +16181,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(102, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 103) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -14684,6 +16222,10 @@ public final class TriggerOuterClass {
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
             break;
+          case 103:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
+            break;
           case 0:
           default:
         }
@@ -14720,6 +16262,10 @@ public final class TriggerOuterClass {
           case 102:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 103:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -14927,6 +16473,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 103) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -15008,6 +16561,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -16042,6 +17599,183 @@ public final class TriggerOuterClass {
           actionCase_ = 102;
           onChanged();;
           return invokeContainerBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 103;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 103) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 103) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 103;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 103) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 103) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 103) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 103;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 103)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 103;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -17923,6 +19657,33 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      boolean hasGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Logging.ActionCase getActionCase();
     }
     /**
@@ -18073,6 +19834,20 @@ public final class TriggerOuterClass {
                 actionCase_ = 103;
                 break;
               }
+              case 834: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+                if (actionCase_ == 104) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+                }
+                action_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                  action_ = subBuilder.buildPartial();
+                }
+                actionCase_ = 104;
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -18124,6 +19899,7 @@ public final class TriggerOuterClass {
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         INVOKE_FUNCTION(101),
         INVOKE_CONTAINER(103),
+        GATEWAY_WEBSOCKET_BROADCAST(104),
         ACTION_NOT_SET(0);
         private final int value;
         private ActionCase(int value) {
@@ -18143,6 +19919,7 @@ public final class TriggerOuterClass {
           switch (value) {
             case 101: return INVOKE_FUNCTION;
             case 103: return INVOKE_CONTAINER;
+            case 104: return GATEWAY_WEBSOCKET_BROADCAST;
             case 0: return ACTION_NOT_SET;
             default: return null;
           }
@@ -18491,6 +20268,49 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
       }
 
+      public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 104;
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+      /**
+       * <pre>
+       * Instructions for broadcasting to API gateway websocket once.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if (actionCase_ == 104) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -18533,6 +20353,9 @@ public final class TriggerOuterClass {
         }
         if (actionCase_ == 103) {
           output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+        }
+        if (actionCase_ == 104) {
+          output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
         }
         unknownFields.writeTo(output);
       }
@@ -18594,6 +20417,10 @@ public final class TriggerOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
         }
+        if (actionCase_ == 104) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -18632,6 +20459,10 @@ public final class TriggerOuterClass {
           case 103:
             if (!getInvokeContainer()
                 .equals(other.getInvokeContainer())) return false;
+            break;
+          case 104:
+            if (!getGatewayWebsocketBroadcast()
+                .equals(other.getGatewayWebsocketBroadcast())) return false;
             break;
           case 0:
           default:
@@ -18677,6 +20508,10 @@ public final class TriggerOuterClass {
           case 103:
             hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
             hash = (53 * hash) + getInvokeContainer().hashCode();
+            break;
+          case 104:
+            hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+            hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
             break;
           case 0:
           default:
@@ -18899,6 +20734,13 @@ public final class TriggerOuterClass {
               result.action_ = invokeContainerBuilder_.build();
             }
           }
+          if (actionCase_ == 104) {
+            if (gatewayWebsocketBroadcastBuilder_ == null) {
+              result.action_ = action_;
+            } else {
+              result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+            }
+          }
           result.actionCase_ = actionCase_;
           onBuilt();
           return result;
@@ -19002,6 +20844,10 @@ public final class TriggerOuterClass {
             }
             case INVOKE_CONTAINER: {
               mergeInvokeContainer(other.getInvokeContainer());
+              break;
+            }
+            case GATEWAY_WEBSOCKET_BROADCAST: {
+              mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
               break;
             }
             case ACTION_NOT_SET: {
@@ -20126,6 +21972,183 @@ public final class TriggerOuterClass {
           actionCase_ = 103;
           onChanged();;
           return invokeContainerBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         * @return Whether the gatewayWebsocketBroadcast field is set.
+         */
+        @java.lang.Override
+        public boolean hasGatewayWebsocketBroadcast() {
+          return actionCase_ == 104;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         * @return The gatewayWebsocketBroadcast.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          } else {
+            if (actionCase_ == 104) {
+              return gatewayWebsocketBroadcastBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            action_ = value;
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        public Builder setGatewayWebsocketBroadcast(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            action_ = builderForValue.build();
+            onChanged();
+          } else {
+            gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 104 &&
+                action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              action_ = value;
+            }
+            onChanged();
+          } else {
+            if (actionCase_ == 104) {
+              gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+            }
+            gatewayWebsocketBroadcastBuilder_.setMessage(value);
+          }
+          actionCase_ = 104;
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        public Builder clearGatewayWebsocketBroadcast() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+              onChanged();
+            }
+          } else {
+            if (actionCase_ == 104) {
+              actionCase_ = 0;
+              action_ = null;
+            }
+            gatewayWebsocketBroadcastBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+          return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+          if ((actionCase_ == 104) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+            return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+          } else {
+            if (actionCase_ == 104) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+        }
+        /**
+         * <pre>
+         * Instructions for broadcasting to API gateway websocket once.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+            getGatewayWebsocketBroadcastFieldBuilder() {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            if (!(actionCase_ == 104)) {
+              action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+            }
+            gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                    getParentForChildren(),
+                    isClean());
+            action_ = null;
+          }
+          actionCase_ = 104;
+          onChanged();;
+          return gatewayWebsocketBroadcastBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -27015,6 +29038,910 @@ public final class TriggerOuterClass {
 
   }
 
+  public interface GatewayWebsocketBroadcastOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The gatewayId.
+     */
+    java.lang.String getGatewayId();
+    /**
+     * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for gatewayId.
+     */
+    com.google.protobuf.ByteString
+        getGatewayIdBytes();
+
+    /**
+     * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+
+    /**
+     * <pre>
+     * sa which has permission for writing to websockets
+     * </pre>
+     *
+     * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * sa which has permission for writing to websockets
+     * </pre>
+     *
+     * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast}
+   */
+  public static final class GatewayWebsocketBroadcast extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
+      GatewayWebsocketBroadcastOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GatewayWebsocketBroadcast.newBuilder() to construct.
+    private GatewayWebsocketBroadcast(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GatewayWebsocketBroadcast() {
+      gatewayId_ = "";
+      path_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GatewayWebsocketBroadcast();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GatewayWebsocketBroadcast(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gatewayId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              path_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder.class);
+    }
+
+    public static final int GATEWAY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object gatewayId_;
+    /**
+     * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The gatewayId.
+     */
+    @java.lang.Override
+    public java.lang.String getGatewayId() {
+      java.lang.Object ref = gatewayId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gatewayId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for gatewayId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGatewayIdBytes() {
+      java.lang.Object ref = gatewayId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gatewayId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PATH_FIELD_NUMBER = 2;
+    private volatile java.lang.Object path_;
+    /**
+     * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        path_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * sa which has permission for writing to websockets
+     * </pre>
+     *
+     * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sa which has permission for writing to websockets
+     * </pre>
+     *
+     * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gatewayId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, path_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gatewayId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, path_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) obj;
+
+      if (!getGatewayId()
+          .equals(other.getGatewayId())) return false;
+      if (!getPath()
+          .equals(other.getPath())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + GATEWAY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGatewayId().hashCode();
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        gatewayId_ = "";
+
+        path_ = "";
+
+        serviceAccountId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast(this);
+        result.gatewayId_ = gatewayId_;
+        result.path_ = path_;
+        result.serviceAccountId_ = serviceAccountId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) return this;
+        if (!other.getGatewayId().isEmpty()) {
+          gatewayId_ = other.gatewayId_;
+          onChanged();
+        }
+        if (!other.getPath().isEmpty()) {
+          path_ = other.path_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object gatewayId_ = "";
+      /**
+       * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The gatewayId.
+       */
+      public java.lang.String getGatewayId() {
+        java.lang.Object ref = gatewayId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gatewayId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for gatewayId.
+       */
+      public com.google.protobuf.ByteString
+          getGatewayIdBytes() {
+        java.lang.Object ref = gatewayId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gatewayId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The gatewayId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gatewayId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGatewayId() {
+        
+        gatewayId_ = getDefaultInstance().getGatewayId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string gateway_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for gatewayId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gatewayId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object path_ = "";
+      /**
+       * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The path.
+       */
+      public java.lang.String getPath() {
+        java.lang.Object ref = path_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          path_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for path.
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        path_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        
+        path_ = getDefaultInstance().getPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string path = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        path_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * sa which has permission for writing to websockets
+       * </pre>
+       *
+       * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sa which has permission for writing to websockets
+       * </pre>
+       *
+       * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sa which has permission for writing to websockets
+       * </pre>
+       *
+       * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sa which has permission for writing to websockets
+       * </pre>
+       *
+       * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sa which has permission for writing to websockets
+       * </pre>
+       *
+       * <code>string service_account_id = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GatewayWebsocketBroadcast>
+        PARSER = new com.google.protobuf.AbstractParser<GatewayWebsocketBroadcast>() {
+      @java.lang.Override
+      public GatewayWebsocketBroadcast parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GatewayWebsocketBroadcast(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GatewayWebsocketBroadcast> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GatewayWebsocketBroadcast> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PutQueueMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.PutQueueMessage)
       com.google.protobuf.MessageOrBuilder {
@@ -31027,6 +33954,21 @@ public final class TriggerOuterClass {
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    boolean hasGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.ActionCase getActionCase();
   }
   /**
@@ -31116,6 +34058,20 @@ public final class TriggerOuterClass {
               actionCase_ = 103;
               break;
             }
+            case 834: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+              if (actionCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 104;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -31155,6 +34111,7 @@ public final class TriggerOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INVOKE_FUNCTION(101),
       INVOKE_CONTAINER(103),
+      GATEWAY_WEBSOCKET_BROADCAST(104),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -31174,6 +34131,7 @@ public final class TriggerOuterClass {
         switch (value) {
           case 101: return INVOKE_FUNCTION;
           case 103: return INVOKE_CONTAINER;
+          case 104: return GATEWAY_WEBSOCKET_BROADCAST;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -31327,6 +34285,37 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
 
+    public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    @java.lang.Override
+    public boolean hasGatewayWebsocketBroadcast() {
+      return actionCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+      if (actionCase_ == 104) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+      if (actionCase_ == 104) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31353,6 +34342,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 103) {
         output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
       }
+      if (actionCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -31375,6 +34367,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 103) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+      }
+      if (actionCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -31405,6 +34401,10 @@ public final class TriggerOuterClass {
           if (!getInvokeContainer()
               .equals(other.getInvokeContainer())) return false;
           break;
+        case 104:
+          if (!getGatewayWebsocketBroadcast()
+              .equals(other.getGatewayWebsocketBroadcast())) return false;
+          break;
         case 0:
         default:
       }
@@ -31431,6 +34431,10 @@ public final class TriggerOuterClass {
         case 103:
           hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
           hash = (53 * hash) + getInvokeContainer().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+          hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
           break;
         case 0:
         default:
@@ -31616,6 +34620,13 @@ public final class TriggerOuterClass {
             result.action_ = invokeContainerBuilder_.build();
           }
         }
+        if (actionCase_ == 104) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -31680,6 +34691,10 @@ public final class TriggerOuterClass {
           }
           case INVOKE_CONTAINER: {
             mergeInvokeContainer(other.getInvokeContainer());
+            break;
+          }
+          case GATEWAY_WEBSOCKET_BROADCAST: {
+            mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
             break;
           }
           case ACTION_NOT_SET: {
@@ -32162,6 +35177,147 @@ public final class TriggerOuterClass {
         actionCase_ = 103;
         onChanged();;
         return invokeContainerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        } else {
+          if (actionCase_ == 104) {
+            return gatewayWebsocketBroadcastBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 104) {
+            gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+          }
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder clearGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 104) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          gatewayWebsocketBroadcastBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+        return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if ((actionCase_ == 104) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+          return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 104) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+          getGatewayWebsocketBroadcastFieldBuilder() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (!(actionCase_ == 104)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+          gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 104;
+        onChanged();;
+        return gatewayWebsocketBroadcastBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -33149,6 +36305,21 @@ public final class TriggerOuterClass {
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    boolean hasGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.ActionCase getActionCase();
   }
   /**
@@ -33265,6 +36436,20 @@ public final class TriggerOuterClass {
               actionCase_ = 15;
               break;
             }
+            case 130: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+              if (actionCase_ == 16) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 16;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -33304,6 +36489,7 @@ public final class TriggerOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INVOKE_FUNCTION(13),
       INVOKE_CONTAINER(15),
+      GATEWAY_WEBSOCKET_BROADCAST(16),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -33323,6 +36509,7 @@ public final class TriggerOuterClass {
         switch (value) {
           case 13: return INVOKE_FUNCTION;
           case 15: return INVOKE_CONTAINER;
+          case 16: return GATEWAY_WEBSOCKET_BROADCAST;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -33622,6 +36809,37 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
 
+    public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 16;
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    @java.lang.Override
+    public boolean hasGatewayWebsocketBroadcast() {
+      return actionCase_ == 16;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+      if (actionCase_ == 16) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+      if (actionCase_ == 16) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -33657,6 +36875,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 15) {
         output.writeMessage(15, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
       }
+      if (actionCase_ == 16) {
+        output.writeMessage(16, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -33689,6 +36910,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 15) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+      }
+      if (actionCase_ == 16) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -33728,6 +36953,10 @@ public final class TriggerOuterClass {
           if (!getInvokeContainer()
               .equals(other.getInvokeContainer())) return false;
           break;
+        case 16:
+          if (!getGatewayWebsocketBroadcast()
+              .equals(other.getGatewayWebsocketBroadcast())) return false;
+          break;
         case 0:
         default:
       }
@@ -33762,6 +36991,10 @@ public final class TriggerOuterClass {
         case 15:
           hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
           hash = (53 * hash) + getInvokeContainer().hashCode();
+          break;
+        case 16:
+          hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+          hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
           break;
         case 0:
         default:
@@ -33964,6 +37197,13 @@ public final class TriggerOuterClass {
             result.action_ = invokeContainerBuilder_.build();
           }
         }
+        if (actionCase_ == 16) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -34039,6 +37279,10 @@ public final class TriggerOuterClass {
           }
           case INVOKE_CONTAINER: {
             mergeInvokeContainer(other.getInvokeContainer());
+            break;
+          }
+          case GATEWAY_WEBSOCKET_BROADCAST: {
+            mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
             break;
           }
           case ACTION_NOT_SET: {
@@ -34908,6 +38152,147 @@ public final class TriggerOuterClass {
         actionCase_ = 15;
         onChanged();;
         return invokeContainerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 16;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 16) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        } else {
+          if (actionCase_ == 16) {
+            return gatewayWebsocketBroadcastBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 16 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 16) {
+            gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+          }
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      public Builder clearGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 16) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 16) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          gatewayWebsocketBroadcastBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+        return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if ((actionCase_ == 16) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+          return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 16) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+          getGatewayWebsocketBroadcastFieldBuilder() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (!(actionCase_ == 16)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+          gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 16;
+        onChanged();;
+        return gatewayWebsocketBroadcastBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -35862,6 +39247,21 @@ public final class TriggerOuterClass {
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    boolean hasGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder();
+
     public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail.ActionCase getActionCase();
   }
   /**
@@ -35970,6 +39370,20 @@ public final class TriggerOuterClass {
               actionCase_ = 103;
               break;
             }
+            case 834: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder subBuilder = null;
+              if (actionCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 104;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -36009,6 +39423,7 @@ public final class TriggerOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INVOKE_FUNCTION(101),
       INVOKE_CONTAINER(103),
+      GATEWAY_WEBSOCKET_BROADCAST(104),
       ACTION_NOT_SET(0);
       private final int value;
       private ActionCase(int value) {
@@ -36028,6 +39443,7 @@ public final class TriggerOuterClass {
         switch (value) {
           case 101: return INVOKE_FUNCTION;
           case 103: return INVOKE_CONTAINER;
+          case 104: return GATEWAY_WEBSOCKET_BROADCAST;
           case 0: return ACTION_NOT_SET;
           default: return null;
         }
@@ -36229,6 +39645,37 @@ public final class TriggerOuterClass {
       return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
     }
 
+    public static final int GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return Whether the gatewayWebsocketBroadcast field is set.
+     */
+    @java.lang.Override
+    public boolean hasGatewayWebsocketBroadcast() {
+      return actionCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     * @return The gatewayWebsocketBroadcast.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+      if (actionCase_ == 104) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+      if (actionCase_ == 104) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -36258,6 +39705,9 @@ public final class TriggerOuterClass {
       if (actionCase_ == 103) {
         output.writeMessage(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
       }
+      if (actionCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -36285,6 +39735,10 @@ public final class TriggerOuterClass {
       if (actionCase_ == 103) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(103, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+      }
+      if (actionCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -36323,6 +39777,10 @@ public final class TriggerOuterClass {
           if (!getInvokeContainer()
               .equals(other.getInvokeContainer())) return false;
           break;
+        case 104:
+          if (!getGatewayWebsocketBroadcast()
+              .equals(other.getGatewayWebsocketBroadcast())) return false;
+          break;
         case 0:
         default:
       }
@@ -36355,6 +39813,10 @@ public final class TriggerOuterClass {
         case 103:
           hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
           hash = (53 * hash) + getInvokeContainer().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + GATEWAY_WEBSOCKET_BROADCAST_FIELD_NUMBER;
+          hash = (53 * hash) + getGatewayWebsocketBroadcast().hashCode();
           break;
         case 0:
         default:
@@ -36559,6 +40021,13 @@ public final class TriggerOuterClass {
             result.action_ = invokeContainerBuilder_.build();
           }
         }
+        if (actionCase_ == 104) {
+          if (gatewayWebsocketBroadcastBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = gatewayWebsocketBroadcastBuilder_.build();
+          }
+        }
         result.actionCase_ = actionCase_;
         onBuilt();
         return result;
@@ -36625,6 +40094,10 @@ public final class TriggerOuterClass {
           }
           case INVOKE_CONTAINER: {
             mergeInvokeContainer(other.getInvokeContainer());
+            break;
+          }
+          case GATEWAY_WEBSOCKET_BROADCAST: {
+            mergeGatewayWebsocketBroadcast(other.getGatewayWebsocketBroadcast());
             break;
           }
           case ACTION_NOT_SET: {
@@ -37367,6 +40840,147 @@ public final class TriggerOuterClass {
         onChanged();;
         return invokeContainerBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> gatewayWebsocketBroadcastBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return Whether the gatewayWebsocketBroadcast field is set.
+       */
+      @java.lang.Override
+      public boolean hasGatewayWebsocketBroadcast() {
+        return actionCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       * @return The gatewayWebsocketBroadcast.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast getGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        } else {
+          if (actionCase_ == 104) {
+            return gatewayWebsocketBroadcastBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder setGatewayWebsocketBroadcast(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder builderForValue) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          gatewayWebsocketBroadcastBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder mergeGatewayWebsocketBroadcast(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast value) {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 104) {
+            gatewayWebsocketBroadcastBuilder_.mergeFrom(value);
+          }
+          gatewayWebsocketBroadcastBuilder_.setMessage(value);
+        }
+        actionCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public Builder clearGatewayWebsocketBroadcast() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (actionCase_ == 104) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 104) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          gatewayWebsocketBroadcastBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder getGatewayWebsocketBroadcastBuilder() {
+        return getGatewayWebsocketBroadcastFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder getGatewayWebsocketBroadcastOrBuilder() {
+        if ((actionCase_ == 104) && (gatewayWebsocketBroadcastBuilder_ != null)) {
+          return gatewayWebsocketBroadcastBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 104) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.GatewayWebsocketBroadcast gateway_websocket_broadcast = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder> 
+          getGatewayWebsocketBroadcastFieldBuilder() {
+        if (gatewayWebsocketBroadcastBuilder_ == null) {
+          if (!(actionCase_ == 104)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.getDefaultInstance();
+          }
+          gatewayWebsocketBroadcastBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcastOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.GatewayWebsocketBroadcast) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 104;
+        onChanged();;
+        return gatewayWebsocketBroadcastBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -37496,6 +41110,11 @@ public final class TriggerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_triggers_v1_InvokeContainerWithRetry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37559,7 +41178,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\223(\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\344-\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -37592,7 +41211,7 @@ public final class TriggerOuterClass {
       "stream\030\014 \001(\0132/.yandex.cloud.serverless.t" +
       "riggers.v1.DataStreamH\000\0229\n\004mail\030\r \001(\0132)." +
       "yandex.cloud.serverless.triggers.v1.Mail" +
-      "H\000B\014\n\004rule\022\004\300\3011\001\032\372\002\n\005Timer\022&\n\017cron_expre" +
+      "H\000B\014\n\004rule\022\004\300\3011\001\032\341\003\n\005Timer\022&\n\017cron_expre" +
       "ssion\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\033\n\007payload\030\002 " +
       "\001(\tB\n\212\3101\006<=4096\022R\n\017invoke_function\030e \001(\013" +
       "27.yandex.cloud.serverless.triggers.v1.I" +
@@ -37601,166 +41220,194 @@ public final class TriggerOuterClass {
       "s.triggers.v1.InvokeFunctionWithRetryH\000\022" +
       "d\n\033invoke_container_with_retry\030h \001(\0132=.y" +
       "andex.cloud.serverless.triggers.v1.Invok" +
-      "eContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\236\003" +
-      "\n\014MessageQueue\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022(" +
-      "\n\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022P\n\016batch_settings\030\004 \001(\01322.yandex.cloud." +
-      "serverless.triggers.v1.BatchSettingsB\004\350\307" +
-      "1\001\022@\n\022visibility_timeout\030\005 \001(\0132\031.google." +
-      "protobuf.DurationB\t\372\3071\005<=12h\022R\n\017invoke_f" +
-      "unction\030e \001(\01327.yandex.cloud.serverless." +
-      "triggers.v1.InvokeFunctionOnceH\000\022T\n\020invo" +
-      "ke_container\030f \001(\01328.yandex.cloud.server" +
-      "less.triggers.v1.InvokeContainerOnceH\000B\016" +
-      "\n\006action\022\004\300\3011\001\032\336\002\n\nIoTMessage\022\031\n\013registr" +
-      "y_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nm" +
-      "qtt_topic\030\003 \001(\t\022J\n\016batch_settings\030\004 \001(\0132" +
-      "2.yandex.cloud.serverless.triggers.v1.Ba" +
-      "tchSettings\022W\n\017invoke_function\030e \001(\0132<.y" +
+      "eContainerWithRetryH\000\022e\n\033gateway_websock" +
+      "et_broadcast\030i \001(\0132>.yandex.cloud.server" +
+      "less.triggers.v1.GatewayWebsocketBroadca" +
+      "stH\000B\016\n\006action\022\004\300\3011\001\032\205\004\n\014MessageQueue\022\026\n" +
+      "\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_account" +
+      "_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_setting" +
+      "s\030\004 \001(\01322.yandex.cloud.serverless.trigge" +
+      "rs.v1.BatchSettingsB\004\350\3071\001\022@\n\022visibility_" +
+      "timeout\030\005 \001(\0132\031.google.protobuf.Duration" +
+      "B\t\372\3071\005<=12h\022R\n\017invoke_function\030e \001(\01327.y" +
       "andex.cloud.serverless.triggers.v1.Invok" +
-      "eFunctionWithRetryH\000\022Y\n\020invoke_container" +
-      "\030f \001(\0132=.yandex.cloud.serverless.trigger" +
-      "s.v1.InvokeContainerWithRetryH\000B\016\n\006actio" +
-      "n\022\004\300\3011\001\032\317\002\n\020IoTBrokerMessage\022\027\n\tbroker_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\022\n\nmqtt_topic\030\002 \001(\t\022J\n\016bat" +
-      "ch_settings\030\003 \001(\01322.yandex.cloud.serverl" +
-      "ess.triggers.v1.BatchSettings\022W\n\017invoke_" +
-      "function\030e \001(\0132<.yandex.cloud.serverless" +
-      ".triggers.v1.InvokeFunctionWithRetryH\000\022Y" +
-      "\n\020invoke_container\030f \001(\0132=.yandex.cloud." +
-      "serverless.triggers.v1.InvokeContainerWi" +
-      "thRetryH\000B\016\n\006action\022\004\300\3011\001\032\263\003\n\rObjectStor" +
-      "age\022_\n\nevent_type\030\003 \003(\0162C.yandex.cloud.s" +
-      "erverless.triggers.v1.Trigger.ObjectStor" +
-      "ageEventTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t\022" +
-      "\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022J\n\016batch" +
-      "_settings\030\010 \001(\01322.yandex.cloud.serverles" +
-      "s.triggers.v1.BatchSettings\022W\n\017invoke_fu" +
-      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
-      "invoke_container\030f \001(\0132=.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeContainerWith" +
-      "RetryH\000B\016\n\006action\022\004\300\3011\001\032\276\003\n\021ContainerReg" +
-      "istry\022c\n\nevent_type\030\003 \003(\0162G.yandex.cloud" +
-      ".serverless.triggers.v1.Trigger.Containe" +
-      "rRegistryEventTypeB\006\202\3101\002>0\022\023\n\013registry_i" +
-      "d\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t" +
-      "\022J\n\016batch_settings\030\007 \001(\01322.yandex.cloud." +
-      "serverless.triggers.v1.BatchSettings\022W\n\017" +
-      "invoke_function\030e \001(\0132<.yandex.cloud.ser" +
-      "verless.triggers.v1.InvokeFunctionWithRe" +
-      "tryH\000\022Y\n\020invoke_container\030f \001(\0132=.yandex" +
-      ".cloud.serverless.triggers.v1.InvokeCont" +
-      "ainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\300\002\n\tClo" +
-      "udLogs\022\024\n\014log_group_id\030\001 \003(\t\022Y\n\016batch_se" +
-      "ttings\030\002 \001(\0132;.yandex.cloud.serverless.t" +
-      "riggers.v1.CloudLogsBatchSettingsB\004\350\3071\001\022" +
+      "eFunctionOnceH\000\022T\n\020invoke_container\030f \001(" +
+      "\01328.yandex.cloud.serverless.triggers.v1." +
+      "InvokeContainerOnceH\000\022e\n\033gateway_websock" +
+      "et_broadcast\030g \001(\0132>.yandex.cloud.server" +
+      "less.triggers.v1.GatewayWebsocketBroadca" +
+      "stH\000B\016\n\006action\022\004\300\3011\001\032\305\003\n\nIoTMessage\022\031\n\013r" +
+      "egistry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(" +
+      "\t\022\022\n\nmqtt_topic\030\003 \001(\t\022J\n\016batch_settings\030" +
+      "\004 \001(\01322.yandex.cloud.serverless.triggers" +
+      ".v1.BatchSettings\022W\n\017invoke_function\030e \001" +
+      "(\0132<.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeFunctionWithRetryH\000\022Y\n\020invoke_con" +
+      "tainer\030f \001(\0132=.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeContainerWithRetryH\000\022e\n" +
+      "\033gateway_websocket_broadcast\030g \001(\0132>.yan" +
+      "dex.cloud.serverless.triggers.v1.Gateway" +
+      "WebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\032\266\003\n" +
+      "\020IoTBrokerMessage\022\027\n\tbroker_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022\022\n\nmqtt_topic\030\002 \001(\t\022J\n\016batch_settings" +
+      "\030\003 \001(\01322.yandex.cloud.serverless.trigger" +
+      "s.v1.BatchSettings\022W\n\017invoke_function\030e " +
+      "\001(\0132<.yandex.cloud.serverless.triggers.v" +
+      "1.InvokeFunctionWithRetryH\000\022Y\n\020invoke_co" +
+      "ntainer\030f \001(\0132=.yandex.cloud.serverless." +
+      "triggers.v1.InvokeContainerWithRetryH\000\022e" +
+      "\n\033gateway_websocket_broadcast\030g \001(\0132>.ya" +
+      "ndex.cloud.serverless.triggers.v1.Gatewa" +
+      "yWebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\032\232\004" +
+      "\n\rObjectStorage\022_\n\nevent_type\030\003 \003(\0162C.ya" +
+      "ndex.cloud.serverless.triggers.v1.Trigge" +
+      "r.ObjectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbuck" +
+      "et_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 " +
+      "\001(\t\022J\n\016batch_settings\030\010 \001(\01322.yandex.clo" +
+      "ud.serverless.triggers.v1.BatchSettings\022" +
       "W\n\017invoke_function\030e \001(\0132<.yandex.cloud." +
       "serverless.triggers.v1.InvokeFunctionWit" +
       "hRetryH\000\022Y\n\020invoke_container\030f \001(\0132=.yan" +
       "dex.cloud.serverless.triggers.v1.InvokeC" +
-      "ontainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\314\004\n\007" +
-      "Logging\022\036\n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
-      "@\n\rresource_type\030\003 \003(\tB)\362\3071\034[a-zA-Z][-a-" +
-      "zA-Z0-9_.]{1,62}\202\3101\005<=100\022>\n\013resource_id" +
-      "\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}" +
-      "\202\3101\005<=100\022?\n\013stream_name\030\007 \003(\tB*\362\3071\035|[a-" +
-      "z][-a-z0-9]{1,61}[a-z0-9]\202\3101\005<=100\022A\n\006le" +
-      "vels\030\005 \003(\0162\'.yandex.cloud.logging.v1.Log" +
-      "Level.LevelB\010\202\3101\004<=10\022W\n\016batch_settings\030" +
-      "\006 \001(\01329.yandex.cloud.serverless.triggers" +
-      ".v1.LoggingBatchSettingsB\004\350\3071\001\022W\n\017invoke" +
-      "_function\030e \001(\0132<.yandex.cloud.serverles" +
-      "s.triggers.v1.InvokeFunctionWithRetryH\000\022" +
-      "Y\n\020invoke_container\030g \001(\0132=.yandex.cloud" +
-      ".serverless.triggers.v1.InvokeContainerW" +
-      "ithRetryH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectSto" +
-      "rageEventType\022)\n%OBJECT_STORAGE_EVENT_TY" +
-      "PE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT" +
-      "_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_" +
-      "EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STO" +
-      "RAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Cont" +
-      "ainerRegistryEventType\022-\n)CONTAINER_REGI" +
-      "STRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAIN" +
-      "ER_REGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022.\n" +
-      "*CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IM" +
-      "AGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_C" +
-      "REATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY_" +
-      "EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status\022" +
-      "\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006P" +
-      "AUSED\020\002\"i\n\022InvokeFunctionOnce\022!\n\013functio" +
-      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag" +
-      "\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027I" +
-      "nvokeFunctionWithRetry\022!\n\013function_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022" +
-      "\032\n\022service_account_id\030\003 \001(\t\022J\n\016retry_set" +
-      "tings\030\004 \001(\01322.yandex.cloud.serverless.tr" +
-      "iggers.v1.RetrySettings\022O\n\021dead_letter_q" +
-      "ueue\030\005 \001(\01324.yandex.cloud.serverless.tri" +
-      "ggers.v1.PutQueueMessage\"c\n\023InvokeContai" +
-      "nerOnce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id\030" +
-      "\004 \001(\t\"\205\002\n\030InvokeContainerWithRetry\022\"\n\014co" +
-      "ntainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003" +
-      " \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022J\n\016retr" +
-      "y_settings\030\005 \001(\01322.yandex.cloud.serverle" +
-      "ss.triggers.v1.RetrySettings\022O\n\021dead_let" +
-      "ter_queue\030\006 \001(\01324.yandex.cloud.serverles" +
-      "s.triggers.v1.PutQueueMessage\"M\n\017PutQueu" +
-      "eMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_ac" +
-      "count_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"Z\n\rBatchSet" +
-      "tings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n\006cutof" +
-      "f\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001" +
-      "\"g\n\026CloudLogsBatchSettings\022\027\n\004size\030\001 \001(\003" +
-      "B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.google.pro" +
-      "tobuf.DurationB\t\372\3071\0051s-1m\"f\n\024LoggingBatc" +
-      "hSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-1000\0224\n\006c" +
-      "utoff\030\002 \001(\0132\031.google.protobuf.DurationB\t" +
-      "\372\3071\0051s-1m\"m\n\rRetrySettings\022\037\n\016retry_atte" +
-      "mpts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031." +
-      "google.protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001" +
-      "\"\232\002\n\rBillingBudget\022(\n\022billing_account_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB" +
-      "\010\212\3101\004<=50\022W\n\017invoke_function\030e \001(\0132<.yan" +
-      "dex.cloud.serverless.triggers.v1.InvokeF" +
-      "unctionWithRetryH\000\022Y\n\020invoke_container\030g" +
-      " \001(\0132=.yandex.cloud.serverless.triggers." +
-      "v1.InvokeContainerWithRetryH\000B\016\n\006action\022" +
-      "\004\300\3011\001\"j\n\027DataStreamBatchSettings\022\031\n\004size" +
-      "\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDa" +
-      "taStream\022\020\n\010endpoint\030\001 \001(\t\022\020\n\010database\030\002" +
-      " \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022service_account_" +
-      "id\030\004 \001(\t\022T\n\016batch_settings\030\005 \001(\0132<.yande" +
-      "x.cloud.serverless.triggers.v1.DataStrea" +
-      "mBatchSettings\022W\n\017invoke_function\030\r \001(\0132" +
-      "<.yandex.cloud.serverless.triggers.v1.In" +
-      "vokeFunctionWithRetryH\000\022Y\n\020invoke_contai" +
-      "ner\030\017 \001(\0132=.yandex.cloud.serverless.trig" +
-      "gers.v1.InvokeContainerWithRetryH\000B\016\n\006ac" +
-      "tion\022\004\300\3011\001\"v\n\033ObjectStorageBucketSetting" +
-      "s\022-\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9" +
-      "a-zA-Z]*\022(\n\022service_account_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"\203\003\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016ba" +
-      "tch_settings\030\003 \001(\01322.yandex.cloud.server" +
-      "less.triggers.v1.BatchSettings\022\\\n\022attach" +
-      "ments_bucket\030\004 \001(\0132@.yandex.cloud.server" +
-      "less.triggers.v1.ObjectStorageBucketSett" +
-      "ings\022W\n\017invoke_function\030e \001(\0132<.yandex.c" +
-      "loud.serverless.triggers.v1.InvokeFuncti" +
-      "onWithRetryH\000\022Y\n\020invoke_container\030g \001(\0132" +
-      "=.yandex.cloud.serverless.triggers.v1.In" +
-      "vokeContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001" +
-      "*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECI" +
-      "FIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013" +
-      "IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n" +
-      "\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020" +
-      "\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLIN" +
-      "G_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex." +
-      "cloud.api.serverless.triggers.v1ZPgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/serverless/triggers/v1;triggersb\006prot" +
-      "o3"
+      "ontainerWithRetryH\000\022e\n\033gateway_websocket" +
+      "_broadcast\030g \001(\0132>.yandex.cloud.serverle" +
+      "ss.triggers.v1.GatewayWebsocketBroadcast" +
+      "H\000B\016\n\006action\022\004\300\3011\001\032\245\004\n\021ContainerRegistry" +
+      "\022c\n\nevent_type\030\003 \003(\0162G.yandex.cloud.serv" +
+      "erless.triggers.v1.Trigger.ContainerRegi" +
+      "stryEventTypeB\006\202\3101\002>0\022\023\n\013registry_id\030\004 \001" +
+      "(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t\022J\n\016b" +
+      "atch_settings\030\007 \001(\01322.yandex.cloud.serve" +
+      "rless.triggers.v1.BatchSettings\022W\n\017invok" +
+      "e_function\030e \001(\0132<.yandex.cloud.serverle" +
+      "ss.triggers.v1.InvokeFunctionWithRetryH\000" +
+      "\022Y\n\020invoke_container\030f \001(\0132=.yandex.clou" +
+      "d.serverless.triggers.v1.InvokeContainer" +
+      "WithRetryH\000\022e\n\033gateway_websocket_broadca" +
+      "st\030g \001(\0132>.yandex.cloud.serverless.trigg" +
+      "ers.v1.GatewayWebsocketBroadcastH\000B\016\n\006ac" +
+      "tion\022\004\300\3011\001\032\300\002\n\tCloudLogs\022\024\n\014log_group_id" +
+      "\030\001 \003(\t\022Y\n\016batch_settings\030\002 \001(\0132;.yandex." +
+      "cloud.serverless.triggers.v1.CloudLogsBa" +
+      "tchSettingsB\004\350\3071\001\022W\n\017invoke_function\030e \001" +
+      "(\0132<.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeFunctionWithRetryH\000\022Y\n\020invoke_con" +
+      "tainer\030f \001(\0132=.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeContainerWithRetryH\000B\016\n" +
+      "\006action\022\004\300\3011\001\032\263\005\n\007Logging\022\036\n\014log_group_i" +
+      "d\030\001 \001(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 \003(\t" +
+      "B)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=" +
+      "100\022>\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-" +
+      "a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022?\n\013stream_na" +
+      "me\030\007 \003(\tB*\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0" +
+      "-9]\202\3101\005<=100\022A\n\006levels\030\005 \003(\0162\'.yandex.cl" +
+      "oud.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022" +
+      "W\n\016batch_settings\030\006 \001(\01329.yandex.cloud.s" +
+      "erverless.triggers.v1.LoggingBatchSettin" +
+      "gsB\004\350\3071\001\022W\n\017invoke_function\030e \001(\0132<.yand" +
+      "ex.cloud.serverless.triggers.v1.InvokeFu" +
+      "nctionWithRetryH\000\022Y\n\020invoke_container\030g " +
+      "\001(\0132=.yandex.cloud.serverless.triggers.v" +
+      "1.InvokeContainerWithRetryH\000\022e\n\033gateway_" +
+      "websocket_broadcast\030h \001(\0132>.yandex.cloud" +
+      ".serverless.triggers.v1.GatewayWebsocket" +
+      "BroadcastH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectSt" +
+      "orageEventType\022)\n%OBJECT_STORAGE_EVENT_T" +
+      "YPE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVEN" +
+      "T_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE" +
+      "_EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_ST" +
+      "ORAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Con" +
+      "tainerRegistryEventType\022-\n)CONTAINER_REG" +
+      "ISTRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAI" +
+      "NER_REGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022." +
+      "\n*CONTAINER_REGISTRY_EVENT_TYPE_DELETE_I" +
+      "MAGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_" +
+      "CREATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY" +
+      "_EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status" +
+      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006" +
+      "PAUSED\020\002\"i\n\022InvokeFunctionOnce\022!\n\013functi" +
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_ta" +
+      "g\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027" +
+      "InvokeFunctionWithRetry\022!\n\013function_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t" +
+      "\022\032\n\022service_account_id\030\003 \001(\t\022J\n\016retry_se" +
+      "ttings\030\004 \001(\01322.yandex.cloud.serverless.t" +
+      "riggers.v1.RetrySettings\022O\n\021dead_letter_" +
+      "queue\030\005 \001(\01324.yandex.cloud.serverless.tr" +
+      "iggers.v1.PutQueueMessage\"c\n\023InvokeConta" +
+      "inerOnce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id" +
+      "\030\004 \001(\t\"\205\002\n\030InvokeContainerWithRetry\022\"\n\014c" +
+      "ontainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030" +
+      "\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022J\n\016ret" +
+      "ry_settings\030\005 \001(\01322.yandex.cloud.serverl" +
+      "ess.triggers.v1.RetrySettings\022O\n\021dead_le" +
+      "tter_queue\030\006 \001(\01324.yandex.cloud.serverle" +
+      "ss.triggers.v1.PutQueueMessage\"{\n\031Gatewa" +
+      "yWebsocketBroadcast\022 \n\ngateway_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022(\n\022ser" +
+      "vice_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\"M\n\017P" +
+      "utQueueMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022serv" +
+      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"Z\n\rBa" +
+      "tchSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n" +
+      "\006cutoff\030\002 \001(\0132\031.google.protobuf.Duration" +
+      "B\004\350\3071\001\"g\n\026CloudLogsBatchSettings\022\027\n\004size" +
+      "\030\001 \001(\003B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.goog" +
+      "le.protobuf.DurationB\t\372\3071\0051s-1m\"f\n\024Loggi" +
+      "ngBatchSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-100" +
+      "0\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\t\372\3071\0051s-1m\"m\n\rRetrySettings\022\037\n\016retr" +
+      "y_attempts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationB\016\372\3071\00610s-" +
+      "1m\350\3071\001\"\201\003\n\rBillingBudget\022(\n\022billing_acco" +
+      "unt_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030" +
+      "\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_function\030e \001(\013" +
+      "2<.yandex.cloud.serverless.triggers.v1.I" +
+      "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
+      "iner\030g \001(\0132=.yandex.cloud.serverless.tri" +
+      "ggers.v1.InvokeContainerWithRetryH\000\022e\n\033g" +
+      "ateway_websocket_broadcast\030h \001(\0132>.yande" +
+      "x.cloud.serverless.triggers.v1.GatewayWe" +
+      "bsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\"j\n\027Da" +
+      "taStreamBatchSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071" +
+      "\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.google.protob" +
+      "uf.DurationB\t\372\3071\0051s-1m\"\335\003\n\nDataStream\022\020\n" +
+      "\010endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006str" +
+      "eam\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022T\n" +
+      "\016batch_settings\030\005 \001(\0132<.yandex.cloud.ser" +
+      "verless.triggers.v1.DataStreamBatchSetti" +
+      "ngs\022W\n\017invoke_function\030\r \001(\0132<.yandex.cl" +
+      "oud.serverless.triggers.v1.InvokeFunctio" +
+      "nWithRetryH\000\022Y\n\020invoke_container\030\017 \001(\0132=" +
+      ".yandex.cloud.serverless.triggers.v1.Inv" +
+      "okeContainerWithRetryH\000\022e\n\033gateway_webso" +
+      "cket_broadcast\030\020 \001(\0132>.yandex.cloud.serv" +
+      "erless.triggers.v1.GatewayWebsocketBroad" +
+      "castH\000B\016\n\006action\022\004\300\3011\001\"v\n\033ObjectStorageB" +
+      "ucketSettings\022-\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-" +
+      "63\362\3071\016[-.0-9a-zA-Z]*\022(\n\022service_account_" +
+      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\352\003\n\004Mail\022\r\n\005email" +
+      "\030\002 \001(\t\022J\n\016batch_settings\030\003 \001(\01322.yandex." +
+      "cloud.serverless.triggers.v1.BatchSettin" +
+      "gs\022\\\n\022attachments_bucket\030\004 \001(\0132@.yandex." +
+      "cloud.serverless.triggers.v1.ObjectStora" +
+      "geBucketSettings\022W\n\017invoke_function\030e \001(" +
+      "\0132<.yandex.cloud.serverless.triggers.v1." +
+      "InvokeFunctionWithRetryH\000\022Y\n\020invoke_cont" +
+      "ainer\030g \001(\0132=.yandex.cloud.serverless.tr" +
+      "iggers.v1.InvokeContainerWithRetryH\000\022e\n\033" +
+      "gateway_websocket_broadcast\030h \001(\0132>.yand" +
+      "ex.cloud.serverless.triggers.v1.GatewayW" +
+      "ebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013" +
+      "TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020" +
+      "\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_M" +
+      "ESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n\016OBJE" +
+      "CT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006\022\016\n\n" +
+      "CLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_BUD" +
+      "GET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.cloud" +
+      ".api.serverless.triggers.v1ZPgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/se" +
+      "rverless/triggers/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37793,37 +41440,37 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_descriptor,
-        new java.lang.String[] { "CronExpression", "Payload", "InvokeFunction", "InvokeFunctionWithRetry", "InvokeContainerWithRetry", "Action", });
+        new java.lang.String[] { "CronExpression", "Payload", "InvokeFunction", "InvokeFunctionWithRetry", "InvokeContainerWithRetry", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_MessageQueue_descriptor,
-        new java.lang.String[] { "QueueId", "ServiceAccountId", "BatchSettings", "VisibilityTimeout", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "QueueId", "ServiceAccountId", "BatchSettings", "VisibilityTimeout", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_descriptor,
-        new java.lang.String[] { "RegistryId", "DeviceId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "RegistryId", "DeviceId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_descriptor,
-        new java.lang.String[] { "BrokerId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "BrokerId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_descriptor,
-        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(7);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor,
-        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(8);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_fieldAccessorTable = new
@@ -37835,7 +41482,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Logging_descriptor,
-        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "StreamName", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "LogGroupId", "ResourceType", "ResourceId", "StreamName", "Levels", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_triggers_v1_InvokeFunctionOnce_fieldAccessorTable = new
@@ -37860,66 +41507,72 @@ public final class TriggerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_InvokeContainerWithRetry_descriptor,
         new java.lang.String[] { "ContainerId", "Path", "ServiceAccountId", "RetrySettings", "DeadLetterQueue", });
-    internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor =
+    internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_GatewayWebsocketBroadcast_descriptor,
+        new java.lang.String[] { "GatewayId", "Path", "ServiceAccountId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_PutQueueMessage_descriptor,
         new java.lang.String[] { "QueueId", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_BatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_CloudLogsBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_LoggingBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_RetrySettings_descriptor,
         new java.lang.String[] { "RetryAttempts", "Interval", });
     internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_descriptor,
-        new java.lang.String[] { "BillingAccountId", "BudgetId", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "BillingAccountId", "BudgetId", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor,
         new java.lang.String[] { "Size", "Cutoff", });
     internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor,
-        new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor,
         new java.lang.String[] { "BucketId", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor,
-        new java.lang.String[] { "Email", "BatchSettings", "AttachmentsBucket", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "Email", "BatchSettings", "AttachmentsBucket", "InvokeFunction", "InvokeContainer", "GatewayWebsocketBroadcast", "Action", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

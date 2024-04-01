@@ -6217,6 +6217,885 @@ public final class UserOuterClass {
 
   }
 
+  public interface PGAuditSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.PGAuditSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return A list containing the log.
+     */
+    java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> getLogList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return The count of log.
+     */
+    int getLogCount();
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @param index The index of the element to return.
+     * @return The log at the given index.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog getLog(int index);
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return A list containing the enum numeric values on the wire for log.
+     */
+    java.util.List<java.lang.Integer>
+    getLogValueList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of log at the given index.
+     */
+    int getLogValue(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.PGAuditSettings}
+   */
+  public static final class PGAuditSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.PGAuditSettings)
+      PGAuditSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PGAuditSettings.newBuilder() to construct.
+    private PGAuditSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PGAuditSettings() {
+      log_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PGAuditSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PGAuditSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                log_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              log_.add(rawValue);
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  log_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                log_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          log_ = java.util.Collections.unmodifiableList(log_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.class, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog}
+     */
+    public enum PGAuditSettingsLog
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_UNSPECIFIED = 0;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_UNSPECIFIED(0),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_READ = 1;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_READ(1),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_WRITE = 2;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_WRITE(2),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_FUNCTION = 3;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_FUNCTION(3),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_ROLE = 4;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_ROLE(4),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_DDL = 5;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_DDL(5),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_MISC = 6;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_MISC(6),
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_MISC_SET = 7;</code>
+       */
+      PG_AUDIT_SETTINGS_LOG_MISC_SET(7),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_UNSPECIFIED = 0;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_READ = 1;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_READ_VALUE = 1;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_WRITE = 2;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_WRITE_VALUE = 2;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_FUNCTION = 3;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_FUNCTION_VALUE = 3;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_ROLE = 4;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_ROLE_VALUE = 4;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_DDL = 5;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_DDL_VALUE = 5;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_MISC = 6;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_MISC_VALUE = 6;
+      /**
+       * <code>PG_AUDIT_SETTINGS_LOG_MISC_SET = 7;</code>
+       */
+      public static final int PG_AUDIT_SETTINGS_LOG_MISC_SET_VALUE = 7;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PGAuditSettingsLog valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PGAuditSettingsLog forNumber(int value) {
+        switch (value) {
+          case 0: return PG_AUDIT_SETTINGS_LOG_UNSPECIFIED;
+          case 1: return PG_AUDIT_SETTINGS_LOG_READ;
+          case 2: return PG_AUDIT_SETTINGS_LOG_WRITE;
+          case 3: return PG_AUDIT_SETTINGS_LOG_FUNCTION;
+          case 4: return PG_AUDIT_SETTINGS_LOG_ROLE;
+          case 5: return PG_AUDIT_SETTINGS_LOG_DDL;
+          case 6: return PG_AUDIT_SETTINGS_LOG_MISC;
+          case 7: return PG_AUDIT_SETTINGS_LOG_MISC_SET;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PGAuditSettingsLog>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PGAuditSettingsLog> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PGAuditSettingsLog>() {
+              public PGAuditSettingsLog findValueByNumber(int number) {
+                return PGAuditSettingsLog.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PGAuditSettingsLog[] VALUES = values();
+
+      public static PGAuditSettingsLog valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PGAuditSettingsLog(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog)
+    }
+
+    public static final int LOG_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> log_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> log_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog>() {
+              public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog.valueOf(from);
+                return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return A list containing the log.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> getLogList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog>(log_, log_converter_);
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return The count of log.
+     */
+    @java.lang.Override
+    public int getLogCount() {
+      return log_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @param index The index of the element to return.
+     * @return The log at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog getLog(int index) {
+      return log_converter_.convert(log_.get(index));
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @return A list containing the enum numeric values on the wire for log.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getLogValueList() {
+      return log_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of log at the given index.
+     */
+    @java.lang.Override
+    public int getLogValue(int index) {
+      return log_.get(index);
+    }
+    private int logMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getLogList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(logMemoizedSerializedSize);
+      }
+      for (int i = 0; i < log_.size(); i++) {
+        output.writeEnumNoTag(log_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < log_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(log_.get(i));
+        }
+        size += dataSize;
+        if (!getLogList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }logMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings other = (yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings) obj;
+
+      if (!log_.equals(other.log_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLogCount() > 0) {
+        hash = (37 * hash) + LOG_FIELD_NUMBER;
+        hash = (53 * hash) + log_.hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.PGAuditSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.postgresql.v1.PGAuditSettings)
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.class, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        log_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings build() {
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings buildPartial() {
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings result = new yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          log_ = java.util.Collections.unmodifiableList(log_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.log_ = log_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings) {
+          return mergeFrom((yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings other) {
+        if (other == yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance()) return this;
+        if (!other.log_.isEmpty()) {
+          if (log_.isEmpty()) {
+            log_ = other.log_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLogIsMutable();
+            log_.addAll(other.log_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Integer> log_ =
+        java.util.Collections.emptyList();
+      private void ensureLogIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          log_ = new java.util.ArrayList<java.lang.Integer>(log_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @return A list containing the log.
+       */
+      public java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> getLogList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog>(log_, log_converter_);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @return The count of log.
+       */
+      public int getLogCount() {
+        return log_.size();
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param index The index of the element to return.
+       * @return The log at the given index.
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog getLog(int index) {
+        return log_converter_.convert(log_.get(index));
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The log to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLog(
+          int index, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLogIsMutable();
+        log_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param value The log to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLog(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLogIsMutable();
+        log_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param values The log to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLog(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> values) {
+        ensureLogIsMutable();
+        for (yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog value : values) {
+          log_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLog() {
+        log_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @return A list containing the enum numeric values on the wire for log.
+       */
+      public java.util.List<java.lang.Integer>
+      getLogValueList() {
+        return java.util.Collections.unmodifiableList(log_);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of log at the given index.
+       */
+      public int getLogValue(int index) {
+        return log_.get(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of log at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setLogValue(
+          int index, int value) {
+        ensureLogIsMutable();
+        log_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param value The enum numeric value on the wire for log to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLogValue(int value) {
+        ensureLogIsMutable();
+        log_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
+       * @param values The enum numeric values on the wire for log to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLogValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureLogIsMutable();
+        for (int value : values) {
+          log_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.postgresql.v1.PGAuditSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.postgresql.v1.PGAuditSettings)
+    private static final yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings();
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PGAuditSettings>
+        PARSER = new com.google.protobuf.AbstractParser<PGAuditSettings>() {
+      @java.lang.Override
+      public PGAuditSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PGAuditSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PGAuditSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PGAuditSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UserSettingsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.UserSettings)
       com.google.protobuf.MessageOrBuilder {
@@ -6598,6 +7477,21 @@ public final class UserOuterClass {
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     * @return Whether the pgaudit field is set.
+     */
+    boolean hasPgaudit();
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     * @return The pgaudit.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getPgaudit();
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder();
   }
   /**
    * <pre>
@@ -6776,6 +7670,19 @@ public final class UserOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(statementTimeout_);
                 statementTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder subBuilder = null;
+              if (pgaudit_ != null) {
+                subBuilder = pgaudit_.toBuilder();
+              }
+              pgaudit_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pgaudit_);
+                pgaudit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7990,6 +8897,32 @@ public final class UserOuterClass {
       return getStatementTimeout();
     }
 
+    public static final int PGAUDIT_FIELD_NUMBER = 13;
+    private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings pgaudit_;
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     * @return Whether the pgaudit field is set.
+     */
+    @java.lang.Override
+    public boolean hasPgaudit() {
+      return pgaudit_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     * @return The pgaudit.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getPgaudit() {
+      return pgaudit_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance() : pgaudit_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder() {
+      return getPgaudit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8039,6 +8972,9 @@ public final class UserOuterClass {
       }
       if (statementTimeout_ != null) {
         output.writeMessage(12, getStatementTimeout());
+      }
+      if (pgaudit_ != null) {
+        output.writeMessage(13, getPgaudit());
       }
       unknownFields.writeTo(output);
     }
@@ -8096,6 +9032,10 @@ public final class UserOuterClass {
       if (statementTimeout_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getStatementTimeout());
+      }
+      if (pgaudit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPgaudit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8156,6 +9096,11 @@ public final class UserOuterClass {
         if (!getStatementTimeout()
             .equals(other.getStatementTimeout())) return false;
       }
+      if (hasPgaudit() != other.hasPgaudit()) return false;
+      if (hasPgaudit()) {
+        if (!getPgaudit()
+            .equals(other.getPgaudit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8206,6 +9151,10 @@ public final class UserOuterClass {
       if (hasStatementTimeout()) {
         hash = (37 * hash) + STATEMENT_TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getStatementTimeout().hashCode();
+      }
+      if (hasPgaudit()) {
+        hash = (37 * hash) + PGAUDIT_FIELD_NUMBER;
+        hash = (53 * hash) + getPgaudit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8400,6 +9349,12 @@ public final class UserOuterClass {
           statementTimeout_ = null;
           statementTimeoutBuilder_ = null;
         }
+        if (pgauditBuilder_ == null) {
+          pgaudit_ = null;
+        } else {
+          pgaudit_ = null;
+          pgauditBuilder_ = null;
+        }
         return this;
       }
 
@@ -8469,6 +9424,11 @@ public final class UserOuterClass {
           result.statementTimeout_ = statementTimeout_;
         } else {
           result.statementTimeout_ = statementTimeoutBuilder_.build();
+        }
+        if (pgauditBuilder_ == null) {
+          result.pgaudit_ = pgaudit_;
+        } else {
+          result.pgaudit_ = pgauditBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8553,6 +9513,9 @@ public final class UserOuterClass {
         }
         if (other.hasStatementTimeout()) {
           mergeStatementTimeout(other.getStatementTimeout());
+        }
+        if (other.hasPgaudit()) {
+          mergePgaudit(other.getPgaudit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10369,6 +11332,125 @@ public final class UserOuterClass {
         }
         return statementTimeoutBuilder_;
       }
+
+      private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings pgaudit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder> pgauditBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       * @return Whether the pgaudit field is set.
+       */
+      public boolean hasPgaudit() {
+        return pgauditBuilder_ != null || pgaudit_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       * @return The pgaudit.
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getPgaudit() {
+        if (pgauditBuilder_ == null) {
+          return pgaudit_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance() : pgaudit_;
+        } else {
+          return pgauditBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public Builder setPgaudit(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings value) {
+        if (pgauditBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pgaudit_ = value;
+          onChanged();
+        } else {
+          pgauditBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public Builder setPgaudit(
+          yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder builderForValue) {
+        if (pgauditBuilder_ == null) {
+          pgaudit_ = builderForValue.build();
+          onChanged();
+        } else {
+          pgauditBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public Builder mergePgaudit(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings value) {
+        if (pgauditBuilder_ == null) {
+          if (pgaudit_ != null) {
+            pgaudit_ =
+              yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.newBuilder(pgaudit_).mergeFrom(value).buildPartial();
+          } else {
+            pgaudit_ = value;
+          }
+          onChanged();
+        } else {
+          pgauditBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public Builder clearPgaudit() {
+        if (pgauditBuilder_ == null) {
+          pgaudit_ = null;
+          onChanged();
+        } else {
+          pgaudit_ = null;
+          pgauditBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder getPgauditBuilder() {
+        
+        onChanged();
+        return getPgauditFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder() {
+        if (pgauditBuilder_ != null) {
+          return pgauditBuilder_.getMessageOrBuilder();
+        } else {
+          return pgaudit_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance() : pgaudit_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder> 
+          getPgauditFieldBuilder() {
+        if (pgauditBuilder_ == null) {
+          pgauditBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder>(
+                  getPgaudit(),
+                  getParentForChildren(),
+                  isClean());
+          pgaudit_ = null;
+        }
+        return pgauditBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10438,6 +11520,11 @@ public final class UserOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10478,52 +11565,64 @@ public final class UserOuterClass {
       "0-9_]*\0227\n\023deletion_protection\030\010 \001(\0132\032.go" +
       "ogle.protobuf.BoolValue\022X\n\030user_password" +
       "_encryption\030\t \001(\01626.yandex.cloud.mdb.pos" +
-      "tgresql.v1.UserPasswordEncryption\"\370\013\n\014Us" +
-      "erSettings\022h\n\035default_transaction_isolat" +
-      "ion\030\001 \001(\0162A.yandex.cloud.mdb.postgresql." +
-      "v1.UserSettings.TransactionIsolation\0221\n\014" +
-      "lock_timeout\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022?\n\032log_min_duration_statement\030\003 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022Z\n\022sync" +
-      "hronous_commit\030\004 \001(\0162>.yandex.cloud.mdb." +
-      "postgresql.v1.UserSettings.SynchronousCo" +
-      "mmit\0224\n\017temp_file_limit\030\005 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022P\n\rlog_statement\030\006 \001(" +
-      "\01629.yandex.cloud.mdb.postgresql.v1.UserS" +
-      "ettings.LogStatement\022K\n\tpool_mode\030\007 \001(\0162" +
-      "8.yandex.cloud.mdb.postgresql.v1.UserSet" +
-      "tings.PoolingMode\022?\n\033prepared_statements" +
-      "_pooling\030\010 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\0224\n\017catchup_timeout\030\t \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0227\n\022wal_sender_timeout\030\n" +
-      " \001(\0132\033.google.protobuf.Int64Value\022H\n#idl" +
-      "e_in_transaction_session_timeout\030\013 \001(\0132\033" +
-      ".google.protobuf.Int64Value\0226\n\021statement" +
-      "_timeout\030\014 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS" +
-      "_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COM" +
-      "MIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030" +
-      "SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOU" +
-      "S_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_C" +
-      "OMMIT_REMOTE_APPLY\020\005\"\212\001\n\014LogStatement\022\035\n" +
-      "\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STAT" +
-      "EMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021L" +
-      "OG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020" +
-      "\004\"\346\001\n\024TransactionIsolation\022%\n!TRANSACTIO" +
-      "N_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION" +
-      "_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSAC" +
-      "TION_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANS" +
-      "ACTION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TR" +
-      "ANSACTION_ISOLATION_SERIALIZABLE\020\004\"X\n\013Po" +
-      "olingMode\022\034\n\030POOLING_MODE_UNSPECIFIED\020\000\022" +
-      "\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEME" +
-      "NT\020\003*\220\001\n\026UserPasswordEncryption\022(\n$USER_" +
-      "PASSWORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USE" +
-      "R_PASSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASS" +
-      "WORD_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yande" +
-      "x.cloud.api.mdb.postgresql.v1ZMgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/postgresql/v1;postgresqlb\006proto3"
+      "tgresql.v1.UserPasswordEncryption\"\210\003\n\017PG" +
+      "AuditSettings\022O\n\003log\030\001 \003(\0162B.yandex.clou" +
+      "d.mdb.postgresql.v1.PGAuditSettings.PGAu" +
+      "ditSettingsLog\"\243\002\n\022PGAuditSettingsLog\022%\n" +
+      "!PG_AUDIT_SETTINGS_LOG_UNSPECIFIED\020\000\022\036\n\032" +
+      "PG_AUDIT_SETTINGS_LOG_READ\020\001\022\037\n\033PG_AUDIT" +
+      "_SETTINGS_LOG_WRITE\020\002\022\"\n\036PG_AUDIT_SETTIN" +
+      "GS_LOG_FUNCTION\020\003\022\036\n\032PG_AUDIT_SETTINGS_L" +
+      "OG_ROLE\020\004\022\035\n\031PG_AUDIT_SETTINGS_LOG_DDL\020\005" +
+      "\022\036\n\032PG_AUDIT_SETTINGS_LOG_MISC\020\006\022\"\n\036PG_A" +
+      "UDIT_SETTINGS_LOG_MISC_SET\020\007\"\272\014\n\014UserSet" +
+      "tings\022h\n\035default_transaction_isolation\030\001" +
+      " \001(\0162A.yandex.cloud.mdb.postgresql.v1.Us" +
+      "erSettings.TransactionIsolation\0221\n\014lock_" +
+      "timeout\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022?\n\032log_min_duration_statement\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022Z\n\022synchrono" +
+      "us_commit\030\004 \001(\0162>.yandex.cloud.mdb.postg" +
+      "resql.v1.UserSettings.SynchronousCommit\022" +
+      "4\n\017temp_file_limit\030\005 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022P\n\rlog_statement\030\006 \001(\01629.y" +
+      "andex.cloud.mdb.postgresql.v1.UserSettin" +
+      "gs.LogStatement\022K\n\tpool_mode\030\007 \001(\01628.yan" +
+      "dex.cloud.mdb.postgresql.v1.UserSettings" +
+      ".PoolingMode\022?\n\033prepared_statements_pool" +
+      "ing\030\010 \001(\0132\032.google.protobuf.BoolValue\0224\n" +
+      "\017catchup_timeout\030\t \001(\0132\033.google.protobuf" +
+      ".Int64Value\0227\n\022wal_sender_timeout\030\n \001(\0132" +
+      "\033.google.protobuf.Int64Value\022H\n#idle_in_" +
+      "transaction_session_timeout\030\013 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0226\n\021statement_time" +
+      "out\030\014 \001(\0132\033.google.protobuf.Int64Value\022@" +
+      "\n\007pgaudit\030\r \001(\0132/.yandex.cloud.mdb.postg" +
+      "resql.v1.PGAuditSettings\"\326\001\n\021Synchronous" +
+      "Commit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED" +
+      "\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRO" +
+      "NOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_" +
+      "LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRI" +
+      "TE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020" +
+      "\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSP" +
+      "ECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG" +
+      "_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022" +
+      "\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIs" +
+      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
+      "FIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNC" +
+      "OMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ" +
+      "_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_RE" +
+      "PEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION" +
+      "_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLIN" +
+      "G_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRA" +
+      "NSACTION\020\002\022\r\n\tSTATEMENT\020\003*\220\001\n\026UserPasswo" +
+      "rdEncryption\022(\n$USER_PASSWORD_ENCRYPTION" +
+      "_UNSPECIFIED\020\000\022 \n\034USER_PASSWORD_ENCRYPTI" +
+      "ON_MD5\020\001\022*\n&USER_PASSWORD_ENCRYPTION_SCR" +
+      "AM_SHA_256\020\002Bs\n\"yandex.cloud.api.mdb.pos" +
+      "tgresql.v1ZMgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/postgresql/v1;p" +
+      "ostgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10549,12 +11648,18 @@ public final class UserOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_descriptor,
         new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", });
-    internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor =
+    internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_postgresql_v1_PGAuditSettings_descriptor,
+        new java.lang.String[] { "Log", });
+    internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor,
-        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", "PoolMode", "PreparedStatementsPooling", "CatchupTimeout", "WalSenderTimeout", "IdleInTransactionSessionTimeout", "StatementTimeout", });
+        new java.lang.String[] { "DefaultTransactionIsolation", "LockTimeout", "LogMinDurationStatement", "SynchronousCommit", "TempFileLimit", "LogStatement", "PoolMode", "PreparedStatementsPooling", "CatchupTimeout", "WalSenderTimeout", "IdleInTransactionSessionTimeout", "StatementTimeout", "Pgaudit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

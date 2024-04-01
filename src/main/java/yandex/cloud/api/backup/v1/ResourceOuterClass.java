@@ -3234,6 +3234,25 @@ public final class ResourceOuterClass {
      */
     com.google.protobuf.ByteString
         getComputeInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Task result code.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+     * @return The enum numeric value on the wire for resultCode.
+     */
+    int getResultCodeValue();
+    /**
+     * <pre>
+     * Task result code.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+     * @return The resultCode.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code getResultCode();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Task}
@@ -3252,6 +3271,7 @@ public final class ResourceOuterClass {
       type_ = 0;
       status_ = 0;
       computeInstanceId_ = "";
+      resultCode_ = 0;
     }
 
     @java.lang.Override
@@ -3381,6 +3401,12 @@ public final class ResourceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               computeInstanceId_ = s;
+              break;
+            }
+            case 96: {
+              int rawValue = input.readEnum();
+
+              resultCode_ = rawValue;
               break;
             }
             default: {
@@ -3687,6 +3713,163 @@ public final class ResourceOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.Task.Status)
+    }
+
+    /**
+     * <pre>
+     * Result code of task
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.backup.v1.Task.Code}
+     */
+    public enum Code
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>CODE_UNSPECIFIED = 0;</code>
+       */
+      CODE_UNSPECIFIED(0),
+      /**
+       * <code>OK = 1;</code>
+       */
+      OK(1),
+      /**
+       * <code>ERROR = 2;</code>
+       */
+      ERROR(2),
+      /**
+       * <code>WARNING = 3;</code>
+       */
+      WARNING(3),
+      /**
+       * <code>CANCELLED = 4;</code>
+       */
+      CANCELLED(4),
+      /**
+       * <code>ABANDONED = 5;</code>
+       */
+      ABANDONED(5),
+      /**
+       * <code>TIMEDOUT = 6;</code>
+       */
+      TIMEDOUT(6),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>CODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int CODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>OK = 1;</code>
+       */
+      public static final int OK_VALUE = 1;
+      /**
+       * <code>ERROR = 2;</code>
+       */
+      public static final int ERROR_VALUE = 2;
+      /**
+       * <code>WARNING = 3;</code>
+       */
+      public static final int WARNING_VALUE = 3;
+      /**
+       * <code>CANCELLED = 4;</code>
+       */
+      public static final int CANCELLED_VALUE = 4;
+      /**
+       * <code>ABANDONED = 5;</code>
+       */
+      public static final int ABANDONED_VALUE = 5;
+      /**
+       * <code>TIMEDOUT = 6;</code>
+       */
+      public static final int TIMEDOUT_VALUE = 6;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Code valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Code forNumber(int value) {
+        switch (value) {
+          case 0: return CODE_UNSPECIFIED;
+          case 1: return OK;
+          case 2: return ERROR;
+          case 3: return WARNING;
+          case 4: return CANCELLED;
+          case 5: return ABANDONED;
+          case 6: return TIMEDOUT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Code>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Code> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Code>() {
+              public Code findValueByNumber(int number) {
+                return Code.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.Task.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final Code[] VALUES = values();
+
+      public static Code valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Code(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.Task.Code)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -4008,6 +4191,33 @@ public final class ResourceOuterClass {
       }
     }
 
+    public static final int RESULT_CODE_FIELD_NUMBER = 12;
+    private int resultCode_;
+    /**
+     * <pre>
+     * Task result code.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+     * @return The enum numeric value on the wire for resultCode.
+     */
+    @java.lang.Override public int getResultCodeValue() {
+      return resultCode_;
+    }
+    /**
+     * <pre>
+     * Task result code.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+     * @return The resultCode.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code getResultCode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code result = yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.valueOf(resultCode_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4054,6 +4264,9 @@ public final class ResourceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, computeInstanceId_);
+      }
+      if (resultCode_ != yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.CODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(12, resultCode_);
       }
       unknownFields.writeTo(output);
     }
@@ -4106,6 +4319,10 @@ public final class ResourceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, computeInstanceId_);
       }
+      if (resultCode_ != yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.CODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(12, resultCode_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4156,6 +4373,7 @@ public final class ResourceOuterClass {
       }
       if (!getComputeInstanceId()
           .equals(other.getComputeInstanceId())) return false;
+      if (resultCode_ != other.resultCode_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4201,6 +4419,8 @@ public final class ResourceOuterClass {
       }
       hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + RESULT_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + resultCode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4376,6 +4596,8 @@ public final class ResourceOuterClass {
         }
         computeInstanceId_ = "";
 
+        resultCode_ = 0;
+
         return this;
       }
 
@@ -4433,6 +4655,7 @@ public final class ResourceOuterClass {
           result.completedAt_ = completedAtBuilder_.build();
         }
         result.computeInstanceId_ = computeInstanceId_;
+        result.resultCode_ = resultCode_;
         onBuilt();
         return result;
       }
@@ -4515,6 +4738,9 @@ public final class ResourceOuterClass {
         if (!other.getComputeInstanceId().isEmpty()) {
           computeInstanceId_ = other.computeInstanceId_;
           onChanged();
+        }
+        if (other.resultCode_ != 0) {
+          setResultCodeValue(other.getResultCodeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5604,6 +5830,80 @@ public final class ResourceOuterClass {
         onChanged();
         return this;
       }
+
+      private int resultCode_ = 0;
+      /**
+       * <pre>
+       * Task result code.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+       * @return The enum numeric value on the wire for resultCode.
+       */
+      @java.lang.Override public int getResultCodeValue() {
+        return resultCode_;
+      }
+      /**
+       * <pre>
+       * Task result code.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+       * @param value The enum numeric value on the wire for resultCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultCodeValue(int value) {
+        
+        resultCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task result code.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+       * @return The resultCode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code getResultCode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code result = yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.valueOf(resultCode_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Task result code.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+       * @param value The resultCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultCode(yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        resultCode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task result code.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Task.Code result_code = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResultCode() {
+        
+        resultCode_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5697,7 +5997,7 @@ public final class ResourceOuterClass {
       "\010\"`\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\010\n\004I" +
       "DLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\nRECOVERING\020\003\022\n\n\006" +
       "FAILED\020\004\022\t\n\005OTHER\020\005\"*\n\010Progress\022\017\n\007curre" +
-      "nt\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\341\004\n\004Task\022\n\n\002id\030\001" +
+      "nt\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Task\022\n\n\002id\030\001" +
       " \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpolicy_id\030\003" +
       " \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.cloud.backup" +
       ".v1.Task.Type\0222\n\010progress\030\005 \001(\0132 .yandex" +
@@ -5708,14 +6008,18 @@ public final class ResourceOuterClass {
       "tobuf.Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.go" +
       "ogle.protobuf.Timestamp\0220\n\014completed_at\030" +
       "\n \001(\0132\032.google.protobuf.Timestamp\022\033\n\023com" +
-      "pute_instance_id\030\013 \001(\t\"E\n\004Type\022\024\n\020TYPE_U" +
-      "NSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022" +
-      "\014\n\010RECOVERY\020\003\"d\n\006Status\022\026\n\022STATUS_UNSPEC" +
-      "IFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007S" +
-      "TARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMPLETED\020\005B_\n\032y" +
-      "andex.cloud.api.backup.v1ZAgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/back" +
-      "up/v1;backupb\006proto3"
+      "pute_instance_id\030\013 \001(\t\0226\n\013result_code\030\014 " +
+      "\001(\0162!.yandex.cloud.backup.v1.Task.Code\"E" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001" +
+      "\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d\n\006Status\022" +
+      "\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n" +
+      "\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\t" +
+      "COMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020" +
+      "\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCAN" +
+      "CELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006B_\n" +
+      "\032yandex.cloud.api.backup.v1ZAgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ba" +
+      "ckup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5739,7 +6043,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_backup_v1_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Task_descriptor,
-        new java.lang.String[] { "Id", "Cancellable", "PolicyId", "Type", "Progress", "Status", "EnqueuedAt", "StartedAt", "UpdatedAt", "CompletedAt", "ComputeInstanceId", });
+        new java.lang.String[] { "Id", "Cancellable", "PolicyId", "Type", "Progress", "Status", "EnqueuedAt", "StartedAt", "UpdatedAt", "CompletedAt", "ComputeInstanceId", "ResultCode", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
