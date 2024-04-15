@@ -20,7 +20,7 @@ public final class EmbeddingService {
 
     /**
      * <pre>
-     * The identifier of the model to be used for obtaining text embeddings.
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class EmbeddingService {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The identifier of the model to be used for obtaining text embeddings.
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -157,7 +157,7 @@ public final class EmbeddingService {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The identifier of the model to be used for obtaining text embeddings.
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -178,7 +178,7 @@ public final class EmbeddingService {
     }
     /**
      * <pre>
-     * The identifier of the model to be used for obtaining text embeddings.
+     * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -571,7 +571,7 @@ public final class EmbeddingService {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The identifier of the model to be used for obtaining text embeddings.
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -591,7 +591,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for obtaining text embeddings.
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -612,7 +612,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for obtaining text embeddings.
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -631,7 +631,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for obtaining text embeddings.
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -645,7 +645,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for obtaining text embeddings.
+       * The [ID of the model](/docs/foundation-models/concepts/embeddings) to be used for obtaining text embeddings.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -857,7 +857,7 @@ public final class EmbeddingService {
 
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -866,7 +866,7 @@ public final class EmbeddingService {
     java.lang.String getModelVersion();
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1053,7 +1053,7 @@ public final class EmbeddingService {
     private volatile java.lang.Object modelVersion_;
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1074,7 +1074,7 @@ public final class EmbeddingService {
     }
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1616,7 +1616,7 @@ public final class EmbeddingService {
       private java.lang.Object modelVersion_ = "";
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -1636,7 +1636,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -1657,7 +1657,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -1676,7 +1676,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -1690,7 +1690,7 @@ public final class EmbeddingService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>

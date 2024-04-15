@@ -102,7 +102,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining image from inpt data.
+     * A method for generating an image based on a textual description.
      * </pre>
      */
     public void generate(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationService.ImageGenerationRequest request,
@@ -142,7 +142,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining image from inpt data.
+     * A method for generating an image based on a textual description.
      * </pre>
      */
     public void generate(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationService.ImageGenerationRequest request,
@@ -171,7 +171,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining image from inpt data.
+     * A method for generating an image based on a textual description.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation generate(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGenerationService.ImageGenerationRequest request) {
@@ -199,7 +199,7 @@ public final class ImageGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining image from inpt data.
+     * A method for generating an image based on a textual description.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> generate(

@@ -20,7 +20,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     *  text
+     * Text describing the image.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -29,7 +29,7 @@ public final class ImageGeneration {
     java.lang.String getText();
     /**
      * <pre>
-     *  text
+     * Text describing the image.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -40,7 +40,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     * Message weight. Negative values for negative messages
+     * Message weight. Negative values indicate negative messages.
      * </pre>
      *
      * <code>double weight = 2;</code>
@@ -50,7 +50,7 @@ public final class ImageGeneration {
   }
   /**
    * <pre>
-   * Text message to control generation
+   * The text descriptions and weights that the model uses to generate an image.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.Message}
@@ -145,7 +145,7 @@ public final class ImageGeneration {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     *  text
+     * Text describing the image.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -166,7 +166,7 @@ public final class ImageGeneration {
     }
     /**
      * <pre>
-     *  text
+     * Text describing the image.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -191,7 +191,7 @@ public final class ImageGeneration {
     private double weight_;
     /**
      * <pre>
-     * Message weight. Negative values for negative messages
+     * Message weight. Negative values indicate negative messages.
      * </pre>
      *
      * <code>double weight = 2;</code>
@@ -371,7 +371,7 @@ public final class ImageGeneration {
     }
     /**
      * <pre>
-     * Text message to control generation
+     * The text descriptions and weights that the model uses to generate an image.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.Message}
@@ -530,7 +530,7 @@ public final class ImageGeneration {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       *  text
+       * Text describing the image.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -550,7 +550,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       *  text
+       * Text describing the image.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -571,7 +571,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       *  text
+       * Text describing the image.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -590,7 +590,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       *  text
+       * Text describing the image.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -604,7 +604,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       *  text
+       * Text describing the image.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -626,7 +626,7 @@ public final class ImageGeneration {
       private double weight_ ;
       /**
        * <pre>
-       * Message weight. Negative values for negative messages
+       * Message weight. Negative values indicate negative messages.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -638,7 +638,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Message weight. Negative values for negative messages
+       * Message weight. Negative values indicate negative messages.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -653,7 +653,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Message weight. Negative values for negative messages
+       * Message weight. Negative values indicate negative messages.
        * </pre>
        *
        * <code>double weight = 2;</code>
@@ -724,7 +724,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     * generated image format
+     * MIME type of generated image format.
      * </pre>
      *
      * <code>string mime_type = 1;</code>
@@ -733,7 +733,7 @@ public final class ImageGeneration {
     java.lang.String getMimeType();
     /**
      * <pre>
-     * generated image format
+     * MIME type of generated image format.
      * </pre>
      *
      * <code>string mime_type = 1;</code>
@@ -744,7 +744,7 @@ public final class ImageGeneration {
 
     /**
      * <pre>
-     * Seed for image generation
+     * Seed for image generation.
      * </pre>
      *
      * <code>int64 seed = 2;</code>
@@ -845,7 +845,7 @@ public final class ImageGeneration {
     private volatile java.lang.Object mimeType_;
     /**
      * <pre>
-     * generated image format
+     * MIME type of generated image format.
      * </pre>
      *
      * <code>string mime_type = 1;</code>
@@ -866,7 +866,7 @@ public final class ImageGeneration {
     }
     /**
      * <pre>
-     * generated image format
+     * MIME type of generated image format.
      * </pre>
      *
      * <code>string mime_type = 1;</code>
@@ -891,7 +891,7 @@ public final class ImageGeneration {
     private long seed_;
     /**
      * <pre>
-     * Seed for image generation
+     * Seed for image generation.
      * </pre>
      *
      * <code>int64 seed = 2;</code>
@@ -1225,7 +1225,7 @@ public final class ImageGeneration {
       private java.lang.Object mimeType_ = "";
       /**
        * <pre>
-       * generated image format
+       * MIME type of generated image format.
        * </pre>
        *
        * <code>string mime_type = 1;</code>
@@ -1245,7 +1245,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * generated image format
+       * MIME type of generated image format.
        * </pre>
        *
        * <code>string mime_type = 1;</code>
@@ -1266,7 +1266,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * generated image format
+       * MIME type of generated image format.
        * </pre>
        *
        * <code>string mime_type = 1;</code>
@@ -1285,7 +1285,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * generated image format
+       * MIME type of generated image format.
        * </pre>
        *
        * <code>string mime_type = 1;</code>
@@ -1299,7 +1299,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * generated image format
+       * MIME type of generated image format.
        * </pre>
        *
        * <code>string mime_type = 1;</code>
@@ -1321,7 +1321,7 @@ public final class ImageGeneration {
       private long seed_ ;
       /**
        * <pre>
-       * Seed for image generation
+       * Seed for image generation.
        * </pre>
        *
        * <code>int64 seed = 2;</code>
@@ -1333,7 +1333,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Seed for image generation
+       * Seed for image generation.
        * </pre>
        *
        * <code>int64 seed = 2;</code>
@@ -1348,7 +1348,7 @@ public final class ImageGeneration {
       }
       /**
        * <pre>
-       * Seed for image generation
+       * Seed for image generation.
        * </pre>
        *
        * <code>int64 seed = 2;</code>

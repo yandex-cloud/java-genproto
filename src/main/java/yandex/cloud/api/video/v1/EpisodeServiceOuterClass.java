@@ -15519,18 +15519,30 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * If true, a player will be muted by default.
+     * </pre>
+     *
      * <code>bool mute = 1;</code>
      * @return The mute.
      */
     boolean getMute();
 
     /**
+     * <pre>
+     * If true, playback will start automatically.
+     * </pre>
+     *
      * <code>bool autoplay = 2;</code>
      * @return The autoplay.
      */
     boolean getAutoplay();
 
     /**
+     * <pre>
+     * If true, a player interface will be hidden by default.
+     * </pre>
+     *
      * <code>bool hidden = 3;</code>
      * @return The hidden.
      */
@@ -15631,6 +15643,10 @@ public final class EpisodeServiceOuterClass {
     public static final int MUTE_FIELD_NUMBER = 1;
     private boolean mute_;
     /**
+     * <pre>
+     * If true, a player will be muted by default.
+     * </pre>
+     *
      * <code>bool mute = 1;</code>
      * @return The mute.
      */
@@ -15642,6 +15658,10 @@ public final class EpisodeServiceOuterClass {
     public static final int AUTOPLAY_FIELD_NUMBER = 2;
     private boolean autoplay_;
     /**
+     * <pre>
+     * If true, playback will start automatically.
+     * </pre>
+     *
      * <code>bool autoplay = 2;</code>
      * @return The autoplay.
      */
@@ -15653,6 +15673,10 @@ public final class EpisodeServiceOuterClass {
     public static final int HIDDEN_FIELD_NUMBER = 3;
     private boolean hidden_;
     /**
+     * <pre>
+     * If true, a player interface will be hidden by default.
+     * </pre>
+     *
      * <code>bool hidden = 3;</code>
      * @return The hidden.
      */
@@ -16002,6 +16026,10 @@ public final class EpisodeServiceOuterClass {
 
       private boolean mute_ ;
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @return The mute.
        */
@@ -16010,6 +16038,10 @@ public final class EpisodeServiceOuterClass {
         return mute_;
       }
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @param value The mute to set.
        * @return This builder for chaining.
@@ -16021,6 +16053,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @return This builder for chaining.
        */
@@ -16033,6 +16069,10 @@ public final class EpisodeServiceOuterClass {
 
       private boolean autoplay_ ;
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @return The autoplay.
        */
@@ -16041,6 +16081,10 @@ public final class EpisodeServiceOuterClass {
         return autoplay_;
       }
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @param value The autoplay to set.
        * @return This builder for chaining.
@@ -16052,6 +16096,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @return This builder for chaining.
        */
@@ -16064,6 +16112,10 @@ public final class EpisodeServiceOuterClass {
 
       private boolean hidden_ ;
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @return The hidden.
        */
@@ -16072,6 +16124,10 @@ public final class EpisodeServiceOuterClass {
         return hidden_;
       }
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @param value The hidden to set.
        * @return This builder for chaining.
@@ -16083,6 +16139,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @return This builder for chaining.
        */
@@ -16150,11 +16210,19 @@ public final class EpisodeServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The playerUrl.
      */
     java.lang.String getPlayerUrl();
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The bytes for playerUrl.
      */
@@ -16162,11 +16230,19 @@ public final class EpisodeServiceOuterClass {
         getPlayerUrlBytes();
 
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The html.
      */
     java.lang.String getHtml();
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The bytes for html.
      */
@@ -16267,6 +16343,10 @@ public final class EpisodeServiceOuterClass {
     public static final int PLAYER_URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object playerUrl_;
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The playerUrl.
      */
@@ -16284,6 +16364,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The bytes for playerUrl.
      */
@@ -16305,6 +16389,10 @@ public final class EpisodeServiceOuterClass {
     public static final int HTML_FIELD_NUMBER = 2;
     private volatile java.lang.Object html_;
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The html.
      */
@@ -16322,6 +16410,10 @@ public final class EpisodeServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The bytes for html.
      */
@@ -16661,6 +16753,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object playerUrl_ = "";
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return The playerUrl.
        */
@@ -16677,6 +16773,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return The bytes for playerUrl.
        */
@@ -16694,6 +16794,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @param value The playerUrl to set.
        * @return This builder for chaining.
@@ -16709,6 +16813,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return This builder for chaining.
        */
@@ -16719,6 +16827,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @param value The bytes for playerUrl to set.
        * @return This builder for chaining.
@@ -16737,6 +16849,10 @@ public final class EpisodeServiceOuterClass {
 
       private java.lang.Object html_ = "";
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return The html.
        */
@@ -16753,6 +16869,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return The bytes for html.
        */
@@ -16770,6 +16890,10 @@ public final class EpisodeServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @param value The html to set.
        * @return This builder for chaining.
@@ -16785,6 +16909,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return This builder for chaining.
        */
@@ -16795,6 +16923,10 @@ public final class EpisodeServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @param value The bytes for html to set.
        * @return This builder for chaining.

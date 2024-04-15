@@ -11876,7 +11876,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
        */
       boolean hasMinSnapshotHistoryWindowInSeconds();
@@ -11885,7 +11885,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return The minSnapshotHistoryWindowInSeconds.
        */
       com.google.protobuf.Int64Value getMinSnapshotHistoryWindowInSeconds();
@@ -11894,7 +11894,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder();
     }
@@ -12103,7 +12103,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
        */
       @java.lang.Override
@@ -12115,7 +12115,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return The minSnapshotHistoryWindowInSeconds.
        */
       @java.lang.Override
@@ -12127,7 +12127,7 @@ public final class Mongodb60Enterprise {
        * The minimum time window in seconds for which the storage engine keeps the snapshot history.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       @java.lang.Override
       public com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder() {
@@ -12845,7 +12845,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          * @return Whether the minSnapshotHistoryWindowInSeconds field is set.
          */
         public boolean hasMinSnapshotHistoryWindowInSeconds() {
@@ -12856,7 +12856,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          * @return The minSnapshotHistoryWindowInSeconds.
          */
         public com.google.protobuf.Int64Value getMinSnapshotHistoryWindowInSeconds() {
@@ -12871,7 +12871,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public Builder setMinSnapshotHistoryWindowInSeconds(com.google.protobuf.Int64Value value) {
           if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
@@ -12891,7 +12891,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public Builder setMinSnapshotHistoryWindowInSeconds(
             com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -12909,7 +12909,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public Builder mergeMinSnapshotHistoryWindowInSeconds(com.google.protobuf.Int64Value value) {
           if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
@@ -12931,7 +12931,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public Builder clearMinSnapshotHistoryWindowInSeconds() {
           if (minSnapshotHistoryWindowInSecondsBuilder_ == null) {
@@ -12949,7 +12949,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public com.google.protobuf.Int64Value.Builder getMinSnapshotHistoryWindowInSecondsBuilder() {
           
@@ -12961,7 +12961,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         public com.google.protobuf.Int64ValueOrBuilder getMinSnapshotHistoryWindowInSecondsOrBuilder() {
           if (minSnapshotHistoryWindowInSecondsBuilder_ != null) {
@@ -12976,7 +12976,7 @@ public final class Mongodb60Enterprise {
          * The minimum time window in seconds for which the storage engine keeps the snapshot history.
          * </pre>
          *
-         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * <code>.google.protobuf.Int64Value min_snapshot_history_window_in_seconds = 3 [(.yandex.cloud.value) = "&gt;=0"];</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -26161,7 +26161,7 @@ public final class Mongodb60Enterprise {
       "godb6_0_enterprise.proto\022\"yandex.cloud.m" +
       "db.mongodb.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\273\027\n\032MongodConfig6_0_enterprise\022W\n\007st" +
+      "oto\"\274\027\n\032MongodConfig6_0_enterprise\022W\n\007st" +
       "orage\030\001 \001(\0132F.yandex.cloud.mdb.mongodb.v" +
       "1.config.MongodConfig6_0_enterprise.Stor" +
       "age\022n\n\023operation_profiling\030\002 \001(\0132Q.yande" +
@@ -26230,77 +26230,77 @@ public final class Mongodb60Enterprise {
       "\030\003 \001(\t\022\032\n\022client_certificate\030\004 \001(\t\022\026\n\016ke" +
       "y_identifier\030\005 \001(\t\032U\n\010AuditLog\022\016\n\006filter" +
       "\030\001 \001(\t\0229\n\025runtime_configuration\030\002 \001(\0132\032." +
-      "google.protobuf.BoolValue\032\335\001\n\014SetParamet" +
+      "google.protobuf.BoolValue\032\336\001\n\014SetParamet" +
       "er\022?\n\033audit_authorization_success\030\001 \001(\0132" +
       "\032.google.protobuf.BoolValue\0227\n\023enable_fl" +
       "ow_control\030\002 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022S\n&min_snapshot_history_window_in_s" +
+      "alue\022T\n&min_snapshot_history_window_in_s" +
       "econds\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\"\331\007\n\034MongoCfgConfig6_0_enterpri" +
-      "se\022Y\n\007storage\030\001 \001(\0132H.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongoCfgConfig6_0_enter" +
-      "prise.Storage\022p\n\023operation_profiling\030\002 \001" +
-      "(\0132S.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongoCfgConfig6_0_enterprise.OperationPr" +
-      "ofiling\022U\n\003net\030\003 \001(\0132H.yandex.cloud.mdb." +
+      "eB\007\372\3071\003>=0\"\331\007\n\034MongoCfgConfig6_0_enterpr" +
+      "ise\022Y\n\007storage\030\001 \001(\0132H.yandex.cloud.mdb." +
       "mongodb.v1.config.MongoCfgConfig6_0_ente" +
-      "rprise.Network\032\300\002\n\007Storage\022h\n\013wired_tige" +
-      "r\030\001 \001(\0132S.yandex.cloud.mdb.mongodb.v1.co" +
-      "nfig.MongoCfgConfig6_0_enterprise.Storag" +
-      "e.WiredTiger\032\312\001\n\nWiredTiger\022w\n\rengine_co" +
-      "nfig\030\001 \001(\0132`.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfig6_0_enterprise.Sto" +
-      "rage.WiredTiger.EngineConfig\032C\n\014EngineCo" +
-      "nfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.google.pro" +
-      "tobuf.DoubleValue\032\371\001\n\022OperationProfiling" +
-      "\022f\n\004mode\030\001 \001(\0162X.yandex.cloud.mdb.mongod" +
-      "b.v1.config.MongoCfgConfig6_0_enterprise" +
-      ".OperationProfiling.Mode\022>\n\021slow_op_thre" +
-      "shold\030\002 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\007" +
-      "\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Network" +
-      "\022K\n\030max_incoming_connections\030\001 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\014\372\3071\01010-16384\"\230\004" +
-      "\n\032MongosConfig6_0_enterprise\022S\n\003net\030\003 \001(" +
-      "\0132F.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongosConfig6_0_enterprise.Network\032\244\003\n\007Ne" +
-      "twork\022K\n\030max_incoming_connections\030\001 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\014\372\3071\01010-163" +
-      "84\022g\n\013compression\030\002 \001(\0132R.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongosConfig6_0_ent" +
-      "erprise.Network.Compression\032\342\001\n\013Compress" +
-      "ion\022{\n\013compressors\030\001 \003(\0162].yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfig6_0_en" +
-      "terprise.Network.Compression.CompressorB" +
-      "\007\202\3101\0031-3\"V\n\nCompressor\022\032\n\026COMPRESSOR_UNS" +
-      "PECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZSTD" +
-      "\020\003\022\014\n\010DISABLED\020\004\"\246\002\n\035MongodConfigSet6_0_" +
-      "enterprise\022X\n\020effective_config\030\001 \001(\0132>.y" +
-      "andex.cloud.mdb.mongodb.v1.config.Mongod" +
-      "Config6_0_enterprise\022S\n\013user_config\030\002 \001(" +
-      "\0132>.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongodConfig6_0_enterprise\022V\n\016default_con" +
-      "fig\030\003 \001(\0132>.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongodConfig6_0_enterprise\"\256\002\n\037Mo" +
-      "ngoCfgConfigSet6_0_enterprise\022Z\n\020effecti" +
-      "ve_config\030\001 \001(\0132@.yandex.cloud.mdb.mongo" +
+      "rprise.Storage\022p\n\023operation_profiling\030\002 " +
+      "\001(\0132S.yandex.cloud.mdb.mongodb.v1.config" +
+      ".MongoCfgConfig6_0_enterprise.OperationP" +
+      "rofiling\022U\n\003net\030\003 \001(\0132H.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongoCfgConfig6_0_ent" +
+      "erprise.Network\032\300\002\n\007Storage\022h\n\013wired_tig" +
+      "er\030\001 \001(\0132S.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfig6_0_enterprise.Stora" +
+      "ge.WiredTiger\032\312\001\n\nWiredTiger\022w\n\rengine_c" +
+      "onfig\030\001 \001(\0132`.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongoCfgConfig6_0_enterprise.St" +
+      "orage.WiredTiger.EngineConfig\032C\n\014EngineC" +
+      "onfig\0223\n\rcache_size_gb\030\001 \001(\0132\034.google.pr" +
+      "otobuf.DoubleValue\032\371\001\n\022OperationProfilin" +
+      "g\022f\n\004mode\030\001 \001(\0162X.yandex.cloud.mdb.mongo" +
       "db.v1.config.MongoCfgConfig6_0_enterpris" +
-      "e\022U\n\013user_config\030\002 \001(\0132@.yandex.cloud.md" +
-      "b.mongodb.v1.config.MongoCfgConfig6_0_en" +
-      "terprise\022X\n\016default_config\030\003 \001(\0132@.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfig6_0_enterprise\"\246\002\n\035MongosConfigSet6_" +
-      "0_enterprise\022X\n\020effective_config\030\001 \001(\0132>" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfig6_0_enterprise\022S\n\013user_config\030\002 " +
-      "\001(\0132>.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongosConfig6_0_enterprise\022V\n\016default_c" +
-      "onfig\030\003 \001(\0132>.yandex.cloud.mdb.mongodb.v" +
-      "1.config.MongosConfig6_0_enterpriseBx\n&y" +
-      "andex.cloud.api.mdb.mongodb.v1.configZNg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/mongodb/v1/config;mongodbb\006p" +
-      "roto3"
+      "e.OperationProfiling.Mode\022>\n\021slow_op_thr" +
+      "eshold\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022" +
+      "\007\n\003OFF\020\001\022\013\n\007SLOW_OP\020\002\022\007\n\003ALL\020\003\032V\n\007Networ" +
+      "k\022K\n\030max_incoming_connections\030\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\014\372\3071\01010-16384\"\230" +
+      "\004\n\032MongosConfig6_0_enterprise\022S\n\003net\030\003 \001" +
+      "(\0132F.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongosConfig6_0_enterprise.Network\032\244\003\n\007N" +
+      "etwork\022K\n\030max_incoming_connections\030\001 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\014\372\3071\01010-16" +
+      "384\022g\n\013compression\030\002 \001(\0132R.yandex.cloud." +
+      "mdb.mongodb.v1.config.MongosConfig6_0_en" +
+      "terprise.Network.Compression\032\342\001\n\013Compres" +
+      "sion\022{\n\013compressors\030\001 \003(\0162].yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongosConfig6_0_e" +
+      "nterprise.Network.Compression.Compressor" +
+      "B\007\202\3101\0031-3\"V\n\nCompressor\022\032\n\026COMPRESSOR_UN" +
+      "SPECIFIED\020\000\022\n\n\006SNAPPY\020\001\022\010\n\004ZLIB\020\002\022\010\n\004ZST" +
+      "D\020\003\022\014\n\010DISABLED\020\004\"\246\002\n\035MongodConfigSet6_0" +
+      "_enterprise\022X\n\020effective_config\030\001 \001(\0132>." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "dConfig6_0_enterprise\022S\n\013user_config\030\002 \001" +
+      "(\0132>.yandex.cloud.mdb.mongodb.v1.config." +
+      "MongodConfig6_0_enterprise\022V\n\016default_co" +
+      "nfig\030\003 \001(\0132>.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongodConfig6_0_enterprise\"\256\002\n\037M" +
+      "ongoCfgConfigSet6_0_enterprise\022Z\n\020effect" +
+      "ive_config\030\001 \001(\0132@.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfig6_0_enterpri" +
+      "se\022U\n\013user_config\030\002 \001(\0132@.yandex.cloud.m" +
+      "db.mongodb.v1.config.MongoCfgConfig6_0_e" +
+      "nterprise\022X\n\016default_config\030\003 \001(\0132@.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
+      "onfig6_0_enterprise\"\246\002\n\035MongosConfigSet6" +
+      "_0_enterprise\022X\n\020effective_config\030\001 \001(\0132" +
+      ">.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "gosConfig6_0_enterprise\022S\n\013user_config\030\002" +
+      " \001(\0132>.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongosConfig6_0_enterprise\022V\n\016default_" +
+      "config\030\003 \001(\0132>.yandex.cloud.mdb.mongodb." +
+      "v1.config.MongosConfig6_0_enterpriseBx\n&" +
+      "yandex.cloud.api.mdb.mongodb.v1.configZN" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/mongodb/v1/config;mongodbb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -578,6 +578,12 @@ public final class TransferOuterClass {
      * <code>.yandex.cloud.datatransfer.v1.Transformation transformation = 17;</code>
      */
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TransformationOrBuilder getTransformationOrBuilder();
+
+    /**
+     * <code>bool prestable = 22;</code>
+     * @return The prestable.
+     */
+    boolean getPrestable();
   }
   /**
    * <pre>
@@ -741,6 +747,11 @@ public final class TransferOuterClass {
                 transformation_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 176: {
+
+              prestable_ = input.readBool();
               break;
             }
             default: {
@@ -1200,6 +1211,17 @@ public final class TransferOuterClass {
       return getTransformation();
     }
 
+    public static final int PRESTABLE_FIELD_NUMBER = 22;
+    private boolean prestable_;
+    /**
+     * <code>bool prestable = 22;</code>
+     * @return The prestable.
+     */
+    @java.lang.Override
+    public boolean getPrestable() {
+      return prestable_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1252,6 +1274,9 @@ public final class TransferOuterClass {
       }
       if (transformation_ != null) {
         output.writeMessage(17, getTransformation());
+      }
+      if (prestable_ != false) {
+        output.writeBool(22, prestable_);
       }
       unknownFields.writeTo(output);
     }
@@ -1311,6 +1336,10 @@ public final class TransferOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getTransformation());
       }
+      if (prestable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(22, prestable_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1360,6 +1389,8 @@ public final class TransferOuterClass {
         if (!getTransformation()
             .equals(other.getTransformation())) return false;
       }
+      if (getPrestable()
+          != other.getPrestable()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1405,6 +1436,9 @@ public final class TransferOuterClass {
         hash = (37 * hash) + TRANSFORMATION_FIELD_NUMBER;
         hash = (53 * hash) + getTransformation().hashCode();
       }
+      hash = (37 * hash) + PRESTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrestable());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1603,6 +1637,8 @@ public final class TransferOuterClass {
           transformation_ = null;
           transformationBuilder_ = null;
         }
+        prestable_ = false;
+
         return this;
       }
 
@@ -1659,6 +1695,7 @@ public final class TransferOuterClass {
         } else {
           result.transformation_ = transformationBuilder_.build();
         }
+        result.prestable_ = prestable_;
         onBuilt();
         return result;
       }
@@ -1746,6 +1783,9 @@ public final class TransferOuterClass {
         }
         if (other.hasTransformation()) {
           mergeTransformation(other.getTransformation());
+        }
+        if (other.getPrestable() != false) {
+          setPrestable(other.getPrestable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2870,6 +2910,37 @@ public final class TransferOuterClass {
           transformation_ = null;
         }
         return transformationBuilder_;
+      }
+
+      private boolean prestable_ ;
+      /**
+       * <code>bool prestable = 22;</code>
+       * @return The prestable.
+       */
+      @java.lang.Override
+      public boolean getPrestable() {
+        return prestable_;
+      }
+      /**
+       * <code>bool prestable = 22;</code>
+       * @param value The prestable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrestable(boolean value) {
+        
+        prestable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool prestable = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrestable() {
+        
+        prestable_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21624,7 +21695,7 @@ public final class TransferOuterClass {
       "\n+yandex/cloud/datatransfer/v1/transfer." +
       "proto\022\034yandex.cloud.datatransfer.v1\032+yan" +
       "dex/cloud/datatransfer/v1/endpoint.proto" +
-      "\"\316\004\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
+      "\"\347\004\n\010Transfer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
       "B\n\006labels\030\006 \003(\01322.yandex.cloud.datatrans" +
       "fer.v1.Transfer.LabelsEntry\0226\n\006source\030\007 " +
@@ -21637,83 +21708,83 @@ public final class TransferOuterClass {
       ".cloud.datatransfer.v1.TransferType\022\017\n\007w" +
       "arning\030\017 \001(\t\022D\n\016transformation\030\021 \001(\0132,.y" +
       "andex.cloud.datatransfer.v1.Transformati" +
-      "on\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001J\004\010\003\020\004J\004\010\013\020\014J\004\010\r\020\017J\004\010\020\020\021\"Y\n\007Run" +
-      "time\022=\n\nyc_runtime\030\004 \001(\0132\'.yandex.cloud." +
-      "datatransfer.v1.YcRuntimeH\000B\t\n\007runtimeJ\004" +
-      "\010\001\020\004\"@\n\024ShardingUploadParams\022\021\n\tjob_coun" +
-      "t\030\001 \001(\003\022\025\n\rprocess_count\030\002 \001(\003\"u\n\tYcRunt" +
-      "ime\022\021\n\tjob_count\030\001 \001(\003\022O\n\023upload_shard_p" +
-      "arams\030\010 \001(\01322.yandex.cloud.datatransfer." +
-      "v1.ShardingUploadParamsJ\004\010\002\020\010\"m\n\014MaskFun" +
-      "ction\022L\n\022mask_function_hash\030\001 \001(\0132..yand" +
-      "ex.cloud.datatransfer.v1.MaskFunctionHas" +
-      "hH\000B\017\n\rmask_function\"-\n\020MaskFunctionHash" +
-      "\022\031\n\021user_defined_salt\030\001 \001(\t\">\n\014TablesFil" +
-      "ter\022\026\n\016include_tables\030\001 \003(\t\022\026\n\016exclude_t" +
-      "ables\030\002 \003(\t\"A\n\rColumnsFilter\022\027\n\017include_" +
-      "columns\030\001 \003(\t\022\027\n\017exclude_columns\030\002 \003(\t\"\241" +
-      "\001\n\024MaskFieldTransformer\022:\n\006tables\030\001 \001(\0132" +
-      "*.yandex.cloud.datatransfer.v1.TablesFil" +
-      "ter\022\017\n\007columns\030\002 \003(\t\022<\n\010function\030\003 \001(\0132*" +
-      ".yandex.cloud.datatransfer.v1.MaskFuncti" +
-      "on\"\224\001\n\030FilterColumnsTransformer\022:\n\006table" +
-      "s\030\001 \001(\0132*.yandex.cloud.datatransfer.v1.T" +
-      "ablesFilter\022<\n\007columns\030\002 \001(\0132+.yandex.cl" +
-      "oud.datatransfer.v1.ColumnsFilter\")\n\005Tab" +
-      "le\022\022\n\nname_space\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"\200\001\n" +
-      "\013RenameTable\022:\n\roriginal_name\030\001 \001(\0132#.ya" +
-      "ndex.cloud.datatransfer.v1.Table\0225\n\010new_" +
-      "name\030\002 \001(\0132#.yandex.cloud.datatransfer.v" +
-      "1.Table\"[\n\027RenameTablesTransformer\022@\n\rre" +
-      "name_tables\030\001 \003(\0132).yandex.cloud.datatra" +
-      "nsfer.v1.RenameTable\"h\n\034ReplacePrimaryKe" +
-      "yTransformer\022:\n\006tables\030\001 \001(\0132*.yandex.cl" +
-      "oud.datatransfer.v1.TablesFilter\022\014\n\004keys" +
-      "\030\002 \003(\t\"\217\001\n\023ToStringTransformer\022:\n\006tables" +
-      "\030\001 \001(\0132*.yandex.cloud.datatransfer.v1.Ta" +
-      "blesFilter\022<\n\007columns\030\002 \001(\0132+.yandex.clo" +
-      "ud.datatransfer.v1.ColumnsFilter\"\244\001\n\022Sha" +
-      "rderTransformer\022:\n\006tables\030\001 \001(\0132*.yandex" +
+      "on\022\021\n\tprestable\030\026 \001(\010\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\003\020\004J\004\010\013\020\014" +
+      "J\004\010\r\020\017J\004\010\020\020\021J\004\010\022\020\026\"Y\n\007Runtime\022=\n\nyc_runt" +
+      "ime\030\004 \001(\0132\'.yandex.cloud.datatransfer.v1" +
+      ".YcRuntimeH\000B\t\n\007runtimeJ\004\010\001\020\004\"@\n\024Shardin" +
+      "gUploadParams\022\021\n\tjob_count\030\001 \001(\003\022\025\n\rproc" +
+      "ess_count\030\002 \001(\003\"u\n\tYcRuntime\022\021\n\tjob_coun" +
+      "t\030\001 \001(\003\022O\n\023upload_shard_params\030\010 \001(\01322.y" +
+      "andex.cloud.datatransfer.v1.ShardingUplo" +
+      "adParamsJ\004\010\002\020\010\"m\n\014MaskFunction\022L\n\022mask_f" +
+      "unction_hash\030\001 \001(\0132..yandex.cloud.datatr" +
+      "ansfer.v1.MaskFunctionHashH\000B\017\n\rmask_fun" +
+      "ction\"-\n\020MaskFunctionHash\022\031\n\021user_define" +
+      "d_salt\030\001 \001(\t\">\n\014TablesFilter\022\026\n\016include_" +
+      "tables\030\001 \003(\t\022\026\n\016exclude_tables\030\002 \003(\t\"A\n\r" +
+      "ColumnsFilter\022\027\n\017include_columns\030\001 \003(\t\022\027" +
+      "\n\017exclude_columns\030\002 \003(\t\"\241\001\n\024MaskFieldTra" +
+      "nsformer\022:\n\006tables\030\001 \001(\0132*.yandex.cloud." +
+      "datatransfer.v1.TablesFilter\022\017\n\007columns\030" +
+      "\002 \003(\t\022<\n\010function\030\003 \001(\0132*.yandex.cloud.d" +
+      "atatransfer.v1.MaskFunction\"\224\001\n\030FilterCo" +
+      "lumnsTransformer\022:\n\006tables\030\001 \001(\0132*.yande" +
+      "x.cloud.datatransfer.v1.TablesFilter\022<\n\007" +
+      "columns\030\002 \001(\0132+.yandex.cloud.datatransfe" +
+      "r.v1.ColumnsFilter\")\n\005Table\022\022\n\nname_spac" +
+      "e\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"\200\001\n\013RenameTable\022:\n" +
+      "\roriginal_name\030\001 \001(\0132#.yandex.cloud.data" +
+      "transfer.v1.Table\0225\n\010new_name\030\002 \001(\0132#.ya" +
+      "ndex.cloud.datatransfer.v1.Table\"[\n\027Rena" +
+      "meTablesTransformer\022@\n\rrename_tables\030\001 \003" +
+      "(\0132).yandex.cloud.datatransfer.v1.Rename" +
+      "Table\"h\n\034ReplacePrimaryKeyTransformer\022:\n" +
+      "\006tables\030\001 \001(\0132*.yandex.cloud.datatransfe" +
+      "r.v1.TablesFilter\022\014\n\004keys\030\002 \003(\t\"\217\001\n\023ToSt" +
+      "ringTransformer\022:\n\006tables\030\001 \001(\0132*.yandex" +
       ".cloud.datatransfer.v1.TablesFilter\022<\n\007c" +
       "olumns\030\002 \001(\0132+.yandex.cloud.datatransfer" +
-      ".v1.ColumnsFilter\022\024\n\014shards_count\030\003 \001(\003\"" +
-      "y\n\030TableSplitterTransformer\022:\n\006tables\030\001 " +
-      "\001(\0132*.yandex.cloud.datatransfer.v1.Table" +
-      "sFilter\022\017\n\007columns\030\002 \003(\t\022\020\n\010splitter\030\003 \001" +
-      "(\t\"c\n\025FilterRowsTransformer\022:\n\006tables\030\001 " +
-      "\001(\0132*.yandex.cloud.datatransfer.v1.Table" +
-      "sFilter\022\016\n\006filter\030\002 \001(\t\"\306\005\n\013Transformer\022" +
-      "H\n\nmask_field\030\001 \001(\01322.yandex.cloud.datat" +
-      "ransfer.v1.MaskFieldTransformerH\000\022P\n\016fil" +
-      "ter_columns\030\002 \001(\01326.yandex.cloud.datatra" +
-      "nsfer.v1.FilterColumnsTransformerH\000\022N\n\rr" +
-      "ename_tables\030\004 \001(\01325.yandex.cloud.datatr" +
-      "ansfer.v1.RenameTablesTransformerH\000\022Y\n\023r" +
-      "eplace_primary_key\030\006 \001(\0132:.yandex.cloud." +
-      "datatransfer.v1.ReplacePrimaryKeyTransfo" +
-      "rmerH\000\022N\n\021convert_to_string\030\007 \001(\01321.yand" +
-      "ex.cloud.datatransfer.v1.ToStringTransfo" +
-      "rmerH\000\022O\n\023sharder_transformer\030\t \001(\01320.ya" +
-      "ndex.cloud.datatransfer.v1.SharderTransf" +
-      "ormerH\000\022\\\n\032table_splitter_transformer\030\r " +
-      "\001(\01326.yandex.cloud.datatransfer.v1.Table" +
-      "SplitterTransformerH\000\022J\n\013filter_rows\030\016 \001" +
-      "(\01323.yandex.cloud.datatransfer.v1.Filter" +
-      "RowsTransformerH\000B\r\n\013transformerJ\004\010\003\020\004J\004" +
-      "\010\005\020\006J\004\010\010\020\tJ\004\010\n\020\r\"Q\n\016Transformation\022?\n\014tr" +
-      "ansformers\030\001 \003(\0132).yandex.cloud.datatran" +
-      "sfer.v1.Transformer*p\n\014TransferType\022\035\n\031T" +
-      "RANSFER_TYPE_UNSPECIFIED\020\000\022\032\n\026SNAPSHOT_A" +
-      "ND_INCREMENT\020\001\022\021\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INC" +
-      "REMENT_ONLY\020\003*\233\001\n\016TransferStatus\022\037\n\033TRAN" +
-      "SFER_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022" +
-      "\013\n\007CREATED\020\002\022\013\n\007RUNNING\020\003\022\014\n\010STOPPING\020\004\022" +
-      "\013\n\007STOPPED\020\005\022\t\n\005ERROR\020\006\022\020\n\014SNAPSHOTTING\020" +
-      "\007\022\010\n\004DONE\020\010Bq\n yandex.cloud.api.datatran" +
-      "sfer.v1ZMgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/datatransfer/v1;datatr" +
-      "ansferb\006proto3"
+      ".v1.ColumnsFilter\"\244\001\n\022SharderTransformer" +
+      "\022:\n\006tables\030\001 \001(\0132*.yandex.cloud.datatran" +
+      "sfer.v1.TablesFilter\022<\n\007columns\030\002 \001(\0132+." +
+      "yandex.cloud.datatransfer.v1.ColumnsFilt" +
+      "er\022\024\n\014shards_count\030\003 \001(\003\"y\n\030TableSplitte" +
+      "rTransformer\022:\n\006tables\030\001 \001(\0132*.yandex.cl" +
+      "oud.datatransfer.v1.TablesFilter\022\017\n\007colu" +
+      "mns\030\002 \003(\t\022\020\n\010splitter\030\003 \001(\t\"c\n\025FilterRow" +
+      "sTransformer\022:\n\006tables\030\001 \001(\0132*.yandex.cl" +
+      "oud.datatransfer.v1.TablesFilter\022\016\n\006filt" +
+      "er\030\002 \001(\t\"\306\005\n\013Transformer\022H\n\nmask_field\030\001" +
+      " \001(\01322.yandex.cloud.datatransfer.v1.Mask" +
+      "FieldTransformerH\000\022P\n\016filter_columns\030\002 \001" +
+      "(\01326.yandex.cloud.datatransfer.v1.Filter" +
+      "ColumnsTransformerH\000\022N\n\rrename_tables\030\004 " +
+      "\001(\01325.yandex.cloud.datatransfer.v1.Renam" +
+      "eTablesTransformerH\000\022Y\n\023replace_primary_" +
+      "key\030\006 \001(\0132:.yandex.cloud.datatransfer.v1" +
+      ".ReplacePrimaryKeyTransformerH\000\022N\n\021conve" +
+      "rt_to_string\030\007 \001(\01321.yandex.cloud.datatr" +
+      "ansfer.v1.ToStringTransformerH\000\022O\n\023shard" +
+      "er_transformer\030\t \001(\01320.yandex.cloud.data" +
+      "transfer.v1.SharderTransformerH\000\022\\\n\032tabl" +
+      "e_splitter_transformer\030\r \001(\01326.yandex.cl" +
+      "oud.datatransfer.v1.TableSplitterTransfo" +
+      "rmerH\000\022J\n\013filter_rows\030\016 \001(\01323.yandex.clo" +
+      "ud.datatransfer.v1.FilterRowsTransformer" +
+      "H\000B\r\n\013transformerJ\004\010\003\020\004J\004\010\005\020\006J\004\010\010\020\tJ\004\010\n\020" +
+      "\r\"Q\n\016Transformation\022?\n\014transformers\030\001 \003(" +
+      "\0132).yandex.cloud.datatransfer.v1.Transfo" +
+      "rmer*p\n\014TransferType\022\035\n\031TRANSFER_TYPE_UN" +
+      "SPECIFIED\020\000\022\032\n\026SNAPSHOT_AND_INCREMENT\020\001\022" +
+      "\021\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INCREMENT_ONLY\020\003*\233" +
+      "\001\n\016TransferStatus\022\037\n\033TRANSFER_STATUS_UNS" +
+      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007CREATED\020\002\022\013\n" +
+      "\007RUNNING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\t\n" +
+      "\005ERROR\020\006\022\020\n\014SNAPSHOTTING\020\007\022\010\n\004DONE\020\010Bq\n " +
+      "yandex.cloud.api.datatransfer.v1ZMgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/datatransfer/v1;datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21725,7 +21796,7 @@ public final class TransferOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_Transfer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Labels", "Source", "Target", "Runtime", "Status", "Type", "Warning", "Transformation", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "Labels", "Source", "Target", "Runtime", "Status", "Type", "Warning", "Transformation", "Prestable", });
     internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_Transfer_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_Transfer_LabelsEntry_fieldAccessorTable = new

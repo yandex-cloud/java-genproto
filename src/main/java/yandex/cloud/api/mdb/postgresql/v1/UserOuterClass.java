@@ -7413,7 +7413,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return Whether the idleInTransactionSessionTimeout field is set.
      */
     boolean hasIdleInTransactionSessionTimeout();
@@ -7424,7 +7424,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return The idleInTransactionSessionTimeout.
      */
     com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout();
@@ -7435,7 +7435,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder();
 
@@ -8812,7 +8812,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return Whether the idleInTransactionSessionTimeout field is set.
      */
     @java.lang.Override
@@ -8826,7 +8826,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return The idleInTransactionSessionTimeout.
      */
     @java.lang.Override
@@ -8840,7 +8840,7 @@ public final class UserOuterClass {
      * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
@@ -10979,7 +10979,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        * @return Whether the idleInTransactionSessionTimeout field is set.
        */
       public boolean hasIdleInTransactionSessionTimeout() {
@@ -10992,7 +10992,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        * @return The idleInTransactionSessionTimeout.
        */
       public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
@@ -11009,7 +11009,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder setIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -11031,7 +11031,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder setIdleInTransactionSessionTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -11051,7 +11051,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder mergeIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -11075,7 +11075,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder clearIdleInTransactionSessionTimeout() {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -11095,7 +11095,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getIdleInTransactionSessionTimeoutBuilder() {
         
@@ -11109,7 +11109,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
         if (idleInTransactionSessionTimeoutBuilder_ != null) {
@@ -11126,7 +11126,7 @@ public final class UserOuterClass {
        * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -11575,7 +11575,7 @@ public final class UserOuterClass {
       "GS_LOG_FUNCTION\020\003\022\036\n\032PG_AUDIT_SETTINGS_L" +
       "OG_ROLE\020\004\022\035\n\031PG_AUDIT_SETTINGS_LOG_DDL\020\005" +
       "\022\036\n\032PG_AUDIT_SETTINGS_LOG_MISC\020\006\022\"\n\036PG_A" +
-      "UDIT_SETTINGS_LOG_MISC_SET\020\007\"\272\014\n\014UserSet" +
+      "UDIT_SETTINGS_LOG_MISC_SET\020\007\"\314\014\n\014UserSet" +
       "tings\022h\n\035default_transaction_isolation\030\001" +
       " \001(\0162A.yandex.cloud.mdb.postgresql.v1.Us" +
       "erSettings.TransactionIsolation\0221\n\014lock_" +
@@ -11593,36 +11593,36 @@ public final class UserOuterClass {
       "ing\030\010 \001(\0132\032.google.protobuf.BoolValue\0224\n" +
       "\017catchup_timeout\030\t \001(\0132\033.google.protobuf" +
       ".Int64Value\0227\n\022wal_sender_timeout\030\n \001(\0132" +
-      "\033.google.protobuf.Int64Value\022H\n#idle_in_" +
+      "\033.google.protobuf.Int64Value\022Z\n#idle_in_" +
       "transaction_session_timeout\030\013 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0226\n\021statement_time" +
-      "out\030\014 \001(\0132\033.google.protobuf.Int64Value\022@" +
-      "\n\007pgaudit\030\r \001(\0132/.yandex.cloud.mdb.postg" +
-      "resql.v1.PGAuditSettings\"\326\001\n\021Synchronous" +
-      "Commit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED" +
-      "\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRO" +
-      "NOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_" +
-      "LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRI" +
-      "TE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020" +
-      "\005\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSP" +
-      "ECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG" +
-      "_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022" +
-      "\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIs" +
-      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
-      "FIED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNC" +
-      "OMMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ" +
-      "_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_RE" +
-      "PEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION" +
-      "_SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLIN" +
-      "G_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRA" +
-      "NSACTION\020\002\022\r\n\tSTATEMENT\020\003*\220\001\n\026UserPasswo" +
-      "rdEncryption\022(\n$USER_PASSWORD_ENCRYPTION" +
-      "_UNSPECIFIED\020\000\022 \n\034USER_PASSWORD_ENCRYPTI" +
-      "ON_MD5\020\001\022*\n&USER_PASSWORD_ENCRYPTION_SCR" +
-      "AM_SHA_256\020\002Bs\n\"yandex.cloud.api.mdb.pos" +
-      "tgresql.v1ZMgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/postgresql/v1;p" +
-      "ostgresqlb\006proto3"
+      "le.protobuf.Int64ValueB\020\372\3071\0140-2147483647" +
+      "\0226\n\021statement_timeout\030\014 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022@\n\007pgaudit\030\r \001(\0132/.yand" +
+      "ex.cloud.mdb.postgresql.v1.PGAuditSettin" +
+      "gs\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS_" +
+      "COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMM" +
+      "IT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030S" +
+      "YNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS" +
+      "_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_CO" +
+      "MMIT_REMOTE_APPLY\020\005\"\212\001\n\014LogStatement\022\035\n\031" +
+      "LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATE" +
+      "MENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LO" +
+      "G_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004" +
+      "\"\346\001\n\024TransactionIsolation\022%\n!TRANSACTION" +
+      "_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION_" +
+      "ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSACT" +
+      "ION_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANSA" +
+      "CTION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TRA" +
+      "NSACTION_ISOLATION_SERIALIZABLE\020\004\"X\n\013Poo" +
+      "lingMode\022\034\n\030POOLING_MODE_UNSPECIFIED\020\000\022\013" +
+      "\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEMEN" +
+      "T\020\003*\220\001\n\026UserPasswordEncryption\022(\n$USER_P" +
+      "ASSWORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USER" +
+      "_PASSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASSW" +
+      "ORD_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yandex" +
+      ".cloud.api.mdb.postgresql.v1ZMgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2605,28 +2605,19 @@ public final class TalkProto {
     yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadataOrBuilder getMetadataOrBuilder();
 
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * @return Whether the textContent field is set.
      */
-    java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> 
-        getTextContentList();
+    boolean hasTextContent();
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * @return The textContent.
      */
-    yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index);
+    yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent();
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
      */
-    int getTextContentCount();
-    /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-     */
-    java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
-        getTextContentOrBuilderList();
-    /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-     */
-    yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
-        int index);
+    yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder();
   }
   /**
    * <pre>
@@ -2645,7 +2636,6 @@ public final class TalkProto {
       super(builder);
     }
     private UploadTextRequest() {
-      textContent_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2668,7 +2658,6 @@ public final class TalkProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2693,12 +2682,16 @@ public final class TalkProto {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                textContent_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TextProto.TextContent>();
-                mutable_bitField0_ |= 0x00000001;
+              yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder subBuilder = null;
+              if (textContent_ != null) {
+                subBuilder = textContent_.toBuilder();
               }
-              textContent_.add(
-                  input.readMessage(yandex.cloud.api.speechsense.v1.TextProto.TextContent.parser(), extensionRegistry));
+              textContent_ = input.readMessage(yandex.cloud.api.speechsense.v1.TextProto.TextContent.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(textContent_);
+                textContent_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2716,9 +2709,6 @@ public final class TalkProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          textContent_ = java.util.Collections.unmodifiableList(textContent_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2763,43 +2753,29 @@ public final class TalkProto {
     }
 
     public static final int TEXT_CONTENT_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> textContent_;
+    private yandex.cloud.api.speechsense.v1.TextProto.TextContent textContent_;
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * @return Whether the textContent field is set.
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> getTextContentList() {
-      return textContent_;
+    public boolean hasTextContent() {
+      return textContent_ != null;
     }
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * @return The textContent.
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
-        getTextContentOrBuilderList() {
-      return textContent_;
+    public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent() {
+      return textContent_ == null ? yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance() : textContent_;
     }
     /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+     * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
      */
     @java.lang.Override
-    public int getTextContentCount() {
-      return textContent_.size();
-    }
-    /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index) {
-      return textContent_.get(index);
-    }
-    /**
-     * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
-        int index) {
-      return textContent_.get(index);
+    public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder() {
+      return getTextContent();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2819,8 +2795,8 @@ public final class TalkProto {
       if (metadata_ != null) {
         output.writeMessage(1, getMetadata());
       }
-      for (int i = 0; i < textContent_.size(); i++) {
-        output.writeMessage(2, textContent_.get(i));
+      if (textContent_ != null) {
+        output.writeMessage(2, getTextContent());
       }
       unknownFields.writeTo(output);
     }
@@ -2835,9 +2811,9 @@ public final class TalkProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
       }
-      for (int i = 0; i < textContent_.size(); i++) {
+      if (textContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, textContent_.get(i));
+          .computeMessageSize(2, getTextContent());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2859,8 +2835,11 @@ public final class TalkProto {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
-      if (!getTextContentList()
-          .equals(other.getTextContentList())) return false;
+      if (hasTextContent() != other.hasTextContent()) return false;
+      if (hasTextContent()) {
+        if (!getTextContent()
+            .equals(other.getTextContent())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2876,9 +2855,9 @@ public final class TalkProto {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
-      if (getTextContentCount() > 0) {
+      if (hasTextContent()) {
         hash = (37 * hash) + TEXT_CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + getTextContentList().hashCode();
+        hash = (53 * hash) + getTextContent().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3012,7 +2991,6 @@ public final class TalkProto {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTextContentFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3025,10 +3003,10 @@ public final class TalkProto {
           metadataBuilder_ = null;
         }
         if (textContentBuilder_ == null) {
-          textContent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          textContent_ = null;
         } else {
-          textContentBuilder_.clear();
+          textContent_ = null;
+          textContentBuilder_ = null;
         }
         return this;
       }
@@ -3056,17 +3034,12 @@ public final class TalkProto {
       @java.lang.Override
       public yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest buildPartial() {
         yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest result = new yandex.cloud.api.speechsense.v1.TalkProto.UploadTextRequest(this);
-        int from_bitField0_ = bitField0_;
         if (metadataBuilder_ == null) {
           result.metadata_ = metadata_;
         } else {
           result.metadata_ = metadataBuilder_.build();
         }
         if (textContentBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            textContent_ = java.util.Collections.unmodifiableList(textContent_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
           result.textContent_ = textContent_;
         } else {
           result.textContent_ = textContentBuilder_.build();
@@ -3122,31 +3095,8 @@ public final class TalkProto {
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
-        if (textContentBuilder_ == null) {
-          if (!other.textContent_.isEmpty()) {
-            if (textContent_.isEmpty()) {
-              textContent_ = other.textContent_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureTextContentIsMutable();
-              textContent_.addAll(other.textContent_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.textContent_.isEmpty()) {
-            if (textContentBuilder_.isEmpty()) {
-              textContentBuilder_.dispose();
-              textContentBuilder_ = null;
-              textContent_ = other.textContent_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              textContentBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTextContentFieldBuilder() : null;
-            } else {
-              textContentBuilder_.addAllMessages(other.textContent_);
-            }
-          }
+        if (other.hasTextContent()) {
+          mergeTextContent(other.getTextContent());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3176,7 +3126,6 @@ public final class TalkProto {
         }
         return this;
       }
-      private int bitField0_;
 
       private yandex.cloud.api.speechsense.v1.TalkProto.TalkMetadata metadata_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3297,239 +3246,118 @@ public final class TalkProto {
         return metadataBuilder_;
       }
 
-      private java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> textContent_ =
-        java.util.Collections.emptyList();
-      private void ensureTextContentIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          textContent_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TextProto.TextContent>(textContent_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private yandex.cloud.api.speechsense.v1.TextProto.TextContent textContent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> textContentBuilder_;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * @return Whether the textContent field is set.
+       */
+      public boolean hasTextContent() {
+        return textContentBuilder_ != null || textContent_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * @return The textContent.
+       */
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent() {
+        if (textContentBuilder_ == null) {
+          return textContent_ == null ? yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance() : textContent_;
+        } else {
+          return textContentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       */
+      public Builder setTextContent(yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
+        if (textContentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textContent_ = value;
+          onChanged();
+        } else {
+          textContentBuilder_.setMessage(value);
+        }
 
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent> getTextContentList() {
-        if (textContentBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(textContent_);
-        } else {
-          return textContentBuilder_.getMessageList();
-        }
+        return this;
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public int getTextContentCount() {
-        if (textContentBuilder_ == null) {
-          return textContent_.size();
-        } else {
-          return textContentBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextContent getTextContent(int index) {
-        if (textContentBuilder_ == null) {
-          return textContent_.get(index);
-        } else {
-          return textContentBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
       public Builder setTextContent(
-          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
-        if (textContentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextContentIsMutable();
-          textContent_.set(index, value);
-          onChanged();
-        } else {
-          textContentBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public Builder setTextContent(
-          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
-        if (textContentBuilder_ == null) {
-          ensureTextContentIsMutable();
-          textContent_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          textContentBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public Builder addTextContent(yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
-        if (textContentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextContentIsMutable();
-          textContent_.add(value);
-          onChanged();
-        } else {
-          textContentBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public Builder addTextContent(
-          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
-        if (textContentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTextContentIsMutable();
-          textContent_.add(index, value);
-          onChanged();
-        } else {
-          textContentBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public Builder addTextContent(
           yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
         if (textContentBuilder_ == null) {
-          ensureTextContentIsMutable();
-          textContent_.add(builderForValue.build());
+          textContent_ = builderForValue.build();
           onChanged();
         } else {
-          textContentBuilder_.addMessage(builderForValue.build());
+          textContentBuilder_.setMessage(builderForValue.build());
         }
+
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
-      public Builder addTextContent(
-          int index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder builderForValue) {
+      public Builder mergeTextContent(yandex.cloud.api.speechsense.v1.TextProto.TextContent value) {
         if (textContentBuilder_ == null) {
-          ensureTextContentIsMutable();
-          textContent_.add(index, builderForValue.build());
+          if (textContent_ != null) {
+            textContent_ =
+              yandex.cloud.api.speechsense.v1.TextProto.TextContent.newBuilder(textContent_).mergeFrom(value).buildPartial();
+          } else {
+            textContent_ = value;
+          }
           onChanged();
         } else {
-          textContentBuilder_.addMessage(index, builderForValue.build());
+          textContentBuilder_.mergeFrom(value);
         }
+
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public Builder addAllTextContent(
-          java.lang.Iterable<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContent> values) {
-        if (textContentBuilder_ == null) {
-          ensureTextContentIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, textContent_);
-          onChanged();
-        } else {
-          textContentBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
       public Builder clearTextContent() {
         if (textContentBuilder_ == null) {
-          textContent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          textContent_ = null;
           onChanged();
         } else {
-          textContentBuilder_.clear();
+          textContent_ = null;
+          textContentBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
-      public Builder removeTextContent(int index) {
-        if (textContentBuilder_ == null) {
-          ensureTextContentIsMutable();
-          textContent_.remove(index);
-          onChanged();
-        } else {
-          textContentBuilder_.remove(index);
-        }
-        return this;
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder getTextContentBuilder() {
+        
+        onChanged();
+        return getTextContentFieldBuilder().getBuilder();
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder getTextContentBuilder(
-          int index) {
-        return getTextContentFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder(
-          int index) {
-        if (textContentBuilder_ == null) {
-          return textContent_.get(index);  } else {
-          return textContentBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public java.util.List<? extends yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
-           getTextContentOrBuilderList() {
+      public yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder getTextContentOrBuilder() {
         if (textContentBuilder_ != null) {
-          return textContentBuilder_.getMessageOrBuilderList();
+          return textContentBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(textContent_);
+          return textContent_ == null ?
+              yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance() : textContent_;
         }
       }
       /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
+       * <code>.yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
        */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder addTextContentBuilder() {
-        return getTextContentFieldBuilder().addBuilder(
-            yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder addTextContentBuilder(
-          int index) {
-        return getTextContentFieldBuilder().addBuilder(
-            index, yandex.cloud.api.speechsense.v1.TextProto.TextContent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .yandex.cloud.speechsense.v1.TextContent text_content = 2;</code>
-       */
-      public java.util.List<yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder> 
-           getTextContentBuilderList() {
-        return getTextContentFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder> 
           getTextContentFieldBuilder() {
         if (textContentBuilder_ == null) {
-          textContentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          textContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               yandex.cloud.api.speechsense.v1.TextProto.TextContent, yandex.cloud.api.speechsense.v1.TextProto.TextContent.Builder, yandex.cloud.api.speechsense.v1.TextProto.TextContentOrBuilder>(
-                  textContent_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  getTextContent(),
                   getParentForChildren(),
                   isClean());
           textContent_ = null;
@@ -5243,7 +5071,7 @@ public final class TalkProto {
       "onse\022\017\n\007talk_id\030\001 \001(\t\"\220\001\n\021UploadTextRequ" +
       "est\022;\n\010metadata\030\001 \001(\0132).yandex.cloud.spe" +
       "echsense.v1.TalkMetadata\022>\n\014text_content" +
-      "\030\002 \003(\0132(.yandex.cloud.speechsense.v1.Tex" +
+      "\030\002 \001(\0132(.yandex.cloud.speechsense.v1.Tex" +
       "tContent\"%\n\022UploadTextResponse\022\017\n\007talk_i" +
       "d\030\001 \001(\t\"\233\001\n\014TalkMetadata\022\025\n\rconnection_i" +
       "d\030\001 \001(\t\022E\n\006fields\030\002 \003(\01325.yandex.cloud.s" +

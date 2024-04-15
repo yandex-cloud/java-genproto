@@ -15,6 +15,123 @@ public final class Jobs {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code yandex.cloud.datasphere.v2.jobs.FileCompressionType}
+   */
+  public enum FileCompressionType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>FILE_COMPRESSION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    FILE_COMPRESSION_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>NONE = 1;</code>
+     */
+    NONE(1),
+    /**
+     * <code>ZIP = 2;</code>
+     */
+    ZIP(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>FILE_COMPRESSION_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int FILE_COMPRESSION_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>NONE = 1;</code>
+     */
+    public static final int NONE_VALUE = 1;
+    /**
+     * <code>ZIP = 2;</code>
+     */
+    public static final int ZIP_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static FileCompressionType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static FileCompressionType forNumber(int value) {
+      switch (value) {
+        case 0: return FILE_COMPRESSION_TYPE_UNSPECIFIED;
+        case 1: return NONE;
+        case 2: return ZIP;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<FileCompressionType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        FileCompressionType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<FileCompressionType>() {
+            public FileCompressionType findValueByNumber(int number) {
+              return FileCompressionType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final FileCompressionType[] VALUES = values();
+
+    public static FileCompressionType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private FileCompressionType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.jobs.FileCompressionType)
+  }
+
+  /**
    * Protobuf enum {@code yandex.cloud.datasphere.v2.jobs.JobStatus}
    */
   public enum JobStatus
@@ -141,7 +258,7 @@ public final class Jobs {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.datasphere.v2.jobs.Jobs.getDescriptor().getEnumTypes().get(0);
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final JobStatus[] VALUES = values();
@@ -4564,6 +4681,25 @@ public final class Jobs {
      * @return The sizeBytes.
      */
     long getSizeBytes();
+
+    /**
+     * <pre>
+     * File compression info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    int getCompressionTypeValue();
+    /**
+     * <pre>
+     * File compression info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+     * @return The compressionType.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType getCompressionType();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.File}
@@ -4579,6 +4715,7 @@ public final class Jobs {
     }
     private File() {
       sha256_ = "";
+      compressionType_ = 0;
     }
 
     @java.lang.Override
@@ -4633,6 +4770,12 @@ public final class Jobs {
             case 24: {
 
               sizeBytes_ = input.readInt64();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              compressionType_ = rawValue;
               break;
             }
             default: {
@@ -4754,6 +4897,33 @@ public final class Jobs {
       return sizeBytes_;
     }
 
+    public static final int COMPRESSION_TYPE_FIELD_NUMBER = 4;
+    private int compressionType_;
+    /**
+     * <pre>
+     * File compression info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+     * @return The enum numeric value on the wire for compressionType.
+     */
+    @java.lang.Override public int getCompressionTypeValue() {
+      return compressionType_;
+    }
+    /**
+     * <pre>
+     * File compression info
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+     * @return The compressionType.
+     */
+    @java.lang.Override public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType getCompressionType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType result = yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.valueOf(compressionType_);
+      return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4777,6 +4947,9 @@ public final class Jobs {
       if (sizeBytes_ != 0L) {
         output.writeInt64(3, sizeBytes_);
       }
+      if (compressionType_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.FILE_COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, compressionType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4796,6 +4969,10 @@ public final class Jobs {
       if (sizeBytes_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, sizeBytes_);
+      }
+      if (compressionType_ != yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.FILE_COMPRESSION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, compressionType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4821,6 +4998,7 @@ public final class Jobs {
           .equals(other.getSha256())) return false;
       if (getSizeBytes()
           != other.getSizeBytes()) return false;
+      if (compressionType_ != other.compressionType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4841,6 +5019,8 @@ public final class Jobs {
       hash = (37 * hash) + SIZE_BYTES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSizeBytes());
+      hash = (37 * hash) + COMPRESSION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + compressionType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4984,6 +5164,8 @@ public final class Jobs {
 
         sizeBytes_ = 0L;
 
+        compressionType_ = 0;
+
         return this;
       }
 
@@ -5017,6 +5199,7 @@ public final class Jobs {
         }
         result.sha256_ = sha256_;
         result.sizeBytes_ = sizeBytes_;
+        result.compressionType_ = compressionType_;
         onBuilt();
         return result;
       }
@@ -5074,6 +5257,9 @@ public final class Jobs {
         }
         if (other.getSizeBytes() != 0L) {
           setSizeBytes(other.getSizeBytes());
+        }
+        if (other.compressionType_ != 0) {
+          setCompressionTypeValue(other.getCompressionTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5358,6 +5544,80 @@ public final class Jobs {
       public Builder clearSizeBytes() {
         
         sizeBytes_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int compressionType_ = 0;
+      /**
+       * <pre>
+       * File compression info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+       * @return The enum numeric value on the wire for compressionType.
+       */
+      @java.lang.Override public int getCompressionTypeValue() {
+        return compressionType_;
+      }
+      /**
+       * <pre>
+       * File compression info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+       * @param value The enum numeric value on the wire for compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionTypeValue(int value) {
+        
+        compressionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * File compression info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+       * @return The compressionType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType getCompressionType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType result = yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.valueOf(compressionType_);
+        return result == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * File compression info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+       * @param value The compressionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompressionType(yandex.cloud.api.datasphere.v2.jobs.Jobs.FileCompressionType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        compressionType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * File compression info
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.FileCompressionType compression_type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompressionType() {
+        
+        compressionType_ = 0;
         onChanged();
         return this;
       }
@@ -16180,51 +16440,55 @@ public final class Jobs {
       "\001 \001(\0162C.yandex.cloud.datasphere.v2.jobs." +
       "ExtendedWorkingStorage.StorageType\022\017\n\007si" +
       "ze_gb\030\002 \001(\003\"4\n\013StorageType\022\034\n\030STORAGE_TY" +
-      "PE_UNSPECIFIED\020\000\022\007\n\003SSD\020\001\"c\n\004File\0227\n\004des" +
-      "c\030\001 \001(\0132).yandex.cloud.datasphere.v2.job" +
-      "s.FileDesc\022\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_bytes" +
-      "\030\003 \001(\003\"O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.ya" +
-      "ndex.cloud.datasphere.v2.jobs.File\022\013\n\003ur" +
-      "l\030\002 \001(\t\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003var" +
-      "\030\002 \001(\t\"\303\002\n\013Environment\022D\n\004vars\030\001 \003(\01326.y" +
-      "andex.cloud.datasphere.v2.jobs.Environme" +
-      "nt.VarsEntry\022\"\n\030docker_image_resource_id" +
-      "\030\002 \001(\tH\000\022M\n\021docker_image_spec\030\003 \001(\01320.ya" +
-      "ndex.cloud.datasphere.v2.jobs.DockerImag" +
-      "eSpecH\000\022>\n\npython_env\030\004 \001(\0132*.yandex.clo" +
-      "ud.datasphere.v2.jobs.PythonEnv\032+\n\tVarsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014" +
-      "docker_image\"\204\001\n\017DockerImageSpec\022\021\n\timag" +
-      "e_url\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\035\n\023passwor" +
-      "d_plain_text\030\003 \001(\tH\000\022!\n\027password_ds_secr" +
-      "et_name\030\004 \001(\tH\000B\n\n\010password\"]\n\tPythonEnv" +
-      "\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_modules\030\002 " +
-      "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
-      "le\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004" +
-      "desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\022.\n\nstarted_at\030\021 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022/\n\013finished_a" +
-      "t\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006s" +
-      "tatus\030\006 \001(\0162*.yandex.cloud.datasphere.v2" +
-      ".jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcreat" +
-      "ed_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016jo" +
-      "b_parameters\030\n \001(\0132..yandex.cloud.datasp" +
-      "here.v2.jobs.JobParameters\0223\n\017data_expir" +
-      "es_at\030\013 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r " +
-      "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
-      "le\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud.dat" +
-      "asphere.v2.jobs.File\022?\n\020diagnostic_files" +
-      "\030\017 \003(\0132%.yandex.cloud.datasphere.v2.jobs" +
-      ".File\022\027\n\017data_size_bytes\030\020 \001(\003\" \n\tJobRes" +
-      "ult\022\023\n\013return_code\030\001 \001(\003*\201\001\n\tJobStatus\022\032" +
-      "\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001" +
-      "\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n" +
-      "\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#" +
-      "yandex.cloud.api.datasphere.v2.jobsB\004Job" +
-      "sZNgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/datasphere/v2/jobs;dataspher" +
-      "eb\006proto3"
+      "PE_UNSPECIFIED\020\000\022\007\n\003SSD\020\001\"\263\001\n\004File\0227\n\004de" +
+      "sc\030\001 \001(\0132).yandex.cloud.datasphere.v2.jo" +
+      "bs.FileDesc\022\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_byte" +
+      "s\030\003 \001(\003\022N\n\020compression_type\030\004 \001(\01624.yand" +
+      "ex.cloud.datasphere.v2.jobs.FileCompress" +
+      "ionType\"O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.y" +
+      "andex.cloud.datasphere.v2.jobs.File\022\013\n\003u" +
+      "rl\030\002 \001(\t\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003va" +
+      "r\030\002 \001(\t\"\303\002\n\013Environment\022D\n\004vars\030\001 \003(\01326." +
+      "yandex.cloud.datasphere.v2.jobs.Environm" +
+      "ent.VarsEntry\022\"\n\030docker_image_resource_i" +
+      "d\030\002 \001(\tH\000\022M\n\021docker_image_spec\030\003 \001(\01320.y" +
+      "andex.cloud.datasphere.v2.jobs.DockerIma" +
+      "geSpecH\000\022>\n\npython_env\030\004 \001(\0132*.yandex.cl" +
+      "oud.datasphere.v2.jobs.PythonEnv\032+\n\tVars" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n" +
+      "\014docker_image\"\204\001\n\017DockerImageSpec\022\021\n\tima" +
+      "ge_url\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\035\n\023passwo" +
+      "rd_plain_text\030\003 \001(\tH\000\022!\n\027password_ds_sec" +
+      "ret_name\030\004 \001(\tH\000B\n\n\010password\"]\n\tPythonEn" +
+      "v\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_modules\030\002" +
+      " \003(\0132%.yandex.cloud.datasphere.v2.jobs.F" +
+      "ile\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n" +
+      "\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nstarted_at\030\021 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022/\n\013finished_" +
+      "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006" +
+      "status\030\006 \001(\0162*.yandex.cloud.datasphere.v" +
+      "2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcrea" +
+      "ted_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016j" +
+      "ob_parameters\030\n \001(\0132..yandex.cloud.datas" +
+      "phere.v2.jobs.JobParameters\0223\n\017data_expi" +
+      "res_at\030\013 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r" +
+      " \003(\0132%.yandex.cloud.datasphere.v2.jobs.F" +
+      "ile\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud.da" +
+      "tasphere.v2.jobs.File\022?\n\020diagnostic_file" +
+      "s\030\017 \003(\0132%.yandex.cloud.datasphere.v2.job" +
+      "s.File\022\027\n\017data_size_bytes\030\020 \001(\003\" \n\tJobRe" +
+      "sult\022\023\n\013return_code\030\001 \001(\003*O\n\023FileCompres" +
+      "sionType\022%\n!FILE_COMPRESSION_TYPE_UNSPEC" +
+      "IFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus" +
+      "\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
+      "\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022" +
+      "\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{" +
+      "\n#yandex.cloud.api.datasphere.v2.jobsB\004J" +
+      "obsZNgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/datasphere/v2/jobs;datasph" +
+      "ereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16254,7 +16518,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_File_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_File_descriptor,
-        new java.lang.String[] { "Desc", "Sha256", "SizeBytes", });
+        new java.lang.String[] { "Desc", "Sha256", "SizeBytes", "CompressionType", });
     internal_static_yandex_cloud_datasphere_v2_jobs_StorageFile_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datasphere_v2_jobs_StorageFile_fieldAccessorTable = new

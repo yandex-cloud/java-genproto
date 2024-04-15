@@ -5494,17 +5494,29 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * File size.
+     * </pre>
+     *
      * <code>int64 file_size = 1;</code>
      * @return The fileSize.
      */
     long getFileSize();
 
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string file_name = 2;</code>
      * @return The fileName.
      */
     java.lang.String getFileName();
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string file_name = 2;</code>
      * @return The bytes for fileName.
      */
@@ -5603,6 +5615,10 @@ public final class VideoServiceOuterClass {
     public static final int FILE_SIZE_FIELD_NUMBER = 1;
     private long fileSize_;
     /**
+     * <pre>
+     * File size.
+     * </pre>
+     *
      * <code>int64 file_size = 1;</code>
      * @return The fileSize.
      */
@@ -5614,6 +5630,10 @@ public final class VideoServiceOuterClass {
     public static final int FILE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object fileName_;
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string file_name = 2;</code>
      * @return The fileName.
      */
@@ -5631,6 +5651,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string file_name = 2;</code>
      * @return The bytes for fileName.
      */
@@ -5971,6 +5995,10 @@ public final class VideoServiceOuterClass {
 
       private long fileSize_ ;
       /**
+       * <pre>
+       * File size.
+       * </pre>
+       *
        * <code>int64 file_size = 1;</code>
        * @return The fileSize.
        */
@@ -5979,6 +6007,10 @@ public final class VideoServiceOuterClass {
         return fileSize_;
       }
       /**
+       * <pre>
+       * File size.
+       * </pre>
+       *
        * <code>int64 file_size = 1;</code>
        * @param value The fileSize to set.
        * @return This builder for chaining.
@@ -5990,6 +6022,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * File size.
+       * </pre>
+       *
        * <code>int64 file_size = 1;</code>
        * @return This builder for chaining.
        */
@@ -6002,6 +6038,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object fileName_ = "";
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string file_name = 2;</code>
        * @return The fileName.
        */
@@ -6018,6 +6058,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string file_name = 2;</code>
        * @return The bytes for fileName.
        */
@@ -6035,6 +6079,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string file_name = 2;</code>
        * @param value The fileName to set.
        * @return This builder for chaining.
@@ -6050,6 +6098,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string file_name = 2;</code>
        * @return This builder for chaining.
        */
@@ -6060,6 +6112,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string file_name = 2;</code>
        * @param value The bytes for fileName to set.
        * @return This builder for chaining.
@@ -15106,18 +15162,30 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * If true, a player will be muted by default.
+     * </pre>
+     *
      * <code>bool mute = 1;</code>
      * @return The mute.
      */
     boolean getMute();
 
     /**
+     * <pre>
+     * If true, playback will start automatically.
+     * </pre>
+     *
      * <code>bool autoplay = 2;</code>
      * @return The autoplay.
      */
     boolean getAutoplay();
 
     /**
+     * <pre>
+     * If true, a player interface will be hidden by default.
+     * </pre>
+     *
      * <code>bool hidden = 3;</code>
      * @return The hidden.
      */
@@ -15218,6 +15286,10 @@ public final class VideoServiceOuterClass {
     public static final int MUTE_FIELD_NUMBER = 1;
     private boolean mute_;
     /**
+     * <pre>
+     * If true, a player will be muted by default.
+     * </pre>
+     *
      * <code>bool mute = 1;</code>
      * @return The mute.
      */
@@ -15229,6 +15301,10 @@ public final class VideoServiceOuterClass {
     public static final int AUTOPLAY_FIELD_NUMBER = 2;
     private boolean autoplay_;
     /**
+     * <pre>
+     * If true, playback will start automatically.
+     * </pre>
+     *
      * <code>bool autoplay = 2;</code>
      * @return The autoplay.
      */
@@ -15240,6 +15316,10 @@ public final class VideoServiceOuterClass {
     public static final int HIDDEN_FIELD_NUMBER = 3;
     private boolean hidden_;
     /**
+     * <pre>
+     * If true, a player interface will be hidden by default.
+     * </pre>
+     *
      * <code>bool hidden = 3;</code>
      * @return The hidden.
      */
@@ -15589,6 +15669,10 @@ public final class VideoServiceOuterClass {
 
       private boolean mute_ ;
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @return The mute.
        */
@@ -15597,6 +15681,10 @@ public final class VideoServiceOuterClass {
         return mute_;
       }
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @param value The mute to set.
        * @return This builder for chaining.
@@ -15608,6 +15696,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, a player will be muted by default.
+       * </pre>
+       *
        * <code>bool mute = 1;</code>
        * @return This builder for chaining.
        */
@@ -15620,6 +15712,10 @@ public final class VideoServiceOuterClass {
 
       private boolean autoplay_ ;
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @return The autoplay.
        */
@@ -15628,6 +15724,10 @@ public final class VideoServiceOuterClass {
         return autoplay_;
       }
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @param value The autoplay to set.
        * @return This builder for chaining.
@@ -15639,6 +15739,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, playback will start automatically.
+       * </pre>
+       *
        * <code>bool autoplay = 2;</code>
        * @return This builder for chaining.
        */
@@ -15651,6 +15755,10 @@ public final class VideoServiceOuterClass {
 
       private boolean hidden_ ;
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @return The hidden.
        */
@@ -15659,6 +15767,10 @@ public final class VideoServiceOuterClass {
         return hidden_;
       }
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @param value The hidden to set.
        * @return This builder for chaining.
@@ -15670,6 +15782,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If true, a player interface will be hidden by default.
+       * </pre>
+       *
        * <code>bool hidden = 3;</code>
        * @return This builder for chaining.
        */
@@ -15737,11 +15853,19 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The playerUrl.
      */
     java.lang.String getPlayerUrl();
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The bytes for playerUrl.
      */
@@ -15749,11 +15873,19 @@ public final class VideoServiceOuterClass {
         getPlayerUrlBytes();
 
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The html.
      */
     java.lang.String getHtml();
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The bytes for html.
      */
@@ -15854,6 +15986,10 @@ public final class VideoServiceOuterClass {
     public static final int PLAYER_URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object playerUrl_;
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The playerUrl.
      */
@@ -15871,6 +16007,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Direct link to the video.
+     * </pre>
+     *
      * <code>string player_url = 1;</code>
      * @return The bytes for playerUrl.
      */
@@ -15892,6 +16032,10 @@ public final class VideoServiceOuterClass {
     public static final int HTML_FIELD_NUMBER = 2;
     private volatile java.lang.Object html_;
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The html.
      */
@@ -15909,6 +16053,10 @@ public final class VideoServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * HTML embed code in Iframe format.
+     * </pre>
+     *
      * <code>string html = 2;</code>
      * @return The bytes for html.
      */
@@ -16248,6 +16396,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object playerUrl_ = "";
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return The playerUrl.
        */
@@ -16264,6 +16416,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return The bytes for playerUrl.
        */
@@ -16281,6 +16437,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @param value The playerUrl to set.
        * @return This builder for chaining.
@@ -16296,6 +16456,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @return This builder for chaining.
        */
@@ -16306,6 +16470,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direct link to the video.
+       * </pre>
+       *
        * <code>string player_url = 1;</code>
        * @param value The bytes for playerUrl to set.
        * @return This builder for chaining.
@@ -16324,6 +16492,10 @@ public final class VideoServiceOuterClass {
 
       private java.lang.Object html_ = "";
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return The html.
        */
@@ -16340,6 +16512,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return The bytes for html.
        */
@@ -16357,6 +16533,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @param value The html to set.
        * @return This builder for chaining.
@@ -16372,6 +16552,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @return This builder for chaining.
        */
@@ -16382,6 +16566,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTML embed code in Iframe format.
+       * </pre>
+       *
        * <code>string html = 2;</code>
        * @param value The bytes for html to set.
        * @return This builder for chaining.

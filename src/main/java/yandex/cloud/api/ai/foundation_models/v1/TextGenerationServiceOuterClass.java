@@ -20,7 +20,7 @@ public final class TextGenerationServiceOuterClass {
 
     /**
      * <pre>
-     * The identifier of the model to be used for completion generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class TextGenerationServiceOuterClass {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The identifier of the model to be used for completion generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -228,7 +228,7 @@ public final class TextGenerationServiceOuterClass {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The identifier of the model to be used for completion generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -249,7 +249,7 @@ public final class TextGenerationServiceOuterClass {
     }
     /**
      * <pre>
-     * The identifier of the model to be used for completion generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -764,7 +764,7 @@ public final class TextGenerationServiceOuterClass {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The identifier of the model to be used for completion generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -784,7 +784,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for completion generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -805,7 +805,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for completion generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -824,7 +824,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for completion generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -838,7 +838,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for completion generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for completion generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -1453,7 +1453,7 @@ public final class TextGenerationServiceOuterClass {
 
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1462,7 +1462,7 @@ public final class TextGenerationServiceOuterClass {
     java.lang.String getModelVersion();
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1473,7 +1473,7 @@ public final class TextGenerationServiceOuterClass {
   }
   /**
    * <pre>
-   * Response containing generated text completions
+   * Response containing generated text completions.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.CompletionResponse}
@@ -1688,7 +1688,7 @@ public final class TextGenerationServiceOuterClass {
     private volatile java.lang.Object modelVersion_;
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1709,7 +1709,7 @@ public final class TextGenerationServiceOuterClass {
     }
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 3;</code>
@@ -1915,7 +1915,7 @@ public final class TextGenerationServiceOuterClass {
     }
     /**
      * <pre>
-     * Response containing generated text completions
+     * Response containing generated text completions.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.CompletionResponse}
@@ -2593,7 +2593,7 @@ public final class TextGenerationServiceOuterClass {
       private java.lang.Object modelVersion_ = "";
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -2613,7 +2613,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -2634,7 +2634,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -2653,7 +2653,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>
@@ -2667,7 +2667,7 @@ public final class TextGenerationServiceOuterClass {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 3;</code>

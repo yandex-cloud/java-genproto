@@ -20,7 +20,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * The identifier of the model to be used for image generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class ImageGenerationService {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The identifier of the model to be used for image generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -84,7 +84,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -93,7 +93,7 @@ public final class ImageGenerationService {
     boolean hasGenerationOptions();
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -102,7 +102,7 @@ public final class ImageGenerationService {
     yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions getGenerationOptions();
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -111,7 +111,7 @@ public final class ImageGenerationService {
   }
   /**
    * <pre>
-   * Request for the service to generate image
+   * Request for the service to generate an image.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}
@@ -228,7 +228,7 @@ public final class ImageGenerationService {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The identifier of the model to be used for image generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -249,7 +249,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * The identifier of the model to be used for image generation.
+     * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -334,7 +334,7 @@ public final class ImageGenerationService {
     private yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions generationOptions_;
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -346,7 +346,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -358,7 +358,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * Image generation options
+     * Image generation options.
      * </pre>
      *
      * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -553,7 +553,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * Request for the service to generate image
+     * Request for the service to generate an image.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationRequest}
@@ -764,7 +764,7 @@ public final class ImageGenerationService {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The identifier of the model to be used for image generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -784,7 +784,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for image generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -805,7 +805,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for image generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -824,7 +824,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for image generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -838,7 +838,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * The identifier of the model to be used for image generation.
+       * The [ID of the model](/docs/foundation-models/concepts/yandexart/models) to be used for image generation.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -1174,7 +1174,7 @@ public final class ImageGenerationService {
           yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptionsOrBuilder> generationOptionsBuilder_;
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1185,7 +1185,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1200,7 +1200,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1220,7 +1220,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1238,7 +1238,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1260,7 +1260,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1278,7 +1278,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1290,7 +1290,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1305,7 +1305,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image generation options
+       * Image generation options.
        * </pre>
        *
        * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions generation_options = 3;</code>
@@ -1382,7 +1382,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * Image serialized as bytes array
+     * The image is serialized as an array of bytes encoded in base64.
      * </pre>
      *
      * <code>bytes image = 1;</code>
@@ -1392,7 +1392,7 @@ public final class ImageGenerationService {
 
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1401,7 +1401,7 @@ public final class ImageGenerationService {
     java.lang.String getModelVersion();
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1508,7 +1508,7 @@ public final class ImageGenerationService {
     private com.google.protobuf.ByteString image_;
     /**
      * <pre>
-     * Image serialized as bytes array
+     * The image is serialized as an array of bytes encoded in base64.
      * </pre>
      *
      * <code>bytes image = 1;</code>
@@ -1523,7 +1523,7 @@ public final class ImageGenerationService {
     private volatile java.lang.Object modelVersion_;
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1544,7 +1544,7 @@ public final class ImageGenerationService {
     }
     /**
      * <pre>
-     * Model version (changes with model releases).
+     * The model version changes with each new releases.
      * </pre>
      *
      * <code>string model_version = 2;</code>
@@ -1891,7 +1891,7 @@ public final class ImageGenerationService {
       private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
-       * Image serialized as bytes array
+       * The image is serialized as an array of bytes encoded in base64.
        * </pre>
        *
        * <code>bytes image = 1;</code>
@@ -1903,7 +1903,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image serialized as bytes array
+       * The image is serialized as an array of bytes encoded in base64.
        * </pre>
        *
        * <code>bytes image = 1;</code>
@@ -1921,7 +1921,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Image serialized as bytes array
+       * The image is serialized as an array of bytes encoded in base64.
        * </pre>
        *
        * <code>bytes image = 1;</code>
@@ -1937,7 +1937,7 @@ public final class ImageGenerationService {
       private java.lang.Object modelVersion_ = "";
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1957,7 +1957,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1978,7 +1978,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -1997,7 +1997,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>
@@ -2011,7 +2011,7 @@ public final class ImageGenerationService {
       }
       /**
        * <pre>
-       * Model version (changes with model releases).
+       * The model version changes with each new releases.
        * </pre>
        *
        * <code>string model_version = 2;</code>

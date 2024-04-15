@@ -102,7 +102,7 @@ public final class TextGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions in asynchronous mode.
+     * A method for generating text completions in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public void completion(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest request,
@@ -142,7 +142,7 @@ public final class TextGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions in asynchronous mode.
+     * A method for generating text completions in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public void completion(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest request,
@@ -171,7 +171,7 @@ public final class TextGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions in asynchronous mode.
+     * A method for generating text completions in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation completion(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest request) {
@@ -199,7 +199,7 @@ public final class TextGenerationAsyncServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions in asynchronous mode.
+     * A method for generating text completions in [asynchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> completion(

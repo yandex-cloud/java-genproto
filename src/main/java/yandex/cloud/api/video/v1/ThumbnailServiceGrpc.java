@@ -3,6 +3,9 @@ package yandex.cloud.api.video.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Thumbnail management service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -184,6 +187,9 @@ public final class ThumbnailServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Thumbnail management service.
+   * </pre>
    */
   public static abstract class ThumbnailServiceImplBase implements io.grpc.BindableService {
 
@@ -262,6 +268,9 @@ public final class ThumbnailServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Thumbnail management service.
+   * </pre>
    */
   public static final class ThumbnailServiceStub extends io.grpc.stub.AbstractAsyncStub<ThumbnailServiceStub> {
     private ThumbnailServiceStub(
@@ -321,6 +330,9 @@ public final class ThumbnailServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Thumbnail management service.
+   * </pre>
    */
   public static final class ThumbnailServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ThumbnailServiceBlockingStub> {
     private ThumbnailServiceBlockingStub(
@@ -376,6 +388,9 @@ public final class ThumbnailServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Thumbnail management service.
+   * </pre>
    */
   public static final class ThumbnailServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ThumbnailServiceFutureStub> {
     private ThumbnailServiceFutureStub(

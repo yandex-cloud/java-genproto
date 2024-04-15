@@ -15285,11 +15285,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL of a RTMP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL of a RTMP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -15383,6 +15391,10 @@ public final class StreamLineServiceOuterClass {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL of a RTMP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
@@ -15400,6 +15412,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL of a RTMP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -15722,6 +15738,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL of a RTMP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The url.
        */
@@ -15738,6 +15758,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a RTMP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
@@ -15755,6 +15779,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a RTMP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -15770,6 +15798,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a RTMP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
@@ -15780,6 +15812,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a RTMP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -15853,11 +15889,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL of a SRT streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL of a SRT streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -15951,6 +15995,10 @@ public final class StreamLineServiceOuterClass {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL of a SRT streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
@@ -15968,6 +16016,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL of a SRT streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -16290,6 +16342,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL of a SRT streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The url.
        */
@@ -16306,6 +16362,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a SRT streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
@@ -16323,6 +16383,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a SRT streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -16338,6 +16402,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a SRT streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
@@ -16348,6 +16416,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a SRT streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -16421,11 +16493,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL of a TCP streaming server.
+     * </pre>
+     *
      * <code>string url = 2;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL of a TCP streaming server.
+     * </pre>
+     *
      * <code>string url = 2;</code>
      * @return The bytes for url.
      */
@@ -16519,6 +16599,10 @@ public final class StreamLineServiceOuterClass {
     public static final int URL_FIELD_NUMBER = 2;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL of a TCP streaming server.
+     * </pre>
+     *
      * <code>string url = 2;</code>
      * @return The url.
      */
@@ -16536,6 +16620,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL of a TCP streaming server.
+     * </pre>
+     *
      * <code>string url = 2;</code>
      * @return The bytes for url.
      */
@@ -16858,6 +16946,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL of a TCP streaming server.
+       * </pre>
+       *
        * <code>string url = 2;</code>
        * @return The url.
        */
@@ -16874,6 +16966,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a TCP streaming server.
+       * </pre>
+       *
        * <code>string url = 2;</code>
        * @return The bytes for url.
        */
@@ -16891,6 +16987,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a TCP streaming server.
+       * </pre>
+       *
        * <code>string url = 2;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -16906,6 +17006,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a TCP streaming server.
+       * </pre>
+       *
        * <code>string url = 2;</code>
        * @return This builder for chaining.
        */
@@ -16916,6 +17020,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a TCP streaming server.
+       * </pre>
+       *
        * <code>string url = 2;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -16989,11 +17097,19 @@ public final class StreamLineServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URL of a RTSP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * URL of a RTSP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -17087,6 +17203,10 @@ public final class StreamLineServiceOuterClass {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * URL of a RTSP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The url.
      */
@@ -17104,6 +17224,10 @@ public final class StreamLineServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * URL of a RTSP streaming server.
+     * </pre>
+     *
      * <code>string url = 1;</code>
      * @return The bytes for url.
      */
@@ -17426,6 +17550,10 @@ public final class StreamLineServiceOuterClass {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * URL of a RTSP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The url.
        */
@@ -17442,6 +17570,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a RTSP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return The bytes for url.
        */
@@ -17459,6 +17591,10 @@ public final class StreamLineServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * URL of a RTSP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -17474,6 +17610,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a RTSP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @return This builder for chaining.
        */
@@ -17484,6 +17624,10 @@ public final class StreamLineServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * URL of a RTSP streaming server.
+       * </pre>
+       *
        * <code>string url = 1;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.

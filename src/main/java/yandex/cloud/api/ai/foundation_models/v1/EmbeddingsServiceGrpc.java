@@ -102,7 +102,7 @@ public final class EmbeddingsServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining embeddings from text data.
+     * A method for obtaining embeddings from text data.
      * </pre>
      */
     public void textEmbedding(yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingRequest request,
@@ -142,7 +142,7 @@ public final class EmbeddingsServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining embeddings from text data.
+     * A method for obtaining embeddings from text data.
      * </pre>
      */
     public void textEmbedding(yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingRequest request,
@@ -171,7 +171,7 @@ public final class EmbeddingsServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining embeddings from text data.
+     * A method for obtaining embeddings from text data.
      * </pre>
      */
     public yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingResponse textEmbedding(yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingRequest request) {
@@ -199,7 +199,7 @@ public final class EmbeddingsServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for obtaining embeddings from text data.
+     * A method for obtaining embeddings from text data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingResponse> textEmbedding(

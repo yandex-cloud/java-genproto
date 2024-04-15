@@ -573,7 +573,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return Whether the idleInTransactionSessionTimeout field is set.
      */
     boolean hasIdleInTransactionSessionTimeout();
@@ -582,7 +582,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return The idleInTransactionSessionTimeout.
      */
     com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout();
@@ -591,7 +591,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder();
 
@@ -4244,7 +4244,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return Whether the idleInTransactionSessionTimeout field is set.
      */
     @java.lang.Override
@@ -4256,7 +4256,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      * @return The idleInTransactionSessionTimeout.
      */
     @java.lang.Override
@@ -4268,7 +4268,7 @@ public final class Host101C {
      * in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+     * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
@@ -10850,7 +10850,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        * @return Whether the idleInTransactionSessionTimeout field is set.
        */
       public boolean hasIdleInTransactionSessionTimeout() {
@@ -10861,7 +10861,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        * @return The idleInTransactionSessionTimeout.
        */
       public com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout() {
@@ -10876,7 +10876,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder setIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -10896,7 +10896,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder setIdleInTransactionSessionTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -10914,7 +10914,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder mergeIdleInTransactionSessionTimeout(com.google.protobuf.Int64Value value) {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -10936,7 +10936,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder clearIdleInTransactionSessionTimeout() {
         if (idleInTransactionSessionTimeoutBuilder_ == null) {
@@ -10954,7 +10954,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getIdleInTransactionSessionTimeoutBuilder() {
         
@@ -10966,7 +10966,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getIdleInTransactionSessionTimeoutOrBuilder() {
         if (idleInTransactionSessionTimeoutBuilder_ != null) {
@@ -10981,7 +10981,7 @@ public final class Host101C {
        * in milliseconds.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32;</code>
+       * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 32 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -15119,7 +15119,7 @@ public final class Host101C {
       "\n5yandex/cloud/mdb/postgresql/v1/config/" +
       "host10_1c.proto\022%yandex.cloud.mdb.postgr" +
       "esql.v1.config\032\036google/protobuf/wrappers" +
-      ".proto\032\035yandex/cloud/validation.proto\"\275/" +
+      ".proto\032\035yandex/cloud/validation.proto\"\317/" +
       "\n\031PostgresqlHostConfig10_1C\022=\n\030recovery_" +
       "min_apply_delay\030\001 \001(\0132\033.google.protobuf." +
       "Int64Value\0223\n\016shared_buffers\030\002 \001(\0132\033.goo" +
@@ -15175,107 +15175,107 @@ public final class Host101C {
       "lHostConfig10_1C.TransactionIsolation\0226\n" +
       "\021statement_timeout\030\036 \001(\0132\033.google.protob" +
       "uf.Int64Value\0221\n\014lock_timeout\030\037 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022H\n#idle_in_tran" +
+      "ogle.protobuf.Int64Value\022Z\n#idle_in_tran" +
       "saction_session_timeout\030  \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022b\n\014bytea_output\030! \001(\016" +
-      "2L.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlHostConfig10_1C.ByteaOutput\022]" +
-      "\n\txmlbinary\030\" \001(\0162J.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig10" +
-      "_1C.XmlBinary\022]\n\txmloption\030# \001(\0162J.yande" +
-      "x.cloud.mdb.postgresql.v1.config.Postgre" +
-      "sqlHostConfig10_1C.XmlOption\022;\n\026gin_pend" +
-      "ing_list_limit\030$ \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0225\n\020deadlock_timeout\030% \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022>\n\031max_locks_pe" +
-      "r_transaction\030& \001(\0132\033.google.protobuf.In" +
-      "t64Value\022C\n\036max_pred_locks_per_transacti" +
-      "on\030\' \001(\0132\033.google.protobuf.Int64Value\022/\n" +
-      "\013array_nulls\030( \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022h\n\017backslash_quote\030) \001(\0162O.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlHostConfig10_1C.BackslashQuote\0225\n\021defa" +
-      "ult_with_oids\030* \001(\0132\032.google.protobuf.Bo" +
-      "olValue\0229\n\025escape_string_warning\030+ \001(\0132\032" +
-      ".google.protobuf.BoolValue\0228\n\024lo_compat_" +
-      "privileges\030, \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022?\n\033operator_precedence_warning\030- \001(" +
-      "\0132\032.google.protobuf.BoolValue\0229\n\025quote_a" +
-      "ll_identifiers\030. \001(\0132\032.google.protobuf.B" +
-      "oolValue\022?\n\033standard_conforming_strings\030" +
-      "/ \001(\0132\032.google.protobuf.BoolValue\0228\n\024syn" +
-      "chronize_seqscans\0300 \001(\0132\032.google.protobu" +
-      "f.BoolValue\0229\n\025transform_null_equals\0301 \001" +
-      "(\0132\032.google.protobuf.BoolValue\0221\n\rexit_o" +
-      "n_error\0302 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\0223\n\rseq_page_cost\0303 \001(\0132\034.google.protob" +
-      "uf.DoubleValue\0226\n\020random_page_cost\0304 \001(\013" +
-      "2\034.google.protobuf.DoubleValue\0225\n\021enable" +
-      "_bitmapscan\0306 \001(\0132\032.google.protobuf.Bool" +
-      "Value\0222\n\016enable_hashagg\0307 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\0223\n\017enable_hashjoin\0308 \001" +
-      "(\0132\032.google.protobuf.BoolValue\0224\n\020enable" +
-      "_indexscan\0309 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\0228\n\024enable_indexonlyscan\030: \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\0223\n\017enable_materia" +
-      "l\030; \001(\0132\032.google.protobuf.BoolValue\0224\n\020e" +
-      "nable_mergejoin\030< \001(\0132\032.google.protobuf." +
-      "BoolValue\0223\n\017enable_nestloop\030= \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\0222\n\016enable_seqscan" +
-      "\030> \001(\0132\032.google.protobuf.BoolValue\022/\n\013en" +
-      "able_sort\030? \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\0222\n\016enable_tidscan\030@ \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022E\n\024max_parallel_workers\030" +
-      "A \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071\006" +
-      "0-1024\022P\n\037max_parallel_workers_per_gathe" +
-      "r\030B \001(\0132\033.google.protobuf.Int64ValueB\n\372\307" +
-      "1\0060-1024\022\020\n\010timezone\030C \001(\t\022I\n\030effective_" +
-      "io_concurrency\030D \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\n\372\3071\0060-1000\022M\n\024effective_cache" +
-      "_size\030E \001(\0132\033.google.protobuf.Int64Value" +
-      "B\022\372\3071\0160-549755813888\"\232\001\n\023ConstraintExclu" +
-      "sion\022$\n CONSTRAINT_EXCLUSION_UNSPECIFIED" +
-      "\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CONST" +
-      "RAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXCL" +
-      "USION_PARTITION\020\003\"\222\001\n\021ForceParallelMode\022" +
-      "#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026" +
-      "FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALL" +
-      "EL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_REG" +
-      "RESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECI" +
-      "FIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVE" +
-      "L_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_" +
-      "LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\r" +
-      "LOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n" +
-      "\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020" +
-      "\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANI" +
-      "C\020\013\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERROR_V" +
-      "ERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERB" +
-      "OSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEF" +
-      "AULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"" +
-      "\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPEC" +
-      "IFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_S" +
-      "TATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n" +
-      "\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIsol" +
-      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
-      "ED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOM" +
-      "MITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_C" +
-      "OMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPE" +
-      "ATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_S" +
-      "ERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OU" +
-      "TPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001" +
-      "\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022" +
-      "\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINAR" +
-      "Y_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOpt" +
-      "ion\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_O" +
-      "PTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002" +
-      "\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_QUOTE_U" +
-      "NSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BAC" +
-      "KSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF" +
-      "\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODING\020\004B\201\001" +
-      "\n)yandex.cloud.api.mdb.postgresql.v1.con" +
-      "figZTgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/postgresql/v1/config;p" +
-      "ostgresqlb\006proto3"
+      "rotobuf.Int64ValueB\020\372\3071\0140-2147483647\022b\n\014" +
+      "bytea_output\030! \001(\0162L.yandex.cloud.mdb.po" +
+      "stgresql.v1.config.PostgresqlHostConfig1" +
+      "0_1C.ByteaOutput\022]\n\txmlbinary\030\" \001(\0162J.ya" +
+      "ndex.cloud.mdb.postgresql.v1.config.Post" +
+      "gresqlHostConfig10_1C.XmlBinary\022]\n\txmlop" +
+      "tion\030# \001(\0162J.yandex.cloud.mdb.postgresql" +
+      ".v1.config.PostgresqlHostConfig10_1C.Xml" +
+      "Option\022;\n\026gin_pending_list_limit\030$ \001(\0132\033" +
+      ".google.protobuf.Int64Value\0225\n\020deadlock_" +
+      "timeout\030% \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022>\n\031max_locks_per_transaction\030& \001(\0132\033." +
+      "google.protobuf.Int64Value\022C\n\036max_pred_l" +
+      "ocks_per_transaction\030\' \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022/\n\013array_nulls\030( \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022h\n\017backslash_qu" +
+      "ote\030) \001(\0162O.yandex.cloud.mdb.postgresql." +
+      "v1.config.PostgresqlHostConfig10_1C.Back" +
+      "slashQuote\0225\n\021default_with_oids\030* \001(\0132\032." +
+      "google.protobuf.BoolValue\0229\n\025escape_stri" +
+      "ng_warning\030+ \001(\0132\032.google.protobuf.BoolV" +
+      "alue\0228\n\024lo_compat_privileges\030, \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022?\n\033operator_prece" +
+      "dence_warning\030- \001(\0132\032.google.protobuf.Bo" +
+      "olValue\0229\n\025quote_all_identifiers\030. \001(\0132\032" +
+      ".google.protobuf.BoolValue\022?\n\033standard_c" +
+      "onforming_strings\030/ \001(\0132\032.google.protobu" +
+      "f.BoolValue\0228\n\024synchronize_seqscans\0300 \001(" +
+      "\0132\032.google.protobuf.BoolValue\0229\n\025transfo" +
+      "rm_null_equals\0301 \001(\0132\032.google.protobuf.B" +
+      "oolValue\0221\n\rexit_on_error\0302 \001(\0132\032.google" +
+      ".protobuf.BoolValue\0223\n\rseq_page_cost\0303 \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0226\n\020rand" +
+      "om_page_cost\0304 \001(\0132\034.google.protobuf.Dou" +
+      "bleValue\0225\n\021enable_bitmapscan\0306 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\0222\n\016enable_hashag" +
+      "g\0307 \001(\0132\032.google.protobuf.BoolValue\0223\n\017e" +
+      "nable_hashjoin\0308 \001(\0132\032.google.protobuf.B" +
+      "oolValue\0224\n\020enable_indexscan\0309 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\0228\n\024enable_indexon" +
+      "lyscan\030: \001(\0132\032.google.protobuf.BoolValue" +
+      "\0223\n\017enable_material\030; \001(\0132\032.google.proto" +
+      "buf.BoolValue\0224\n\020enable_mergejoin\030< \001(\0132" +
+      "\032.google.protobuf.BoolValue\0223\n\017enable_ne" +
+      "stloop\030= \001(\0132\032.google.protobuf.BoolValue" +
+      "\0222\n\016enable_seqscan\030> \001(\0132\032.google.protob" +
+      "uf.BoolValue\022/\n\013enable_sort\030? \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0222\n\016enable_tidscan\030" +
+      "@ \001(\0132\032.google.protobuf.BoolValue\022E\n\024max" +
+      "_parallel_workers\030A \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\n\372\3071\0060-1024\022P\n\037max_parallel" +
+      "_workers_per_gather\030B \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\n\372\3071\0060-1024\022\020\n\010timezone\030C" +
+      " \001(\t\022I\n\030effective_io_concurrency\030D \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\n\372\3071\0060-1000\022" +
+      "M\n\024effective_cache_size\030E \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\022\372\3071\0160-549755813888\"\232" +
+      "\001\n\023ConstraintExclusion\022$\n CONSTRAINT_EXC" +
+      "LUSION_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLU" +
+      "SION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022" +
+      "\"\n\036CONSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021" +
+      "ForceParallelMode\022#\n\037FORCE_PARALLEL_MODE" +
+      "_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON" +
+      "\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE" +
+      "_PARALLEL_MODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n" +
+      "\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DE" +
+      "BUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVE" +
+      "L_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_" +
+      "LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG" +
+      "_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023" +
+      "\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n" +
+      "\022\023\n\017LOG_LEVEL_PANIC\020\013\"\231\001\n\021LogErrorVerbos" +
+      "ity\022#\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000" +
+      "\022\035\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_E" +
+      "RROR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VE" +
+      "RBOSITY_VERBOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LO" +
+      "G_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEME" +
+      "NT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_" +
+      "STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346" +
+      "\001\n\024TransactionIsolation\022%\n!TRANSACTION_I" +
+      "SOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION_IS" +
+      "OLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSACTIO" +
+      "N_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANSACT" +
+      "ION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TRANS" +
+      "ACTION_ISOLATION_SERIALIZABLE\020\004\"[\n\013Bytea" +
+      "Output\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020" +
+      "BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAP" +
+      "ED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIF" +
+      "IED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINA" +
+      "RY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSP" +
+      "ECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XM" +
+      "L_OPTION_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n" +
+      "\033BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSL" +
+      "ASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023B" +
+      "ACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_" +
+      "SAFE_ENCODING\020\004B\201\001\n)yandex.cloud.api.mdb" +
+      ".postgresql.v1.configZTgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/post" +
+      "gresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

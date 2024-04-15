@@ -204,6 +204,37 @@ public final class ResourceServiceGrpc {
     return getCreateDirectoryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest,
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> getListOperationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOperations",
+      requestType = yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest.class,
+      responseType = yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest,
+      yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> getListOperationsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> getListOperationsMethod;
+    if ((getListOperationsMethod = ResourceServiceGrpc.getListOperationsMethod) == null) {
+      synchronized (ResourceServiceGrpc.class) {
+        if ((getListOperationsMethod = ResourceServiceGrpc.getListOperationsMethod) == null) {
+          ResourceServiceGrpc.getListOperationsMethod = getListOperationsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest, yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOperations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourceServiceMethodDescriptorSupplier("ListOperations"))
+              .build();
+        }
+      }
+    }
+    return getListOperationsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -317,6 +348,16 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDirectoryMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * ListOperations return all operations in backup service for given instance
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -361,6 +402,13 @@ public final class ResourceServiceGrpc {
                 yandex.cloud.api.backup.v1.ResourceServiceOuterClass.CreateDirectoryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE_DIRECTORY)))
+          .addMethod(
+            getListOperationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest,
+                yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse>(
+                  this, METHODID_LIST_OPERATIONS)))
           .build();
     }
   }
@@ -449,6 +497,17 @@ public final class ResourceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateDirectoryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListOperations return all operations in backup service for given instance
+     * </pre>
+     */
+    public void listOperations(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -528,6 +587,16 @@ public final class ResourceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation createDirectory(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.CreateDirectoryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateDirectoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListOperations return all operations in backup service for given instance
+     * </pre>
+     */
+    public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse listOperations(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -615,6 +684,17 @@ public final class ResourceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateDirectoryMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListOperations return all operations in backup service for given instance
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse> listOperations(
+        yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST = 0;
@@ -623,6 +703,7 @@ public final class ResourceServiceGrpc {
   private static final int METHODID_LIST_TASKS = 3;
   private static final int METHODID_LIST_DIRECTORY = 4;
   private static final int METHODID_CREATE_DIRECTORY = 5;
+  private static final int METHODID_LIST_OPERATIONS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -664,6 +745,10 @@ public final class ResourceServiceGrpc {
         case METHODID_CREATE_DIRECTORY:
           serviceImpl.createDirectory((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.CreateDirectoryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_OPERATIONS:
+          serviceImpl.listOperations((yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourceOperationsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -732,6 +817,7 @@ public final class ResourceServiceGrpc {
               .addMethod(getListTasksMethod())
               .addMethod(getListDirectoryMethod())
               .addMethod(getCreateDirectoryMethod())
+              .addMethod(getListOperationsMethod())
               .build();
         }
       }

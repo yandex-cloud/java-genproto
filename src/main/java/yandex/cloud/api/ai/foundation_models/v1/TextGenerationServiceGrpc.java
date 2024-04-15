@@ -102,7 +102,7 @@ public final class TextGenerationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions.
+     * A method for generating text completions in [synchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public void completion(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest request,
@@ -142,7 +142,7 @@ public final class TextGenerationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions.
+     * A method for generating text completions in [synchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public void completion(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionRequest request,
@@ -171,7 +171,7 @@ public final class TextGenerationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for generating text completions.
+     * A method for generating text completions in [synchronous mode](/docs/foundation-models/concepts/#working-mode).
      * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.CompletionResponse> completion(

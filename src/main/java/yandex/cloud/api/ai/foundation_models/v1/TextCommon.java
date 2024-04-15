@@ -31,8 +31,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -42,8 +42,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -53,8 +53,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -64,7 +64,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -74,7 +74,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -84,7 +84,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -223,8 +223,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -237,8 +237,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -251,8 +251,8 @@ public final class TextCommon {
     /**
      * <pre>
      * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-     * Default temperature: 0.6
+     * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+     * Default temperature: 0.3
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -267,7 +267,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -280,7 +280,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -293,7 +293,7 @@ public final class TextCommon {
     /**
      * <pre>
      * The limit on the number of tokens used for single completion generation.
-     * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+     * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -719,8 +719,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -732,8 +732,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -749,8 +749,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -771,8 +771,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -791,8 +791,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -815,8 +815,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -835,8 +835,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -849,8 +849,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -866,8 +866,8 @@ public final class TextCommon {
       /**
        * <pre>
        * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
-       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
-       * Default temperature: 0.6
+       * Lower values produce more straightforward responses while higher values lead to increased creativity and randomness.
+       * Default temperature: 0.3
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -892,7 +892,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -904,7 +904,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -920,7 +920,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -941,7 +941,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -960,7 +960,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -983,7 +983,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1002,7 +1002,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1015,7 +1015,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1031,7 +1031,7 @@ public final class TextCommon {
       /**
        * <pre>
        * The limit on the number of tokens used for single completion generation.
-       * Must be greater than zero. The maximum allowed parameter value may depend on the model used.
+       * Must be greater than zero. This maximum allowed parameter value may depend on the model being used.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1108,10 +1108,10 @@ public final class TextCommon {
 
     /**
      * <pre>
-     * Identifier of the message sender. Supported roles:
-     * * `system` - special role used to define the behaviour of the completion model
-     * * `assistant` - a role used by the model to generate responses
-     * * `user` - a role used by the user to describe requests to the model
+     * The ID of the message sender. Supported roles:
+     * * `system`: Special role used to define the behaviour of the completion model.
+     * * `assistant`: A role used by the model to generate responses.
+     * * `user`: A role used by the user to describe requests to the model.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1120,10 +1120,10 @@ public final class TextCommon {
     java.lang.String getRole();
     /**
      * <pre>
-     * Identifier of the message sender. Supported roles:
-     * * `system` - special role used to define the behaviour of the completion model
-     * * `assistant` - a role used by the model to generate responses
-     * * `user` - a role used by the user to describe requests to the model
+     * The ID of the message sender. Supported roles:
+     * * `system`: Special role used to define the behaviour of the completion model.
+     * * `assistant`: A role used by the model to generate responses.
+     * * `user`: A role used by the user to describe requests to the model.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1300,10 +1300,10 @@ public final class TextCommon {
     private volatile java.lang.Object role_;
     /**
      * <pre>
-     * Identifier of the message sender. Supported roles:
-     * * `system` - special role used to define the behaviour of the completion model
-     * * `assistant` - a role used by the model to generate responses
-     * * `user` - a role used by the user to describe requests to the model
+     * The ID of the message sender. Supported roles:
+     * * `system`: Special role used to define the behaviour of the completion model.
+     * * `assistant`: A role used by the model to generate responses.
+     * * `user`: A role used by the user to describe requests to the model.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1324,10 +1324,10 @@ public final class TextCommon {
     }
     /**
      * <pre>
-     * Identifier of the message sender. Supported roles:
-     * * `system` - special role used to define the behaviour of the completion model
-     * * `assistant` - a role used by the model to generate responses
-     * * `user` - a role used by the user to describe requests to the model
+     * The ID of the message sender. Supported roles:
+     * * `system`: Special role used to define the behaviour of the completion model.
+     * * `assistant`: A role used by the model to generate responses.
+     * * `user`: A role used by the user to describe requests to the model.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1776,10 +1776,10 @@ public final class TextCommon {
       private java.lang.Object role_ = "";
       /**
        * <pre>
-       * Identifier of the message sender. Supported roles:
-       * * `system` - special role used to define the behaviour of the completion model
-       * * `assistant` - a role used by the model to generate responses
-       * * `user` - a role used by the user to describe requests to the model
+       * The ID of the message sender. Supported roles:
+       * * `system`: Special role used to define the behaviour of the completion model.
+       * * `assistant`: A role used by the model to generate responses.
+       * * `user`: A role used by the user to describe requests to the model.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -1799,10 +1799,10 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * Identifier of the message sender. Supported roles:
-       * * `system` - special role used to define the behaviour of the completion model
-       * * `assistant` - a role used by the model to generate responses
-       * * `user` - a role used by the user to describe requests to the model
+       * The ID of the message sender. Supported roles:
+       * * `system`: Special role used to define the behaviour of the completion model.
+       * * `assistant`: A role used by the model to generate responses.
+       * * `user`: A role used by the user to describe requests to the model.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -1823,10 +1823,10 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * Identifier of the message sender. Supported roles:
-       * * `system` - special role used to define the behaviour of the completion model
-       * * `assistant` - a role used by the model to generate responses
-       * * `user` - a role used by the user to describe requests to the model
+       * The ID of the message sender. Supported roles:
+       * * `system`: Special role used to define the behaviour of the completion model.
+       * * `assistant`: A role used by the model to generate responses.
+       * * `user`: A role used by the user to describe requests to the model.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -1845,10 +1845,10 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * Identifier of the message sender. Supported roles:
-       * * `system` - special role used to define the behaviour of the completion model
-       * * `assistant` - a role used by the model to generate responses
-       * * `user` - a role used by the user to describe requests to the model
+       * The ID of the message sender. Supported roles:
+       * * `system`: Special role used to define the behaviour of the completion model.
+       * * `assistant`: A role used by the model to generate responses.
+       * * `user`: A role used by the user to describe requests to the model.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -1862,10 +1862,10 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * Identifier of the message sender. Supported roles:
-       * * `system` - special role used to define the behaviour of the completion model
-       * * `assistant` - a role used by the model to generate responses
-       * * `user` - a role used by the user to describe requests to the model
+       * The ID of the message sender. Supported roles:
+       * * `system`: Special role used to define the behaviour of the completion model.
+       * * `assistant`: A role used by the model to generate responses.
+       * * `user`: A role used by the user to describe requests to the model.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2063,7 +2063,7 @@ public final class TextCommon {
 
     /**
      * <pre>
-     * The number of tokens in the text parts of the model input.
+     * The number of tokens in the textual part of the model input.
      * </pre>
      *
      * <code>int64 input_text_tokens = 1;</code>
@@ -2093,7 +2093,7 @@ public final class TextCommon {
   }
   /**
    * <pre>
-   * An object representing the number of content tokens used by the completion model.
+   * An object representing the number of content [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ContentUsage}
@@ -2191,7 +2191,7 @@ public final class TextCommon {
     private long inputTextTokens_;
     /**
      * <pre>
-     * The number of tokens in the text parts of the model input.
+     * The number of tokens in the textual part of the model input.
      * </pre>
      *
      * <code>int64 input_text_tokens = 1;</code>
@@ -2414,7 +2414,7 @@ public final class TextCommon {
     }
     /**
      * <pre>
-     * An object representing the number of content tokens used by the completion model.
+     * An object representing the number of content [tokens](/docs/foundation-models/concepts/yandexgpt/tokens) used by the completion model.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.ContentUsage}
@@ -2578,7 +2578,7 @@ public final class TextCommon {
       private long inputTextTokens_ ;
       /**
        * <pre>
-       * The number of tokens in the text parts of the model input.
+       * The number of tokens in the textual part of the model input.
        * </pre>
        *
        * <code>int64 input_text_tokens = 1;</code>
@@ -2590,7 +2590,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The number of tokens in the text parts of the model input.
+       * The number of tokens in the textual part of the model input.
        * </pre>
        *
        * <code>int64 input_text_tokens = 1;</code>
@@ -2605,7 +2605,7 @@ public final class TextCommon {
       }
       /**
        * <pre>
-       * The number of tokens in the text parts of the model input.
+       * The number of tokens in the textual part of the model input.
        * </pre>
        *
        * <code>int64 input_text_tokens = 1;</code>

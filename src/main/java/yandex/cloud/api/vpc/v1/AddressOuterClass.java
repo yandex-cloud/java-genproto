@@ -5321,7 +5321,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * if not set, private zone used
+     * id of public zone
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5330,7 +5330,7 @@ public final class AddressOuterClass {
     java.lang.String getDnsZoneId();
     /**
      * <pre>
-     * if not set, private zone used
+     * id of public zone
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5510,7 +5510,7 @@ public final class AddressOuterClass {
     private volatile java.lang.Object dnsZoneId_;
     /**
      * <pre>
-     * if not set, private zone used
+     * id of public zone
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5531,7 +5531,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * if not set, private zone used
+     * id of public zone
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -6036,7 +6036,7 @@ public final class AddressOuterClass {
       private java.lang.Object dnsZoneId_ = "";
       /**
        * <pre>
-       * if not set, private zone used
+       * id of public zone
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6056,7 +6056,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * if not set, private zone used
+       * id of public zone
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6077,7 +6077,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * if not set, private zone used
+       * id of public zone
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6096,7 +6096,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * if not set, private zone used
+       * id of public zone
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6110,7 +6110,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * if not set, private zone used
+       * id of public zone
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>

@@ -3,6 +3,9 @@ package yandex.cloud.api.video.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Stream line management service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -308,6 +311,9 @@ public final class StreamLineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Stream line management service.
+   * </pre>
    */
   public static abstract class StreamLineServiceImplBase implements io.grpc.BindableService {
 
@@ -454,6 +460,9 @@ public final class StreamLineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Stream line management service.
+   * </pre>
    */
   public static final class StreamLineServiceStub extends io.grpc.stub.AbstractAsyncStub<StreamLineServiceStub> {
     private StreamLineServiceStub(
@@ -557,6 +566,9 @@ public final class StreamLineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Stream line management service.
+   * </pre>
    */
   public static final class StreamLineServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StreamLineServiceBlockingStub> {
     private StreamLineServiceBlockingStub(
@@ -652,6 +664,9 @@ public final class StreamLineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Stream line management service.
+   * </pre>
    */
   public static final class StreamLineServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StreamLineServiceFutureStub> {
     private StreamLineServiceFutureStub(
