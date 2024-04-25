@@ -84,7 +84,7 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -93,7 +93,7 @@ public final class HostOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -130,7 +130,7 @@ public final class HostOuterClass {
 
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -139,7 +139,7 @@ public final class HostOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -325,7 +325,7 @@ public final class HostOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * The type is not specified.
+       * Host type is not specified. Default value.
        * </pre>
        *
        * <code>TYPE_UNSPECIFIED = 0;</code>
@@ -360,7 +360,7 @@ public final class HostOuterClass {
 
       /**
        * <pre>
-       * The type is not specified.
+       * Host type is not specified. Default value.
        * </pre>
        *
        * <code>TYPE_UNSPECIFIED = 0;</code>
@@ -483,7 +483,7 @@ public final class HostOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -526,7 +526,7 @@ public final class HostOuterClass {
 
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -797,7 +797,7 @@ public final class HostOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -808,7 +808,7 @@ public final class HostOuterClass {
     }
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -862,7 +862,7 @@ public final class HostOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -873,7 +873,7 @@ public final class HostOuterClass {
     }
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -1684,7 +1684,7 @@ public final class HostOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -1695,7 +1695,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -1710,7 +1710,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -1724,7 +1724,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -1742,7 +1742,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Type type = 4;</code>
@@ -1913,7 +1913,7 @@ public final class HostOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -1924,7 +1924,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -1939,7 +1939,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -1953,7 +1953,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>
@@ -1971,7 +1971,7 @@ public final class HostOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.Host.Health health = 6;</code>

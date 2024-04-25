@@ -4152,7 +4152,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_UNSPECIFIED(0),
       /**
        * <pre>
-       * this policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig2_8.log_retention_ms] and other similar parameters.
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig2_8.log_retention_ms] and other similar parameters.
        * </pre>
        *
        * <code>CLEANUP_POLICY_DELETE = 1;</code>
@@ -4160,7 +4160,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_DELETE(1),
       /**
        * <pre>
-       * this policy compacts messages in log.
+       * This policy compacts messages in log.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT = 2;</code>
@@ -4168,7 +4168,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_COMPACT(2),
       /**
        * <pre>
-       * this policy use both compaction and deletion for messages and log segments.
+       * This policy use both compaction and deletion for messages and log segments.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>
@@ -4183,7 +4183,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * this policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig2_8.log_retention_ms] and other similar parameters.
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig2_8.log_retention_ms] and other similar parameters.
        * </pre>
        *
        * <code>CLEANUP_POLICY_DELETE = 1;</code>
@@ -4191,7 +4191,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_DELETE_VALUE = 1;
       /**
        * <pre>
-       * this policy compacts messages in log.
+       * This policy compacts messages in log.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT = 2;</code>
@@ -4199,7 +4199,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_COMPACT_VALUE = 2;
       /**
        * <pre>
-       * this policy use both compaction and deletion for messages and log segments.
+       * This policy use both compaction and deletion for messages and log segments.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>
@@ -8042,7 +8042,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_UNSPECIFIED(0),
       /**
        * <pre>
-       * this policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig3.log_retention_ms] and other similar parameters.
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig3.log_retention_ms] and other similar parameters.
        * </pre>
        *
        * <code>CLEANUP_POLICY_DELETE = 1;</code>
@@ -8050,7 +8050,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_DELETE(1),
       /**
        * <pre>
-       * this policy compacts messages in log.
+       * This policy compacts messages in log.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT = 2;</code>
@@ -8058,7 +8058,7 @@ public final class TopicOuterClass {
       CLEANUP_POLICY_COMPACT(2),
       /**
        * <pre>
-       * this policy use both compaction and deletion for messages and log segments.
+       * This policy use both compaction and deletion for messages and log segments.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>
@@ -8073,7 +8073,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * this policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig3.log_retention_ms] and other similar parameters.
+       * This policy discards log segments when either their retention time or log size limit is reached. See also: [KafkaConfig3.log_retention_ms] and other similar parameters.
        * </pre>
        *
        * <code>CLEANUP_POLICY_DELETE = 1;</code>
@@ -8081,7 +8081,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_DELETE_VALUE = 1;
       /**
        * <pre>
-       * this policy compacts messages in log.
+       * This policy compacts messages in log.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT = 2;</code>
@@ -8089,7 +8089,7 @@ public final class TopicOuterClass {
       public static final int CLEANUP_POLICY_COMPACT_VALUE = 2;
       /**
        * <pre>
-       * this policy use both compaction and deletion for messages and log segments.
+       * This policy use both compaction and deletion for messages and log segments.
        * </pre>
        *
        * <code>CLEANUP_POLICY_COMPACT_AND_DELETE = 3;</code>

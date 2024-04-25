@@ -14118,7 +14118,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Role of the host in the cluster.
+     * Role of the host in the cluster. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -14127,7 +14127,7 @@ public final class ClusterOuterClass {
     int getRoleValue();
     /**
      * <pre>
-     * Role of the host in the cluster.
+     * Role of the host in the cluster. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -14137,7 +14137,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -14146,7 +14146,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -14520,7 +14520,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Role of the host in the cluster is unknown.
+       * Role of the host in the cluster is unknown. Default value.
        * </pre>
        *
        * <code>ROLE_UNKNOWN = 0;</code>
@@ -14547,7 +14547,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Role of the host in the cluster is unknown.
+       * Role of the host in the cluster is unknown. Default value.
        * </pre>
        *
        * <code>ROLE_UNKNOWN = 0;</code>
@@ -14795,7 +14795,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -14838,7 +14838,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -15147,7 +15147,7 @@ public final class ClusterOuterClass {
     private int role_;
     /**
      * <pre>
-     * Role of the host in the cluster.
+     * Role of the host in the cluster. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -15158,7 +15158,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Role of the host in the cluster.
+     * Role of the host in the cluster. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -15174,7 +15174,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -15185,7 +15185,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -16507,7 +16507,7 @@ public final class ClusterOuterClass {
       private int role_ = 0;
       /**
        * <pre>
-       * Role of the host in the cluster.
+       * Role of the host in the cluster. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -16518,7 +16518,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Role of the host in the cluster.
+       * Role of the host in the cluster. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -16533,7 +16533,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Role of the host in the cluster.
+       * Role of the host in the cluster. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -16547,7 +16547,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Role of the host in the cluster.
+       * Role of the host in the cluster. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -16565,7 +16565,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Role of the host in the cluster.
+       * Role of the host in the cluster. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Role role = 5;</code>
@@ -16581,7 +16581,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -16592,7 +16592,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -16607,7 +16607,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -16621,7 +16621,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -16639,7 +16639,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Host.Health health = 6;</code>
@@ -22472,7 +22472,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Type of the service provided by the host.
+     * Type of the service provided by the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -22481,7 +22481,7 @@ public final class ClusterOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the service provided by the host.
+     * Type of the service provided by the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -22491,7 +22491,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -22500,7 +22500,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -22605,6 +22605,10 @@ public final class ClusterOuterClass {
     public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Service type of the host is unspecified. Default value.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       TYPE_UNSPECIFIED(0),
@@ -22628,6 +22632,10 @@ public final class ClusterOuterClass {
       ;
 
       /**
+       * <pre>
+       * Service type of the host is unspecified. Default value.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
@@ -22739,7 +22747,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Health of the server is unknown.
+       * Health of the server is unknown. Default value.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -22774,7 +22782,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Health of the server is unknown.
+       * Health of the server is unknown. Default value.
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -22894,7 +22902,7 @@ public final class ClusterOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the service provided by the host.
+     * Type of the service provided by the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -22905,7 +22913,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Type of the service provided by the host.
+     * Type of the service provided by the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -22921,7 +22929,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -22932,7 +22940,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of server availability.
+     * Aggregated health of the service. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -23264,7 +23272,7 @@ public final class ClusterOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the service provided by the host.
+       * Type of the service provided by the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -23275,7 +23283,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the service provided by the host.
+       * Type of the service provided by the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -23290,7 +23298,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the service provided by the host.
+       * Type of the service provided by the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -23304,7 +23312,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the service provided by the host.
+       * Type of the service provided by the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -23322,7 +23330,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the service provided by the host.
+       * Type of the service provided by the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Type type = 1;</code>
@@ -23338,7 +23346,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -23349,7 +23357,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -23364,7 +23372,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -23378,7 +23386,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>
@@ -23396,7 +23404,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of server availability.
+       * Aggregated health of the service. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.Service.Health health = 2;</code>

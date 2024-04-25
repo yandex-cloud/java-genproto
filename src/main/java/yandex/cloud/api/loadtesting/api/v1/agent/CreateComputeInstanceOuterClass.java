@@ -305,6 +305,28 @@ public final class CreateComputeInstanceOuterClass {
      */
     com.google.protobuf.ByteString
         getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * Default value: "standard-v2"
+     * </pre>
+     *
+     * <code>string platform_id = 15;</code>
+     * @return The platformId.
+     */
+    java.lang.String getPlatformId();
+    /**
+     * <pre>
+     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * Default value: "standard-v2"
+     * </pre>
+     *
+     * <code>string platform_id = 15;</code>
+     * @return The bytes for platformId.
+     */
+    com.google.protobuf.ByteString
+        getPlatformIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance}
@@ -322,6 +344,7 @@ public final class CreateComputeInstanceOuterClass {
       zoneId_ = "";
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
       serviceAccountId_ = "";
+      platformId_ = "";
     }
 
     @java.lang.Override
@@ -426,6 +449,12 @@ public final class CreateComputeInstanceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountId_ = s;
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              platformId_ = s;
               break;
             }
             default: {
@@ -936,6 +965,54 @@ public final class CreateComputeInstanceOuterClass {
       }
     }
 
+    public static final int PLATFORM_ID_FIELD_NUMBER = 15;
+    private volatile java.lang.Object platformId_;
+    /**
+     * <pre>
+     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * Default value: "standard-v2"
+     * </pre>
+     *
+     * <code>string platform_id = 15;</code>
+     * @return The platformId.
+     */
+    @java.lang.Override
+    public java.lang.String getPlatformId() {
+      java.lang.Object ref = platformId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        platformId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+     * Default value: "standard-v2"
+     * </pre>
+     *
+     * <code>string platform_id = 15;</code>
+     * @return The bytes for platformId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlatformIdBytes() {
+      java.lang.Object ref = platformId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        platformId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -976,6 +1053,9 @@ public final class CreateComputeInstanceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, serviceAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platformId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, platformId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1024,6 +1104,9 @@ public final class CreateComputeInstanceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, serviceAccountId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platformId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, platformId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1059,6 +1142,8 @@ public final class CreateComputeInstanceOuterClass {
           .equals(other.getNetworkInterfaceSpecsList())) return false;
       if (!getServiceAccountId()
           .equals(other.getServiceAccountId())) return false;
+      if (!getPlatformId()
+          .equals(other.getPlatformId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1094,6 +1179,8 @@ public final class CreateComputeInstanceOuterClass {
       }
       hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + PLATFORM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPlatformId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1278,6 +1365,8 @@ public final class CreateComputeInstanceOuterClass {
         }
         serviceAccountId_ = "";
 
+        platformId_ = "";
+
         return this;
       }
 
@@ -1330,6 +1419,7 @@ public final class CreateComputeInstanceOuterClass {
           result.networkInterfaceSpecs_ = networkInterfaceSpecsBuilder_.build();
         }
         result.serviceAccountId_ = serviceAccountId_;
+        result.platformId_ = platformId_;
         onBuilt();
         return result;
       }
@@ -1420,6 +1510,10 @@ public final class CreateComputeInstanceOuterClass {
         }
         if (!other.getServiceAccountId().isEmpty()) {
           serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (!other.getPlatformId().isEmpty()) {
+          platformId_ = other.platformId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2673,6 +2767,107 @@ public final class CreateComputeInstanceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object platformId_ = "";
+      /**
+       * <pre>
+       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * Default value: "standard-v2"
+       * </pre>
+       *
+       * <code>string platform_id = 15;</code>
+       * @return The platformId.
+       */
+      public java.lang.String getPlatformId() {
+        java.lang.Object ref = platformId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          platformId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * Default value: "standard-v2"
+       * </pre>
+       *
+       * <code>string platform_id = 15;</code>
+       * @return The bytes for platformId.
+       */
+      public com.google.protobuf.ByteString
+          getPlatformIdBytes() {
+        java.lang.Object ref = platformId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          platformId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * Default value: "standard-v2"
+       * </pre>
+       *
+       * <code>string platform_id = 15;</code>
+       * @param value The platformId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        platformId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * Default value: "standard-v2"
+       * </pre>
+       *
+       * <code>string platform_id = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlatformId() {
+        
+        platformId_ = getDefaultInstance().getPlatformId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the [Compute VM platform](docs/compute/concepts/vm-platforms) on which the agent will be created.
+       * Default value: "standard-v2"
+       * </pre>
+       *
+       * <code>string platform_id = 15;</code>
+       * @param value The bytes for platformId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlatformIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        platformId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2754,7 +2949,7 @@ public final class CreateComputeInstanceOuterClass {
       "create_compute_instance.proto\022%yandex.cl" +
       "oud.loadtesting.api.v1.agent\032.yandex/clo" +
       "ud/compute/v1/instance_service.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"\232\005\n\025CreateCo" +
+      "ndex/cloud/validation.proto\"\257\005\n\025CreateCo" +
       "mputeInstance\022\241\001\n\006labels\030\004 \003(\0132H.yandex." +
       "cloud.loadtesting.api.v1.agent.CreateCom" +
       "puteInstance.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
@@ -2769,12 +2964,13 @@ public final class CreateComputeInstanceOuterClass {
       "\004\350\3071\001\022U\n\027network_interface_specs\030\013 \003(\0132-" +
       ".yandex.cloud.compute.v1.NetworkInterfac" +
       "eSpecB\005\202\3101\0011\022\032\n\022service_account_id\030\016 \001(\t" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001B|\n)yandex.cloud.api.loa" +
-      "dtesting.api.v1.agentZOgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/loadtest" +
-      "ing/api/v1/agent;agentb\006proto3"
+      "\022\023\n\013platform_id\030\017 \001(\t\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadata" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B|\n" +
+      ")yandex.cloud.api.loadtesting.api.v1.age" +
+      "ntZOgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/loadtesting/api/v1/agent;ag" +
+      "entb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2787,7 +2983,7 @@ public final class CreateComputeInstanceOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_agent_CreateComputeInstance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_agent_CreateComputeInstance_descriptor,
-        new java.lang.String[] { "Labels", "ZoneId", "ResourcesSpec", "Metadata", "BootDiskSpec", "NetworkInterfaceSpecs", "ServiceAccountId", });
+        new java.lang.String[] { "Labels", "ZoneId", "ResourcesSpec", "Metadata", "BootDiskSpec", "NetworkInterfaceSpecs", "ServiceAccountId", "PlatformId", });
     internal_static_yandex_cloud_loadtesting_api_v1_agent_CreateComputeInstance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_loadtesting_api_v1_agent_CreateComputeInstance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_loadtesting_api_v1_agent_CreateComputeInstance_LabelsEntry_fieldAccessorTable = new

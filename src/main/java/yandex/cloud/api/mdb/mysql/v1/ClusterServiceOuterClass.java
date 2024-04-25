@@ -2984,7 +2984,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deployment environment of the cluster.
+     * Deployment environment of the MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -2993,7 +2993,7 @@ public final class ClusterServiceOuterClass {
     int getEnvironmentValue();
     /**
      * <pre>
-     * Deployment environment of the cluster.
+     * Deployment environment of the MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -3734,7 +3734,7 @@ public final class ClusterServiceOuterClass {
     private int environment_;
     /**
      * <pre>
-     * Deployment environment of the cluster.
+     * Deployment environment of the MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -3745,7 +3745,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Deployment environment of the cluster.
+     * Deployment environment of the MySQL cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5294,7 +5294,7 @@ public final class ClusterServiceOuterClass {
       private int environment_ = 0;
       /**
        * <pre>
-       * Deployment environment of the cluster.
+       * Deployment environment of the MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5305,7 +5305,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the cluster.
+       * Deployment environment of the MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5320,7 +5320,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the cluster.
+       * Deployment environment of the MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5334,7 +5334,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the cluster.
+       * Deployment environment of the MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -5352,7 +5352,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment of the cluster.
+       * Deployment environment of the MySQL cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 5;</code>
@@ -13485,7 +13485,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Deployment environment for the new cluster.
+     * Deployment environment of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -13494,7 +13494,7 @@ public final class ClusterServiceOuterClass {
     int getEnvironmentValue();
     /**
      * <pre>
-     * Deployment environment for the new cluster.
+     * Deployment environment of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14199,7 +14199,7 @@ public final class ClusterServiceOuterClass {
     private int environment_;
     /**
      * <pre>
-     * Deployment environment for the new cluster.
+     * Deployment environment of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -14210,7 +14210,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Deployment environment for the new cluster.
+     * Deployment environment of the new cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -15777,7 +15777,7 @@ public final class ClusterServiceOuterClass {
       private int environment_ = 0;
       /**
        * <pre>
-       * Deployment environment for the new cluster.
+       * Deployment environment of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -15788,7 +15788,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment for the new cluster.
+       * Deployment environment of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -15803,7 +15803,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment for the new cluster.
+       * Deployment environment of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -15817,7 +15817,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment for the new cluster.
+       * Deployment environment of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>
@@ -15835,7 +15835,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Deployment environment for the new cluster.
+       * Deployment environment of the new cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.Cluster.Environment environment = 7;</code>

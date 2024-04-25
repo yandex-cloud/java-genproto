@@ -7730,7 +7730,7 @@ public final class UserOuterClass {
       SYNCHRONOUS_COMMIT_UNSPECIFIED(0),
       /**
        * <pre>
-       * (default value) success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server.
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server. Default value.
        * </pre>
        *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
@@ -7738,7 +7738,7 @@ public final class UserOuterClass {
       SYNCHRONOUS_COMMIT_ON(1),
       /**
        * <pre>
-       * success is reported to the client even if the data is not in WAL.
+       * Success is reported to the client even if the data is not in WAL.
        * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
        * </pre>
        *
@@ -7747,7 +7747,7 @@ public final class UserOuterClass {
       SYNCHRONOUS_COMMIT_OFF(2),
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * Success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
        * The transaction may be lost due to storage subsystem failure on the master server.
        * </pre>
        *
@@ -7756,7 +7756,7 @@ public final class UserOuterClass {
       SYNCHRONOUS_COMMIT_LOCAL(3),
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * Success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
        * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
        * </pre>
        *
@@ -7765,7 +7765,7 @@ public final class UserOuterClass {
       SYNCHRONOUS_COMMIT_REMOTE_WRITE(4),
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
        * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
        * </pre>
        *
@@ -7781,7 +7781,7 @@ public final class UserOuterClass {
       public static final int SYNCHRONOUS_COMMIT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * (default value) success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server.
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), and WAL is written to the storage of both the master and its synchronous standby server. Default value.
        * </pre>
        *
        * <code>SYNCHRONOUS_COMMIT_ON = 1;</code>
@@ -7789,7 +7789,7 @@ public final class UserOuterClass {
       public static final int SYNCHRONOUS_COMMIT_ON_VALUE = 1;
       /**
        * <pre>
-       * success is reported to the client even if the data is not in WAL.
+       * Success is reported to the client even if the data is not in WAL.
        * There is no synchronous write operation, data may be loss in case of storage subsystem failure.
        * </pre>
        *
@@ -7798,7 +7798,7 @@ public final class UserOuterClass {
       public static final int SYNCHRONOUS_COMMIT_OFF_VALUE = 2;
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
+       * Success is reported to the client if the data is in WAL, and WAL is written to the storage of the master server.
        * The transaction may be lost due to storage subsystem failure on the master server.
        * </pre>
        *
@@ -7807,7 +7807,7 @@ public final class UserOuterClass {
       public static final int SYNCHRONOUS_COMMIT_LOCAL_VALUE = 3;
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
+       * Success is reported to the client if the data is in WAL, WAL is written to the storage of the master server, and the server's synchronous standby indicates that it has received WAL and written it out to its operating system.
        * The transaction may be lost due to simultaneous storage subsystem failure on the master and operating system's failure on the synchronous standby.
        * </pre>
        *
@@ -7816,7 +7816,7 @@ public final class UserOuterClass {
       public static final int SYNCHRONOUS_COMMIT_REMOTE_WRITE_VALUE = 4;
       /**
        * <pre>
-       * success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
+       * Success is reported to the client if the data is in WAL (Write-Ahead Log), WAL is written to the storage of the master server, and its synchronous standby indicates that it has received WAL and applied it.
        * The transaction may be lost due to irrecoverably failure of both the master and its synchronous standby.
        * </pre>
        *
@@ -7922,7 +7922,7 @@ public final class UserOuterClass {
       LOG_STATEMENT_UNSPECIFIED(0),
       /**
        * <pre>
-       * (default) logs none of SQL statements.
+       * Logs none of SQL statements. Default value.
        * </pre>
        *
        * <code>LOG_STATEMENT_NONE = 1;</code>
@@ -7930,7 +7930,7 @@ public final class UserOuterClass {
       LOG_STATEMENT_NONE(1),
       /**
        * <pre>
-       * logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
+       * Logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
        * </pre>
        *
        * <code>LOG_STATEMENT_DDL = 2;</code>
@@ -7938,7 +7938,7 @@ public final class UserOuterClass {
       LOG_STATEMENT_DDL(2),
       /**
        * <pre>
-       * logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
+       * Logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
        * </pre>
        *
        * <code>LOG_STATEMENT_MOD = 3;</code>
@@ -7946,7 +7946,7 @@ public final class UserOuterClass {
       LOG_STATEMENT_MOD(3),
       /**
        * <pre>
-       * logs all SQL statements.
+       * Logs all SQL statements.
        * </pre>
        *
        * <code>LOG_STATEMENT_ALL = 4;</code>
@@ -7961,7 +7961,7 @@ public final class UserOuterClass {
       public static final int LOG_STATEMENT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * (default) logs none of SQL statements.
+       * Logs none of SQL statements. Default value.
        * </pre>
        *
        * <code>LOG_STATEMENT_NONE = 1;</code>
@@ -7969,7 +7969,7 @@ public final class UserOuterClass {
       public static final int LOG_STATEMENT_NONE_VALUE = 1;
       /**
        * <pre>
-       * logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
+       * Logs all data definition statements (such as `CREATE`, `ALTER`, `DROP` and others).
        * </pre>
        *
        * <code>LOG_STATEMENT_DDL = 2;</code>
@@ -7977,7 +7977,7 @@ public final class UserOuterClass {
       public static final int LOG_STATEMENT_DDL_VALUE = 2;
       /**
        * <pre>
-       * logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
+       * Logs all statements that fall in the `LOG_STATEMENT_DDL` category plus data-modifying statements (such as `INSERT`, `UPDATE` and others).
        * </pre>
        *
        * <code>LOG_STATEMENT_MOD = 3;</code>
@@ -7985,7 +7985,7 @@ public final class UserOuterClass {
       public static final int LOG_STATEMENT_MOD_VALUE = 3;
       /**
        * <pre>
-       * logs all SQL statements.
+       * Logs all SQL statements.
        * </pre>
        *
        * <code>LOG_STATEMENT_ALL = 4;</code>
@@ -8089,7 +8089,7 @@ public final class UserOuterClass {
       TRANSACTION_ISOLATION_UNSPECIFIED(0),
       /**
        * <pre>
-       * this level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * This level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
@@ -8097,7 +8097,7 @@ public final class UserOuterClass {
       TRANSACTION_ISOLATION_READ_UNCOMMITTED(1),
       /**
        * <pre>
-       * (default) on this level query sees only data committed before the query began.
+       * On this level query sees only data committed before the query began. Default value.
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
@@ -8105,7 +8105,7 @@ public final class UserOuterClass {
       TRANSACTION_ISOLATION_READ_COMMITTED(2),
       /**
        * <pre>
-       * on this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * On this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
@@ -8113,7 +8113,7 @@ public final class UserOuterClass {
       TRANSACTION_ISOLATION_REPEATABLE_READ(3),
       /**
        * <pre>
-       * this level provides the strictest transaction isolation.
+       * This level provides the strictest transaction isolation.
        * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
        * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
        * </pre>
@@ -8130,7 +8130,7 @@ public final class UserOuterClass {
       public static final int TRANSACTION_ISOLATION_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * this level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
+       * This level behaves like `TRANSACTION_ISOLATION_READ_COMMITTED` in PostgreSQL.
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_READ_UNCOMMITTED = 1;</code>
@@ -8138,7 +8138,7 @@ public final class UserOuterClass {
       public static final int TRANSACTION_ISOLATION_READ_UNCOMMITTED_VALUE = 1;
       /**
        * <pre>
-       * (default) on this level query sees only data committed before the query began.
+       * On this level query sees only data committed before the query began. Default value.
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_READ_COMMITTED = 2;</code>
@@ -8146,7 +8146,7 @@ public final class UserOuterClass {
       public static final int TRANSACTION_ISOLATION_READ_COMMITTED_VALUE = 2;
       /**
        * <pre>
-       * on this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
+       * On this level all subsequent queries in a transaction will see the same rows, that were read by the first `SELECT` or `INSERT` query in this transaction, unchanged (these rows are locked during the first query).
        * </pre>
        *
        * <code>TRANSACTION_ISOLATION_REPEATABLE_READ = 3;</code>
@@ -8154,7 +8154,7 @@ public final class UserOuterClass {
       public static final int TRANSACTION_ISOLATION_REPEATABLE_READ_VALUE = 3;
       /**
        * <pre>
-       * this level provides the strictest transaction isolation.
+       * This level provides the strictest transaction isolation.
        * All queries in the current transaction see only the rows that were fixed prior to execution of the first `SELECT` or `INSERT` query in this transaction.
        * If read and write operations in a concurrent set of serializable transactions overlap and this may cause an inconsistency that is not possible during the serial transaction execution, then one of the transaction will be rolled back, triggering a serialization failure.
        * </pre>
@@ -8260,7 +8260,7 @@ public final class UserOuterClass {
       POOLING_MODE_UNSPECIFIED(0),
       /**
        * <pre>
-       * (default) server connection will be assigned to it for the whole duration the client stays connected
+       * Server connection will be assigned to it for the whole duration the client stays connected. Default value.
        * </pre>
        *
        * <code>SESSION = 1;</code>
@@ -8268,7 +8268,7 @@ public final class UserOuterClass {
       SESSION(1),
       /**
        * <pre>
-       * server connection is assigned to a client only during a transaction
+       * Server connection is assigned to a client only during a transaction.
        * </pre>
        *
        * <code>TRANSACTION = 2;</code>
@@ -8276,7 +8276,7 @@ public final class UserOuterClass {
       TRANSACTION(2),
       /**
        * <pre>
-       * server connection will be put back into the pool immediately after a query completes
+       * Server connection will be put back into the pool immediately after a query completes.
        * </pre>
        *
        * <code>STATEMENT = 3;</code>
@@ -8291,7 +8291,7 @@ public final class UserOuterClass {
       public static final int POOLING_MODE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * (default) server connection will be assigned to it for the whole duration the client stays connected
+       * Server connection will be assigned to it for the whole duration the client stays connected. Default value.
        * </pre>
        *
        * <code>SESSION = 1;</code>
@@ -8299,7 +8299,7 @@ public final class UserOuterClass {
       public static final int SESSION_VALUE = 1;
       /**
        * <pre>
-       * server connection is assigned to a client only during a transaction
+       * Server connection is assigned to a client only during a transaction.
        * </pre>
        *
        * <code>TRANSACTION = 2;</code>
@@ -8307,7 +8307,7 @@ public final class UserOuterClass {
       public static final int TRANSACTION_VALUE = 2;
       /**
        * <pre>
-       * server connection will be put back into the pool immediately after a query completes
+       * Server connection will be put back into the pool immediately after a query completes.
        * </pre>
        *
        * <code>STATEMENT = 3;</code>

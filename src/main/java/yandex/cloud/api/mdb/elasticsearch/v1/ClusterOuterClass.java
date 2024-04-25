@@ -726,7 +726,7 @@ public final class ClusterOuterClass {
       ENVIRONMENT_UNSPECIFIED(0),
       /**
        * <pre>
-       * stable environment with a conservative update policy when only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy when only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -734,7 +734,7 @@ public final class ClusterOuterClass {
       PRODUCTION(1),
       /**
        * <pre>
-       * environment with a more aggressive update policy when new versions are rolled out irrespective of backward compatibility.
+       * Environment with a more aggressive update policy when new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -749,7 +749,7 @@ public final class ClusterOuterClass {
       public static final int ENVIRONMENT_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * stable environment with a conservative update policy when only hotfixes are applied during regular maintenance.
+       * Stable environment with a conservative update policy when only hotfixes are applied during regular maintenance.
        * </pre>
        *
        * <code>PRODUCTION = 1;</code>
@@ -757,7 +757,7 @@ public final class ClusterOuterClass {
       public static final int PRODUCTION_VALUE = 1;
       /**
        * <pre>
-       * environment with a more aggressive update policy when new versions are rolled out irrespective of backward compatibility.
+       * Environment with a more aggressive update policy when new versions are rolled out irrespective of backward compatibility.
        * </pre>
        *
        * <code>PRESTABLE = 2;</code>
@@ -855,7 +855,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * state of the cluster is unknown ([Host.health] of all hosts in the cluster is `UNKNOWN`).
+       * State of the cluster is unknown ([Host.health] of all hosts in the cluster is `UNKNOWN`).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -863,7 +863,7 @@ public final class ClusterOuterClass {
       HEALTH_UNKNOWN(0),
       /**
        * <pre>
-       * cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
+       * Cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -871,7 +871,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * cluster is inoperable ([Host.health] of all hosts in the cluster is `DEAD`).
+       * Cluster is inoperable ([Host.health] of all hosts in the cluster is `DEAD`).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -879,7 +879,7 @@ public final class ClusterOuterClass {
       DEAD(2),
       /**
        * <pre>
-       * cluster is in degraded state ([Host.health] of at least one of the hosts in the cluster is not `ALIVE`).
+       * Cluster is in degraded state ([Host.health] of at least one of the hosts in the cluster is not `ALIVE`).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -890,7 +890,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * state of the cluster is unknown ([Host.health] of all hosts in the cluster is `UNKNOWN`).
+       * State of the cluster is unknown ([Host.health] of all hosts in the cluster is `UNKNOWN`).
        * </pre>
        *
        * <code>HEALTH_UNKNOWN = 0;</code>
@@ -898,7 +898,7 @@ public final class ClusterOuterClass {
       public static final int HEALTH_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
+       * Cluster is alive and well ([Host.health] of all hosts in the cluster is `ALIVE`).
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -906,7 +906,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * cluster is inoperable ([Host.health] of all hosts in the cluster is `DEAD`).
+       * Cluster is inoperable ([Host.health] of all hosts in the cluster is `DEAD`).
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -914,7 +914,7 @@ public final class ClusterOuterClass {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * cluster is in degraded state ([Host.health] of at least one of the hosts in the cluster is not `ALIVE`).
+       * Cluster is in degraded state ([Host.health] of at least one of the hosts in the cluster is not `ALIVE`).
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -1013,7 +1013,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * cluster state is unknown.
+       * Cluster state is unknown.
        * </pre>
        *
        * <code>STATUS_UNKNOWN = 0;</code>
@@ -1021,7 +1021,7 @@ public final class ClusterOuterClass {
       STATUS_UNKNOWN(0),
       /**
        * <pre>
-       * cluster is being created.
+       * Cluster is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -1029,7 +1029,7 @@ public final class ClusterOuterClass {
       CREATING(1),
       /**
        * <pre>
-       * cluster is running normally.
+       * Cluster is running normally.
        * </pre>
        *
        * <code>RUNNING = 2;</code>
@@ -1037,7 +1037,7 @@ public final class ClusterOuterClass {
       RUNNING(2),
       /**
        * <pre>
-       * cluster encountered a problem and cannot operate.
+       * Cluster encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 3;</code>
@@ -1045,7 +1045,7 @@ public final class ClusterOuterClass {
       ERROR(3),
       /**
        * <pre>
-       * cluster is being updated.
+       * Cluster is being updated.
        * </pre>
        *
        * <code>UPDATING = 4;</code>
@@ -1053,7 +1053,7 @@ public final class ClusterOuterClass {
       UPDATING(4),
       /**
        * <pre>
-       * cluster is stopping.
+       * Cluster is stopping.
        * </pre>
        *
        * <code>STOPPING = 5;</code>
@@ -1061,7 +1061,7 @@ public final class ClusterOuterClass {
       STOPPING(5),
       /**
        * <pre>
-       * cluster stopped.
+       * Cluster stopped.
        * </pre>
        *
        * <code>STOPPED = 6;</code>
@@ -1069,7 +1069,7 @@ public final class ClusterOuterClass {
       STOPPED(6),
       /**
        * <pre>
-       * cluster is starting.
+       * Cluster is starting.
        * </pre>
        *
        * <code>STARTING = 7;</code>
@@ -1080,7 +1080,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * cluster state is unknown.
+       * Cluster state is unknown.
        * </pre>
        *
        * <code>STATUS_UNKNOWN = 0;</code>
@@ -1088,7 +1088,7 @@ public final class ClusterOuterClass {
       public static final int STATUS_UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * cluster is being created.
+       * Cluster is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -1096,7 +1096,7 @@ public final class ClusterOuterClass {
       public static final int CREATING_VALUE = 1;
       /**
        * <pre>
-       * cluster is running normally.
+       * Cluster is running normally.
        * </pre>
        *
        * <code>RUNNING = 2;</code>
@@ -1104,7 +1104,7 @@ public final class ClusterOuterClass {
       public static final int RUNNING_VALUE = 2;
       /**
        * <pre>
-       * cluster encountered a problem and cannot operate.
+       * Cluster encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 3;</code>
@@ -1112,7 +1112,7 @@ public final class ClusterOuterClass {
       public static final int ERROR_VALUE = 3;
       /**
        * <pre>
-       * cluster is being updated.
+       * Cluster is being updated.
        * </pre>
        *
        * <code>UPDATING = 4;</code>
@@ -1120,7 +1120,7 @@ public final class ClusterOuterClass {
       public static final int UPDATING_VALUE = 4;
       /**
        * <pre>
-       * cluster is stopping.
+       * Cluster is stopping.
        * </pre>
        *
        * <code>STOPPING = 5;</code>
@@ -1128,7 +1128,7 @@ public final class ClusterOuterClass {
       public static final int STOPPING_VALUE = 5;
       /**
        * <pre>
-       * cluster stopped.
+       * Cluster stopped.
        * </pre>
        *
        * <code>STOPPED = 6;</code>
@@ -1136,7 +1136,7 @@ public final class ClusterOuterClass {
       public static final int STOPPED_VALUE = 6;
       /**
        * <pre>
-       * cluster is starting.
+       * Cluster is starting.
        * </pre>
        *
        * <code>STARTING = 7;</code>
@@ -10835,7 +10835,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Aggregated host health data.
+     * Aggregated host health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -10844,7 +10844,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Aggregated host health data.
+     * Aggregated host health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -11088,12 +11088,16 @@ public final class ClusterOuterClass {
     public enum Type
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Host type is unspecified. Default value.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * the host is an Elasticsearch data node.
+       * The host is an Elasticsearch data node.
        * </pre>
        *
        * <code>DATA_NODE = 1;</code>
@@ -11101,7 +11105,7 @@ public final class ClusterOuterClass {
       DATA_NODE(1),
       /**
        * <pre>
-       * the host is an Elasticsearch master node.
+       * The host is an Elasticsearch master node.
        * </pre>
        *
        * <code>MASTER_NODE = 2;</code>
@@ -11111,12 +11115,16 @@ public final class ClusterOuterClass {
       ;
 
       /**
+       * <pre>
+       * Host type is unspecified. Default value.
+       * </pre>
+       *
        * <code>TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * the host is an Elasticsearch data node.
+       * The host is an Elasticsearch data node.
        * </pre>
        *
        * <code>DATA_NODE = 1;</code>
@@ -11124,7 +11132,7 @@ public final class ClusterOuterClass {
       public static final int DATA_NODE_VALUE = 1;
       /**
        * <pre>
-       * the host is an Elasticsearch master node.
+       * The host is an Elasticsearch master node.
        * </pre>
        *
        * <code>MASTER_NODE = 2;</code>
@@ -11222,7 +11230,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * health of the host is unknown.
+       * Health of the host is unknown.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -11230,7 +11238,7 @@ public final class ClusterOuterClass {
       UNKNOWN(0),
       /**
        * <pre>
-       * the host is performing all its functions normally.
+       * The host is performing all its functions normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -11238,7 +11246,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * the host is inoperable and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -11246,7 +11254,7 @@ public final class ClusterOuterClass {
       DEAD(2),
       /**
        * <pre>
-       * the host is degraded and can perform only some of its essential functions.
+       * The host is degraded and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -11257,7 +11265,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * health of the host is unknown.
+       * Health of the host is unknown.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -11265,7 +11273,7 @@ public final class ClusterOuterClass {
       public static final int UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * the host is performing all its functions normally.
+       * The host is performing all its functions normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -11273,7 +11281,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * the host is inoperable and cannot perform any of its essential functions.
+       * The host is inoperable and cannot perform any of its essential functions.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -11281,7 +11289,7 @@ public final class ClusterOuterClass {
       public static final int DEAD_VALUE = 2;
       /**
        * <pre>
-       * the host is degraded and can perform only some of its essential functions.
+       * The host is degraded and can perform only some of its essential functions.
        * </pre>
        *
        * <code>DEGRADED = 3;</code>
@@ -11568,7 +11576,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Aggregated host health data.
+     * Aggregated host health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -11579,7 +11587,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Aggregated host health data.
+     * Aggregated host health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -12691,7 +12699,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Aggregated host health data.
+       * Aggregated host health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -12702,7 +12710,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated host health data.
+       * Aggregated host health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -12717,7 +12725,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated host health data.
+       * Aggregated host health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -12731,7 +12739,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated host health data.
+       * Aggregated host health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -12749,7 +12757,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Aggregated host health data.
+       * Aggregated host health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Host.Health health = 6;</code>
@@ -13293,7 +13301,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Service health data.
+     * Service health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -13302,7 +13310,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Service health data.
+     * Service health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -13416,7 +13424,7 @@ public final class ClusterOuterClass {
       TYPE_UNSPECIFIED(0),
       /**
        * <pre>
-       * the Elasticsearch service.
+       * The Elasticsearch service.
        * </pre>
        *
        * <code>ELASTICSEARCH = 1;</code>
@@ -13431,7 +13439,7 @@ public final class ClusterOuterClass {
       public static final int TYPE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * the Elasticsearch service.
+       * The Elasticsearch service.
        * </pre>
        *
        * <code>ELASTICSEARCH = 1;</code>
@@ -13528,7 +13536,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * health of the service is unknown.
+       * Health of the service is unknown.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -13536,7 +13544,7 @@ public final class ClusterOuterClass {
       UNKNOWN(0),
       /**
        * <pre>
-       * the service is working normally.
+       * The service is working normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -13544,7 +13552,7 @@ public final class ClusterOuterClass {
       ALIVE(1),
       /**
        * <pre>
-       * the service is dead or unresponsive.
+       * The service is dead or unresponsive.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -13555,7 +13563,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * health of the service is unknown.
+       * Health of the service is unknown.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -13563,7 +13571,7 @@ public final class ClusterOuterClass {
       public static final int UNKNOWN_VALUE = 0;
       /**
        * <pre>
-       * the service is working normally.
+       * The service is working normally.
        * </pre>
        *
        * <code>ALIVE = 1;</code>
@@ -13571,7 +13579,7 @@ public final class ClusterOuterClass {
       public static final int ALIVE_VALUE = 1;
       /**
        * <pre>
-       * the service is dead or unresponsive.
+       * The service is dead or unresponsive.
        * </pre>
        *
        * <code>DEAD = 2;</code>
@@ -13693,7 +13701,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Service health data.
+     * Service health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -13704,7 +13712,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Service health data.
+     * Service health data. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -14114,7 +14122,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Service health data.
+       * Service health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -14125,7 +14133,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service health data.
+       * Service health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -14140,7 +14148,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service health data.
+       * Service health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -14154,7 +14162,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service health data.
+       * Service health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>
@@ -14172,7 +14180,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Service health data.
+       * Service health data. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.elasticsearch.v1.Service.Health health = 2;</code>

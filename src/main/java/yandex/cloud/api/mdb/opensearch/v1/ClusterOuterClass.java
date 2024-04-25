@@ -14378,7 +14378,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -14387,7 +14387,7 @@ public final class ClusterOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -14397,7 +14397,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -14406,7 +14406,7 @@ public final class ClusterOuterClass {
     int getHealthValue();
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -14736,7 +14736,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -14771,7 +14771,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * Health of the host is unknown.
+       * Health of the host is unknown. Default value.
        * </pre>
        *
        * <code>UNKNOWN = 0;</code>
@@ -14894,7 +14894,7 @@ public final class ClusterOuterClass {
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * The type is not specified.
+       * Type of the host is unspecified. Default value.
        * </pre>
        *
        * <code>TYPE_UNSPECIFIED = 0;</code>
@@ -14921,7 +14921,7 @@ public final class ClusterOuterClass {
 
       /**
        * <pre>
-       * The type is not specified.
+       * Type of the host is unspecified. Default value.
        * </pre>
        *
        * <code>TYPE_UNSPECIFIED = 0;</code>
@@ -18434,7 +18434,7 @@ public final class ClusterOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -18445,7 +18445,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Type of the host.
+     * Type of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -18461,7 +18461,7 @@ public final class ClusterOuterClass {
     private int health_;
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -18472,7 +18472,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Status code of the aggregated health of the host.
+     * Aggregated health of the host. If the field has default value, it is not returned in the response.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -19691,7 +19691,7 @@ public final class ClusterOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -19702,7 +19702,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -19717,7 +19717,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -19731,7 +19731,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -19749,7 +19749,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Type of the host.
+       * Type of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Type type = 5;</code>
@@ -19765,7 +19765,7 @@ public final class ClusterOuterClass {
       private int health_ = 0;
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -19776,7 +19776,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -19791,7 +19791,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -19805,7 +19805,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>
@@ -19823,7 +19823,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Status code of the aggregated health of the host.
+       * Aggregated health of the host. If the field has default value, it is not returned in the response.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.opensearch.v1.Host.Health health = 6;</code>

@@ -2805,7 +2805,7 @@ public final class UserOuterClass {
       ACCESS_ROLE_UNSPECIFIED(0),
       /**
        * <pre>
-       * producer role for the user.
+       * Producer role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_PRODUCER = 1;</code>
@@ -2813,7 +2813,7 @@ public final class UserOuterClass {
       ACCESS_ROLE_PRODUCER(1),
       /**
        * <pre>
-       * consumer role for the user.
+       * Consumer role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_CONSUMER = 2;</code>
@@ -2821,7 +2821,7 @@ public final class UserOuterClass {
       ACCESS_ROLE_CONSUMER(2),
       /**
        * <pre>
-       * admin role for the user.
+       * Admin role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_ADMIN = 3;</code>
@@ -2836,7 +2836,7 @@ public final class UserOuterClass {
       public static final int ACCESS_ROLE_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * producer role for the user.
+       * Producer role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_PRODUCER = 1;</code>
@@ -2844,7 +2844,7 @@ public final class UserOuterClass {
       public static final int ACCESS_ROLE_PRODUCER_VALUE = 1;
       /**
        * <pre>
-       * consumer role for the user.
+       * Consumer role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_CONSUMER = 2;</code>
@@ -2852,7 +2852,7 @@ public final class UserOuterClass {
       public static final int ACCESS_ROLE_CONSUMER_VALUE = 2;
       /**
        * <pre>
-       * admin role for the user.
+       * Admin role for the user.
        * </pre>
        *
        * <code>ACCESS_ROLE_ADMIN = 3;</code>

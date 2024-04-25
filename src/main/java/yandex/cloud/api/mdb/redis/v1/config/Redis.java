@@ -176,7 +176,7 @@ public final class Redis {
 
     /**
      * <pre>
-     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+     * String setting for pub&#92;sub functionality.
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -185,7 +185,7 @@ public final class Redis {
     java.lang.String getNotifyKeyspaceEvents();
     /**
      * <pre>
-     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+     * String setting for pub&#92;sub functionality.
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -2153,7 +2153,7 @@ public final class Redis {
     private volatile java.lang.Object notifyKeyspaceEvents_;
     /**
      * <pre>
-     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+     * String setting for pub&#92;sub functionality.
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -2174,7 +2174,7 @@ public final class Redis {
     }
     /**
      * <pre>
-     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+     * String setting for pub&#92;sub functionality.
      * </pre>
      *
      * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -3676,7 +3676,7 @@ public final class Redis {
       private java.lang.Object notifyKeyspaceEvents_ = "";
       /**
        * <pre>
-       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+       * String setting for pub&#92;sub functionality.
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -3696,7 +3696,7 @@ public final class Redis {
       }
       /**
        * <pre>
-       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+       * String setting for pub&#92;sub functionality.
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -3717,7 +3717,7 @@ public final class Redis {
       }
       /**
        * <pre>
-       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+       * String setting for pub&#92;sub functionality.
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -3736,7 +3736,7 @@ public final class Redis {
       }
       /**
        * <pre>
-       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+       * String setting for pub&#92;sub functionality.
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>
@@ -3750,7 +3750,7 @@ public final class Redis {
       }
       /**
        * <pre>
-       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAtm.
+       * String setting for pub&#92;sub functionality.
        * </pre>
        *
        * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAtm]{0,13}"];</code>

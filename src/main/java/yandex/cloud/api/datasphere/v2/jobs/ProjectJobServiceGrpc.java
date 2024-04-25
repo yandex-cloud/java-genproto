@@ -50,6 +50,37 @@ public final class ProjectJobServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCloneMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Clone",
+      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCloneMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCloneMethod;
+    if ((getCloneMethod = ProjectJobServiceGrpc.getCloneMethod) == null) {
+      synchronized (ProjectJobServiceGrpc.class) {
+        if ((getCloneMethod = ProjectJobServiceGrpc.getCloneMethod) == null) {
+          ProjectJobServiceGrpc.getCloneMethod = getCloneMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Clone"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("Clone"))
+              .build();
+        }
+      }
+    }
+    return getCloneMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ExecuteProjectJobRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getExecuteMethod;
 
@@ -329,27 +360,27 @@ public final class ProjectJobServiceGrpc {
     return getDeleteDataMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteAllDataMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteAllData",
-      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest.class,
+      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteAllDataMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteAllDataMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteAllDataMethod;
     if ((getDeleteAllDataMethod = ProjectJobServiceGrpc.getDeleteAllDataMethod) == null) {
       synchronized (ProjectJobServiceGrpc.class) {
         if ((getDeleteAllDataMethod = ProjectJobServiceGrpc.getDeleteAllDataMethod) == null) {
           ProjectJobServiceGrpc.getDeleteAllDataMethod = getDeleteAllDataMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAllData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest.getDefaultInstance()))
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
               .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("DeleteAllData"))
@@ -358,6 +389,37 @@ public final class ProjectJobServiceGrpc {
       }
     }
     return getDeleteAllDataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> getSetDataTtlMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetDataTtl",
+      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest.class,
+      responseType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> getSetDataTtlMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> getSetDataTtlMethod;
+    if ((getSetDataTtlMethod = ProjectJobServiceGrpc.getSetDataTtlMethod) == null) {
+      synchronized (ProjectJobServiceGrpc.class) {
+        if ((getSetDataTtlMethod = ProjectJobServiceGrpc.getSetDataTtlMethod) == null) {
+          ProjectJobServiceGrpc.getSetDataTtlMethod = getSetDataTtlMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDataTtl"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("SetDataTtl"))
+              .build();
+        }
+      }
+    }
+    return getSetDataTtlMethod;
   }
 
   /**
@@ -420,6 +482,16 @@ public final class ProjectJobServiceGrpc {
     public void create(yandex.cloud.api.datasphere.v2.jobs.DSPJS.CreateProjectJobRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Clone job.
+     * </pre>
+     */
+    public void clone(yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloneMethod(), responseObserver);
     }
 
     /**
@@ -518,9 +590,19 @@ public final class ProjectJobServiceGrpc {
      * Delete all jobs data.
      * </pre>
      */
-    public void deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest request,
+    public void deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAllDataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update job data ttl.
+     * </pre>
+     */
+    public void setDataTtl(yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDataTtlMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -532,6 +614,13 @@ public final class ProjectJobServiceGrpc {
                 yandex.cloud.api.datasphere.v2.jobs.DSPJS.CreateProjectJobRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getCloneMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CLONE)))
           .addMethod(
             getExecuteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -599,9 +688,16 @@ public final class ProjectJobServiceGrpc {
             getDeleteAllDataMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest,
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_ALL_DATA)))
+          .addMethod(
+            getSetDataTtlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest,
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse>(
+                  this, METHODID_SET_DATA_TTL)))
           .build();
     }
   }
@@ -633,6 +729,17 @@ public final class ProjectJobServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Clone job.
+     * </pre>
+     */
+    public void clone(yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCloneMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -740,10 +847,21 @@ public final class ProjectJobServiceGrpc {
      * Delete all jobs data.
      * </pre>
      */
-    public void deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest request,
+    public void deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAllDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update job data ttl.
+     * </pre>
+     */
+    public void setDataTtl(yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetDataTtlMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -773,6 +891,16 @@ public final class ProjectJobServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.datasphere.v2.jobs.DSPJS.CreateProjectJobRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Clone job.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation clone(yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCloneMethod(), getCallOptions(), request);
     }
 
     /**
@@ -873,9 +1001,19 @@ public final class ProjectJobServiceGrpc {
      * Delete all jobs data.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteAllData(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAllDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update job data ttl.
+     * </pre>
+     */
+    public yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse setDataTtl(yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetDataTtlMethod(), getCallOptions(), request);
     }
   }
 
@@ -906,6 +1044,17 @@ public final class ProjectJobServiceGrpc {
         yandex.cloud.api.datasphere.v2.jobs.DSPJS.CreateProjectJobRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Clone job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> clone(
+        yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCloneMethod(), getCallOptions()), request);
     }
 
     /**
@@ -991,23 +1140,36 @@ public final class ProjectJobServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteAllData(
-        yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest request) {
+        yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAllDataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update job data ttl.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse> setDataTtl(
+        yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetDataTtlMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE = 0;
-  private static final int METHODID_EXECUTE = 1;
-  private static final int METHODID_CANCEL = 2;
-  private static final int METHODID_READ_STD_LOGS = 3;
-  private static final int METHODID_READ_LOGS = 4;
-  private static final int METHODID_DOWNLOAD_JOB_FILES = 5;
-  private static final int METHODID_LIST = 6;
-  private static final int METHODID_GET = 7;
-  private static final int METHODID_DELETE = 8;
-  private static final int METHODID_DELETE_DATA = 9;
-  private static final int METHODID_DELETE_ALL_DATA = 10;
+  private static final int METHODID_CLONE = 1;
+  private static final int METHODID_EXECUTE = 2;
+  private static final int METHODID_CANCEL = 3;
+  private static final int METHODID_READ_STD_LOGS = 4;
+  private static final int METHODID_READ_LOGS = 5;
+  private static final int METHODID_DOWNLOAD_JOB_FILES = 6;
+  private static final int METHODID_LIST = 7;
+  private static final int METHODID_GET = 8;
+  private static final int METHODID_DELETE = 9;
+  private static final int METHODID_DELETE_DATA = 10;
+  private static final int METHODID_DELETE_ALL_DATA = 11;
+  private static final int METHODID_SET_DATA_TTL = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1028,6 +1190,10 @@ public final class ProjectJobServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.datasphere.v2.jobs.DSPJS.CreateProjectJobRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_CLONE:
+          serviceImpl.clone((yandex.cloud.api.datasphere.v2.jobs.DSPJS.CloneProjectJobRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_EXECUTE:
@@ -1067,8 +1233,12 @@ public final class ProjectJobServiceGrpc {
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE_ALL_DATA:
-          serviceImpl.deleteAllData((yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllDataRequest) request,
+          serviceImpl.deleteAllData((yandex.cloud.api.datasphere.v2.jobs.DSPJS.DeleteAllProjectJobDataRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_SET_DATA_TTL:
+          serviceImpl.setDataTtl((yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.SetProjectJobDataTtlResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1132,6 +1302,7 @@ public final class ProjectJobServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProjectJobServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
+              .addMethod(getCloneMethod())
               .addMethod(getExecuteMethod())
               .addMethod(getCancelMethod())
               .addMethod(getReadStdLogsMethod())
@@ -1142,6 +1313,7 @@ public final class ProjectJobServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getDeleteDataMethod())
               .addMethod(getDeleteAllDataMethod())
+              .addMethod(getSetDataTtlMethod())
               .build();
         }
       }
