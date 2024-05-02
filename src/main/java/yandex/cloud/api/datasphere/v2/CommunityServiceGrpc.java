@@ -328,6 +328,99 @@ public final class CommunityServiceGrpc {
     return getRemoveResourceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> getGetRestrictionsMetaMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRestrictionsMeta",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> getGetRestrictionsMetaMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> getGetRestrictionsMetaMethod;
+    if ((getGetRestrictionsMetaMethod = CommunityServiceGrpc.getGetRestrictionsMetaMethod) == null) {
+      synchronized (CommunityServiceGrpc.class) {
+        if ((getGetRestrictionsMetaMethod = CommunityServiceGrpc.getGetRestrictionsMetaMethod) == null) {
+          CommunityServiceGrpc.getGetRestrictionsMetaMethod = getGetRestrictionsMetaMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRestrictionsMeta"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CommunityServiceMethodDescriptorSupplier("GetRestrictionsMeta"))
+              .build();
+        }
+      }
+    }
+    return getGetRestrictionsMetaMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest,
+      yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> getGetRestrictionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRestrictions",
+      requestType = yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.class,
+      responseType = yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest,
+      yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> getGetRestrictionsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> getGetRestrictionsMethod;
+    if ((getGetRestrictionsMethod = CommunityServiceGrpc.getGetRestrictionsMethod) == null) {
+      synchronized (CommunityServiceGrpc.class) {
+        if ((getGetRestrictionsMethod = CommunityServiceGrpc.getGetRestrictionsMethod) == null) {
+          CommunityServiceGrpc.getGetRestrictionsMethod = getGetRestrictionsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRestrictions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CommunityServiceMethodDescriptorSupplier("GetRestrictions"))
+              .build();
+        }
+      }
+    }
+    return getGetRestrictionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetRestrictionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetRestrictions",
+      requestType = yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetRestrictionsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetRestrictionsMethod;
+    if ((getSetRestrictionsMethod = CommunityServiceGrpc.getSetRestrictionsMethod) == null) {
+      synchronized (CommunityServiceGrpc.class) {
+        if ((getSetRestrictionsMethod = CommunityServiceGrpc.getSetRestrictionsMethod) == null) {
+          CommunityServiceGrpc.getSetRestrictionsMethod = getSetRestrictionsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetRestrictions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CommunityServiceMethodDescriptorSupplier("SetRestrictions"))
+              .build();
+        }
+      }
+    }
+    return getSetRestrictionsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -479,6 +572,36 @@ public final class CommunityServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveResourceMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Get meta information about available restrictions.
+     * </pre>
+     */
+    public void getRestrictionsMeta(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRestrictionsMetaMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get current community restrictions.
+     * </pre>
+     */
+    public void getRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRestrictionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set community restrictions.
+     * </pre>
+     */
+    public void setRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetRestrictionsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -551,6 +674,27 @@ public final class CommunityServiceGrpc {
                 yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_RESOURCE)))
+          .addMethod(
+            getGetRestrictionsMetaMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse>(
+                  this, METHODID_GET_RESTRICTIONS_META)))
+          .addMethod(
+            getGetRestrictionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest,
+                yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse>(
+                  this, METHODID_GET_RESTRICTIONS)))
+          .addMethod(
+            getSetRestrictionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_RESTRICTIONS)))
           .build();
     }
   }
@@ -681,6 +825,39 @@ public final class CommunityServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveResourceMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get meta information about available restrictions.
+     * </pre>
+     */
+    public void getRestrictionsMeta(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRestrictionsMetaMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get current community restrictions.
+     * </pre>
+     */
+    public void getRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRestrictionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set community restrictions.
+     * </pre>
+     */
+    public void setRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetRestrictionsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -798,6 +975,36 @@ public final class CommunityServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get meta information about available restrictions.
+     * </pre>
+     */
+    public yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse getRestrictionsMeta(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRestrictionsMetaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get current community restrictions.
+     * </pre>
+     */
+    public yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse getRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRestrictionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Set community restrictions.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setRestrictions(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetRestrictionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -927,6 +1134,39 @@ public final class CommunityServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveResourceMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Get meta information about available restrictions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> getRestrictionsMeta(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRestrictionsMetaMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get current community restrictions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse> getRestrictions(
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRestrictionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Set community restrictions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setRestrictions(
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetRestrictionsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -939,6 +1179,9 @@ public final class CommunityServiceGrpc {
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
   private static final int METHODID_ADD_RESOURCE = 8;
   private static final int METHODID_REMOVE_RESOURCE = 9;
+  private static final int METHODID_GET_RESTRICTIONS_META = 10;
+  private static final int METHODID_GET_RESTRICTIONS = 11;
+  private static final int METHODID_SET_RESTRICTIONS = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -995,6 +1238,18 @@ public final class CommunityServiceGrpc {
           break;
         case METHODID_REMOVE_RESOURCE:
           serviceImpl.removeResource((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_GET_RESTRICTIONS_META:
+          serviceImpl.getRestrictionsMeta((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse>) responseObserver);
+          break;
+        case METHODID_GET_RESTRICTIONS:
+          serviceImpl.getRestrictions((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.Restrictions.RestrictionsResponse>) responseObserver);
+          break;
+        case METHODID_SET_RESTRICTIONS:
+          serviceImpl.setRestrictions((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -1068,6 +1323,9 @@ public final class CommunityServiceGrpc {
               .addMethod(getUpdateAccessBindingsMethod())
               .addMethod(getAddResourceMethod())
               .addMethod(getRemoveResourceMethod())
+              .addMethod(getGetRestrictionsMetaMethod())
+              .addMethod(getGetRestrictionsMethod())
+              .addMethod(getSetRestrictionsMethod())
               .build();
         }
       }

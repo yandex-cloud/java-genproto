@@ -49,6 +49,37 @@ public final class TextClassificationServiceGrpc {
     return getClassifyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest,
+      yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> getFewShotClassifyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FewShotClassify",
+      requestType = yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.class,
+      responseType = yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest,
+      yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> getFewShotClassifyMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> getFewShotClassifyMethod;
+    if ((getFewShotClassifyMethod = TextClassificationServiceGrpc.getFewShotClassifyMethod) == null) {
+      synchronized (TextClassificationServiceGrpc.class) {
+        if ((getFewShotClassifyMethod = TextClassificationServiceGrpc.getFewShotClassifyMethod) == null) {
+          TextClassificationServiceGrpc.getFewShotClassifyMethod = getFewShotClassifyMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FewShotClassify"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TextClassificationServiceMethodDescriptorSupplier("FewShotClassify"))
+              .build();
+        }
+      }
+    }
+    return getFewShotClassifyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -102,12 +133,22 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for classifying text.
+     * RPC method for text classification.
      * </pre>
      */
     public void classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClassifyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RPC method for few-shot text classification.
+     * </pre>
+     */
+    public void fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFewShotClassifyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -119,6 +160,13 @@ public final class TextClassificationServiceGrpc {
                 yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest,
                 yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse>(
                   this, METHODID_CLASSIFY)))
+          .addMethod(
+            getFewShotClassifyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest,
+                yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse>(
+                  this, METHODID_FEW_SHOT_CLASSIFY)))
           .build();
     }
   }
@@ -142,13 +190,24 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for classifying text.
+     * RPC method for text classification.
      * </pre>
      */
     public void classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getClassifyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RPC method for few-shot text classification.
+     * </pre>
+     */
+    public void fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFewShotClassifyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -171,12 +230,22 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for classifying text.
+     * RPC method for text classification.
      * </pre>
      */
     public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse classify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getClassifyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RPC method for few-shot text classification.
+     * </pre>
+     */
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse fewShotClassify(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFewShotClassifyMethod(), getCallOptions(), request);
     }
   }
 
@@ -199,7 +268,7 @@ public final class TextClassificationServiceGrpc {
 
     /**
      * <pre>
-     * RPC method for classifying text.
+     * RPC method for text classification.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse> classify(
@@ -207,9 +276,21 @@ public final class TextClassificationServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getClassifyMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * RPC method for few-shot text classification.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse> fewShotClassify(
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFewShotClassifyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CLASSIFY = 0;
+  private static final int METHODID_FEW_SHOT_CLASSIFY = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -231,6 +312,10 @@ public final class TextClassificationServiceGrpc {
         case METHODID_CLASSIFY:
           serviceImpl.classify((yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.TextClassificationResponse>) responseObserver);
+          break;
+        case METHODID_FEW_SHOT_CLASSIFY:
+          serviceImpl.fewShotClassify((yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -294,6 +379,7 @@ public final class TextClassificationServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TextClassificationServiceFileDescriptorSupplier())
               .addMethod(getClassifyMethod())
+              .addMethod(getFewShotClassifyMethod())
               .build();
         }
       }

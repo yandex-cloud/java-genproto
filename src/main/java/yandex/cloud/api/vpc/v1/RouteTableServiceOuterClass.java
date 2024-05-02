@@ -2931,7 +2931,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2941,7 +2941,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3285,7 +3285,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3307,7 +3307,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4141,7 +4141,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4162,7 +4162,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4184,7 +4184,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4204,7 +4204,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4219,7 +4219,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5611,7 +5611,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -5621,7 +5621,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -5987,7 +5987,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -6009,7 +6009,7 @@ public final class RouteTableServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -6960,7 +6960,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6981,7 +6981,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -7003,7 +7003,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -7023,7 +7023,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -7038,7 +7038,7 @@ public final class RouteTableServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -13004,77 +13004,77 @@ public final class RouteTableServiceOuterClass {
       "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
       "1\006<=1000\"i\n\027ListRouteTablesResponse\0225\n\014r" +
       "oute_tables\030\001 \003(\0132\037.yandex.cloud.vpc.v1." +
-      "RouteTable\022\027\n\017next_page_token\030\002 \001(\t\"\241\003\n\027" +
+      "RouteTable\022\027\n\017next_page_token\030\002 \001(\t\"\256\003\n\027" +
       "CreateRouteTableRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-" +
-      "z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description" +
-      "\030\003 \001(\tB\t\212\3101\005<=256\022\211\001\n\006labels\030\004 \003(\01328.yan" +
-      "dex.cloud.vpc.v1.CreateRouteTableRequest" +
-      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
-      "a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n" +
-      "\nnetwork_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\rstati" +
-      "c_routes\030\006 \003(\0132 .yandex.cloud.vpc.v1.Sta" +
-      "ticRoute\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"2\n\030CreateRouteTableMetad" +
-      "ata\022\026\n\016route_table_id\030\001 \001(\t\"\265\003\n\027UpdateRo" +
-      "uteTableRequest\022$\n\016route_table_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\307" +
-      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descr" +
-      "iption\030\004 \001(\tB\t\212\3101\005<=256\022\211\001\n\006labels\030\005 \003(\013" +
-      "28.yandex.cloud.vpc.v1.UpdateRouteTableR" +
-      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\0227\n\rstatic_routes\030\006 \003(\0132 .yandex.clou" +
-      "d.vpc.v1.StaticRoute\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030UpdateRou" +
-      "teTableMetadata\022\026\n\016route_table_id\030\001 \001(\t\"" +
-      "?\n\027DeleteRouteTableRequest\022$\n\016route_tabl" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"2\n\030DeleteRouteT" +
-      "ableMetadata\022\026\n\016route_table_id\030\001 \001(\t\"\205\001\n" +
-      "\037ListRouteTableOperationsRequest\022$\n\016rout" +
-      "e_table_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"r\n ListRouteTableOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"j\n\025MoveRouteTableRequest\022$\n\016rou" +
-      "te_table_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025desti" +
-      "nation_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\026" +
-      "MoveRouteTableMetadata\022\026\n\016route_table_id" +
-      "\030\001 \001(\t2\237\t\n\021RouteTableService\022\177\n\003Get\022).ya" +
-      "ndex.cloud.vpc.v1.GetRouteTableRequest\032\037" +
-      ".yandex.cloud.vpc.v1.RouteTable\",\202\323\344\223\002&\022" +
-      "$/vpc/v1/routeTables/{route_table_id}\022~\n" +
-      "\004List\022+.yandex.cloud.vpc.v1.ListRouteTab" +
-      "lesRequest\032,.yandex.cloud.vpc.v1.ListRou" +
-      "teTablesResponse\"\033\202\323\344\223\002\025\022\023/vpc/v1/routeT" +
-      "ables\022\243\001\n\006Create\022,.yandex.cloud.vpc.v1.C" +
-      "reateRouteTableRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"H\202\323\344\223\002\030\"\023/vpc/v1/route" +
-      "Tables:\001*\262\322*&\n\030CreateRouteTableMetadata\022" +
-      "\nRouteTable\022\264\001\n\006Update\022,.yandex.cloud.vp" +
-      "c.v1.UpdateRouteTableRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"Y\202\323\344\223\002)2$/vpc/v1" +
-      "/routeTables/{route_table_id}:\001*\262\322*&\n\030Up" +
-      "dateRouteTableMetadata\022\nRouteTable\022\274\001\n\006D" +
-      "elete\022,.yandex.cloud.vpc.v1.DeleteRouteT" +
-      "ableRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"a\202\323\344\223\002&*$/vpc/v1/routeTables/{rou" +
-      "te_table_id}\262\322*1\n\030DeleteRouteTableMetada" +
-      "ta\022\025google.protobuf.Empty\022\266\001\n\016ListOperat" +
-      "ions\0224.yandex.cloud.vpc.v1.ListRouteTabl" +
-      "eOperationsRequest\0325.yandex.cloud.vpc.v1" +
-      ".ListRouteTableOperationsResponse\"7\202\323\344\223\002" +
-      "1\022//vpc/v1/routeTables/{route_table_id}/" +
-      "operations\022\263\001\n\004Move\022*.yandex.cloud.vpc.v" +
-      "1.MoveRouteTableRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\\\202\323\344\223\002.\")/vpc/v1/rout" +
-      "eTables/{route_table_id}:move:\001*\262\322*$\n\026Mo" +
-      "veRouteTableMetadata\022\nRouteTableBV\n\027yand" +
-      "ex.cloud.api.vpc.v1Z;github.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/vpc/v1;vpc" +
-      "b\006proto3"
+      "(\tB\014\350\3071\001\212\3101\004<=50\022<\n\004name\030\002 \001(\tB.\362\3071*|[a-" +
+      "zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036" +
+      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\211\001\n\006label" +
+      "s\030\004 \003(\01328.yandex.cloud.vpc.v1.CreateRout" +
+      "eTableRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][" +
+      "-_0-9a-z]*\022 \n\nnetwork_id\030\005 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\0227\n\rstatic_routes\030\006 \003(\0132 .yandex.clo" +
+      "ud.vpc.v1.StaticRoute\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030CreateRo" +
+      "uteTableMetadata\022\026\n\016route_table_id\030\001 \001(\t" +
+      "\"\302\003\n\027UpdateRouteTableRequest\022$\n\016route_ta" +
+      "ble_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022<\n\004n" +
+      "ame\030\003 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0" +
+      ",61}[a-zA-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
+      "\212\3101\005<=256\022\211\001\n\006labels\030\005 \003(\01328.yandex.clou" +
+      "d.vpc.v1.UpdateRouteTableRequest.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\0227\n\rstatic_" +
+      "routes\030\006 \003(\0132 .yandex.cloud.vpc.v1.Stati" +
+      "cRoute\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"2\n\030UpdateRouteTableMetadat" +
+      "a\022\026\n\016route_table_id\030\001 \001(\t\"?\n\027DeleteRoute" +
+      "TableRequest\022$\n\016route_table_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"2\n\030DeleteRouteTableMetadata\022\026" +
+      "\n\016route_table_id\030\001 \001(\t\"\205\001\n\037ListRouteTabl" +
+      "eOperationsRequest\022$\n\016route_table_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r" +
+      "\n ListRouteTableOperationsResponse\0225\n\nop" +
+      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
+      "Operation\022\027\n\017next_page_token\030\002 \001(\t\"j\n\025Mo" +
+      "veRouteTableRequest\022$\n\016route_table_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_" +
+      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\026MoveRouteTable" +
+      "Metadata\022\026\n\016route_table_id\030\001 \001(\t2\237\t\n\021Rou" +
+      "teTableService\022\177\n\003Get\022).yandex.cloud.vpc" +
+      ".v1.GetRouteTableRequest\032\037.yandex.cloud." +
+      "vpc.v1.RouteTable\",\202\323\344\223\002&\022$/vpc/v1/route" +
+      "Tables/{route_table_id}\022~\n\004List\022+.yandex" +
+      ".cloud.vpc.v1.ListRouteTablesRequest\032,.y" +
+      "andex.cloud.vpc.v1.ListRouteTablesRespon" +
+      "se\"\033\202\323\344\223\002\025\022\023/vpc/v1/routeTables\022\243\001\n\006Crea" +
+      "te\022,.yandex.cloud.vpc.v1.CreateRouteTabl" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"H\202\323\344\223\002\030\"\023/vpc/v1/routeTables:\001*\262\322*&\n" +
+      "\030CreateRouteTableMetadata\022\nRouteTable\022\264\001" +
+      "\n\006Update\022,.yandex.cloud.vpc.v1.UpdateRou" +
+      "teTableRequest\032!.yandex.cloud.operation." +
+      "Operation\"Y\202\323\344\223\002)2$/vpc/v1/routeTables/{" +
+      "route_table_id}:\001*\262\322*&\n\030UpdateRouteTable" +
+      "Metadata\022\nRouteTable\022\274\001\n\006Delete\022,.yandex" +
+      ".cloud.vpc.v1.DeleteRouteTableRequest\032!." +
+      "yandex.cloud.operation.Operation\"a\202\323\344\223\002&" +
+      "*$/vpc/v1/routeTables/{route_table_id}\262\322" +
+      "*1\n\030DeleteRouteTableMetadata\022\025google.pro" +
+      "tobuf.Empty\022\266\001\n\016ListOperations\0224.yandex." +
+      "cloud.vpc.v1.ListRouteTableOperationsReq" +
+      "uest\0325.yandex.cloud.vpc.v1.ListRouteTabl" +
+      "eOperationsResponse\"7\202\323\344\223\0021\022//vpc/v1/rou" +
+      "teTables/{route_table_id}/operations\022\263\001\n" +
+      "\004Move\022*.yandex.cloud.vpc.v1.MoveRouteTab" +
+      "leRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\\\202\323\344\223\002.\")/vpc/v1/routeTables/{route" +
+      "_table_id}:move:\001*\262\322*$\n\026MoveRouteTableMe" +
+      "tadata\022\nRouteTableBV\n\027yandex.cloud.api.v" +
+      "pc.v1Z;github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

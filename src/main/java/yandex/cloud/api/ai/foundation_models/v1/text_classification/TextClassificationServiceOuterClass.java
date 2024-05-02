@@ -1911,6 +1911,2861 @@ public final class TextClassificationServiceOuterClass {
 
   }
 
+  public interface FewShotTextClassificationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The identifier of the classification model.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    java.lang.String getModelUri();
+    /**
+     * <pre>
+     * The identifier of the classification model.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    com.google.protobuf.ByteString
+        getModelUriBytes();
+
+    /**
+     * <pre>
+     * Text description of the classification task.
+     * </pre>
+     *
+     * <code>string task_description = 2;</code>
+     * @return The taskDescription.
+     */
+    java.lang.String getTaskDescription();
+    /**
+     * <pre>
+     * Text description of the classification task.
+     * </pre>
+     *
+     * <code>string task_description = 2;</code>
+     * @return The bytes for taskDescription.
+     */
+    com.google.protobuf.ByteString
+        getTaskDescriptionBytes();
+
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @return A list containing the labels.
+     */
+    java.util.List<java.lang.String>
+        getLabelsList();
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @return The count of labels.
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    java.lang.String getLabels(int index);
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labels at the given index.
+     */
+    com.google.protobuf.ByteString
+        getLabelsBytes(int index);
+
+    /**
+     * <pre>
+     * Text for classification.
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Text for classification.
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> 
+        getSamplesList();
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample getSamples(int index);
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    int getSamplesCount();
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder> 
+        getSamplesOrBuilderList();
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder getSamplesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Request for the service to classify text.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}
+   */
+  public static final class FewShotTextClassificationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest)
+      FewShotTextClassificationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FewShotTextClassificationRequest.newBuilder() to construct.
+    private FewShotTextClassificationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FewShotTextClassificationRequest() {
+      modelUri_ = "";
+      taskDescription_ = "";
+      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      text_ = "";
+      samples_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FewShotTextClassificationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FewShotTextClassificationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              modelUri_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              taskDescription_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              labels_.add(s);
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                samples_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              samples_.add(
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          labels_ = labels_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          samples_ = java.util.Collections.unmodifiableList(samples_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.class, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.Builder.class);
+    }
+
+    public static final int MODEL_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelUri_;
+    /**
+     * <pre>
+     * The identifier of the classification model.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    @java.lang.Override
+    public java.lang.String getModelUri() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The identifier of the classification model.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelUriBytes() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TASK_DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object taskDescription_;
+    /**
+     * <pre>
+     * Text description of the classification task.
+     * </pre>
+     *
+     * <code>string task_description = 2;</code>
+     * @return The taskDescription.
+     */
+    @java.lang.Override
+    public java.lang.String getTaskDescription() {
+      java.lang.Object ref = taskDescription_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        taskDescription_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text description of the classification task.
+     * </pre>
+     *
+     * <code>string task_description = 2;</code>
+     * @return The bytes for taskDescription.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaskDescriptionBytes() {
+      java.lang.Object ref = taskDescription_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taskDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList labels_;
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @return A list containing the labels.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getLabelsList() {
+      return labels_;
+    }
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @return The count of labels.
+     */
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    public java.lang.String getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <pre>
+     * List of available labels for the classification result.
+     * </pre>
+     *
+     * <code>repeated string labels = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labels at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getLabelsBytes(int index) {
+      return labels_.getByteString(index);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text for classification.
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text for classification.
+     * </pre>
+     *
+     * <code>string text = 4;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SAMPLES_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> samples_;
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> getSamplesList() {
+      return samples_;
+    }
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder> 
+        getSamplesOrBuilderList() {
+      return samples_;
+    }
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    @java.lang.Override
+    public int getSamplesCount() {
+      return samples_.size();
+    }
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample getSamples(int index) {
+      return samples_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder getSamplesOrBuilder(
+        int index) {
+      return samples_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskDescription_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, taskDescription_);
+      }
+      for (int i = 0; i < labels_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, labels_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
+      }
+      for (int i = 0; i < samples_.size(); i++) {
+        output.writeMessage(5, samples_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskDescription_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, taskDescription_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < labels_.size(); i++) {
+          dataSize += computeStringSizeNoTag(labels_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getLabelsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
+      }
+      for (int i = 0; i < samples_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, samples_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest other = (yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest) obj;
+
+      if (!getModelUri()
+          .equals(other.getModelUri())) return false;
+      if (!getTaskDescription()
+          .equals(other.getTaskDescription())) return false;
+      if (!getLabelsList()
+          .equals(other.getLabelsList())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getSamplesList()
+          .equals(other.getSamplesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODEL_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getModelUri().hashCode();
+      hash = (37 * hash) + TASK_DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskDescription().hashCode();
+      if (getLabelsCount() > 0) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + getLabelsList().hashCode();
+      }
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      if (getSamplesCount() > 0) {
+        hash = (37 * hash) + SAMPLES_FIELD_NUMBER;
+        hash = (53 * hash) + getSamplesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request for the service to classify text.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest)
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.class, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSamplesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modelUri_ = "";
+
+        taskDescription_ = "";
+
+        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        text_ = "";
+
+        if (samplesBuilder_ == null) {
+          samples_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          samplesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest build() {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest result = new yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.modelUri_ = modelUri_;
+        result.taskDescription_ = taskDescription_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          labels_ = labels_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.labels_ = labels_;
+        result.text_ = text_;
+        if (samplesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            samples_ = java.util.Collections.unmodifiableList(samples_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.samples_ = samples_;
+        } else {
+          result.samples_ = samplesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest.getDefaultInstance()) return this;
+        if (!other.getModelUri().isEmpty()) {
+          modelUri_ = other.modelUri_;
+          onChanged();
+        }
+        if (!other.getTaskDescription().isEmpty()) {
+          taskDescription_ = other.taskDescription_;
+          onChanged();
+        }
+        if (!other.labels_.isEmpty()) {
+          if (labels_.isEmpty()) {
+            labels_ = other.labels_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureLabelsIsMutable();
+            labels_.addAll(other.labels_);
+          }
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (samplesBuilder_ == null) {
+          if (!other.samples_.isEmpty()) {
+            if (samples_.isEmpty()) {
+              samples_ = other.samples_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureSamplesIsMutable();
+              samples_.addAll(other.samples_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.samples_.isEmpty()) {
+            if (samplesBuilder_.isEmpty()) {
+              samplesBuilder_.dispose();
+              samplesBuilder_ = null;
+              samples_ = other.samples_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              samplesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSamplesFieldBuilder() : null;
+            } else {
+              samplesBuilder_.addAllMessages(other.samples_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object modelUri_ = "";
+      /**
+       * <pre>
+       * The identifier of the classification model.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The modelUri.
+       */
+      public java.lang.String getModelUri() {
+        java.lang.Object ref = modelUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The identifier of the classification model.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The bytes for modelUri.
+       */
+      public com.google.protobuf.ByteString
+          getModelUriBytes() {
+        java.lang.Object ref = modelUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The identifier of the classification model.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The identifier of the classification model.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelUri() {
+        
+        modelUri_ = getDefaultInstance().getModelUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The identifier of the classification model.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The bytes for modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object taskDescription_ = "";
+      /**
+       * <pre>
+       * Text description of the classification task.
+       * </pre>
+       *
+       * <code>string task_description = 2;</code>
+       * @return The taskDescription.
+       */
+      public java.lang.String getTaskDescription() {
+        java.lang.Object ref = taskDescription_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          taskDescription_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text description of the classification task.
+       * </pre>
+       *
+       * <code>string task_description = 2;</code>
+       * @return The bytes for taskDescription.
+       */
+      public com.google.protobuf.ByteString
+          getTaskDescriptionBytes() {
+        java.lang.Object ref = taskDescription_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskDescription_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text description of the classification task.
+       * </pre>
+       *
+       * <code>string task_description = 2;</code>
+       * @param value The taskDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        taskDescription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text description of the classification task.
+       * </pre>
+       *
+       * <code>string task_description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskDescription() {
+        
+        taskDescription_ = getDefaultInstance().getTaskDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text description of the classification task.
+       * </pre>
+       *
+       * <code>string task_description = 2;</code>
+       * @param value The bytes for taskDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        taskDescription_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureLabelsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @return A list containing the labels.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getLabelsList() {
+        return labels_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @return The count of labels.
+       */
+      public int getLabelsCount() {
+        return labels_.size();
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param index The index of the element to return.
+       * @return The labels at the given index.
+       */
+      public java.lang.String getLabels(int index) {
+        return labels_.get(index);
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the labels at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getLabelsBytes(int index) {
+        return labels_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The labels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabels(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelsIsMutable();
+        labels_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param value The labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabels(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLabelsIsMutable();
+        labels_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param values The labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLabels(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureLabelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, labels_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabels() {
+        labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available labels for the classification result.
+       * </pre>
+       *
+       * <code>repeated string labels = 3;</code>
+       * @param value The bytes of the labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureLabelsIsMutable();
+        labels_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text for classification.
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for classification.
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for classification.
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for classification.
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for classification.
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> samples_ =
+        java.util.Collections.emptyList();
+      private void ensureSamplesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          samples_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample>(samples_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder> samplesBuilder_;
+
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> getSamplesList() {
+        if (samplesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(samples_);
+        } else {
+          return samplesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public int getSamplesCount() {
+        if (samplesBuilder_ == null) {
+          return samples_.size();
+        } else {
+          return samplesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample getSamples(int index) {
+        if (samplesBuilder_ == null) {
+          return samples_.get(index);
+        } else {
+          return samplesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder setSamples(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample value) {
+        if (samplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSamplesIsMutable();
+          samples_.set(index, value);
+          onChanged();
+        } else {
+          samplesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder setSamples(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder builderForValue) {
+        if (samplesBuilder_ == null) {
+          ensureSamplesIsMutable();
+          samples_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          samplesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder addSamples(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample value) {
+        if (samplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSamplesIsMutable();
+          samples_.add(value);
+          onChanged();
+        } else {
+          samplesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder addSamples(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample value) {
+        if (samplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSamplesIsMutable();
+          samples_.add(index, value);
+          onChanged();
+        } else {
+          samplesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder addSamples(
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder builderForValue) {
+        if (samplesBuilder_ == null) {
+          ensureSamplesIsMutable();
+          samples_.add(builderForValue.build());
+          onChanged();
+        } else {
+          samplesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder addSamples(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder builderForValue) {
+        if (samplesBuilder_ == null) {
+          ensureSamplesIsMutable();
+          samples_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          samplesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder addAllSamples(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample> values) {
+        if (samplesBuilder_ == null) {
+          ensureSamplesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, samples_);
+          onChanged();
+        } else {
+          samplesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder clearSamples() {
+        if (samplesBuilder_ == null) {
+          samples_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          samplesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public Builder removeSamples(int index) {
+        if (samplesBuilder_ == null) {
+          ensureSamplesIsMutable();
+          samples_.remove(index);
+          onChanged();
+        } else {
+          samplesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder getSamplesBuilder(
+          int index) {
+        return getSamplesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder getSamplesOrBuilder(
+          int index) {
+        if (samplesBuilder_ == null) {
+          return samples_.get(index);  } else {
+          return samplesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder> 
+           getSamplesOrBuilderList() {
+        if (samplesBuilder_ != null) {
+          return samplesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(samples_);
+        }
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder addSamplesBuilder() {
+        return getSamplesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder addSamplesBuilder(
+          int index) {
+        return getSamplesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional set of text samples with expected labels that may be used as an additional hint for the classifier.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationSample samples = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder> 
+           getSamplesBuilderList() {
+        return getSamplesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder> 
+          getSamplesFieldBuilder() {
+        if (samplesBuilder_ == null) {
+          samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSample.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationSampleOrBuilder>(
+                  samples_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          samples_ = null;
+        }
+        return samplesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest)
+    private static final yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FewShotTextClassificationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FewShotTextClassificationRequest>() {
+      @java.lang.Override
+      public FewShotTextClassificationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FewShotTextClassificationRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FewShotTextClassificationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FewShotTextClassificationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FewShotTextClassificationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> 
+        getPredictionsList();
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index);
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    int getPredictionsCount();
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder> 
+        getPredictionsOrBuilderList();
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder getPredictionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Model version (changes with model releases).
+     * </pre>
+     *
+     * <code>string model_version = 2;</code>
+     * @return The modelVersion.
+     */
+    java.lang.String getModelVersion();
+    /**
+     * <pre>
+     * Model version (changes with model releases).
+     * </pre>
+     *
+     * <code>string model_version = 2;</code>
+     * @return The bytes for modelVersion.
+     */
+    com.google.protobuf.ByteString
+        getModelVersionBytes();
+  }
+  /**
+   * <pre>
+   * Response containing classifier predictions.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse}
+   */
+  public static final class FewShotTextClassificationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse)
+      FewShotTextClassificationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FewShotTextClassificationResponse.newBuilder() to construct.
+    private FewShotTextClassificationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FewShotTextClassificationResponse() {
+      predictions_ = java.util.Collections.emptyList();
+      modelVersion_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FewShotTextClassificationResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FewShotTextClassificationResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                predictions_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              predictions_.add(
+                  input.readMessage(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              modelVersion_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          predictions_ = java.util.Collections.unmodifiableList(predictions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.class, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.Builder.class);
+    }
+
+    public static final int PREDICTIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_;
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> getPredictionsList() {
+      return predictions_;
+    }
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder> 
+        getPredictionsOrBuilderList() {
+      return predictions_;
+    }
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    @java.lang.Override
+    public int getPredictionsCount() {
+      return predictions_.size();
+    }
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index) {
+      return predictions_.get(index);
+    }
+    /**
+     * <pre>
+     * Result of classification - a list of label-confidence pairs.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder getPredictionsOrBuilder(
+        int index) {
+      return predictions_.get(index);
+    }
+
+    public static final int MODEL_VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object modelVersion_;
+    /**
+     * <pre>
+     * Model version (changes with model releases).
+     * </pre>
+     *
+     * <code>string model_version = 2;</code>
+     * @return The modelVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getModelVersion() {
+      java.lang.Object ref = modelVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Model version (changes with model releases).
+     * </pre>
+     *
+     * <code>string model_version = 2;</code>
+     * @return The bytes for modelVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelVersionBytes() {
+      java.lang.Object ref = modelVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < predictions_.size(); i++) {
+        output.writeMessage(1, predictions_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelVersion_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < predictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, predictions_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelVersion_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse other = (yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse) obj;
+
+      if (!getPredictionsList()
+          .equals(other.getPredictionsList())) return false;
+      if (!getModelVersion()
+          .equals(other.getModelVersion())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPredictionsCount() > 0) {
+        hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPredictionsList().hashCode();
+      }
+      hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response containing classifier predictions.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse)
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.class, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPredictionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (predictionsBuilder_ == null) {
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          predictionsBuilder_.clear();
+        }
+        modelVersion_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse build() {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse result = new yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (predictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            predictions_ = java.util.Collections.unmodifiableList(predictions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.predictions_ = predictions_;
+        } else {
+          result.predictions_ = predictionsBuilder_.build();
+        }
+        result.modelVersion_ = modelVersion_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse.getDefaultInstance()) return this;
+        if (predictionsBuilder_ == null) {
+          if (!other.predictions_.isEmpty()) {
+            if (predictions_.isEmpty()) {
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePredictionsIsMutable();
+              predictions_.addAll(other.predictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.predictions_.isEmpty()) {
+            if (predictionsBuilder_.isEmpty()) {
+              predictionsBuilder_.dispose();
+              predictionsBuilder_ = null;
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              predictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPredictionsFieldBuilder() : null;
+            } else {
+              predictionsBuilder_.addAllMessages(other.predictions_);
+            }
+          }
+        }
+        if (!other.getModelVersion().isEmpty()) {
+          modelVersion_ = other.modelVersion_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_ =
+        java.util.Collections.emptyList();
+      private void ensurePredictionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          predictions_ = new java.util.ArrayList<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel>(predictions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder> predictionsBuilder_;
+
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> getPredictionsList() {
+        if (predictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(predictions_);
+        } else {
+          return predictionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public int getPredictionsCount() {
+        if (predictionsBuilder_ == null) {
+          return predictions_.size();
+        } else {
+          return predictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);
+        } else {
+          return predictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder setPredictions(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionsIsMutable();
+          predictions_.set(index, value);
+          onChanged();
+        } else {
+          predictionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder setPredictions(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          predictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder addPredictions(yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionsIsMutable();
+          predictions_.add(value);
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder addPredictions(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionsIsMutable();
+          predictions_.add(index, value);
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder addPredictions(
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder addPredictions(
+          int index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder addAllPredictions(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> values) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, predictions_);
+          onChanged();
+        } else {
+          predictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder clearPredictions() {
+        if (predictionsBuilder_ == null) {
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          predictionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public Builder removePredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.remove(index);
+          onChanged();
+        } else {
+          predictionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder getPredictionsBuilder(
+          int index) {
+        return getPredictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder getPredictionsOrBuilder(
+          int index) {
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);  } else {
+          return predictionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder> 
+           getPredictionsOrBuilderList() {
+        if (predictionsBuilder_ != null) {
+          return predictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(predictions_);
+        }
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder addPredictionsBuilder() {
+        return getPredictionsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder addPredictionsBuilder(
+          int index) {
+        return getPredictionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Result of classification - a list of label-confidence pairs.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.foundation_models.v1.text_classification.ClassificationLabel predictions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder> 
+           getPredictionsBuilderList() {
+        return getPredictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder> 
+          getPredictionsFieldBuilder() {
+        if (predictionsBuilder_ == null) {
+          predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel.Builder, yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabelOrBuilder>(
+                  predictions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          predictions_ = null;
+        }
+        return predictionsBuilder_;
+      }
+
+      private java.lang.Object modelVersion_ = "";
+      /**
+       * <pre>
+       * Model version (changes with model releases).
+       * </pre>
+       *
+       * <code>string model_version = 2;</code>
+       * @return The modelVersion.
+       */
+      public java.lang.String getModelVersion() {
+        java.lang.Object ref = modelVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Model version (changes with model releases).
+       * </pre>
+       *
+       * <code>string model_version = 2;</code>
+       * @return The bytes for modelVersion.
+       */
+      public com.google.protobuf.ByteString
+          getModelVersionBytes() {
+        java.lang.Object ref = modelVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Model version (changes with model releases).
+       * </pre>
+       *
+       * <code>string model_version = 2;</code>
+       * @param value The modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Model version (changes with model releases).
+       * </pre>
+       *
+       * <code>string model_version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelVersion() {
+        
+        modelVersion_ = getDefaultInstance().getModelVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Model version (changes with model releases).
+       * </pre>
+       *
+       * <code>string model_version = 2;</code>
+       * @param value The bytes for modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelVersion_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationResponse)
+    private static final yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FewShotTextClassificationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FewShotTextClassificationResponse>() {
+      @java.lang.Override
+      public FewShotTextClassificationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FewShotTextClassificationResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FewShotTextClassificationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FewShotTextClassificationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassificationServiceOuterClass.FewShotTextClassificationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationRequest_descriptor;
   private static final 
@@ -1921,6 +4776,16 @@ public final class TextClassificationServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1942,18 +4807,34 @@ public final class TextClassificationServiceOuterClass {
       "\013predictions\030\001 \003(\0132M.yandex.cloud.ai.fou" +
       "ndation_models.v1.text_classification.Cl" +
       "assificationLabel\022\025\n\rmodel_version\030\002 \001(\t" +
-      "2\207\002\n\031TextClassificationService\022\351\001\n\010Class" +
-      "ify\022S.yandex.cloud.ai.foundation_models." +
-      "v1.text_classification.TextClassificatio" +
-      "nRequest\032T.yandex.cloud.ai.foundation_mo" +
-      "dels.v1.text_classification.TextClassifi" +
-      "cationResponse\"2\202\323\344\223\002,\"\'/foundationModel" +
-      "s/v1/textClassification:\001*B\260\001\n<yandex.cl" +
-      "oud.api.ai.foundation_models.v1.text_cla" +
-      "ssificationZpgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/ai/foundation_mode" +
-      "ls/v1/text_classification;text_classific" +
-      "ationb\006proto3"
+      "\"\316\001\n FewShotTextClassificationRequest\022\021\n" +
+      "\tmodel_uri\030\001 \001(\t\022\030\n\020task_description\030\002 \001" +
+      "(\t\022\016\n\006labels\030\003 \003(\t\022\014\n\004text\030\004 \001(\t\022_\n\007samp" +
+      "les\030\005 \003(\0132N.yandex.cloud.ai.foundation_m" +
+      "odels.v1.text_classification.Classificat" +
+      "ionSample\"\236\001\n!FewShotTextClassificationR" +
+      "esponse\022b\n\013predictions\030\001 \003(\0132M.yandex.cl" +
+      "oud.ai.foundation_models.v1.text_classif" +
+      "ication.ClassificationLabel\022\025\n\rmodel_ver" +
+      "sion\030\002 \001(\t2\217\004\n\031TextClassificationService" +
+      "\022\351\001\n\010Classify\022S.yandex.cloud.ai.foundati" +
+      "on_models.v1.text_classification.TextCla" +
+      "ssificationRequest\032T.yandex.cloud.ai.fou" +
+      "ndation_models.v1.text_classification.Te" +
+      "xtClassificationResponse\"2\202\323\344\223\002,\"\'/found" +
+      "ationModels/v1/textClassification:\001*\022\205\002\n" +
+      "\017FewShotClassify\022Z.yandex.cloud.ai.found" +
+      "ation_models.v1.text_classification.FewS" +
+      "hotTextClassificationRequest\032[.yandex.cl" +
+      "oud.ai.foundation_models.v1.text_classif" +
+      "ication.FewShotTextClassificationRespons" +
+      "e\"9\202\323\344\223\0023\"./foundationModels/v1/fewShotT" +
+      "extClassification:\001*B\260\001\n<yandex.cloud.ap" +
+      "i.ai.foundation_models.v1.text_classific" +
+      "ationZpgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ai/foundation_models/v1/" +
+      "text_classification;text_classificationb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1972,6 +4853,18 @@ public final class TextClassificationServiceOuterClass {
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationResponse_descriptor,
+        new java.lang.String[] { "Predictions", "ModelVersion", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor,
+        new java.lang.String[] { "ModelUri", "TaskDescription", "Labels", "Text", "Samples", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor,
         new java.lang.String[] { "Predictions", "ModelVersion", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

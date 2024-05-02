@@ -2505,47 +2505,47 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -2556,19 +2556,19 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -2757,7 +2757,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -2774,7 +2774,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -2795,7 +2795,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2812,7 +2812,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2833,7 +2833,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -2850,7 +2850,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -2895,7 +2895,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -2913,7 +2913,7 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -2921,7 +2921,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -2934,7 +2934,7 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3488,7 +3488,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -3504,7 +3504,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -3521,7 +3521,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -3536,7 +3536,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -3546,7 +3546,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -3564,7 +3564,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3580,7 +3580,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3597,7 +3597,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3612,7 +3612,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3622,7 +3622,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -3640,7 +3640,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -3656,7 +3656,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -3673,7 +3673,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -3688,7 +3688,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -3698,7 +3698,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -3741,7 +3741,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -3759,7 +3759,7 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -3767,7 +3767,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -3780,7 +3780,7 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -3801,7 +3801,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -3820,7 +3820,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -3835,7 +3835,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -4218,23 +4218,23 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string description = 1;</code>
+     * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 1;</code>
+     * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -4245,19 +4245,19 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -4648,7 +4648,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 1;</code>
+     * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -4665,7 +4665,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 1;</code>
+     * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -4710,7 +4710,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -4728,7 +4728,7 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4736,7 +4736,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4749,7 +4749,7 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 2;</code>
+     * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5626,7 +5626,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 1;</code>
+       * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -5642,7 +5642,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 1;</code>
+       * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -5659,7 +5659,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 1;</code>
+       * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -5674,7 +5674,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 1;</code>
+       * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -5684,7 +5684,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 1;</code>
+       * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -5727,7 +5727,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -5745,7 +5745,7 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5753,7 +5753,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5766,7 +5766,7 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5787,7 +5787,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -5806,7 +5806,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -5821,7 +5821,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 2;</code>
+       * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7162,12 +7162,12 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
-     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for securityGroupId.
      */
     com.google.protobuf.ByteString
@@ -7189,35 +7189,35 @@ public final class SecurityGroupServiceOuterClass {
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -7228,19 +7228,19 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -7443,7 +7443,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
-     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The securityGroupId.
      */
     @java.lang.Override
@@ -7460,7 +7460,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+     * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for securityGroupId.
      */
     @java.lang.Override
@@ -7507,7 +7507,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -7524,7 +7524,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 3;</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -7545,7 +7545,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     @java.lang.Override
@@ -7562,7 +7562,7 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 4;</code>
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
     @java.lang.Override
@@ -7607,7 +7607,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -7625,7 +7625,7 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -7633,7 +7633,7 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -7646,7 +7646,7 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -8195,7 +8195,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
-       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The securityGroupId.
        */
       public java.lang.String getSecurityGroupId() {
@@ -8211,7 +8211,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for securityGroupId.
        */
       public com.google.protobuf.ByteString
@@ -8228,7 +8228,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
        */
@@ -8243,7 +8243,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearSecurityGroupId() {
@@ -8253,7 +8253,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
+       * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
        */
@@ -8390,7 +8390,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -8406,7 +8406,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -8423,7 +8423,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -8438,7 +8438,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -8448,7 +8448,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -8466,7 +8466,7 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
       public java.lang.String getDescription() {
@@ -8482,7 +8482,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
       public com.google.protobuf.ByteString
@@ -8499,7 +8499,7 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
        */
@@ -8514,7 +8514,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
@@ -8524,7 +8524,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 4;</code>
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
        */
@@ -8567,7 +8567,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -8585,7 +8585,7 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -8593,7 +8593,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -8606,7 +8606,7 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -8627,7 +8627,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -8646,7 +8646,7 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -8661,7 +8661,7 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -17445,110 +17445,119 @@ public final class SecurityGroupServiceOuterClass {
       "ilter\030\004 \001(\t\"r\n\032ListSecurityGroupsRespons" +
       "e\022;\n\017security_groups\030\001 \003(\0132\".yandex.clou" +
       "d.vpc.v1.SecurityGroup\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"\256\002\n\032CreateSecurityGroupRequest\022\027" +
-      "\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\014\n\004name\030\002 \001(\t\022\023\n" +
-      "\013description\030\003 \001(\t\022K\n\006labels\030\004 \003(\0132;.yan" +
+      "n\030\002 \001(\t\"\273\003\n\032CreateSecurityGroupRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\004name\030" +
+      "\002 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}" +
+      "[a-zA-Z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud.vp" +
+      "c.v1.CreateSecurityGroupRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\n" +
+      "network_id\030\005 \001(\tB\004\350\3071\001\022>\n\nrule_specs\030\006 \003" +
+      "(\0132*.yandex.cloud.vpc.v1.SecurityGroupRu" +
+      "leSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"\264\004\n\025SecurityGroupRuleSpec\022" +
+      "\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labe" +
+      "ls\030\002 \003(\01326.yandex.cloud.vpc.v1.SecurityG" +
+      "roupRuleSpec.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
+      "63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-" +
+      "z][-_./\\@0-9a-z]*\022I\n\tdirection\030\003 \001(\01620.y" +
+      "andex.cloud.vpc.v1.SecurityGroupRule.Dir" +
+      "ectionB\004\350\3071\001\022-\n\005ports\030\004 \001(\0132\036.yandex.clo" +
+      "ud.vpc.v1.PortRange\022\027\n\rprotocol_name\030\005 \001" +
+      "(\tH\000\022\031\n\017protocol_number\030\006 \001(\003H\000\0226\n\013cidr_" +
+      "blocks\030\007 \001(\0132\037.yandex.cloud.vpc.v1.CidrB" +
+      "locksH\001\022\033\n\021security_group_id\030\010 \001(\tH\001\022\033\n\021" +
+      "predefined_target\030\t \001(\tH\001\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\n\n\010prot" +
+      "ocolB\016\n\006target\022\004\300\3011\001\"8\n\033CreateSecurityGr" +
+      "oupMetadata\022\031\n\021security_group_id\030\001 \001(\t\"\332" +
+      "\003\n\032UpdateSecurityGroupRequest\022\'\n\021securit" +
+      "y_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "<\n\004name\030\003 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-" +
+      "9]{0,61}[a-zA-Z0-9])?\022\036\n\013description\030\004 \001" +
+      "(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\005 \003(\0132;.yandex." +
+      "cloud.vpc.v1.UpdateSecurityGroupRequest." +
+      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\022>\n\nrule_specs\030\006 \003(\0132*.yandex.cloud." +
+      "vpc.v1.SecurityGroupRuleSpec\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"P\n\033U" +
+      "pdateSecurityGroupMetadata\022\031\n\021security_g" +
+      "roup_id\030\001 \001(\t\022\026\n\016added_rule_ids\030\002 \003(\t\"\246\001" +
+      "\n\037UpdateSecurityGroupRulesRequest\022\037\n\021sec" +
+      "urity_group_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021deletion_r" +
+      "ule_ids\030\002 \003(\t\022G\n\023addition_rule_specs\030\003 \003" +
+      "(\0132*.yandex.cloud.vpc.v1.SecurityGroupRu" +
+      "leSpec\"\236\002\n\036UpdateSecurityGroupRuleReques" +
+      "t\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007ru" +
+      "le_id\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022\023\n\013descriptio" +
+      "n\030\004 \001(\t\022O\n\006labels\030\005 \003(\0132?.yandex.cloud.v" +
+      "pc.v1.UpdateSecurityGroupRuleRequest.Lab" +
+      "elsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"M\n\037UpdateSecurityGroupRu" +
+      "leMetadata\022\031\n\021security_group_id\030\001 \001(\t\022\017\n" +
+      "\007rule_id\030\002 \001(\t\"=\n\032DeleteSecurityGroupReq" +
+      "uest\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\"8\n" +
+      "\033DeleteSecurityGroupMetadata\022\031\n\021security" +
+      "_group_id\030\001 \001(\t\"l\n\"ListSecurityGroupOper" +
+      "ationsRequest\022\037\n\021security_group_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030" +
+      "\003 \001(\t\"u\n#ListSecurityGroupOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"`\n\030MoveSecurityGroupRequest\022\037\n\021secu" +
+      "rity_group_id\030\001 \001(\tB\004\350\3071\001\022#\n\025destination" +
+      "_folder_id\030\002 \001(\tB\004\350\3071\001\"6\n\031MoveSecurityGr" +
+      "oupMetadata\022\031\n\021security_group_id\030\001 \001(\t2\267" +
+      "\r\n\024SecurityGroupService\022\213\001\n\003Get\022,.yandex" +
+      ".cloud.vpc.v1.GetSecurityGroupRequest\032\"." +
+      "yandex.cloud.vpc.v1.SecurityGroup\"2\202\323\344\223\002" +
+      ",\022*/vpc/v1/securityGroups/{security_grou" +
+      "p_id}\022\207\001\n\004List\022..yandex.cloud.vpc.v1.Lis" +
+      "tSecurityGroupsRequest\032/.yandex.cloud.vp" +
+      "c.v1.ListSecurityGroupsResponse\"\036\202\323\344\223\002\030\022" +
+      "\026/vpc/v1/securityGroups\022\257\001\n\006Create\022/.yan" +
       "dex.cloud.vpc.v1.CreateSecurityGroupRequ" +
-      "est.LabelsEntry\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071" +
-      "\001\022>\n\nrule_specs\030\006 \003(\0132*.yandex.cloud.vpc" +
-      ".v1.SecurityGroupRuleSpec\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\337\003\n\025Sec" +
-      "urityGroupRuleSpec\022\023\n\013description\030\001 \001(\t\022" +
-      "F\n\006labels\030\002 \003(\01326.yandex.cloud.vpc.v1.Se" +
-      "curityGroupRuleSpec.LabelsEntry\022I\n\tdirec" +
-      "tion\030\003 \001(\01620.yandex.cloud.vpc.v1.Securit" +
-      "yGroupRule.DirectionB\004\350\3071\001\022-\n\005ports\030\004 \001(" +
-      "\0132\036.yandex.cloud.vpc.v1.PortRange\022\027\n\rpro" +
-      "tocol_name\030\005 \001(\tH\000\022\031\n\017protocol_number\030\006 " +
-      "\001(\003H\000\0226\n\013cidr_blocks\030\007 \001(\0132\037.yandex.clou" +
-      "d.vpc.v1.CidrBlocksH\001\022\033\n\021security_group_" +
-      "id\030\010 \001(\tH\001\022\033\n\021predefined_target\030\t \001(\tH\001\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001B\n\n\010protocolB\016\n\006target\022\004\300\3011\001\"8\n\033Cr" +
-      "eateSecurityGroupMetadata\022\031\n\021security_gr" +
-      "oup_id\030\001 \001(\t\"\315\002\n\032UpdateSecurityGroupRequ" +
-      "est\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t" +
-      "\022K\n\006labels\030\005 \003(\0132;.yandex.cloud.vpc.v1.U" +
-      "pdateSecurityGroupRequest.LabelsEntry\022>\n" +
-      "\nrule_specs\030\006 \003(\0132*.yandex.cloud.vpc.v1." +
-      "SecurityGroupRuleSpec\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"P\n\033UpdateSe" +
-      "curityGroupMetadata\022\031\n\021security_group_id" +
-      "\030\001 \001(\t\022\026\n\016added_rule_ids\030\002 \003(\t\"\246\001\n\037Updat" +
-      "eSecurityGroupRulesRequest\022\037\n\021security_g" +
-      "roup_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021deletion_rule_ids" +
-      "\030\002 \003(\t\022G\n\023addition_rule_specs\030\003 \003(\0132*.ya" +
-      "ndex.cloud.vpc.v1.SecurityGroupRuleSpec\"" +
-      "\236\002\n\036UpdateSecurityGroupRuleRequest\022\037\n\021se" +
-      "curity_group_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007rule_id\030\002" +
-      " \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google" +
-      ".protobuf.FieldMask\022\023\n\013description\030\004 \001(\t" +
-      "\022O\n\006labels\030\005 \003(\0132?.yandex.cloud.vpc.v1.U" +
-      "pdateSecurityGroupRuleRequest.LabelsEntr" +
-      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"M\n\037UpdateSecurityGroupRuleMetad" +
-      "ata\022\031\n\021security_group_id\030\001 \001(\t\022\017\n\007rule_i" +
-      "d\030\002 \001(\t\"=\n\032DeleteSecurityGroupRequest\022\037\n" +
-      "\021security_group_id\030\001 \001(\tB\004\350\3071\001\"8\n\033Delete" +
-      "SecurityGroupMetadata\022\031\n\021security_group_" +
-      "id\030\001 \001(\t\"l\n\"ListSecurityGroupOperationsR" +
-      "equest\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"u" +
-      "\n#ListSecurityGroupOperationsResponse\0225\n" +
-      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
-      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t\"`\n" +
-      "\030MoveSecurityGroupRequest\022\037\n\021security_gr" +
-      "oup_id\030\001 \001(\tB\004\350\3071\001\022#\n\025destination_folder" +
-      "_id\030\002 \001(\tB\004\350\3071\001\"6\n\031MoveSecurityGroupMeta" +
-      "data\022\031\n\021security_group_id\030\001 \001(\t2\267\r\n\024Secu" +
-      "rityGroupService\022\213\001\n\003Get\022,.yandex.cloud." +
-      "vpc.v1.GetSecurityGroupRequest\032\".yandex." +
-      "cloud.vpc.v1.SecurityGroup\"2\202\323\344\223\002,\022*/vpc" +
-      "/v1/securityGroups/{security_group_id}\022\207" +
-      "\001\n\004List\022..yandex.cloud.vpc.v1.ListSecuri" +
-      "tyGroupsRequest\032/.yandex.cloud.vpc.v1.Li" +
-      "stSecurityGroupsResponse\"\036\202\323\344\223\002\030\022\026/vpc/v" +
-      "1/securityGroups\022\257\001\n\006Create\022/.yandex.clo" +
-      "ud.vpc.v1.CreateSecurityGroupRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Q\202\323\344\223\002\033\"" +
-      "\026/vpc/v1/securityGroups:\001*\262\322*,\n\033CreateSe" +
-      "curityGroupMetadata\022\rSecurityGroup\022\303\001\n\006U" +
-      "pdate\022/.yandex.cloud.vpc.v1.UpdateSecuri" +
-      "tyGroupRequest\032!.yandex.cloud.operation." +
-      "Operation\"e\202\323\344\223\002/2*/vpc/v1/securityGroup" +
-      "s/{security_group_id}:\001*\262\322*,\n\033UpdateSecu" +
-      "rityGroupMetadata\022\rSecurityGroup\022\323\001\n\013Upd" +
-      "ateRules\0224.yandex.cloud.vpc.v1.UpdateSec" +
-      "urityGroupRulesRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"k\202\323\344\223\002520/vpc/v1/secur" +
-      "ityGroups/{security_group_id}/rules:\001*\262\322" +
-      "*,\n\033UpdateSecurityGroupMetadata\022\rSecurit" +
-      "yGroup\022\343\001\n\nUpdateRule\0223.yandex.cloud.vpc" +
-      ".v1.UpdateSecurityGroupRuleRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"}\202\323\344\223\002?2:/" +
-      "vpc/v1/securityGroups/{security_group_id" +
-      "}/rules/{rule_id}:\001*\262\322*4\n\037UpdateSecurity" +
-      "GroupRuleMetadata\022\021SecurityGroupRule\022\310\001\n" +
-      "\006Delete\022/.yandex.cloud.vpc.v1.DeleteSecu" +
-      "rityGroupRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"j\202\323\344\223\002,**/vpc/v1/securityGro" +
-      "ups/{security_group_id}\262\322*4\n\033DeleteSecur" +
-      "ityGroupMetadata\022\025google.protobuf.Empty\022" +
-      "\302\001\n\004Move\022-.yandex.cloud.vpc.v1.MoveSecur" +
-      "ityGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"h\202\323\344\223\0024\"//vpc/v1/securityGrou" +
-      "ps/{security_group_id}:move:\001*\262\322**\n\031Move" +
-      "SecurityGroupMetadata\022\rSecurityGroup\022\302\001\n" +
-      "\016ListOperations\0227.yandex.cloud.vpc.v1.Li" +
-      "stSecurityGroupOperationsRequest\0328.yande" +
-      "x.cloud.vpc.v1.ListSecurityGroupOperatio" +
-      "nsResponse\"=\202\323\344\223\0027\0225/vpc/v1/securityGrou" +
-      "ps/{security_group_id}/operationsBV\n\027yan" +
-      "dex.cloud.api.vpc.v1Z;github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/vpc/v1;vp" +
-      "cb\006proto3"
+      "est\032!.yandex.cloud.operation.Operation\"Q" +
+      "\202\323\344\223\002\033\"\026/vpc/v1/securityGroups:\001*\262\322*,\n\033C" +
+      "reateSecurityGroupMetadata\022\rSecurityGrou" +
+      "p\022\303\001\n\006Update\022/.yandex.cloud.vpc.v1.Updat" +
+      "eSecurityGroupRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"e\202\323\344\223\002/2*/vpc/v1/securi" +
+      "tyGroups/{security_group_id}:\001*\262\322*,\n\033Upd" +
+      "ateSecurityGroupMetadata\022\rSecurityGroup\022" +
+      "\323\001\n\013UpdateRules\0224.yandex.cloud.vpc.v1.Up" +
+      "dateSecurityGroupRulesRequest\032!.yandex.c" +
+      "loud.operation.Operation\"k\202\323\344\223\002520/vpc/v" +
+      "1/securityGroups/{security_group_id}/rul" +
+      "es:\001*\262\322*,\n\033UpdateSecurityGroupMetadata\022\r" +
+      "SecurityGroup\022\343\001\n\nUpdateRule\0223.yandex.cl" +
+      "oud.vpc.v1.UpdateSecurityGroupRuleReques" +
+      "t\032!.yandex.cloud.operation.Operation\"}\202\323" +
+      "\344\223\002?2:/vpc/v1/securityGroups/{security_g" +
+      "roup_id}/rules/{rule_id}:\001*\262\322*4\n\037UpdateS" +
+      "ecurityGroupRuleMetadata\022\021SecurityGroupR" +
+      "ule\022\310\001\n\006Delete\022/.yandex.cloud.vpc.v1.Del" +
+      "eteSecurityGroupRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"j\202\323\344\223\002,**/vpc/v1/secu" +
+      "rityGroups/{security_group_id}\262\322*4\n\033Dele" +
+      "teSecurityGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\302\001\n\004Move\022-.yandex.cloud.vpc.v1.Mo" +
+      "veSecurityGroupRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"h\202\323\344\223\0024\"//vpc/v1/secur" +
+      "ityGroups/{security_group_id}:move:\001*\262\322*" +
+      "*\n\031MoveSecurityGroupMetadata\022\rSecurityGr" +
+      "oup\022\302\001\n\016ListOperations\0227.yandex.cloud.vp" +
+      "c.v1.ListSecurityGroupOperationsRequest\032" +
+      "8.yandex.cloud.vpc.v1.ListSecurityGroupO" +
+      "perationsResponse\"=\202\323\344\223\0027\0225/vpc/v1/secur" +
+      "ityGroups/{security_group_id}/operations" +
+      "BV\n\027yandex.cloud.api.vpc.v1Z;github.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/vp" +
+      "c/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17691,7 +17700,11 @@ public final class SecurityGroupServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();

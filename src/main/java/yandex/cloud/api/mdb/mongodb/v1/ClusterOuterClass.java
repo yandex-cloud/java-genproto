@@ -59705,6 +59705,33 @@ public final class ClusterOuterClass {
      * @return The type.
      */
     yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type getType();
+
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     * @return Whether the hostParameters field is set.
+     */
+    boolean hasHostParameters();
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     * @return The hostParameters.
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getHostParameters();
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     */
+    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder getHostParametersOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Host}
@@ -59834,6 +59861,19 @@ public final class ClusterOuterClass {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder subBuilder = null;
+              if (hostParameters_ != null) {
+                subBuilder = hostParameters_.toBuilder();
+              }
+              hostParameters_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hostParameters_);
+                hostParameters_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -60345,6 +60385,961 @@ public final class ClusterOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mongodb.v1.Host.Health)
     }
 
+    public interface HostParametersOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.Host.HostParameters)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bool hidden = 1;</code>
+       * @return The hidden.
+       */
+      boolean getHidden();
+
+      /**
+       * <code>int64 secondary_delay_secs = 2;</code>
+       * @return The secondaryDelaySecs.
+       */
+      long getSecondaryDelaySecs();
+
+      /**
+       * <code>double priority = 3;</code>
+       * @return The priority.
+       */
+      double getPriority();
+
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      int getTagsCount();
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      boolean containsTags(
+          java.lang.String key);
+      /**
+       * Use {@link #getTagsMap()} instead.
+       */
+      @java.lang.Deprecated
+      java.util.Map<java.lang.String, java.lang.String>
+      getTags();
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      java.util.Map<java.lang.String, java.lang.String>
+      getTagsMap();
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+
+      java.lang.String getTagsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue);
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+
+      java.lang.String getTagsOrThrow(
+          java.lang.String key);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Host.HostParameters}
+     */
+    public static final class HostParameters extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.Host.HostParameters)
+        HostParametersOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use HostParameters.newBuilder() to construct.
+      private HostParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private HostParameters() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new HostParameters();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private HostParameters(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                hidden_ = input.readBool();
+                break;
+              }
+              case 16: {
+
+                secondaryDelaySecs_ = input.readInt64();
+                break;
+              }
+              case 25: {
+
+                priority_ = input.readDouble();
+                break;
+              }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  tags_ = com.google.protobuf.MapField.newMapField(
+                      TagsDefaultEntryHolder.defaultEntry);
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                tags__ = input.readMessage(
+                    TagsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                tags_.getMutableMap().put(
+                    tags__.getKey(), tags__.getValue());
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      @java.lang.Override
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetTags();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder.class);
+      }
+
+      public static final int HIDDEN_FIELD_NUMBER = 1;
+      private boolean hidden_;
+      /**
+       * <code>bool hidden = 1;</code>
+       * @return The hidden.
+       */
+      @java.lang.Override
+      public boolean getHidden() {
+        return hidden_;
+      }
+
+      public static final int SECONDARY_DELAY_SECS_FIELD_NUMBER = 2;
+      private long secondaryDelaySecs_;
+      /**
+       * <code>int64 secondary_delay_secs = 2;</code>
+       * @return The secondaryDelaySecs.
+       */
+      @java.lang.Override
+      public long getSecondaryDelaySecs() {
+        return secondaryDelaySecs_;
+      }
+
+      public static final int PRIORITY_FIELD_NUMBER = 3;
+      private double priority_;
+      /**
+       * <code>double priority = 3;</code>
+       * @return The priority.
+       */
+      @java.lang.Override
+      public double getPriority() {
+        return priority_;
+      }
+
+      public static final int TAGS_FIELD_NUMBER = 4;
+      private static final class TagsDefaultEntryHolder {
+        static final com.google.protobuf.MapEntry<
+            java.lang.String, java.lang.String> defaultEntry =
+                com.google.protobuf.MapEntry
+                .<java.lang.String, java.lang.String>newDefaultInstance(
+                    yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_descriptor, 
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "",
+                    com.google.protobuf.WireFormat.FieldType.STRING,
+                    "");
+      }
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> tags_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTags() {
+        if (tags_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TagsDefaultEntryHolder.defaultEntry);
+        }
+        return tags_;
+      }
+
+      public int getTagsCount() {
+        return internalGetTags().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsTags(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetTags().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTagsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTags() {
+        return getTagsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getTagsMap() {
+        return internalGetTags().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTagsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTags().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; tags = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTagsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTags().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (hidden_ != false) {
+          output.writeBool(1, hidden_);
+        }
+        if (secondaryDelaySecs_ != 0L) {
+          output.writeInt64(2, secondaryDelaySecs_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(priority_) != 0) {
+          output.writeDouble(3, priority_);
+        }
+        com.google.protobuf.GeneratedMessageV3
+          .serializeStringMapTo(
+            output,
+            internalGetTags(),
+            TagsDefaultEntryHolder.defaultEntry,
+            4);
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (hidden_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, hidden_);
+        }
+        if (secondaryDelaySecs_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, secondaryDelaySecs_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(priority_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, priority_);
+        }
+        for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+             : internalGetTags().getMap().entrySet()) {
+          com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+          tags__ = TagsDefaultEntryHolder.defaultEntry.newBuilderForType()
+              .setKey(entry.getKey())
+              .setValue(entry.getValue())
+              .build();
+          size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, tags__);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters) obj;
+
+        if (getHidden()
+            != other.getHidden()) return false;
+        if (getSecondaryDelaySecs()
+            != other.getSecondaryDelaySecs()) return false;
+        if (java.lang.Double.doubleToLongBits(getPriority())
+            != java.lang.Double.doubleToLongBits(
+                other.getPriority())) return false;
+        if (!internalGetTags().equals(
+            other.internalGetTags())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HIDDEN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHidden());
+        hash = (37 * hash) + SECONDARY_DELAY_SECS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSecondaryDelaySecs());
+        hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getPriority()));
+        if (!internalGetTags().getMap().isEmpty()) {
+          hash = (37 * hash) + TAGS_FIELD_NUMBER;
+          hash = (53 * hash) + internalGetTags().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Host.HostParameters}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.Host.HostParameters)
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor;
+        }
+
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetTags();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @SuppressWarnings({"rawtypes"})
+        protected com.google.protobuf.MapField internalGetMutableMapField(
+            int number) {
+          switch (number) {
+            case 4:
+              return internalGetMutableTags();
+            default:
+              throw new RuntimeException(
+                  "Invalid map field number: " + number);
+          }
+        }
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          hidden_ = false;
+
+          secondaryDelaySecs_ = 0L;
+
+          priority_ = 0D;
+
+          internalGetMutableTags().clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters build() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters buildPartial() {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters(this);
+          int from_bitField0_ = bitField0_;
+          result.hidden_ = hidden_;
+          result.secondaryDelaySecs_ = secondaryDelaySecs_;
+          result.priority_ = priority_;
+          result.tags_ = internalGetTags();
+          result.tags_.makeImmutable();
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters) {
+            return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters other) {
+          if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.getDefaultInstance()) return this;
+          if (other.getHidden() != false) {
+            setHidden(other.getHidden());
+          }
+          if (other.getSecondaryDelaySecs() != 0L) {
+            setSecondaryDelaySecs(other.getSecondaryDelaySecs());
+          }
+          if (other.getPriority() != 0D) {
+            setPriority(other.getPriority());
+          }
+          internalGetMutableTags().mergeFrom(
+              other.internalGetTags());
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean hidden_ ;
+        /**
+         * <code>bool hidden = 1;</code>
+         * @return The hidden.
+         */
+        @java.lang.Override
+        public boolean getHidden() {
+          return hidden_;
+        }
+        /**
+         * <code>bool hidden = 1;</code>
+         * @param value The hidden to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHidden(boolean value) {
+          
+          hidden_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bool hidden = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHidden() {
+          
+          hidden_ = false;
+          onChanged();
+          return this;
+        }
+
+        private long secondaryDelaySecs_ ;
+        /**
+         * <code>int64 secondary_delay_secs = 2;</code>
+         * @return The secondaryDelaySecs.
+         */
+        @java.lang.Override
+        public long getSecondaryDelaySecs() {
+          return secondaryDelaySecs_;
+        }
+        /**
+         * <code>int64 secondary_delay_secs = 2;</code>
+         * @param value The secondaryDelaySecs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSecondaryDelaySecs(long value) {
+          
+          secondaryDelaySecs_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int64 secondary_delay_secs = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSecondaryDelaySecs() {
+          
+          secondaryDelaySecs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private double priority_ ;
+        /**
+         * <code>double priority = 3;</code>
+         * @return The priority.
+         */
+        @java.lang.Override
+        public double getPriority() {
+          return priority_;
+        }
+        /**
+         * <code>double priority = 3;</code>
+         * @param value The priority to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPriority(double value) {
+          
+          priority_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double priority = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPriority() {
+          
+          priority_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.MapField<
+            java.lang.String, java.lang.String> tags_;
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetTags() {
+          if (tags_ == null) {
+            return com.google.protobuf.MapField.emptyMapField(
+                TagsDefaultEntryHolder.defaultEntry);
+          }
+          return tags_;
+        }
+        private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableTags() {
+          onChanged();;
+          if (tags_ == null) {
+            tags_ = com.google.protobuf.MapField.newMapField(
+                TagsDefaultEntryHolder.defaultEntry);
+          }
+          if (!tags_.isMutable()) {
+            tags_ = tags_.copy();
+          }
+          return tags_;
+        }
+
+        public int getTagsCount() {
+          return internalGetTags().getMap().size();
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+
+        @java.lang.Override
+        public boolean containsTags(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          return internalGetTags().getMap().containsKey(key);
+        }
+        /**
+         * Use {@link #getTagsMap()} instead.
+         */
+        @java.lang.Override
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String> getTags() {
+          return getTagsMap();
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.util.Map<java.lang.String, java.lang.String> getTagsMap() {
+          return internalGetTags().getMap();
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getTagsOrDefault(
+            java.lang.String key,
+            java.lang.String defaultValue) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetTags().getMap();
+          return map.containsKey(key) ? map.get(key) : defaultValue;
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+        @java.lang.Override
+
+        public java.lang.String getTagsOrThrow(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          java.util.Map<java.lang.String, java.lang.String> map =
+              internalGetTags().getMap();
+          if (!map.containsKey(key)) {
+            throw new java.lang.IllegalArgumentException();
+          }
+          return map.get(key);
+        }
+
+        public Builder clearTags() {
+          internalGetMutableTags().getMutableMap()
+              .clear();
+          return this;
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+
+        public Builder removeTags(
+            java.lang.String key) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          internalGetMutableTags().getMutableMap()
+              .remove(key);
+          return this;
+        }
+        /**
+         * Use alternate mutation accessors instead.
+         */
+        @java.lang.Deprecated
+        public java.util.Map<java.lang.String, java.lang.String>
+        getMutableTags() {
+          return internalGetMutableTags().getMutableMap();
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+        public Builder putTags(
+            java.lang.String key,
+            java.lang.String value) {
+          if (key == null) { throw new NullPointerException("map key"); }
+          if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+          internalGetMutableTags().getMutableMap()
+              .put(key, value);
+          return this;
+        }
+        /**
+         * <code>map&lt;string, string&gt; tags = 4;</code>
+         */
+
+        public Builder putAllTags(
+            java.util.Map<java.lang.String, java.lang.String> values) {
+          internalGetMutableTags().getMutableMap()
+              .putAll(values);
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.Host.HostParameters)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.Host.HostParameters)
+      private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters();
+      }
+
+      public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<HostParameters>
+          PARSER = new com.google.protobuf.AbstractParser<HostParameters>() {
+        @java.lang.Override
+        public HostParameters parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new HostParameters(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<HostParameters> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<HostParameters> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
@@ -60773,6 +61768,44 @@ public final class ClusterOuterClass {
       return result == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.UNRECOGNIZED : result;
     }
 
+    public static final int HOST_PARAMETERS_FIELD_NUMBER = 12;
+    private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters hostParameters_;
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     * @return Whether the hostParameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasHostParameters() {
+      return hostParameters_ != null;
+    }
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     * @return The hostParameters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getHostParameters() {
+      return hostParameters_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.getDefaultInstance() : hostParameters_;
+    }
+    /**
+     * <pre>
+     * Host parameters
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder getHostParametersOrBuilder() {
+      return getHostParameters();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -60819,6 +61852,9 @@ public final class ClusterOuterClass {
       }
       if (type_ != yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(11, type_);
+      }
+      if (hostParameters_ != null) {
+        output.writeMessage(12, getHostParameters());
       }
       unknownFields.writeTo(output);
     }
@@ -60868,6 +61904,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, type_);
       }
+      if (hostParameters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getHostParameters());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -60905,6 +61945,11 @@ public final class ClusterOuterClass {
       if (!getShardName()
           .equals(other.getShardName())) return false;
       if (type_ != other.type_) return false;
+      if (hasHostParameters() != other.hasHostParameters()) return false;
+      if (hasHostParameters()) {
+        if (!getHostParameters()
+            .equals(other.getHostParameters())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -60943,6 +61988,10 @@ public final class ClusterOuterClass {
       hash = (53 * hash) + getShardName().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      if (hasHostParameters()) {
+        hash = (37 * hash) + HOST_PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostParameters().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -61107,6 +62156,12 @@ public final class ClusterOuterClass {
 
         type_ = 0;
 
+        if (hostParametersBuilder_ == null) {
+          hostParameters_ = null;
+        } else {
+          hostParameters_ = null;
+          hostParametersBuilder_ = null;
+        }
         return this;
       }
 
@@ -61157,6 +62212,11 @@ public final class ClusterOuterClass {
         result.assignPublicIp_ = assignPublicIp_;
         result.shardName_ = shardName_;
         result.type_ = type_;
+        if (hostParametersBuilder_ == null) {
+          result.hostParameters_ = hostParameters_;
+        } else {
+          result.hostParameters_ = hostParametersBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -61265,6 +62325,9 @@ public final class ClusterOuterClass {
         }
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
+        }
+        if (other.hasHostParameters()) {
+          mergeHostParameters(other.getHostParameters());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -62516,6 +63579,161 @@ public final class ClusterOuterClass {
         type_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters hostParameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder> hostParametersBuilder_;
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       * @return Whether the hostParameters field is set.
+       */
+      public boolean hasHostParameters() {
+        return hostParametersBuilder_ != null || hostParameters_ != null;
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       * @return The hostParameters.
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters getHostParameters() {
+        if (hostParametersBuilder_ == null) {
+          return hostParameters_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.getDefaultInstance() : hostParameters_;
+        } else {
+          return hostParametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public Builder setHostParameters(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters value) {
+        if (hostParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hostParameters_ = value;
+          onChanged();
+        } else {
+          hostParametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public Builder setHostParameters(
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder builderForValue) {
+        if (hostParametersBuilder_ == null) {
+          hostParameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          hostParametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public Builder mergeHostParameters(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters value) {
+        if (hostParametersBuilder_ == null) {
+          if (hostParameters_ != null) {
+            hostParameters_ =
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.newBuilder(hostParameters_).mergeFrom(value).buildPartial();
+          } else {
+            hostParameters_ = value;
+          }
+          onChanged();
+        } else {
+          hostParametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public Builder clearHostParameters() {
+        if (hostParametersBuilder_ == null) {
+          hostParameters_ = null;
+          onChanged();
+        } else {
+          hostParameters_ = null;
+          hostParametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder getHostParametersBuilder() {
+        
+        onChanged();
+        return getHostParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder getHostParametersOrBuilder() {
+        if (hostParametersBuilder_ != null) {
+          return hostParametersBuilder_.getMessageOrBuilder();
+        } else {
+          return hostParameters_ == null ?
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.getDefaultInstance() : hostParameters_;
+        }
+      }
+      /**
+       * <pre>
+       * Host parameters
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.Host.HostParameters host_parameters = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder> 
+          getHostParametersFieldBuilder() {
+        if (hostParametersBuilder_ == null) {
+          hostParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParameters.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.Host.HostParametersOrBuilder>(
+                  getHostParameters(),
+                  getParentForChildren(),
+                  isClean());
+          hostParameters_ = null;
+        }
+        return hostParametersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -65844,6 +67062,16 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_Host_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_Service_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -66169,7 +67397,7 @@ public final class ClusterOuterClass {
       "v1.config.MongoCfgConfigSet6_0_enterpris" +
       "e\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb." +
       "mongodb.v1.Resources\")\n\005Shard\022\014\n\004name\030\001 " +
-      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\336\004\n\004Host\022\014\n\004name" +
+      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\363\006\n\004Host\022\014\n\004name" +
       "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
       "\001(\t\0229\n\tresources\030\004 \001(\0132&.yandex.cloud.md" +
       "b.mongodb.v1.Resources\0224\n\004role\030\005 \001(\0162&.y" +
@@ -66179,26 +67407,33 @@ public final class ClusterOuterClass {
       "x.cloud.mdb.mongodb.v1.Service\022\021\n\tsubnet" +
       "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\ns" +
       "hard_name\030\n \001(\t\0224\n\004type\030\013 \001(\0162&.yandex.c" +
-      "loud.mdb.mongodb.v1.Host.Type\"R\n\004Type\022\024\n" +
-      "\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGO" +
-      "S\020\002\022\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Rol" +
-      "e\022\020\n\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECO" +
-      "NDARY\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
-      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Ser" +
-      "vice\0227\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mo" +
-      "ngodb.v1.Service.Type\022;\n\006health\030\002 \001(\0162+." +
-      "yandex.cloud.mdb.mongodb.v1.Service.Heal" +
-      "th\"B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONG" +
-      "OD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health" +
-      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
-      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
-      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
-      "\001(\t\"2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata" +
-      "_transfer\030\003 \001(\010\"9\n\034PerformanceDiagnostic" +
-      "sConfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n\037ya" +
-      "ndex.cloud.api.mdb.mongodb.v1ZGgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/mongodb/v1;mongodbb\006proto3"
+      "loud.mdb.mongodb.v1.Host.Type\022I\n\017host_pa" +
+      "rameters\030\014 \001(\01320.yandex.cloud.mdb.mongod" +
+      "b.v1.Host.HostParameters\032\307\001\n\016HostParamet" +
+      "ers\022\016\n\006hidden\030\001 \001(\010\022\034\n\024secondary_delay_s" +
+      "ecs\030\002 \001(\003\022\020\n\010priority\030\003 \001(\001\022H\n\004tags\030\004 \003(" +
+      "\0132:.yandex.cloud.mdb.mongodb.v1.Host.Hos" +
+      "tParameters.TagsEntry\032+\n\tTagsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002" +
+      "\022\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020" +
+      "\n\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDA" +
+      "RY\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
+      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Servic" +
+      "e\0227\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mongo" +
+      "db.v1.Service.Type\022;\n\006health\030\002 \001(\0162+.yan" +
+      "dex.cloud.mdb.mongodb.v1.Service.Health\"" +
+      "B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020" +
+      "\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n" +
+      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P" +
+      "\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022" +
+      "\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t" +
+      "\"2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tr" +
+      "ansfer\030\003 \001(\010\"9\n\034PerformanceDiagnosticsCo" +
+      "nfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n\037yande" +
+      "x.cloud.api.mdb.mongodb.v1ZGgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/mongodb/v1;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66522,7 +67757,19 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Host_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ShardName", "Type", });
+        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ShardName", "Type", "HostParameters", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Host_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor,
+        new java.lang.String[] { "Hidden", "SecondaryDelaySecs", "Priority", "Tags", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_descriptor =
+      internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_Host_HostParameters_TagsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_mdb_mongodb_v1_Service_fieldAccessorTable = new

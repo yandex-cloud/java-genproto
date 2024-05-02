@@ -568,6 +568,50 @@ public final class Jobs {
      * <code>.yandex.cloud.datasphere.v2.jobs.ExtendedWorkingStorage extended_working_storage = 9;</code>
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.ExtendedWorkingStorageOrBuilder getExtendedWorkingStorageOrBuilder();
+
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> 
+        getArgumentsList();
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getArguments(int index);
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    int getArgumentsCount();
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder> 
+        getArgumentsOrBuilderList();
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder getArgumentsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -591,6 +635,7 @@ public final class Jobs {
       s3MountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cmd_ = "";
+      arguments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -710,6 +755,15 @@ public final class Jobs {
 
               break;
             }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                arguments_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              arguments_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -736,6 +790,9 @@ public final class Jobs {
         }
         if (((mutable_bitField0_ & 0x00000008) != 0)) {
           datasetIds_ = datasetIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          arguments_ = java.util.Collections.unmodifiableList(arguments_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1151,6 +1208,66 @@ public final class Jobs {
       return getExtendedWorkingStorage();
     }
 
+    public static final int ARGUMENTS_FIELD_NUMBER = 10;
+    private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> arguments_;
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> getArgumentsList() {
+      return arguments_;
+    }
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder> 
+        getArgumentsOrBuilderList() {
+      return arguments_;
+    }
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    @java.lang.Override
+    public int getArgumentsCount() {
+      return arguments_.size();
+    }
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getArguments(int index) {
+      return arguments_.get(index);
+    }
+    /**
+     * <pre>
+     * List of literal arguments.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder getArgumentsOrBuilder(
+        int index) {
+      return arguments_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1191,6 +1308,9 @@ public final class Jobs {
       }
       if (extendedWorkingStorage_ != null) {
         output.writeMessage(9, getExtendedWorkingStorage());
+      }
+      for (int i = 0; i < arguments_.size(); i++) {
+        output.writeMessage(10, arguments_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1244,6 +1364,10 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getExtendedWorkingStorage());
       }
+      for (int i = 0; i < arguments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, arguments_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1286,6 +1410,8 @@ public final class Jobs {
         if (!getExtendedWorkingStorage()
             .equals(other.getExtendedWorkingStorage())) return false;
       }
+      if (!getArgumentsList()
+          .equals(other.getArgumentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1329,6 +1455,10 @@ public final class Jobs {
       if (hasExtendedWorkingStorage()) {
         hash = (37 * hash) + EXTENDED_WORKING_STORAGE_FIELD_NUMBER;
         hash = (53 * hash) + getExtendedWorkingStorage().hashCode();
+      }
+      if (getArgumentsCount() > 0) {
+        hash = (37 * hash) + ARGUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getArgumentsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1464,6 +1594,7 @@ public final class Jobs {
                 .alwaysUseFieldBuilders) {
           getInputFilesFieldBuilder();
           getOutputFilesFieldBuilder();
+          getArgumentsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1506,6 +1637,12 @@ public final class Jobs {
         } else {
           extendedWorkingStorage_ = null;
           extendedWorkingStorageBuilder_ = null;
+        }
+        if (argumentsBuilder_ == null) {
+          arguments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          argumentsBuilder_.clear();
         }
         return this;
       }
@@ -1578,6 +1715,15 @@ public final class Jobs {
           result.extendedWorkingStorage_ = extendedWorkingStorage_;
         } else {
           result.extendedWorkingStorage_ = extendedWorkingStorageBuilder_.build();
+        }
+        if (argumentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            arguments_ = java.util.Collections.unmodifiableList(arguments_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.arguments_ = arguments_;
+        } else {
+          result.arguments_ = argumentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1714,6 +1860,32 @@ public final class Jobs {
         }
         if (other.hasExtendedWorkingStorage()) {
           mergeExtendedWorkingStorage(other.getExtendedWorkingStorage());
+        }
+        if (argumentsBuilder_ == null) {
+          if (!other.arguments_.isEmpty()) {
+            if (arguments_.isEmpty()) {
+              arguments_ = other.arguments_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureArgumentsIsMutable();
+              arguments_.addAll(other.arguments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.arguments_.isEmpty()) {
+            if (argumentsBuilder_.isEmpty()) {
+              argumentsBuilder_.dispose();
+              argumentsBuilder_ = null;
+              arguments_ = other.arguments_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              argumentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getArgumentsFieldBuilder() : null;
+            } else {
+              argumentsBuilder_.addAllMessages(other.arguments_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3264,6 +3436,318 @@ public final class Jobs {
         }
         return extendedWorkingStorageBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> arguments_ =
+        java.util.Collections.emptyList();
+      private void ensureArgumentsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          arguments_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument>(arguments_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder> argumentsBuilder_;
+
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> getArgumentsList() {
+        if (argumentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(arguments_);
+        } else {
+          return argumentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public int getArgumentsCount() {
+        if (argumentsBuilder_ == null) {
+          return arguments_.size();
+        } else {
+          return argumentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getArguments(int index) {
+        if (argumentsBuilder_ == null) {
+          return arguments_.get(index);
+        } else {
+          return argumentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder setArguments(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument value) {
+        if (argumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArgumentsIsMutable();
+          arguments_.set(index, value);
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder setArguments(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder builderForValue) {
+        if (argumentsBuilder_ == null) {
+          ensureArgumentsIsMutable();
+          arguments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          argumentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder addArguments(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument value) {
+        if (argumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArgumentsIsMutable();
+          arguments_.add(value);
+          onChanged();
+        } else {
+          argumentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder addArguments(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument value) {
+        if (argumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureArgumentsIsMutable();
+          arguments_.add(index, value);
+          onChanged();
+        } else {
+          argumentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder addArguments(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder builderForValue) {
+        if (argumentsBuilder_ == null) {
+          ensureArgumentsIsMutable();
+          arguments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          argumentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder addArguments(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder builderForValue) {
+        if (argumentsBuilder_ == null) {
+          ensureArgumentsIsMutable();
+          arguments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          argumentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder addAllArguments(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> values) {
+        if (argumentsBuilder_ == null) {
+          ensureArgumentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, arguments_);
+          onChanged();
+        } else {
+          argumentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder clearArguments() {
+        if (argumentsBuilder_ == null) {
+          arguments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          argumentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public Builder removeArguments(int index) {
+        if (argumentsBuilder_ == null) {
+          ensureArgumentsIsMutable();
+          arguments_.remove(index);
+          onChanged();
+        } else {
+          argumentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder getArgumentsBuilder(
+          int index) {
+        return getArgumentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder getArgumentsOrBuilder(
+          int index) {
+        if (argumentsBuilder_ == null) {
+          return arguments_.get(index);  } else {
+          return argumentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder> 
+           getArgumentsOrBuilderList() {
+        if (argumentsBuilder_ != null) {
+          return argumentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(arguments_);
+        }
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder addArgumentsBuilder() {
+        return getArgumentsFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder addArgumentsBuilder(
+          int index) {
+        return getArgumentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of literal arguments.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.Argument arguments = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder> 
+           getArgumentsBuilderList() {
+        return getArgumentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder> 
+          getArgumentsFieldBuilder() {
+        if (argumentsBuilder_ == null) {
+          argumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder>(
+                  arguments_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          arguments_ = null;
+        }
+        return argumentsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4628,6 +5112,724 @@ public final class Jobs {
 
     @java.lang.Override
     public yandex.cloud.api.datasphere.v2.jobs.Jobs.ExtendedWorkingStorage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ArgumentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.Argument)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.Argument}
+   */
+  public static final class Argument extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.Argument)
+      ArgumentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Argument.newBuilder() to construct.
+    private Argument(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Argument() {
+      name_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Argument();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Argument(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_Argument_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.Argument}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.Argument)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_Argument_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        value_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument(this);
+        result.name_ = name_;
+        result.value_ = value_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.Argument)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.Argument)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Argument>
+        PARSER = new com.google.protobuf.AbstractParser<Argument>() {
+      @java.lang.Override
+      public Argument parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Argument(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Argument> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Argument> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16368,6 +17570,11 @@ public final class Jobs {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_ExtendedWorkingStorage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_Argument_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_File_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16423,7 +17630,7 @@ public final class Jobs {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/datasphere/v2/jobs/jobs.p" +
       "roto\022\037yandex.cloud.datasphere.v2.jobs\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\310\003\n\rJobPa" +
+      "oogle/protobuf/timestamp.proto\"\206\004\n\rJobPa" +
       "rameters\022:\n\013input_files\030\001 \003(\0132%.yandex.c" +
       "loud.datasphere.v2.jobs.File\022?\n\014output_f" +
       "iles\030\002 \003(\0132).yandex.cloud.datasphere.v2." +
@@ -16435,60 +17642,62 @@ public final class Jobs {
       "d.datasphere.v2.jobs.CloudInstanceType\022Y" +
       "\n\030extended_working_storage\030\t \001(\01327.yande" +
       "x.cloud.datasphere.v2.jobs.ExtendedWorki" +
-      "ngStorage\"!\n\021CloudInstanceType\022\014\n\004name\030\001" +
-      " \001(\t\"\262\001\n\026ExtendedWorkingStorage\022Q\n\004type\030" +
-      "\001 \001(\0162C.yandex.cloud.datasphere.v2.jobs." +
-      "ExtendedWorkingStorage.StorageType\022\017\n\007si" +
-      "ze_gb\030\002 \001(\003\"4\n\013StorageType\022\034\n\030STORAGE_TY" +
-      "PE_UNSPECIFIED\020\000\022\007\n\003SSD\020\001\"\263\001\n\004File\0227\n\004de" +
-      "sc\030\001 \001(\0132).yandex.cloud.datasphere.v2.jo" +
-      "bs.FileDesc\022\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_byte" +
-      "s\030\003 \001(\003\022N\n\020compression_type\030\004 \001(\01624.yand" +
-      "ex.cloud.datasphere.v2.jobs.FileCompress" +
-      "ionType\"O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.y" +
-      "andex.cloud.datasphere.v2.jobs.File\022\013\n\003u" +
-      "rl\030\002 \001(\t\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003va" +
-      "r\030\002 \001(\t\"\303\002\n\013Environment\022D\n\004vars\030\001 \003(\01326." +
-      "yandex.cloud.datasphere.v2.jobs.Environm" +
-      "ent.VarsEntry\022\"\n\030docker_image_resource_i" +
-      "d\030\002 \001(\tH\000\022M\n\021docker_image_spec\030\003 \001(\01320.y" +
-      "andex.cloud.datasphere.v2.jobs.DockerIma" +
-      "geSpecH\000\022>\n\npython_env\030\004 \001(\0132*.yandex.cl" +
-      "oud.datasphere.v2.jobs.PythonEnv\032+\n\tVars" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n" +
-      "\014docker_image\"\204\001\n\017DockerImageSpec\022\021\n\tima" +
-      "ge_url\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\035\n\023passwo" +
-      "rd_plain_text\030\003 \001(\tH\000\022!\n\027password_ds_sec" +
-      "ret_name\030\004 \001(\tH\000B\n\n\010password\"]\n\tPythonEn" +
-      "v\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_modules\030\002" +
-      " \003(\0132%.yandex.cloud.datasphere.v2.jobs.F" +
-      "ile\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n" +
-      "\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nstarted_at\030\021 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022/\n\013finished_" +
-      "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006" +
-      "status\030\006 \001(\0162*.yandex.cloud.datasphere.v" +
-      "2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcrea" +
-      "ted_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016j" +
-      "ob_parameters\030\n \001(\0132..yandex.cloud.datas" +
-      "phere.v2.jobs.JobParameters\0223\n\017data_expi" +
-      "res_at\030\013 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r" +
-      " \003(\0132%.yandex.cloud.datasphere.v2.jobs.F" +
-      "ile\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud.da" +
-      "tasphere.v2.jobs.File\022?\n\020diagnostic_file" +
-      "s\030\017 \003(\0132%.yandex.cloud.datasphere.v2.job" +
-      "s.File\022\027\n\017data_size_bytes\030\020 \001(\003\" \n\tJobRe" +
-      "sult\022\023\n\013return_code\030\001 \001(\003*O\n\023FileCompres" +
-      "sionType\022%\n!FILE_COMPRESSION_TYPE_UNSPEC" +
-      "IFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus" +
-      "\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING" +
-      "\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022" +
-      "\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{" +
-      "\n#yandex.cloud.api.datasphere.v2.jobsB\004J" +
-      "obsZNgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/datasphere/v2/jobs;datasph" +
-      "ereb\006proto3"
+      "ngStorage\022<\n\targuments\030\n \003(\0132).yandex.cl" +
+      "oud.datasphere.v2.jobs.Argument\"!\n\021Cloud" +
+      "InstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026ExtendedW" +
+      "orkingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.clo" +
+      "ud.datasphere.v2.jobs.ExtendedWorkingSto" +
+      "rage.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013Sto" +
+      "rageType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022\007" +
+      "\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yandex" +
+      ".cloud.datasphere.v2.jobs.FileDesc\022\016\n\006sh" +
+      "a256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compre" +
+      "ssion_type\030\004 \001(\01624.yandex.cloud.datasphe" +
+      "re.v2.jobs.FileCompressionType\"O\n\013Storag" +
+      "eFile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.datas" +
+      "phere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010FileD" +
+      "esc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Envir" +
+      "onment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.data" +
+      "sphere.v2.jobs.Environment.VarsEntry\022\"\n\030" +
+      "docker_image_resource_id\030\002 \001(\tH\000\022M\n\021dock" +
+      "er_image_spec\030\003 \001(\01320.yandex.cloud.datas" +
+      "phere.v2.jobs.DockerImageSpecH\000\022>\n\npytho" +
+      "n_env\030\004 \001(\0132*.yandex.cloud.datasphere.v2" +
+      ".jobs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n" +
+      "\017DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010u" +
+      "sername\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001" +
+      "(\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B" +
+      "\n\n\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030\001" +
+      " \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.clo" +
+      "ud.datasphere.v2.jobs.File\"\231\005\n\003Job\022\n\n\002id" +
+      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncr" +
+      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022.\n\nstarted_at\030\021 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022/\n\013finished_at\030\005 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022:\n\006status\030\006 \001(\0162*.ya" +
+      "ndex.cloud.datasphere.v2.jobs.JobStatus\022" +
+      "\016\n\006config\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022" +
+      "\n\nproject_id\030\t \001(\t\022F\n\016job_parameters\030\n \001" +
+      "(\0132..yandex.cloud.datasphere.v2.jobs.Job" +
+      "Parameters\0223\n\017data_expires_at\030\013 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\024\n\014data_cleared\030" +
+      "\014 \001(\010\022;\n\014output_files\030\r \003(\0132%.yandex.clo" +
+      "ud.datasphere.v2.jobs.File\0228\n\tlog_files\030" +
+      "\016 \003(\0132%.yandex.cloud.datasphere.v2.jobs." +
+      "File\022?\n\020diagnostic_files\030\017 \003(\0132%.yandex." +
+      "cloud.datasphere.v2.jobs.File\022\027\n\017data_si" +
+      "ze_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013return_co" +
+      "de\030\001 \001(\003*O\n\023FileCompressionType\022%\n!FILE_" +
+      "COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001" +
+      "\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_STATUS_UN" +
+      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002" +
+      "\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005E" +
+      "RROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex.cloud.ap" +
+      "i.datasphere.v2.jobsB\004JobsZNgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "asphere/v2/jobs;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16500,7 +17709,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor,
-        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceType", "ExtendedWorkingStorage", });
+        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceType", "ExtendedWorkingStorage", "Arguments", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_fieldAccessorTable = new
@@ -16513,26 +17722,32 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_ExtendedWorkingStorage_descriptor,
         new java.lang.String[] { "Type", "SizeGb", });
-    internal_static_yandex_cloud_datasphere_v2_jobs_File_descriptor =
+    internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_datasphere_v2_jobs_Argument_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_Argument_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_File_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_datasphere_v2_jobs_File_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_File_descriptor,
         new java.lang.String[] { "Desc", "Sha256", "SizeBytes", "CompressionType", });
     internal_static_yandex_cloud_datasphere_v2_jobs_StorageFile_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_datasphere_v2_jobs_StorageFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_StorageFile_descriptor,
         new java.lang.String[] { "File", "Url", });
     internal_static_yandex_cloud_datasphere_v2_jobs_FileDesc_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_datasphere_v2_jobs_FileDesc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_FileDesc_descriptor,
         new java.lang.String[] { "Path", "Var", });
     internal_static_yandex_cloud_datasphere_v2_jobs_Environment_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_datasphere_v2_jobs_Environment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Environment_descriptor,
@@ -16544,25 +17759,25 @@ public final class Jobs {
         internal_static_yandex_cloud_datasphere_v2_jobs_Environment_VarsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datasphere_v2_jobs_DockerImageSpec_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_datasphere_v2_jobs_DockerImageSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_DockerImageSpec_descriptor,
         new java.lang.String[] { "ImageUrl", "Username", "PasswordPlainText", "PasswordDsSecretName", "Password", });
     internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_descriptor,
         new java.lang.String[] { "CondaYaml", "LocalModules", });
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor,
         new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "StartedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", "LogFiles", "DiagnosticFiles", "DataSizeBytes", });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor,

@@ -40,6 +40,18 @@ public final class AgentServiceOuterClass {
      * @return The status.
      */
     yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest.Status getStatus();
+
+    /**
+     * <code>string status_message = 3;</code>
+     * @return The statusMessage.
+     */
+    java.lang.String getStatusMessage();
+    /**
+     * <code>string status_message = 3;</code>
+     * @return The bytes for statusMessage.
+     */
+    com.google.protobuf.ByteString
+        getStatusMessageBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.ClaimAgentStatusRequest}
@@ -56,6 +68,7 @@ public final class AgentServiceOuterClass {
     private ClaimAgentStatusRequest() {
       agentInstanceId_ = "";
       status_ = 0;
+      statusMessage_ = "";
     }
 
     @java.lang.Override
@@ -98,6 +111,12 @@ public final class AgentServiceOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              statusMessage_ = s;
               break;
             }
             default: {
@@ -165,6 +184,10 @@ public final class AgentServiceOuterClass {
        * <code>UPLOADING_ARTIFACTS = 6;</code>
        */
       UPLOADING_ARTIFACTS(6),
+      /**
+       * <code>ERROR = 7;</code>
+       */
+      ERROR(7),
       UNRECOGNIZED(-1),
       ;
 
@@ -196,6 +219,10 @@ public final class AgentServiceOuterClass {
        * <code>UPLOADING_ARTIFACTS = 6;</code>
        */
       public static final int UPLOADING_ARTIFACTS_VALUE = 6;
+      /**
+       * <code>ERROR = 7;</code>
+       */
+      public static final int ERROR_VALUE = 7;
 
 
       public final int getNumber() {
@@ -229,6 +256,7 @@ public final class AgentServiceOuterClass {
           case 4: return TANK_FAILED;
           case 5: return STOPPED;
           case 6: return UPLOADING_ARTIFACTS;
+          case 7: return ERROR;
           default: return null;
         }
       }
@@ -342,6 +370,44 @@ public final class AgentServiceOuterClass {
       return result == null ? yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest.Status.UNRECOGNIZED : result;
     }
 
+    public static final int STATUS_MESSAGE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object statusMessage_;
+    /**
+     * <code>string status_message = 3;</code>
+     * @return The statusMessage.
+     */
+    @java.lang.Override
+    public java.lang.String getStatusMessage() {
+      java.lang.Object ref = statusMessage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        statusMessage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status_message = 3;</code>
+     * @return The bytes for statusMessage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusMessageBytes() {
+      java.lang.Object ref = statusMessage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        statusMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -362,6 +428,9 @@ public final class AgentServiceOuterClass {
       if (status_ != yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest.Status.STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, statusMessage_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -377,6 +446,9 @@ public final class AgentServiceOuterClass {
       if (status_ != yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest.Status.STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statusMessage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, statusMessage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -396,6 +468,8 @@ public final class AgentServiceOuterClass {
       if (!getAgentInstanceId()
           .equals(other.getAgentInstanceId())) return false;
       if (status_ != other.status_) return false;
+      if (!getStatusMessage()
+          .equals(other.getStatusMessage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -411,6 +485,8 @@ public final class AgentServiceOuterClass {
       hash = (53 * hash) + getAgentInstanceId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + STATUS_MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getStatusMessage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -548,6 +624,8 @@ public final class AgentServiceOuterClass {
 
         status_ = 0;
 
+        statusMessage_ = "";
+
         return this;
       }
 
@@ -576,6 +654,7 @@ public final class AgentServiceOuterClass {
         yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest result = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest(this);
         result.agentInstanceId_ = agentInstanceId_;
         result.status_ = status_;
+        result.statusMessage_ = statusMessage_;
         onBuilt();
         return result;
       }
@@ -630,6 +709,10 @@ public final class AgentServiceOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getStatusMessage().isEmpty()) {
+          statusMessage_ = other.statusMessage_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -786,6 +869,82 @@ public final class AgentServiceOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object statusMessage_ = "";
+      /**
+       * <code>string status_message = 3;</code>
+       * @return The statusMessage.
+       */
+      public java.lang.String getStatusMessage() {
+        java.lang.Object ref = statusMessage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          statusMessage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status_message = 3;</code>
+       * @return The bytes for statusMessage.
+       */
+      public com.google.protobuf.ByteString
+          getStatusMessageBytes() {
+        java.lang.Object ref = statusMessage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          statusMessage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status_message = 3;</code>
+       * @param value The statusMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        statusMessage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status_message = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatusMessage() {
+        
+        statusMessage_ = getDefaultInstance().getStatusMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status_message = 3;</code>
+       * @param value The bytes for statusMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        statusMessage_ = value;
         onChanged();
         return this;
       }
@@ -1353,23 +1512,24 @@ public final class AgentServiceOuterClass {
       "\n5yandex/cloud/loadtesting/agent/v1/agen" +
       "t_service.proto\022!yandex.cloud.loadtestin" +
       "g.agent.v1\032\034google/api/annotations.proto" +
-      "\"\226\002\n\027ClaimAgentStatusRequest\022\031\n\021agent_in" +
+      "\"\271\002\n\027ClaimAgentStatusRequest\022\031\n\021agent_in" +
       "stance_id\030\001 \001(\t\022Q\n\006status\030\002 \001(\0162A.yandex" +
       ".cloud.loadtesting.agent.v1.ClaimAgentSt" +
-      "atusRequest.Status\"\214\001\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\022\n\016READY_FOR_TEST\020\001\022\022\n\016PRE" +
-      "PARING_TEST\020\002\022\013\n\007TESTING\020\003\022\017\n\013TANK_FAILE" +
-      "D\020\004\022\013\n\007STOPPED\020\005\022\027\n\023UPLOADING_ARTIFACTS\020" +
-      "\006\"(\n\030ClaimAgentStatusResponse\022\014\n\004code\030\001 " +
-      "\001(\0032\340\001\n\014AgentService\022\317\001\n\013ClaimStatus\022:.y" +
-      "andex.cloud.loadtesting.agent.v1.ClaimAg" +
-      "entStatusRequest\032;.yandex.cloud.loadtest" +
-      "ing.agent.v1.ClaimAgentStatusResponse\"G\202" +
-      "\323\344\223\002A\"</loadtesting/agent/v1/agents/{age" +
-      "nt_instance_id}/claimStatus:\001*Bt\n%yandex" +
-      ".cloud.api.loadtesting.agent.v1ZKgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/loadtesting/agent/v1;agentb\006proto3"
+      "atusRequest.Status\022\026\n\016status_message\030\003 \001" +
+      "(\t\"\227\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\022\n" +
+      "\016READY_FOR_TEST\020\001\022\022\n\016PREPARING_TEST\020\002\022\013\n" +
+      "\007TESTING\020\003\022\017\n\013TANK_FAILED\020\004\022\013\n\007STOPPED\020\005" +
+      "\022\027\n\023UPLOADING_ARTIFACTS\020\006\022\t\n\005ERROR\020\007\"(\n\030" +
+      "ClaimAgentStatusResponse\022\014\n\004code\030\001 \001(\0032\340" +
+      "\001\n\014AgentService\022\317\001\n\013ClaimStatus\022:.yandex" +
+      ".cloud.loadtesting.agent.v1.ClaimAgentSt" +
+      "atusRequest\032;.yandex.cloud.loadtesting.a" +
+      "gent.v1.ClaimAgentStatusResponse\"G\202\323\344\223\002A" +
+      "\"</loadtesting/agent/v1/agents/{agent_in" +
+      "stance_id}/claimStatus:\001*Bt\n%yandex.clou" +
+      "d.api.loadtesting.agent.v1ZKgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/loa" +
+      "dtesting/agent/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1381,7 +1541,7 @@ public final class AgentServiceOuterClass {
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusRequest_descriptor,
-        new java.lang.String[] { "AgentInstanceId", "Status", });
+        new java.lang.String[] { "AgentInstanceId", "Status", "StatusMessage", });
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusResponse_fieldAccessorTable = new

@@ -25509,6 +25509,1701 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface GetProjectRestrictionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest}
+   */
+  public static final class GetProjectRestrictionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest)
+      GetProjectRestrictionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetProjectRestrictionsRequest.newBuilder() to construct.
+    private GetProjectRestrictionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetProjectRestrictionsRequest() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetProjectRestrictionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetProjectRestrictionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest(this);
+        result.projectId_ = projectId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.GetProjectRestrictionsRequest)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetProjectRestrictionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetProjectRestrictionsRequest>() {
+      @java.lang.Override
+      public GetProjectRestrictionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetProjectRestrictionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetProjectRestrictionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetProjectRestrictionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.GetProjectRestrictionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetProjectRestrictionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> 
+        getRestrictionsList();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index);
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    int getRestrictionsCount();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+        getRestrictionsOrBuilderList();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest}
+   */
+  public static final class SetProjectRestrictionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest)
+      SetProjectRestrictionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetProjectRestrictionsRequest.newBuilder() to construct.
+    private SetProjectRestrictionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetProjectRestrictionsRequest() {
+      projectId_ = "";
+      restrictions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetProjectRestrictionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetProjectRestrictionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                restrictions_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.Restrictions.Restriction>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              restrictions_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.Restrictions.Restriction.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESTRICTIONS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> restrictions_;
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> getRestrictionsList() {
+      return restrictions_;
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+        getRestrictionsOrBuilderList() {
+      return restrictions_;
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public int getRestrictionsCount() {
+      return restrictions_.size();
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index) {
+      return restrictions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+        int index) {
+      return restrictions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        output.writeMessage(2, restrictions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, restrictions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (!getRestrictionsList()
+          .equals(other.getRestrictionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      if (getRestrictionsCount() > 0) {
+        hash = (37 * hash) + RESTRICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRestrictionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRestrictionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.projectId_ = projectId_;
+        if (restrictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.restrictions_ = restrictions_;
+        } else {
+          result.restrictions_ = restrictionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (restrictionsBuilder_ == null) {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictions_.isEmpty()) {
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRestrictionsIsMutable();
+              restrictions_.addAll(other.restrictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictionsBuilder_.isEmpty()) {
+              restrictionsBuilder_.dispose();
+              restrictionsBuilder_ = null;
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              restrictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRestrictionsFieldBuilder() : null;
+            } else {
+              restrictionsBuilder_.addAllMessages(other.restrictions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> restrictions_ =
+        java.util.Collections.emptyList();
+      private void ensureRestrictionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          restrictions_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.Restrictions.Restriction>(restrictions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> restrictionsBuilder_;
+
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> getRestrictionsList() {
+        if (restrictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        } else {
+          return restrictionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public int getRestrictionsCount() {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.size();
+        } else {
+          return restrictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);
+        } else {
+          return restrictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder setRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder setRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addAllRestrictions(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.Restrictions.Restriction> values) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, restrictions_);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder clearRestrictions() {
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder removeRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.remove(index);
+          onChanged();
+        } else {
+          restrictionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder getRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+          int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);  } else {
+          return restrictionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+           getRestrictionsOrBuilderList() {
+        if (restrictionsBuilder_ != null) {
+          return restrictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder addRestrictionsBuilder() {
+        return getRestrictionsFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.Restrictions.Restriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder addRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder> 
+           getRestrictionsBuilderList() {
+        return getRestrictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+          getRestrictionsFieldBuilder() {
+        if (restrictionsBuilder_ == null) {
+          restrictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder>(
+                  restrictions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          restrictions_ = null;
+        }
+        return restrictionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.SetProjectRestrictionsRequest)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetProjectRestrictionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetProjectRestrictionsRequest>() {
+      @java.lang.Override
+      public SetProjectRestrictionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetProjectRestrictionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetProjectRestrictionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetProjectRestrictionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.SetProjectRestrictionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_CreateProjectRequest_descriptor;
   private static final 
@@ -25654,6 +27349,16 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25665,197 +27370,218 @@ public final class ProjectServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n0yandex/cloud/datasphere/v2/project_ser" +
       "vice.proto\022\032yandex.cloud.datasphere.v2\032\034" +
-      "google/api/annotations.proto\032 google/pro" +
-      "tobuf/field_mask.proto\032\034google/protobuf/" +
-      "struct.proto\032\037google/protobuf/timestamp." +
-      "proto\032\036google/protobuf/wrappers.proto\032 y" +
-      "andex/cloud/api/operation.proto\032 yandex/" +
-      "cloud/access/access.proto\032(yandex/cloud/" +
-      "datasphere/v2/project.proto\032/yandex/clou" +
-      "d/datasphere/v2/resource_types.proto\032&ya" +
-      "ndex/cloud/operation/operation.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"\326\003\n\024CreatePr" +
-      "ojectRequest\022\"\n\014community_id\030\001 \001(\tB\014\212\3101\004" +
-      "<=50\350\3071\001\0229\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\003 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\004 \003(\0132<.y" +
-      "andex.cloud.datasphere.v2.CreateProjectR" +
-      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
-      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022>\n\010settings\030\005 \001(\0132,.yandex.cloud.dat" +
-      "asphere.v2.Project.Settings\022:\n\006limits\030\006 " +
-      "\001(\0132*.yandex.cloud.datasphere.v2.Project" +
-      ".Limits\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001J\004\010\007\020\010\"+\n\025CreateProjectMet" +
-      "adata\022\022\n\nproject_id\030\001 \001(\t\"\377\003\n\024UpdateProj" +
-      "ectRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63\362\3071" +
-      "\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
-      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\005 \003(" +
-      "\0132<.yandex.cloud.datasphere.v2.UpdatePro" +
-      "jectRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022>\n\010settings\030\006 \001(\0132,.yandex.clou" +
-      "d.datasphere.v2.Project.Settings\022:\n\006limi" +
-      "ts\030\007 \001(\0132*.yandex.cloud.datasphere.v2.Pr" +
-      "oject.Limits\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateProjectMeta" +
-      "data\022\022\n\nproject_id\030\001 \001(\t\"8\n\024DeleteProjec" +
-      "tRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"+\n\025DeleteProjectMetadata\022\022\n\nproject_i" +
-      "d\030\001 \001(\t\"6\n\022OpenProjectRequest\022 \n\nproject" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\320\003\n\023OpenProjectM" +
-      "etadata\022\022\n\nproject_id\030\001 \001(\t\022Q\n\006status\030\002 " +
-      "\001(\0162A.yandex.cloud.datasphere.v2.OpenPro" +
-      "jectMetadata.OpenProjectStatus\"\321\002\n\021OpenP" +
-      "rojectStatus\022#\n\037OPEN_PROJECT_STATUS_UNSP" +
-      "ECIFIED\020\000\022#\n\037OPEN_PROJECT_STATUS_CLOSING" +
-      "_IDE\020\001\022)\n%OPEN_PROJECT_STATUS_UNZIPPING_" +
-      "PROJECT\020\002\022%\n!OPEN_PROJECT_STATUS_ALLOCAT" +
-      "ING_VM\020\003\022,\n(OPEN_PROJECT_STATUS_ALLOCATI" +
-      "NG_RESOURCES\020\004\022$\n OPEN_PROJECT_STATUS_ST" +
-      "ARTING_IDE\020\005\022+\n\'OPEN_PROJECT_STATUS_APPL" +
-      "YING_CHECKPOINT\020\006\022\037\n\033OPEN_PROJECT_STATUS" +
-      "_UNKNOWN\020\007\"A\n\023OpenProjectResponse\022\023\n\013pro" +
-      "ject_url\030\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"5\n" +
-      "\021GetProjectRequest\022 \n\nproject_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"\242\001\n\023ListProjectsRequest\022\032\n\014" +
-      "community_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\022\034\n\024project_name_pattern\030\004 \001(\t\022\023\n\013" +
-      "owned_by_id\030\005 \001(\t\"f\n\024ListProjectsRespons" +
-      "e\0225\n\010projects\030\001 \003(\0132#.yandex.cloud.datas" +
-      "phere.v2.Project\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"9\n\025GetUnitBalanceRequest\022 \n\nproject_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"K\n\026GetUnitBalanceRe" +
-      "sponse\0221\n\014unit_balance\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\"l\n\025SetUnitBalanceReque" +
-      "st\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014" +
-      "unit_balance\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\",\n\026SetUnitBalanceMetadata\022\022\n\npro" +
-      "ject_id\030\001 \001(\t\"\336\001\n\027ProjectExecutionReques" +
-      "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013n" +
-      "otebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\036\n\007cell_id" +
-      "\030\003 \001(\tB\013\030\001\212\3101\005<=200H\000\0220\n\017input_variables" +
-      "\030\004 \001(\0132\027.google.protobuf.Struct\022\035\n\025outpu" +
-      "t_variable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~" +
-      "\n\030ProjectExecutionMetadata\022\022\n\nproject_id" +
-      "\030\001 \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000" +
-      "\022\034\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target" +
-      "\022\004\300\3011\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rc" +
-      "heckpoint_id\030\001 \001(\t\0221\n\020output_variables\030\002" +
-      " \001(\0132\027.google.protobuf.Struct\022E\n\020executi" +
-      "on_status\030\003 \001(\0162+.yandex.cloud.dataspher" +
-      "e.v2.ExecutionStatus\"\233\001\n\022CellOutputsRequ" +
-      "est\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n" +
-      "\007cell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpo" +
-      "int_id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\"&\n\023CellOutputsRespons" +
-      "e\022\017\n\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariables" +
-      "Request\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\"\n\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n" +
-      "\016variable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004" +
-      " \001(\t\"G\n\031GetStateVariablesResponse\022*\n\tvar" +
-      "iables\030\001 \001(\0132\027.google.protobuf.Struct\"6\n" +
-      " SetProjectAccessBindingsMetadata\022\022\n\npro" +
-      "ject_id\030\001 \001(\t\"9\n#UpdateProjectAccessBind" +
-      "ingsMetadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033Add" +
-      "ResourceToProjectRequest\022 \n\nproject_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(" +
-      "\0162(.yandex.cloud.datasphere.v2.ResourceT" +
-      "ype\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n Remov" +
-      "eResourceFromProjectRequest\022 \n\nproject_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002" +
-      " \001(\0162(.yandex.cloud.datasphere.v2.Resour" +
-      "ceType\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001*S\n\017Exe" +
-      "cutionStatus\022 \n\034EXECUTION_STATUS_UNSPECI" +
-      "FIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\376" +
-      "\027\n\016ProjectService\022\245\001\n\006Create\0220.yandex.cl" +
-      "oud.datasphere.v2.CreateProjectRequest\032!" +
-      ".yandex.cloud.operation.Operation\"F\202\323\344\223\002" +
-      "\034\"\027/datasphere/v2/projects:\001*\262\322* \n\025Creat" +
-      "eProjectMetadata\022\007Project\022\262\001\n\006Update\0220.y" +
-      "andex.cloud.datasphere.v2.UpdateProjectR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"S\202\323\344\223\002)2$/datasphere/v2/projects/{proj" +
-      "ect_id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007P" +
-      "roject\022\275\001\n\006Delete\0220.yandex.cloud.datasph" +
-      "ere.v2.DeleteProjectRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"^\202\323\344\223\002&*$/datasph" +
-      "ere/v2/projects/{project_id}\262\322*.\n\025Delete" +
-      "ProjectMetadata\022\025google.protobuf.Empty\022\275" +
-      "\001\n\004Open\022..yandex.cloud.datasphere.v2.Ope" +
-      "nProjectRequest\032!.yandex.cloud.operation" +
-      ".Operation\"b\202\323\344\223\002.\")/datasphere/v2/proje" +
-      "cts/{project_id}:open:\001*\262\322**\n\023OpenProjec" +
-      "tMetadata\022\023OpenProjectResponse\022\207\001\n\003Get\022-" +
-      ".yandex.cloud.datasphere.v2.GetProjectRe" +
-      "quest\032#.yandex.cloud.datasphere.v2.Proje" +
-      "ct\",\202\323\344\223\002&\022$/datasphere/v2/projects/{pro" +
-      "ject_id}\022\212\001\n\004List\022/.yandex.cloud.datasph" +
-      "ere.v2.ListProjectsRequest\0320.yandex.clou" +
-      "d.datasphere.v2.ListProjectsResponse\"\037\202\323" +
-      "\344\223\002\031\022\027/datasphere/v2/projects\022\261\001\n\016GetUni" +
-      "tBalance\0221.yandex.cloud.datasphere.v2.Ge" +
-      "tUnitBalanceRequest\0322.yandex.cloud.datas" +
-      "phere.v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\022" +
-      "0/datasphere/v2/projects/{project_id}:un" +
-      "itBalance\022\326\001\n\016SetUnitBalance\0221.yandex.cl" +
-      "oud.datasphere.v2.SetUnitBalanceRequest\032" +
-      "!.yandex.cloud.operation.Operation\"n\202\323\344\223" +
-      "\0025\"0/datasphere/v2/projects/{project_id}" +
-      ":unitBalance:\001*\262\322*/\n\026SetUnitBalanceMetad" +
-      "ata\022\025google.protobuf.Empty\022\322\001\n\007Execute\0223" +
-      ".yandex.cloud.datasphere.v2.ProjectExecu" +
-      "tionRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"o\202\323\344\223\0021\",/datasphere/v2/projects/" +
-      "{project_id}:execute:\001*\262\322*4\n\030ProjectExec" +
-      "utionMetadata\022\030ProjectExecutionResponse\022" +
-      "\253\001\n\016GetCellOutputs\022..yandex.cloud.datasp" +
-      "here.v2.CellOutputsRequest\032/.yandex.clou" +
-      "d.datasphere.v2.CellOutputsResponse\"8\202\323\344" +
-      "\223\0022\0220/datasphere/v2/projects/{project_id" +
-      "}:cellOutputs\022\275\001\n\021GetStateVariables\0224.ya" +
-      "ndex.cloud.datasphere.v2.GetStateVariabl" +
-      "esRequest\0325.yandex.cloud.datasphere.v2.G" +
-      "etStateVariablesResponse\";\202\323\344\223\0025\0223/datas" +
-      "phere/v2/projects/{project_id}:stateVari" +
-      "ables\022\263\001\n\022ListAccessBindings\022..yandex.cl" +
-      "oud.access.ListAccessBindingsRequest\032/.y" +
-      "andex.cloud.access.ListAccessBindingsRes" +
-      "ponse\"<\202\323\344\223\0026\0224/datasphere/v2/projects/{" +
-      "resource_id}:accessBindings\022\346\001\n\021SetAcces" +
-      "sBindings\022-.yandex.cloud.access.SetAcces" +
-      "sBindingsRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\177\202\323\344\223\002<\"7/datasphere/v2/proj" +
-      "ects/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*9\n SetProjectAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\363\001\n\024UpdateAccessBin" +
-      "dings\0220.yandex.cloud.access.UpdateAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\205\001\202\323\344\223\002?2:/datasphere/v2/proj" +
-      "ects/{resource_id}:updateAccessBindings:" +
-      "\001*\262\322*<\n#UpdateProjectAccessBindingsMetad" +
-      "ata\022\025google.protobuf.Empty\022\302\001\n\013AddResour" +
-      "ce\0227.yandex.cloud.datasphere.v2.AddResou" +
-      "rceToProjectRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"W\202\323\344\223\0026\"1/datasphere/v2/p" +
-      "rojects/{resource_id}:addResource:\001*\262\322*\027" +
-      "\022\025google.protobuf.Empty\022\315\001\n\016RemoveResour" +
-      "ce\022<.yandex.cloud.datasphere.v2.RemoveRe" +
-      "sourceFromProjectRequest\032!.yandex.cloud." +
-      "operation.Operation\"Z\202\323\344\223\0029\"4/datasphere" +
-      "/v2/projects/{resource_id}:removeResourc" +
-      "e:\001*\262\322*\027\022\025google.protobuf.EmptyBk\n\036yande" +
-      "x.cloud.api.datasphere.v2ZIgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/data" +
-      "sphere/v2;datasphereb\006proto3"
+      "google/api/annotations.proto\032\033google/pro" +
+      "tobuf/empty.proto\032 google/protobuf/field" +
+      "_mask.proto\032\034google/protobuf/struct.prot" +
+      "o\032\037google/protobuf/timestamp.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032 yandex/cloud" +
+      "/api/operation.proto\032 yandex/cloud/acces" +
+      "s/access.proto\032(yandex/cloud/datasphere/" +
+      "v2/project.proto\032/yandex/cloud/dataspher" +
+      "e/v2/resource_types.proto\032-yandex/cloud/" +
+      "datasphere/v2/restrictions.proto\032&yandex" +
+      "/cloud/operation/operation.proto\032\035yandex" +
+      "/cloud/validation.proto\"\326\003\n\024CreateProjec" +
+      "tRequest\022\"\n\014community_id\030\001 \001(\tB\014\212\3101\004<=50" +
+      "\350\3071\001\0229\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z]([-" +
+      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003" +
+      " \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\004 \003(\0132<.yande" +
+      "x.cloud.datasphere.v2.CreateProjectReque" +
+      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
+      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
+      ">\n\010settings\030\005 \001(\0132,.yandex.cloud.datasph" +
+      "ere.v2.Project.Settings\022:\n\006limits\030\006 \001(\0132" +
+      "*.yandex.cloud.datasphere.v2.Project.Lim" +
+      "its\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001J\004\010\007\020\010\"+\n\025CreateProjectMetadat" +
+      "a\022\022\n\nproject_id\030\001 \001(\t\"\377\003\n\024UpdateProjectR" +
+      "equest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63\362\3071\037[a-" +
+      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
+      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\005 \003(\0132<." +
+      "yandex.cloud.datasphere.v2.UpdateProject" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\022>\n\010settings\030\006 \001(\0132,.yandex.cloud.da" +
+      "tasphere.v2.Project.Settings\022:\n\006limits\030\007" +
+      " \001(\0132*.yandex.cloud.datasphere.v2.Projec" +
+      "t.Limits\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"+\n\025UpdateProjectMetadata" +
+      "\022\022\n\nproject_id\030\001 \001(\t\"8\n\024DeleteProjectReq" +
+      "uest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+" +
+      "\n\025DeleteProjectMetadata\022\022\n\nproject_id\030\001 " +
+      "\001(\t\"6\n\022OpenProjectRequest\022 \n\nproject_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\320\003\n\023OpenProjectMetad" +
+      "ata\022\022\n\nproject_id\030\001 \001(\t\022Q\n\006status\030\002 \001(\0162" +
+      "A.yandex.cloud.datasphere.v2.OpenProject" +
+      "Metadata.OpenProjectStatus\"\321\002\n\021OpenProje" +
+      "ctStatus\022#\n\037OPEN_PROJECT_STATUS_UNSPECIF" +
+      "IED\020\000\022#\n\037OPEN_PROJECT_STATUS_CLOSING_IDE" +
+      "\020\001\022)\n%OPEN_PROJECT_STATUS_UNZIPPING_PROJ" +
+      "ECT\020\002\022%\n!OPEN_PROJECT_STATUS_ALLOCATING_" +
+      "VM\020\003\022,\n(OPEN_PROJECT_STATUS_ALLOCATING_R" +
+      "ESOURCES\020\004\022$\n OPEN_PROJECT_STATUS_STARTI" +
+      "NG_IDE\020\005\022+\n\'OPEN_PROJECT_STATUS_APPLYING" +
+      "_CHECKPOINT\020\006\022\037\n\033OPEN_PROJECT_STATUS_UNK" +
+      "NOWN\020\007\"A\n\023OpenProjectResponse\022\023\n\013project" +
+      "_url\030\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"5\n\021Get" +
+      "ProjectRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"\242\001\n\023ListProjectsRequest\022\032\n\014comm" +
+      "unity_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\034\n\024project_name_pattern\030\004 \001(\t\022\023\n\013owne" +
+      "d_by_id\030\005 \001(\t\"f\n\024ListProjectsResponse\0225\n" +
+      "\010projects\030\001 \003(\0132#.yandex.cloud.dataspher" +
+      "e.v2.Project\022\027\n\017next_page_token\030\002 \001(\t\"9\n" +
+      "\025GetUnitBalanceRequest\022 \n\nproject_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"K\n\026GetUnitBalanceRespon" +
+      "se\0221\n\014unit_balance\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64Value\"l\n\025SetUnitBalanceRequest\022 " +
+      "\n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014unit" +
+      "_balance\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\",\n\026SetUnitBalanceMetadata\022\022\n\nproject" +
+      "_id\030\001 \001(\t\"\336\001\n\027ProjectExecutionRequest\022 \n" +
+      "\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013noteb" +
+      "ook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\036\n\007cell_id\030\003 \001" +
+      "(\tB\013\030\001\212\3101\005<=200H\000\0220\n\017input_variables\030\004 \001" +
+      "(\0132\027.google.protobuf.Struct\022\035\n\025output_va" +
+      "riable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~\n\030Pr" +
+      "ojectExecutionMetadata\022\022\n\nproject_id\030\001 \001" +
+      "(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007" +
+      "cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target\022\004\300\301" +
+      "1\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rcheck" +
+      "point_id\030\001 \001(\t\0221\n\020output_variables\030\002 \001(\013" +
+      "2\027.google.protobuf.Struct\022E\n\020execution_s" +
+      "tatus\030\003 \001(\0162+.yandex.cloud.datasphere.v2" +
+      ".ExecutionStatus\"\233\001\n\022CellOutputsRequest\022" +
+      " \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007cel" +
+      "l_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpoint_" +
+      "id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\"&\n\023CellOutputsResponse\022\017\n" +
+      "\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariablesRequ" +
+      "est\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n" +
+      "\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n\016var" +
+      "iable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004 \001(\t" +
+      "\"G\n\031GetStateVariablesResponse\022*\n\tvariabl" +
+      "es\030\001 \001(\0132\027.google.protobuf.Struct\"6\n Set" +
+      "ProjectAccessBindingsMetadata\022\022\n\nproject" +
+      "_id\030\001 \001(\t\"9\n#UpdateProjectAccessBindings" +
+      "Metadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033AddReso" +
+      "urceToProjectRequest\022 \n\nproject_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\0162(." +
+      "yandex.cloud.datasphere.v2.ResourceType\022" +
+      "\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n RemoveRes" +
+      "ourceFromProjectRequest\022 \n\nproject_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\016" +
+      "2(.yandex.cloud.datasphere.v2.ResourceTy" +
+      "pe\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"9\n\035GetProj" +
+      "ectRestrictionsRequest\022\030\n\nproject_id\030\001 \001" +
+      "(\tB\004\350\3071\001\"x\n\035SetProjectRestrictionsReques" +
+      "t\022\030\n\nproject_id\030\001 \001(\tB\004\350\3071\001\022=\n\014restricti" +
+      "ons\030\002 \003(\0132\'.yandex.cloud.datasphere.v2.R" +
+      "estriction*S\n\017ExecutionStatus\022 \n\034EXECUTI" +
+      "ON_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR" +
+      "\020\002\022\013\n\007ABORTED\020\0032\242\034\n\016ProjectService\022\245\001\n\006C" +
+      "reate\0220.yandex.cloud.datasphere.v2.Creat" +
+      "eProjectRequest\032!.yandex.cloud.operation" +
+      ".Operation\"F\202\323\344\223\002\034\"\027/datasphere/v2/proje" +
+      "cts:\001*\262\322* \n\025CreateProjectMetadata\022\007Proje" +
+      "ct\022\262\001\n\006Update\0220.yandex.cloud.datasphere." +
+      "v2.UpdateProjectRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"S\202\323\344\223\002)2$/datasphere/" +
+      "v2/projects/{project_id}:\001*\262\322* \n\025UpdateP" +
+      "rojectMetadata\022\007Project\022\275\001\n\006Delete\0220.yan" +
+      "dex.cloud.datasphere.v2.DeleteProjectReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "^\202\323\344\223\002&*$/datasphere/v2/projects/{projec" +
+      "t_id}\262\322*.\n\025DeleteProjectMetadata\022\025google" +
+      ".protobuf.Empty\022\275\001\n\004Open\022..yandex.cloud." +
+      "datasphere.v2.OpenProjectRequest\032!.yande" +
+      "x.cloud.operation.Operation\"b\202\323\344\223\002.\")/da" +
+      "tasphere/v2/projects/{project_id}:open:\001" +
+      "*\262\322**\n\023OpenProjectMetadata\022\023OpenProjectR" +
+      "esponse\022\207\001\n\003Get\022-.yandex.cloud.dataspher" +
+      "e.v2.GetProjectRequest\032#.yandex.cloud.da" +
+      "tasphere.v2.Project\",\202\323\344\223\002&\022$/datasphere" +
+      "/v2/projects/{project_id}\022\212\001\n\004List\022/.yan" +
+      "dex.cloud.datasphere.v2.ListProjectsRequ" +
+      "est\0320.yandex.cloud.datasphere.v2.ListPro" +
+      "jectsResponse\"\037\202\323\344\223\002\031\022\027/datasphere/v2/pr" +
+      "ojects\022\261\001\n\016GetUnitBalance\0221.yandex.cloud" +
+      ".datasphere.v2.GetUnitBalanceRequest\0322.y" +
+      "andex.cloud.datasphere.v2.GetUnitBalance" +
+      "Response\"8\202\323\344\223\0022\0220/datasphere/v2/project" +
+      "s/{project_id}:unitBalance\022\326\001\n\016SetUnitBa" +
+      "lance\0221.yandex.cloud.datasphere.v2.SetUn" +
+      "itBalanceRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"n\202\323\344\223\0025\"0/datasphere/v2/proj" +
+      "ects/{project_id}:unitBalance:\001*\262\322*/\n\026Se" +
+      "tUnitBalanceMetadata\022\025google.protobuf.Em" +
+      "pty\022\322\001\n\007Execute\0223.yandex.cloud.dataspher" +
+      "e.v2.ProjectExecutionRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\0021\",/datasp" +
+      "here/v2/projects/{project_id}:execute:\001*" +
+      "\262\322*4\n\030ProjectExecutionMetadata\022\030ProjectE" +
+      "xecutionResponse\022\253\001\n\016GetCellOutputs\022..ya" +
+      "ndex.cloud.datasphere.v2.CellOutputsRequ" +
+      "est\032/.yandex.cloud.datasphere.v2.CellOut" +
+      "putsResponse\"8\202\323\344\223\0022\0220/datasphere/v2/pro" +
+      "jects/{project_id}:cellOutputs\022\275\001\n\021GetSt" +
+      "ateVariables\0224.yandex.cloud.datasphere.v" +
+      "2.GetStateVariablesRequest\0325.yandex.clou" +
+      "d.datasphere.v2.GetStateVariablesRespons" +
+      "e\";\202\323\344\223\0025\0223/datasphere/v2/projects/{proj" +
+      "ect_id}:stateVariables\022\263\001\n\022ListAccessBin" +
+      "dings\022..yandex.cloud.access.ListAccessBi" +
+      "ndingsRequest\032/.yandex.cloud.access.List" +
+      "AccessBindingsResponse\"<\202\323\344\223\0026\0224/datasph" +
+      "ere/v2/projects/{resource_id}:accessBind" +
+      "ings\022\346\001\n\021SetAccessBindings\022-.yandex.clou" +
+      "d.access.SetAccessBindingsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\177\202\323\344\223\002<\"7/d" +
+      "atasphere/v2/projects/{resource_id}:setA" +
+      "ccessBindings:\001*\262\322*9\n SetProjectAccessBi" +
+      "ndingsMetadata\022\025google.protobuf.Empty\022\363\001" +
+      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
+      "cess.UpdateAccessBindingsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\205\001\202\323\344\223\002?2:/d" +
+      "atasphere/v2/projects/{resource_id}:upda" +
+      "teAccessBindings:\001*\262\322*<\n#UpdateProjectAc" +
+      "cessBindingsMetadata\022\025google.protobuf.Em" +
+      "pty\022\302\001\n\013AddResource\0227.yandex.cloud.datas" +
+      "phere.v2.AddResourceToProjectRequest\032!.y" +
+      "andex.cloud.operation.Operation\"W\202\323\344\223\0026\"" +
+      "1/datasphere/v2/projects/{resource_id}:a" +
+      "ddResource:\001*\262\322*\027\022\025google.protobuf.Empty" +
+      "\022\315\001\n\016RemoveResource\022<.yandex.cloud.datas" +
+      "phere.v2.RemoveResourceFromProjectReques" +
+      "t\032!.yandex.cloud.operation.Operation\"Z\202\323" +
+      "\344\223\0029\"4/datasphere/v2/projects/{resource_" +
+      "id}:removeResource:\001*\262\322*\027\022\025google.protob" +
+      "uf.Empty\022\230\001\n\023GetRestrictionsMeta\022\026.googl" +
+      "e.protobuf.Empty\0327.yandex.cloud.datasphe" +
+      "re.v2.GetRestrictionsMetaResponse\"0\202\323\344\223\002" +
+      "*\022(/datasphere/v2/projects/restrictionsM" +
+      "eta\022\271\001\n\017GetRestrictions\0229.yandex.cloud.d" +
+      "atasphere.v2.GetProjectRestrictionsReque" +
+      "st\0320.yandex.cloud.datasphere.v2.Restrict" +
+      "ionsResponse\"9\202\323\344\223\0023\0221/datasphere/v2/pro" +
+      "jects/{project_id}:restrictions\022\312\001\n\017SetR" +
+      "estrictions\0229.yandex.cloud.datasphere.v2" +
+      ".SetProjectRestrictionsRequest\032!.yandex." +
+      "cloud.operation.Operation\"Y\202\323\344\223\0029\"4/data" +
+      "sphere/v2/projects/{project_id}:setRestr" +
+      "ictions:\001*\262\322*\026\022\024RestrictionsResponseBk\n\036" +
+      "yandex.cloud.api.datasphere.v2ZIgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/datasphere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -25864,6 +27590,7 @@ public final class ProjectServiceOuterClass {
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.datasphere.v2.ProjectOuterClass.getDescriptor(),
           yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor(),
+          yandex.cloud.api.datasphere.v2.Restrictions.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -26041,6 +27768,18 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor,
         new java.lang.String[] { "ProjectId", "ResourceType", "ResourceId", });
+    internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_GetProjectRestrictionsRequest_descriptor,
+        new java.lang.String[] { "ProjectId", });
+    internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "Restrictions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -26055,6 +27794,7 @@ public final class ProjectServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -26063,6 +27803,7 @@ public final class ProjectServiceOuterClass {
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.datasphere.v2.ProjectOuterClass.getDescriptor();
     yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor();
+    yandex.cloud.api.datasphere.v2.Restrictions.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

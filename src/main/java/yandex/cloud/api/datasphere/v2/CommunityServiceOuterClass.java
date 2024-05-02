@@ -11580,6 +11580,1701 @@ public final class CommunityServiceOuterClass {
 
   }
 
+  public interface GetCommunityRestrictionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The communityId.
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for communityId.
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest}
+   */
+  public static final class GetCommunityRestrictionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest)
+      GetCommunityRestrictionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetCommunityRestrictionsRequest.newBuilder() to construct.
+    private GetCommunityRestrictionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetCommunityRestrictionsRequest() {
+      communityId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetCommunityRestrictionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetCommunityRestrictionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.Builder.class);
+    }
+
+    public static final int COMMUNITY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The communityId.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for communityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, communityId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, communityId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest other = (yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest) obj;
+
+      if (!getCommunityId()
+          .equals(other.getCommunityId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMMUNITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest)
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest build() {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest result = new yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest(this);
+        result.communityId_ = communityId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The communityId.
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for communityId.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The communityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for communityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.GetCommunityRestrictionsRequest)
+    private static final yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetCommunityRestrictionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetCommunityRestrictionsRequest>() {
+      @java.lang.Override
+      public GetCommunityRestrictionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetCommunityRestrictionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetCommunityRestrictionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetCommunityRestrictionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.GetCommunityRestrictionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetCommunityRestrictionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The communityId.
+     */
+    java.lang.String getCommunityId();
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for communityId.
+     */
+    com.google.protobuf.ByteString
+        getCommunityIdBytes();
+
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> 
+        getRestrictionsList();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index);
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    int getRestrictionsCount();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+        getRestrictionsOrBuilderList();
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest}
+   */
+  public static final class SetCommunityRestrictionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest)
+      SetCommunityRestrictionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetCommunityRestrictionsRequest.newBuilder() to construct.
+    private SetCommunityRestrictionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetCommunityRestrictionsRequest() {
+      communityId_ = "";
+      restrictions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetCommunityRestrictionsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetCommunityRestrictionsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              communityId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                restrictions_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.Restrictions.Restriction>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              restrictions_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.Restrictions.Restriction.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.Builder.class);
+    }
+
+    public static final int COMMUNITY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object communityId_;
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The communityId.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityId() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the community.
+     * </pre>
+     *
+     * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for communityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityIdBytes() {
+      java.lang.Object ref = communityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESTRICTIONS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> restrictions_;
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> getRestrictionsList() {
+      return restrictions_;
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+        getRestrictionsOrBuilderList() {
+      return restrictions_;
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public int getRestrictionsCount() {
+      return restrictions_.size();
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index) {
+      return restrictions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of restrictions to set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+        int index) {
+      return restrictions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, communityId_);
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        output.writeMessage(2, restrictions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, communityId_);
+      }
+      for (int i = 0; i < restrictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, restrictions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest other = (yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest) obj;
+
+      if (!getCommunityId()
+          .equals(other.getCommunityId())) return false;
+      if (!getRestrictionsList()
+          .equals(other.getRestrictionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMMUNITY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityId().hashCode();
+      if (getRestrictionsCount() > 0) {
+        hash = (37 * hash) + RESTRICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRestrictionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest)
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.class, yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRestrictionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        communityId_ = "";
+
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest build() {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest result = new yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.communityId_ = communityId_;
+        if (restrictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            restrictions_ = java.util.Collections.unmodifiableList(restrictions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.restrictions_ = restrictions_;
+        } else {
+          result.restrictions_ = restrictionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest.getDefaultInstance()) return this;
+        if (!other.getCommunityId().isEmpty()) {
+          communityId_ = other.communityId_;
+          onChanged();
+        }
+        if (restrictionsBuilder_ == null) {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictions_.isEmpty()) {
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRestrictionsIsMutable();
+              restrictions_.addAll(other.restrictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.restrictions_.isEmpty()) {
+            if (restrictionsBuilder_.isEmpty()) {
+              restrictionsBuilder_.dispose();
+              restrictionsBuilder_ = null;
+              restrictions_ = other.restrictions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              restrictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRestrictionsFieldBuilder() : null;
+            } else {
+              restrictionsBuilder_.addAllMessages(other.restrictions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object communityId_ = "";
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The communityId.
+       */
+      public java.lang.String getCommunityId() {
+        java.lang.Object ref = communityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for communityId.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityIdBytes() {
+        java.lang.Object ref = communityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The communityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityId() {
+        
+        communityId_ = getDefaultInstance().getCommunityId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the community.
+       * </pre>
+       *
+       * <code>string community_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for communityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        communityId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> restrictions_ =
+        java.util.Collections.emptyList();
+      private void ensureRestrictionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          restrictions_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.Restrictions.Restriction>(restrictions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> restrictionsBuilder_;
+
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction> getRestrictionsList() {
+        if (restrictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        } else {
+          return restrictionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public int getRestrictionsCount() {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.size();
+        } else {
+          return restrictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction getRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);
+        } else {
+          return restrictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder setRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder setRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction value) {
+        if (restrictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, value);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addRestrictions(
+          int index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder builderForValue) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          restrictionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder addAllRestrictions(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.Restrictions.Restriction> values) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, restrictions_);
+          onChanged();
+        } else {
+          restrictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder clearRestrictions() {
+        if (restrictionsBuilder_ == null) {
+          restrictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          restrictionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public Builder removeRestrictions(int index) {
+        if (restrictionsBuilder_ == null) {
+          ensureRestrictionsIsMutable();
+          restrictions_.remove(index);
+          onChanged();
+        } else {
+          restrictionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder getRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder getRestrictionsOrBuilder(
+          int index) {
+        if (restrictionsBuilder_ == null) {
+          return restrictions_.get(index);  } else {
+          return restrictionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+           getRestrictionsOrBuilderList() {
+        if (restrictionsBuilder_ != null) {
+          return restrictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(restrictions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder addRestrictionsBuilder() {
+        return getRestrictionsFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.Restrictions.Restriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder addRestrictionsBuilder(
+          int index) {
+        return getRestrictionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of restrictions to set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.Restriction restrictions = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder> 
+           getRestrictionsBuilderList() {
+        return getRestrictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder> 
+          getRestrictionsFieldBuilder() {
+        if (restrictionsBuilder_ == null) {
+          restrictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.Restrictions.Restriction, yandex.cloud.api.datasphere.v2.Restrictions.Restriction.Builder, yandex.cloud.api.datasphere.v2.Restrictions.RestrictionOrBuilder>(
+                  restrictions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          restrictions_ = null;
+        }
+        return restrictionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.SetCommunityRestrictionsRequest)
+    private static final yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetCommunityRestrictionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetCommunityRestrictionsRequest>() {
+      @java.lang.Override
+      public SetCommunityRestrictionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetCommunityRestrictionsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetCommunityRestrictionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetCommunityRestrictionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.SetCommunityRestrictionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_descriptor;
   private static final 
@@ -11655,6 +13350,16 @@ public final class CommunityServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_RemoveCommunityResourceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11666,110 +13371,132 @@ public final class CommunityServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/datasphere/v2/community_s" +
       "ervice.proto\022\032yandex.cloud.datasphere.v2" +
-      "\032\034google/api/annotations.proto\032 google/p" +
-      "rotobuf/field_mask.proto\032 yandex/cloud/a" +
-      "ccess/access.proto\032 yandex/cloud/api/ope" +
-      "ration.proto\032\035yandex/cloud/validation.pr" +
-      "oto\032&yandex/cloud/operation/operation.pr" +
-      "oto\032*yandex/cloud/datasphere/v2/communit" +
-      "y.proto\032/yandex/cloud/datasphere/v2/reso" +
-      "urce_types.proto\"\263\002\n\026CreateCommunityRequ" +
-      "est\022J\n\004name\030\001 \001(\tB<\212\3101\004<=63\362\30710[a-zA-Z0-" +
-      "9\320\201\321\221\320\220-\321\217]\\S{1,61}[a-zA-Z0-9\320\201\321\221\320\220-\321\217]\022" +
-      "\023\n\013description\030\002 \001(\t\022\035\n\017organization_id\030" +
-      "\003 \001(\tB\004\350\3071\001\022\032\n\022billing_account_id\030\004 \001(\t\022" +
-      "N\n\006labels\030\005 \003(\0132>.yandex.cloud.dataspher" +
-      "e.v2.CreateCommunityRequest.LabelsEntry\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"/\n\027CreateCommunityMetadata\022\024\n\014com" +
-      "munity_id\030\001 \001(\t\"1\n\023GetCommunityRequest\022\032" +
-      "\n\014community_id\030\001 \001(\tB\004\350\3071\001\"\207\002\n\026UpdateCom" +
-      "munityRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030" +
-      "\004 \001(\t\022N\n\006labels\030\005 \003(\0132>.yandex.cloud.dat" +
-      "asphere.v2.UpdateCommunityRequest.Labels" +
-      "Entry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"/\n\027UpdateCommunityMetadata\022" +
-      "\024\n\014community_id\030\001 \001(\t\"4\n\026DeleteCommunity" +
-      "Request\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\"/\n\027D" +
-      "eleteCommunityMetadata\022\024\n\014community_id\030\001" +
-      " \001(\t\"\255\001\n\026ListCommunitiesRequest\022\021\n\tpage_" +
-      "size\030\001 \001(\003\022\022\n\npage_token\030\002 \001(\t\022#\n\033name_o" +
-      "r_description_pattern\030\003 \001(\t\022\023\n\013owned_by_" +
-      "id\030\005 \001(\t\022\023\n\013list_public\030\006 \001(\010\022\035\n\017organiz" +
-      "ation_id\030\007 \001(\tB\004\350\3071\001\"n\n\027ListCommunitiesR" +
-      "esponse\022:\n\013communities\030\001 \003(\0132%.yandex.cl" +
-      "oud.datasphere.v2.Community\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\":\n\"SetCommunityAccessBindin" +
-      "gsMetadata\022\024\n\014community_id\030\001 \001(\t\"=\n%Upda" +
-      "teCommunityAccessBindingsMetadata\022\024\n\014com" +
-      "munity_id\030\001 \001(\t\"\243\001\n\033AddCommunityResource" +
-      "Request\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022E\n\rresource_type\030\002 \001(\0162(.yandex.clou" +
-      "d.datasphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013re" +
-      "source_id\030\003 \001(\tB\004\350\3071\001\"\246\001\n\036RemoveCommunit" +
-      "yResourceRequest\022\"\n\014community_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022E\n\rresource_type\030\002 \001(\0162(.ya" +
-      "ndex.cloud.datasphere.v2.ResourceTypeB\004\350" +
-      "\3071\001\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\0012\261\017\n\020Commu" +
-      "nityService\022\256\001\n\006Create\0222.yandex.cloud.da" +
-      "tasphere.v2.CreateCommunityRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"M\202\323\344\223\002\037\"\032/" +
-      "datasphere/v2/communities:\001*\262\322*$\n\027Create" +
-      "CommunityMetadata\022\tCommunity\022\220\001\n\003Get\022/.y" +
-      "andex.cloud.datasphere.v2.GetCommunityRe" +
-      "quest\032%.yandex.cloud.datasphere.v2.Commu" +
-      "nity\"1\202\323\344\223\002+\022)/datasphere/v2/communities" +
-      "/{community_id}\022\275\001\n\006Update\0222.yandex.clou" +
-      "d.datasphere.v2.UpdateCommunityRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\\\202\323\344\223\002" +
-      ".2)/datasphere/v2/communities/{community" +
-      "_id}:\001*\262\322*$\n\027UpdateCommunityMetadata\022\tCo" +
-      "mmunity\022\306\001\n\006Delete\0222.yandex.cloud.datasp" +
-      "here.v2.DeleteCommunityRequest\032!.yandex." +
-      "cloud.operation.Operation\"e\202\323\344\223\002+*)/data" +
-      "sphere/v2/communities/{community_id}\262\322*0" +
-      "\n\027DeleteCommunityMetadata\022\025google.protob" +
-      "uf.Empty\022\223\001\n\004List\0222.yandex.cloud.datasph" +
-      "ere.v2.ListCommunitiesRequest\0323.yandex.c" +
-      "loud.datasphere.v2.ListCommunitiesRespon" +
-      "se\"\"\202\323\344\223\002\034\022\032/datasphere/v2/communities\022\266" +
-      "\001\n\022ListAccessBindings\022..yandex.cloud.acc" +
-      "ess.ListAccessBindingsRequest\032/.yandex.c" +
-      "loud.access.ListAccessBindingsResponse\"?" +
-      "\202\323\344\223\0029\0227/datasphere/v2/communities/{reso" +
-      "urce_id}:accessBindings\022\354\001\n\021SetAccessBin" +
-      "dings\022-.yandex.cloud.access.SetAccessBin" +
-      "dingsRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\204\001\202\323\344\223\002?\":/datasphere/v2/communi" +
-      "ties/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*;\n\"SetCommunityAccessBindingsMetadata\022" +
-      "\025google.protobuf.Empty\022\370\001\n\024UpdateAccessB" +
-      "indings\0220.yandex.cloud.access.UpdateAcce" +
-      "ssBindingsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\212\001\202\323\344\223\002B2=/datasphere/v2/co" +
-      "mmunities/{resource_id}:updateAccessBind" +
-      "ings:\001*\262\322*>\n%UpdateCommunityAccessBindin" +
-      "gsMetadata\022\025google.protobuf.Empty\022\305\001\n\013Ad" +
-      "dResource\0227.yandex.cloud.datasphere.v2.A" +
-      "ddCommunityResourceRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Z\202\323\344\223\0029\"4/datasphe" +
-      "re/v2/communities/{resource_id}:addResou" +
-      "rce:\001*\262\322*\027\022\025google.protobuf.Empty\022\316\001\n\016Re" +
-      "moveResource\022:.yandex.cloud.datasphere.v" +
-      "2.RemoveCommunityResourceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"]\202\323\344\223\002<\"7/da" +
-      "tasphere/v2/communities/{resource_id}:re" +
-      "moveResource:\001*\262\322*\027\022\025google.protobuf.Emp" +
-      "tyBk\n\036yandex.cloud.api.datasphere.v2ZIgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/datasphere/v2;datasphereb\006proto3"
+      "\032\034google/api/annotations.proto\032\033google/p" +
+      "rotobuf/empty.proto\032 google/protobuf/fie" +
+      "ld_mask.proto\032 yandex/cloud/access/acces" +
+      "s.proto\032 yandex/cloud/api/operation.prot" +
+      "o\032\035yandex/cloud/validation.proto\032&yandex" +
+      "/cloud/operation/operation.proto\032*yandex" +
+      "/cloud/datasphere/v2/community.proto\032/ya" +
+      "ndex/cloud/datasphere/v2/resource_types." +
+      "proto\032-yandex/cloud/datasphere/v2/restri" +
+      "ctions.proto\"\263\002\n\026CreateCommunityRequest\022" +
+      "J\n\004name\030\001 \001(\tB<\212\3101\004<=63\362\30710[a-zA-Z0-9\320\201\321" +
+      "\221\320\220-\321\217]\\S{1,61}[a-zA-Z0-9\320\201\321\221\320\220-\321\217]\022\023\n\013d" +
+      "escription\030\002 \001(\t\022\035\n\017organization_id\030\003 \001(" +
+      "\tB\004\350\3071\001\022\032\n\022billing_account_id\030\004 \001(\t\022N\n\006l" +
+      "abels\030\005 \003(\0132>.yandex.cloud.datasphere.v2" +
+      ".CreateCommunityRequest.LabelsEntry\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"/\n\027CreateCommunityMetadata\022\024\n\014communi" +
+      "ty_id\030\001 \001(\t\"1\n\023GetCommunityRequest\022\032\n\014co" +
+      "mmunity_id\030\001 \001(\tB\004\350\3071\001\"\207\002\n\026UpdateCommuni" +
+      "tyRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
+      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
+      "\t\022N\n\006labels\030\005 \003(\0132>.yandex.cloud.datasph" +
+      "ere.v2.UpdateCommunityRequest.LabelsEntr" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"/\n\027UpdateCommunityMetadata\022\024\n\014c" +
+      "ommunity_id\030\001 \001(\t\"4\n\026DeleteCommunityRequ" +
+      "est\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\"/\n\027Delet" +
+      "eCommunityMetadata\022\024\n\014community_id\030\001 \001(\t" +
+      "\"\255\001\n\026ListCommunitiesRequest\022\021\n\tpage_size" +
+      "\030\001 \001(\003\022\022\n\npage_token\030\002 \001(\t\022#\n\033name_or_de" +
+      "scription_pattern\030\003 \001(\t\022\023\n\013owned_by_id\030\005" +
+      " \001(\t\022\023\n\013list_public\030\006 \001(\010\022\035\n\017organizatio" +
+      "n_id\030\007 \001(\tB\004\350\3071\001\"n\n\027ListCommunitiesRespo" +
+      "nse\022:\n\013communities\030\001 \003(\0132%.yandex.cloud." +
+      "datasphere.v2.Community\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\":\n\"SetCommunityAccessBindingsMe" +
+      "tadata\022\024\n\014community_id\030\001 \001(\t\"=\n%UpdateCo" +
+      "mmunityAccessBindingsMetadata\022\024\n\014communi" +
+      "ty_id\030\001 \001(\t\"\243\001\n\033AddCommunityResourceRequ" +
+      "est\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "E\n\rresource_type\030\002 \001(\0162(.yandex.cloud.da" +
+      "tasphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013resour" +
+      "ce_id\030\003 \001(\tB\004\350\3071\001\"\246\001\n\036RemoveCommunityRes" +
+      "ourceRequest\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022E\n\rresource_type\030\002 \001(\0162(.yandex" +
+      ".cloud.datasphere.v2.ResourceTypeB\004\350\3071\001\022" +
+      "\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"=\n\037GetCommuni" +
+      "tyRestrictionsRequest\022\032\n\014community_id\030\001 " +
+      "\001(\tB\004\350\3071\001\"|\n\037SetCommunityRestrictionsReq" +
+      "uest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022=\n\014rest" +
+      "rictions\030\002 \003(\0132\'.yandex.cloud.datasphere" +
+      ".v2.Restriction2\346\023\n\020CommunityService\022\256\001\n" +
+      "\006Create\0222.yandex.cloud.datasphere.v2.Cre" +
+      "ateCommunityRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"M\202\323\344\223\002\037\"\032/datasphere/v2/c" +
+      "ommunities:\001*\262\322*$\n\027CreateCommunityMetada" +
+      "ta\022\tCommunity\022\220\001\n\003Get\022/.yandex.cloud.dat" +
+      "asphere.v2.GetCommunityRequest\032%.yandex." +
+      "cloud.datasphere.v2.Community\"1\202\323\344\223\002+\022)/" +
+      "datasphere/v2/communities/{community_id}" +
+      "\022\275\001\n\006Update\0222.yandex.cloud.datasphere.v2" +
+      ".UpdateCommunityRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\\\202\323\344\223\002.2)/datasphere/" +
+      "v2/communities/{community_id}:\001*\262\322*$\n\027Up" +
+      "dateCommunityMetadata\022\tCommunity\022\306\001\n\006Del" +
+      "ete\0222.yandex.cloud.datasphere.v2.DeleteC" +
+      "ommunityRequest\032!.yandex.cloud.operation" +
+      ".Operation\"e\202\323\344\223\002+*)/datasphere/v2/commu" +
+      "nities/{community_id}\262\322*0\n\027DeleteCommuni" +
+      "tyMetadata\022\025google.protobuf.Empty\022\223\001\n\004Li" +
+      "st\0222.yandex.cloud.datasphere.v2.ListComm" +
+      "unitiesRequest\0323.yandex.cloud.datasphere" +
+      ".v2.ListCommunitiesResponse\"\"\202\323\344\223\002\034\022\032/da" +
+      "tasphere/v2/communities\022\266\001\n\022ListAccessBi" +
+      "ndings\022..yandex.cloud.access.ListAccessB" +
+      "indingsRequest\032/.yandex.cloud.access.Lis" +
+      "tAccessBindingsResponse\"?\202\323\344\223\0029\0227/datasp" +
+      "here/v2/communities/{resource_id}:access" +
+      "Bindings\022\354\001\n\021SetAccessBindings\022-.yandex." +
+      "cloud.access.SetAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"\204\001\202\323\344\223\002" +
+      "?\":/datasphere/v2/communities/{resource_" +
+      "id}:setAccessBindings:\001*\262\322*;\n\"SetCommuni" +
+      "tyAccessBindingsMetadata\022\025google.protobu" +
+      "f.Empty\022\370\001\n\024UpdateAccessBindings\0220.yande" +
+      "x.cloud.access.UpdateAccessBindingsReque" +
+      "st\032!.yandex.cloud.operation.Operation\"\212\001" +
+      "\202\323\344\223\002B2=/datasphere/v2/communities/{reso" +
+      "urce_id}:updateAccessBindings:\001*\262\322*>\n%Up" +
+      "dateCommunityAccessBindingsMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\305\001\n\013AddResource\0227.yan" +
+      "dex.cloud.datasphere.v2.AddCommunityReso" +
+      "urceRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"Z\202\323\344\223\0029\"4/datasphere/v2/communiti" +
+      "es/{resource_id}:addResource:\001*\262\322*\027\022\025goo" +
+      "gle.protobuf.Empty\022\316\001\n\016RemoveResource\022:." +
+      "yandex.cloud.datasphere.v2.RemoveCommuni" +
+      "tyResourceRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"]\202\323\344\223\002<\"7/datasphere/v2/com" +
+      "munities/{resource_id}:removeResource:\001*" +
+      "\262\322*\027\022\025google.protobuf.Empty\022\233\001\n\023GetRestr" +
+      "ictionsMeta\022\026.google.protobuf.Empty\0327.ya" +
+      "ndex.cloud.datasphere.v2.GetRestrictions" +
+      "MetaResponse\"3\202\323\344\223\002-\022+/datasphere/v2/com" +
+      "munities/restrictionsMeta\022\300\001\n\017GetRestric" +
+      "tions\022;.yandex.cloud.datasphere.v2.GetCo" +
+      "mmunityRestrictionsRequest\0320.yandex.clou" +
+      "d.datasphere.v2.RestrictionsResponse\">\202\323" +
+      "\344\223\0028\0226/datasphere/v2/communities/{commun" +
+      "ity_id}:restrictions\022\321\001\n\017SetRestrictions" +
+      "\022;.yandex.cloud.datasphere.v2.SetCommuni" +
+      "tyRestrictionsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"^\202\323\344\223\002>\"9/datasphere/v2" +
+      "/communities/{community_id}:setRestricti" +
+      "ons:\001*\262\322*\026\022\024RestrictionsResponseBk\n\036yand" +
+      "ex.cloud.api.datasphere.v2ZIgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "asphere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -11777,6 +13504,7 @@ public final class CommunityServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.datasphere.v2.CommunityOuterClass.getDescriptor(),
           yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor(),
+          yandex.cloud.api.datasphere.v2.Restrictions.getDescriptor(),
         });
     internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11868,6 +13596,18 @@ public final class CommunityServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_RemoveCommunityResourceRequest_descriptor,
         new java.lang.String[] { "CommunityId", "ResourceType", "ResourceId", });
+    internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_GetCommunityRestrictionsRequest_descriptor,
+        new java.lang.String[] { "CommunityId", });
+    internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_SetCommunityRestrictionsRequest_descriptor,
+        new java.lang.String[] { "CommunityId", "Restrictions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -11878,6 +13618,7 @@ public final class CommunityServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
@@ -11885,6 +13626,7 @@ public final class CommunityServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.datasphere.v2.CommunityOuterClass.getDescriptor();
     yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor();
+    yandex.cloud.api.datasphere.v2.Restrictions.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

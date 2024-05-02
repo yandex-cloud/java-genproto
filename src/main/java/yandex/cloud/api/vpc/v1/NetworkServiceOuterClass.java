@@ -2931,7 +2931,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2941,7 +2941,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3201,7 +3201,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3223,7 +3223,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3879,7 +3879,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3900,7 +3900,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3922,7 +3922,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3942,7 +3942,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3957,7 +3957,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -4943,7 +4943,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -4953,7 +4953,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -5264,7 +5264,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -5286,7 +5286,7 @@ public final class NetworkServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -6127,7 +6127,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6148,7 +6148,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6170,7 +6170,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6190,7 +6190,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6205,7 +6205,7 @@ public final class NetworkServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -18042,99 +18042,100 @@ public final class NetworkServiceOuterClass {
       "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"_\n\024ListNetwork" +
       "sResponse\022.\n\010networks\030\001 \003(\0132\034.yandex.clo" +
       "ud.vpc.v1.Network\022\027\n\017next_page_token\030\002 \001" +
-      "(\t\"\300\002\n\024CreateNetworkRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descrip" +
-      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325" +
-      ".yandex.cloud.vpc.v1.CreateNetworkReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"+\n\025CreateNetworkMetadata\022\022\n\nnetwor" +
-      "k_id\030\001 \001(\t\"\362\002\n\024UpdateNetworkRequest\022 \n\nn" +
-      "etwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/" +
-      "\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[" +
-      "a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
-      "\206\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc.v1.U" +
-      "pdateNetworkRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateNetwork" +
-      "Metadata\022\022\n\nnetwork_id\030\001 \001(\t\"8\n\024DeleteNe" +
-      "tworkRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"+\n\025DeleteNetworkMetadata\022\022\n\nnetwo" +
-      "rk_id\030\001 \001(\t\"{\n\031ListNetworkSubnetsRequest" +
-      "\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListNetworkSubnetsRe" +
-      "sponse\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud.v" +
-      "pc.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"\202\001" +
-      "\n ListNetworkSecurityGroupsRequest\022 \n\nne" +
+      "(\t\"\315\002\n\024CreateNetworkRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\004name\030\002 \001(\tB.\362\3071*" +
+      "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9]" +
+      ")?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006l" +
+      "abels\030\004 \003(\01325.yandex.cloud.vpc.v1.Create" +
+      "NetworkRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
+      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
+      "[-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateNetworkMetad" +
+      "ata\022\022\n\nnetwork_id\030\001 \001(\t\"\377\002\n\024UpdateNetwor" +
+      "kRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022<\n\004name\030\003 \001(\tB.\362\3071*|[a-zA-Z]" +
+      "([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036\n\013des" +
+      "cription\030\004 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\005 \003" +
+      "(\01325.yandex.cloud.vpc.v1.UpdateNetworkRe" +
+      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
+      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"+\n\025UpdateNetworkMetadata\022\022\n\nne" +
+      "twork_id\030\001 \001(\t\"8\n\024DeleteNetworkRequest\022 " +
+      "\n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Dele" +
+      "teNetworkMetadata\022\022\n\nnetwork_id\030\001 \001(\t\"{\n" +
+      "\031ListNetworkSubnetsRequest\022 \n\nnetwork_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\"c\n\032ListNetworkSubnetsResponse\022,\n\007subn" +
+      "ets\030\001 \003(\0132\033.yandex.cloud.vpc.v1.Subnet\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\202\001\n ListNetworkS" +
+      "ecurityGroupsRequest\022 \n\nnetwork_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"y\n!" +
+      "ListNetworkSecurityGroupsResponse\022;\n\017sec" +
+      "urity_groups\030\001 \003(\0132\".yandex.cloud.vpc.v1" +
+      ".SecurityGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\177\n\035ListNetworkRouteTablesRequest\022 \n\nnetw" +
+      "ork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"p\n\036ListNetworkRouteTablesRespon" +
+      "se\0225\n\014route_tables\030\001 \003(\0132\037.yandex.cloud." +
+      "vpc.v1.RouteTable\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"~\n\034ListNetworkOperationsRequest\022 \n\nne" +
       "twork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
       "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
-      "\t\212\3101\005<=100\"y\n!ListNetworkSecurityGroupsR" +
-      "esponse\022;\n\017security_groups\030\001 \003(\0132\".yande" +
-      "x.cloud.vpc.v1.SecurityGroup\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\177\n\035ListNetworkRouteTablesR" +
-      "equest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListNetworkRou" +
-      "teTablesResponse\0225\n\014route_tables\030\001 \003(\0132\037" +
-      ".yandex.cloud.vpc.v1.RouteTable\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"~\n\034ListNetworkOperation" +
-      "sRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListNetworkO" +
-      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
-      "yandex.cloud.operation.Operation\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"c\n\022MoveNetworkRequest\022" +
-      " \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025des" +
-      "tination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")" +
-      "\n\023MoveNetworkMetadata\022\022\n\nnetwork_id\030\001 \001(" +
-      "\t2\316\014\n\016NetworkService\022r\n\003Get\022&.yandex.clo" +
-      "ud.vpc.v1.GetNetworkRequest\032\034.yandex.clo" +
-      "ud.vpc.v1.Network\"%\202\323\344\223\002\037\022\035/vpc/v1/netwo" +
-      "rks/{network_id}\022u\n\004List\022(.yandex.cloud." +
-      "vpc.v1.ListNetworksRequest\032).yandex.clou" +
-      "d.vpc.v1.ListNetworksResponse\"\030\202\323\344\223\002\022\022\020/" +
-      "vpc/v1/networks\022\227\001\n\006Create\022).yandex.clou" +
-      "d.vpc.v1.CreateNetworkRequest\032!.yandex.c" +
-      "loud.operation.Operation\"?\202\323\344\223\002\025\"\020/vpc/v" +
-      "1/networks:\001*\262\322* \n\025CreateNetworkMetadata" +
-      "\022\007Network\022\244\001\n\006Update\022).yandex.cloud.vpc." +
-      "v1.UpdateNetworkRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"L\202\323\344\223\002\"2\035/vpc/v1/netw" +
-      "orks/{network_id}:\001*\262\322* \n\025UpdateNetworkM" +
-      "etadata\022\007Network\022\257\001\n\006Delete\022).yandex.clo" +
-      "ud.vpc.v1.DeleteNetworkRequest\032!.yandex." +
-      "cloud.operation.Operation\"W\202\323\344\223\002\037*\035/vpc/" +
-      "v1/networks/{network_id}\262\322*.\n\025DeleteNetw" +
-      "orkMetadata\022\025google.protobuf.Empty\022\235\001\n\013L" +
-      "istSubnets\022..yandex.cloud.vpc.v1.ListNet" +
-      "workSubnetsRequest\032/.yandex.cloud.vpc.v1" +
-      ".ListNetworkSubnetsResponse\"-\202\323\344\223\002\'\022%/vp" +
-      "c/v1/networks/{network_id}/subnets\022\272\001\n\022L" +
-      "istSecurityGroups\0225.yandex.cloud.vpc.v1." +
-      "ListNetworkSecurityGroupsRequest\0326.yande" +
-      "x.cloud.vpc.v1.ListNetworkSecurityGroups" +
-      "Response\"5\202\323\344\223\002/\022-/vpc/v1/networks/{netw" +
-      "ork_id}/security_groups\022\256\001\n\017ListRouteTab" +
-      "les\0222.yandex.cloud.vpc.v1.ListNetworkRou" +
-      "teTablesRequest\0323.yandex.cloud.vpc.v1.Li" +
-      "stNetworkRouteTablesResponse\"2\202\323\344\223\002,\022*/v" +
-      "pc/v1/networks/{network_id}/route_tables" +
-      "\022\251\001\n\016ListOperations\0221.yandex.cloud.vpc.v" +
-      "1.ListNetworkOperationsRequest\0322.yandex." +
-      "cloud.vpc.v1.ListNetworkOperationsRespon" +
-      "se\"0\202\323\344\223\002*\022(/vpc/v1/networks/{network_id" +
-      "}/operations\022\243\001\n\004Move\022\'.yandex.cloud.vpc" +
-      ".v1.MoveNetworkRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"O\202\323\344\223\002\'\"\"/vpc/v1/netwo" +
-      "rks/{network_id}:move:\001*\262\322*\036\n\023MoveNetwor" +
-      "kMetadata\022\007NetworkBV\n\027yandex.cloud.api.v" +
-      "pc.v1Z;github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "\t\212\3101\005<=100\"o\n\035ListNetworkOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"c\n\022MoveNetworkRequest\022 \n\nnetwork_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folde" +
+      "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveNetworkM" +
+      "etadata\022\022\n\nnetwork_id\030\001 \001(\t2\316\014\n\016NetworkS" +
+      "ervice\022r\n\003Get\022&.yandex.cloud.vpc.v1.GetN" +
+      "etworkRequest\032\034.yandex.cloud.vpc.v1.Netw" +
+      "ork\"%\202\323\344\223\002\037\022\035/vpc/v1/networks/{network_i" +
+      "d}\022u\n\004List\022(.yandex.cloud.vpc.v1.ListNet" +
+      "worksRequest\032).yandex.cloud.vpc.v1.ListN" +
+      "etworksResponse\"\030\202\323\344\223\002\022\022\020/vpc/v1/network" +
+      "s\022\227\001\n\006Create\022).yandex.cloud.vpc.v1.Creat" +
+      "eNetworkRequest\032!.yandex.cloud.operation" +
+      ".Operation\"?\202\323\344\223\002\025\"\020/vpc/v1/networks:\001*\262" +
+      "\322* \n\025CreateNetworkMetadata\022\007Network\022\244\001\n\006" +
+      "Update\022).yandex.cloud.vpc.v1.UpdateNetwo" +
+      "rkRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"L\202\323\344\223\002\"2\035/vpc/v1/networks/{network_" +
+      "id}:\001*\262\322* \n\025UpdateNetworkMetadata\022\007Netwo" +
+      "rk\022\257\001\n\006Delete\022).yandex.cloud.vpc.v1.Dele" +
+      "teNetworkRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"W\202\323\344\223\002\037*\035/vpc/v1/networks/{n" +
+      "etwork_id}\262\322*.\n\025DeleteNetworkMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\235\001\n\013ListSubnets\022..y" +
+      "andex.cloud.vpc.v1.ListNetworkSubnetsReq" +
+      "uest\032/.yandex.cloud.vpc.v1.ListNetworkSu" +
+      "bnetsResponse\"-\202\323\344\223\002\'\022%/vpc/v1/networks/" +
+      "{network_id}/subnets\022\272\001\n\022ListSecurityGro" +
+      "ups\0225.yandex.cloud.vpc.v1.ListNetworkSec" +
+      "urityGroupsRequest\0326.yandex.cloud.vpc.v1" +
+      ".ListNetworkSecurityGroupsResponse\"5\202\323\344\223" +
+      "\002/\022-/vpc/v1/networks/{network_id}/securi" +
+      "ty_groups\022\256\001\n\017ListRouteTables\0222.yandex.c" +
+      "loud.vpc.v1.ListNetworkRouteTablesReques" +
+      "t\0323.yandex.cloud.vpc.v1.ListNetworkRoute" +
+      "TablesResponse\"2\202\323\344\223\002,\022*/vpc/v1/networks" +
+      "/{network_id}/route_tables\022\251\001\n\016ListOpera" +
+      "tions\0221.yandex.cloud.vpc.v1.ListNetworkO" +
+      "perationsRequest\0322.yandex.cloud.vpc.v1.L" +
+      "istNetworkOperationsResponse\"0\202\323\344\223\002*\022(/v" +
+      "pc/v1/networks/{network_id}/operations\022\243" +
+      "\001\n\004Move\022\'.yandex.cloud.vpc.v1.MoveNetwor" +
+      "kRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"O\202\323\344\223\002\'\"\"/vpc/v1/networks/{network_i" +
+      "d}:move:\001*\262\322*\036\n\023MoveNetworkMetadata\022\007Net" +
+      "workBV\n\027yandex.cloud.api.vpc.v1Z;github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/vpc/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
