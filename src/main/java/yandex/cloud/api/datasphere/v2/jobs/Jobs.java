@@ -520,27 +520,44 @@ public final class Jobs {
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-     * @return Whether the cloudInstanceType field is set.
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
-    boolean hasCloudInstanceType();
+    java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> 
+        getCloudInstanceTypesList();
     /**
      * <pre>
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-     * @return The cloudInstanceType.
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
-    yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceType();
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceTypes(int index);
     /**
      * <pre>
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
-    yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypeOrBuilder();
+    int getCloudInstanceTypesCount();
+    /**
+     * <pre>
+     * VM specification.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> 
+        getCloudInstanceTypesOrBuilderList();
+    /**
+     * <pre>
+     * VM specification.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypesOrBuilder(
+        int index);
 
     /**
      * <pre>
@@ -635,6 +652,7 @@ public final class Jobs {
       s3MountIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cmd_ = "";
+      cloudInstanceTypes_ = java.util.Collections.emptyList();
       arguments_ = java.util.Collections.emptyList();
     }
 
@@ -730,16 +748,12 @@ public final class Jobs {
               break;
             }
             case 66: {
-              yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder subBuilder = null;
-              if (cloudInstanceType_ != null) {
-                subBuilder = cloudInstanceType_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                cloudInstanceTypes_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType>();
+                mutable_bitField0_ |= 0x00000010;
               }
-              cloudInstanceType_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(cloudInstanceType_);
-                cloudInstanceType_ = subBuilder.buildPartial();
-              }
-
+              cloudInstanceTypes_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.parser(), extensionRegistry));
               break;
             }
             case 74: {
@@ -756,9 +770,9 @@ public final class Jobs {
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
                 arguments_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000020;
               }
               arguments_.add(
                   input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.parser(), extensionRegistry));
@@ -792,6 +806,9 @@ public final class Jobs {
           datasetIds_ = datasetIds_.getUnmodifiableView();
         }
         if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          cloudInstanceTypes_ = java.util.Collections.unmodifiableList(cloudInstanceTypes_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
           arguments_ = java.util.Collections.unmodifiableList(arguments_);
         }
         this.unknownFields = unknownFields.build();
@@ -1132,42 +1149,64 @@ public final class Jobs {
       return attachProjectDisk_;
     }
 
-    public static final int CLOUD_INSTANCE_TYPE_FIELD_NUMBER = 8;
-    private yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType cloudInstanceType_;
+    public static final int CLOUD_INSTANCE_TYPES_FIELD_NUMBER = 8;
+    private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> cloudInstanceTypes_;
     /**
      * <pre>
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-     * @return Whether the cloudInstanceType field is set.
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
-    public boolean hasCloudInstanceType() {
-      return cloudInstanceType_ != null;
+    public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> getCloudInstanceTypesList() {
+      return cloudInstanceTypes_;
     }
     /**
      * <pre>
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-     * @return The cloudInstanceType.
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceType() {
-      return cloudInstanceType_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.getDefaultInstance() : cloudInstanceType_;
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> 
+        getCloudInstanceTypesOrBuilderList() {
+      return cloudInstanceTypes_;
     }
     /**
      * <pre>
      * VM specification.
      * </pre>
      *
-     * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypeOrBuilder() {
-      return getCloudInstanceType();
+    public int getCloudInstanceTypesCount() {
+      return cloudInstanceTypes_.size();
+    }
+    /**
+     * <pre>
+     * VM specification.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceTypes(int index) {
+      return cloudInstanceTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * VM specification.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypesOrBuilder(
+        int index) {
+      return cloudInstanceTypes_.get(index);
     }
 
     public static final int EXTENDED_WORKING_STORAGE_FIELD_NUMBER = 9;
@@ -1303,8 +1342,8 @@ public final class Jobs {
       if (attachProjectDisk_ != false) {
         output.writeBool(7, attachProjectDisk_);
       }
-      if (cloudInstanceType_ != null) {
-        output.writeMessage(8, getCloudInstanceType());
+      for (int i = 0; i < cloudInstanceTypes_.size(); i++) {
+        output.writeMessage(8, cloudInstanceTypes_.get(i));
       }
       if (extendedWorkingStorage_ != null) {
         output.writeMessage(9, getExtendedWorkingStorage());
@@ -1356,9 +1395,9 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, attachProjectDisk_);
       }
-      if (cloudInstanceType_ != null) {
+      for (int i = 0; i < cloudInstanceTypes_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getCloudInstanceType());
+          .computeMessageSize(8, cloudInstanceTypes_.get(i));
       }
       if (extendedWorkingStorage_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1400,11 +1439,8 @@ public final class Jobs {
       }
       if (getAttachProjectDisk()
           != other.getAttachProjectDisk()) return false;
-      if (hasCloudInstanceType() != other.hasCloudInstanceType()) return false;
-      if (hasCloudInstanceType()) {
-        if (!getCloudInstanceType()
-            .equals(other.getCloudInstanceType())) return false;
-      }
+      if (!getCloudInstanceTypesList()
+          .equals(other.getCloudInstanceTypesList())) return false;
       if (hasExtendedWorkingStorage() != other.hasExtendedWorkingStorage()) return false;
       if (hasExtendedWorkingStorage()) {
         if (!getExtendedWorkingStorage()
@@ -1448,9 +1484,9 @@ public final class Jobs {
       hash = (37 * hash) + ATTACH_PROJECT_DISK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAttachProjectDisk());
-      if (hasCloudInstanceType()) {
-        hash = (37 * hash) + CLOUD_INSTANCE_TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getCloudInstanceType().hashCode();
+      if (getCloudInstanceTypesCount() > 0) {
+        hash = (37 * hash) + CLOUD_INSTANCE_TYPES_FIELD_NUMBER;
+        hash = (53 * hash) + getCloudInstanceTypesList().hashCode();
       }
       if (hasExtendedWorkingStorage()) {
         hash = (37 * hash) + EXTENDED_WORKING_STORAGE_FIELD_NUMBER;
@@ -1594,6 +1630,7 @@ public final class Jobs {
                 .alwaysUseFieldBuilders) {
           getInputFilesFieldBuilder();
           getOutputFilesFieldBuilder();
+          getCloudInstanceTypesFieldBuilder();
           getArgumentsFieldBuilder();
         }
       }
@@ -1626,11 +1663,11 @@ public final class Jobs {
         }
         attachProjectDisk_ = false;
 
-        if (cloudInstanceTypeBuilder_ == null) {
-          cloudInstanceType_ = null;
+        if (cloudInstanceTypesBuilder_ == null) {
+          cloudInstanceTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          cloudInstanceType_ = null;
-          cloudInstanceTypeBuilder_ = null;
+          cloudInstanceTypesBuilder_.clear();
         }
         if (extendedWorkingStorageBuilder_ == null) {
           extendedWorkingStorage_ = null;
@@ -1640,7 +1677,7 @@ public final class Jobs {
         }
         if (argumentsBuilder_ == null) {
           arguments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           argumentsBuilder_.clear();
         }
@@ -1706,10 +1743,14 @@ public final class Jobs {
           result.env_ = envBuilder_.build();
         }
         result.attachProjectDisk_ = attachProjectDisk_;
-        if (cloudInstanceTypeBuilder_ == null) {
-          result.cloudInstanceType_ = cloudInstanceType_;
+        if (cloudInstanceTypesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            cloudInstanceTypes_ = java.util.Collections.unmodifiableList(cloudInstanceTypes_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.cloudInstanceTypes_ = cloudInstanceTypes_;
         } else {
-          result.cloudInstanceType_ = cloudInstanceTypeBuilder_.build();
+          result.cloudInstanceTypes_ = cloudInstanceTypesBuilder_.build();
         }
         if (extendedWorkingStorageBuilder_ == null) {
           result.extendedWorkingStorage_ = extendedWorkingStorage_;
@@ -1717,9 +1758,9 @@ public final class Jobs {
           result.extendedWorkingStorage_ = extendedWorkingStorageBuilder_.build();
         }
         if (argumentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             arguments_ = java.util.Collections.unmodifiableList(arguments_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.arguments_ = arguments_;
         } else {
@@ -1855,8 +1896,31 @@ public final class Jobs {
         if (other.getAttachProjectDisk() != false) {
           setAttachProjectDisk(other.getAttachProjectDisk());
         }
-        if (other.hasCloudInstanceType()) {
-          mergeCloudInstanceType(other.getCloudInstanceType());
+        if (cloudInstanceTypesBuilder_ == null) {
+          if (!other.cloudInstanceTypes_.isEmpty()) {
+            if (cloudInstanceTypes_.isEmpty()) {
+              cloudInstanceTypes_ = other.cloudInstanceTypes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureCloudInstanceTypesIsMutable();
+              cloudInstanceTypes_.addAll(other.cloudInstanceTypes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cloudInstanceTypes_.isEmpty()) {
+            if (cloudInstanceTypesBuilder_.isEmpty()) {
+              cloudInstanceTypesBuilder_.dispose();
+              cloudInstanceTypesBuilder_ = null;
+              cloudInstanceTypes_ = other.cloudInstanceTypes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              cloudInstanceTypesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCloudInstanceTypesFieldBuilder() : null;
+            } else {
+              cloudInstanceTypesBuilder_.addAllMessages(other.cloudInstanceTypes_);
+            }
+          }
         }
         if (other.hasExtendedWorkingStorage()) {
           mergeExtendedWorkingStorage(other.getExtendedWorkingStorage());
@@ -1865,7 +1929,7 @@ public final class Jobs {
           if (!other.arguments_.isEmpty()) {
             if (arguments_.isEmpty()) {
               arguments_ = other.arguments_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureArgumentsIsMutable();
               arguments_.addAll(other.arguments_);
@@ -1878,7 +1942,7 @@ public final class Jobs {
               argumentsBuilder_.dispose();
               argumentsBuilder_ = null;
               arguments_ = other.arguments_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               argumentsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getArgumentsFieldBuilder() : null;
@@ -3127,33 +3191,30 @@ public final class Jobs {
         return this;
       }
 
-      private yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType cloudInstanceType_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> cloudInstanceTypeBuilder_;
-      /**
-       * <pre>
-       * VM specification.
-       * </pre>
-       *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-       * @return Whether the cloudInstanceType field is set.
-       */
-      public boolean hasCloudInstanceType() {
-        return cloudInstanceTypeBuilder_ != null || cloudInstanceType_ != null;
+      private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> cloudInstanceTypes_ =
+        java.util.Collections.emptyList();
+      private void ensureCloudInstanceTypesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          cloudInstanceTypes_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType>(cloudInstanceTypes_);
+          bitField0_ |= 0x00000010;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> cloudInstanceTypesBuilder_;
+
       /**
        * <pre>
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
-       * @return The cloudInstanceType.
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceType() {
-        if (cloudInstanceTypeBuilder_ == null) {
-          return cloudInstanceType_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.getDefaultInstance() : cloudInstanceType_;
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> getCloudInstanceTypesList() {
+        if (cloudInstanceTypesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cloudInstanceTypes_);
         } else {
-          return cloudInstanceTypeBuilder_.getMessage();
+          return cloudInstanceTypesBuilder_.getMessageList();
         }
       }
       /**
@@ -3161,19 +3222,48 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public Builder setCloudInstanceType(yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType value) {
-        if (cloudInstanceTypeBuilder_ == null) {
+      public int getCloudInstanceTypesCount() {
+        if (cloudInstanceTypesBuilder_ == null) {
+          return cloudInstanceTypes_.size();
+        } else {
+          return cloudInstanceTypesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType getCloudInstanceTypes(int index) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          return cloudInstanceTypes_.get(index);
+        } else {
+          return cloudInstanceTypesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder setCloudInstanceTypes(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType value) {
+        if (cloudInstanceTypesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          cloudInstanceType_ = value;
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.set(index, value);
           onChanged();
         } else {
-          cloudInstanceTypeBuilder_.setMessage(value);
+          cloudInstanceTypesBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
@@ -3181,17 +3271,17 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public Builder setCloudInstanceType(
-          yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder builderForValue) {
-        if (cloudInstanceTypeBuilder_ == null) {
-          cloudInstanceType_ = builderForValue.build();
+      public Builder setCloudInstanceTypes(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder builderForValue) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.set(index, builderForValue.build());
           onChanged();
         } else {
-          cloudInstanceTypeBuilder_.setMessage(builderForValue.build());
+          cloudInstanceTypesBuilder_.setMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
@@ -3199,21 +3289,19 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public Builder mergeCloudInstanceType(yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType value) {
-        if (cloudInstanceTypeBuilder_ == null) {
-          if (cloudInstanceType_ != null) {
-            cloudInstanceType_ =
-              yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.newBuilder(cloudInstanceType_).mergeFrom(value).buildPartial();
-          } else {
-            cloudInstanceType_ = value;
+      public Builder addCloudInstanceTypes(yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType value) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.add(value);
           onChanged();
         } else {
-          cloudInstanceTypeBuilder_.mergeFrom(value);
+          cloudInstanceTypesBuilder_.addMessage(value);
         }
-
         return this;
       }
       /**
@@ -3221,17 +3309,20 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public Builder clearCloudInstanceType() {
-        if (cloudInstanceTypeBuilder_ == null) {
-          cloudInstanceType_ = null;
+      public Builder addCloudInstanceTypes(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType value) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.add(index, value);
           onChanged();
         } else {
-          cloudInstanceType_ = null;
-          cloudInstanceTypeBuilder_ = null;
+          cloudInstanceTypesBuilder_.addMessage(index, value);
         }
-
         return this;
       }
       /**
@@ -3239,26 +3330,113 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder getCloudInstanceTypeBuilder() {
-        
-        onChanged();
-        return getCloudInstanceTypeFieldBuilder().getBuilder();
+      public Builder addCloudInstanceTypes(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder builderForValue) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cloudInstanceTypesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
       }
       /**
        * <pre>
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypeOrBuilder() {
-        if (cloudInstanceTypeBuilder_ != null) {
-          return cloudInstanceTypeBuilder_.getMessageOrBuilder();
+      public Builder addCloudInstanceTypes(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder builderForValue) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.add(index, builderForValue.build());
+          onChanged();
         } else {
-          return cloudInstanceType_ == null ?
-              yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.getDefaultInstance() : cloudInstanceType_;
+          cloudInstanceTypesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder addAllCloudInstanceTypes(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType> values) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          ensureCloudInstanceTypesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cloudInstanceTypes_);
+          onChanged();
+        } else {
+          cloudInstanceTypesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder clearCloudInstanceTypes() {
+        if (cloudInstanceTypesBuilder_ == null) {
+          cloudInstanceTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          cloudInstanceTypesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public Builder removeCloudInstanceTypes(int index) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          ensureCloudInstanceTypesIsMutable();
+          cloudInstanceTypes_.remove(index);
+          onChanged();
+        } else {
+          cloudInstanceTypesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder getCloudInstanceTypesBuilder(
+          int index) {
+        return getCloudInstanceTypesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder getCloudInstanceTypesOrBuilder(
+          int index) {
+        if (cloudInstanceTypesBuilder_ == null) {
+          return cloudInstanceTypes_.get(index);  } else {
+          return cloudInstanceTypesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
@@ -3266,20 +3444,63 @@ public final class Jobs {
        * VM specification.
        * </pre>
        *
-       * <code>.yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_type = 8;</code>
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> 
+           getCloudInstanceTypesOrBuilderList() {
+        if (cloudInstanceTypesBuilder_ != null) {
+          return cloudInstanceTypesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cloudInstanceTypes_);
+        }
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder addCloudInstanceTypesBuilder() {
+        return getCloudInstanceTypesFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder addCloudInstanceTypesBuilder(
+          int index) {
+        return getCloudInstanceTypesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * VM specification.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.CloudInstanceType cloud_instance_types = 8 [(.yandex.cloud.size) = "&gt;=1"];</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder> 
+           getCloudInstanceTypesBuilderList() {
+        return getCloudInstanceTypesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder> 
-          getCloudInstanceTypeFieldBuilder() {
-        if (cloudInstanceTypeBuilder_ == null) {
-          cloudInstanceTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getCloudInstanceTypesFieldBuilder() {
+        if (cloudInstanceTypesBuilder_ == null) {
+          cloudInstanceTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceType.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.CloudInstanceTypeOrBuilder>(
-                  getCloudInstanceType(),
+                  cloudInstanceTypes_,
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
-          cloudInstanceType_ = null;
+          cloudInstanceTypes_ = null;
         }
-        return cloudInstanceTypeBuilder_;
+        return cloudInstanceTypesBuilder_;
       }
 
       private yandex.cloud.api.datasphere.v2.jobs.Jobs.ExtendedWorkingStorage extendedWorkingStorage_;
@@ -3440,9 +3661,9 @@ public final class Jobs {
       private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument> arguments_ =
         java.util.Collections.emptyList();
       private void ensureArgumentsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           arguments_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument>(arguments_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -3636,7 +3857,7 @@ public final class Jobs {
       public Builder clearArguments() {
         if (argumentsBuilder_ == null) {
           arguments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           argumentsBuilder_.clear();
@@ -3741,7 +3962,7 @@ public final class Jobs {
           argumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument, yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder>(
                   arguments_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           arguments_ = null;
@@ -17630,86 +17851,88 @@ public final class Jobs {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/datasphere/v2/jobs/jobs.p" +
       "roto\022\037yandex.cloud.datasphere.v2.jobs\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\206\004\n\rJobPa" +
-      "rameters\022:\n\013input_files\030\001 \003(\0132%.yandex.c" +
-      "loud.datasphere.v2.jobs.File\022?\n\014output_f" +
-      "iles\030\002 \003(\0132).yandex.cloud.datasphere.v2." +
-      "jobs.FileDesc\022\024\n\014s3_mount_ids\030\003 \003(\t\022\023\n\013d" +
-      "ataset_ids\030\004 \003(\t\022\013\n\003cmd\030\005 \001(\t\0229\n\003env\030\006 \001" +
-      "(\0132,.yandex.cloud.datasphere.v2.jobs.Env" +
-      "ironment\022\033\n\023attach_project_disk\030\007 \001(\010\022O\n" +
-      "\023cloud_instance_type\030\010 \001(\01322.yandex.clou" +
-      "d.datasphere.v2.jobs.CloudInstanceType\022Y" +
-      "\n\030extended_working_storage\030\t \001(\01327.yande" +
-      "x.cloud.datasphere.v2.jobs.ExtendedWorki" +
-      "ngStorage\022<\n\targuments\030\n \003(\0132).yandex.cl" +
-      "oud.datasphere.v2.jobs.Argument\"!\n\021Cloud" +
-      "InstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026ExtendedW" +
-      "orkingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.clo" +
-      "ud.datasphere.v2.jobs.ExtendedWorkingSto" +
-      "rage.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013Sto" +
-      "rageType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022\007" +
-      "\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yandex" +
-      ".cloud.datasphere.v2.jobs.FileDesc\022\016\n\006sh" +
-      "a256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compre" +
-      "ssion_type\030\004 \001(\01624.yandex.cloud.datasphe" +
-      "re.v2.jobs.FileCompressionType\"O\n\013Storag" +
-      "eFile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.datas" +
-      "phere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010FileD" +
-      "esc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Envir" +
-      "onment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.data" +
-      "sphere.v2.jobs.Environment.VarsEntry\022\"\n\030" +
-      "docker_image_resource_id\030\002 \001(\tH\000\022M\n\021dock" +
-      "er_image_spec\030\003 \001(\01320.yandex.cloud.datas" +
-      "phere.v2.jobs.DockerImageSpecH\000\022>\n\npytho" +
-      "n_env\030\004 \001(\0132*.yandex.cloud.datasphere.v2" +
-      ".jobs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n" +
-      "\017DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010u" +
-      "sername\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001" +
-      "(\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B" +
-      "\n\n\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030\001" +
-      " \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.clo" +
-      "ud.datasphere.v2.jobs.File\"\231\005\n\003Job\022\n\n\002id" +
-      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncr" +
-      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nstarted_at\030\021 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022/\n\013finished_at\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022:\n\006status\030\006 \001(\0162*.ya" +
-      "ndex.cloud.datasphere.v2.jobs.JobStatus\022" +
-      "\016\n\006config\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022" +
-      "\n\nproject_id\030\t \001(\t\022F\n\016job_parameters\030\n \001" +
-      "(\0132..yandex.cloud.datasphere.v2.jobs.Job" +
-      "Parameters\0223\n\017data_expires_at\030\013 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022\024\n\014data_cleared\030" +
-      "\014 \001(\010\022;\n\014output_files\030\r \003(\0132%.yandex.clo" +
-      "ud.datasphere.v2.jobs.File\0228\n\tlog_files\030" +
-      "\016 \003(\0132%.yandex.cloud.datasphere.v2.jobs." +
-      "File\022?\n\020diagnostic_files\030\017 \003(\0132%.yandex." +
-      "cloud.datasphere.v2.jobs.File\022\027\n\017data_si" +
-      "ze_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013return_co" +
-      "de\030\001 \001(\003*O\n\023FileCompressionType\022%\n!FILE_" +
-      "COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001" +
-      "\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_STATUS_UN" +
-      "SPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002" +
-      "\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005E" +
-      "RROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex.cloud.ap" +
-      "i.datasphere.v2.jobsB\004JobsZNgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/dat" +
-      "asphere/v2/jobs;datasphereb\006proto3"
+      "oogle/protobuf/timestamp.proto\032\035yandex/c" +
+      "loud/validation.proto\"\220\004\n\rJobParameters\022" +
+      ":\n\013input_files\030\001 \003(\0132%.yandex.cloud.data" +
+      "sphere.v2.jobs.File\022?\n\014output_files\030\002 \003(" +
+      "\0132).yandex.cloud.datasphere.v2.jobs.File" +
+      "Desc\022\024\n\014s3_mount_ids\030\003 \003(\t\022\023\n\013dataset_id" +
+      "s\030\004 \003(\t\022\013\n\003cmd\030\005 \001(\t\0229\n\003env\030\006 \001(\0132,.yand" +
+      "ex.cloud.datasphere.v2.jobs.Environment\022" +
+      "\033\n\023attach_project_disk\030\007 \001(\010\022Y\n\024cloud_in" +
+      "stance_types\030\010 \003(\01322.yandex.cloud.datasp" +
+      "here.v2.jobs.CloudInstanceTypeB\007\202\3101\003>=1\022" +
+      "Y\n\030extended_working_storage\030\t \001(\01327.yand" +
+      "ex.cloud.datasphere.v2.jobs.ExtendedWork" +
+      "ingStorage\022<\n\targuments\030\n \003(\0132).yandex.c" +
+      "loud.datasphere.v2.jobs.Argument\"!\n\021Clou" +
+      "dInstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026Extended" +
+      "WorkingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.cl" +
+      "oud.datasphere.v2.jobs.ExtendedWorkingSt" +
+      "orage.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013St" +
+      "orageType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022" +
+      "\007\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yande" +
+      "x.cloud.datasphere.v2.jobs.FileDesc\022\016\n\006s" +
+      "ha256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compr" +
+      "ession_type\030\004 \001(\01624.yandex.cloud.datasph" +
+      "ere.v2.jobs.FileCompressionType\"O\n\013Stora" +
+      "geFile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.data" +
+      "sphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010File" +
+      "Desc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Envi" +
+      "ronment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.dat" +
+      "asphere.v2.jobs.Environment.VarsEntry\022\"\n" +
+      "\030docker_image_resource_id\030\002 \001(\tH\000\022M\n\021doc" +
+      "ker_image_spec\030\003 \001(\01320.yandex.cloud.data" +
+      "sphere.v2.jobs.DockerImageSpecH\000\022>\n\npyth" +
+      "on_env\030\004 \001(\0132*.yandex.cloud.datasphere.v" +
+      "2.jobs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001" +
+      "\n\017DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010" +
+      "username\030\002 \001(\t\022\035\n\023password_plain_text\030\003 " +
+      "\001(\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000" +
+      "B\n\n\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030" +
+      "\001 \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.cl" +
+      "oud.datasphere.v2.jobs.File\"\231\005\n\003Job\022\n\n\002i" +
+      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\nc" +
+      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\nstarted_at\030\021 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022/\n\013finished_at\030\005 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022:\n\006status\030\006 \001(\0162*.y" +
+      "andex.cloud.datasphere.v2.jobs.JobStatus" +
+      "\022\016\n\006config\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022" +
+      "\022\n\nproject_id\030\t \001(\t\022F\n\016job_parameters\030\n " +
+      "\001(\0132..yandex.cloud.datasphere.v2.jobs.Jo" +
+      "bParameters\0223\n\017data_expires_at\030\013 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\024\n\014data_cleared" +
+      "\030\014 \001(\010\022;\n\014output_files\030\r \003(\0132%.yandex.cl" +
+      "oud.datasphere.v2.jobs.File\0228\n\tlog_files" +
+      "\030\016 \003(\0132%.yandex.cloud.datasphere.v2.jobs" +
+      ".File\022?\n\020diagnostic_files\030\017 \003(\0132%.yandex" +
+      ".cloud.datasphere.v2.jobs.File\022\027\n\017data_s" +
+      "ize_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013return_c" +
+      "ode\030\001 \001(\003*O\n\023FileCompressionType\022%\n!FILE" +
+      "_COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020" +
+      "\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_STATUS_U" +
+      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020" +
+      "\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005" +
+      "ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex.cloud.a" +
+      "pi.datasphere.v2.jobsB\004JobsZNgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/da" +
+      "tasphere/v2/jobs;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor,
-        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceType", "ExtendedWorkingStorage", "Arguments", });
+        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_fieldAccessorTable = new
@@ -17782,7 +18005,13 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor,
         new java.lang.String[] { "ReturnCode", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.size);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

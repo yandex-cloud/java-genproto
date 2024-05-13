@@ -131,6 +131,53 @@ public final class ApiKeyOuterClass {
      * <code>.google.protobuf.Timestamp last_used_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getLastUsedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Scope of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string scope = 6;</code>
+     * @return The scope.
+     */
+    java.lang.String getScope();
+    /**
+     * <pre>
+     * Scope of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string scope = 6;</code>
+     * @return The bytes for scope.
+     */
+    com.google.protobuf.ByteString
+        getScopeBytes();
+
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
   }
   /**
    * <pre>
@@ -152,6 +199,7 @@ public final class ApiKeyOuterClass {
       id_ = "";
       serviceAccountId_ = "";
       description_ = "";
+      scope_ = "";
     }
 
     @java.lang.Override
@@ -224,6 +272,25 @@ public final class ApiKeyOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(lastUsedAt_);
                 lastUsedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              scope_ = s;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (expiresAt_ != null) {
+                subBuilder = expiresAt_.toBuilder();
+              }
+              expiresAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expiresAt_);
+                expiresAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -474,6 +541,90 @@ public final class ApiKeyOuterClass {
       return getLastUsedAt();
     }
 
+    public static final int SCOPE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object scope_;
+    /**
+     * <pre>
+     * Scope of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string scope = 6;</code>
+     * @return The scope.
+     */
+    @java.lang.Override
+    public java.lang.String getScope() {
+      java.lang.Object ref = scope_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scope_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Scope of the API key. 0-256 characters long.
+     * </pre>
+     *
+     * <code>string scope = 6;</code>
+     * @return The bytes for scope.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeBytes() {
+      java.lang.Object ref = scope_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scope_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     * @return Whether the expiresAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return expiresAt_ != null;
+    }
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     * @return The expiresAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <pre>
+     * API key expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+      return getExpiresAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -503,6 +654,12 @@ public final class ApiKeyOuterClass {
       if (lastUsedAt_ != null) {
         output.writeMessage(5, getLastUsedAt());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, scope_);
+      }
+      if (expiresAt_ != null) {
+        output.writeMessage(7, getExpiresAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -528,6 +685,13 @@ public final class ApiKeyOuterClass {
       if (lastUsedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLastUsedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scope_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, scope_);
+      }
+      if (expiresAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getExpiresAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -560,6 +724,13 @@ public final class ApiKeyOuterClass {
         if (!getLastUsedAt()
             .equals(other.getLastUsedAt())) return false;
       }
+      if (!getScope()
+          .equals(other.getScope())) return false;
+      if (hasExpiresAt() != other.hasExpiresAt()) return false;
+      if (hasExpiresAt()) {
+        if (!getExpiresAt()
+            .equals(other.getExpiresAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -584,6 +755,12 @@ public final class ApiKeyOuterClass {
       if (hasLastUsedAt()) {
         hash = (37 * hash) + LAST_USED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getLastUsedAt().hashCode();
+      }
+      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
+      hash = (53 * hash) + getScope().hashCode();
+      if (hasExpiresAt()) {
+        hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExpiresAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -740,6 +917,14 @@ public final class ApiKeyOuterClass {
           lastUsedAt_ = null;
           lastUsedAtBuilder_ = null;
         }
+        scope_ = "";
+
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = null;
+        } else {
+          expiresAt_ = null;
+          expiresAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -778,6 +963,12 @@ public final class ApiKeyOuterClass {
           result.lastUsedAt_ = lastUsedAt_;
         } else {
           result.lastUsedAt_ = lastUsedAtBuilder_.build();
+        }
+        result.scope_ = scope_;
+        if (expiresAtBuilder_ == null) {
+          result.expiresAt_ = expiresAt_;
+        } else {
+          result.expiresAt_ = expiresAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -844,6 +1035,13 @@ public final class ApiKeyOuterClass {
         }
         if (other.hasLastUsedAt()) {
           mergeLastUsedAt(other.getLastUsedAt());
+        }
+        if (!other.getScope().isEmpty()) {
+          scope_ = other.scope_;
+          onChanged();
+        }
+        if (other.hasExpiresAt()) {
+          mergeExpiresAt(other.getExpiresAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1471,6 +1669,257 @@ public final class ApiKeyOuterClass {
         }
         return lastUsedAtBuilder_;
       }
+
+      private java.lang.Object scope_ = "";
+      /**
+       * <pre>
+       * Scope of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string scope = 6;</code>
+       * @return The scope.
+       */
+      public java.lang.String getScope() {
+        java.lang.Object ref = scope_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scope_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Scope of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string scope = 6;</code>
+       * @return The bytes for scope.
+       */
+      public com.google.protobuf.ByteString
+          getScopeBytes() {
+        java.lang.Object ref = scope_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scope_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Scope of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string scope = 6;</code>
+       * @param value The scope to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScope(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        scope_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scope of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string scope = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScope() {
+        
+        scope_ = getDefaultInstance().getScope();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Scope of the API key. 0-256 characters long.
+       * </pre>
+       *
+       * <code>string scope = 6;</code>
+       * @param value The bytes for scope to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        scope_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expiresAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       * @return Whether the expiresAt field is set.
+       */
+      public boolean hasExpiresAt() {
+        return expiresAtBuilder_ != null || expiresAt_ != null;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       * @return The expiresAt.
+       */
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        if (expiresAtBuilder_ == null) {
+          return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        } else {
+          return expiresAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expiresAt_ = value;
+          onChanged();
+        } else {
+          expiresAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          expiresAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (expiresAt_ != null) {
+            expiresAt_ =
+              com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+          } else {
+            expiresAt_ = value;
+          }
+          onChanged();
+        } else {
+          expiresAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public Builder clearExpiresAt() {
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = null;
+          onChanged();
+        } else {
+          expiresAt_ = null;
+          expiresAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
+        
+        onChanged();
+        return getExpiresAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+        if (expiresAtBuilder_ != null) {
+          return expiresAtBuilder_.getMessageOrBuilder();
+        } else {
+          return expiresAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        }
+      }
+      /**
+       * <pre>
+       * API key expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpiresAtFieldBuilder() {
+        if (expiresAtBuilder_ == null) {
+          expiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpiresAt(),
+                  getParentForChildren(),
+                  isClean());
+          expiresAt_ = null;
+        }
+        return expiresAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1540,13 +1989,15 @@ public final class ApiKeyOuterClass {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/iam/v1/api_key.proto\022\023yan" +
       "dex.cloud.iam.v1\032\037google/protobuf/timest" +
-      "amp.proto\"\247\001\n\006ApiKey\022\n\n\002id\030\001 \001(\t\022\032\n\022serv" +
+      "amp.proto\"\346\001\n\006ApiKey\022\n\n\002id\030\001 \001(\t\022\032\n\022serv" +
       "ice_account_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\013" +
       "2\032.google.protobuf.Timestamp\022\023\n\013descript" +
       "ion\030\004 \001(\t\0220\n\014last_used_at\030\005 \001(\0132\032.google" +
-      ".protobuf.TimestampBV\n\027yandex.cloud.api." +
-      "iam.v1Z;github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/iam/v1;iamb\006proto3"
+      ".protobuf.Timestamp\022\r\n\005scope\030\006 \001(\t\022.\n\nex" +
+      "pires_at\030\007 \001(\0132\032.google.protobuf.Timesta" +
+      "mpBV\n\027yandex.cloud.api.iam.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1558,7 +2009,7 @@ public final class ApiKeyOuterClass {
     internal_static_yandex_cloud_iam_v1_ApiKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ApiKey_descriptor,
-        new java.lang.String[] { "Id", "ServiceAccountId", "CreatedAt", "Description", "LastUsedAt", });
+        new java.lang.String[] { "Id", "ServiceAccountId", "CreatedAt", "Description", "LastUsedAt", "Scope", "ExpiresAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

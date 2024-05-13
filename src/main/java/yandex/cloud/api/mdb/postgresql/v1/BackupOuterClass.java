@@ -192,6 +192,25 @@ public final class BackupOuterClass {
      * @return The journalSize.
      */
     long getJournalSize();
+
+    /**
+     * <pre>
+     * Status of backup
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of backup
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus getStatus();
   }
   /**
    * <pre>
@@ -216,6 +235,7 @@ public final class BackupOuterClass {
       sourceClusterId_ = "";
       type_ = 0;
       method_ = 0;
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -312,6 +332,12 @@ public final class BackupOuterClass {
             case 72: {
 
               journalSize_ = input.readInt64();
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
               break;
             }
             default: {
@@ -610,6 +636,139 @@ public final class BackupOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus}
+     */
+    public enum BackupStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_STATUS_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Backup is done
+       * </pre>
+       *
+       * <code>DONE = 1;</code>
+       */
+      DONE(1),
+      /**
+       * <pre>
+       * Backup is creating    
+       * </pre>
+       *
+       * <code>CREATING = 2;</code>
+       */
+      CREATING(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Backup is done
+       * </pre>
+       *
+       * <code>DONE = 1;</code>
+       */
+      public static final int DONE_VALUE = 1;
+      /**
+       * <pre>
+       * Backup is creating    
+       * </pre>
+       *
+       * <code>CREATING = 2;</code>
+       */
+      public static final int CREATING_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupStatus forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_STATUS_UNSPECIFIED;
+          case 1: return DONE;
+          case 2: return CREATING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupStatus>() {
+              public BackupStatus findValueByNumber(int number) {
+                return BackupStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final BackupStatus[] VALUES = values();
+
+      public static BackupStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -913,6 +1072,33 @@ public final class BackupOuterClass {
       return journalSize_;
     }
 
+    public static final int STATUS_FIELD_NUMBER = 10;
+    private int status_;
+    /**
+     * <pre>
+     * Status of backup
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of backup
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.valueOf(status_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -953,6 +1139,9 @@ public final class BackupOuterClass {
       }
       if (journalSize_ != 0L) {
         output.writeInt64(9, journalSize_);
+      }
+      if (status_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.BACKUP_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(10, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -996,6 +1185,10 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(9, journalSize_);
       }
+      if (status_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.BACKUP_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(10, status_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1033,6 +1226,7 @@ public final class BackupOuterClass {
       if (method_ != other.method_) return false;
       if (getJournalSize()
           != other.getJournalSize()) return false;
+      if (status_ != other.status_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1068,6 +1262,8 @@ public final class BackupOuterClass {
       hash = (37 * hash) + JOURNAL_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getJournalSize());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1232,6 +1428,8 @@ public final class BackupOuterClass {
 
         journalSize_ = 0L;
 
+        status_ = 0;
+
         return this;
       }
 
@@ -1275,6 +1473,7 @@ public final class BackupOuterClass {
         result.type_ = type_;
         result.method_ = method_;
         result.journalSize_ = journalSize_;
+        result.status_ = status_;
         onBuilt();
         return result;
       }
@@ -1352,6 +1551,9 @@ public final class BackupOuterClass {
         }
         if (other.getJournalSize() != 0L) {
           setJournalSize(other.getJournalSize());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2222,6 +2424,80 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of backup
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of backup
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of backup
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.valueOf(status_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of backup
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of backup
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupStatus status = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2291,7 +2567,7 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/postgresql/v1/backup." +
       "proto\022\036yandex.cloud.mdb.postgresql.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\365\003\n\006Backu" +
+      "oogle/protobuf/timestamp.proto\"\201\005\n\006Backu" +
       "p\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\031\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_a" +
@@ -2300,14 +2576,17 @@ public final class BackupOuterClass {
       "db.postgresql.v1.Backup.BackupCreationTy" +
       "pe\022C\n\006method\030\010 \001(\01623.yandex.cloud.mdb.po" +
       "stgresql.v1.Backup.BackupMethod\022\024\n\014journ" +
-      "al_size\030\t \001(\003\"H\n\014BackupMethod\022\035\n\031BACKUP_" +
-      "METHOD_UNSPECIFIED\020\000\022\010\n\004BASE\020\001\022\017\n\013INCREM" +
-      "ENTAL\020\002\"U\n\022BackupCreationType\022$\n BACKUP_" +
-      "CREATION_TYPE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED" +
-      "\020\001\022\n\n\006MANUAL\020\002Bs\n\"yandex.cloud.api.mdb.p" +
-      "ostgresql.v1ZMgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/postgresql/v1" +
-      ";postgresqlb\006proto3"
+      "al_size\030\t \001(\003\022C\n\006status\030\n \001(\01623.yandex.c" +
+      "loud.mdb.postgresql.v1.Backup.BackupStat" +
+      "us\"H\n\014BackupMethod\022\035\n\031BACKUP_METHOD_UNSP" +
+      "ECIFIED\020\000\022\010\n\004BASE\020\001\022\017\n\013INCREMENTAL\020\002\"U\n\022" +
+      "BackupCreationType\022$\n BACKUP_CREATION_TY" +
+      "PE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUA" +
+      "L\020\002\"E\n\014BackupStatus\022\035\n\031BACKUP_STATUS_UNS" +
+      "PECIFIED\020\000\022\010\n\004DONE\020\001\022\014\n\010CREATING\020\002Bs\n\"ya" +
+      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2319,7 +2598,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", "Status", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
