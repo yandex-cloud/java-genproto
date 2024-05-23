@@ -30386,7 +30386,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\312X\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\357X\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -30669,18 +30669,18 @@ public final class Postgresql10 {
       "AD_LIBRARIES_PG_CRON\020\005\022&\n\"SHARED_PRELOAD" +
       "_LIBRARIES_PGLOGICAL\020\006\022\'\n#SHARED_PRELOAD" +
       "_LIBRARIES_PG_PREWARM\020\007\022$\n SHARED_PRELOA" +
-      "D_LIBRARIES_PGAUDIT\020\010\"\225\002\n\025PostgresqlConf" +
-      "igSet10\022Y\n\020effective_config\030\001 \001(\01329.yand" +
-      "ex.cloud.mdb.postgresql.v1.config.Postgr" +
-      "esqlConfig10B\004\350\3071\001\022N\n\013user_config\030\002 \001(\0132" +
+      "D_LIBRARIES_PGAUDIT\020\010J\005\010v\020\226\001J\006\010\227\001\020\230\001J\006\010\237" +
+      "\001\020\242\001J\006\010\246\001\020\247\001J\004\010O\020P\"\225\002\n\025PostgresqlConfigS" +
+      "et10\022Y\n\020effective_config\030\001 \001(\01329.yandex." +
+      "cloud.mdb.postgresql.v1.config.Postgresq" +
+      "lConfig10B\004\350\3071\001\022N\n\013user_config\030\002 \001(\01329.y" +
+      "andex.cloud.mdb.postgresql.v1.config.Pos" +
+      "tgresqlConfig10\022Q\n\016default_config\030\003 \001(\0132" +
       "9.yandex.cloud.mdb.postgresql.v1.config." +
-      "PostgresqlConfig10\022Q\n\016default_config\030\003 \001" +
-      "(\01329.yandex.cloud.mdb.postgresql.v1.conf" +
-      "ig.PostgresqlConfig10B\201\001\n)yandex.cloud.a" +
-      "pi.mdb.postgresql.v1.configZTgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/md" +
-      "b/postgresql/v1/config;postgresqlb\006proto" +
-      "3"
+      "PostgresqlConfig10B\201\001\n)yandex.cloud.api." +
+      "mdb.postgresql.v1.configZTgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/p" +
+      "ostgresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

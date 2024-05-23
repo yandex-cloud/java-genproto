@@ -2164,25 +2164,25 @@ public final class CertificateContentServiceOuterClass {
       "\nDyandex/cloud/certificatemanager/v1/cer" +
       "tificate_content_service.proto\022\"yandex.c" +
       "loud.certificatemanager.v1\032\034google/api/a" +
-      "nnotations.proto\"g\n\035GetCertificateConten" +
+      "nnotations.proto\"m\n\035GetCertificateConten" +
       "tResponse\022\026\n\016certificate_id\030\001 \001(\t\022\031\n\021cer" +
       "tificate_chain\030\003 \003(\t\022\023\n\013private_key\030\004 \001(" +
-      "\t\"\234\001\n\034GetCertificateContentRequest\022\026\n\016ce" +
-      "rtificate_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022P" +
-      "\n\022private_key_format\030\003 \001(\01624.yandex.clou" +
-      "d.certificatemanager.v1.PrivateKeyFormat" +
-      "*L\n\020PrivateKeyFormat\022\"\n\036PRIVATE_KEY_FORM" +
-      "AT_UNSPECIFIED\020\000\022\t\n\005PKCS1\020\001\022\t\n\005PKCS8\020\0022\362" +
-      "\001\n\031CertificateContentService\022\324\001\n\003Get\022@.y" +
-      "andex.cloud.certificatemanager.v1.GetCer" +
-      "tificateContentRequest\032A.yandex.cloud.ce" +
-      "rtificatemanager.v1.GetCertificateConten" +
-      "tResponse\"H\202\323\344\223\002B\022@/certificate-manager/" +
-      "v1/certificates/{certificate_id}:getCont" +
-      "entB\203\001\n&yandex.cloud.api.certificatemana" +
-      "ger.v1ZYgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/certificatemanager/v1;c" +
-      "ertificatemanagerb\006proto3"
+      "\tJ\004\010\002\020\003\"\234\001\n\034GetCertificateContentRequest" +
+      "\022\026\n\016certificate_id\030\001 \001(\t\022\022\n\nversion_id\030\002" +
+      " \001(\t\022P\n\022private_key_format\030\003 \001(\01624.yande" +
+      "x.cloud.certificatemanager.v1.PrivateKey" +
+      "Format*L\n\020PrivateKeyFormat\022\"\n\036PRIVATE_KE" +
+      "Y_FORMAT_UNSPECIFIED\020\000\022\t\n\005PKCS1\020\001\022\t\n\005PKC" +
+      "S8\020\0022\362\001\n\031CertificateContentService\022\324\001\n\003G" +
+      "et\022@.yandex.cloud.certificatemanager.v1." +
+      "GetCertificateContentRequest\032A.yandex.cl" +
+      "oud.certificatemanager.v1.GetCertificate" +
+      "ContentResponse\"H\202\323\344\223\002B\022@/certificate-ma" +
+      "nager/v1/certificates/{certificate_id}:g" +
+      "etContentB\203\001\n&yandex.cloud.api.certifica" +
+      "temanager.v1ZYgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/certificatemanage" +
+      "r/v1;certificatemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

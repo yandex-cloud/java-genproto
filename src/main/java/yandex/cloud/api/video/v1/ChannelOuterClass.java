@@ -2118,17 +2118,17 @@ public final class ChannelOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/video/v1/channel.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
-      "mestamp.proto\"\236\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
+      "mestamp.proto\"\253\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
       "\017organization_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n" +
       "\013description\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032" +
       ".google.protobuf.Timestamp\022.\n\nupdated_at" +
       "\030e \001(\0132\032.google.protobuf.Timestamp\022;\n\006la" +
       "bels\030\310\001 \003(\0132*.yandex.cloud.video.v1.Chan" +
       "nel.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\\\n\031yandex.cloud.a" +
-      "pi.video.v1Z?github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/video/v1;videob\006pr" +
-      "oto3"
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010f\020\310\001J\004\010\005\020dB\\\n\031y" +
+      "andex.cloud.api.video.v1Z?github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/video" +
+      "/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

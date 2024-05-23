@@ -14709,11 +14709,19 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The addressId.
      */
     java.lang.String getAddressId();
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for addressId.
      */
@@ -14721,11 +14729,19 @@ public final class AddressServiceOuterClass {
         getAddressIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder to move address to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The destinationFolderId.
      */
     java.lang.String getDestinationFolderId();
     /**
+     * <pre>
+     * ID of the folder to move address to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for destinationFolderId.
      */
@@ -14826,6 +14842,10 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The addressId.
      */
@@ -14843,6 +14863,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for addressId.
      */
@@ -14864,6 +14888,10 @@ public final class AddressServiceOuterClass {
     public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object destinationFolderId_;
     /**
+     * <pre>
+     * ID of the folder to move address to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The destinationFolderId.
      */
@@ -14881,6 +14909,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to move address to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for destinationFolderId.
      */
@@ -15220,6 +15252,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The addressId.
        */
@@ -15236,6 +15272,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for addressId.
        */
@@ -15253,6 +15293,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The addressId to set.
        * @return This builder for chaining.
@@ -15268,6 +15312,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -15278,6 +15326,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for addressId to set.
        * @return This builder for chaining.
@@ -15296,6 +15348,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object destinationFolderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to move address to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The destinationFolderId.
        */
@@ -15312,6 +15368,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to move address to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for destinationFolderId.
        */
@@ -15329,6 +15389,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to move address to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The destinationFolderId to set.
        * @return This builder for chaining.
@@ -15344,6 +15408,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to move address to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -15354,6 +15422,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to move address to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for destinationFolderId to set.
        * @return This builder for chaining.
@@ -15427,11 +15499,19 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      * @return The addressId.
      */
     java.lang.String getAddressId();
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      * @return The bytes for addressId.
      */
@@ -15525,6 +15605,10 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      * @return The addressId.
      */
@@ -15542,6 +15626,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address that is being moved.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      * @return The bytes for addressId.
      */
@@ -15864,6 +15952,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        * @return The addressId.
        */
@@ -15880,6 +15972,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        * @return The bytes for addressId.
        */
@@ -15897,6 +15993,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        * @param value The addressId to set.
        * @return This builder for chaining.
@@ -15912,6 +16012,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -15922,6 +16026,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being moved.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        * @param value The bytes for addressId to set.
        * @return This builder for chaining.
@@ -16094,8 +16202,8 @@ public final class AddressServiceOuterClass {
       "otations.proto\032 google/protobuf/field_ma" +
       "sk.proto\032 yandex/cloud/api/operation.pro" +
       "to\032&yandex/cloud/operation/operation.pro" +
-      "to\032!yandex/cloud/vpc/v1/address.proto\032\035y" +
-      "andex/cloud/validation.proto\"5\n\021GetAddre" +
+      "to\032\035yandex/cloud/validation.proto\032!yande" +
+      "x/cloud/vpc/v1/address.proto\"5\n\021GetAddre" +
       "ssRequest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\"F\n\030GetAddressByValueRequest\022\037\n\025exter" +
       "nal_ipv4_address\030\001 \001(\tH\000B\t\n\007address\"\205\001\n\024" +
@@ -16104,7 +16212,7 @@ public final class AddressServiceOuterClass {
       "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\016\n\006f" +
       "ilter\030\004 \001(\t\"a\n\025ListAddressesResponse\022/\n\t" +
       "addresses\030\001 \003(\0132\034.yandex.cloud.vpc.v1.Ad" +
-      "dress\022\027\n\017next_page_token\030\002 \001(\t\"\214\004\n\024Creat" +
+      "dress\022\027\n\017next_page_token\030\002 \001(\t\"\222\004\n\024Creat" +
       "eAddressRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\022<\n\004name\030\002 \001(\tB.\362\3071*|[a-zA-Z]([-" +
       "_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036\n\013descri" +
@@ -16117,73 +16225,73 @@ public final class AddressServiceOuterClass {
       "cH\000\022\033\n\023deletion_protection\030\n \001(\010\022<\n\020dns_" +
       "record_specs\030\013 \003(\0132\".yandex.cloud.vpc.v1" +
       ".DnsRecordSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014address_spec\"{\n" +
-      "\027ExternalIpv4AddressSpec\022\017\n\007address\030\001 \001(" +
-      "\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014requirements\030\003 \001(\013" +
-      "2(.yandex.cloud.vpc.v1.AddressRequiremen" +
-      "ts\"k\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022" +
-      "\037\n\013dns_zone_id\030\002 \001(\tB\n\350\3071\001\212\3101\00220\022\030\n\003ttl\030" +
-      "\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"+\n\025Creat" +
-      "eAddressMetadata\022\022\n\naddress_id\030\001 \001(\t\"\354\003\n" +
-      "\024UpdateAddressRequest\022 \n\naddress_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022<\n\004name\030\003 \001(\tB." +
-      "\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z" +
-      "0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\206" +
-      "\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc.v1.Up" +
-      "dateAddressRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022\020\n\010reserved\030\006 \001(\010\022\033\n\023del" +
-      "etion_protection\030\007 \001(\010\022<\n\020dns_record_spe" +
-      "cs\030\010 \003(\0132\".yandex.cloud.vpc.v1.DnsRecord" +
-      "Spec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\"+\n\025UpdateAddressMetadata\022\022\n\n" +
-      "address_id\030\001 \001(\t\"8\n\024DeleteAddressRequest" +
-      "\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025De" +
-      "leteAddressMetadata\022\022\n\naddress_id\030\001 \001(\t\"" +
-      "~\n\034ListAddressOperationsRequest\022 \n\naddre" +
-      "ss_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\"o\n\035ListAddressOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"c\n\022MoveAddressRequest\022 \n\naddress_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
-      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveAddressMeta" +
-      "data\022\022\n\naddress_id\030\001 \001(\t2\307\t\n\016AddressServ" +
-      "ice\022s\n\003Get\022&.yandex.cloud.vpc.v1.GetAddr" +
-      "essRequest\032\034.yandex.cloud.vpc.v1.Address" +
-      "\"&\202\323\344\223\002 \022\036/vpc/v1/addresses/{address_id}" +
-      "\022|\n\nGetByValue\022-.yandex.cloud.vpc.v1.Get" +
-      "AddressByValueRequest\032\034.yandex.cloud.vpc" +
-      ".v1.Address\"!\202\323\344\223\002\033\022\031/vpc/v1/addresses:b" +
-      "yValue\022x\n\004List\022).yandex.cloud.vpc.v1.Lis" +
-      "tAddressesRequest\032*.yandex.cloud.vpc.v1." +
-      "ListAddressesResponse\"\031\202\323\344\223\002\023\022\021/vpc/v1/a" +
-      "ddresses\022\230\001\n\006Create\022).yandex.cloud.vpc.v" +
-      "1.CreateAddressRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"@\202\323\344\223\002\026\"\021/vpc/v1/addre" +
-      "sses:\001*\262\322* \n\025CreateAddressMetadata\022\007Addr" +
-      "ess\022\245\001\n\006Update\022).yandex.cloud.vpc.v1.Upd" +
-      "ateAddressRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"M\202\323\344\223\002#2\036/vpc/v1/addresses/" +
-      "{address_id}:\001*\262\322* \n\025UpdateAddressMetada" +
-      "ta\022\007Address\022\260\001\n\006Delete\022).yandex.cloud.vp" +
-      "c.v1.DeleteAddressRequest\032!.yandex.cloud" +
-      ".operation.Operation\"X\202\323\344\223\002 *\036/vpc/v1/ad" +
-      "dresses/{address_id}\262\322*.\n\025DeleteAddressM" +
-      "etadata\022\025google.protobuf.Empty\022\252\001\n\016ListO" +
-      "perations\0221.yandex.cloud.vpc.v1.ListAddr" +
-      "essOperationsRequest\0322.yandex.cloud.vpc." +
-      "v1.ListAddressOperationsResponse\"1\202\323\344\223\002+" +
-      "\022)/vpc/v1/addresses/{address_id}/operati" +
-      "ons\022\244\001\n\004Move\022\'.yandex.cloud.vpc.v1.MoveA" +
-      "ddressRequest\032!.yandex.cloud.operation.O" +
-      "peration\"P\202\323\344\223\002(\"#/vpc/v1/addresses/{add" +
-      "ress_id}:move:\001*\262\322*\036\n\023MoveAddressMetadat" +
-      "a\022\007AddressBV\n\027yandex.cloud.api.vpc.v1Z;g" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/vpc/v1;vpcb\006proto3"
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014address_specJ\004\010" +
+      "\006\020\n\"{\n\027ExternalIpv4AddressSpec\022\017\n\007addres" +
+      "s\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014requirements" +
+      "\030\003 \001(\0132(.yandex.cloud.vpc.v1.AddressRequ" +
+      "irements\"k\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB" +
+      "\004\350\3071\001\022\037\n\013dns_zone_id\030\002 \001(\tB\n\350\3071\001\212\3101\00220\022\030" +
+      "\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"+\n" +
+      "\025CreateAddressMetadata\022\022\n\naddress_id\030\001 \001" +
+      "(\t\"\354\003\n\024UpdateAddressRequest\022 \n\naddress_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022<\n\004name\030\003" +
+      " \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[" +
+      "a-zA-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<" +
+      "=256\022\206\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc" +
+      ".v1.UpdateAddressRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022\020\n\010reserved\030\006 \001(\010\022" +
+      "\033\n\023deletion_protection\030\007 \001(\010\022<\n\020dns_reco" +
+      "rd_specs\030\010 \003(\0132\".yandex.cloud.vpc.v1.Dns" +
+      "RecordSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateAddressMetada" +
+      "ta\022\022\n\naddress_id\030\001 \001(\t\"8\n\024DeleteAddressR" +
+      "equest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"+\n\025DeleteAddressMetadata\022\022\n\naddress_id\030" +
+      "\001 \001(\t\"~\n\034ListAddressOperationsRequest\022 \n" +
+      "\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\"o\n\035ListAddressOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"c\n\022MoveAddressRequest\022 \n\naddress_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fo" +
+      "lder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveAddre" +
+      "ssMetadata\022\022\n\naddress_id\030\001 \001(\t2\307\t\n\016Addre" +
+      "ssService\022s\n\003Get\022&.yandex.cloud.vpc.v1.G" +
+      "etAddressRequest\032\034.yandex.cloud.vpc.v1.A" +
+      "ddress\"&\202\323\344\223\002 \022\036/vpc/v1/addresses/{addre" +
+      "ss_id}\022|\n\nGetByValue\022-.yandex.cloud.vpc." +
+      "v1.GetAddressByValueRequest\032\034.yandex.clo" +
+      "ud.vpc.v1.Address\"!\202\323\344\223\002\033\022\031/vpc/v1/addre" +
+      "sses:byValue\022x\n\004List\022).yandex.cloud.vpc." +
+      "v1.ListAddressesRequest\032*.yandex.cloud.v" +
+      "pc.v1.ListAddressesResponse\"\031\202\323\344\223\002\023\022\021/vp" +
+      "c/v1/addresses\022\230\001\n\006Create\022).yandex.cloud" +
+      ".vpc.v1.CreateAddressRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"@\202\323\344\223\002\026\"\021/vpc/v1" +
+      "/addresses:\001*\262\322* \n\025CreateAddressMetadata" +
+      "\022\007Address\022\245\001\n\006Update\022).yandex.cloud.vpc." +
+      "v1.UpdateAddressRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"M\202\323\344\223\002#2\036/vpc/v1/addr" +
+      "esses/{address_id}:\001*\262\322* \n\025UpdateAddress" +
+      "Metadata\022\007Address\022\260\001\n\006Delete\022).yandex.cl" +
+      "oud.vpc.v1.DeleteAddressRequest\032!.yandex" +
+      ".cloud.operation.Operation\"X\202\323\344\223\002 *\036/vpc" +
+      "/v1/addresses/{address_id}\262\322*.\n\025DeleteAd" +
+      "dressMetadata\022\025google.protobuf.Empty\022\252\001\n" +
+      "\016ListOperations\0221.yandex.cloud.vpc.v1.Li" +
+      "stAddressOperationsRequest\0322.yandex.clou" +
+      "d.vpc.v1.ListAddressOperationsResponse\"1" +
+      "\202\323\344\223\002+\022)/vpc/v1/addresses/{address_id}/o" +
+      "perations\022\244\001\n\004Move\022\'.yandex.cloud.vpc.v1" +
+      ".MoveAddressRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"P\202\323\344\223\002(\"#/vpc/v1/addresse" +
+      "s/{address_id}:move:\001*\262\322*\036\n\023MoveAddressM" +
+      "etadata\022\007AddressBV\n\027yandex.cloud.api.vpc" +
+      ".v1Z;github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16192,8 +16300,8 @@ public final class AddressServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_vpc_v1_GetAddressRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16319,8 +16427,8 @@ public final class AddressServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

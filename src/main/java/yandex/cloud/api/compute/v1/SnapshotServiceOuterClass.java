@@ -11058,7 +11058,7 @@ public final class SnapshotServiceOuterClass {
       "0\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"f\n\025ListSn" +
       "apshotsResponse\0224\n\tsnapshots\030\001 \003(\0132!.yan" +
       "dex.cloud.compute.v1.Snapshot\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\360\002\n\025CreateSnapshotRequest" +
+      "ge_token\030\002 \001(\t\"\366\002\n\025CreateSnapshotRequest" +
       "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007dis" +
       "k_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\003 \001(\tB$" +
       "\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
@@ -11067,74 +11067,74 @@ public final class SnapshotServiceOuterClass {
       "apshotRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
       "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
       "-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\">\n\026CreateSnaps" +
-      "hotMetadata\022\023\n\013snapshot_id\030\001 \001(\t\022\017\n\007disk" +
-      "_id\030\002 \001(\t\"\204\003\n\025UpdateSnapshotRequest\022!\n\013s" +
-      "napshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
-      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
-      "2\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
-      "}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=" +
-      "256\022\223\001\n\006labels\030\005 \003(\0132:.yandex.cloud.comp" +
-      "ute.v1.UpdateSnapshotRequest.LabelsEntry" +
-      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"-\n\026UpdateSnapshotMetadata\022\023\n\013snapshot_i" +
-      "d\030\001 \001(\t\":\n\025DeleteSnapshotRequest\022!\n\013snap" +
-      "shot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteSna" +
-      "pshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t\"\200\001\n\035L" +
-      "istSnapshotOperationsRequest\022!\n\013snapshot" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"p\n\036ListSnapshotOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\243\r\n\017SnapshotService\022\202\001\n\003Get\022+.yandex.clo" +
-      "ud.compute.v1.GetSnapshotRequest\032!.yande" +
-      "x.cloud.compute.v1.Snapshot\"+\202\323\344\223\002%\022#/co" +
-      "mpute/v1/snapshots/{snapshot_id}\022\204\001\n\004Lis" +
-      "t\022-.yandex.cloud.compute.v1.ListSnapshot" +
-      "sRequest\032..yandex.cloud.compute.v1.ListS" +
-      "napshotsResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/sn" +
-      "apshots\022\243\001\n\006Create\022..yandex.cloud.comput" +
-      "e.v1.CreateSnapshotRequest\032!.yandex.clou" +
-      "d.operation.Operation\"F\202\323\344\223\002\032\"\025/compute/" +
-      "v1/snapshots:\001*\262\322*\"\n\026CreateSnapshotMetad" +
-      "ata\022\010Snapshot\022\261\001\n\006Update\022..yandex.cloud." +
-      "compute.v1.UpdateSnapshotRequest\032!.yande" +
-      "x.cloud.operation.Operation\"T\202\323\344\223\002(2#/co" +
-      "mpute/v1/snapshots/{snapshot_id}:\001*\262\322*\"\n" +
-      "\026UpdateSnapshotMetadata\022\010Snapshot\022\273\001\n\006De" +
-      "lete\022..yandex.cloud.compute.v1.DeleteSna" +
-      "pshotRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"^\202\323\344\223\002%*#/compute/v1/snapshots/{" +
-      "snapshot_id}\262\322*/\n\026DeleteSnapshotMetadata" +
-      "\022\025google.protobuf.Empty\022\271\001\n\016ListOperatio" +
-      "ns\0226.yandex.cloud.compute.v1.ListSnapsho" +
-      "tOperationsRequest\0327.yandex.cloud.comput" +
-      "e.v1.ListSnapshotOperationsResponse\"6\202\323\344" +
-      "\223\0020\022./compute/v1/snapshots/{snapshot_id}" +
-      "/operations\022\265\001\n\022ListAccessBindings\022..yan" +
-      "dex.cloud.access.ListAccessBindingsReque" +
-      "st\032/.yandex.cloud.access.ListAccessBindi" +
-      "ngsResponse\">\202\323\344\223\0028\0226/compute/v1/snapsho" +
-      "ts/{resource_id}:listAccessBindings\022\364\001\n\021" +
-      "SetAccessBindings\022-.yandex.cloud.access." +
-      "SetAccessBindingsRequest\032!.yandex.cloud." +
-      "operation.Operation\"\214\001\202\323\344\223\002:\"5/compute/v" +
-      "1/snapshots/{resource_id}:setAccessBindi" +
-      "ngs:\001*\262\322*H\n access.SetAccessBindingsMeta" +
-      "data\022$access.AccessBindingsOperationResu" +
-      "lt\022\200\002\n\024UpdateAccessBindings\0220.yandex.clo" +
-      "ud.access.UpdateAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\222\001\202\323\344\223\002" +
-      "=\"8/compute/v1/snapshots/{resource_id}:u" +
-      "pdateAccessBindings:\001*\262\322*K\n#access.Updat" +
-      "eAccessBindingsMetadata\022$access.AccessBi" +
-      "ndingsOperationResultBb\n\033yandex.cloud.ap" +
-      "i.compute.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/compute/v1;comput" +
-      "eb\006proto3"
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\">\n\026Creat" +
+      "eSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t\022\017" +
+      "\n\007disk_id\030\002 \001(\t\"\204\003\n\025UpdateSnapshotReques" +
+      "t\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
+      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
+      "\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex.clou" +
+      "d.compute.v1.UpdateSnapshotRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"-\n\026UpdateSnapshotMetadata\022\023\n\013snap" +
+      "shot_id\030\001 \001(\t\":\n\025DeleteSnapshotRequest\022!" +
+      "\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026Del" +
+      "eteSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t" +
+      "\"\200\001\n\035ListSnapshotOperationsRequest\022!\n\013sn" +
+      "apshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\"p\n\036ListSnapshotOperationsRes" +
+      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
+      ".operation.Operation\022\027\n\017next_page_token\030" +
+      "\002 \001(\t2\243\r\n\017SnapshotService\022\202\001\n\003Get\022+.yand" +
+      "ex.cloud.compute.v1.GetSnapshotRequest\032!" +
+      ".yandex.cloud.compute.v1.Snapshot\"+\202\323\344\223\002" +
+      "%\022#/compute/v1/snapshots/{snapshot_id}\022\204" +
+      "\001\n\004List\022-.yandex.cloud.compute.v1.ListSn" +
+      "apshotsRequest\032..yandex.cloud.compute.v1" +
+      ".ListSnapshotsResponse\"\035\202\323\344\223\002\027\022\025/compute" +
+      "/v1/snapshots\022\243\001\n\006Create\022..yandex.cloud." +
+      "compute.v1.CreateSnapshotRequest\032!.yande" +
+      "x.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/co" +
+      "mpute/v1/snapshots:\001*\262\322*\"\n\026CreateSnapsho" +
+      "tMetadata\022\010Snapshot\022\261\001\n\006Update\022..yandex." +
+      "cloud.compute.v1.UpdateSnapshotRequest\032!" +
+      ".yandex.cloud.operation.Operation\"T\202\323\344\223\002" +
+      "(2#/compute/v1/snapshots/{snapshot_id}:\001" +
+      "*\262\322*\"\n\026UpdateSnapshotMetadata\022\010Snapshot\022" +
+      "\273\001\n\006Delete\022..yandex.cloud.compute.v1.Del" +
+      "eteSnapshotRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"^\202\323\344\223\002%*#/compute/v1/snaps" +
+      "hots/{snapshot_id}\262\322*/\n\026DeleteSnapshotMe" +
+      "tadata\022\025google.protobuf.Empty\022\271\001\n\016ListOp" +
+      "erations\0226.yandex.cloud.compute.v1.ListS" +
+      "napshotOperationsRequest\0327.yandex.cloud." +
+      "compute.v1.ListSnapshotOperationsRespons" +
+      "e\"6\202\323\344\223\0020\022./compute/v1/snapshots/{snapsh" +
+      "ot_id}/operations\022\265\001\n\022ListAccessBindings" +
+      "\022..yandex.cloud.access.ListAccessBinding" +
+      "sRequest\032/.yandex.cloud.access.ListAcces" +
+      "sBindingsResponse\">\202\323\344\223\0028\0226/compute/v1/s" +
+      "napshots/{resource_id}:listAccessBinding" +
+      "s\022\364\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
+      "ccess.SetAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\214\001\202\323\344\223\002:\"5/com" +
+      "pute/v1/snapshots/{resource_id}:setAcces" +
+      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
+      "gsMetadata\022$access.AccessBindingsOperati" +
+      "onResult\022\200\002\n\024UpdateAccessBindings\0220.yand" +
+      "ex.cloud.access.UpdateAccessBindingsRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\222" +
+      "\001\202\323\344\223\002=\"8/compute/v1/snapshots/{resource" +
+      "_id}:updateAccessBindings:\001*\262\322*K\n#access" +
+      ".UpdateAccessBindingsMetadata\022$access.Ac" +
+      "cessBindingsOperationResultBb\n\033yandex.cl" +
+      "oud.api.compute.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/compute/v1;" +
+      "computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

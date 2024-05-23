@@ -5527,7 +5527,7 @@ public final class StreamOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"yandex/cloud/video/v1/stream.proto\022\025ya" +
       "ndex.cloud.video.v1\032\037google/protobuf/tim" +
-      "estamp.proto\"\376\005\n\006Stream\022\n\n\002id\030\001 \001(\t\022\022\n\nc" +
+      "estamp.proto\"\223\006\n\006Stream\022\n\n\002id\030\001 \001(\t\022\022\n\nc" +
       "hannel_id\030\002 \001(\t\022\017\n\007line_id\030\003 \001(\t\022\r\n\005titl" +
       "e\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022\024\n\014thumbnai" +
       "l_id\030\006 \001(\t\022:\n\006status\030\010 \001(\0162*.yandex.clou" +
@@ -5546,13 +5546,13 @@ public final class StreamOuterClass {
       "\002 \001(\t:\0028\001\"m\n\014StreamStatus\022\035\n\031STREAM_STAT" +
       "US_UNSPECIFIED\020\000\022\013\n\007OFFLINE\020\001\022\r\n\tPREPARI" +
       "NG\020\002\022\t\n\005READY\020\003\022\t\n\005ONAIR\020\004\022\014\n\010FINISHED\020\005" +
-      "B\r\n\013stream_typeJ\004\010\007\020\010\"\n\n\010OnDemand\"k\n\010Sch" +
-      "edule\022.\n\nstart_time\030\001 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022/\n\013finish_time\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\\\n\031yandex.cloud.a" +
-      "pi.video.v1Z?github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/video/v1;videob\006pr" +
-      "oto3"
+      "B\r\n\013stream_typeJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\004\010\014\020dJ\004\010\007" +
+      "\020\010\"\n\n\010OnDemand\"k\n\010Schedule\022.\n\nstart_time" +
+      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fi" +
+      "nish_time\030\002 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\\\n\031yandex.cloud.api.video.v1Z?github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

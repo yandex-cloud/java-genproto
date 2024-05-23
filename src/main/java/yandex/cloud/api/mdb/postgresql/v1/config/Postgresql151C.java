@@ -37715,7 +37715,7 @@ public final class Postgresql151C {
       "postgresql15_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\331m\n\025PostgresqlConfig15_1C\0224\n\017max_con" +
+      "oto\"\371m\n\025PostgresqlConfig15_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -38066,17 +38066,18 @@ public final class Postgresql151C {
       "L_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n" +
       "\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027" +
       "\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CO" +
-      "NTENT\020\002\"\233\002\n\030PostgresqlConfigSet15_1C\022V\n\020" +
-      "effective_config\030\001 \001(\0132<.yandex.cloud.md" +
-      "b.postgresql.v1.config.PostgresqlConfig1" +
-      "5_1C\022Q\n\013user_config\030\002 \001(\0132<.yandex.cloud" +
-      ".mdb.postgresql.v1.config.PostgresqlConf" +
-      "ig15_1C\022T\n\016default_config\030\003 \001(\0132<.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig15_1CB\201\001\n)yandex.cloud.api.mdb.p" +
-      "ostgresql.v1.configZTgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/mdb/postgr" +
-      "esql/v1/config;postgresqlb\006proto3"
+      "NTENT\020\002J\004\010N\020OJ\004\010j\020kJ\004\010}\020~J\006\010\246\001\020\247\001J\004\010@\020A\"" +
+      "\233\002\n\030PostgresqlConfigSet15_1C\022V\n\020effectiv" +
+      "e_config\030\001 \001(\0132<.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlConfig15_1C\022Q\n\013" +
+      "user_config\030\002 \001(\0132<.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlConfig15_1C\022" +
+      "T\n\016default_config\030\003 \001(\0132<.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlConfig" +
+      "15_1CB\201\001\n)yandex.cloud.api.mdb.postgresq" +
+      "l.v1.configZTgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/postgresql/v1/" +
+      "config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

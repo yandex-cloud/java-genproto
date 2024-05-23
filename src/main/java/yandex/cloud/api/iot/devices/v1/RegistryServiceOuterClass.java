@@ -30010,11 +30010,11 @@ public final class RegistryServiceOuterClass {
       "\n2yandex/cloud/iot/devices/v1/registry_s" +
       "ervice.proto\022\033yandex.cloud.iot.devices.v" +
       "1\032\034google/api/annotations.proto\032 google/" +
-      "protobuf/field_mask.proto\032\035yandex/cloud/" +
-      "validation.proto\032 yandex/cloud/api/opera" +
-      "tion.proto\032&yandex/cloud/operation/opera" +
-      "tion.proto\032*yandex/cloud/iot/devices/v1/" +
-      "registry.proto\"7\n\022GetRegistryRequest\022!\n\013" +
+      "protobuf/field_mask.proto\032 yandex/cloud/" +
+      "api/operation.proto\032*yandex/cloud/iot/de" +
+      "vices/v1/registry.proto\032&yandex/cloud/op" +
+      "eration/operation.proto\032\035yandex/cloud/va" +
+      "lidation.proto\"7\n\022GetRegistryRequest\022!\n\013" +
       "registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"r\n\030GetBy" +
       "NameRegistryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014" +
       "\350\3071\001\212\3101\004<=50\0225\n\rregistry_name\030\002 \001(\tB\036\350\3071" +
@@ -30058,157 +30058,157 @@ public final class RegistryServiceOuterClass {
       "y_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"j\n ListRegistry" +
       "CertificatesResponse\022F\n\014certificates\030\001 \003" +
       "(\01320.yandex.cloud.iot.devices.v1.Registr" +
-      "yCertificate\"\\\n\035AddRegistryCertificateRe" +
+      "yCertificate\"b\n\035AddRegistryCertificateRe" +
       "quest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\030\n\020certificate_data\030\003 \001(\t\"J\n\036AddRegistr" +
-      "yCertificateMetadata\022\023\n\013registry_id\030\001 \001(" +
-      "\t\022\023\n\013fingerprint\030\002 \001(\t\"h\n DeleteRegistry" +
-      "CertificateRequest\022!\n\013registry_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"i\n!DeleteRegistryCertificateMet" +
-      "adata\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"A\n\034L" +
-      "istRegistryPasswordsRequest\022!\n\013registry_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n\035ListRegistryPa" +
-      "sswordsResponse\022@\n\tpasswords\030\001 \003(\0132-.yan" +
-      "dex.cloud.iot.devices.v1.RegistryPasswor" +
-      "d\"[\n\032AddRegistryPasswordRequest\022!\n\013regis" +
-      "try_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002" +
-      " \001(\tB\010\212\3101\004>=14\"G\n\033AddRegistryPasswordMet" +
-      "adata\022\023\n\013registry_id\030\001 \001(\t\022\023\n\013password_i" +
-      "d\030\002 \001(\t\"e\n\035DeleteRegistryPasswordRequest" +
-      "\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013p" +
-      "assword_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036Delete" +
-      "RegistryPasswordMetadata\022!\n\013registry_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"\200\001\n\035ListDeviceTopicAliase" +
-      "sRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\036ListDeviceT" +
-      "opicAliasesResponse\0229\n\007aliases\030\001 \003(\0132(.y" +
-      "andex.cloud.iot.devices.v1.DeviceAlias\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\224\001\n\035ListRegistry" +
-      "OperationsRequest\022\031\n\013registry_id\030\001 \001(\tB\004" +
-      "\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
-      "(\tB\n\212\3101\006<=1000\"p\n\036ListRegistryOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"\372\001\n\032AddDataStreamExportRequest\022" +
-      "(\n\004name\030\001 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]" +
-      "*\022!\n\013registry_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022%\n\021" +
-      "mqtt_topic_filter\030\004 \001(\tB\n\212\3101\006<=1024\022\037\n\010d" +
-      "atabase\030\005 \001(\tB\r\350\3071\001\212\3101\005<=512\022\035\n\006stream\030\006" +
-      " \001(\tB\r\350\3071\001\212\3101\005<=512\022(\n\022service_account_i" +
-      "d\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\"Q\n\033AddDataStreamEx" +
-      "portMetadata\022\023\n\013registry_id\030\001 \001(\t\022\035\n\025dat" +
-      "a_stream_export_id\030\002 \001(\t\"o\n\035DeleteDataSt" +
-      "reamExportRequest\022!\n\013registry_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022+\n\025data_stream_export_id\030\002 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"`\n\036DeleteDataStreamExp" +
-      "ortMetadata\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022#" +
-      "\n\025data_stream_export_id\030\002 \001(\tB\004\350\3071\001\"A\n\034L" +
-      "istDataStreamExportsRequest\022!\n\013registry_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\035ListDataStream" +
-      "ExportsResponse\022J\n\023data_stream_exports\030\001" +
-      " \003(\0132-.yandex.cloud.iot.devices.v1.DataS" +
-      "treamExport2\372\031\n\017RegistryService\022\217\001\n\003Get\022" +
-      "/.yandex.cloud.iot.devices.v1.GetRegistr" +
-      "yRequest\032%.yandex.cloud.iot.devices.v1.R" +
-      "egistry\"0\202\323\344\223\002*\022(/iot-devices/v1/registr" +
-      "ies/{registry_id}\022\227\001\n\tGetByName\0225.yandex" +
-      ".cloud.iot.devices.v1.GetByNameRegistryR" +
-      "equest\032%.yandex.cloud.iot.devices.v1.Reg" +
-      "istry\",\202\323\344\223\002&\022$/iot-devices/v1/registrie" +
-      "s:getByName\022\223\001\n\004List\0222.yandex.cloud.iot." +
-      "devices.v1.ListRegistriesRequest\0323.yande" +
-      "x.cloud.iot.devices.v1.ListRegistriesRes" +
-      "ponse\"\"\202\323\344\223\002\034\022\032/iot-devices/v1/registrie" +
-      "s\022\254\001\n\006Create\0222.yandex.cloud.iot.devices." +
-      "v1.CreateRegistryRequest\032!.yandex.cloud." +
-      "operation.Operation\"K\202\323\344\223\002\037\"\032/iot-device" +
-      "s/v1/registries:\001*\262\322*\"\n\026CreateRegistryMe" +
-      "tadata\022\010Registry\022\272\001\n\006Update\0222.yandex.clo" +
-      "ud.iot.devices.v1.UpdateRegistryRequest\032" +
-      "!.yandex.cloud.operation.Operation\"Y\202\323\344\223" +
-      "\002-2(/iot-devices/v1/registries/{registry" +
-      "_id}:\001*\262\322*\"\n\026UpdateRegistryMetadata\022\010Reg" +
-      "istry\022\304\001\n\006Delete\0222.yandex.cloud.iot.devi" +
-      "ces.v1.DeleteRegistryRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"c\202\323\344\223\002**(/iot-de" +
-      "vices/v1/registries/{registry_id}\262\322*/\n\026D" +
-      "eleteRegistryMetadata\022\025google.protobuf.E" +
-      "mpty\022\316\001\n\020ListCertificates\022<.yandex.cloud" +
-      ".iot.devices.v1.ListRegistryCertificates" +
-      "Request\032=.yandex.cloud.iot.devices.v1.Li" +
-      "stRegistryCertificatesResponse\"=\202\323\344\223\0027\0225" +
-      "/iot-devices/v1/registries/{registry_id}" +
-      "/certificates\022\352\001\n\016AddCertificate\022:.yande" +
-      "x.cloud.iot.devices.v1.AddRegistryCertif" +
-      "icateRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"y\202\323\344\223\002:\"5/iot-devices/v1/registr" +
-      "ies/{registry_id}/certificates:\001*\262\322*5\n\036A" +
-      "ddRegistryCertificateMetadata\022\023RegistryC" +
-      "ertificate\022\201\002\n\021DeleteCertificate\022=.yande" +
-      "x.cloud.iot.devices.v1.DeleteRegistryCer" +
-      "tificateRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\211\001\202\323\344\223\002E*C/iot-devices/v1/reg" +
-      "istries/{registry_id}/certificates/{fing" +
-      "erprint}\262\322*:\n!DeleteRegistryCertificateM" +
-      "etadata\022\025google.protobuf.Empty\022\302\001\n\rListP" +
-      "asswords\0229.yandex.cloud.iot.devices.v1.L" +
-      "istRegistryPasswordsRequest\032:.yandex.clo" +
-      "ud.iot.devices.v1.ListRegistryPasswordsR" +
-      "esponse\":\202\323\344\223\0024\0222/iot-devices/v1/registr" +
-      "ies/{registry_id}/passwords\022\333\001\n\013AddPassw" +
-      "ord\0227.yandex.cloud.iot.devices.v1.AddReg" +
+      "\022\030\n\020certificate_data\030\003 \001(\tJ\004\010\002\020\003\"J\n\036AddR" +
+      "egistryCertificateMetadata\022\023\n\013registry_i" +
+      "d\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"h\n DeleteRe" +
+      "gistryCertificateRequest\022!\n\013registry_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"i\n!DeleteRegistryCertific" +
+      "ateMetadata\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"A\n\034ListRegistryPasswordsRequest\022!\n\013reg" +
+      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n\035ListRegi" +
+      "stryPasswordsResponse\022@\n\tpasswords\030\001 \003(\013" +
+      "2-.yandex.cloud.iot.devices.v1.RegistryP" +
+      "assword\"[\n\032AddRegistryPasswordRequest\022!\n" +
+      "\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010pass" +
+      "word\030\002 \001(\tB\010\212\3101\004>=14\"G\n\033AddRegistryPassw" +
+      "ordMetadata\022\023\n\013registry_id\030\001 \001(\t\022\023\n\013pass" +
+      "word_id\030\002 \001(\t\"e\n\035DeleteRegistryPasswordR" +
+      "equest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036" +
+      "DeleteRegistryPasswordMetadata\022!\n\013regist" +
+      "ry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\200\001\n\035ListDeviceTopic" +
+      "AliasesRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\036ListD" +
+      "eviceTopicAliasesResponse\0229\n\007aliases\030\001 \003" +
+      "(\0132(.yandex.cloud.iot.devices.v1.DeviceA" +
+      "lias\022\027\n\017next_page_token\030\002 \001(\t\"\224\001\n\035ListRe" +
+      "gistryOperationsRequest\022\031\n\013registry_id\030\001" +
+      " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\"p\n\036ListRegistryOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"\200\002\n\032AddDataStreamExportRe" +
+      "quest\022(\n\004name\030\001 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z" +
+      "0-9_-]*\022!\n\013registry_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022%\n\021mqtt_topic_filter\030\004 \001(\tB\n\212\3101\006<=102" +
+      "4\022\037\n\010database\030\005 \001(\tB\r\350\3071\001\212\3101\005<=512\022\035\n\006st" +
+      "ream\030\006 \001(\tB\r\350\3071\001\212\3101\005<=512\022(\n\022service_acc" +
+      "ount_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\004\"Q\n\033Add" +
+      "DataStreamExportMetadata\022\023\n\013registry_id\030" +
+      "\001 \001(\t\022\035\n\025data_stream_export_id\030\002 \001(\t\"o\n\035" +
+      "DeleteDataStreamExportRequest\022!\n\013registr" +
+      "y_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025data_stream_" +
+      "export_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"`\n\036DeleteD" +
+      "ataStreamExportMetadata\022\031\n\013registry_id\030\001" +
+      " \001(\tB\004\350\3071\001\022#\n\025data_stream_export_id\030\002 \001(" +
+      "\tB\004\350\3071\001\"A\n\034ListDataStreamExportsRequest\022" +
+      "!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\035Li" +
+      "stDataStreamExportsResponse\022J\n\023data_stre" +
+      "am_exports\030\001 \003(\0132-.yandex.cloud.iot.devi" +
+      "ces.v1.DataStreamExport2\372\031\n\017RegistryServ" +
+      "ice\022\217\001\n\003Get\022/.yandex.cloud.iot.devices.v" +
+      "1.GetRegistryRequest\032%.yandex.cloud.iot." +
+      "devices.v1.Registry\"0\202\323\344\223\002*\022(/iot-device" +
+      "s/v1/registries/{registry_id}\022\227\001\n\tGetByN" +
+      "ame\0225.yandex.cloud.iot.devices.v1.GetByN" +
+      "ameRegistryRequest\032%.yandex.cloud.iot.de" +
+      "vices.v1.Registry\",\202\323\344\223\002&\022$/iot-devices/" +
+      "v1/registries:getByName\022\223\001\n\004List\0222.yande" +
+      "x.cloud.iot.devices.v1.ListRegistriesReq" +
+      "uest\0323.yandex.cloud.iot.devices.v1.ListR" +
+      "egistriesResponse\"\"\202\323\344\223\002\034\022\032/iot-devices/" +
+      "v1/registries\022\254\001\n\006Create\0222.yandex.cloud." +
+      "iot.devices.v1.CreateRegistryRequest\032!.y" +
+      "andex.cloud.operation.Operation\"K\202\323\344\223\002\037\"" +
+      "\032/iot-devices/v1/registries:\001*\262\322*\"\n\026Crea" +
+      "teRegistryMetadata\022\010Registry\022\272\001\n\006Update\022" +
+      "2.yandex.cloud.iot.devices.v1.UpdateRegi" +
+      "stryRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"Y\202\323\344\223\002-2(/iot-devices/v1/registri" +
+      "es/{registry_id}:\001*\262\322*\"\n\026UpdateRegistryM" +
+      "etadata\022\010Registry\022\304\001\n\006Delete\0222.yandex.cl" +
+      "oud.iot.devices.v1.DeleteRegistryRequest" +
+      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
+      "\223\002**(/iot-devices/v1/registries/{registr" +
+      "y_id}\262\322*/\n\026DeleteRegistryMetadata\022\025googl" +
+      "e.protobuf.Empty\022\316\001\n\020ListCertificates\022<." +
+      "yandex.cloud.iot.devices.v1.ListRegistry" +
+      "CertificatesRequest\032=.yandex.cloud.iot.d" +
+      "evices.v1.ListRegistryCertificatesRespon" +
+      "se\"=\202\323\344\223\0027\0225/iot-devices/v1/registries/{" +
+      "registry_id}/certificates\022\352\001\n\016AddCertifi" +
+      "cate\022:.yandex.cloud.iot.devices.v1.AddRe" +
+      "gistryCertificateRequest\032!.yandex.cloud." +
+      "operation.Operation\"y\202\323\344\223\002:\"5/iot-device" +
+      "s/v1/registries/{registry_id}/certificat" +
+      "es:\001*\262\322*5\n\036AddRegistryCertificateMetadat" +
+      "a\022\023RegistryCertificate\022\201\002\n\021DeleteCertifi" +
+      "cate\022=.yandex.cloud.iot.devices.v1.Delet" +
+      "eRegistryCertificateRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\211\001\202\323\344\223\002E*C/iot-de" +
+      "vices/v1/registries/{registry_id}/certif" +
+      "icates/{fingerprint}\262\322*:\n!DeleteRegistry" +
+      "CertificateMetadata\022\025google.protobuf.Emp" +
+      "ty\022\302\001\n\rListPasswords\0229.yandex.cloud.iot." +
+      "devices.v1.ListRegistryPasswordsRequest\032" +
+      ":.yandex.cloud.iot.devices.v1.ListRegist" +
+      "ryPasswordsResponse\":\202\323\344\223\0024\0222/iot-device" +
+      "s/v1/registries/{registry_id}/passwords\022" +
+      "\333\001\n\013AddPassword\0227.yandex.cloud.iot.devic" +
+      "es.v1.AddRegistryPasswordRequest\032!.yande" +
+      "x.cloud.operation.Operation\"p\202\323\344\223\0027\"2/io" +
+      "t-devices/v1/registries/{registry_id}/pa" +
+      "sswords:\001*\262\322*/\n\033AddRegistryPasswordMetad" +
+      "ata\022\020RegistryPassword\022\365\001\n\016DeletePassword" +
+      "\022:.yandex.cloud.iot.devices.v1.DeleteReg" +
       "istryPasswordRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"p\202\323\344\223\0027\"2/iot-devices/v1" +
-      "/registries/{registry_id}/passwords:\001*\262\322" +
-      "*/\n\033AddRegistryPasswordMetadata\022\020Registr" +
-      "yPassword\022\365\001\n\016DeletePassword\022:.yandex.cl" +
-      "oud.iot.devices.v1.DeleteRegistryPasswor" +
-      "dRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\203\001\202\323\344\223\002B*@/iot-devices/v1/registries" +
-      "/{registry_id}/passwords/{password_id}\262\322" +
-      "*7\n\036DeleteRegistryPasswordMetadata\022\025goog" +
-      "le.protobuf.Empty\022\332\001\n\026ListDeviceTopicAli" +
-      "ases\022:.yandex.cloud.iot.devices.v1.ListD" +
-      "eviceTopicAliasesRequest\032;.yandex.cloud." +
-      "iot.devices.v1.ListDeviceTopicAliasesRes" +
-      "ponse\"G\202\323\344\223\002A\022?/iot-devices/v1/registrie" +
-      "s/{registry_id}:listDeviceTopicAliases\022\216" +
-      "\001\n\025ListDataStreamExports\0229.yandex.cloud." +
-      "iot.devices.v1.ListDataStreamExportsRequ" +
-      "est\032:.yandex.cloud.iot.devices.v1.ListDa" +
-      "taStreamExportsResponse\022\246\001\n\023AddDataStrea" +
-      "mExport\0227.yandex.cloud.iot.devices.v1.Ad" +
-      "dDataStreamExportRequest\032!.yandex.cloud." +
-      "operation.Operation\"3\262\322*/\n\033AddDataStream" +
-      "ExportMetadata\022\020DataStreamExport\022\264\001\n\026Del" +
-      "eteDataStreamExport\022:.yandex.cloud.iot.d" +
-      "evices.v1.DeleteDataStreamExportRequest\032" +
-      "!.yandex.cloud.operation.Operation\";\262\322*7" +
-      "\n\036DeleteDataStreamExportMetadata\022\025google" +
-      ".protobuf.Empty\022\306\001\n\016ListOperations\022:.yan" +
-      "dex.cloud.iot.devices.v1.ListRegistryOpe" +
-      "rationsRequest\032;.yandex.cloud.iot.device" +
-      "s.v1.ListRegistryOperationsResponse\";\202\323\344" +
-      "\223\0025\0223/iot-devices/v1/registries/{registr" +
-      "y_id}/operationsBj\n\037yandex.cloud.api.iot" +
-      ".devices.v1ZGgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/iot/devices/v1;dev" +
-      "icesb\006proto3"
+      "ation.Operation\"\203\001\202\323\344\223\002B*@/iot-devices/v" +
+      "1/registries/{registry_id}/passwords/{pa" +
+      "ssword_id}\262\322*7\n\036DeleteRegistryPasswordMe" +
+      "tadata\022\025google.protobuf.Empty\022\332\001\n\026ListDe" +
+      "viceTopicAliases\022:.yandex.cloud.iot.devi" +
+      "ces.v1.ListDeviceTopicAliasesRequest\032;.y" +
+      "andex.cloud.iot.devices.v1.ListDeviceTop" +
+      "icAliasesResponse\"G\202\323\344\223\002A\022?/iot-devices/" +
+      "v1/registries/{registry_id}:listDeviceTo" +
+      "picAliases\022\216\001\n\025ListDataStreamExports\0229.y" +
+      "andex.cloud.iot.devices.v1.ListDataStrea" +
+      "mExportsRequest\032:.yandex.cloud.iot.devic" +
+      "es.v1.ListDataStreamExportsResponse\022\246\001\n\023" +
+      "AddDataStreamExport\0227.yandex.cloud.iot.d" +
+      "evices.v1.AddDataStreamExportRequest\032!.y" +
+      "andex.cloud.operation.Operation\"3\262\322*/\n\033A" +
+      "ddDataStreamExportMetadata\022\020DataStreamEx" +
+      "port\022\264\001\n\026DeleteDataStreamExport\022:.yandex" +
+      ".cloud.iot.devices.v1.DeleteDataStreamEx" +
+      "portRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\";\262\322*7\n\036DeleteDataStreamExportMeta" +
+      "data\022\025google.protobuf.Empty\022\306\001\n\016ListOper" +
+      "ations\022:.yandex.cloud.iot.devices.v1.Lis" +
+      "tRegistryOperationsRequest\032;.yandex.clou" +
+      "d.iot.devices.v1.ListRegistryOperationsR" +
+      "esponse\";\202\323\344\223\0025\0223/iot-devices/v1/registr" +
+      "ies/{registry_id}/operationsBj\n\037yandex.c" +
+      "loud.api.iot.devices.v1ZGgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/iot/de" +
+      "vices/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iot.devices.v1.RegistryOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_iot_devices_v1_GetRegistryRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -30434,10 +30434,10 @@ public final class RegistryServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iot.devices.v1.RegistryOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1856,17 +1856,17 @@ public final class OrganizationOuterClass {
       "\n6yandex/cloud/organizationmanager/v1/or" +
       "ganization.proto\022#yandex.cloud.organizat" +
       "ionmanager.v1\032\037google/protobuf/timestamp" +
-      ".proto\"\372\001\n\014Organization\022\n\n\002id\030\001 \001(\t\022.\n\nc" +
+      ".proto\"\200\002\n\014Organization\022\n\n\002id\030\001 \001(\t\022.\n\nc" +
       "reated_at\030\002 \001(\0132\032.google.protobuf.Timest" +
       "amp\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\r" +
       "\n\005title\030\006 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.c" +
       "loud.organizationmanager.v1.Organization" +
       ".LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001B\206\001\n\'yandex.cloud.api" +
-      ".organizationmanager.v1Z[github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/organi" +
-      "zationmanager/v1;organizationmanagerb\006pr" +
-      "oto3"
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006B\206\001\n\'yandex.clo" +
+      "ud.api.organizationmanager.v1Z[github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "organizationmanager/v1;organizationmanag" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

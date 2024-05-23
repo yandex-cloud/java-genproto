@@ -7047,40 +7047,40 @@ public final class ThumbnailServiceOuterClass {
       "e.proto\022\025yandex.cloud.video.v1\032 yandex/c" +
       "loud/api/operation.proto\032&yandex/cloud/o" +
       "peration/operation.proto\032%yandex/cloud/v" +
-      "ideo/v1/thumbnail.proto\"Q\n\024ListThumbnail" +
+      "ideo/v1/thumbnail.proto\"W\n\024ListThumbnail" +
       "Request\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tpage_size" +
-      "\030d \001(\003\022\022\n\npage_token\030e \001(\t\"f\n\025ListThumbn" +
-      "ailResponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex" +
-      ".cloud.video.v1.Thumbnail\022\027\n\017next_page_t" +
-      "oken\030d \001(\t\",\n\026CreateThumbnailRequest\022\022\n\n" +
-      "channel_id\030\001 \001(\t\"/\n\027CreateThumbnailMetad" +
-      "ata\022\024\n\014thumbnail_id\030\001 \001(\t\"M\n BatchGenera" +
-      "teDownloadURLsRequest\022\022\n\nchannel_id\030\001 \001(" +
-      "\t\022\025\n\rthumbnail_ids\030\002 \003(\t\"g\n!BatchGenerat" +
-      "eDownloadURLsResponse\022B\n\rdownload_urls\030\001" +
-      " \003(\0132+.yandex.cloud.video.v1.ThumbnailDo" +
-      "wnloadURL\"B\n\024ThumbnailDownloadURL\022\024\n\014thu" +
-      "mbnail_id\030\001 \001(\t\022\024\n\014download_url\030\002 \001(\t\"9\n" +
-      "!GenerateThumbnailUploadURLRequest\022\024\n\014th" +
-      "umbnail_id\030\001 \001(\t\"8\n\"GenerateThumbnailUpl" +
-      "oadURLResponse\022\022\n\nupload_url\030\001 \001(\t2\236\004\n\020T" +
-      "humbnailService\022c\n\004List\022+.yandex.cloud.v" +
-      "ideo.v1.ListThumbnailRequest\032,.yandex.cl" +
-      "oud.video.v1.ListThumbnailResponse\"\000\022\204\001\n" +
-      "\006Create\022-.yandex.cloud.video.v1.CreateTh" +
-      "umbnailRequest\032!.yandex.cloud.operation." +
-      "Operation\"(\262\322*$\n\027CreateThumbnailMetadata" +
-      "\022\tThumbnail\022\220\001\n\031BatchGenerateDownloadURL" +
-      "s\0227.yandex.cloud.video.v1.BatchGenerateD" +
-      "ownloadURLsRequest\0328.yandex.cloud.video." +
-      "v1.BatchGenerateDownloadURLsResponse\"\000\022\212" +
-      "\001\n\021GenerateUploadURL\0228.yandex.cloud.vide" +
-      "o.v1.GenerateThumbnailUploadURLRequest\0329" +
-      ".yandex.cloud.video.v1.GenerateThumbnail" +
-      "UploadURLResponse\"\000B\\\n\031yandex.cloud.api." +
-      "video.v1Z?github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/video/v1;videob\006proto" +
-      "3"
+      "\030d \001(\003\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"l\n\025List" +
+      "ThumbnailResponse\0224\n\nthumbnails\030\001 \003(\0132 ." +
+      "yandex.cloud.video.v1.Thumbnail\022\027\n\017next_" +
+      "page_token\030d \001(\tJ\004\010\002\020d\",\n\026CreateThumbnai" +
+      "lRequest\022\022\n\nchannel_id\030\001 \001(\t\"/\n\027CreateTh" +
+      "umbnailMetadata\022\024\n\014thumbnail_id\030\001 \001(\t\"M\n" +
+      " BatchGenerateDownloadURLsRequest\022\022\n\ncha" +
+      "nnel_id\030\001 \001(\t\022\025\n\rthumbnail_ids\030\002 \003(\t\"g\n!" +
+      "BatchGenerateDownloadURLsResponse\022B\n\rdow" +
+      "nload_urls\030\001 \003(\0132+.yandex.cloud.video.v1" +
+      ".ThumbnailDownloadURL\"B\n\024ThumbnailDownlo" +
+      "adURL\022\024\n\014thumbnail_id\030\001 \001(\t\022\024\n\014download_" +
+      "url\030\002 \001(\t\"9\n!GenerateThumbnailUploadURLR" +
+      "equest\022\024\n\014thumbnail_id\030\001 \001(\t\"8\n\"Generate" +
+      "ThumbnailUploadURLResponse\022\022\n\nupload_url" +
+      "\030\001 \001(\t2\236\004\n\020ThumbnailService\022c\n\004List\022+.ya" +
+      "ndex.cloud.video.v1.ListThumbnailRequest" +
+      "\032,.yandex.cloud.video.v1.ListThumbnailRe" +
+      "sponse\"\000\022\204\001\n\006Create\022-.yandex.cloud.video" +
+      ".v1.CreateThumbnailRequest\032!.yandex.clou" +
+      "d.operation.Operation\"(\262\322*$\n\027CreateThumb" +
+      "nailMetadata\022\tThumbnail\022\220\001\n\031BatchGenerat" +
+      "eDownloadURLs\0227.yandex.cloud.video.v1.Ba" +
+      "tchGenerateDownloadURLsRequest\0328.yandex." +
+      "cloud.video.v1.BatchGenerateDownloadURLs" +
+      "Response\"\000\022\212\001\n\021GenerateUploadURL\0228.yande" +
+      "x.cloud.video.v1.GenerateThumbnailUpload" +
+      "URLRequest\0329.yandex.cloud.video.v1.Gener" +
+      "ateThumbnailUploadURLResponse\"\000B\\\n\031yande" +
+      "x.cloud.api.video.v1Z?github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/video/v1;" +
+      "videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

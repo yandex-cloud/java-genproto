@@ -2626,22 +2626,22 @@ public final class Elasticsearch {
       "ig/elasticsearch.proto\022(yandex.cloud.mdb" +
       ".elasticsearch.v1.config\032\036google/protobu" +
       "f/wrappers.proto\032\035yandex/cloud/validatio" +
-      "n.proto\"\252\001\n\024ElasticsearchConfig7\0225\n\020max_" +
+      "n.proto\"\260\001\n\024ElasticsearchConfig7\0225\n\020max_" +
       "clause_count\030\003 \001(\0132\033.google.protobuf.Int" +
       "64Value\022\034\n\024fielddata_cache_size\030\004 \001(\t\022 \n" +
       "\030reindex_remote_whitelist\030\006 \001(\t\022\033\n\023reind" +
-      "ex_ssl_ca_path\030\007 \001(\t\"\246\002\n\027ElasticsearchCo" +
-      "nfigSet7\022^\n\020effective_config\030\001 \001(\0132>.yan" +
-      "dex.cloud.mdb.elasticsearch.v1.config.El" +
-      "asticsearchConfig7B\004\350\3071\001\022S\n\013user_config\030" +
-      "\002 \001(\0132>.yandex.cloud.mdb.elasticsearch.v" +
-      "1.config.ElasticsearchConfig7\022V\n\016default" +
-      "_config\030\003 \001(\0132>.yandex.cloud.mdb.elastic" +
-      "search.v1.config.ElasticsearchConfig7B\212\001" +
-      "\n,yandex.cloud.api.mdb.elasticsearch.v1." +
-      "configZZgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/elasticsearch/v1/co" +
-      "nfig;elasticsearchb\006proto3"
+      "ex_ssl_ca_path\030\007 \001(\tJ\004\010\005\020\006\"\246\002\n\027Elasticse" +
+      "archConfigSet7\022^\n\020effective_config\030\001 \001(\013" +
+      "2>.yandex.cloud.mdb.elasticsearch.v1.con" +
+      "fig.ElasticsearchConfig7B\004\350\3071\001\022S\n\013user_c" +
+      "onfig\030\002 \001(\0132>.yandex.cloud.mdb.elasticse" +
+      "arch.v1.config.ElasticsearchConfig7\022V\n\016d" +
+      "efault_config\030\003 \001(\0132>.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.config.ElasticsearchConf" +
+      "ig7B\212\001\n,yandex.cloud.api.mdb.elasticsear" +
+      "ch.v1.configZZgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/elasticsearch" +
+      "/v1/config;elasticsearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

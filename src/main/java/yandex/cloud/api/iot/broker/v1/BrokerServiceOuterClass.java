@@ -21694,11 +21694,11 @@ public final class BrokerServiceOuterClass {
       "\n/yandex/cloud/iot/broker/v1/broker_serv" +
       "ice.proto\022\032yandex.cloud.iot.broker.v1\032\034g" +
       "oogle/api/annotations.proto\032 google/prot" +
-      "obuf/field_mask.proto\032\035yandex/cloud/vali" +
-      "dation.proto\032 yandex/cloud/api/operation" +
-      ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032\'yandex/cloud/iot/broker/v1/broke" +
-      "r.proto\"3\n\020GetBrokerRequest\022\037\n\tbroker_id" +
+      "obuf/field_mask.proto\032 yandex/cloud/api/" +
+      "operation.proto\032\'yandex/cloud/iot/broker" +
+      "/v1/broker.proto\032&yandex/cloud/operation" +
+      "/operation.proto\032\035yandex/cloud/validatio" +
+      "n.proto\"3\n\020GetBrokerRequest\022\037\n\tbroker_id" +
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"s\n\022ListBrokersReque" +
       "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
       "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
@@ -21737,106 +21737,106 @@ public final class BrokerServiceOuterClass {
       "ificatesRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\"e\n\036ListBrokerCertificatesRespon" +
       "se\022C\n\014certificates\030\001 \003(\0132-.yandex.cloud." +
-      "iot.broker.v1.BrokerCertificate\"X\n\033AddBr" +
+      "iot.broker.v1.BrokerCertificate\"^\n\033AddBr" +
       "okerCertificateRequest\022\037\n\tbroker_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(" +
-      "\t\"F\n\034AddBrokerCertificateMetadata\022\021\n\tbro" +
-      "ker_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n\036Del" +
-      "eteBrokerCertificateRequest\022\037\n\tbroker_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteBrokerCertifica" +
-      "teMetadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=" +
-      "\n\032ListBrokerPasswordsRequest\022\037\n\tbroker_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\033ListBrokerPassw" +
-      "ordsResponse\022=\n\tpasswords\030\001 \003(\0132*.yandex" +
-      ".cloud.iot.broker.v1.BrokerPassword\"W\n\030A" +
-      "ddBrokerPasswordRequest\022\037\n\tbroker_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB\010\212\3101\004" +
-      ">=14\"C\n\031AddBrokerPasswordMetadata\022\021\n\tbro" +
-      "ker_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a\n\033Del" +
-      "eteBrokerPasswordRequest\022\037\n\tbroker_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"b\n\034DeleteBrokerPasswordMeta" +
-      "data\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
-      "\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033Lis" +
-      "tBrokerOperationsRequest\022\027\n\tbroker_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
-      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
-      "r\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListBrokerOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t2\200\022\n\rBrokerService\022\203\001\n\003Get\022,." +
-      "yandex.cloud.iot.broker.v1.GetBrokerRequ" +
-      "est\032\".yandex.cloud.iot.broker.v1.Broker\"" +
-      "*\202\323\344\223\002$\022\"/iot-broker/v1/brokers/{broker_" +
-      "id}\022\207\001\n\004List\022..yandex.cloud.iot.broker.v" +
-      "1.ListBrokersRequest\032/.yandex.cloud.iot." +
-      "broker.v1.ListBrokersResponse\"\036\202\323\344\223\002\030\022\026/" +
-      "iot-broker/v1/brokers\022\241\001\n\006Create\022/.yande" +
-      "x.cloud.iot.broker.v1.CreateBrokerReques" +
-      "t\032!.yandex.cloud.operation.Operation\"C\202\323" +
-      "\344\223\002\033\"\026/iot-broker/v1/brokers:\001*\262\322*\036\n\024Cre" +
-      "ateBrokerMetadata\022\006Broker\022\255\001\n\006Update\022/.y" +
-      "andex.cloud.iot.broker.v1.UpdateBrokerRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"O\202\323\344\223\002\'2\"/iot-broker/v1/brokers/{broker" +
-      "_id}:\001*\262\322*\036\n\024UpdateBrokerMetadata\022\006Broke" +
-      "r\022\271\001\n\006Delete\022/.yandex.cloud.iot.broker.v" +
-      "1.DeleteBrokerRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"[\202\323\344\223\002$*\"/iot-broker/v1" +
-      "/brokers/{broker_id}\262\322*-\n\024DeleteBrokerMe" +
-      "tadata\022\025google.protobuf.Empty\022\302\001\n\020ListCe" +
-      "rtificates\0229.yandex.cloud.iot.broker.v1." +
-      "ListBrokerCertificatesRequest\032:.yandex.c" +
-      "loud.iot.broker.v1.ListBrokerCertificate" +
-      "sResponse\"7\202\323\344\223\0021\022//iot-broker/v1/broker" +
-      "s/{broker_id}/certificates\022\335\001\n\016AddCertif" +
-      "icate\0227.yandex.cloud.iot.broker.v1.AddBr" +
-      "okerCertificateRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"o\202\323\344\223\0024\"//iot-broker/v" +
-      "1/brokers/{broker_id}/certificates:\001*\262\322*" +
-      "1\n\034AddBrokerCertificateMetadata\022\021BrokerC" +
-      "ertificate\022\366\001\n\021DeleteCertificate\022:.yande" +
-      "x.cloud.iot.broker.v1.DeleteBrokerCertif" +
-      "icateRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\201\001\202\323\344\223\002?*=/iot-broker/v1/brokers" +
-      "/{broker_id}/certificates/{fingerprint}\262" +
-      "\322*8\n\037DeleteBrokerCertificateMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\266\001\n\rListPasswords\0226." +
-      "yandex.cloud.iot.broker.v1.ListBrokerPas" +
-      "swordsRequest\0327.yandex.cloud.iot.broker." +
-      "v1.ListBrokerPasswordsResponse\"4\202\323\344\223\002.\022," +
-      "/iot-broker/v1/brokers/{broker_id}/passw" +
-      "ords\022\316\001\n\013AddPassword\0224.yandex.cloud.iot." +
-      "broker.v1.AddBrokerPasswordRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"f\202\323\344\223\0021\",/" +
-      "iot-broker/v1/brokers/{broker_id}/passwo" +
-      "rds:\001*\262\322*+\n\031AddBrokerPasswordMetadata\022\016B" +
-      "rokerPassword\022\351\001\n\016DeletePassword\0227.yande" +
-      "x.cloud.iot.broker.v1.DeleteBrokerPasswo" +
-      "rdRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"{\202\323\344\223\002<*:/iot-broker/v1/brokers/{br" +
-      "oker_id}/passwords/{password_id}\262\322*5\n\034De" +
-      "leteBrokerPasswordMetadata\022\025google.proto" +
-      "buf.Empty\022\272\001\n\016ListOperations\0227.yandex.cl" +
-      "oud.iot.broker.v1.ListBrokerOperationsRe" +
-      "quest\0328.yandex.cloud.iot.broker.v1.ListB" +
-      "rokerOperationsResponse\"5\202\323\344\223\002/\022-/iot-br" +
-      "oker/v1/brokers/{broker_id}/operationsBg" +
-      "\n\036yandex.cloud.api.iot.broker.v1ZEgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/iot/broker/v1;brokerb\006proto3"
+      "\tJ\004\010\002\020\003\"F\n\034AddBrokerCertificateMetadata\022" +
+      "\021\n\tbroker_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"" +
+      "d\n\036DeleteBrokerCertificateRequest\022\037\n\tbro" +
+      "ker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprin" +
+      "t\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteBrokerCer" +
+      "tificateMetadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"=\n\032ListBrokerPasswordsRequest\022\037\n\tbr" +
+      "oker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\033ListBroke" +
+      "rPasswordsResponse\022=\n\tpasswords\030\001 \003(\0132*." +
+      "yandex.cloud.iot.broker.v1.BrokerPasswor" +
+      "d\"W\n\030AddBrokerPasswordRequest\022\037\n\tbroker_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\t" +
+      "B\010\212\3101\004>=14\"C\n\031AddBrokerPasswordMetadata\022" +
+      "\021\n\tbroker_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"" +
+      "a\n\033DeleteBrokerPasswordRequest\022\037\n\tbroker" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034DeleteBrokerPasswo" +
+      "rdMetadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220" +
+      "\001\n\033ListBrokerOperationsRequest\022\027\n\tbroker" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "0-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n" +
+      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListBrokerO" +
+      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
+      "yandex.cloud.operation.Operation\022\027\n\017next" +
+      "_page_token\030\002 \001(\t2\200\022\n\rBrokerService\022\203\001\n\003" +
+      "Get\022,.yandex.cloud.iot.broker.v1.GetBrok" +
+      "erRequest\032\".yandex.cloud.iot.broker.v1.B" +
+      "roker\"*\202\323\344\223\002$\022\"/iot-broker/v1/brokers/{b" +
+      "roker_id}\022\207\001\n\004List\022..yandex.cloud.iot.br" +
+      "oker.v1.ListBrokersRequest\032/.yandex.clou" +
+      "d.iot.broker.v1.ListBrokersResponse\"\036\202\323\344" +
+      "\223\002\030\022\026/iot-broker/v1/brokers\022\241\001\n\006Create\022/" +
+      ".yandex.cloud.iot.broker.v1.CreateBroker" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"C\202\323\344\223\002\033\"\026/iot-broker/v1/brokers:\001*\262\322*" +
+      "\036\n\024CreateBrokerMetadata\022\006Broker\022\255\001\n\006Upda" +
+      "te\022/.yandex.cloud.iot.broker.v1.UpdateBr" +
+      "okerRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"O\202\323\344\223\002\'2\"/iot-broker/v1/brokers/{" +
+      "broker_id}:\001*\262\322*\036\n\024UpdateBrokerMetadata\022" +
+      "\006Broker\022\271\001\n\006Delete\022/.yandex.cloud.iot.br" +
+      "oker.v1.DeleteBrokerRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"[\202\323\344\223\002$*\"/iot-bro" +
+      "ker/v1/brokers/{broker_id}\262\322*-\n\024DeleteBr" +
+      "okerMetadata\022\025google.protobuf.Empty\022\302\001\n\020" +
+      "ListCertificates\0229.yandex.cloud.iot.brok" +
+      "er.v1.ListBrokerCertificatesRequest\032:.ya" +
+      "ndex.cloud.iot.broker.v1.ListBrokerCerti" +
+      "ficatesResponse\"7\202\323\344\223\0021\022//iot-broker/v1/" +
+      "brokers/{broker_id}/certificates\022\335\001\n\016Add" +
+      "Certificate\0227.yandex.cloud.iot.broker.v1" +
+      ".AddBrokerCertificateRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\0024\"//iot-br" +
+      "oker/v1/brokers/{broker_id}/certificates" +
+      ":\001*\262\322*1\n\034AddBrokerCertificateMetadata\022\021B" +
+      "rokerCertificate\022\366\001\n\021DeleteCertificate\022:" +
+      ".yandex.cloud.iot.broker.v1.DeleteBroker" +
+      "CertificateRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\201\001\202\323\344\223\002?*=/iot-broker/v1/b" +
+      "rokers/{broker_id}/certificates/{fingerp" +
+      "rint}\262\322*8\n\037DeleteBrokerCertificateMetada" +
+      "ta\022\025google.protobuf.Empty\022\266\001\n\rListPasswo" +
+      "rds\0226.yandex.cloud.iot.broker.v1.ListBro" +
+      "kerPasswordsRequest\0327.yandex.cloud.iot.b" +
+      "roker.v1.ListBrokerPasswordsResponse\"4\202\323" +
+      "\344\223\002.\022,/iot-broker/v1/brokers/{broker_id}" +
+      "/passwords\022\316\001\n\013AddPassword\0224.yandex.clou" +
+      "d.iot.broker.v1.AddBrokerPasswordRequest" +
+      "\032!.yandex.cloud.operation.Operation\"f\202\323\344" +
+      "\223\0021\",/iot-broker/v1/brokers/{broker_id}/" +
+      "passwords:\001*\262\322*+\n\031AddBrokerPasswordMetad" +
+      "ata\022\016BrokerPassword\022\351\001\n\016DeletePassword\0227" +
+      ".yandex.cloud.iot.broker.v1.DeleteBroker" +
+      "PasswordRequest\032!.yandex.cloud.operation" +
+      ".Operation\"{\202\323\344\223\002<*:/iot-broker/v1/broke" +
+      "rs/{broker_id}/passwords/{password_id}\262\322" +
+      "*5\n\034DeleteBrokerPasswordMetadata\022\025google" +
+      ".protobuf.Empty\022\272\001\n\016ListOperations\0227.yan" +
+      "dex.cloud.iot.broker.v1.ListBrokerOperat" +
+      "ionsRequest\0328.yandex.cloud.iot.broker.v1" +
+      ".ListBrokerOperationsResponse\"5\202\323\344\223\002/\022-/" +
+      "iot-broker/v1/brokers/{broker_id}/operat" +
+      "ionsBg\n\036yandex.cloud.api.iot.broker.v1ZE" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/iot/broker/v1;brokerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iot.broker.v1.BrokerOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_iot_broker_v1_GetBrokerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -22008,10 +22008,10 @@ public final class BrokerServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iot.broker.v1.BrokerOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

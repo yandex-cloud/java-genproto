@@ -63193,183 +63193,183 @@ public final class InstanceServiceOuterClass {
       "temSpec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[" +
       "a-z][a-z0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001" +
       "(\tB\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED" +
-      "\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024Ne" +
+      "\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\365\001\n\024Ne" +
       "tworkInterfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022L\n\027primary_v4_address_spec\030\002" +
       " \001(\0132+.yandex.cloud.compute.v1.PrimaryAd" +
       "dressSpec\022L\n\027primary_v6_address_spec\030\003 \001" +
       "(\0132+.yandex.cloud.compute.v1.PrimaryAddr" +
-      "essSpec\022\032\n\022security_group_ids\030\006 \003(\t\"\256\001\n\022" +
-      "PrimaryAddressSpec\022\017\n\007address\030\001 \001(\t\022E\n\023o" +
-      "ne_to_one_nat_spec\030\002 \001(\0132(.yandex.cloud." +
-      "compute.v1.OneToOneNatSpec\022@\n\020dns_record" +
-      "_specs\030\003 \003(\0132&.yandex.cloud.compute.v1.D" +
-      "nsRecordSpec\"\234\001\n\017OneToOneNatSpec\0226\n\nip_v" +
-      "ersion\030\001 \001(\0162\".yandex.cloud.compute.v1.I" +
-      "pVersion\022\017\n\007address\030\002 \001(\t\022@\n\020dns_record_" +
-      "specs\030\003 \003(\0132&.yandex.cloud.compute.v1.Dn" +
-      "sRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001" +
-      "(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001" +
-      "(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInst" +
-      "anceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMetadata\022\023\n\013i" +
-      "nstance_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001" +
-      "(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"\344\002\n\027Re" +
-      "locateInstanceRequest\022!\n\013instance_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zone_id\030" +
-      "\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network_interface" +
-      "_specs\030\003 \003(\0132-.yandex.cloud.compute.v1.N" +
-      "etworkInterfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023boot_d" +
-      "isk_placement\030\004 \001(\0132,.yandex.cloud.compu" +
-      "te.v1.DiskPlacementPolicy\022U\n\031secondary_d" +
-      "isk_placements\030\005 \003(\01322.yandex.cloud.comp" +
-      "ute.v1.DiskPlacementPolicyChange\"d\n\030Relo" +
-      "cateInstanceMetadata\022\023\n\013instance_id\030\001 \001(" +
-      "\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023destination" +
-      "_zone_id\030\003 \001(\t\"0\n\031GuestStopInstanceMetad" +
-      "ata\022\023\n\013instance_id\030\001 \001(\t\".\n\027PreemptInsta" +
-      "nceMetadata\022\023\n\013instance_id\030\001 \001(\t\",\n\025Cras" +
-      "hInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t*#" +
-      "\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\237*\n\017" +
-      "InstanceService\022\202\001\n\003Get\022+.yandex.cloud.c" +
-      "ompute.v1.GetInstanceRequest\032!.yandex.cl" +
-      "oud.compute.v1.Instance\"+\202\323\344\223\002%\022#/comput" +
-      "e/v1/instances/{instance_id}\022\204\001\n\004List\022-." +
-      "yandex.cloud.compute.v1.ListInstancesReq" +
-      "uest\032..yandex.cloud.compute.v1.ListInsta" +
-      "ncesResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/instan" +
-      "ces\022\243\001\n\006Create\022..yandex.cloud.compute.v1" +
-      ".CreateInstanceRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"F\202\323\344\223\002\032\"\025/compute/v1/i" +
-      "nstances:\001*\262\322*\"\n\026CreateInstanceMetadata\022" +
-      "\010Instance\022\261\001\n\006Update\022..yandex.cloud.comp" +
-      "ute.v1.UpdateInstanceRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"T\202\323\344\223\002(2#/comput" +
-      "e/v1/instances/{instance_id}:\001*\262\322*\"\n\026Upd" +
-      "ateInstanceMetadata\022\010Instance\022\273\001\n\006Delete" +
-      "\022..yandex.cloud.compute.v1.DeleteInstanc" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"^\202\323\344\223\002%*#/compute/v1/instances/{inst" +
-      "ance_id}\262\322*/\n\026DeleteInstanceMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\330\001\n\016UpdateMetadata\0226" +
-      ".yandex.cloud.compute.v1.UpdateInstanceM" +
-      "etadataRequest\032!.yandex.cloud.operation." +
-      "Operation\"k\202\323\344\223\0027\"2/compute/v1/instances" +
-      "/{instance_id}/updateMetadata:\001*\262\322**\n\036Up" +
-      "dateInstanceMetadataMetadata\022\010Instance\022\316" +
-      "\001\n\023GetSerialPortOutput\022;.yandex.cloud.co" +
-      "mpute.v1.GetInstanceSerialPortOutputRequ" +
-      "est\032<.yandex.cloud.compute.v1.GetInstanc" +
-      "eSerialPortOutputResponse\"<\202\323\344\223\0026\0224/comp" +
-      "ute/v1/instances/{instance_id}:serialPor" +
-      "tOutput\022\272\001\n\004Stop\022,.yandex.cloud.compute." +
-      "v1.StopInstanceRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"a\202\323\344\223\002*\"(/compute/v1/i" +
-      "nstances/{instance_id}:stop\262\322*-\n\024StopIns" +
-      "tanceMetadata\022\025google.protobuf.Empty\022\261\001\n" +
-      "\005Start\022-.yandex.cloud.compute.v1.StartIn" +
-      "stanceRequest\032!.yandex.cloud.operation.O" +
-      "peration\"V\202\323\344\223\002+\")/compute/v1/instances/" +
-      "{instance_id}:start\262\322*!\n\025StartInstanceMe" +
-      "tadata\022\010Instance\022\306\001\n\007Restart\022/.yandex.cl" +
-      "oud.compute.v1.RestartInstanceRequest\032!." +
-      "yandex.cloud.operation.Operation\"g\202\323\344\223\002-" +
-      "\"+/compute/v1/instances/{instance_id}:re" +
-      "start\262\322*0\n\027RestartInstanceMetadata\022\025goog" +
-      "le.protobuf.Empty\022\310\001\n\nAttachDisk\0222.yande" +
-      "x.cloud.compute.v1.AttachInstanceDiskReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "c\202\323\344\223\0023\"./compute/v1/instances/{instance" +
-      "_id}:attachDisk:\001*\262\322*&\n\032AttachInstanceDi" +
-      "skMetadata\022\010Instance\022\310\001\n\nDetachDisk\0222.ya" +
-      "ndex.cloud.compute.v1.DetachInstanceDisk" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"c\202\323\344\223\0023\"./compute/v1/instances/{insta" +
-      "nce_id}:detachDisk:\001*\262\322*&\n\032DetachInstanc" +
-      "eDiskMetadata\022\010Instance\022\340\001\n\020AttachFilesy" +
-      "stem\0228.yandex.cloud.compute.v1.AttachIns" +
-      "tanceFilesystemRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"o\202\323\344\223\0029\"4/compute/v1/i" +
-      "nstances/{instance_id}:attachFilesystem:" +
-      "\001*\262\322*,\n AttachInstanceFilesystemMetadata" +
-      "\022\010Instance\022\340\001\n\020DetachFilesystem\0228.yandex" +
-      ".cloud.compute.v1.DetachInstanceFilesyst" +
-      "emRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"o\202\323\344\223\0029\"4/compute/v1/instances/{ins" +
-      "tance_id}:detachFilesystem:\001*\262\322*,\n Detac" +
-      "hInstanceFilesystemMetadata\022\010Instance\022\370\001" +
-      "\n\026AttachNetworkInterface\022>.yandex.cloud." +
-      "compute.v1.AttachInstanceNetworkInterfac" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"{\202\323\344\223\002?\":/compute/v1/instances/{inst" +
-      "ance_id}:attachNetworkInterface:\001*\262\322*2\n&" +
-      "AttachInstanceNetworkInterfaceMetadata\022\010" +
-      "Instance\022\370\001\n\026DetachNetworkInterface\022>.ya" +
-      "ndex.cloud.compute.v1.DetachInstanceNetw" +
-      "orkInterfaceRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"{\202\323\344\223\002?\":/compute/v1/inst" +
-      "ances/{instance_id}:detachNetworkInterfa" +
-      "ce:\001*\262\322*2\n&DetachInstanceNetworkInterfac" +
-      "eMetadata\022\010Instance\022\330\001\n\016AddOneToOneNat\0226" +
-      ".yandex.cloud.compute.v1.AddInstanceOneT" +
-      "oOneNatRequest\032!.yandex.cloud.operation." +
-      "Operation\"k\202\323\344\223\0027\"2/compute/v1/instances" +
-      "/{instance_id}/addOneToOneNat:\001*\262\322**\n\036Ad" +
-      "dInstanceOneToOneNatMetadata\022\010Instance\022\344" +
-      "\001\n\021RemoveOneToOneNat\0229.yandex.cloud.comp" +
-      "ute.v1.RemoveInstanceOneToOneNatRequest\032" +
-      "!.yandex.cloud.operation.Operation\"q\202\323\344\223" +
-      "\002:\"5/compute/v1/instances/{instance_id}/" +
-      "removeOneToOneNat:\001*\262\322*-\n!RemoveInstance" +
-      "OneToOneNatMetadata\022\010Instance\022\370\001\n\026Update" +
-      "NetworkInterface\022>.yandex.cloud.compute." +
-      "v1.UpdateInstanceNetworkInterfaceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"{\202\323\344" +
-      "\223\002?2:/compute/v1/instances/{instance_id}" +
-      "/updateNetworkInterface:\001*\262\322*2\n&UpdateIn" +
-      "stanceNetworkInterfaceMetadata\022\010Instance" +
-      "\022\271\001\n\016ListOperations\0226.yandex.cloud.compu" +
-      "te.v1.ListInstanceOperationsRequest\0327.ya" +
-      "ndex.cloud.compute.v1.ListInstanceOperat" +
-      "ionsResponse\"6\202\323\344\223\0020\022./compute/v1/instan" +
-      "ces/{instance_id}/operations\022\260\001\n\004Move\022,." +
-      "yandex.cloud.compute.v1.MoveInstanceRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"W" +
-      "\202\323\344\223\002-\"(/compute/v1/instances/{instance_" +
-      "id}:move:\001*\262\322* \n\024MoveInstanceMetadata\022\010I" +
-      "nstance\022\300\001\n\010Relocate\0220.yandex.cloud.comp" +
-      "ute.v1.RelocateInstanceRequest\032!.yandex." +
-      "cloud.operation.Operation\"_\202\323\344\223\0021\",/comp" +
-      "ute/v1/instances/{instance_id}:relocate:" +
-      "\001*\262\322*$\n\030RelocateInstanceMetadata\022\010Instan" +
-      "ce\022\216\002\n\030SimulateMaintenanceEvent\022@.yandex" +
-      ".cloud.compute.v1.SimulateInstanceMainte" +
-      "nanceEventRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\214\001\202\323\344\223\002A\"</compute/v1/insta" +
-      "nces/{instance_id}:simulateMaintenanceEv" +
-      "ent:\001*\262\322*A\n(SimulateInstanceMaintenanceE" +
-      "ventMetadata\022\025google.protobuf.Empty\022\265\001\n\022" +
-      "ListAccessBindings\022..yandex.cloud.access" +
-      ".ListAccessBindingsRequest\032/.yandex.clou" +
-      "d.access.ListAccessBindingsResponse\">\202\323\344" +
-      "\223\0028\0226/compute/v1/instances/{resource_id}" +
-      ":listAccessBindings\022\364\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\214\001\202\323\344\223\002:\"5/compute/v1/instances/{res" +
-      "ource_id}:setAccessBindings:\001*\262\322*H\n acce" +
-      "ss.SetAccessBindingsMetadata\022$access.Acc" +
-      "essBindingsOperationResult\022\200\002\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\222\001\202\323\344\223\002=\"8/compute/v1/i" +
-      "nstances/{resource_id}:updateAccessBindi" +
-      "ngs:\001*\262\322*K\n#access.UpdateAccessBindingsM" +
-      "etadata\022$access.AccessBindingsOperationR" +
-      "esultBb\n\033yandex.cloud.api.compute.v1ZCgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/compute/v1;computeb\006proto3"
+      "essSpec\022\032\n\022security_group_ids\030\006 \003(\tJ\004\010\004\020" +
+      "\006\"\256\001\n\022PrimaryAddressSpec\022\017\n\007address\030\001 \001(" +
+      "\t\022E\n\023one_to_one_nat_spec\030\002 \001(\0132(.yandex." +
+      "cloud.compute.v1.OneToOneNatSpec\022@\n\020dns_" +
+      "record_specs\030\003 \003(\0132&.yandex.cloud.comput" +
+      "e.v1.DnsRecordSpec\"\234\001\n\017OneToOneNatSpec\0226" +
+      "\n\nip_version\030\001 \001(\0162\".yandex.cloud.comput" +
+      "e.v1.IpVersion\022\017\n\007address\030\002 \001(\t\022@\n\020dns_r" +
+      "ecord_specs\030\003 \003(\0132&.yandex.cloud.compute" +
+      ".v1.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fq" +
+      "dn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003t" +
+      "tl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e\n\023Mo" +
+      "veInstanceRequest\022!\n\013instance_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"d\n\024MoveInstanceMetadat" +
+      "a\022\023\n\013instance_id\030\001 \001(\t\022\030\n\020source_folder_" +
+      "id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"" +
+      "\344\002\n\027RelocateInstanceRequest\022!\n\013instance_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zo" +
+      "ne_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network_int" +
+      "erface_specs\030\003 \003(\0132-.yandex.cloud.comput" +
+      "e.v1.NetworkInterfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023" +
+      "boot_disk_placement\030\004 \001(\0132,.yandex.cloud" +
+      ".compute.v1.DiskPlacementPolicy\022U\n\031secon" +
+      "dary_disk_placements\030\005 \003(\01322.yandex.clou" +
+      "d.compute.v1.DiskPlacementPolicyChange\"d" +
+      "\n\030RelocateInstanceMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023desti" +
+      "nation_zone_id\030\003 \001(\t\"0\n\031GuestStopInstanc" +
+      "eMetadata\022\023\n\013instance_id\030\001 \001(\t\".\n\027Preemp" +
+      "tInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"," +
+      "\n\025CrashInstanceMetadata\022\023\n\013instance_id\030\001" +
+      " \001(\t*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020" +
+      "\0012\237*\n\017InstanceService\022\202\001\n\003Get\022+.yandex.c" +
+      "loud.compute.v1.GetInstanceRequest\032!.yan" +
+      "dex.cloud.compute.v1.Instance\"+\202\323\344\223\002%\022#/" +
+      "compute/v1/instances/{instance_id}\022\204\001\n\004L" +
+      "ist\022-.yandex.cloud.compute.v1.ListInstan" +
+      "cesRequest\032..yandex.cloud.compute.v1.Lis" +
+      "tInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/" +
+      "instances\022\243\001\n\006Create\022..yandex.cloud.comp" +
+      "ute.v1.CreateInstanceRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"F\202\323\344\223\002\032\"\025/comput" +
+      "e/v1/instances:\001*\262\322*\"\n\026CreateInstanceMet" +
+      "adata\022\010Instance\022\261\001\n\006Update\022..yandex.clou" +
+      "d.compute.v1.UpdateInstanceRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"T\202\323\344\223\002(2#/" +
+      "compute/v1/instances/{instance_id}:\001*\262\322*" +
+      "\"\n\026UpdateInstanceMetadata\022\010Instance\022\273\001\n\006" +
+      "Delete\022..yandex.cloud.compute.v1.DeleteI" +
+      "nstanceRequest\032!.yandex.cloud.operation." +
+      "Operation\"^\202\323\344\223\002%*#/compute/v1/instances" +
+      "/{instance_id}\262\322*/\n\026DeleteInstanceMetada" +
+      "ta\022\025google.protobuf.Empty\022\330\001\n\016UpdateMeta" +
+      "data\0226.yandex.cloud.compute.v1.UpdateIns" +
+      "tanceMetadataRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"k\202\323\344\223\0027\"2/compute/v1/ins" +
+      "tances/{instance_id}/updateMetadata:\001*\262\322" +
+      "**\n\036UpdateInstanceMetadataMetadata\022\010Inst" +
+      "ance\022\316\001\n\023GetSerialPortOutput\022;.yandex.cl" +
+      "oud.compute.v1.GetInstanceSerialPortOutp" +
+      "utRequest\032<.yandex.cloud.compute.v1.GetI" +
+      "nstanceSerialPortOutputResponse\"<\202\323\344\223\0026\022" +
+      "4/compute/v1/instances/{instance_id}:ser" +
+      "ialPortOutput\022\272\001\n\004Stop\022,.yandex.cloud.co" +
+      "mpute.v1.StopInstanceRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"a\202\323\344\223\002*\"(/comput" +
+      "e/v1/instances/{instance_id}:stop\262\322*-\n\024S" +
+      "topInstanceMetadata\022\025google.protobuf.Emp" +
+      "ty\022\261\001\n\005Start\022-.yandex.cloud.compute.v1.S" +
+      "tartInstanceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"V\202\323\344\223\002+\")/compute/v1/inst" +
+      "ances/{instance_id}:start\262\322*!\n\025StartInst" +
+      "anceMetadata\022\010Instance\022\306\001\n\007Restart\022/.yan" +
+      "dex.cloud.compute.v1.RestartInstanceRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"g" +
+      "\202\323\344\223\002-\"+/compute/v1/instances/{instance_" +
+      "id}:restart\262\322*0\n\027RestartInstanceMetadata" +
+      "\022\025google.protobuf.Empty\022\310\001\n\nAttachDisk\0222" +
+      ".yandex.cloud.compute.v1.AttachInstanceD" +
+      "iskRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"c\202\323\344\223\0023\"./compute/v1/instances/{in" +
+      "stance_id}:attachDisk:\001*\262\322*&\n\032AttachInst" +
+      "anceDiskMetadata\022\010Instance\022\310\001\n\nDetachDis" +
+      "k\0222.yandex.cloud.compute.v1.DetachInstan" +
+      "ceDiskRequest\032!.yandex.cloud.operation.O" +
+      "peration\"c\202\323\344\223\0023\"./compute/v1/instances/" +
+      "{instance_id}:detachDisk:\001*\262\322*&\n\032DetachI" +
+      "nstanceDiskMetadata\022\010Instance\022\340\001\n\020Attach" +
+      "Filesystem\0228.yandex.cloud.compute.v1.Att" +
+      "achInstanceFilesystemRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\0029\"4/comput" +
+      "e/v1/instances/{instance_id}:attachFiles" +
+      "ystem:\001*\262\322*,\n AttachInstanceFilesystemMe" +
+      "tadata\022\010Instance\022\340\001\n\020DetachFilesystem\0228." +
+      "yandex.cloud.compute.v1.DetachInstanceFi" +
+      "lesystemRequest\032!.yandex.cloud.operation" +
+      ".Operation\"o\202\323\344\223\0029\"4/compute/v1/instance" +
+      "s/{instance_id}:detachFilesystem:\001*\262\322*,\n" +
+      " DetachInstanceFilesystemMetadata\022\010Insta" +
+      "nce\022\370\001\n\026AttachNetworkInterface\022>.yandex." +
+      "cloud.compute.v1.AttachInstanceNetworkIn" +
+      "terfaceRequest\032!.yandex.cloud.operation." +
+      "Operation\"{\202\323\344\223\002?\":/compute/v1/instances" +
+      "/{instance_id}:attachNetworkInterface:\001*" +
+      "\262\322*2\n&AttachInstanceNetworkInterfaceMeta" +
+      "data\022\010Instance\022\370\001\n\026DetachNetworkInterfac" +
+      "e\022>.yandex.cloud.compute.v1.DetachInstan" +
+      "ceNetworkInterfaceRequest\032!.yandex.cloud" +
+      ".operation.Operation\"{\202\323\344\223\002?\":/compute/v" +
+      "1/instances/{instance_id}:detachNetworkI" +
+      "nterface:\001*\262\322*2\n&DetachInstanceNetworkIn" +
+      "terfaceMetadata\022\010Instance\022\330\001\n\016AddOneToOn" +
+      "eNat\0226.yandex.cloud.compute.v1.AddInstan" +
+      "ceOneToOneNatRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"k\202\323\344\223\0027\"2/compute/v1/ins" +
+      "tances/{instance_id}/addOneToOneNat:\001*\262\322" +
+      "**\n\036AddInstanceOneToOneNatMetadata\022\010Inst" +
+      "ance\022\344\001\n\021RemoveOneToOneNat\0229.yandex.clou" +
+      "d.compute.v1.RemoveInstanceOneToOneNatRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"q\202\323\344\223\002:\"5/compute/v1/instances/{instanc" +
+      "e_id}/removeOneToOneNat:\001*\262\322*-\n!RemoveIn" +
+      "stanceOneToOneNatMetadata\022\010Instance\022\370\001\n\026" +
+      "UpdateNetworkInterface\022>.yandex.cloud.co" +
+      "mpute.v1.UpdateInstanceNetworkInterfaceR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"{\202\323\344\223\002?2:/compute/v1/instances/{instan" +
+      "ce_id}/updateNetworkInterface:\001*\262\322*2\n&Up" +
+      "dateInstanceNetworkInterfaceMetadata\022\010In" +
+      "stance\022\271\001\n\016ListOperations\0226.yandex.cloud" +
+      ".compute.v1.ListInstanceOperationsReques" +
+      "t\0327.yandex.cloud.compute.v1.ListInstance" +
+      "OperationsResponse\"6\202\323\344\223\0020\022./compute/v1/" +
+      "instances/{instance_id}/operations\022\260\001\n\004M" +
+      "ove\022,.yandex.cloud.compute.v1.MoveInstan" +
+      "ceRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"W\202\323\344\223\002-\"(/compute/v1/instances/{ins" +
+      "tance_id}:move:\001*\262\322* \n\024MoveInstanceMetad" +
+      "ata\022\010Instance\022\300\001\n\010Relocate\0220.yandex.clou" +
+      "d.compute.v1.RelocateInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"_\202\323\344\223\0021\"" +
+      ",/compute/v1/instances/{instance_id}:rel" +
+      "ocate:\001*\262\322*$\n\030RelocateInstanceMetadata\022\010" +
+      "Instance\022\216\002\n\030SimulateMaintenanceEvent\022@." +
+      "yandex.cloud.compute.v1.SimulateInstance" +
+      "MaintenanceEventRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\214\001\202\323\344\223\002A\"</compute/v1" +
+      "/instances/{instance_id}:simulateMainten" +
+      "anceEvent:\001*\262\322*A\n(SimulateInstanceMainte" +
+      "nanceEventMetadata\022\025google.protobuf.Empt" +
+      "y\022\265\001\n\022ListAccessBindings\022..yandex.cloud." +
+      "access.ListAccessBindingsRequest\032/.yande" +
+      "x.cloud.access.ListAccessBindingsRespons" +
+      "e\">\202\323\344\223\0028\0226/compute/v1/instances/{resour" +
+      "ce_id}:listAccessBindings\022\364\001\n\021SetAccessB" +
+      "indings\022-.yandex.cloud.access.SetAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\214\001\202\323\344\223\002:\"5/compute/v1/instance" +
+      "s/{resource_id}:setAccessBindings:\001*\262\322*H" +
+      "\n access.SetAccessBindingsMetadata\022$acce" +
+      "ss.AccessBindingsOperationResult\022\200\002\n\024Upd" +
+      "ateAccessBindings\0220.yandex.cloud.access." +
+      "UpdateAccessBindingsRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\222\001\202\323\344\223\002=\"8/comput" +
+      "e/v1/instances/{resource_id}:updateAcces" +
+      "sBindings:\001*\262\322*K\n#access.UpdateAccessBin" +
+      "dingsMetadata\022$access.AccessBindingsOper" +
+      "ationResultBb\n\033yandex.cloud.api.compute." +
+      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

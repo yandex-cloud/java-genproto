@@ -1083,12 +1083,12 @@ public final class ThumbnailOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/video/v1/thumbnail.proto\022" +
       "\025yandex.cloud.video.v1\032\037google/protobuf/" +
-      "timestamp.proto\"[\n\tThumbnail\022\n\n\002id\030\001 \001(\t" +
+      "timestamp.proto\"a\n\tThumbnail\022\n\n\002id\030\001 \001(\t" +
       "\022\022\n\nchannel_id\030\002 \001(\t\022.\n\ncreated_at\030d \001(\013" +
-      "2\032.google.protobuf.TimestampB\\\n\031yandex.c" +
-      "loud.api.video.v1Z?github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/video/v1;vid" +
-      "eob\006proto3"
+      "2\032.google.protobuf.TimestampJ\004\010\003\020dB\\\n\031ya" +
+      "ndex.cloud.api.video.v1Z?github.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/video/" +
+      "v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

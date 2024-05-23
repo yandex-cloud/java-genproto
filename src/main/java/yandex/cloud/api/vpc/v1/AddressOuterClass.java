@@ -6304,7 +6304,7 @@ public final class AddressOuterClass {
       "\n!yandex/cloud/vpc/v1/address.proto\022\023yan" +
       "dex.cloud.vpc.v1\032\037google/protobuf/timest" +
       "amp.proto\032\035yandex/cloud/validation.proto" +
-      "\"\226\005\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\"\234\005\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
       "\030\005 \001(\t\0228\n\006labels\030\006 \003(\0132(.yandex.cloud.vp" +
@@ -6320,17 +6320,17 @@ public final class AddressOuterClass {
       "\002 \001(\t:\0028\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
       "\014\n\010INTERNAL\020\001\022\014\n\010EXTERNAL\020\002\";\n\tIpVersion" +
       "\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010" +
-      "\n\004IPV6\020\002B\017\n\007address\022\004\300\3011\001\"w\n\023ExternalIpv" +
-      "4Address\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_id\030\002 \001" +
-      "(\t\022>\n\014requirements\030\003 \001(\0132(.yandex.cloud." +
-      "vpc.v1.AddressRequirements\"Y\n\023AddressReq" +
-      "uirements\022 \n\030ddos_protection_provider\030\001 " +
-      "\001(\t\022 \n\030outgoing_smtp_capability\030\002 \001(\t\"H\n" +
-      "\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_id\030" +
-      "\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010BV\n\027yande" +
-      "x.cloud.api.vpc.v1Z;github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/vpc/v1;vpcb" +
-      "\006proto3"
+      "\n\004IPV6\020\002B\017\n\007address\022\004\300\3011\001J\004\010\010\020\017\"w\n\023Exter" +
+      "nalIpv4Address\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_" +
+      "id\030\002 \001(\t\022>\n\014requirements\030\003 \001(\0132(.yandex." +
+      "cloud.vpc.v1.AddressRequirements\"Y\n\023Addr" +
+      "essRequirements\022 \n\030ddos_protection_provi" +
+      "der\030\001 \001(\t\022 \n\030outgoing_smtp_capability\030\002 " +
+      "\001(\t\"H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zo" +
+      "ne_id\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010BV\n" +
+      "\027yandex.cloud.api.vpc.v1Z;github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/vpc/v" +
+      "1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

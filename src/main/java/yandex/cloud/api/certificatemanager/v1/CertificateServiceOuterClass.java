@@ -16433,154 +16433,154 @@ public final class CertificateServiceOuterClass {
       "tificate_service.proto\022\"yandex.cloud.cer" +
       "tificatemanager.v1\032\034google/api/annotatio" +
       "ns.proto\032 google/protobuf/field_mask.pro" +
-      "to\032 yandex/cloud/api/operation.proto\032&ya" +
-      "ndex/cloud/operation/operation.proto\032\035ya" +
-      "ndex/cloud/validation.proto\0324yandex/clou" +
-      "d/certificatemanager/v1/certificate.prot" +
-      "o\032 yandex/cloud/access/access.proto\"\200\001\n\025" +
+      "to\032 yandex/cloud/access/access.proto\032 ya" +
+      "ndex/cloud/api/operation.proto\0324yandex/c" +
+      "loud/certificatemanager/v1/certificate.p" +
+      "roto\032&yandex/cloud/operation/operation.p" +
+      "roto\032\035yandex/cloud/validation.proto\"\200\001\n\025" +
       "GetCertificateRequest\022$\n\016certificate_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\004view\030\002 \001(\01623.yand" +
       "ex.cloud.certificatemanager.v1.Certifica" +
-      "teView\"\273\001\n\027ListCertificatesRequest\022\037\n\tfo" +
+      "teView\"\301\001\n\027ListCertificatesRequest\022\037\n\tfo" +
       "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
       "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
       "\212\3101\005<=100\022A\n\004view\030\006 \001(\01623.yandex.cloud.c" +
-      "ertificatemanager.v1.CertificateView\"z\n\030" +
-      "ListCertificatesResponse\022E\n\014certificates" +
-      "\030\001 \003(\0132/.yandex.cloud.certificatemanager" +
-      ".v1.Certificate\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"y\n\023ListVersionsRequest\022$\n\016certificate_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\"n\n\024ListVersionsResponse\022=\n\010versions\030" +
-      "\001 \003(\0132+.yandex.cloud.certificatemanager." +
-      "v1.Version\022\027\n\017next_page_token\030\002 \001(\t\"\337\003\n\030" +
-      "CreateCertificateRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013descrip" +
-      "tion\030\003 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\004 \003(\0132" +
-      "H.yandex.cloud.certificatemanager.v1.Cre" +
-      "ateCertificateRequest.LabelsEntryB?\202\3101\004<" +
-      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
-      "\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030\005 \001(\tB" +
-      "\013\212\3101\007<=32768\022\034\n\005chain\030\006 \001(\tB\r\212\3101\t<=20971" +
-      "52\022%\n\013private_key\030\007 \001(\tB\020\350\3071\001\212\3101\0101-52428" +
-      "8\022\033\n\023deletion_protection\030\010 \001(\010\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n" +
-      "\031CreateCertificateMetadata\022\026\n\016certificat" +
-      "e_id\030\001 \001(\t\"\221\004\n\030UpdateCertificateRequest\022" +
-      "$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB" +
-      "\n\212\3101\006<=1024\022\231\001\n\006labels\030\005 \003(\0132H.yandex.cl" +
-      "oud.certificatemanager.v1.UpdateCertific" +
-      "ateRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63" +
-      "\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0" +
-      "-9a-z]*\022 \n\013certificate\030\006 \001(\tB\013\212\3101\007<=3276" +
-      "8\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=2097152\022!\n\013priva" +
-      "te_key\030\010 \001(\tB\014\212\3101\010<=524288\022\033\n\023deletion_p" +
-      "rotection\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\031UpdateCertific" +
-      "ateMetadata\022\026\n\016certificate_id\030\001 \001(\t\"@\n\030D" +
-      "eleteCertificateRequest\022$\n\016certificate_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"3\n\031DeleteCertifica" +
-      "teMetadata\022\026\n\016certificate_id\030\001 \001(\t\"\334\003\n\034R" +
-      "equestNewCertificateRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 " +
-      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013desc" +
-      "ription\030\003 \001(\tB\n\212\3101\006<=1024\022\235\001\n\006labels\030\004 \003" +
-      "(\0132L.yandex.cloud.certificatemanager.v1." +
-      "RequestNewCertificateRequest.LabelsEntry" +
-      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<" +
-      "=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\017\n\007domains\030\005 \003" +
-      "(\t\022I\n\016challenge_type\030\006 \001(\01621.yandex.clou" +
-      "d.certificatemanager.v1.ChallengeType\022\033\n" +
-      "\023deletion_protection\030\007 \001(\010\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\035Req" +
-      "uestNewCertificateMetadata\022\026\n\016certificat" +
-      "e_id\030\001 \001(\t\"\206\001\n ListCertificateOperations" +
-      "Request\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!ListCerti" +
-      "ficateOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030\002 \001(\t*&\n\017CertificateV" +
-      "iew\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\312\022\n\022Certificate" +
-      "Service\022\260\001\n\003Get\0229.yandex.cloud.certifica" +
-      "temanager.v1.GetCertificateRequest\032/.yan" +
-      "dex.cloud.certificatemanager.v1.Certific" +
-      "ate\"=\202\323\344\223\0027\0225/certificate-manager/v1/cer" +
-      "tificates/{certificate_id}\022\257\001\n\004List\022;.ya" +
-      "ndex.cloud.certificatemanager.v1.ListCer" +
-      "tificatesRequest\032<.yandex.cloud.certific" +
-      "atemanager.v1.ListCertificatesResponse\"," +
-      "\202\323\344\223\002&\022$/certificate-manager/v1/certific" +
-      "ates\022\311\001\n\014ListVersions\0227.yandex.cloud.cer" +
-      "tificatemanager.v1.ListVersionsRequest\0328" +
-      ".yandex.cloud.certificatemanager.v1.List" +
-      "VersionsResponse\"F\202\323\344\223\002@\022>/certificate-m" +
-      "anager/v1/certificates/{certificate_id}/" +
-      "versions\022\306\001\n\006Create\022<.yandex.cloud.certi" +
-      "ficatemanager.v1.CreateCertificateReques" +
-      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
-      "\344\223\002)\"$/certificate-manager/v1/certificat" +
-      "es:\001*\262\322*(\n\031CreateCertificateMetadata\022\013Ce" +
-      "rtificate\022\327\001\n\006Update\022<.yandex.cloud.cert" +
-      "ificatemanager.v1.UpdateCertificateReque" +
-      "st\032!.yandex.cloud.operation.Operation\"l\202" +
-      "\323\344\223\002:25/certificate-manager/v1/certifica" +
-      "tes/{certificate_id}:\001*\262\322*(\n\031UpdateCerti" +
-      "ficateMetadata\022\013Certificate\022\324\001\n\006Delete\022<" +
-      ".yandex.cloud.certificatemanager.v1.Dele" +
-      "teCertificateRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"i\202\323\344\223\0027*5/certificate-ma" +
-      "nager/v1/certificates/{certificate_id}\262\322" +
-      "*(\n\031DeleteCertificateMetadata\022\013Certifica" +
-      "te\022\335\001\n\nRequestNew\022@.yandex.cloud.certifi" +
-      "catemanager.v1.RequestNewCertificateRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"j" +
-      "\202\323\344\223\0024\"//certificate-manager/v1/certific" +
-      "ates/requestNew:\001*\262\322*,\n\035RequestNewCertif" +
-      "icateMetadata\022\013Certificate\022\347\001\n\016ListOpera" +
-      "tions\022D.yandex.cloud.certificatemanager." +
-      "v1.ListCertificateOperationsRequest\032E.ya" +
-      "ndex.cloud.certificatemanager.v1.ListCer" +
-      "tificateOperationsResponse\"H\202\323\344\223\002B\022@/cer" +
-      "tificate-manager/v1/certificates/{certif" +
-      "icate_id}/operations\022\304\001\n\022ListAccessBindi" +
-      "ngs\022..yandex.cloud.access.ListAccessBind" +
-      "ingsRequest\032/.yandex.cloud.access.ListAc" +
-      "cessBindingsResponse\"M\202\323\344\223\002G\022E/certifica" +
-      "te-manager/v1/certificates/{resource_id}" +
-      ":listAccessBindings\022\364\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\214\001\202\323\344\223\002I\"D/certificate-manager/v1/ce" +
-      "rtificates/{resource_id}:setAccessBindin" +
-      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
-      "ata\022\025google.protobuf.Empty\022\200\002\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\222\001\202\323\344\223\002L\"G/certificate-" +
-      "manager/v1/certificates/{resource_id}:up" +
-      "dateAccessBindings:\001*\262\322*<\n#access.Update" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "EmptyB\203\001\n&yandex.cloud.api.certificatema" +
-      "nager.v1ZYgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/certificatemanager/v1" +
-      ";certificatemanagerb\006proto3"
+      "ertificatemanager.v1.CertificateViewJ\004\010\004" +
+      "\020\006\"z\n\030ListCertificatesResponse\022E\n\014certif" +
+      "icates\030\001 \003(\0132/.yandex.cloud.certificatem" +
+      "anager.v1.Certificate\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"y\n\023ListVersionsRequest\022$\n\016certifi" +
+      "cate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"n\n\024ListVersionsResponse\022=\n\010ver" +
+      "sions\030\001 \003(\0132+.yandex.cloud.certificatema" +
+      "nager.v1.Version\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\337\003\n\030CreateCertificateRequest\022\037\n\tfolder" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362" +
+      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013d" +
+      "escription\030\003 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030" +
+      "\004 \003(\0132H.yandex.cloud.certificatemanager." +
+      "v1.CreateCertificateRequest.LabelsEntryB" +
+      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=" +
+      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\013certificate\030" +
+      "\005 \001(\tB\013\212\3101\007<=32768\022\034\n\005chain\030\006 \001(\tB\r\212\3101\t<" +
+      "=2097152\022%\n\013private_key\030\007 \001(\tB\020\350\3071\001\212\3101\0101" +
+      "-524288\022\033\n\023deletion_protection\030\010 \001(\010\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"3\n\031CreateCertificateMetadata\022\026\n\016cert" +
+      "ificate_id\030\001 \001(\t\"\221\004\n\030UpdateCertificateRe" +
+      "quest\022$\n\016certificate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
+      "uf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([" +
+      "-a-z0-9]{0,61}[a-z0-9])?\022\037\n\013description\030" +
+      "\004 \001(\tB\n\212\3101\006<=1024\022\231\001\n\006labels\030\005 \003(\0132H.yan" +
+      "dex.cloud.certificatemanager.v1.UpdateCe" +
+      "rtificateRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
+      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-" +
+      "z][-_0-9a-z]*\022 \n\013certificate\030\006 \001(\tB\013\212\3101\007" +
+      "<=32768\022\034\n\005chain\030\007 \001(\tB\r\212\3101\t<=2097152\022!\n" +
+      "\013private_key\030\010 \001(\tB\014\212\3101\010<=524288\022\033\n\023dele" +
+      "tion_protection\030\t \001(\010\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"3\n\031UpdateCe" +
+      "rtificateMetadata\022\026\n\016certificate_id\030\001 \001(" +
+      "\t\"@\n\030DeleteCertificateRequest\022$\n\016certifi" +
+      "cate_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"3\n\031DeleteCer" +
+      "tificateMetadata\022\026\n\016certificate_id\030\001 \001(\t" +
+      "\"\334\003\n\034RequestNewCertificateRequest\022\037\n\tfol" +
+      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\t" +
+      "B$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\037" +
+      "\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\235\001\n\006labe" +
+      "ls\030\004 \003(\0132L.yandex.cloud.certificatemanag" +
+      "er.v1.RequestNewCertificateRequest.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\017\n\007domai" +
+      "ns\030\005 \003(\t\022I\n\016challenge_type\030\006 \001(\01621.yande" +
+      "x.cloud.certificatemanager.v1.ChallengeT" +
+      "ype\022\033\n\023deletion_protection\030\007 \001(\010\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "7\n\035RequestNewCertificateMetadata\022\026\n\016cert" +
+      "ificate_id\030\001 \001(\t\"\206\001\n ListCertificateOper" +
+      "ationsRequest\022$\n\016certificate_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!Lis" +
+      "tCertificateOperationsResponse\0225\n\noperat" +
+      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
+      "ation\022\027\n\017next_page_token\030\002 \001(\t*&\n\017Certif" +
+      "icateView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\312\022\n\022Certi" +
+      "ficateService\022\260\001\n\003Get\0229.yandex.cloud.cer" +
+      "tificatemanager.v1.GetCertificateRequest" +
+      "\032/.yandex.cloud.certificatemanager.v1.Ce" +
+      "rtificate\"=\202\323\344\223\0027\0225/certificate-manager/" +
+      "v1/certificates/{certificate_id}\022\257\001\n\004Lis" +
+      "t\022;.yandex.cloud.certificatemanager.v1.L" +
+      "istCertificatesRequest\032<.yandex.cloud.ce" +
+      "rtificatemanager.v1.ListCertificatesResp" +
+      "onse\",\202\323\344\223\002&\022$/certificate-manager/v1/ce" +
+      "rtificates\022\311\001\n\014ListVersions\0227.yandex.clo" +
+      "ud.certificatemanager.v1.ListVersionsReq" +
+      "uest\0328.yandex.cloud.certificatemanager.v" +
+      "1.ListVersionsResponse\"F\202\323\344\223\002@\022>/certifi" +
+      "cate-manager/v1/certificates/{certificat" +
+      "e_id}/versions\022\306\001\n\006Create\022<.yandex.cloud" +
+      ".certificatemanager.v1.CreateCertificate" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"[\202\323\344\223\002)\"$/certificate-manager/v1/cert" +
+      "ificates:\001*\262\322*(\n\031CreateCertificateMetada" +
+      "ta\022\013Certificate\022\327\001\n\006Update\022<.yandex.clou" +
+      "d.certificatemanager.v1.UpdateCertificat" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"l\202\323\344\223\002:25/certificate-manager/v1/cer" +
+      "tificates/{certificate_id}:\001*\262\322*(\n\031Updat" +
+      "eCertificateMetadata\022\013Certificate\022\324\001\n\006De" +
+      "lete\022<.yandex.cloud.certificatemanager.v" +
+      "1.DeleteCertificateRequest\032!.yandex.clou" +
+      "d.operation.Operation\"i\202\323\344\223\0027*5/certific" +
+      "ate-manager/v1/certificates/{certificate" +
+      "_id}\262\322*(\n\031DeleteCertificateMetadata\022\013Cer" +
+      "tificate\022\335\001\n\nRequestNew\022@.yandex.cloud.c" +
+      "ertificatemanager.v1.RequestNewCertifica" +
+      "teRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"j\202\323\344\223\0024\"//certificate-manager/v1/ce" +
+      "rtificates/requestNew:\001*\262\322*,\n\035RequestNew" +
+      "CertificateMetadata\022\013Certificate\022\347\001\n\016Lis" +
+      "tOperations\022D.yandex.cloud.certificatema" +
+      "nager.v1.ListCertificateOperationsReques" +
+      "t\032E.yandex.cloud.certificatemanager.v1.L" +
+      "istCertificateOperationsResponse\"H\202\323\344\223\002B" +
+      "\022@/certificate-manager/v1/certificates/{" +
+      "certificate_id}/operations\022\304\001\n\022ListAcces" +
+      "sBindings\022..yandex.cloud.access.ListAcce" +
+      "ssBindingsRequest\032/.yandex.cloud.access." +
+      "ListAccessBindingsResponse\"M\202\323\344\223\002G\022E/cer" +
+      "tificate-manager/v1/certificates/{resour" +
+      "ce_id}:listAccessBindings\022\364\001\n\021SetAccessB" +
+      "indings\022-.yandex.cloud.access.SetAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\214\001\202\323\344\223\002I\"D/certificate-manager" +
+      "/v1/certificates/{resource_id}:setAccess" +
+      "Bindings:\001*\262\322*9\n access.SetAccessBinding" +
+      "sMetadata\022\025google.protobuf.Empty\022\200\002\n\024Upd" +
+      "ateAccessBindings\0220.yandex.cloud.access." +
+      "UpdateAccessBindingsRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\222\001\202\323\344\223\002L\"G/certif" +
+      "icate-manager/v1/certificates/{resource_" +
+      "id}:updateAccessBindings:\001*\262\322*<\n#access." +
+      "UpdateAccessBindingsMetadata\022\025google.pro" +
+      "tobuf.EmptyB\203\001\n&yandex.cloud.api.certifi" +
+      "catemanager.v1ZYgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/certificatemana" +
+      "ger/v1;certificatemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-          yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.getDescriptor(),
-          yandex.cloud.api.access.Access.getDescriptor(),
         });
     internal_static_yandex_cloud_certificatemanager_v1_GetCertificateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16704,11 +16704,11 @@ public final class CertificateServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
-    yandex.cloud.api.certificatemanager.v1.CertificateOuterClass.getDescriptor();
-    yandex.cloud.api.access.Access.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

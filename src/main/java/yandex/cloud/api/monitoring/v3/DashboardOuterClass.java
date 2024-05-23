@@ -4131,7 +4131,7 @@ public final class DashboardOuterClass {
       "roto\022\032yandex.cloud.monitoring.v3\032\037google" +
       "/protobuf/timestamp.proto\0320yandex/cloud/" +
       "monitoring/v3/parametrization.proto\032\'yan" +
-      "dex/cloud/monitoring/v3/widget.proto\"\240\004\n" +
+      "dex/cloud/monitoring/v3/widget.proto\"\254\004\n" +
       "\tDashboard\022\n\n\002id\030\001 \001(\t\022\023\n\tfolder_id\030\003 \001(" +
       "\tH\000\022.\n\ncreated_at\030\024 \001(\0132\032.google.protobu" +
       "f.Timestamp\022/\n\013modified_at\030\025 \001(\0132\032.googl" +
@@ -4145,10 +4145,10 @@ public final class DashboardOuterClass {
       "ng.v3.Parametrization\022\014\n\004etag\030\036 \001(\t\022\022\n\nm" +
       "anaged_by\030  \001(\t\022\024\n\014managed_link\030! \001(\t\032-\n" +
       "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001B\013\n\tcontainerJ\004\010\037\020 Bk\n\036yandex.cloud." +
-      "api.monitoring.v3ZIgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/monitoring/v" +
-      "3;monitoringb\006proto3"
+      ":\0028\001B\013\n\tcontainerJ\004\010\004\020\024J\004\010\002\020\003J\004\010\037\020 Bk\n\036y" +
+      "andex.cloud.api.monitoring.v3ZIgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "monitoring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3705,7 +3705,7 @@ public final class Claims {
     java.lang.String[] descriptorData = {
       "\n\037yandex/cloud/oauth/claims.proto\022\022yande" +
       "x.cloud.oauth\032\035yandex/cloud/validation.p" +
-      "roto\"\274\002\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071" +
+      "roto\"\332\002\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\022\022\n\ngiven_name\030\003 " +
       "\001(\t\022\023\n\013family_name\030\004 \001(\t\022\032\n\022preferred_us" +
       "ername\030\007 \001(\t\022\017\n\007picture\030\t \001(\t\022\r\n\005email\030\013" +
@@ -3713,13 +3713,14 @@ public final class Claims {
       "\n\014phone_number\030\021 \001(\t\0221\n\010sub_type\030c \001(\0162\037" +
       ".yandex.cloud.oauth.SubjectType\0222\n\nfeder" +
       "ation\030d \001(\0132\036.yandex.cloud.oauth.Federat" +
-      "ion\"4\n\nFederation\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\014\n\004name\030\003 \001(\t*j\n\013SubjectType\022\034\n\030SUBJ" +
-      "ECT_TYPE_UNSPECIFIED\020\000\022\020\n\014USER_ACCOUNT\020\001" +
-      "\022\023\n\017SERVICE_ACCOUNT\020\002\022\t\n\005GROUP\020\003\022\013\n\007INVI" +
-      "TEE\020\004BY\n\031yandex.cloud.api.oauth.v1Z<gith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/oauth;oauthb\006proto3"
+      "ionJ\004\010\010\020\tJ\004\010\n\020\013J\004\010\014\020\017J\004\010\022\020cJ\004\010\005\020\007\":\n\nFed" +
+      "eration\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004nam" +
+      "e\030\003 \001(\tJ\004\010\002\020\003*j\n\013SubjectType\022\034\n\030SUBJECT_" +
+      "TYPE_UNSPECIFIED\020\000\022\020\n\014USER_ACCOUNT\020\001\022\023\n\017" +
+      "SERVICE_ACCOUNT\020\002\022\t\n\005GROUP\020\003\022\013\n\007INVITEE\020" +
+      "\004BY\n\031yandex.cloud.api.oauth.v1Z<github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/oauth;oauthb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

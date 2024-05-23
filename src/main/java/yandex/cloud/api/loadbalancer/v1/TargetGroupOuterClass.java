@@ -87,7 +87,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * Name of the target group. 
+     * Name of the target group.
      * The name is unique within the folder. 3-63 characters long.
      * </pre>
      *
@@ -97,7 +97,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the target group. 
+     * Name of the target group.
      * The name is unique within the folder. 3-63 characters long.
      * </pre>
      *
@@ -547,7 +547,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the target group. 
+     * Name of the target group.
      * The name is unique within the folder. 3-63 characters long.
      * </pre>
      *
@@ -569,7 +569,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Name of the target group. 
+     * Name of the target group.
      * The name is unique within the folder. 3-63 characters long.
      * </pre>
      *
@@ -1700,7 +1700,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the target group. 
+       * Name of the target group.
        * The name is unique within the folder. 3-63 characters long.
        * </pre>
        *
@@ -1721,7 +1721,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the target group. 
+       * Name of the target group.
        * The name is unique within the folder. 3-63 characters long.
        * </pre>
        *
@@ -1743,7 +1743,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the target group. 
+       * Name of the target group.
        * The name is unique within the folder. 3-63 characters long.
        * </pre>
        *
@@ -1763,7 +1763,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the target group. 
+       * Name of the target group.
        * The name is unique within the folder. 3-63 characters long.
        * </pre>
        *
@@ -1778,7 +1778,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the target group. 
+       * Name of the target group.
        * The name is unique within the folder. 3-63 characters long.
        * </pre>
        *
@@ -2519,7 +2519,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * ID of the subnet that targets are connected to. 
+     * ID of the subnet that targets are connected to.
      * All targets in the target group must be connected to the same subnet within a single availability zone.
      * </pre>
      *
@@ -2529,7 +2529,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet that targets are connected to. 
+     * ID of the subnet that targets are connected to.
      * All targets in the target group must be connected to the same subnet within a single availability zone.
      * </pre>
      *
@@ -2658,7 +2658,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet that targets are connected to. 
+     * ID of the subnet that targets are connected to.
      * All targets in the target group must be connected to the same subnet within a single availability zone.
      * </pre>
      *
@@ -2680,7 +2680,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * ID of the subnet that targets are connected to. 
+     * ID of the subnet that targets are connected to.
      * All targets in the target group must be connected to the same subnet within a single availability zone.
      * </pre>
      *
@@ -3074,7 +3074,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet that targets are connected to. 
+       * ID of the subnet that targets are connected to.
        * All targets in the target group must be connected to the same subnet within a single availability zone.
        * </pre>
        *
@@ -3095,7 +3095,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that targets are connected to. 
+       * ID of the subnet that targets are connected to.
        * All targets in the target group must be connected to the same subnet within a single availability zone.
        * </pre>
        *
@@ -3117,7 +3117,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that targets are connected to. 
+       * ID of the subnet that targets are connected to.
        * All targets in the target group must be connected to the same subnet within a single availability zone.
        * </pre>
        *
@@ -3137,7 +3137,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that targets are connected to. 
+       * ID of the subnet that targets are connected to.
        * All targets in the target group must be connected to the same subnet within a single availability zone.
        * </pre>
        *
@@ -3152,7 +3152,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that targets are connected to. 
+       * ID of the subnet that targets are connected to.
        * All targets in the target group must be connected to the same subnet within a single availability zone.
        * </pre>
        *
@@ -3347,7 +3347,7 @@ public final class TargetGroupOuterClass {
       "\n/yandex/cloud/loadbalancer/v1/target_gr" +
       "oup.proto\022\034yandex.cloud.loadbalancer.v1\032" +
       "\037google/protobuf/timestamp.proto\032\035yandex" +
-      "/cloud/validation.proto\"\277\002\n\013TargetGroup\022" +
+      "/cloud/validation.proto\"\305\002\n\013TargetGroup\022" +
       "\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreate" +
       "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014" +
       "\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022E\n\006lab" +
@@ -3355,12 +3355,12 @@ public final class TargetGroupOuterClass {
       ".TargetGroup.LabelsEntry\022\021\n\tregion_id\030\007 " +
       "\001(\t\0225\n\007targets\030\t \003(\0132$.yandex.cloud.load" +
       "balancer.v1.Target\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\006Target\022\033\n\ts" +
-      "ubnet_id\030\001 \001(\tB\010\212\3101\004<=50\022\017\n\007address\030\002 \001(" +
-      "\tBq\n yandex.cloud.api.loadbalancer.v1ZMg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/loadbalancer/v1;loadbalancerb\006pr" +
-      "oto3"
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\010\020\t\"6\n\006Targe" +
+      "t\022\033\n\tsubnet_id\030\001 \001(\tB\010\212\3101\004<=50\022\017\n\007addres" +
+      "s\030\002 \001(\tBq\n yandex.cloud.api.loadbalancer" +
+      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/loadbalancer/v1;loadbalanc" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3407,13 +3407,13 @@ public final class TargetGroupOuterClass {
       "(\0132\'.yandex.cloud.apploadbalancer.v1.Tar" +
       "get\022.\n\ncreated_at\030\007 \001(\0132\032.google.protobu" +
       "f.Timestamp\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"e\n\006Target\022\024\n\nip_addre" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"k\n\006Target\022\024\n\nip_addre" +
       "ss\030\001 \001(\tH\000\022\021\n\tsubnet_id\030\003 \001(\t\022\034\n\024private" +
       "_ipv4_address\030\004 \001(\010B\024\n\014address_type\022\004\300\3011" +
-      "\001Bz\n#yandex.cloud.api.apploadbalancer.v1" +
-      "ZSgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/apploadbalancer/v1;apploadbal" +
-      "ancerb\006proto3"
+      "\001J\004\010\002\020\003Bz\n#yandex.cloud.api.apploadbalan" +
+      "cer.v1ZSgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/apploadbalancer/v1;appl" +
+      "oadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

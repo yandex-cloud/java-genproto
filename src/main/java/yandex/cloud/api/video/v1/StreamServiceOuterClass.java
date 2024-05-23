@@ -14400,79 +14400,80 @@ public final class StreamServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/video/v1/stream_service.p" +
-      "roto\022\025yandex.cloud.video.v1\032\037google/prot" +
-      "obuf/timestamp.proto\032 google/protobuf/fi" +
-      "eld_mask.proto\032 yandex/cloud/api/operati" +
+      "roto\022\025yandex.cloud.video.v1\032 google/prot" +
+      "obuf/field_mask.proto\032\037google/protobuf/t" +
+      "imestamp.proto\032 yandex/cloud/api/operati" +
       "on.proto\032&yandex/cloud/operation/operati" +
       "on.proto\032\"yandex/cloud/video/v1/stream.p" +
       "roto\"%\n\020GetStreamRequest\022\021\n\tstream_id\030\001 " +
-      "\001(\t\"q\n\022ListStreamsRequest\022\022\n\nchannel_id\030" +
+      "\001(\t\"w\n\022ListStreamsRequest\022\022\n\nchannel_id\030" +
       "\001 \001(\t\022\021\n\tpage_size\030d \001(\003\022\022\n\npage_token\030e" +
-      " \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\t\"^" +
-      "\n\023ListStreamsResponse\022.\n\007streams\030\001 \003(\0132\035" +
-      ".yandex.cloud.video.v1.Stream\022\027\n\017next_pa" +
-      "ge_token\030d \001(\t\"\364\002\n\023CreateStreamRequest\022\022" +
-      "\n\nchannel_id\030\001 \001(\t\022\017\n\007line_id\030\002 \001(\t\022\r\n\005t" +
-      "itle\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thumb" +
-      "nail_id\030\005 \001(\t\022G\n\006labels\030\310\001 \003(\01326.yandex." +
-      "cloud.video.v1.CreateStreamRequest.Label" +
-      "sEntry\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.clou" +
-      "d.video.v1.OnDemandParamsH\000\022:\n\010schedule\030" +
-      "\351\007 \001(\0132%.yandex.cloud.video.v1.ScheduleP" +
-      "aramsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\r\n\013stream_type\"\020\n\016OnDeman" +
-      "dParams\"q\n\016ScheduleParams\022.\n\nstart_time\030" +
-      "\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fin" +
-      "ish_time\030\002 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\")\n\024CreateStreamMetadata\022\021\n\tstream_id\030" +
-      "\001 \001(\t\"\243\003\n\023UpdateStreamRequest\022\021\n\tstream_" +
-      "id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022\017\n\007line_id\030\003 \001(\t\022\r\n\005tit" +
-      "le\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022\024\n\014thumbna" +
-      "il_id\030\006 \001(\t\022G\n\006labels\030\310\001 \003(\01326.yandex.cl" +
-      "oud.video.v1.UpdateStreamRequest.LabelsE" +
-      "ntry\022;\n\ton_demand\030\350\007 \001(\0132%.yandex.cloud." +
-      "video.v1.OnDemandParamsH\000\022:\n\010schedule\030\351\007" +
-      " \001(\0132%.yandex.cloud.video.v1.SchedulePar" +
-      "amsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001B\r\n\013stream_type\")\n\024UpdateStr" +
-      "eamMetadata\022\021\n\tstream_id\030\001 \001(\t\"(\n\023Delete" +
-      "StreamRequest\022\021\n\tstream_id\030\001 \001(\t\")\n\024Dele" +
-      "teStreamMetadata\022\021\n\tstream_id\030\001 \001(\t\"\257\001\n\032" +
-      "PerformStreamActionRequest\022\021\n\tstream_id\030" +
-      "\001 \001(\t\0228\n\007publish\030\350\007 \001(\0132$.yandex.cloud.v" +
-      "ideo.v1.PublishActionH\000\0222\n\004stop\030\352\007 \001(\0132!" +
-      ".yandex.cloud.video.v1.StopActionH\000B\010\n\006a" +
-      "ctionJ\006\010\351\007\020\352\007\"\017\n\rPublishAction\"\014\n\nStopAc" +
-      "tion\"0\n\033PerformStreamActionMetadata\022\021\n\ts" +
-      "tream_id\030\001 \001(\t2\333\005\n\rStreamService\022O\n\003Get\022" +
-      "\'.yandex.cloud.video.v1.GetStreamRequest" +
-      "\032\035.yandex.cloud.video.v1.Stream\"\000\022_\n\004Lis" +
-      "t\022).yandex.cloud.video.v1.ListStreamsReq" +
-      "uest\032*.yandex.cloud.video.v1.ListStreams" +
-      "Response\"\000\022{\n\006Create\022*.yandex.cloud.vide" +
-      "o.v1.CreateStreamRequest\032!.yandex.cloud." +
-      "operation.Operation\"\"\262\322*\036\n\024CreateStreamM" +
-      "etadata\022\006Stream\022{\n\006Update\022*.yandex.cloud" +
-      ".video.v1.UpdateStreamRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\"\262\322*\036\n\024UpdateSt" +
-      "reamMetadata\022\006Stream\022\212\001\n\006Delete\022*.yandex" +
-      ".cloud.video.v1.DeleteStreamRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"1\262\322*-\n\024De" +
-      "leteStreamMetadata\022\025google.protobuf.Empt" +
-      "y\022\220\001\n\rPerformAction\0221.yandex.cloud.video" +
-      ".v1.PerformStreamActionRequest\032!.yandex." +
-      "cloud.operation.Operation\")\262\322*%\n\033Perform" +
-      "StreamActionMetadata\022\006StreamB\\\n\031yandex.c" +
-      "loud.api.video.v1Z?github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/video/v1;vid" +
-      "eob\006proto3"
+      " \001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004" +
+      "\010\002\020d\"d\n\023ListStreamsResponse\022.\n\007streams\030\001" +
+      " \003(\0132\035.yandex.cloud.video.v1.Stream\022\027\n\017n" +
+      "ext_page_token\030d \001(\tJ\004\010\002\020d\"\203\003\n\023CreateStr" +
+      "eamRequest\022\022\n\nchannel_id\030\001 \001(\t\022\017\n\007line_i" +
+      "d\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 " +
+      "\001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\022G\n\006labels\030\310\001 \003" +
+      "(\01326.yandex.cloud.video.v1.CreateStreamR" +
+      "equest.LabelsEntry\022;\n\ton_demand\030\350\007 \001(\0132%" +
+      ".yandex.cloud.video.v1.OnDemandParamsH\000\022" +
+      ":\n\010schedule\030\351\007 \001(\0132%.yandex.cloud.video." +
+      "v1.ScheduleParamsH\000\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\r\n\013stream_typ" +
+      "eJ\006\010\311\001\020\350\007J\005\010\006\020\310\001\"\020\n\016OnDemandParams\"q\n\016Sc" +
+      "heduleParams\022.\n\nstart_time\030\001 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022/\n\013finish_time\030\002 \001(" +
+      "\0132\032.google.protobuf.Timestamp\")\n\024CreateS" +
+      "treamMetadata\022\021\n\tstream_id\030\001 \001(\t\"\262\003\n\023Upd" +
+      "ateStreamRequest\022\021\n\tstream_id\030\001 \001(\t\022.\n\nf" +
+      "ield_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022\017\n\007line_id\030\003 \001(\t\022\r\n\005title\030\004 \001(\t\022\023\n\013d" +
+      "escription\030\005 \001(\t\022\024\n\014thumbnail_id\030\006 \001(\t\022G" +
+      "\n\006labels\030\310\001 \003(\01326.yandex.cloud.video.v1." +
+      "UpdateStreamRequest.LabelsEntry\022;\n\ton_de" +
+      "mand\030\350\007 \001(\0132%.yandex.cloud.video.v1.OnDe" +
+      "mandParamsH\000\022:\n\010schedule\030\351\007 \001(\0132%.yandex" +
+      ".cloud.video.v1.ScheduleParamsH\000\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
+      "\r\n\013stream_typeJ\006\010\311\001\020\350\007J\005\010\007\020\310\001\")\n\024UpdateS" +
+      "treamMetadata\022\021\n\tstream_id\030\001 \001(\t\"(\n\023Dele" +
+      "teStreamRequest\022\021\n\tstream_id\030\001 \001(\t\")\n\024De" +
+      "leteStreamMetadata\022\021\n\tstream_id\030\001 \001(\t\"\266\001" +
+      "\n\032PerformStreamActionRequest\022\021\n\tstream_i" +
+      "d\030\001 \001(\t\0228\n\007publish\030\350\007 \001(\0132$.yandex.cloud" +
+      ".video.v1.PublishActionH\000\0222\n\004stop\030\352\007 \001(\013" +
+      "2!.yandex.cloud.video.v1.StopActionH\000B\010\n" +
+      "\006actionJ\005\010\002\020\350\007J\006\010\351\007\020\352\007\"\017\n\rPublishAction\"" +
+      "\014\n\nStopAction\"0\n\033PerformStreamActionMeta" +
+      "data\022\021\n\tstream_id\030\001 \001(\t2\333\005\n\rStreamServic" +
+      "e\022O\n\003Get\022\'.yandex.cloud.video.v1.GetStre" +
+      "amRequest\032\035.yandex.cloud.video.v1.Stream" +
+      "\"\000\022_\n\004List\022).yandex.cloud.video.v1.ListS" +
+      "treamsRequest\032*.yandex.cloud.video.v1.Li" +
+      "stStreamsResponse\"\000\022{\n\006Create\022*.yandex.c" +
+      "loud.video.v1.CreateStreamRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\"\262\322*\036\n\024Crea" +
+      "teStreamMetadata\022\006Stream\022{\n\006Update\022*.yan" +
+      "dex.cloud.video.v1.UpdateStreamRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\"\262\322*\036\n" +
+      "\024UpdateStreamMetadata\022\006Stream\022\212\001\n\006Delete" +
+      "\022*.yandex.cloud.video.v1.DeleteStreamReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "1\262\322*-\n\024DeleteStreamMetadata\022\025google.prot" +
+      "obuf.Empty\022\220\001\n\rPerformAction\0221.yandex.cl" +
+      "oud.video.v1.PerformStreamActionRequest\032" +
+      "!.yandex.cloud.operation.Operation\")\262\322*%" +
+      "\n\033PerformStreamActionMetadata\022\006StreamB\\\n" +
+      "\031yandex.cloud.api.video.v1Z?github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/vid" +
+      "eo/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.video.v1.StreamOuterClass.getDescriptor(),
@@ -14584,8 +14585,8 @@ public final class StreamServiceOuterClass {
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.video.v1.StreamOuterClass.getDescriptor();

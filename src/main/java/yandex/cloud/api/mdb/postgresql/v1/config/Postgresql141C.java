@@ -37249,7 +37249,7 @@ public final class Postgresql141C {
       "postgresql14_1c.proto\022%yandex.cloud.mdb." +
       "postgresql.v1.config\032\036google/protobuf/wr" +
       "appers.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"\314l\n\025PostgresqlConfig14_1C\0224\n\017max_con" +
+      "oto\"\364l\n\025PostgresqlConfig14_1C\0224\n\017max_con" +
       "nections\030\001 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pro" +
       "tobuf.Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033" +
@@ -37596,7 +37596,8 @@ public final class Postgresql141C {
       "UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016" +
       "XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPT" +
       "ION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT" +
-      "\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\233\002\n\030Postgresq" +
+      "\020\001\022\026\n\022XML_OPTION_CONTENT\020\002J\004\010N\020OJ\004\010j\020kJ\004" +
+      "\010}\020~J\006\010\226\001\020\230\001J\006\010\246\001\020\247\001J\004\010@\020A\"\233\002\n\030Postgresq" +
       "lConfigSet14_1C\022V\n\020effective_config\030\001 \001(" +
       "\0132<.yandex.cloud.mdb.postgresql.v1.confi" +
       "g.PostgresqlConfig14_1C\022Q\n\013user_config\030\002" +

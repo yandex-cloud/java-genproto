@@ -2451,11 +2451,11 @@ public final class WidgetOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/monitoring/v3/widget.prot" +
-      "o\022\032yandex.cloud.monitoring.v3\032,yandex/cl" +
-      "oud/monitoring/v3/text_widget.proto\032-yan" +
-      "dex/cloud/monitoring/v3/title_widget.pro" +
-      "to\032-yandex/cloud/monitoring/v3/chart_wid" +
-      "get.proto\"\301\002\n\006Widget\022C\n\010position\030\001 \001(\01321" +
+      "o\022\032yandex.cloud.monitoring.v3\032-yandex/cl" +
+      "oud/monitoring/v3/chart_widget.proto\032,ya" +
+      "ndex/cloud/monitoring/v3/text_widget.pro" +
+      "to\032-yandex/cloud/monitoring/v3/title_wid" +
+      "get.proto\"\307\002\n\006Widget\022C\n\010position\030\001 \001(\01321" +
       ".yandex.cloud.monitoring.v3.Widget.Layou" +
       "tPosition\0226\n\004text\030\002 \001(\0132&.yandex.cloud.m" +
       "onitoring.v3.TextWidgetH\000\0228\n\005title\030\003 \001(\013" +
@@ -2463,17 +2463,17 @@ public final class WidgetOuterClass {
       "tH\000\0228\n\005chart\030\005 \001(\0132\'.yandex.cloud.monito" +
       "ring.v3.ChartWidgetH\000\032<\n\016LayoutPosition\022" +
       "\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\022\t\n\001w\030\003 \001(\003\022\t\n\001h\030\004 " +
-      "\001(\003B\010\n\006widgetBk\n\036yandex.cloud.api.monito" +
-      "ring.v3ZIgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/monitoring/v3;monitori" +
-      "ngb\006proto3"
+      "\001(\003B\010\n\006widgetJ\004\010\004\020\005Bk\n\036yandex.cloud.api." +
+      "monitoring.v3ZIgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/monitoring/v3;mo" +
+      "nitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.TextWidgetOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor(),
-          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_Widget_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2487,9 +2487,9 @@ public final class WidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Widget_LayoutPosition_descriptor,
         new java.lang.String[] { "X", "Y", "W", "H", });
+    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.TextWidgetOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.TitleWidgetOuterClass.getDescriptor();
-    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

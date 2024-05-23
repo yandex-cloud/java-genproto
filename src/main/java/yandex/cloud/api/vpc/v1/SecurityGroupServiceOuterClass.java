@@ -19,11 +19,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Security Group resource to return.
+     * To get the security group ID, use a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the Security Group resource to return.
+     * To get the security group ID, use a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -117,6 +127,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the Security Group resource to return.
+     * To get the security group ID, use a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -134,6 +149,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Security Group resource to return.
+     * To get the security group ID, use a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -456,6 +476,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the Security Group resource to return.
+       * To get the security group ID, use a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -472,6 +497,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Security Group resource to return.
+       * To get the security group ID, use a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -489,6 +519,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Security Group resource to return.
+       * To get the security group ID, use a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -504,6 +539,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Security Group resource to return.
+       * To get the security group ID, use a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +554,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Security Group resource to return.
+       * To get the security group ID, use a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -587,11 +632,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list security groups in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list security groups in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -599,17 +654,34 @@ public final class SecurityGroupServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListSecurityGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -618,7 +690,11 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <pre>
-     *filter by network_id is here
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -627,7 +703,11 @@ public final class SecurityGroupServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     *filter by network_id is here
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -742,6 +822,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list security groups in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -759,6 +844,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list security groups in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -780,6 +870,13 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListSecurityGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -791,6 +888,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -808,6 +910,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -830,7 +937,11 @@ public final class SecurityGroupServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     *filter by network_id is here
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -851,7 +962,11 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     *filter by network_id is here
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -1228,6 +1343,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list security groups in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -1244,6 +1364,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list security groups in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -1261,6 +1386,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list security groups in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1276,6 +1406,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list security groups in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1286,6 +1421,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list security groups in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1304,6 +1444,13 @@ public final class SecurityGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -1312,6 +1459,13 @@ public final class SecurityGroupServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1323,6 +1477,13 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -1335,6 +1496,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -1351,6 +1517,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -1368,6 +1539,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1383,6 +1559,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -1393,6 +1574,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1412,7 +1598,11 @@ public final class SecurityGroupServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       *filter by network_id is here
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1432,7 +1622,11 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *filter by network_id is here
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1453,7 +1647,11 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *filter by network_id is here
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1472,7 +1670,11 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *filter by network_id is here
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1486,7 +1688,11 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *filter by network_id is here
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on the [SecurityGroup.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1562,35 +1768,73 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> 
         getSecurityGroupsList();
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index);
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     int getSecurityGroupsCount();
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
         getSecurityGroupsOrBuilderList();
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworksRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworksRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworksRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworksRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1698,6 +1942,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> securityGroups_;
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     @java.lang.Override
@@ -1705,6 +1953,10 @@ public final class SecurityGroupServiceOuterClass {
       return securityGroups_;
     }
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     @java.lang.Override
@@ -1713,6 +1965,10 @@ public final class SecurityGroupServiceOuterClass {
       return securityGroups_;
     }
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     @java.lang.Override
@@ -1720,6 +1976,10 @@ public final class SecurityGroupServiceOuterClass {
       return securityGroups_.size();
     }
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     @java.lang.Override
@@ -1727,6 +1987,10 @@ public final class SecurityGroupServiceOuterClass {
       return securityGroups_.get(index);
     }
     /**
+     * <pre>
+     * List of SecurityGroup resources.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
      */
     @java.lang.Override
@@ -1738,6 +2002,15 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworksRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworksRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1755,6 +2028,15 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworksRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworksRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2145,6 +2427,10 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> securityGroupsBuilder_;
 
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> getSecurityGroupsList() {
@@ -2155,6 +2441,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public int getSecurityGroupsCount() {
@@ -2165,6 +2455,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index) {
@@ -2175,6 +2469,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder setSecurityGroups(
@@ -2192,6 +2490,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder setSecurityGroups(
@@ -2206,6 +2508,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder addSecurityGroups(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup value) {
@@ -2222,6 +2528,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder addSecurityGroups(
@@ -2239,6 +2549,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder addSecurityGroups(
@@ -2253,6 +2567,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder addSecurityGroups(
@@ -2267,6 +2585,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder addAllSecurityGroups(
@@ -2282,6 +2604,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder clearSecurityGroups() {
@@ -2295,6 +2621,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public Builder removeSecurityGroups(int index) {
@@ -2308,6 +2638,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder getSecurityGroupsBuilder(
@@ -2315,6 +2649,10 @@ public final class SecurityGroupServiceOuterClass {
         return getSecurityGroupsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
@@ -2325,6 +2663,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
@@ -2336,6 +2678,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder addSecurityGroupsBuilder() {
@@ -2343,6 +2689,10 @@ public final class SecurityGroupServiceOuterClass {
             yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder addSecurityGroupsBuilder(
@@ -2351,6 +2701,10 @@ public final class SecurityGroupServiceOuterClass {
             index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of SecurityGroup resources.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder> 
@@ -2374,6 +2728,15 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworksRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworksRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2390,6 +2753,15 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworksRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworksRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2407,6 +2779,15 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworksRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworksRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2422,6 +2803,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworksRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworksRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2432,6 +2822,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworksRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworksRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2505,11 +2904,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder for this request to create a security group in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder for this request to create a security group in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -2517,11 +2926,21 @@ public final class SecurityGroupServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -2529,11 +2948,19 @@ public final class SecurityGroupServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the security group.    
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the security group.    
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2541,10 +2968,18 @@ public final class SecurityGroupServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2556,11 +2991,19 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2568,6 +3011,10 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2575,11 +3022,19 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * ID of the Network to create security group for.
+     * </pre>
+     *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
      * @return The networkId.
      */
     java.lang.String getNetworkId();
     /**
+     * <pre>
+     * ID of the Network to create security group for.
+     * </pre>
+     *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for networkId.
      */
@@ -2587,24 +3042,44 @@ public final class SecurityGroupServiceOuterClass {
         getNetworkIdBytes();
 
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> 
         getRuleSpecsList();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getRuleSpecs(int index);
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     int getRuleSpecsCount();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
         getRuleSpecsOrBuilderList();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getRuleSpecsOrBuilder(
@@ -2757,6 +3232,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder for this request to create a security group in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -2774,6 +3254,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder for this request to create a security group in.
+     * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -2795,6 +3280,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
@@ -2812,6 +3302,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -2833,6 +3328,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the security group.    
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -2850,6 +3349,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the security group.    
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -2895,6 +3398,10 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2913,6 +3420,10 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2921,6 +3432,10 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2934,6 +3449,10 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -2952,6 +3471,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NETWORK_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object networkId_;
     /**
+     * <pre>
+     * ID of the Network to create security group for.
+     * </pre>
+     *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
      * @return The networkId.
      */
@@ -2969,6 +3492,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Network to create security group for.
+     * </pre>
+     *
      * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for networkId.
      */
@@ -2990,6 +3517,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int RULE_SPECS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> ruleSpecs_;
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     @java.lang.Override
@@ -2997,6 +3528,10 @@ public final class SecurityGroupServiceOuterClass {
       return ruleSpecs_;
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     @java.lang.Override
@@ -3005,6 +3540,10 @@ public final class SecurityGroupServiceOuterClass {
       return ruleSpecs_;
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     @java.lang.Override
@@ -3012,6 +3551,10 @@ public final class SecurityGroupServiceOuterClass {
       return ruleSpecs_.size();
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     @java.lang.Override
@@ -3019,6 +3562,10 @@ public final class SecurityGroupServiceOuterClass {
       return ruleSpecs_.get(index);
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
      */
     @java.lang.Override
@@ -3488,6 +4035,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder for this request to create a security group in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -3504,6 +4056,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder for this request to create a security group in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -3521,6 +4078,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder for this request to create a security group in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -3536,6 +4098,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder for this request to create a security group in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -3546,6 +4113,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder for this request to create a security group in.
+       * To get the folder ID, use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -3564,6 +4136,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
@@ -3580,6 +4157,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
@@ -3597,6 +4179,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3612,6 +4199,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
@@ -3622,6 +4214,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3640,6 +4237,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the security group.    
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -3656,6 +4257,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the security group.    
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -3673,6 +4278,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the security group.    
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -3688,6 +4297,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the security group.    
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -3698,6 +4311,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the security group.    
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -3741,6 +4358,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3759,6 +4380,10 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3767,6 +4392,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3780,6 +4409,10 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -3801,6 +4434,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3820,6 +4457,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -3835,6 +4476,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3847,6 +4492,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object networkId_ = "";
       /**
+       * <pre>
+       * ID of the Network to create security group for.
+       * </pre>
+       *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
        * @return The networkId.
        */
@@ -3863,6 +4512,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Network to create security group for.
+       * </pre>
+       *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for networkId.
        */
@@ -3880,6 +4533,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Network to create security group for.
+       * </pre>
+       *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The networkId to set.
        * @return This builder for chaining.
@@ -3895,6 +4552,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Network to create security group for.
+       * </pre>
+       *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3905,6 +4566,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Network to create security group for.
+       * </pre>
+       *
        * <code>string network_id = 5 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for networkId to set.
        * @return This builder for chaining.
@@ -3934,6 +4599,10 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> ruleSpecsBuilder_;
 
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> getRuleSpecsList() {
@@ -3944,6 +4613,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public int getRuleSpecsCount() {
@@ -3954,6 +4627,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getRuleSpecs(int index) {
@@ -3964,6 +4641,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder setRuleSpecs(
@@ -3981,6 +4662,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder setRuleSpecs(
@@ -3995,6 +4680,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder addRuleSpecs(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec value) {
@@ -4011,6 +4700,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder addRuleSpecs(
@@ -4028,6 +4721,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder addRuleSpecs(
@@ -4042,6 +4739,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder addRuleSpecs(
@@ -4056,6 +4757,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder addAllRuleSpecs(
@@ -4071,6 +4776,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder clearRuleSpecs() {
@@ -4084,6 +4793,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public Builder removeRuleSpecs(int index) {
@@ -4097,6 +4810,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder getRuleSpecsBuilder(
@@ -4104,6 +4821,10 @@ public final class SecurityGroupServiceOuterClass {
         return getRuleSpecsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getRuleSpecsOrBuilder(
@@ -4114,6 +4835,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
@@ -4125,6 +4850,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder addRuleSpecsBuilder() {
@@ -4132,6 +4861,10 @@ public final class SecurityGroupServiceOuterClass {
             yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder addRuleSpecsBuilder(
@@ -4140,6 +4873,10 @@ public final class SecurityGroupServiceOuterClass {
             index, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder> 
@@ -4218,11 +4955,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Description of the security rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the security rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -4230,10 +4975,18 @@ public final class SecurityGroupServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -4245,11 +4998,19 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4257,6 +5018,10 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4264,11 +5029,19 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * The direction of network traffic allowed by this rule.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for direction.
      */
     int getDirectionValue();
     /**
+     * <pre>
+     * The direction of network traffic allowed by this rule.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
      * @return The direction.
      */
@@ -4276,7 +5049,7 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4285,7 +5058,7 @@ public final class SecurityGroupServiceOuterClass {
     boolean hasPorts();
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4294,7 +5067,7 @@ public final class SecurityGroupServiceOuterClass {
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange getPorts();
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4302,16 +5075,28 @@ public final class SecurityGroupServiceOuterClass {
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRangeOrBuilder getPortsOrBuilder();
 
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return Whether the protocolName field is set.
      */
     boolean hasProtocolName();
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return The protocolName.
      */
     java.lang.String getProtocolName();
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return The bytes for protocolName.
      */
@@ -4319,42 +5104,74 @@ public final class SecurityGroupServiceOuterClass {
         getProtocolNameBytes();
 
     /**
+     * <pre>
+     * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * </pre>
+     *
      * <code>int64 protocol_number = 6;</code>
      * @return Whether the protocolNumber field is set.
      */
     boolean hasProtocolNumber();
     /**
+     * <pre>
+     * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * </pre>
+     *
      * <code>int64 protocol_number = 6;</code>
      * @return The protocolNumber.
      */
     long getProtocolNumber();
 
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      * @return Whether the cidrBlocks field is set.
      */
     boolean hasCidrBlocks();
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      * @return The cidrBlocks.
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks getCidrBlocks();
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder getCidrBlocksOrBuilder();
 
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return Whether the securityGroupId field is set.
      */
     boolean hasSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return The bytes for securityGroupId.
      */
@@ -4363,7 +5180,7 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -4372,7 +5189,7 @@ public final class SecurityGroupServiceOuterClass {
     boolean hasPredefinedTarget();
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -4381,7 +5198,7 @@ public final class SecurityGroupServiceOuterClass {
     java.lang.String getPredefinedTarget();
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -4648,6 +5465,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the security rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -4665,6 +5486,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the security rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -4710,6 +5535,10 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4728,6 +5557,10 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -4736,6 +5569,10 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -4749,6 +5586,10 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Rule labels as `` key:value `` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -4767,6 +5608,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DIRECTION_FIELD_NUMBER = 3;
     private int direction_;
     /**
+     * <pre>
+     * The direction of network traffic allowed by this rule.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for direction.
      */
@@ -4774,6 +5619,10 @@ public final class SecurityGroupServiceOuterClass {
       return direction_;
     }
     /**
+     * <pre>
+     * The direction of network traffic allowed by this rule.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
      * @return The direction.
      */
@@ -4787,7 +5636,7 @@ public final class SecurityGroupServiceOuterClass {
     private yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange ports_;
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4799,7 +5648,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4811,7 +5660,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * null value means any port
+     * The range of ports that allow traffic to pass through. Null value means any port.
      * </pre>
      *
      * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -4823,6 +5672,10 @@ public final class SecurityGroupServiceOuterClass {
 
     public static final int PROTOCOL_NAME_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return Whether the protocolName field is set.
      */
@@ -4830,6 +5683,10 @@ public final class SecurityGroupServiceOuterClass {
       return protocolCase_ == 5;
     }
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return The protocolName.
      */
@@ -4851,6 +5708,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Protocol name.
+     * </pre>
+     *
      * <code>string protocol_name = 5;</code>
      * @return The bytes for protocolName.
      */
@@ -4875,6 +5736,10 @@ public final class SecurityGroupServiceOuterClass {
 
     public static final int PROTOCOL_NUMBER_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * </pre>
+     *
      * <code>int64 protocol_number = 6;</code>
      * @return Whether the protocolNumber field is set.
      */
@@ -4883,6 +5748,10 @@ public final class SecurityGroupServiceOuterClass {
       return protocolCase_ == 6;
     }
     /**
+     * <pre>
+     * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+     * </pre>
+     *
      * <code>int64 protocol_number = 6;</code>
      * @return The protocolNumber.
      */
@@ -4896,6 +5765,10 @@ public final class SecurityGroupServiceOuterClass {
 
     public static final int CIDR_BLOCKS_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      * @return Whether the cidrBlocks field is set.
      */
@@ -4904,6 +5777,10 @@ public final class SecurityGroupServiceOuterClass {
       return targetCase_ == 7;
     }
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      * @return The cidrBlocks.
      */
@@ -4915,6 +5792,10 @@ public final class SecurityGroupServiceOuterClass {
       return yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.getDefaultInstance();
     }
     /**
+     * <pre>
+     * CIDR blocks to allow to recieve or send traffic.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
      */
     @java.lang.Override
@@ -4927,6 +5808,10 @@ public final class SecurityGroupServiceOuterClass {
 
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 8;
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return Whether the securityGroupId field is set.
      */
@@ -4934,6 +5819,10 @@ public final class SecurityGroupServiceOuterClass {
       return targetCase_ == 8;
     }
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return The securityGroupId.
      */
@@ -4955,6 +5844,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group to add rule to.
+     * </pre>
+     *
      * <code>string security_group_id = 8;</code>
      * @return The bytes for securityGroupId.
      */
@@ -4980,7 +5873,7 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PREDEFINED_TARGET_FIELD_NUMBER = 9;
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -4991,7 +5884,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -5016,7 +5909,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * string subnet_id = .. ;
+     * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
      * </pre>
      *
      * <code>string predefined_target = 9;</code>
@@ -5626,6 +6519,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the security rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -5642,6 +6539,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the security rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -5659,6 +6560,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the security rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -5674,6 +6579,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the security rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -5684,6 +6593,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the security rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -5727,6 +6640,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5745,6 +6662,10 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5753,6 +6674,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5766,6 +6691,10 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -5787,6 +6716,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5806,6 +6739,10 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -5821,6 +6758,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rule labels as `` key:value `` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 2 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -5833,6 +6774,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private int direction_ = 0;
       /**
+       * <pre>
+       * The direction of network traffic allowed by this rule.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for direction.
        */
@@ -5840,6 +6785,10 @@ public final class SecurityGroupServiceOuterClass {
         return direction_;
       }
       /**
+       * <pre>
+       * The direction of network traffic allowed by this rule.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for direction to set.
        * @return This builder for chaining.
@@ -5851,6 +6800,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The direction of network traffic allowed by this rule.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
        * @return The direction.
        */
@@ -5861,6 +6814,10 @@ public final class SecurityGroupServiceOuterClass {
         return result == null ? yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupRule.Direction.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The direction of network traffic allowed by this rule.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The direction to set.
        * @return This builder for chaining.
@@ -5875,6 +6832,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The direction of network traffic allowed by this rule.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.SecurityGroupRule.Direction direction = 3 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5890,7 +6851,7 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRange.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.PortRangeOrBuilder> portsBuilder_;
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5901,7 +6862,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5916,7 +6877,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5936,7 +6897,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5954,7 +6915,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5976,7 +6937,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -5994,7 +6955,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -6006,7 +6967,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -6021,7 +6982,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * null value means any port
+       * The range of ports that allow traffic to pass through. Null value means any port.
        * </pre>
        *
        * <code>.yandex.cloud.vpc.v1.PortRange ports = 4;</code>
@@ -6041,6 +7002,10 @@ public final class SecurityGroupServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @return Whether the protocolName field is set.
        */
@@ -6049,6 +7014,10 @@ public final class SecurityGroupServiceOuterClass {
         return protocolCase_ == 5;
       }
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @return The protocolName.
        */
@@ -6071,6 +7040,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @return The bytes for protocolName.
        */
@@ -6094,6 +7067,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @param value The protocolName to set.
        * @return This builder for chaining.
@@ -6109,6 +7086,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @return This builder for chaining.
        */
@@ -6121,6 +7102,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Protocol name.
+       * </pre>
+       *
        * <code>string protocol_name = 5;</code>
        * @param value The bytes for protocolName to set.
        * @return This builder for chaining.
@@ -6138,6 +7123,10 @@ public final class SecurityGroupServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+       * </pre>
+       *
        * <code>int64 protocol_number = 6;</code>
        * @return Whether the protocolNumber field is set.
        */
@@ -6145,6 +7134,10 @@ public final class SecurityGroupServiceOuterClass {
         return protocolCase_ == 6;
       }
       /**
+       * <pre>
+       * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+       * </pre>
+       *
        * <code>int64 protocol_number = 6;</code>
        * @return The protocolNumber.
        */
@@ -6155,6 +7148,10 @@ public final class SecurityGroupServiceOuterClass {
         return 0L;
       }
       /**
+       * <pre>
+       * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+       * </pre>
+       *
        * <code>int64 protocol_number = 6;</code>
        * @param value The protocolNumber to set.
        * @return This builder for chaining.
@@ -6166,6 +7163,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Protocol number from [IANA protocol numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml).
+       * </pre>
+       *
        * <code>int64 protocol_number = 6;</code>
        * @return This builder for chaining.
        */
@@ -6181,6 +7182,10 @@ public final class SecurityGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocksOrBuilder> cidrBlocksBuilder_;
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        * @return Whether the cidrBlocks field is set.
        */
@@ -6189,6 +7194,10 @@ public final class SecurityGroupServiceOuterClass {
         return targetCase_ == 7;
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        * @return The cidrBlocks.
        */
@@ -6207,6 +7216,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder setCidrBlocks(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks value) {
@@ -6223,6 +7236,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder setCidrBlocks(
@@ -6237,6 +7254,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder mergeCidrBlocks(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks value) {
@@ -6259,6 +7280,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public Builder clearCidrBlocks() {
@@ -6278,12 +7303,20 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.CidrBlocks.Builder getCidrBlocksBuilder() {
         return getCidrBlocksFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       @java.lang.Override
@@ -6298,6 +7331,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * CIDR blocks to allow to recieve or send traffic.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.CidrBlocks cidr_blocks = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6320,6 +7357,10 @@ public final class SecurityGroupServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @return Whether the securityGroupId field is set.
        */
@@ -6328,6 +7369,10 @@ public final class SecurityGroupServiceOuterClass {
         return targetCase_ == 8;
       }
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @return The securityGroupId.
        */
@@ -6350,6 +7395,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @return The bytes for securityGroupId.
        */
@@ -6373,6 +7422,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -6388,6 +7441,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @return This builder for chaining.
        */
@@ -6400,6 +7457,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to add rule to.
+       * </pre>
+       *
        * <code>string security_group_id = 8;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -6418,7 +7479,7 @@ public final class SecurityGroupServiceOuterClass {
 
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6430,7 +7491,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6456,7 +7517,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6483,7 +7544,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6502,7 +7563,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6518,7 +7579,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * string subnet_id = .. ;
+       * Predefined target. See [security groups rules](/docs/vpc/concepts/security-groups#security-groups-rules) for more information.
        * </pre>
        *
        * <code>string predefined_target = 9;</code>
@@ -6594,11 +7655,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the security group that is being created.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group that is being created.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -6692,6 +7761,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the security group that is being created.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
@@ -6709,6 +7782,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group that is being created.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -7031,6 +8108,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the security group that is being created.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The securityGroupId.
        */
@@ -7047,6 +8128,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group that is being created.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The bytes for securityGroupId.
        */
@@ -7064,6 +8149,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group that is being created.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -7079,6 +8168,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group that is being created.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7089,6 +8182,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group that is being created.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -7162,11 +8259,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the security group to update.
+     * To get the security group ID make a [SecurityGroupService.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group to update.
+     * To get the security group ID make a [SecurityGroupService.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for securityGroupId.
      */
@@ -7174,26 +8281,48 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -7201,11 +8330,19 @@ public final class SecurityGroupServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the security group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the security group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -7213,10 +8350,28 @@ public final class SecurityGroupServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -7228,11 +8383,29 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -7240,6 +8413,15 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -7248,7 +8430,7 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7257,7 +8439,7 @@ public final class SecurityGroupServiceOuterClass {
         getRuleSpecsList();
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7265,7 +8447,7 @@ public final class SecurityGroupServiceOuterClass {
     yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getRuleSpecs(int index);
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7273,7 +8455,7 @@ public final class SecurityGroupServiceOuterClass {
     int getRuleSpecsCount();
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7282,7 +8464,7 @@ public final class SecurityGroupServiceOuterClass {
         getRuleSpecsOrBuilderList();
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7443,6 +8625,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the security group to update.
+     * To get the security group ID make a [SecurityGroupService.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The securityGroupId.
      */
@@ -7460,6 +8647,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group to update.
+     * To get the security group ID make a [SecurityGroupService.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for securityGroupId.
      */
@@ -7481,6 +8673,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return Whether the updateMask field is set.
      */
@@ -7489,6 +8685,10 @@ public final class SecurityGroupServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      * @return The updateMask.
      */
@@ -7497,6 +8697,10 @@ public final class SecurityGroupServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
@@ -7507,6 +8711,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The name.
      */
@@ -7524,6 +8733,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the security group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -7545,6 +8759,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the security group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -7562,6 +8780,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the security group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -7607,6 +8829,15 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -7625,6 +8856,15 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -7633,6 +8873,15 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -7646,6 +8895,15 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Security group labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
@@ -7665,7 +8923,7 @@ public final class SecurityGroupServiceOuterClass {
     private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> ruleSpecs_;
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7676,7 +8934,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7688,7 +8946,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7699,7 +8957,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -7710,7 +8968,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * all existing rules will be replaced with given list
+     * Updated rule list. All existing rules will be replaced with given list.
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8195,6 +9453,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the security group to update.
+       * To get the security group ID make a [SecurityGroupService.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The securityGroupId.
        */
@@ -8211,6 +9474,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to update.
+       * To get the security group ID make a [SecurityGroupService.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for securityGroupId.
        */
@@ -8228,6 +9496,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to update.
+       * To get the security group ID make a [SecurityGroupService.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -8243,6 +9516,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to update.
+       * To get the security group ID make a [SecurityGroupService.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -8253,6 +9531,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to update.
+       * To get the security group ID make a [SecurityGroupService.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -8273,6 +9556,10 @@ public final class SecurityGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return Whether the updateMask field is set.
        */
@@ -8280,6 +9567,10 @@ public final class SecurityGroupServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        * @return The updateMask.
        */
@@ -8291,6 +9582,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -8307,6 +9602,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -8321,6 +9620,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -8339,6 +9642,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -8353,6 +9660,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -8361,6 +9672,10 @@ public final class SecurityGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -8372,6 +9687,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8390,6 +9709,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The name.
        */
@@ -8406,6 +9730,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return The bytes for name.
        */
@@ -8423,6 +9752,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -8438,6 +9772,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @return This builder for chaining.
        */
@@ -8448,6 +9787,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the security group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -8466,6 +9810,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the security group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -8482,6 +9830,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the security group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -8499,6 +9851,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the security group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -8514,6 +9870,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the security group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -8524,6 +9884,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the security group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -8567,6 +9931,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -8585,6 +9958,15 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -8593,6 +9975,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -8606,6 +9997,15 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
@@ -8627,6 +10027,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -8646,6 +10055,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -8661,6 +10079,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security group labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [SecurityGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -8685,7 +10112,7 @@ public final class SecurityGroupServiceOuterClass {
 
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8699,7 +10126,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8713,7 +10140,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8727,7 +10154,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8748,7 +10175,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8766,7 +10193,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8786,7 +10213,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8807,7 +10234,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8825,7 +10252,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8843,7 +10270,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8862,7 +10289,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8879,7 +10306,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8896,7 +10323,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8907,7 +10334,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8921,7 +10348,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8936,7 +10363,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8947,7 +10374,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -8959,7 +10386,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * all existing rules will be replaced with given list
+       * Updated rule list. All existing rules will be replaced with given list.
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec rule_specs = 6;</code>
@@ -9040,11 +10467,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -9052,23 +10487,39 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @return A list containing the addedRuleIds.
      */
     java.util.List<java.lang.String>
         getAddedRuleIdsList();
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @return The count of addedRuleIds.
      */
     int getAddedRuleIdsCount();
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The addedRuleIds at the given index.
      */
     java.lang.String getAddedRuleIds(int index);
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the addedRuleIds at the given index.
@@ -9177,6 +10628,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
@@ -9194,6 +10649,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -9215,6 +10674,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int ADDED_RULE_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList addedRuleIds_;
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @return A list containing the addedRuleIds.
      */
@@ -9223,6 +10686,10 @@ public final class SecurityGroupServiceOuterClass {
       return addedRuleIds_;
     }
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @return The count of addedRuleIds.
      */
@@ -9230,6 +10697,10 @@ public final class SecurityGroupServiceOuterClass {
       return addedRuleIds_.size();
     }
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @param index The index of the element to return.
      * @return The addedRuleIds at the given index.
@@ -9238,6 +10709,10 @@ public final class SecurityGroupServiceOuterClass {
       return addedRuleIds_.get(index);
     }
     /**
+     * <pre>
+     * List of added security rules IDs.
+     * </pre>
+     *
      * <code>repeated string added_rule_ids = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the addedRuleIds at the given index.
@@ -9587,6 +11062,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The securityGroupId.
        */
@@ -9603,6 +11082,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The bytes for securityGroupId.
        */
@@ -9620,6 +11103,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -9635,6 +11122,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9645,6 +11136,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -9669,6 +11164,10 @@ public final class SecurityGroupServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @return A list containing the addedRuleIds.
        */
@@ -9677,6 +11176,10 @@ public final class SecurityGroupServiceOuterClass {
         return addedRuleIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @return The count of addedRuleIds.
        */
@@ -9684,6 +11187,10 @@ public final class SecurityGroupServiceOuterClass {
         return addedRuleIds_.size();
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param index The index of the element to return.
        * @return The addedRuleIds at the given index.
@@ -9692,6 +11199,10 @@ public final class SecurityGroupServiceOuterClass {
         return addedRuleIds_.get(index);
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the addedRuleIds at the given index.
@@ -9701,6 +11212,10 @@ public final class SecurityGroupServiceOuterClass {
         return addedRuleIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param index The index to set the value at.
        * @param value The addedRuleIds to set.
@@ -9717,6 +11232,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param value The addedRuleIds to add.
        * @return This builder for chaining.
@@ -9732,6 +11251,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param values The addedRuleIds to add.
        * @return This builder for chaining.
@@ -9745,6 +11268,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @return This builder for chaining.
        */
@@ -9755,6 +11282,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of added security rules IDs.
+       * </pre>
+       *
        * <code>repeated string added_rule_ids = 2;</code>
        * @param value The bytes of the addedRuleIds to add.
        * @return This builder for chaining.
@@ -9828,11 +11359,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -9841,7 +11380,7 @@ public final class SecurityGroupServiceOuterClass {
 
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -9851,7 +11390,7 @@ public final class SecurityGroupServiceOuterClass {
         getDeletionRuleIdsList();
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -9860,7 +11399,7 @@ public final class SecurityGroupServiceOuterClass {
     int getDeletionRuleIdsCount();
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -9870,7 +11409,7 @@ public final class SecurityGroupServiceOuterClass {
     java.lang.String getDeletionRuleIds(int index);
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -9881,24 +11420,44 @@ public final class SecurityGroupServiceOuterClass {
         getDeletionRuleIdsBytes(int index);
 
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> 
         getAdditionRuleSpecsList();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getAdditionRuleSpecs(int index);
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     int getAdditionRuleSpecsCount();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
         getAdditionRuleSpecsOrBuilderList();
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getAdditionRuleSpecsOrBuilder(
@@ -10018,6 +11577,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -10035,6 +11598,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -10057,7 +11624,7 @@ public final class SecurityGroupServiceOuterClass {
     private com.google.protobuf.LazyStringList deletionRuleIds_;
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10069,7 +11636,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10080,7 +11647,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10092,7 +11659,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     /**
      * <pre>
-     *list of rules ids to delete
+     * List of rules IDs to delete.
      * </pre>
      *
      * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10107,6 +11674,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int ADDITION_RULE_SPECS_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> additionRuleSpecs_;
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     @java.lang.Override
@@ -10114,6 +11685,10 @@ public final class SecurityGroupServiceOuterClass {
       return additionRuleSpecs_;
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     @java.lang.Override
@@ -10122,6 +11697,10 @@ public final class SecurityGroupServiceOuterClass {
       return additionRuleSpecs_;
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     @java.lang.Override
@@ -10129,6 +11708,10 @@ public final class SecurityGroupServiceOuterClass {
       return additionRuleSpecs_.size();
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     @java.lang.Override
@@ -10136,6 +11719,10 @@ public final class SecurityGroupServiceOuterClass {
       return additionRuleSpecs_.get(index);
     }
     /**
+     * <pre>
+     * Security rules specifications.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
      */
     @java.lang.Override
@@ -10539,6 +12126,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -10555,6 +12146,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -10572,6 +12167,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -10587,6 +12186,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -10597,6 +12200,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -10622,7 +12229,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10634,7 +12241,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10645,7 +12252,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10657,7 +12264,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10670,7 +12277,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10690,7 +12297,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10709,7 +12316,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10726,7 +12333,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10740,7 +12347,7 @@ public final class SecurityGroupServiceOuterClass {
       }
       /**
        * <pre>
-       *list of rules ids to delete
+       * List of rules IDs to delete.
        * </pre>
        *
        * <code>repeated string deletion_rule_ids = 2;</code>
@@ -10772,6 +12379,10 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> additionRuleSpecsBuilder_;
 
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec> getAdditionRuleSpecsList() {
@@ -10782,6 +12393,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public int getAdditionRuleSpecsCount() {
@@ -10792,6 +12407,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec getAdditionRuleSpecs(int index) {
@@ -10802,6 +12421,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder setAdditionRuleSpecs(
@@ -10819,6 +12442,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder setAdditionRuleSpecs(
@@ -10833,6 +12460,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder addAdditionRuleSpecs(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec value) {
@@ -10849,6 +12480,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder addAdditionRuleSpecs(
@@ -10866,6 +12501,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder addAdditionRuleSpecs(
@@ -10880,6 +12519,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder addAdditionRuleSpecs(
@@ -10894,6 +12537,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder addAllAdditionRuleSpecs(
@@ -10909,6 +12556,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder clearAdditionRuleSpecs() {
@@ -10922,6 +12573,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public Builder removeAdditionRuleSpecs(int index) {
@@ -10935,6 +12590,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder getAdditionRuleSpecsBuilder(
@@ -10942,6 +12601,10 @@ public final class SecurityGroupServiceOuterClass {
         return getAdditionRuleSpecsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder getAdditionRuleSpecsOrBuilder(
@@ -10952,6 +12615,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpecOrBuilder> 
@@ -10963,6 +12630,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder addAdditionRuleSpecsBuilder() {
@@ -10970,6 +12641,10 @@ public final class SecurityGroupServiceOuterClass {
             yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder addAdditionRuleSpecsBuilder(
@@ -10978,6 +12653,10 @@ public final class SecurityGroupServiceOuterClass {
             index, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Security rules specifications.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.SecurityGroupRuleSpec addition_rule_specs = 3;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.SecurityGroupRuleSpec.Builder> 
@@ -11056,11 +12735,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SecurityGroup to update rule in.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the SecurityGroup to update rule in.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -11068,11 +12755,19 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * ID of the rule to update.
+     * </pre>
+     *
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The ruleId.
      */
     java.lang.String getRuleId();
     /**
+     * <pre>
+     * ID of the rule to update.
+     * </pre>
+     *
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for ruleId.
      */
@@ -11080,26 +12775,46 @@ public final class SecurityGroupServiceOuterClass {
         getRuleIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      * @return Whether the updateMask field is set.
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      * @return The updateMask.
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New description of the rule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the rule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -11107,10 +12822,28 @@ public final class SecurityGroupServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     boolean containsLabels(
@@ -11122,11 +12855,29 @@ public final class SecurityGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -11134,6 +12885,15 @@ public final class SecurityGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -11280,6 +13040,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the SecurityGroup to update rule in.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -11297,6 +13061,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SecurityGroup to update rule in.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -11318,6 +13086,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int RULE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object ruleId_;
     /**
+     * <pre>
+     * ID of the rule to update.
+     * </pre>
+     *
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The ruleId.
      */
@@ -11335,6 +13107,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the rule to update.
+     * </pre>
+     *
      * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for ruleId.
      */
@@ -11356,6 +13132,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 3;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      * @return Whether the updateMask field is set.
      */
@@ -11364,6 +13144,10 @@ public final class SecurityGroupServiceOuterClass {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      * @return The updateMask.
      */
@@ -11372,6 +13156,10 @@ public final class SecurityGroupServiceOuterClass {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     @java.lang.Override
@@ -11382,6 +13170,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the rule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -11399,6 +13191,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the rule.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -11444,6 +13240,15 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
 
@@ -11462,6 +13267,15 @@ public final class SecurityGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -11470,6 +13284,15 @@ public final class SecurityGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -11483,6 +13306,15 @@ public final class SecurityGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Rule labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5;</code>
      */
     @java.lang.Override
@@ -11917,6 +13749,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the SecurityGroup to update rule in.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -11933,6 +13769,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup to update rule in.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -11950,6 +13790,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup to update rule in.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -11965,6 +13809,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup to update rule in.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -11975,6 +13823,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup to update rule in.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -11993,6 +13845,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object ruleId_ = "";
       /**
+       * <pre>
+       * ID of the rule to update.
+       * </pre>
+       *
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The ruleId.
        */
@@ -12009,6 +13865,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the rule to update.
+       * </pre>
+       *
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for ruleId.
        */
@@ -12026,6 +13886,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the rule to update.
+       * </pre>
+       *
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The ruleId to set.
        * @return This builder for chaining.
@@ -12041,6 +13905,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the rule to update.
+       * </pre>
+       *
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -12051,6 +13919,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the rule to update.
+       * </pre>
+       *
        * <code>string rule_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for ruleId to set.
        * @return This builder for chaining.
@@ -12071,6 +13943,10 @@ public final class SecurityGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        * @return Whether the updateMask field is set.
        */
@@ -12078,6 +13954,10 @@ public final class SecurityGroupServiceOuterClass {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        * @return The updateMask.
        */
@@ -12089,6 +13969,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -12105,6 +13989,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(
@@ -12119,6 +14007,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -12137,6 +14029,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder clearUpdateMask() {
@@ -12151,6 +14047,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -12159,6 +14059,10 @@ public final class SecurityGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -12170,6 +14074,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12188,6 +14096,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the rule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -12204,6 +14116,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the rule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -12221,6 +14137,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the rule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -12236,6 +14156,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the rule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -12246,6 +14170,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the rule.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -12289,6 +14217,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -12307,6 +14244,15 @@ public final class SecurityGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -12315,6 +14261,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -12328,6 +14283,15 @@ public final class SecurityGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       @java.lang.Override
@@ -12349,6 +14313,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -12368,6 +14341,15 @@ public final class SecurityGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
       public Builder putLabels(
@@ -12383,6 +14365,15 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Rule labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5;</code>
        */
 
@@ -12450,11 +14441,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -12462,11 +14461,19 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * ID of the rule that is being updated.
+     * </pre>
+     *
      * <code>string rule_id = 2;</code>
      * @return The ruleId.
      */
     java.lang.String getRuleId();
     /**
+     * <pre>
+     * ID of the rule that is being updated.
+     * </pre>
+     *
      * <code>string rule_id = 2;</code>
      * @return The bytes for ruleId.
      */
@@ -12567,6 +14574,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
@@ -12584,6 +14595,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being updated with new rules.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -12605,6 +14620,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int RULE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object ruleId_;
     /**
+     * <pre>
+     * ID of the rule that is being updated.
+     * </pre>
+     *
      * <code>string rule_id = 2;</code>
      * @return The ruleId.
      */
@@ -12622,6 +14641,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the rule that is being updated.
+     * </pre>
+     *
      * <code>string rule_id = 2;</code>
      * @return The bytes for ruleId.
      */
@@ -12961,6 +14984,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The securityGroupId.
        */
@@ -12977,6 +15004,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The bytes for securityGroupId.
        */
@@ -12994,6 +15025,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -13009,6 +15044,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -13019,6 +15058,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being updated with new rules.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -13037,6 +15080,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object ruleId_ = "";
       /**
+       * <pre>
+       * ID of the rule that is being updated.
+       * </pre>
+       *
        * <code>string rule_id = 2;</code>
        * @return The ruleId.
        */
@@ -13053,6 +15100,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the rule that is being updated.
+       * </pre>
+       *
        * <code>string rule_id = 2;</code>
        * @return The bytes for ruleId.
        */
@@ -13070,6 +15121,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the rule that is being updated.
+       * </pre>
+       *
        * <code>string rule_id = 2;</code>
        * @param value The ruleId to set.
        * @return This builder for chaining.
@@ -13085,6 +15140,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the rule that is being updated.
+       * </pre>
+       *
        * <code>string rule_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -13095,6 +15154,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the rule that is being updated.
+       * </pre>
+       *
        * <code>string rule_id = 2;</code>
        * @param value The bytes for ruleId to set.
        * @return This builder for chaining.
@@ -13168,11 +15231,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the security group to delete.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group to delete.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -13266,6 +15339,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the security group to delete.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -13283,6 +15361,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group to delete.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -13605,6 +15688,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the security group to delete.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -13621,6 +15709,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to delete.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -13638,6 +15731,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to delete.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -13653,6 +15751,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to delete.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -13663,6 +15766,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to delete.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -13736,11 +15844,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being deleted.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being deleted.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -13834,6 +15950,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being deleted.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
@@ -13851,6 +15971,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SecurityGroup that is being deleted.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -14173,6 +16297,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being deleted.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The securityGroupId.
        */
@@ -14189,6 +16317,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being deleted.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The bytes for securityGroupId.
        */
@@ -14206,6 +16338,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being deleted.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -14221,6 +16357,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being deleted.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -14231,6 +16371,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SecurityGroup that is being deleted.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -14304,11 +16448,21 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -14316,17 +16470,34 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListSecurityGroupOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -14432,6 +16603,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -14449,6 +16625,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [SecurityGroup.List] request.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -14470,6 +16651,13 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListSecurityGroupOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      * @return The pageSize.
      */
@@ -14481,6 +16669,11 @@ public final class SecurityGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The pageToken.
      */
@@ -14498,6 +16691,11 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3;</code>
      * @return The bytes for pageToken.
      */
@@ -14855,6 +17053,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -14871,6 +17074,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -14888,6 +17096,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -14903,6 +17116,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -14913,6 +17131,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [SecurityGroup.List] request.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -14931,6 +17154,13 @@ public final class SecurityGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSecurityGroupOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return The pageSize.
        */
@@ -14939,6 +17169,13 @@ public final class SecurityGroupServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSecurityGroupOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -14950,6 +17187,13 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListSecurityGroupOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        * @return This builder for chaining.
        */
@@ -14962,6 +17206,11 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The pageToken.
        */
@@ -14978,6 +17227,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return The bytes for pageToken.
        */
@@ -14995,6 +17249,11 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -15010,6 +17269,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @return This builder for chaining.
        */
@@ -15020,6 +17284,11 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListSecurityGroupOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3;</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -15093,35 +17362,69 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -15229,6 +17532,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -15236,6 +17543,10 @@ public final class SecurityGroupServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -15244,6 +17555,10 @@ public final class SecurityGroupServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -15251,6 +17566,10 @@ public final class SecurityGroupServiceOuterClass {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -15258,6 +17577,10 @@ public final class SecurityGroupServiceOuterClass {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified security group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     @java.lang.Override
@@ -15269,6 +17592,13 @@ public final class SecurityGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -15286,6 +17616,13 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -15676,6 +18013,10 @@ public final class SecurityGroupServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -15686,6 +18027,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -15696,6 +18041,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -15706,6 +18055,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -15723,6 +18076,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -15737,6 +18094,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -15753,6 +18114,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -15770,6 +18135,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -15784,6 +18153,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -15798,6 +18171,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -15813,6 +18190,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -15826,6 +18207,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -15839,6 +18224,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -15846,6 +18235,10 @@ public final class SecurityGroupServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -15856,6 +18249,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -15867,6 +18264,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -15874,6 +18275,10 @@ public final class SecurityGroupServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -15882,6 +18287,10 @@ public final class SecurityGroupServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified security group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -15905,6 +18314,13 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -15921,6 +18337,13 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -15938,6 +18361,13 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -15953,6 +18383,13 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -15963,6 +18400,13 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListSecurityGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListSecurityGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -16036,11 +18480,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the security group to move.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group to move.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -16048,11 +18500,19 @@ public final class SecurityGroupServiceOuterClass {
         getSecurityGroupIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder to move security group to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The destinationFolderId.
      */
     java.lang.String getDestinationFolderId();
     /**
+     * <pre>
+     * ID of the folder to move security group to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for destinationFolderId.
      */
@@ -16153,6 +18613,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the security group to move.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The securityGroupId.
      */
@@ -16170,6 +18634,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group to move.
+     * </pre>
+     *
      * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for securityGroupId.
      */
@@ -16191,6 +18659,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object destinationFolderId_;
     /**
+     * <pre>
+     * ID of the folder to move security group to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The destinationFolderId.
      */
@@ -16208,6 +18680,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to move security group to.
+     * </pre>
+     *
      * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for destinationFolderId.
      */
@@ -16547,6 +19023,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the security group to move.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The securityGroupId.
        */
@@ -16563,6 +19043,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to move.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for securityGroupId.
        */
@@ -16580,6 +19064,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group to move.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -16595,6 +19083,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to move.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -16605,6 +19097,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group to move.
+       * </pre>
+       *
        * <code>string security_group_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.
@@ -16623,6 +19119,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object destinationFolderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to move security group to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The destinationFolderId.
        */
@@ -16639,6 +19139,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to move security group to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for destinationFolderId.
        */
@@ -16656,6 +19160,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to move security group to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The destinationFolderId to set.
        * @return This builder for chaining.
@@ -16671,6 +19179,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to move security group to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -16681,6 +19193,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to move security group to.
+       * </pre>
+       *
        * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for destinationFolderId to set.
        * @return This builder for chaining.
@@ -16754,11 +19270,19 @@ public final class SecurityGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the security group that is being moved.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
     java.lang.String getSecurityGroupId();
     /**
+     * <pre>
+     * ID of the security group that is being moved.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -16852,6 +19376,10 @@ public final class SecurityGroupServiceOuterClass {
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
+     * <pre>
+     * ID of the security group that is being moved.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The securityGroupId.
      */
@@ -16869,6 +19397,10 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the security group that is being moved.
+     * </pre>
+     *
      * <code>string security_group_id = 1;</code>
      * @return The bytes for securityGroupId.
      */
@@ -17191,6 +19723,10 @@ public final class SecurityGroupServiceOuterClass {
 
       private java.lang.Object securityGroupId_ = "";
       /**
+       * <pre>
+       * ID of the security group that is being moved.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The securityGroupId.
        */
@@ -17207,6 +19743,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group that is being moved.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return The bytes for securityGroupId.
        */
@@ -17224,6 +19764,10 @@ public final class SecurityGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the security group that is being moved.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The securityGroupId to set.
        * @return This builder for chaining.
@@ -17239,6 +19783,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group that is being moved.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -17249,6 +19797,10 @@ public final class SecurityGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the security group that is being moved.
+       * </pre>
+       *
        * <code>string security_group_id = 1;</code>
        * @param value The bytes for securityGroupId to set.
        * @return This builder for chaining.

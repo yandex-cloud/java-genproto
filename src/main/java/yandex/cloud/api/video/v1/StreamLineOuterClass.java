@@ -9993,7 +9993,7 @@ public final class StreamLineOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/video/v1/stream_line.prot" +
       "o\022\025yandex.cloud.video.v1\032\037google/protobu" +
-      "f/timestamp.proto\"\217\006\n\nStreamLine\022\n\n\002id\030\001" +
+      "f/timestamp.proto\"\264\006\n\nStreamLine\022\n\n\002id\030\001" +
       " \001(\t\022\022\n\nchannel_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022" +
       "\024\n\014thumbnail_id\030\004 \001(\t\022:\n\trtmp_push\030\350\007 \001(" +
       "\0132$.yandex.cloud.video.v1.RTMPPushInputH" +
@@ -10013,19 +10013,20 @@ public final class StreamLineOuterClass {
       "(\0132-.yandex.cloud.video.v1.StreamLine.La" +
       "belsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
       "\005value\030\002 \001(\t:\0028\001B\014\n\ninput_typeB\013\n\tline_t" +
-      "ype\"\034\n\rPushStreamKey\022\013\n\003key\030\001 \001(\t\"\034\n\rRTM" +
-      "PPushInput\022\013\n\003url\030\001 \001(\t\"\033\n\014SRTPushInput\022" +
-      "\013\n\003url\030\001 \001(\t\"\034\n\rRTMPPullInput\022\013\n\003url\030\001 \001" +
-      "(\t\"\033\n\014SRTPullInput\022\013\n\003url\030\001 \001(\t\"\033\n\014TCPPu" +
-      "llInput\022\013\n\003url\030\001 \001(\t\"\034\n\rRTSPPullInput\022\013\n" +
-      "\003url\030\001 \001(\t\"\014\n\nManualLine\"\233\001\n\010AutoLine\022>\n" +
-      "\006status\030\001 \001(\0162..yandex.cloud.video.v1.Au" +
-      "toLine.AutoLineStatus\"O\n\016AutoLineStatus\022" +
-      " \n\034AUTO_LINE_STATUS_UNSPECIFIED\020\000\022\017\n\013DEA" +
-      "CTIVATED\020\001\022\n\n\006ACTIVE\020\002B\\\n\031yandex.cloud.a" +
-      "pi.video.v1Z?github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/video/v1;videob\006pr" +
-      "oto3"
+      "ypeJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\355\007\020\356\007J\006\010\357\007\020\320\017J\004\010\005\020d" +
+      "\"\034\n\rPushStreamKey\022\013\n\003key\030\001 \001(\t\"\034\n\rRTMPPu" +
+      "shInput\022\013\n\003url\030\001 \001(\t\"\033\n\014SRTPushInput\022\013\n\003" +
+      "url\030\001 \001(\t\"\034\n\rRTMPPullInput\022\013\n\003url\030\001 \001(\t\"" +
+      "\033\n\014SRTPullInput\022\013\n\003url\030\001 \001(\t\"\033\n\014TCPPullI" +
+      "nput\022\013\n\003url\030\001 \001(\t\"\034\n\rRTSPPullInput\022\013\n\003ur" +
+      "l\030\001 \001(\t\"\014\n\nManualLine\"\233\001\n\010AutoLine\022>\n\006st" +
+      "atus\030\001 \001(\0162..yandex.cloud.video.v1.AutoL" +
+      "ine.AutoLineStatus\"O\n\016AutoLineStatus\022 \n\034" +
+      "AUTO_LINE_STATUS_UNSPECIFIED\020\000\022\017\n\013DEACTI" +
+      "VATED\020\001\022\n\n\006ACTIVE\020\002B\\\n\031yandex.cloud.api." +
+      "video.v1Z?github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/video/v1;videob\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

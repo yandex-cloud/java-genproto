@@ -7332,6 +7332,47 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfigSet2OrBuilder getOpensearchConfigSet2OrBuilder();
 
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @return A list containing the keystoreSettings.
+     */
+    java.util.List<java.lang.String>
+        getKeystoreSettingsList();
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @return The count of keystoreSettings.
+     */
+    int getKeystoreSettingsCount();
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @param index The index of the element to return.
+     * @return The keystoreSettings at the given index.
+     */
+    java.lang.String getKeystoreSettings(int index);
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the keystoreSettings at the given index.
+     */
+    com.google.protobuf.ByteString
+        getKeystoreSettingsBytes(int index);
+
     public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.OpenSearch.ConfigCase getConfigCase();
   }
   /**
@@ -7353,6 +7394,7 @@ public final class ClusterOuterClass {
     private OpenSearch() {
       plugins_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       nodeGroups_ = java.util.Collections.emptyList();
+      keystoreSettings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -7418,6 +7460,15 @@ public final class ClusterOuterClass {
               configCase_ = 3;
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                keystoreSettings_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              keystoreSettings_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7438,6 +7489,9 @@ public final class ClusterOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           nodeGroups_ = java.util.Collections.unmodifiableList(nodeGroups_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          keystoreSettings_ = keystoreSettings_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9768,6 +9822,57 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfigSet2.getDefaultInstance();
     }
 
+    public static final int KEYSTORE_SETTINGS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList keystoreSettings_;
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @return A list containing the keystoreSettings.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getKeystoreSettingsList() {
+      return keystoreSettings_;
+    }
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @return The count of keystoreSettings.
+     */
+    public int getKeystoreSettingsCount() {
+      return keystoreSettings_.size();
+    }
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @param index The index of the element to return.
+     * @return The keystoreSettings at the given index.
+     */
+    public java.lang.String getKeystoreSettings(int index) {
+      return keystoreSettings_.get(index);
+    }
+    /**
+     * <pre>
+     * Keystore entries names.
+     * </pre>
+     *
+     * <code>repeated string keystore_settings = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the keystoreSettings at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getKeystoreSettingsBytes(int index) {
+      return keystoreSettings_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9790,6 +9895,9 @@ public final class ClusterOuterClass {
       }
       if (configCase_ == 3) {
         output.writeMessage(3, (yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfigSet2) config_);
+      }
+      for (int i = 0; i < keystoreSettings_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, keystoreSettings_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -9816,6 +9924,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (yandex.cloud.api.mdb.opensearch.v1.Opensearch.OpenSearchConfigSet2) config_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < keystoreSettings_.size(); i++) {
+          dataSize += computeStringSizeNoTag(keystoreSettings_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getKeystoreSettingsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9835,6 +9951,8 @@ public final class ClusterOuterClass {
           .equals(other.getPluginsList())) return false;
       if (!getNodeGroupsList()
           .equals(other.getNodeGroupsList())) return false;
+      if (!getKeystoreSettingsList()
+          .equals(other.getKeystoreSettingsList())) return false;
       if (!getConfigCase().equals(other.getConfigCase())) return false;
       switch (configCase_) {
         case 3:
@@ -9862,6 +9980,10 @@ public final class ClusterOuterClass {
       if (getNodeGroupsCount() > 0) {
         hash = (37 * hash) + NODE_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getNodeGroupsList().hashCode();
+      }
+      if (getKeystoreSettingsCount() > 0) {
+        hash = (37 * hash) + KEYSTORE_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeystoreSettingsList().hashCode();
       }
       switch (configCase_) {
         case 3:
@@ -10017,6 +10139,8 @@ public final class ClusterOuterClass {
         } else {
           nodeGroupsBuilder_.clear();
         }
+        keystoreSettings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         configCase_ = 0;
         config_ = null;
         return this;
@@ -10067,6 +10191,11 @@ public final class ClusterOuterClass {
             result.config_ = opensearchConfigSet2Builder_.build();
           }
         }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          keystoreSettings_ = keystoreSettings_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.keystoreSettings_ = keystoreSettings_;
         result.configCase_ = configCase_;
         onBuilt();
         return result;
@@ -10151,6 +10280,16 @@ public final class ClusterOuterClass {
               nodeGroupsBuilder_.addAllMessages(other.nodeGroups_);
             }
           }
+        }
+        if (!other.keystoreSettings_.isEmpty()) {
+          if (keystoreSettings_.isEmpty()) {
+            keystoreSettings_ = other.keystoreSettings_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureKeystoreSettingsIsMutable();
+            keystoreSettings_.addAll(other.keystoreSettings_);
+          }
+          onChanged();
         }
         switch (other.getConfigCase()) {
           case OPENSEARCH_CONFIG_SET_2: {
@@ -10803,6 +10942,152 @@ public final class ClusterOuterClass {
         configCase_ = 3;
         onChanged();;
         return opensearchConfigSet2Builder_;
+      }
+
+      private com.google.protobuf.LazyStringList keystoreSettings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureKeystoreSettingsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          keystoreSettings_ = new com.google.protobuf.LazyStringArrayList(keystoreSettings_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @return A list containing the keystoreSettings.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getKeystoreSettingsList() {
+        return keystoreSettings_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @return The count of keystoreSettings.
+       */
+      public int getKeystoreSettingsCount() {
+        return keystoreSettings_.size();
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param index The index of the element to return.
+       * @return The keystoreSettings at the given index.
+       */
+      public java.lang.String getKeystoreSettings(int index) {
+        return keystoreSettings_.get(index);
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the keystoreSettings at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getKeystoreSettingsBytes(int index) {
+        return keystoreSettings_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The keystoreSettings to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeystoreSettings(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureKeystoreSettingsIsMutable();
+        keystoreSettings_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param value The keystoreSettings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKeystoreSettings(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureKeystoreSettingsIsMutable();
+        keystoreSettings_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param values The keystoreSettings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllKeystoreSettings(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureKeystoreSettingsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, keystoreSettings_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeystoreSettings() {
+        keystoreSettings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keystore entries names.
+       * </pre>
+       *
+       * <code>repeated string keystore_settings = 4;</code>
+       * @param value The bytes of the keystoreSettings to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKeystoreSettingsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureKeystoreSettingsIsMutable();
+        keystoreSettings_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21160,10 +21445,10 @@ public final class ClusterOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/mdb/opensearch/v1/cluster" +
       ".proto\022\036yandex.cloud.mdb.opensearch.v1\032\037" +
-      "google/protobuf/timestamp.proto\0320yandex/" +
-      "cloud/mdb/opensearch/v1/maintenance.prot" +
-      "o\0326yandex/cloud/mdb/opensearch/v1/config" +
-      "/opensearch.proto\"\310\010\n\007Cluster\022\n\n\002id\030\001 \001(" +
+      "google/protobuf/timestamp.proto\0326yandex/" +
+      "cloud/mdb/opensearch/v1/config/opensearc" +
+      "h.proto\0320yandex/cloud/mdb/opensearch/v1/" +
+      "maintenance.proto\"\310\010\n\007Cluster\022\n\n\002id\030\001 \001(" +
       "\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\013" +
       "2\032.google.protobuf.Timestamp\022\014\n\004name\030\004 \001" +
       "(\t\022\023\n\013description\030\005 \001(\t\022C\n\006labels\030\006 \003(\0132" +
@@ -21197,65 +21482,66 @@ public final class ClusterOuterClass {
       "dex.cloud.mdb.opensearch.v1.OpenSearch\022>" +
       "\n\ndashboards\030\003 \001(\0132*.yandex.cloud.mdb.op" +
       "ensearch.v1.Dashboards\0226\n\006access\030\004 \001(\0132&" +
-      ".yandex.cloud.mdb.opensearch.v1.Access\"\235" +
+      ".yandex.cloud.mdb.opensearch.v1.Access\"\270" +
       "\004\n\nOpenSearch\022\017\n\007plugins\030\001 \003(\t\022I\n\013node_g" +
       "roups\030\002 \003(\01324.yandex.cloud.mdb.opensearc" +
       "h.v1.OpenSearch.NodeGroup\022u\n\027opensearch_" +
       "config_set_2\030\003 \001(\0132;.yandex.cloud.mdb.op" +
       "ensearch.v1.config.OpenSearchConfigSet2H" +
-      "\000R\025opensearchConfigSet_2\032\361\001\n\tNodeGroup\022\014" +
-      "\n\004name\030\001 \001(\t\022<\n\tresources\030\002 \001(\0132).yandex" +
-      ".cloud.mdb.opensearch.v1.Resources\022\023\n\013ho" +
-      "sts_count\030\003 \001(\003\022\020\n\010zone_ids\030\004 \003(\t\022\022\n\nsub" +
-      "net_ids\030\005 \003(\t\022\030\n\020assign_public_ip\030\006 \001(\010\022" +
-      "C\n\005roles\030\007 \003(\01624.yandex.cloud.mdb.opense" +
-      "arch.v1.OpenSearch.GroupRole\">\n\tGroupRol" +
-      "e\022\032\n\026GROUP_ROLE_UNSPECIFIED\020\000\022\010\n\004DATA\020\001\022" +
-      "\013\n\007MANAGER\020\002B\010\n\006config\"\206\002\n\nDashboards\022I\n" +
-      "\013node_groups\030\002 \003(\01324.yandex.cloud.mdb.op" +
-      "ensearch.v1.Dashboards.NodeGroup\032\254\001\n\tNod" +
-      "eGroup\022\014\n\004name\030\001 \001(\t\022<\n\tresources\030\002 \001(\0132" +
-      ").yandex.cloud.mdb.opensearch.v1.Resourc" +
-      "es\022\023\n\013hosts_count\030\003 \001(\003\022\020\n\010zone_ids\030\004 \003(" +
-      "\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_public_i" +
-      "p\030\006 \001(\010\"P\n\tResources\022\032\n\022resource_preset_" +
-      "id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type" +
-      "_id\030\003 \001(\t\"\254\007\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclus" +
-      "ter_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tresourc" +
-      "es\030\004 \001(\0132).yandex.cloud.mdb.opensearch.v" +
-      "1.Resources\0227\n\004type\030\005 \001(\0162).yandex.cloud" +
-      ".mdb.opensearch.v1.Host.Type\022;\n\006health\030\006" +
-      " \001(\0162+.yandex.cloud.mdb.opensearch.v1.Ho" +
-      "st.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_p" +
-      "ublic_ip\030\t \001(\010\022B\n\006system\030\n \001(\01322.yandex." +
-      "cloud.mdb.opensearch.v1.Host.SystemMetri" +
-      "cs\022\022\n\nnode_group\030\013 \001(\t\022C\n\005roles\030\014 \003(\01624." +
-      "yandex.cloud.mdb.opensearch.v1.OpenSearc" +
-      "h.GroupRole\032,\n\tCPUMetric\022\021\n\ttimestamp\030\001 " +
-      "\001(\003\022\014\n\004used\030\002 \001(\001\032>\n\014MemoryMetric\022\021\n\ttim" +
-      "estamp\030\001 \001(\003\022\014\n\004used\030\002 \001(\003\022\r\n\005total\030\003 \001(" +
-      "\003\032<\n\nDiskMetric\022\021\n\ttimestamp\030\001 \001(\003\022\014\n\004us" +
-      "ed\030\002 \001(\003\022\r\n\005total\030\003 \001(\003\032\316\001\n\rSystemMetric" +
-      "s\022;\n\003cpu\030\001 \001(\0132..yandex.cloud.mdb.opense" +
-      "arch.v1.Host.CPUMetric\022A\n\006memory\030\002 \001(\01321" +
-      ".yandex.cloud.mdb.opensearch.v1.Host.Mem" +
-      "oryMetric\022=\n\004disk\030\003 \001(\0132/.yandex.cloud.m" +
-      "db.opensearch.v1.Host.DiskMetric\"8\n\006Heal" +
-      "th\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
-      "DEGRADED\020\003\"<\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000" +
-      "\022\016\n\nOPENSEARCH\020\001\022\016\n\nDASHBOARDS\020\002\"3\n\006Acce" +
-      "ss\022\025\n\rdata_transfer\030\001 \001(\010\022\022\n\nserverless\030" +
-      "\002 \001(\010Bs\n\"yandex.cloud.api.mdb.opensearch" +
-      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/opensearch/v1;opensear" +
-      "chb\006proto3"
+      "\000R\025opensearchConfigSet_2\022\031\n\021keystore_set" +
+      "tings\030\004 \003(\t\032\361\001\n\tNodeGroup\022\014\n\004name\030\001 \001(\t\022" +
+      "<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb.op" +
+      "ensearch.v1.Resources\022\023\n\013hosts_count\030\003 \001" +
+      "(\003\022\020\n\010zone_ids\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t" +
+      "\022\030\n\020assign_public_ip\030\006 \001(\010\022C\n\005roles\030\007 \003(" +
+      "\01624.yandex.cloud.mdb.opensearch.v1.OpenS" +
+      "earch.GroupRole\">\n\tGroupRole\022\032\n\026GROUP_RO" +
+      "LE_UNSPECIFIED\020\000\022\010\n\004DATA\020\001\022\013\n\007MANAGER\020\002B" +
+      "\010\n\006config\"\206\002\n\nDashboards\022I\n\013node_groups\030" +
+      "\002 \003(\01324.yandex.cloud.mdb.opensearch.v1.D" +
+      "ashboards.NodeGroup\032\254\001\n\tNodeGroup\022\014\n\004nam" +
+      "e\030\001 \001(\t\022<\n\tresources\030\002 \001(\0132).yandex.clou" +
+      "d.mdb.opensearch.v1.Resources\022\023\n\013hosts_c" +
+      "ount\030\003 \001(\003\022\020\n\010zone_ids\030\004 \003(\t\022\022\n\nsubnet_i" +
+      "ds\030\005 \003(\t\022\030\n\020assign_public_ip\030\006 \001(\010\"P\n\tRe" +
+      "sources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\td" +
+      "isk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\262\007\n" +
+      "\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022" +
+      "\017\n\007zone_id\030\003 \001(\t\022<\n\tresources\030\004 \001(\0132).ya" +
+      "ndex.cloud.mdb.opensearch.v1.Resources\0227" +
+      "\n\004type\030\005 \001(\0162).yandex.cloud.mdb.opensear" +
+      "ch.v1.Host.Type\022;\n\006health\030\006 \001(\0162+.yandex" +
+      ".cloud.mdb.opensearch.v1.Host.Health\022\021\n\t" +
+      "subnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(" +
+      "\010\022B\n\006system\030\n \001(\01322.yandex.cloud.mdb.ope" +
+      "nsearch.v1.Host.SystemMetrics\022\022\n\nnode_gr" +
+      "oup\030\013 \001(\t\022C\n\005roles\030\014 \003(\01624.yandex.cloud." +
+      "mdb.opensearch.v1.OpenSearch.GroupRole\032," +
+      "\n\tCPUMetric\022\021\n\ttimestamp\030\001 \001(\003\022\014\n\004used\030\002" +
+      " \001(\001\032>\n\014MemoryMetric\022\021\n\ttimestamp\030\001 \001(\003\022" +
+      "\014\n\004used\030\002 \001(\003\022\r\n\005total\030\003 \001(\003\032<\n\nDiskMetr" +
+      "ic\022\021\n\ttimestamp\030\001 \001(\003\022\014\n\004used\030\002 \001(\003\022\r\n\005t" +
+      "otal\030\003 \001(\003\032\316\001\n\rSystemMetrics\022;\n\003cpu\030\001 \001(" +
+      "\0132..yandex.cloud.mdb.opensearch.v1.Host." +
+      "CPUMetric\022A\n\006memory\030\002 \001(\01321.yandex.cloud" +
+      ".mdb.opensearch.v1.Host.MemoryMetric\022=\n\004" +
+      "disk\030\003 \001(\0132/.yandex.cloud.mdb.opensearch" +
+      ".v1.Host.DiskMetric\"8\n\006Health\022\013\n\007UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"<\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nOPENSEARC" +
+      "H\020\001\022\016\n\nDASHBOARDS\020\002J\004\010\007\020\010\"3\n\006Access\022\025\n\rd" +
+      "ata_transfer\030\001 \001(\010\022\022\n\nserverless\030\002 \001(\010Bs" +
+      "\n\"yandex.cloud.api.mdb.opensearch.v1ZMgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/opensearch/v1;opensearchb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.mdb.opensearch.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.mdb.opensearch.v1.Opensearch.getDescriptor(),
+          yandex.cloud.api.mdb.opensearch.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_opensearch_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -21286,7 +21572,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_descriptor,
-        new java.lang.String[] { "Plugins", "NodeGroups", "OpensearchConfigSet2", "Config", });
+        new java.lang.String[] { "Plugins", "NodeGroups", "OpensearchConfigSet2", "KeystoreSettings", "Config", });
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_NodeGroup_descriptor =
       internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearch_NodeGroup_fieldAccessorTable = new
@@ -21348,8 +21634,8 @@ public final class ClusterOuterClass {
         internal_static_yandex_cloud_mdb_opensearch_v1_Access_descriptor,
         new java.lang.String[] { "DataTransfer", "Serverless", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.mdb.opensearch.v1.Maintenance.getDescriptor();
     yandex.cloud.api.mdb.opensearch.v1.Opensearch.getDescriptor();
+    yandex.cloud.api.mdb.opensearch.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -17937,9 +17937,9 @@ public final class VirtualHostServiceOuterClass {
       "l_host_service.proto\022\037yandex.cloud.applo" +
       "adbalancer.v1\032\034google/api/annotations.pr" +
       "oto\032 google/protobuf/field_mask.proto\032 y" +
-      "andex/cloud/api/operation.proto\032&yandex/" +
-      "cloud/operation/operation.proto\0322yandex/" +
+      "andex/cloud/api/operation.proto\0322yandex/" +
       "cloud/apploadbalancer/v1/virtual_host.pr" +
+      "oto\032&yandex/cloud/operation/operation.pr" +
       "oto\032\035yandex/cloud/validation.proto\"|\n\025Ge" +
       "tVirtualHostRequest\022\034\n\016http_router_id\030\001 " +
       "\001(\tB\004\350\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*\350\307" +
@@ -17950,7 +17950,7 @@ public final class VirtualHostServiceOuterClass {
       "x\n\030ListVirtualHostsResponse\022C\n\rvirtual_h" +
       "osts\030\001 \003(\0132,.yandex.cloud.apploadbalance" +
       "r.v1.VirtualHost\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"\252\003\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
+      "\t\"\260\003\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
       "outer_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"" +
       "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\021\n\tau" +
       "thority\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132&.yandex.c" +
@@ -17960,89 +17960,89 @@ public final class VirtualHostServiceOuterClass {
       "dify_response_headers\030\007 \003(\01323.yandex.clo" +
       "ud.apploadbalancer.v1.HeaderModification" +
       "\022D\n\rroute_options\030\010 \001(\0132-.yandex.cloud.a" +
-      "pploadbalancer.v1.RouteOptions\"T\n\031Create" +
-      "VirtualHostMetadata\022\034\n\016http_router_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001(\t\"\306\003\n" +
-      "\030UpdateVirtualHostRequest\022\034\n\016http_router" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001" +
-      "(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\021\n\tauthority\030\004 \003(\t\0226\n\006" +
-      "routes\030\006 \003(\0132&.yandex.cloud.apploadbalan" +
-      "cer.v1.Route\022S\n\026modify_request_headers\030\007" +
-      " \003(\01323.yandex.cloud.apploadbalancer.v1.H" +
-      "eaderModification\022T\n\027modify_response_hea" +
-      "ders\030\010 \003(\01323.yandex.cloud.apploadbalance" +
-      "r.v1.HeaderModification\022D\n\rroute_options" +
-      "\030\t \001(\0132-.yandex.cloud.apploadbalancer.v1" +
-      ".RouteOptions\"N\n\031UpdateVirtualHostMetada" +
-      "ta\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_ho" +
-      "st_name\030\002 \001(\t\"\177\n\030DeleteVirtualHostReques" +
-      "t\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022E\n\021virtu" +
-      "al_host_name\030\002 \001(\tB*\350\3071\001\362\3071\"([a-z]([-a-z" +
-      "0-9]{0,61}[a-z0-9])?)?\"N\n\031DeleteVirtualH" +
-      "ostMetadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021v" +
-      "irtual_host_name\030\002 \001(\t\"m\n\022RemoveRouteReq" +
-      "uest\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021vi" +
-      "rtual_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_nam" +
-      "e\030\003 \001(\tB\004\350\3071\001\"\\\n\023RemoveRouteMetadata\022\026\n\016" +
-      "http_router_id\030\001 \001(\t\022\031\n\021virtual_host_nam" +
-      "e\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t\"\353\002\n\022UpdateRo" +
-      "uteRequest\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022\037\n\021virtual_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nrou" +
-      "te_name\030\003 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022:\n\004http\030\005 \001" +
-      "(\0132*.yandex.cloud.apploadbalancer.v1.Htt" +
-      "pRouteH\000\022:\n\004grpc\030\006 \001(\0132*.yandex.cloud.ap" +
-      "ploadbalancer.v1.GrpcRouteH\000\022D\n\rroute_op" +
-      "tions\030\007 \001(\0132-.yandex.cloud.apploadbalanc" +
-      "er.v1.RouteOptionsB\r\n\005route\022\004\300\3011\001\"\\\n\023Upd" +
-      "ateRouteMetadata\022\026\n\016http_router_id\030\001 \001(\t" +
-      "\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n\nroute_nam" +
-      "e\030\003 \001(\t2\342\014\n\022VirtualHostService\022\306\001\n\003Get\0226" +
-      ".yandex.cloud.apploadbalancer.v1.GetVirt" +
-      "ualHostRequest\032,.yandex.cloud.apploadbal" +
-      "ancer.v1.VirtualHost\"Y\202\323\344\223\002S\022Q/apploadba" +
-      "lancer/v1/httpRouters/{http_router_id}/v" +
-      "irtualHosts/{virtual_host_name}\022\302\001\n\004List" +
-      "\0228.yandex.cloud.apploadbalancer.v1.ListV" +
-      "irtualHostsRequest\0329.yandex.cloud.apploa" +
-      "dbalancer.v1.ListVirtualHostsResponse\"E\202" +
-      "\323\344\223\002?\022=/apploadbalancer/v1/httpRouters/{" +
-      "http_router_id}/virtualHosts\022\334\001\n\006Create\022" +
-      "9.yandex.cloud.apploadbalancer.v1.Create" +
-      "VirtualHostRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"t\202\323\344\223\002B\"=/apploadbalancer/" +
+      "pploadbalancer.v1.RouteOptionsJ\004\010\004\020\005\"T\n\031" +
+      "CreateVirtualHostMetadata\022\034\n\016http_router" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001" +
+      "(\t\"\314\003\n\030UpdateVirtualHostRequest\022\034\n\016http_" +
+      "router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_na" +
+      "me\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022\021\n\tauthority\030\004 \003" +
+      "(\t\0226\n\006routes\030\006 \003(\0132&.yandex.cloud.apploa" +
+      "dbalancer.v1.Route\022S\n\026modify_request_hea" +
+      "ders\030\007 \003(\01323.yandex.cloud.apploadbalance" +
+      "r.v1.HeaderModification\022T\n\027modify_respon" +
+      "se_headers\030\010 \003(\01323.yandex.cloud.apploadb" +
+      "alancer.v1.HeaderModification\022D\n\rroute_o" +
+      "ptions\030\t \001(\0132-.yandex.cloud.apploadbalan" +
+      "cer.v1.RouteOptionsJ\004\010\005\020\006\"N\n\031UpdateVirtu" +
+      "alHostMetadata\022\026\n\016http_router_id\030\001 \001(\t\022\031" +
+      "\n\021virtual_host_name\030\002 \001(\t\"\177\n\030DeleteVirtu" +
+      "alHostRequest\022\034\n\016http_router_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*\350\3071\001\362\3071\"" +
+      "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\"N\n\031De" +
+      "leteVirtualHostMetadata\022\026\n\016http_router_i" +
+      "d\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"m\n\022Re" +
+      "moveRouteRequest\022\034\n\016http_router_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(\tB\004\350\3071\001\022" +
+      "\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\"\\\n\023RemoveRoute" +
+      "Metadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virt" +
+      "ual_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t\"" +
+      "\353\002\n\022UpdateRouteRequest\022\034\n\016http_router_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(\tB" +
+      "\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\022/\n\013updat" +
+      "e_mask\030\004 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022:\n\004http\030\005 \001(\0132*.yandex.cloud.apploadbal" +
+      "ancer.v1.HttpRouteH\000\022:\n\004grpc\030\006 \001(\0132*.yan" +
+      "dex.cloud.apploadbalancer.v1.GrpcRouteH\000" +
+      "\022D\n\rroute_options\030\007 \001(\0132-.yandex.cloud.a" +
+      "pploadbalancer.v1.RouteOptionsB\r\n\005route\022" +
+      "\004\300\3011\001\"\\\n\023UpdateRouteMetadata\022\026\n\016http_rou" +
+      "ter_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\022" +
+      "\022\n\nroute_name\030\003 \001(\t2\342\014\n\022VirtualHostServi" +
+      "ce\022\306\001\n\003Get\0226.yandex.cloud.apploadbalance" +
+      "r.v1.GetVirtualHostRequest\032,.yandex.clou" +
+      "d.apploadbalancer.v1.VirtualHost\"Y\202\323\344\223\002S" +
+      "\022Q/apploadbalancer/v1/httpRouters/{http_" +
+      "router_id}/virtualHosts/{virtual_host_na" +
+      "me}\022\302\001\n\004List\0228.yandex.cloud.apploadbalan" +
+      "cer.v1.ListVirtualHostsRequest\0329.yandex." +
+      "cloud.apploadbalancer.v1.ListVirtualHost" +
+      "sResponse\"E\202\323\344\223\002?\022=/apploadbalancer/v1/h" +
+      "ttpRouters/{http_router_id}/virtualHosts" +
+      "\022\334\001\n\006Create\0229.yandex.cloud.apploadbalanc" +
+      "er.v1.CreateVirtualHostRequest\032!.yandex." +
+      "cloud.operation.Operation\"t\202\323\344\223\002B\"=/appl" +
+      "oadbalancer/v1/httpRouters/{http_router_" +
+      "id}/virtualHosts:\001*\262\322*(\n\031CreateVirtualHo" +
+      "stMetadata\022\013VirtualHost\022\361\001\n\006Update\0229.yan" +
+      "dex.cloud.apploadbalancer.v1.UpdateVirtu" +
+      "alHostRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\210\001\202\323\344\223\002V2Q/apploadbalancer/v1/h" +
+      "ttpRouters/{http_router_id}/virtualHosts" +
+      "/{virtual_host_name}:\001*\262\322*(\n\031UpdateVirtu" +
+      "alHostMetadata\022\013VirtualHost\022\370\001\n\006Delete\0229" +
+      ".yandex.cloud.apploadbalancer.v1.DeleteV" +
+      "irtualHostRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\217\001\202\323\344\223\002S*Q/apploadbalancer/" +
       "v1/httpRouters/{http_router_id}/virtualH" +
-      "osts:\001*\262\322*(\n\031CreateVirtualHostMetadata\022\013" +
-      "VirtualHost\022\361\001\n\006Update\0229.yandex.cloud.ap" +
-      "ploadbalancer.v1.UpdateVirtualHostReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\210\001\202" +
-      "\323\344\223\002V2Q/apploadbalancer/v1/httpRouters/{" +
-      "http_router_id}/virtualHosts/{virtual_ho" +
-      "st_name}:\001*\262\322*(\n\031UpdateVirtualHostMetada" +
-      "ta\022\013VirtualHost\022\370\001\n\006Delete\0229.yandex.clou" +
-      "d.apploadbalancer.v1.DeleteVirtualHostRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\217\001\202\323\344\223\002S*Q/apploadbalancer/v1/httpRoute" +
-      "rs/{http_router_id}/virtualHosts/{virtua" +
-      "l_host_name}\262\322*2\n\031DeleteVirtualHostMetad" +
-      "ata\022\025google.protobuf.Empty\022\366\001\n\013RemoveRou" +
-      "te\0223.yandex.cloud.apploadbalancer.v1.Rem" +
-      "oveRouteRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1" +
-      "/httpRouters/{http_router_id}/virtualHos" +
-      "ts/{virtual_host_name}:removeRoute:\001*\262\322*" +
-      "\"\n\023RemoveRouteMetadata\022\013VirtualHost\022\366\001\n\013" +
-      "UpdateRoute\0223.yandex.cloud.apploadbalanc" +
-      "er.v1.UpdateRouteRequest\032!.yandex.cloud." +
-      "operation.Operation\"\216\001\202\323\344\223\002b\"]/apploadba" +
-      "lancer/v1/httpRouters/{http_router_id}/v" +
-      "irtualHosts/{virtual_host_name}:updateRo" +
-      "ute:\001*\262\322*\"\n\023UpdateRouteMetadata\022\013Virtual" +
-      "HostBz\n#yandex.cloud.api.apploadbalancer" +
-      ".v1ZSgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/apploadbalancer/v1;appload" +
-      "balancerb\006proto3"
+      "osts/{virtual_host_name}\262\322*2\n\031DeleteVirt" +
+      "ualHostMetadata\022\025google.protobuf.Empty\022\366" +
+      "\001\n\013RemoveRoute\0223.yandex.cloud.apploadbal" +
+      "ancer.v1.RemoveRouteRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\216\001\202\323\344\223\002b\"]/apploa" +
+      "dbalancer/v1/httpRouters/{http_router_id" +
+      "}/virtualHosts/{virtual_host_name}:remov" +
+      "eRoute:\001*\262\322*\"\n\023RemoveRouteMetadata\022\013Virt" +
+      "ualHost\022\366\001\n\013UpdateRoute\0223.yandex.cloud.a" +
+      "pploadbalancer.v1.UpdateRouteRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\216\001\202\323\344\223\002b" +
+      "\"]/apploadbalancer/v1/httpRouters/{http_" +
+      "router_id}/virtualHosts/{virtual_host_na" +
+      "me}:updateRoute:\001*\262\322*\"\n\023UpdateRouteMetad" +
+      "ata\022\013VirtualHostBz\n#yandex.cloud.api.app" +
+      "loadbalancer.v1ZSgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/apploadbalance" +
+      "r/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18050,8 +18050,8 @@ public final class VirtualHostServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_apploadbalancer_v1_GetVirtualHostRequest_descriptor =
@@ -18146,8 +18146,8 @@ public final class VirtualHostServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

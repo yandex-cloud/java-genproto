@@ -9784,45 +9784,45 @@ public final class VisionServiceOuterClass {
       "BatchAnalyzeRequest\022F\n\ranalyze_specs\030\001 \003" +
       "(\0132&.yandex.cloud.ai.vision.v1.AnalyzeSp" +
       "ecB\007\202\3101\0031-8\022\033\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50" +
-      "\"\277\001\n\013AnalyzeSpec\022!\n\007content\030\001 \001(\014B\016\212\3101\n<" +
+      "\"\305\001\n\013AnalyzeSpec\022!\n\007content\030\001 \001(\014B\016\212\3101\n<" +
       "=10485760H\000\022 \n\tsignature\030\005 \001(\tB\013\212\3101\007<=16" +
       "384H\000\022=\n\010features\030\003 \003(\0132\".yandex.cloud.a" +
       "i.vision.v1.FeatureB\007\202\3101\0031-8\022\034\n\tmime_typ" +
-      "e\030\004 \001(\tB\t\212\3101\005<=255B\016\n\006source\022\004\300\3011\001\"\354\002\n\007F" +
-      "eature\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.ai.v" +
-      "ision.v1.Feature.Type\022W\n\025classification_" +
-      "config\030\002 \001(\01326.yandex.cloud.ai.vision.v1" +
-      ".FeatureClassificationConfigH\000\022V\n\025text_d" +
-      "etection_config\030\003 \001(\01325.yandex.cloud.ai." +
-      "vision.v1.FeatureTextDetectionConfigH\000\"o" +
-      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\022\n\016TEXT_DET" +
-      "ECTION\020\001\022\022\n\016CLASSIFICATION\020\002\022\022\n\016FACE_DET" +
-      "ECTION\020\003\022\025\n\021IMAGE_COPY_SEARCH\020\004B\010\n\006confi" +
-      "g\"7\n\033FeatureClassificationConfig\022\030\n\005mode" +
-      "l\030\001 \001(\tB\t\212\3101\005<=256\"]\n\032FeatureTextDetecti" +
-      "onConfig\022&\n\016language_codes\030\001 \003(\tB\016\202\3101\0031-" +
-      "8\212\3101\003<=3\022\027\n\005model\030\002 \001(\tB\010\212\3101\004<=50\"Q\n\024Bat" +
-      "chAnalyzeResponse\0229\n\007results\030\001 \003(\0132(.yan" +
-      "dex.cloud.ai.vision.v1.AnalyzeResult\"m\n\r" +
-      "AnalyzeResult\0229\n\007results\030\002 \003(\0132(.yandex." +
-      "cloud.ai.vision.v1.FeatureResult\022!\n\005erro" +
-      "r\030\001 \001(\0132\022.google.rpc.Status\"\340\002\n\rFeatureR" +
-      "esult\022C\n\016text_detection\030\002 \001(\0132).yandex.c" +
-      "loud.ai.vision.v1.TextAnnotationH\000\022D\n\016cl" +
-      "assification\030\003 \001(\0132*.yandex.cloud.ai.vis" +
-      "ion.v1.ClassAnnotationH\000\022C\n\016face_detecti" +
-      "on\030\004 \001(\0132).yandex.cloud.ai.vision.v1.Fac" +
-      "eAnnotationH\000\022Q\n\021image_copy_search\030\005 \001(\013" +
-      "24.yandex.cloud.ai.vision.v1.ImageCopySe" +
-      "archAnnotationH\000\022!\n\005error\030\001 \001(\0132\022.google" +
-      ".rpc.StatusB\t\n\007feature2\245\001\n\rVisionService" +
-      "\022\223\001\n\014BatchAnalyze\022..yandex.cloud.ai.visi" +
-      "on.v1.BatchAnalyzeRequest\032/.yandex.cloud" +
-      ".ai.vision.v1.BatchAnalyzeResponse\"\"\202\323\344\223" +
-      "\002\034\"\027/vision/v1/batchAnalyze:\001*Be\n\035yandex" +
-      ".cloud.api.ai.vision.v1ZDgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/ai/vis" +
-      "ion/v1;visionb\006proto3"
+      "e\030\004 \001(\tB\t\212\3101\005<=255B\016\n\006source\022\004\300\3011\001J\004\010\002\020\003" +
+      "\"\354\002\n\007Feature\0225\n\004type\030\001 \001(\0162\'.yandex.clou" +
+      "d.ai.vision.v1.Feature.Type\022W\n\025classific" +
+      "ation_config\030\002 \001(\01326.yandex.cloud.ai.vis" +
+      "ion.v1.FeatureClassificationConfigH\000\022V\n\025" +
+      "text_detection_config\030\003 \001(\01325.yandex.clo" +
+      "ud.ai.vision.v1.FeatureTextDetectionConf" +
+      "igH\000\"o\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\022\n\016TE" +
+      "XT_DETECTION\020\001\022\022\n\016CLASSIFICATION\020\002\022\022\n\016FA" +
+      "CE_DETECTION\020\003\022\025\n\021IMAGE_COPY_SEARCH\020\004B\010\n" +
+      "\006config\"7\n\033FeatureClassificationConfig\022\030" +
+      "\n\005model\030\001 \001(\tB\t\212\3101\005<=256\"]\n\032FeatureTextD" +
+      "etectionConfig\022&\n\016language_codes\030\001 \003(\tB\016" +
+      "\202\3101\0031-8\212\3101\003<=3\022\027\n\005model\030\002 \001(\tB\010\212\3101\004<=50\"" +
+      "Q\n\024BatchAnalyzeResponse\0229\n\007results\030\001 \003(\013" +
+      "2(.yandex.cloud.ai.vision.v1.AnalyzeResu" +
+      "lt\"m\n\rAnalyzeResult\0229\n\007results\030\002 \003(\0132(.y" +
+      "andex.cloud.ai.vision.v1.FeatureResult\022!" +
+      "\n\005error\030\001 \001(\0132\022.google.rpc.Status\"\340\002\n\rFe" +
+      "atureResult\022C\n\016text_detection\030\002 \001(\0132).ya" +
+      "ndex.cloud.ai.vision.v1.TextAnnotationH\000" +
+      "\022D\n\016classification\030\003 \001(\0132*.yandex.cloud." +
+      "ai.vision.v1.ClassAnnotationH\000\022C\n\016face_d" +
+      "etection\030\004 \001(\0132).yandex.cloud.ai.vision." +
+      "v1.FaceAnnotationH\000\022Q\n\021image_copy_search" +
+      "\030\005 \001(\01324.yandex.cloud.ai.vision.v1.Image" +
+      "CopySearchAnnotationH\000\022!\n\005error\030\001 \001(\0132\022." +
+      "google.rpc.StatusB\t\n\007feature2\245\001\n\rVisionS" +
+      "ervice\022\223\001\n\014BatchAnalyze\022..yandex.cloud.a" +
+      "i.vision.v1.BatchAnalyzeRequest\032/.yandex" +
+      ".cloud.ai.vision.v1.BatchAnalyzeResponse" +
+      "\"\"\202\323\344\223\002\034\"\027/vision/v1/batchAnalyze:\001*Be\n\035" +
+      "yandex.cloud.api.ai.vision.v1ZDgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "ai/vision/v1;visionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

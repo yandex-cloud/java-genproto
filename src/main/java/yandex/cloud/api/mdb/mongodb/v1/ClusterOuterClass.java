@@ -67428,12 +67428,12 @@ public final class ClusterOuterClass {
       "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P" +
       "\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022" +
       "\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t" +
-      "\"2\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tr" +
-      "ansfer\030\003 \001(\010\"9\n\034PerformanceDiagnosticsCo" +
-      "nfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n\037yande" +
-      "x.cloud.api.mdb.mongodb.v1ZGgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/mdb" +
-      "/mongodb/v1;mongodbb\006proto3"
+      "\"8\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tr" +
+      "ansfer\030\003 \001(\010J\004\010\002\020\003\"9\n\034PerformanceDiagnos" +
+      "ticsConfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n" +
+      "\037yandex.cloud.api.mdb.mongodb.v1ZGgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/mongodb/v1;mongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

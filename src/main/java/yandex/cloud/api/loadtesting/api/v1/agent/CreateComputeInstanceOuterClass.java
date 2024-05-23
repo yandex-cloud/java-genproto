@@ -2949,7 +2949,7 @@ public final class CreateComputeInstanceOuterClass {
       "create_compute_instance.proto\022%yandex.cl" +
       "oud.loadtesting.api.v1.agent\032.yandex/clo" +
       "ud/compute/v1/instance_service.proto\032\035ya" +
-      "ndex/cloud/validation.proto\"\257\005\n\025CreateCo" +
+      "ndex/cloud/validation.proto\"\301\005\n\025CreateCo" +
       "mputeInstance\022\241\001\n\006labels\030\004 \003(\0132H.yandex." +
       "cloud.loadtesting.api.v1.agent.CreateCom" +
       "puteInstance.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
@@ -2966,11 +2966,11 @@ public final class CreateComputeInstanceOuterClass {
       "eSpecB\005\202\3101\0011\022\032\n\022service_account_id\030\016 \001(\t" +
       "\022\023\n\013platform_id\030\017 \001(\t\032-\n\013LabelsEntry\022\013\n\003" +
       "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadata" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B|\n" +
-      ")yandex.cloud.api.loadtesting.api.v1.age" +
-      "ntZOgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/loadtesting/api/v1/agent;ag" +
-      "entb\006proto3"
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010" +
+      "\n\020\013J\004\010\014\020\016J\004\010\006\020\007B|\n)yandex.cloud.api.load" +
+      "testing.api.v1.agentZOgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/loadtesti" +
+      "ng/api/v1/agent;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

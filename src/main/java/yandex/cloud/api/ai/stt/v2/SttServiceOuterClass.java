@@ -10409,7 +10409,7 @@ public final class SttServiceOuterClass {
       "uri\030\002 \001(\tH\000B\016\n\014audio_source\"f\n\021Recogniti" +
       "onConfig\022>\n\rspecification\030\001 \001(\0132\'.yandex" +
       ".cloud.ai.stt.v2.RecognitionSpec\022\021\n\tfold" +
-      "er_id\030\002 \001(\t\"\223\003\n\017RecognitionSpec\022M\n\016audio" +
+      "er_id\030\002 \001(\t\"\231\003\n\017RecognitionSpec\022M\n\016audio" +
       "_encoding\030\001 \001(\01625.yandex.cloud.ai.stt.v2" +
       ".RecognitionSpec.AudioEncoding\022\031\n\021sample" +
       "_rate_hertz\030\002 \001(\003\022\025\n\rlanguage_code\030\003 \001(\t" +
@@ -10419,31 +10419,31 @@ public final class SttServiceOuterClass {
       "\003\022\023\n\013raw_results\030\n \001(\010\022\027\n\017literature_tex" +
       "t\030\013 \001(\010\"X\n\rAudioEncoding\022\036\n\032AUDIO_ENCODI" +
       "NG_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020\001\022\014\n\010OG" +
-      "G_OPUS\020\002\022\007\n\003MP3\020\003\"\215\001\n\026SpeechRecognitionC" +
-      "hunk\022J\n\014alternatives\030\001 \003(\01324.yandex.clou" +
-      "d.ai.stt.v2.SpeechRecognitionAlternative" +
-      "\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of_utterance\030\003 \001(" +
-      "\010\"z\n\027SpeechRecognitionResult\022J\n\014alternat" +
-      "ives\030\001 \003(\01324.yandex.cloud.ai.stt.v2.Spee" +
-      "chRecognitionAlternative\022\023\n\013channel_tag\030" +
-      "\002 \001(\003\"q\n\034SpeechRecognitionAlternative\022\014\n" +
-      "\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\002\022/\n\005words" +
-      "\030\003 \003(\0132 .yandex.cloud.ai.stt.v2.WordInfo" +
-      "\"\210\001\n\010WordInfo\022-\n\nstart_time\030\001 \001(\0132\031.goog" +
-      "le.protobuf.Duration\022+\n\010end_time\030\002 \001(\0132\031" +
-      ".google.protobuf.Duration\022\014\n\004word\030\003 \001(\t\022" +
-      "\022\n\nconfidence\030\004 \001(\0022\333\002\n\nSttService\022\304\001\n\024L" +
-      "ongRunningRecognize\0225.yandex.cloud.ai.st" +
-      "t.v2.LongRunningRecognitionRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"R\202\323\344\223\002(\"#/" +
-      "speech/stt/v2/longRunningRecognize:\001*\262\322*" +
-      " \022\036LongRunningRecognitionResponse\022\205\001\n\022St" +
-      "reamingRecognize\0223.yandex.cloud.ai.stt.v" +
-      "2.StreamingRecognitionRequest\0324.yandex.c" +
-      "loud.ai.stt.v2.StreamingRecognitionRespo" +
-      "nse\"\000(\0010\001B\\\n\032yandex.cloud.api.ai.stt.v2Z" +
-      ">github.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/ai/stt/v2;sttb\006proto3"
+      "G_OPUS\020\002\022\007\n\003MP3\020\003J\004\010\006\020\007\"\215\001\n\026SpeechRecogn" +
+      "itionChunk\022J\n\014alternatives\030\001 \003(\01324.yande" +
+      "x.cloud.ai.stt.v2.SpeechRecognitionAlter" +
+      "native\022\r\n\005final\030\002 \001(\010\022\030\n\020end_of_utteranc" +
+      "e\030\003 \001(\010\"z\n\027SpeechRecognitionResult\022J\n\014al" +
+      "ternatives\030\001 \003(\01324.yandex.cloud.ai.stt.v" +
+      "2.SpeechRecognitionAlternative\022\023\n\013channe" +
+      "l_tag\030\002 \001(\003\"q\n\034SpeechRecognitionAlternat" +
+      "ive\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\002\022/\n" +
+      "\005words\030\003 \003(\0132 .yandex.cloud.ai.stt.v2.Wo" +
+      "rdInfo\"\210\001\n\010WordInfo\022-\n\nstart_time\030\001 \001(\0132" +
+      "\031.google.protobuf.Duration\022+\n\010end_time\030\002" +
+      " \001(\0132\031.google.protobuf.Duration\022\014\n\004word\030" +
+      "\003 \001(\t\022\022\n\nconfidence\030\004 \001(\0022\333\002\n\nSttService" +
+      "\022\304\001\n\024LongRunningRecognize\0225.yandex.cloud" +
+      ".ai.stt.v2.LongRunningRecognitionRequest" +
+      "\032!.yandex.cloud.operation.Operation\"R\202\323\344" +
+      "\223\002(\"#/speech/stt/v2/longRunningRecognize" +
+      ":\001*\262\322* \022\036LongRunningRecognitionResponse\022" +
+      "\205\001\n\022StreamingRecognize\0223.yandex.cloud.ai" +
+      ".stt.v2.StreamingRecognitionRequest\0324.ya" +
+      "ndex.cloud.ai.stt.v2.StreamingRecognitio" +
+      "nResponse\"\000(\0010\001B\\\n\032yandex.cloud.api.ai.s" +
+      "tt.v2Z>github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ai/stt/v2;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

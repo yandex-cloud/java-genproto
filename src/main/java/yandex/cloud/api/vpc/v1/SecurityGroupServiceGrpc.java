@@ -3,6 +3,9 @@ package yandex.cloud.api.vpc.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing SecurityGroup resources.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -339,10 +342,17 @@ public final class SecurityGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing SecurityGroup resources.
+   * </pre>
    */
   public static abstract class SecurityGroupServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified SecurityGroup resource.
+     * To get the list of all available SecurityGroup resources, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> responseObserver) {
@@ -350,6 +360,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of SecurityGroup resources in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> responseObserver) {
@@ -357,6 +370,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a security group in the specified folder and network.
+     * </pre>
      */
     public void create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -364,6 +380,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified security group.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
      */
     public void update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -371,6 +391,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the rules of the specified security group.
+     * </pre>
      */
     public void updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -379,7 +402,7 @@ public final class SecurityGroupServiceGrpc {
 
     /**
      * <pre>
-     * update rule description or labels
+     * Updates the specified rule.
      * </pre>
      */
     public void updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request,
@@ -388,6 +411,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified security group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -395,6 +421,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Moves security groups to another folder.
+     * </pre>
      */
     public void move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -402,6 +431,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified security groups.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> responseObserver) {
@@ -478,6 +510,9 @@ public final class SecurityGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing SecurityGroup resources.
+   * </pre>
    */
   public static final class SecurityGroupServiceStub extends io.grpc.stub.AbstractAsyncStub<SecurityGroupServiceStub> {
     private SecurityGroupServiceStub(
@@ -492,6 +527,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified SecurityGroup resource.
+     * To get the list of all available SecurityGroup resources, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> responseObserver) {
@@ -500,6 +539,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of SecurityGroup resources in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> responseObserver) {
@@ -508,6 +550,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a security group in the specified folder and network.
+     * </pre>
      */
     public void create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -516,6 +561,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified security group.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
      */
     public void update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -524,6 +573,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the rules of the specified security group.
+     * </pre>
      */
     public void updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -533,7 +585,7 @@ public final class SecurityGroupServiceGrpc {
 
     /**
      * <pre>
-     * update rule description or labels
+     * Updates the specified rule.
      * </pre>
      */
     public void updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request,
@@ -543,6 +595,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified security group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -551,6 +606,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Moves security groups to another folder.
+     * </pre>
      */
     public void move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -559,6 +617,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified security groups.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> responseObserver) {
@@ -568,6 +629,9 @@ public final class SecurityGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing SecurityGroup resources.
+   * </pre>
    */
   public static final class SecurityGroupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SecurityGroupServiceBlockingStub> {
     private SecurityGroupServiceBlockingStub(
@@ -582,6 +646,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified SecurityGroup resource.
+     * To get the list of all available SecurityGroup resources, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup get(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -589,6 +657,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of SecurityGroup resources in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse list(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -596,6 +667,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a security group in the specified folder and network.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -603,6 +677,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified security group.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -610,6 +688,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the rules of the specified security group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRules(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -618,7 +699,7 @@ public final class SecurityGroupServiceGrpc {
 
     /**
      * <pre>
-     * update rule description or labels
+     * Updates the specified rule.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRule(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRuleRequest request) {
@@ -627,6 +708,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified security group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -634,6 +718,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Moves security groups to another folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -641,6 +728,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified security groups.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse listOperations(yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -649,6 +739,9 @@ public final class SecurityGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing SecurityGroup resources.
+   * </pre>
    */
   public static final class SecurityGroupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SecurityGroupServiceFutureStub> {
     private SecurityGroupServiceFutureStub(
@@ -663,6 +756,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified SecurityGroup resource.
+     * To get the list of all available SecurityGroup resources, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> get(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.GetSecurityGroupRequest request) {
@@ -671,6 +768,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of SecurityGroup resources in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsResponse> list(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupsRequest request) {
@@ -679,6 +779,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a security group in the specified folder and network.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.CreateSecurityGroupRequest request) {
@@ -687,6 +790,10 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified security group.
+     * Method starts an asynchronous operation that can be cancelled while it is in progress.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRequest request) {
@@ -695,6 +802,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the rules of the specified security group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRules(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupRulesRequest request) {
@@ -704,7 +814,7 @@ public final class SecurityGroupServiceGrpc {
 
     /**
      * <pre>
-     * update rule description or labels
+     * Updates the specified rule.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRule(
@@ -714,6 +824,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified security group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.DeleteSecurityGroupRequest request) {
@@ -722,6 +835,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Moves security groups to another folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.MoveSecurityGroupRequest request) {
@@ -730,6 +846,9 @@ public final class SecurityGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified security groups.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.ListSecurityGroupOperationsRequest request) {

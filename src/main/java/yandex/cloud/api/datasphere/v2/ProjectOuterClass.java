@@ -6470,7 +6470,7 @@ public final class ProjectOuterClass {
       "to\022\032yandex.cloud.datasphere.v2\032\036google/p" +
       "rotobuf/duration.proto\032\037google/protobuf/" +
       "timestamp.proto\032\036google/protobuf/wrapper" +
-      "s.proto\"\233\013\n\007Project\022\n\n\002id\030\001 \001(\t\022.\n\ncreat" +
+      "s.proto\"\241\013\n\007Project\022\n\n\002id\030\001 \001(\t\022.\n\ncreat" +
       "ed_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
       "\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022?\n\006la" +
       "bels\030\005 \003(\0132/.yandex.cloud.datasphere.v2." +
@@ -6506,10 +6506,10 @@ public final class ProjectOuterClass {
       "Int64Value\022<\n\027max_units_per_execution\030\002 " +
       "\001(\0132\033.google.protobuf.Int64Value\032-\n\013Labe" +
       "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
-      "\004\010\t\020\nBk\n\036yandex.cloud.api.datasphere.v2Z" +
-      "Igithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/datasphere/v2;datasphereb\006prot" +
-      "o3"
+      "\004\010\n\020\013J\004\010\t\020\nBk\n\036yandex.cloud.api.datasphe" +
+      "re.v2ZIgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/datasphere/v2;datasphere" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

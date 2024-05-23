@@ -20943,10 +20943,10 @@ public final class SubnetServiceOuterClass {
       "to\022\023yandex.cloud.vpc.v1\032\034google/api/anno" +
       "tations.proto\032 google/protobuf/field_mas" +
       "k.proto\032 yandex/cloud/api/operation.prot" +
-      "o\032 yandex/cloud/vpc/v1/subnet.proto\032&yan" +
-      "dex/cloud/operation/operation.proto\032\035yan" +
-      "dex/cloud/validation.proto\032&yandex/cloud" +
-      "/reference/reference.proto\"3\n\020GetSubnetR" +
+      "o\032&yandex/cloud/operation/operation.prot" +
+      "o\032&yandex/cloud/reference/reference.prot" +
+      "o\032\035yandex/cloud/validation.proto\032 yandex" +
+      "/cloud/vpc/v1/subnet.proto\"3\n\020GetSubnetR" +
       "equest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
       "\217\001\n\022ListSubnetsRequest\022\037\n\tfolder_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
@@ -20954,7 +20954,7 @@ public final class SubnetServiceOuterClass {
       "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\\\n\023ListSubnets" +
       "Response\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud" +
       ".vpc.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\204\004\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
+      "\212\004\n\023CreateSubnetRequest\022\037\n\tfolder_id\030\001 \001" +
       "(\tB\014\350\3071\001\212\3101\004<=50\022<\n\004name\030\002 \001(\tB.\362\3071*|[a-" +
       "zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?\022\036" +
       "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\205\001\n\006label" +
@@ -20966,101 +20966,101 @@ public final class SubnetServiceOuterClass {
       "dr_blocks\030\007 \003(\tB\004\350\3071\001\022 \n\016route_table_id\030" +
       "\t \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_options\030\n \001(\0132 ." +
       "yandex.cloud.vpc.v1.DhcpOptions\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")" +
-      "\n\024CreateSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(" +
-      "\t\"\356\003\n\023UpdateSubnetRequest\022\037\n\tsubnet_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022<\n\004name\030\003 \001(" +
-      "\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-z" +
-      "A-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
-      "6\022\205\001\n\006labels\030\005 \003(\01324.yandex.cloud.vpc.v1" +
-      ".UpdateSubnetRequest.LabelsEntryB?\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022" +
-      "\020[a-z][-_0-9a-z]*\022 \n\016route_table_id\030\006 \001(" +
-      "\tB\010\212\3101\004<=50\0226\n\014dhcp_options\030\007 \001(\0132 .yand" +
-      "ex.cloud.vpc.v1.DhcpOptions\022\026\n\016v4_cidr_b" +
-      "locks\030\010 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\")\n\024UpdateSubnetMetada" +
-      "ta\022\021\n\tsubnet_id\030\001 \001(\t\"U\n\032AddSubnetCidrBl" +
-      "ocksRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\026\n\016v4_cidr_blocks\030\002 \003(\t\"0\n\033AddSubne" +
-      "tCidrBlocksMetadata\022\021\n\tsubnet_id\030\001 \001(\t\"X" +
-      "\n\035RemoveSubnetCidrBlocksRequest\022\037\n\tsubne" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016v4_cidr_bloc" +
-      "ks\030\002 \003(\t\"3\n\036RemoveSubnetCidrBlocksMetada" +
-      "ta\022\021\n\tsubnet_id\030\001 \001(\t\"6\n\023DeleteSubnetReq" +
-      "uest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n" +
-      "\024DeleteSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t" +
-      "\"|\n\033ListSubnetOperationsRequest\022\037\n\tsubne" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"n\n\034ListSubnetOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"a" +
-      "\n\021MoveSubnetRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\022MoveSubnetMetadata\022" +
-      "\021\n\tsubnet_id\030\001 \001(\t\"j\n\030ListUsedAddressesR" +
-      "equest\022\027\n\tsubnet_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_" +
-      "size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter" +
-      "\030\004 \001(\t\"i\n\031ListUsedAddressesResponse\0223\n\ta" +
-      "ddresses\030\001 \003(\0132 .yandex.cloud.vpc.v1.Use" +
-      "dAddress\022\027\n\017next_page_token\030\002 \001(\t\"\211\001\n\013Us" +
-      "edAddress\022\017\n\007address\030\001 \001(\t\0222\n\nip_version" +
-      "\030\002 \001(\0162\036.yandex.cloud.vpc.v1.IpVersion\0225" +
-      "\n\nreferences\030\003 \003(\0132!.yandex.cloud.refere" +
-      "nce.Reference\"[\n\025RelocateSubnetRequest\022\037" +
-      "\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023desti" +
-      "nation_zone_id\030\002 \001(\tB\004\350\3071\001\"+\n\026RelocateSu" +
-      "bnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t2\200\016\n\rSubn" +
-      "etService\022n\n\003Get\022%.yandex.cloud.vpc.v1.G" +
-      "etSubnetRequest\032\033.yandex.cloud.vpc.v1.Su" +
-      "bnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnets/{subnet_id" +
-      "}\022r\n\004List\022\'.yandex.cloud.vpc.v1.ListSubn" +
-      "etsRequest\032(.yandex.cloud.vpc.v1.ListSub" +
-      "netsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v1/subnets\022\223\001" +
-      "\n\006Create\022(.yandex.cloud.vpc.v1.CreateSub" +
-      "netRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"<\202\323\344\223\002\024\"\017/vpc/v1/subnets:\001*\262\322*\036\n\024C" +
-      "reateSubnetMetadata\022\006Subnet\022\237\001\n\006Update\022(" +
-      ".yandex.cloud.vpc.v1.UpdateSubnetRequest" +
-      "\032!.yandex.cloud.operation.Operation\"H\202\323\344" +
-      "\223\002 2\033/vpc/v1/subnets/{subnet_id}:\001*\262\322*\036\n" +
-      "\024UpdateSubnetMetadata\022\006Subnet\022\275\001\n\rAddCid" +
-      "rBlocks\022/.yandex.cloud.vpc.v1.AddSubnetC" +
-      "idrBlocksRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"X\202\323\344\223\0020\"+/vpc/v1/subnets/{su" +
-      "bnet_id}:add-cidr-blocks:\001*\262\322*\036\n\024UpdateS" +
-      "ubnetMetadata\022\006Subnet\022\306\001\n\020RemoveCidrBloc" +
-      "ks\0222.yandex.cloud.vpc.v1.RemoveSubnetCid" +
-      "rBlocksRequest\032!.yandex.cloud.operation." +
-      "Operation\"[\202\323\344\223\0023\"./vpc/v1/subnets/{subn" +
-      "et_id}:remove-cidr-blocks:\001*\262\322*\036\n\024Update" +
-      "SubnetMetadata\022\006Subnet\022\253\001\n\006Delete\022(.yand" +
-      "ex.cloud.vpc.v1.DeleteSubnetRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"T\202\323\344\223\002\035*\033" +
-      "/vpc/v1/subnets/{subnet_id}\262\322*-\n\024DeleteS" +
-      "ubnetMetadata\022\025google.protobuf.Empty\022\245\001\n" +
-      "\016ListOperations\0220.yandex.cloud.vpc.v1.Li" +
-      "stSubnetOperationsRequest\0321.yandex.cloud" +
-      ".vpc.v1.ListSubnetOperationsResponse\".\202\323" +
-      "\344\223\002(\022&/vpc/v1/subnets/{subnet_id}/operat" +
-      "ions\022\236\001\n\004Move\022&.yandex.cloud.vpc.v1.Move" +
-      "SubnetRequest\032!.yandex.cloud.operation.O" +
-      "peration\"K\202\323\344\223\002%\" /vpc/v1/subnets/{subne" +
-      "t_id}:move:\001*\262\322*\034\n\022MoveSubnetMetadata\022\006S" +
-      "ubnet\022\256\001\n\010Relocate\022*.yandex.cloud.vpc.v1" +
-      ".RelocateSubnetRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"S\202\323\344\223\002)\"$/vpc/v1/subne" +
-      "ts/{subnet_id}:relocate:\001*\262\322* \n\026Relocate" +
-      "SubnetMetadata\022\006Subnet\022\241\001\n\021ListUsedAddre" +
-      "sses\022-.yandex.cloud.vpc.v1.ListUsedAddre" +
-      "ssesRequest\032..yandex.cloud.vpc.v1.ListUs" +
-      "edAddressesResponse\"-\202\323\344\223\002\'\022%/vpc/v1/sub" +
-      "nets/{subnet_id}/addressesBV\n\027yandex.clo" +
-      "ud.api.vpc.v1Z;github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/vpc/v1;vpcb\006prot" +
-      "o3"
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004" +
+      "\010\010\020\t\")\n\024CreateSubnetMetadata\022\021\n\tsubnet_i" +
+      "d\030\001 \001(\t\"\356\003\n\023UpdateSubnetRequest\022\037\n\tsubne" +
+      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030" +
+      "\002 \001(\0132\032.google.protobuf.FieldMask\022<\n\004nam" +
+      "e\030\003 \001(\tB.\362\3071*|[a-zA-Z]([-_a-zA-Z0-9]{0,6" +
+      "1}[a-zA-Z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\310" +
+      "1\005<=256\022\205\001\n\006labels\030\005 \003(\01324.yandex.cloud." +
+      "vpc.v1.UpdateSubnetRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022 \n\016route_table_i" +
+      "d\030\006 \001(\tB\010\212\3101\004<=50\0226\n\014dhcp_options\030\007 \001(\0132" +
+      " .yandex.cloud.vpc.v1.DhcpOptions\022\026\n\016v4_" +
+      "cidr_blocks\030\010 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n\024UpdateSubnet" +
+      "Metadata\022\021\n\tsubnet_id\030\001 \001(\t\"U\n\032AddSubnet" +
+      "CidrBlocksRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\026\n\016v4_cidr_blocks\030\002 \003(\t\"0\n\033Ad" +
+      "dSubnetCidrBlocksMetadata\022\021\n\tsubnet_id\030\001" +
+      " \001(\t\"X\n\035RemoveSubnetCidrBlocksRequest\022\037\n" +
+      "\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\026\n\016v4_cid" +
+      "r_blocks\030\002 \003(\t\"3\n\036RemoveSubnetCidrBlocks" +
+      "Metadata\022\021\n\tsubnet_id\030\001 \001(\t\"6\n\023DeleteSub" +
+      "netRequest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\")\n\024DeleteSubnetMetadata\022\021\n\tsubnet_id" +
+      "\030\001 \001(\t\"|\n\033ListSubnetOperationsRequest\022\037\n" +
+      "\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"n\n\034ListSubnetOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"a\n\021MoveSubnetRequest\022\037\n\tsubnet_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder" +
+      "_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\022MoveSubnetMet" +
+      "adata\022\021\n\tsubnet_id\030\001 \001(\t\"j\n\030ListUsedAddr" +
+      "essesRequest\022\027\n\tsubnet_id\030\001 \001(\tB\004\350\3071\001\022\021\n" +
+      "\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006" +
+      "filter\030\004 \001(\t\"i\n\031ListUsedAddressesRespons" +
+      "e\0223\n\taddresses\030\001 \003(\0132 .yandex.cloud.vpc." +
+      "v1.UsedAddress\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\211\001\n\013UsedAddress\022\017\n\007address\030\001 \001(\t\0222\n\nip_v" +
+      "ersion\030\002 \001(\0162\036.yandex.cloud.vpc.v1.IpVer" +
+      "sion\0225\n\nreferences\030\003 \003(\0132!.yandex.cloud." +
+      "reference.Reference\"[\n\025RelocateSubnetReq" +
+      "uest\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
+      "\023destination_zone_id\030\002 \001(\tB\004\350\3071\001\"+\n\026Relo" +
+      "cateSubnetMetadata\022\021\n\tsubnet_id\030\001 \001(\t2\200\016" +
+      "\n\rSubnetService\022n\n\003Get\022%.yandex.cloud.vp" +
+      "c.v1.GetSubnetRequest\032\033.yandex.cloud.vpc" +
+      ".v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnets/{sub" +
+      "net_id}\022r\n\004List\022\'.yandex.cloud.vpc.v1.Li" +
+      "stSubnetsRequest\032(.yandex.cloud.vpc.v1.L" +
+      "istSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v1/subn" +
+      "ets\022\223\001\n\006Create\022(.yandex.cloud.vpc.v1.Cre" +
+      "ateSubnetRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/subnets:\001*\262" +
+      "\322*\036\n\024CreateSubnetMetadata\022\006Subnet\022\237\001\n\006Up" +
+      "date\022(.yandex.cloud.vpc.v1.UpdateSubnetR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet_id}:\001" +
+      "*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\275\001\n\r" +
+      "AddCidrBlocks\022/.yandex.cloud.vpc.v1.AddS" +
+      "ubnetCidrBlocksRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"X\202\323\344\223\0020\"+/vpc/v1/subne" +
+      "ts/{subnet_id}:add-cidr-blocks:\001*\262\322*\036\n\024U" +
+      "pdateSubnetMetadata\022\006Subnet\022\306\001\n\020RemoveCi" +
+      "drBlocks\0222.yandex.cloud.vpc.v1.RemoveSub" +
+      "netCidrBlocksRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"[\202\323\344\223\0023\"./vpc/v1/subnets" +
+      "/{subnet_id}:remove-cidr-blocks:\001*\262\322*\036\n\024" +
+      "UpdateSubnetMetadata\022\006Subnet\022\253\001\n\006Delete\022" +
+      "(.yandex.cloud.vpc.v1.DeleteSubnetReques" +
+      "t\032!.yandex.cloud.operation.Operation\"T\202\323" +
+      "\344\223\002\035*\033/vpc/v1/subnets/{subnet_id}\262\322*-\n\024D" +
+      "eleteSubnetMetadata\022\025google.protobuf.Emp" +
+      "ty\022\245\001\n\016ListOperations\0220.yandex.cloud.vpc" +
+      ".v1.ListSubnetOperationsRequest\0321.yandex" +
+      ".cloud.vpc.v1.ListSubnetOperationsRespon" +
+      "se\".\202\323\344\223\002(\022&/vpc/v1/subnets/{subnet_id}/" +
+      "operations\022\236\001\n\004Move\022&.yandex.cloud.vpc.v" +
+      "1.MoveSubnetRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"K\202\323\344\223\002%\" /vpc/v1/subnets/" +
+      "{subnet_id}:move:\001*\262\322*\034\n\022MoveSubnetMetad" +
+      "ata\022\006Subnet\022\256\001\n\010Relocate\022*.yandex.cloud." +
+      "vpc.v1.RelocateSubnetRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"S\202\323\344\223\002)\"$/vpc/v1" +
+      "/subnets/{subnet_id}:relocate:\001*\262\322* \n\026Re" +
+      "locateSubnetMetadata\022\006Subnet\022\241\001\n\021ListUse" +
+      "dAddresses\022-.yandex.cloud.vpc.v1.ListUse" +
+      "dAddressesRequest\032..yandex.cloud.vpc.v1." +
+      "ListUsedAddressesResponse\"-\202\323\344\223\002\'\022%/vpc/" +
+      "v1/subnets/{subnet_id}/addressesBV\n\027yand" +
+      "ex.cloud.api.vpc.v1Z;github.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/vpc/v1;vpc" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21068,10 +21068,10 @@ public final class SubnetServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.reference.ReferenceOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -21232,10 +21232,10 @@ public final class SubnetServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.reference.ReferenceOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

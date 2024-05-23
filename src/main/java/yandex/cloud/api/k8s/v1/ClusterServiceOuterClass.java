@@ -32669,9 +32669,9 @@ public final class ClusterServiceOuterClass {
       "oto\022\023yandex.cloud.k8s.v1\032\034google/api/ann" +
       "otations.proto\032 google/protobuf/field_ma" +
       "sk.proto\032 yandex/cloud/api/operation.pro" +
-      "to\032!yandex/cloud/k8s/v1/cluster.proto\032$y" +
-      "andex/cloud/k8s/v1/node_group.proto\032\036yan" +
-      "dex/cloud/k8s/v1/node.proto\032!yandex/clou" +
+      "to\032!yandex/cloud/k8s/v1/cluster.proto\032\036y" +
+      "andex/cloud/k8s/v1/node.proto\032$yandex/cl" +
+      "oud/k8s/v1/node_group.proto\032!yandex/clou" +
       "d/k8s/v1/version.proto\032&yandex/cloud/ope" +
       "ration/operation.proto\032\035yandex/cloud/val" +
       "idation.proto\"-\n\021GetClusterRequest\022\030\n\ncl" +
@@ -32756,7 +32756,7 @@ public final class ClusterServiceOuterClass {
       "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030Li" +
       "stClusterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031." +
       "yandex.cloud.k8s.v1.Node\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\316\004\n\nMasterSpec\022A\n\021zonal_master" +
+      "ken\030\002 \001(\t\"\324\004\n\nMasterSpec\022A\n\021zonal_master" +
       "_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalM" +
       "asterSpecH\000\022G\n\024regional_master_spec\030\002 \001(" +
       "\0132\'.yandex.cloud.k8s.v1.RegionalMasterSp" +
@@ -32771,70 +32771,70 @@ public final class ClusterServiceOuterClass {
       "erMaintenancePolicy\022\032\n\022security_group_id" +
       "s\030\006 \003(\t\022:\n\016master_logging\030\007 \001(\0132\".yandex" +
       ".cloud.k8s.v1.MasterLoggingB\r\n\013master_ty" +
-      "pe\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(\0132" +
-      "(.yandex.cloud.k8s.v1.InternalAddressSpe" +
-      "c\022J\n\030external_v4_address_spec\030\003 \001(\0132(.ya" +
-      "ndex.cloud.k8s.v1.ExternalAddressSpec\"\375\001" +
-      "\n\022RegionalMasterSpec\022\027\n\tregion_id\030\001 \001(\tB" +
-      "\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex.cloud." +
-      "k8s.v1.MasterLocation\022J\n\030external_v4_add" +
-      "ress_spec\030\003 \001(\0132(.yandex.cloud.k8s.v1.Ex" +
-      "ternalAddressSpec\022J\n\030external_v6_address" +
-      "_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1.Extern" +
-      "alAddressSpec\"(\n\023InternalAddressSpec\022\021\n\t" +
-      "subnet_id\030\002 \001(\t\"&\n\023ExternalAddressSpec\022\017" +
-      "\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022\025\n\007zon" +
-      "e_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_" +
-      "spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Interna" +
-      "lAddressSpec\"8\n\014LocationSpec\022\025\n\007zone_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t2\306\r\n\016Clust" +
-      "erService\022\201\001\n\003Get\022&.yandex.cloud.k8s.v1." +
-      "GetClusterRequest\032\034.yandex.cloud.k8s.v1." +
-      "Cluster\"4\202\323\344\223\002.\022,/managed-kubernetes/v1/" +
-      "clusters/{cluster_id}\022\204\001\n\004List\022(.yandex." +
-      "cloud.k8s.v1.ListClustersRequest\032).yande" +
-      "x.cloud.k8s.v1.ListClustersResponse\"\'\202\323\344" +
-      "\223\002!\022\037/managed-kubernetes/v1/clusters\022\246\001\n" +
-      "\006Create\022).yandex.cloud.k8s.v1.CreateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"N\202\323\344\223\002$\"\037/managed-kubernetes/v1/cl" +
-      "usters:\001*\262\322* \n\025CreateClusterMetadata\022\007Cl" +
-      "uster\022\263\001\n\006Update\022).yandex.cloud.k8s.v1.U" +
-      "pdateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"[\202\323\344\223\00212,/managed-kuberne" +
-      "tes/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upd" +
-      "ateClusterMetadata\022\007Cluster\022\276\001\n\006Delete\022)" +
-      ".yandex.cloud.k8s.v1.DeleteClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"f\202\323" +
-      "\344\223\002.*,/managed-kubernetes/v1/clusters/{c" +
-      "luster_id}\262\322*.\n\025DeleteClusterMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\262\001\n\004Stop\022\'.yandex.c" +
-      "loud.k8s.v1.StopClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"^\202\323\344\223\0026\"1/mana" +
-      "ged-kubernetes/v1/clusters/{cluster_id}:" +
-      "stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007Cluste" +
-      "r\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1.StartC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"`\202\323\344\223\0027\"2/managed-kubernetes/v1" +
-      "/clusters/{cluster_id}:start:\001*\262\322*\037\n\024Sta" +
-      "rtClusterMetadata\022\007Cluster\022\270\001\n\016ListNodeG" +
-      "roups\0221.yandex.cloud.k8s.v1.ListClusterN" +
-      "odeGroupsRequest\0322.yandex.cloud.k8s.v1.L" +
-      "istClusterNodeGroupsResponse\"?\202\323\344\223\0029\0227/m" +
-      "anaged-kubernetes/v1/clusters/{cluster_i" +
-      "d}/nodeGroups\022\270\001\n\016ListOperations\0221.yande" +
-      "x.cloud.k8s.v1.ListClusterOperationsRequ" +
-      "est\0322.yandex.cloud.k8s.v1.ListClusterOpe" +
-      "rationsResponse\"?\202\323\344\223\0029\0227/managed-kubern" +
-      "etes/v1/clusters/{cluster_id}/operations" +
-      "\022\244\001\n\tListNodes\022,.yandex.cloud.k8s.v1.Lis" +
-      "tClusterNodesRequest\032-.yandex.cloud.k8s." +
-      "v1.ListClusterNodesResponse\":\202\323\344\223\0024\0222/ma" +
-      "naged-kubernetes/v1/clusters/{cluster_id" +
-      "}/nodesBV\n\027yandex.cloud.api.k8s.v1Z;gith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/k8s/v1;k8sb\006proto3"
+      "peJ\004\010\005\020\006\"\300\001\n\017ZonalMasterSpec\022\025\n\007zone_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_address_spec\030" +
+      "\002 \001(\0132(.yandex.cloud.k8s.v1.InternalAddr" +
+      "essSpec\022J\n\030external_v4_address_spec\030\003 \001(" +
+      "\0132(.yandex.cloud.k8s.v1.ExternalAddressS" +
+      "pec\"\375\001\n\022RegionalMasterSpec\022\027\n\tregion_id\030" +
+      "\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#.yandex." +
+      "cloud.k8s.v1.MasterLocation\022J\n\030external_" +
+      "v4_address_spec\030\003 \001(\0132(.yandex.cloud.k8s" +
+      ".v1.ExternalAddressSpec\022J\n\030external_v6_a" +
+      "ddress_spec\030\004 \001(\0132(.yandex.cloud.k8s.v1." +
+      "ExternalAddressSpec\"(\n\023InternalAddressSp" +
+      "ec\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalAddress" +
+      "Spec\022\017\n\007address\030\001 \001(\t\"s\n\016MasterLocation\022" +
+      "\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_ad" +
+      "dress_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.I" +
+      "nternalAddressSpec\"8\n\014LocationSpec\022\025\n\007zo" +
+      "ne_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(\t2\306\r\n" +
+      "\016ClusterService\022\201\001\n\003Get\022&.yandex.cloud.k" +
+      "8s.v1.GetClusterRequest\032\034.yandex.cloud.k" +
+      "8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-kubernet" +
+      "es/v1/clusters/{cluster_id}\022\204\001\n\004List\022(.y" +
+      "andex.cloud.k8s.v1.ListClustersRequest\032)" +
+      ".yandex.cloud.k8s.v1.ListClustersRespons" +
+      "e\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v1/cluste" +
+      "rs\022\246\001\n\006Create\022).yandex.cloud.k8s.v1.Crea" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"N\202\323\344\223\002$\"\037/managed-kubernetes" +
+      "/v1/clusters:\001*\262\322* \n\025CreateClusterMetada" +
+      "ta\022\007Cluster\022\263\001\n\006Update\022).yandex.cloud.k8" +
+      "s.v1.UpdateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"[\202\323\344\223\00212,/managed-k" +
+      "ubernetes/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\276\001\n\006De" +
+      "lete\022).yandex.cloud.k8s.v1.DeleteCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"f\202\323\344\223\002.*,/managed-kubernetes/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\262\001\n\004Stop\022\'.ya" +
+      "ndex.cloud.k8s.v1.StopClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"^\202\323\344\223\0026\"" +
+      "1/managed-kubernetes/v1/clusters/{cluste" +
+      "r_id}:stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007" +
+      "Cluster\022\266\001\n\005Start\022(.yandex.cloud.k8s.v1." +
+      "StartClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"`\202\323\344\223\0027\"2/managed-kuberne" +
+      "tes/v1/clusters/{cluster_id}:start:\001*\262\322*" +
+      "\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n\016Lis" +
+      "tNodeGroups\0221.yandex.cloud.k8s.v1.ListCl" +
+      "usterNodeGroupsRequest\0322.yandex.cloud.k8" +
+      "s.v1.ListClusterNodeGroupsResponse\"?\202\323\344\223" +
+      "\0029\0227/managed-kubernetes/v1/clusters/{clu" +
+      "ster_id}/nodeGroups\022\270\001\n\016ListOperations\0221" +
+      ".yandex.cloud.k8s.v1.ListClusterOperatio" +
+      "nsRequest\0322.yandex.cloud.k8s.v1.ListClus" +
+      "terOperationsResponse\"?\202\323\344\223\0029\0227/managed-" +
+      "kubernetes/v1/clusters/{cluster_id}/oper" +
+      "ations\022\244\001\n\tListNodes\022,.yandex.cloud.k8s." +
+      "v1.ListClusterNodesRequest\032-.yandex.clou" +
+      "d.k8s.v1.ListClusterNodesResponse\":\202\323\344\223\002" +
+      "4\0222/managed-kubernetes/v1/clusters/{clus" +
+      "ter_id}/nodesBV\n\027yandex.cloud.api.k8s.v1" +
+      "Z;github.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -32843,8 +32843,8 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.k8s.v1.ClusterOuterClass.getDescriptor(),
-          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor(),
           yandex.cloud.api.k8s.v1.NodeOuterClass.getDescriptor(),
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor(),
           yandex.cloud.api.k8s.v1.Version.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -33045,8 +33045,8 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.k8s.v1.ClusterOuterClass.getDescriptor();
-    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor();
     yandex.cloud.api.k8s.v1.NodeOuterClass.getDescriptor();
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor();
     yandex.cloud.api.k8s.v1.Version.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

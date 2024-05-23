@@ -10576,87 +10576,87 @@ public final class GroupMappingServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n?yandex/cloud/organizationmanager/v1/gr" +
       "oup_mapping_service.proto\022#yandex.cloud." +
-      "organizationmanager.v1\0327yandex/cloud/org" +
-      "anizationmanager/v1/group_mapping.proto\032" +
-      " yandex/cloud/api/operation.proto\032&yande" +
-      "x/cloud/operation/operation.proto\032\035yande" +
-      "x/cloud/validation.proto\032 google/protobu" +
-      "f/field_mask.proto\"=\n\026GetGroupMappingReq" +
+      "organizationmanager.v1\032 google/protobuf/" +
+      "field_mask.proto\032 yandex/cloud/api/opera" +
+      "tion.proto\032&yandex/cloud/operation/opera" +
+      "tion.proto\0327yandex/cloud/organizationman" +
+      "ager/v1/group_mapping.proto\032\035yandex/clou" +
+      "d/validation.proto\"=\n\026GetGroupMappingReq" +
       "uest\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
       "0\"c\n\027GetGroupMappingResponse\022H\n\rgroup_ma" +
       "pping\030\001 \001(\01321.yandex.cloud.organizationm" +
-      "anager.v1.GroupMapping\"Q\n\031CreateGroupMap" +
+      "anager.v1.GroupMapping\"W\n\031CreateGroupMap" +
       "pingRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\017\n\007enabled\030\003 \001(\010\"3\n\032CreateGroup" +
-      "MappingMetadata\022\025\n\rfederation_id\030\001 \001(\t\"\202" +
-      "\001\n\031UpdateGroupMappingRequest\022#\n\rfederati" +
-      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022\017\n\007en" +
-      "abled\030\003 \001(\010\"3\n\032UpdateGroupMappingMetadat" +
-      "a\022\025\n\rfederation_id\030\001 \001(\t\"@\n\031DeleteGroupM" +
-      "appingRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"3\n\032DeleteGroupMappingMetadata" +
-      "\022\025\n\rfederation_id\030\001 \001(\t\"\260\001\n\036UpdateGroupM" +
-      "appingItemsRequest\022#\n\rfederation_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022i\n\031group_mapping_item_de" +
-      "ltas\030\004 \003(\0132:.yandex.cloud.organizationma" +
-      "nager.v1.GroupMappingItemDeltaB\n\202\3101\0061-10" +
-      "00\"\346\001\n\025GroupMappingItemDelta\022C\n\004item\030\001 \001" +
-      "(\01325.yandex.cloud.organizationmanager.v1" +
-      ".GroupMappingItem\022Q\n\006action\030\002 \001(\0162A.yand" +
-      "ex.cloud.organizationmanager.v1.GroupMap" +
-      "pingItemDelta.Action\"5\n\006Action\022\026\n\022ACTION" +
-      "_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002\"8\n\037U" +
-      "pdateGroupMappingItemsMetadata\022\025\n\rfedera" +
-      "tion_id\030\001 \001(\t\"\200\001\n\037UpdateGroupMappingItem" +
-      "sResponse\022]\n\031group_mapping_item_deltas\030\004" +
-      " \003(\0132:.yandex.cloud.organizationmanager." +
-      "v1.GroupMappingItemDelta\"\236\001\n\034ListGroupMa" +
-      "ppingItemsRequest\022#\n\rfederation_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
-      "-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022\032\n" +
-      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\214\001\n\035ListGroupM" +
-      "appingItemsResponse\022R\n\023group_mapping_ite" +
-      "ms\030\001 \003(\01325.yandex.cloud.organizationmana" +
-      "ger.v1.GroupMappingItem\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\320\007\n\023GroupMappingService\022\200\001\n\003Get" +
-      "\022;.yandex.cloud.organizationmanager.v1.G" +
-      "etGroupMappingRequest\032<.yandex.cloud.org" +
-      "anizationmanager.v1.GetGroupMappingRespo" +
-      "nse\022\233\001\n\006Create\022>.yandex.cloud.organizati" +
-      "onmanager.v1.CreateGroupMappingRequest\032!" +
-      ".yandex.cloud.operation.Operation\".\262\322**\n" +
-      "\032CreateGroupMappingMetadata\022\014GroupMappin" +
-      "g\022\233\001\n\006Update\022>.yandex.cloud.organization" +
-      "manager.v1.UpdateGroupMappingRequest\032!.y" +
-      "andex.cloud.operation.Operation\".\262\322**\n\032U" +
-      "pdateGroupMappingMetadata\022\014GroupMapping\022" +
-      "\244\001\n\006Delete\022>.yandex.cloud.organizationma" +
-      "nager.v1.DeleteGroupMappingRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"7\262\322*3\n\032Del" +
-      "eteGroupMappingMetadata\022\025google.protobuf" +
-      ".Empty\022\222\001\n\tListItems\022A.yandex.cloud.orga" +
-      "nizationmanager.v1.ListGroupMappingItems" +
-      "Request\032B.yandex.cloud.organizationmanag" +
-      "er.v1.ListGroupMappingItemsResponse\022\275\001\n\013" +
-      "UpdateItems\022C.yandex.cloud.organizationm" +
-      "anager.v1.UpdateGroupMappingItemsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"F\262\322*" +
-      "B\n\037UpdateGroupMappingItemsMetadata\022\037Upda" +
-      "teGroupMappingItemsResponseB\206\001\n\'yandex.c" +
-      "loud.api.organizationmanager.v1Z[github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/organizationmanager/v1;organizationman" +
-      "agerb\006proto3"
+      "\212\3101\004<=50\022\017\n\007enabled\030\003 \001(\010J\004\010\002\020\003\"3\n\032Creat" +
+      "eGroupMappingMetadata\022\025\n\rfederation_id\030\001" +
+      " \001(\t\"\202\001\n\031UpdateGroupMappingRequest\022#\n\rfe" +
+      "deration_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022\017\n\007enabled\030\003 \001(\010\"3\n\032UpdateGroupMappingM" +
+      "etadata\022\025\n\rfederation_id\030\001 \001(\t\"@\n\031Delete" +
+      "GroupMappingRequest\022#\n\rfederation_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"3\n\032DeleteGroupMappingMe" +
+      "tadata\022\025\n\rfederation_id\030\001 \001(\t\"\266\001\n\036Update" +
+      "GroupMappingItemsRequest\022#\n\rfederation_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022i\n\031group_mapping_i" +
+      "tem_deltas\030\004 \003(\0132:.yandex.cloud.organiza" +
+      "tionmanager.v1.GroupMappingItemDeltaB\n\202\310" +
+      "1\0061-1000J\004\010\002\020\004\"\346\001\n\025GroupMappingItemDelta" +
+      "\022C\n\004item\030\001 \001(\01325.yandex.cloud.organizati" +
+      "onmanager.v1.GroupMappingItem\022Q\n\006action\030" +
+      "\002 \001(\0162A.yandex.cloud.organizationmanager" +
+      ".v1.GroupMappingItemDelta.Action\"5\n\006Acti" +
+      "on\022\026\n\022ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006R" +
+      "EMOVE\020\002\"8\n\037UpdateGroupMappingItemsMetada" +
+      "ta\022\025\n\rfederation_id\030\001 \001(\t\"\200\001\n\037UpdateGrou" +
+      "pMappingItemsResponse\022]\n\031group_mapping_i" +
+      "tem_deltas\030\004 \003(\0132:.yandex.cloud.organiza" +
+      "tionmanager.v1.GroupMappingItemDelta\"\236\001\n" +
+      "\034ListGroupMappingItemsRequest\022#\n\rfederat" +
+      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212" +
+      "\3101\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\214\001" +
+      "\n\035ListGroupMappingItemsResponse\022R\n\023group" +
+      "_mapping_items\030\001 \003(\01325.yandex.cloud.orga" +
+      "nizationmanager.v1.GroupMappingItem\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\320\007\n\023GroupMappingSer" +
+      "vice\022\200\001\n\003Get\022;.yandex.cloud.organization" +
+      "manager.v1.GetGroupMappingRequest\032<.yand" +
+      "ex.cloud.organizationmanager.v1.GetGroup" +
+      "MappingResponse\022\233\001\n\006Create\022>.yandex.clou" +
+      "d.organizationmanager.v1.CreateGroupMapp" +
+      "ingRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\".\262\322**\n\032CreateGroupMappingMetadata\022" +
+      "\014GroupMapping\022\233\001\n\006Update\022>.yandex.cloud." +
+      "organizationmanager.v1.UpdateGroupMappin" +
+      "gRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\".\262\322**\n\032UpdateGroupMappingMetadata\022\014G" +
+      "roupMapping\022\244\001\n\006Delete\022>.yandex.cloud.or" +
+      "ganizationmanager.v1.DeleteGroupMappingR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"7\262\322*3\n\032DeleteGroupMappingMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\222\001\n\tListItems\022A.yande" +
+      "x.cloud.organizationmanager.v1.ListGroup" +
+      "MappingItemsRequest\032B.yandex.cloud.organ" +
+      "izationmanager.v1.ListGroupMappingItemsR" +
+      "esponse\022\275\001\n\013UpdateItems\022C.yandex.cloud.o" +
+      "rganizationmanager.v1.UpdateGroupMapping" +
+      "ItemsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"F\262\322*B\n\037UpdateGroupMappingItemsMe" +
+      "tadata\022\037UpdateGroupMappingItemsResponseB" +
+      "\206\001\n\'yandex.cloud.api.organizationmanager" +
+      ".v1Z[github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/organizationmanager/v1;org" +
+      "anizationmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          yandex.cloud.api.organizationmanager.v1.GroupMappingOuterClass.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.organizationmanager.v1.GroupMappingOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_yandex_cloud_organizationmanager_v1_GetGroupMappingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10751,11 +10751,11 @@ public final class GroupMappingServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    yandex.cloud.api.organizationmanager.v1.GroupMappingOuterClass.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.organizationmanager.v1.GroupMappingOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

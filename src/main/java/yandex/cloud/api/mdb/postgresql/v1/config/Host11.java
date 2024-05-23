@@ -14856,7 +14856,7 @@ public final class Host11 {
       "\n2yandex/cloud/mdb/postgresql/v1/config/" +
       "host11.proto\022%yandex.cloud.mdb.postgresq" +
       "l.v1.config\032\036google/protobuf/wrappers.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\352.\n\026P" +
+      "oto\032\035yandex/cloud/validation.proto\"\360.\n\026P" +
       "ostgresqlHostConfig11\022=\n\030recovery_min_ap" +
       "ply_delay\030\001 \001(\0132\033.google.protobuf.Int64V" +
       "alue\0223\n\016shared_buffers\030\002 \001(\0132\033.google.pr" +
@@ -15006,11 +15006,11 @@ public final class Host11 {
       "NARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020" +
       "\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XM" +
       "L_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOC" +
-      "UMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002B\201\001\n)yand" +
-      "ex.cloud.api.mdb.postgresql.v1.configZTg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/postgresql/v1/config;postgre" +
-      "sqlb\006proto3"
+      "UMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002J\004\0104\0206B\201\001" +
+      "\n)yandex.cloud.api.mdb.postgresql.v1.con" +
+      "figZTgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/mdb/postgresql/v1/config;p" +
+      "ostgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

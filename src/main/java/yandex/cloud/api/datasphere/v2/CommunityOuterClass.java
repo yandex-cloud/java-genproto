@@ -2033,17 +2033,17 @@ public final class CommunityOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/datasphere/v2/community.p" +
       "roto\022\032yandex.cloud.datasphere.v2\032\037google" +
-      "/protobuf/timestamp.proto\"\214\002\n\tCommunity\022" +
+      "/protobuf/timestamp.proto\"\222\002\n\tCommunity\022" +
       "\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.google" +
       ".protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013des" +
       "cription\030\004 \001(\t\022A\n\006labels\030\005 \003(\01321.yandex." +
       "cloud.datasphere.v2.Community.LabelsEntr" +
       "y\022\025\n\rcreated_by_id\030\006 \001(\t\022\027\n\017organization" +
       "_id\030\n \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001Bk\n\036yandex.cloud.api.dat" +
-      "asphere.v2ZIgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/datasphere/v2;datas" +
-      "phereb\006proto3"
+      "\005value\030\002 \001(\t:\0028\001J\004\010\007\020\nBk\n\036yandex.cloud.a" +
+      "pi.datasphere.v2ZIgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/datasphere/v2" +
+      ";datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

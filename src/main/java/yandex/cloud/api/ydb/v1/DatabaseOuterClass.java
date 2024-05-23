@@ -21545,7 +21545,7 @@ public final class DatabaseOuterClass {
       "\n\"yandex/cloud/ydb/v1/database.proto\022\023ya" +
       "ndex.cloud.ydb.v1\032\037google/protobuf/times" +
       "tamp.proto\032\035yandex/cloud/validation.prot" +
-      "o\032 yandex/cloud/ydb/v1/backup.proto\"\255\t\n\010" +
+      "o\032 yandex/cloud/ydb/v1/backup.proto\"\263\t\n\010" +
       "Database\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022" +
       ".\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001" +
@@ -21575,68 +21575,69 @@ public final class DatabaseOuterClass {
       "(\t:\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
       "\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDA" +
       "TING\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010START" +
-      "ING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_type\"\202\006\n\016" +
-      "AlertParameter\022Z\n\026double_parameter_value" +
-      "\030\001 \001(\01328.yandex.cloud.ydb.v1.AlertParame" +
-      "ter.DoubleParameterValueH\000\022\\\n\027integer_pa" +
-      "rameter_value\030\002 \001(\01329.yandex.cloud.ydb.v" +
-      "1.AlertParameter.IntegerParameterValueH\000" +
-      "\022V\n\024text_parameter_value\030\003 \001(\01326.yandex." +
-      "cloud.ydb.v1.AlertParameter.TextParamete" +
-      "rValueH\000\022_\n\031text_list_parameter_value\030\004 " +
-      "\001(\0132:.yandex.cloud.ydb.v1.AlertParameter" +
-      ".TextListParameterValueH\000\022a\n\032label_list_" +
-      "parameter_value\030\005 \001(\0132;.yandex.cloud.ydb" +
-      ".v1.AlertParameter.LabelListParameterVal" +
-      "ueH\000\0323\n\024DoubleParameterValue\022\014\n\004name\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\001\0324\n\025IntegerParameterVal" +
-      "ue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\003\0321\n\022TextP" +
-      "arameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t\0326\n\026TextListParameterValue\022\014\n\004name\030\001 \001" +
-      "(\t\022\016\n\006values\030\002 \003(\t\0327\n\027LabelListParameter" +
-      "Value\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(\tB\013\n\tp" +
-      "arameter\"\242\001\n\023NotificationChannel\022\037\n\027noti" +
-      "fication_channel_id\030\001 \001(\t\022I\n\025notify_abou" +
-      "t_statuses\030\002 \003(\0162*.yandex.cloud.ydb.v1.A" +
-      "lertEvaluationStatus\022\037\n\027repeate_notify_d" +
-      "elay_ms\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010alert_id\030\001 \001(" +
-      "\t\022\031\n\021alert_template_id\030\002 \001(\t\022\014\n\004name\030\003 \001" +
-      "(\t\022\023\n\013description\030\004 \001(\t\022G\n\025notification_" +
-      "channels\030\005 \003(\0132(.yandex.cloud.ydb.v1.Not" +
-      "ificationChannel\022=\n\020alert_parameters\030\006 \003" +
-      "(\0132#.yandex.cloud.ydb.v1.AlertParameter\022" +
-      "=\n\020alert_thresholds\030\007 \003(\0132#.yandex.cloud" +
-      ".ydb.v1.AlertParameter\">\n\020MonitoringConf" +
-      "ig\022*\n\006alerts\030\001 \003(\0132\032.yandex.cloud.ydb.v1" +
-      ".Alert\"\346\001\n\021DedicatedDatabase\022\032\n\022resource" +
-      "_preset_id\030\001 \001(\t\022:\n\016storage_config\030\002 \001(\013" +
-      "2\".yandex.cloud.ydb.v1.StorageConfig\0226\n\014" +
-      "scale_policy\030\003 \001(\0132 .yandex.cloud.ydb.v1" +
-      ".ScalePolicy\022\022\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubn" +
-      "et_ids\030\005 \003(\t\022\031\n\021assign_public_ips\030\006 \001(\010\"" +
-      "\255\001\n\022ServerlessDatabase\022\034\n\024throttling_rcu" +
-      "_limit\030\001 \001(\003\022\032\n\022storage_size_limit\030\002 \001(\003" +
-      "\022#\n\033enable_throttling_rcu_limit\030\003 \001(\010\022\035\n" +
-      "\025provisioned_rcu_limit\030\004 \001(\003\022\031\n\021topic_wr" +
-      "ite_quota\030\005 \001(\003\"&\n\rZonalDatabase\022\025\n\007zone" +
-      "_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tr" +
-      "egion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013" +
-      "fixed_scale\030\001 \001(\0132+.yandex.cloud.ydb.v1." +
-      "ScalePolicy.FixedScaleH\000\032#\n\nFixedScale\022\025" +
-      "\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011" +
-      "\001\"q\n\rStorageConfig\022D\n\017storage_options\030\001 " +
-      "\003(\0132\".yandex.cloud.ydb.v1.StorageOptionB" +
-      "\007\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\r" +
-      "StorageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023" +
-      "\n\013group_count\030\002 \001(\003*\355\001\n\025AlertEvaluationS" +
-      "tatus\022\'\n#ALERT_EVALUATION_STATUS_UNSPECI" +
-      "FIED\020\000\022\036\n\032ALERT_EVALUATION_STATUS_OK\020\001\022#" +
-      "\n\037ALERT_EVALUATION_STATUS_NO_DATA\020\002\022!\n\035A" +
-      "LERT_EVALUATION_STATUS_ERROR\020\003\022!\n\035ALERT_" +
-      "EVALUATION_STATUS_ALARM\020\004\022 \n\034ALERT_EVALU" +
-      "ATION_STATUS_WARN\020\005BV\n\027yandex.cloud.api." +
-      "ydb.v1Z;github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/ydb/v1;ydbb\006proto3"
+      "ING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_typeJ\004\010\007\020" +
+      "\010\"\202\006\n\016AlertParameter\022Z\n\026double_parameter" +
+      "_value\030\001 \001(\01328.yandex.cloud.ydb.v1.Alert" +
+      "Parameter.DoubleParameterValueH\000\022\\\n\027inte" +
+      "ger_parameter_value\030\002 \001(\01329.yandex.cloud" +
+      ".ydb.v1.AlertParameter.IntegerParameterV" +
+      "alueH\000\022V\n\024text_parameter_value\030\003 \001(\01326.y" +
+      "andex.cloud.ydb.v1.AlertParameter.TextPa" +
+      "rameterValueH\000\022_\n\031text_list_parameter_va" +
+      "lue\030\004 \001(\0132:.yandex.cloud.ydb.v1.AlertPar" +
+      "ameter.TextListParameterValueH\000\022a\n\032label" +
+      "_list_parameter_value\030\005 \001(\0132;.yandex.clo" +
+      "ud.ydb.v1.AlertParameter.LabelListParame" +
+      "terValueH\000\0323\n\024DoubleParameterValue\022\014\n\004na" +
+      "me\030\001 \001(\t\022\r\n\005value\030\002 \001(\001\0324\n\025IntegerParame" +
+      "terValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\003\0321\n" +
+      "\022TextParameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t\0326\n\026TextListParameterValue\022\014\n\004na" +
+      "me\030\001 \001(\t\022\016\n\006values\030\002 \003(\t\0327\n\027LabelListPar" +
+      "ameterValue\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(" +
+      "\tB\013\n\tparameter\"\242\001\n\023NotificationChannel\022\037" +
+      "\n\027notification_channel_id\030\001 \001(\t\022I\n\025notif" +
+      "y_about_statuses\030\002 \003(\0162*.yandex.cloud.yd" +
+      "b.v1.AlertEvaluationStatus\022\037\n\027repeate_no" +
+      "tify_delay_ms\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010alert_i" +
+      "d\030\001 \001(\t\022\031\n\021alert_template_id\030\002 \001(\t\022\014\n\004na" +
+      "me\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022G\n\025notific" +
+      "ation_channels\030\005 \003(\0132(.yandex.cloud.ydb." +
+      "v1.NotificationChannel\022=\n\020alert_paramete" +
+      "rs\030\006 \003(\0132#.yandex.cloud.ydb.v1.AlertPara" +
+      "meter\022=\n\020alert_thresholds\030\007 \003(\0132#.yandex" +
+      ".cloud.ydb.v1.AlertParameter\">\n\020Monitori" +
+      "ngConfig\022*\n\006alerts\030\001 \003(\0132\032.yandex.cloud." +
+      "ydb.v1.Alert\"\346\001\n\021DedicatedDatabase\022\032\n\022re" +
+      "source_preset_id\030\001 \001(\t\022:\n\016storage_config" +
+      "\030\002 \001(\0132\".yandex.cloud.ydb.v1.StorageConf" +
+      "ig\0226\n\014scale_policy\030\003 \001(\0132 .yandex.cloud." +
+      "ydb.v1.ScalePolicy\022\022\n\nnetwork_id\030\004 \001(\t\022\022" +
+      "\n\nsubnet_ids\030\005 \003(\t\022\031\n\021assign_public_ips\030" +
+      "\006 \001(\010\"\255\001\n\022ServerlessDatabase\022\034\n\024throttli" +
+      "ng_rcu_limit\030\001 \001(\003\022\032\n\022storage_size_limit" +
+      "\030\002 \001(\003\022#\n\033enable_throttling_rcu_limit\030\003 " +
+      "\001(\010\022\035\n\025provisioned_rcu_limit\030\004 \001(\003\022\031\n\021to" +
+      "pic_write_quota\030\005 \001(\003\"&\n\rZonalDatabase\022\025" +
+      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabas" +
+      "e\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePoli" +
+      "cy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.y" +
+      "db.v1.ScalePolicy.FixedScaleH\000\032#\n\nFixedS" +
+      "cale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_typ" +
+      "e\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storage_opti" +
+      "ons\030\001 \003(\0132\".yandex.cloud.ydb.v1.StorageO" +
+      "ptionB\007\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001" +
+      "(\003\"=\n\rStorageOption\022\027\n\017storage_type_id\030\001" +
+      " \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025AlertEvalu" +
+      "ationStatus\022\'\n#ALERT_EVALUATION_STATUS_U" +
+      "NSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_STATUS_" +
+      "OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO_DATA\020" +
+      "\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR\020\003\022!\n\035" +
+      "ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n\034ALERT" +
+      "_EVALUATION_STATUS_WARN\020\005BV\n\027yandex.clou" +
+      "d.api.ydb.v1Z;github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/ydb/v1;ydbb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

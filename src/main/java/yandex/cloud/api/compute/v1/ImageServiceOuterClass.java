@@ -13684,7 +13684,7 @@ public final class ImageServiceOuterClass {
       "ilter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(" +
       "\tB\t\212\3101\005<=100\"]\n\022ListImagesResponse\022.\n\006im" +
       "ages\030\001 \003(\0132\036.yandex.cloud.compute.v1.Ima" +
-      "ge\022\027\n\017next_page_token\030\002 \001(\t\"\203\005\n\022CreateIm" +
+      "ge\022\027\n\017next_page_token\030\002 \001(\t\"\211\005\n\022CreateIm" +
       "ageRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{" +
       "0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\310" +
@@ -13700,75 +13700,75 @@ public final class ImageServiceOuterClass {
       "\030\n \001(\tB\010\212\3101\004<=50H\000\022\r\n\003uri\030\013 \001(\tH\000\022\'\n\002os\030" +
       "\014 \001(\0132\033.yandex.cloud.compute.v1.Os\022\016\n\006po" +
       "oled\030\021 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001\"\'\n\023Cre" +
-      "ateImageMetadata\022\020\n\010image_id\030\001 \001(\t\"\255\003\n\022U" +
-      "pdateImageRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google." +
-      "protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[" +
-      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
-      "ption\030\004 \001(\tB\t\212\3101\005<=256\0220\n\rmin_disk_size\030" +
-      "\005 \001(\003B\031\372\3071\0254194304-4398046511104\022\220\001\n\006lab" +
-      "els\030\006 \003(\01327.yandex.cloud.compute.v1.Upda" +
-      "teImageRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[" +
-      "a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023UpdateImag" +
-      "eMetadata\022\020\n\010image_id\030\001 \001(\t\"4\n\022DeleteIma" +
-      "geRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"\'\n\023DeleteImageMetadata\022\020\n\010image_id\030\001 \001" +
-      "(\t\"z\n\032ListImageOperationsRequest\022\036\n\010imag" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"m\n\033ListImageOperationsResponse\0225\n" +
-      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
-      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\346\r" +
-      "\n\014ImageService\022v\n\003Get\022(.yandex.cloud.com" +
-      "pute.v1.GetImageRequest\032\036.yandex.cloud.c" +
-      "ompute.v1.Image\"%\202\323\344\223\002\037\022\035/compute/v1/ima" +
-      "ges/{image_id}\022\226\001\n\021GetLatestByFamily\0226.y" +
-      "andex.cloud.compute.v1.GetImageLatestByF" +
-      "amilyRequest\032\036.yandex.cloud.compute.v1.I" +
-      "mage\")\202\323\344\223\002#\022!/compute/v1/images:latestB" +
-      "yFamily\022{\n\004List\022*.yandex.cloud.compute.v" +
-      "1.ListImagesRequest\032+.yandex.cloud.compu" +
-      "te.v1.ListImagesResponse\"\032\202\323\344\223\002\024\022\022/compu" +
-      "te/v1/images\022\227\001\n\006Create\022+.yandex.cloud.c" +
-      "ompute.v1.CreateImageRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"=\202\323\344\223\002\027\"\022/comput" +
-      "e/v1/images:\001*\262\322*\034\n\023CreateImageMetadata\022" +
-      "\005Image\022\242\001\n\006Update\022+.yandex.cloud.compute" +
-      ".v1.UpdateImageRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"H\202\323\344\223\002\"2\035/compute/v1/i" +
-      "mages/{image_id}:\001*\262\322*\034\n\023UpdateImageMeta" +
-      "data\022\005Image\022\257\001\n\006Delete\022+.yandex.cloud.co" +
-      "mpute.v1.DeleteImageRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"U\202\323\344\223\002\037*\035/compute" +
-      "/v1/images/{image_id}\262\322*,\n\023DeleteImageMe" +
-      "tadata\022\025google.protobuf.Empty\022\255\001\n\016ListOp" +
-      "erations\0223.yandex.cloud.compute.v1.ListI" +
-      "mageOperationsRequest\0324.yandex.cloud.com" +
-      "pute.v1.ListImageOperationsResponse\"0\202\323\344" +
-      "\223\002*\022(/compute/v1/images/{image_id}/opera" +
-      "tions\022\262\001\n\022ListAccessBindings\022..yandex.cl" +
-      "oud.access.ListAccessBindingsRequest\032/.y" +
-      "andex.cloud.access.ListAccessBindingsRes" +
-      "ponse\";\202\323\344\223\0025\0223/compute/v1/images/{resou" +
-      "rce_id}:listAccessBindings\022\361\001\n\021SetAccess" +
-      "Bindings\022-.yandex.cloud.access.SetAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\211\001\202\323\344\223\0027\"2/compute/v1/images/" +
-      "{resource_id}:setAccessBindings:\001*\262\322*H\n " +
-      "access.SetAccessBindingsMetadata\022$access" +
-      ".AccessBindingsOperationResult\022\375\001\n\024Updat" +
-      "eAccessBindings\0220.yandex.cloud.access.Up" +
-      "dateAccessBindingsRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\217\001\202\323\344\223\002:\"5/compute/" +
-      "v1/images/{resource_id}:updateAccessBind" +
-      "ings:\001*\262\322*K\n#access.UpdateAccessBindings" +
-      "Metadata\022$access.AccessBindingsOperation" +
-      "ResultBb\n\033yandex.cloud.api.compute.v1ZCg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/compute/v1;computeb\006proto3"
+      "\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001J\004\010\r\020\021\"" +
+      "\'\n\023CreateImageMetadata\022\020\n\010image_id\030\001 \001(\t" +
+      "\"\255\003\n\022UpdateImageRequest\022\036\n\010image_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$" +
+      "\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
+      "description\030\004 \001(\tB\t\212\3101\005<=256\0220\n\rmin_disk" +
+      "_size\030\005 \001(\003B\031\372\3071\0254194304-4398046511104\022\220" +
+      "\001\n\006labels\030\006 \003(\01327.yandex.cloud.compute.v" +
+      "1.UpdateImageRequest.LabelsEntryBG\202\3101\004<=" +
+      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\'\n\023Upda" +
+      "teImageMetadata\022\020\n\010image_id\030\001 \001(\t\"4\n\022Del" +
+      "eteImageRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\'\n\023DeleteImageMetadata\022\020\n\010image_" +
+      "id\030\001 \001(\t\"z\n\032ListImageOperationsRequest\022\036" +
+      "\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"m\n\033ListImageOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\346\r\n\014ImageService\022v\n\003Get\022(.yandex.clo" +
+      "ud.compute.v1.GetImageRequest\032\036.yandex.c" +
+      "loud.compute.v1.Image\"%\202\323\344\223\002\037\022\035/compute/" +
+      "v1/images/{image_id}\022\226\001\n\021GetLatestByFami" +
+      "ly\0226.yandex.cloud.compute.v1.GetImageLat" +
+      "estByFamilyRequest\032\036.yandex.cloud.comput" +
+      "e.v1.Image\")\202\323\344\223\002#\022!/compute/v1/images:l" +
+      "atestByFamily\022{\n\004List\022*.yandex.cloud.com" +
+      "pute.v1.ListImagesRequest\032+.yandex.cloud" +
+      ".compute.v1.ListImagesResponse\"\032\202\323\344\223\002\024\022\022" +
+      "/compute/v1/images\022\227\001\n\006Create\022+.yandex.c" +
+      "loud.compute.v1.CreateImageRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"=\202\323\344\223\002\027\"\022/" +
+      "compute/v1/images:\001*\262\322*\034\n\023CreateImageMet" +
+      "adata\022\005Image\022\242\001\n\006Update\022+.yandex.cloud.c" +
+      "ompute.v1.UpdateImageRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"H\202\323\344\223\002\"2\035/comput" +
+      "e/v1/images/{image_id}:\001*\262\322*\034\n\023UpdateIma" +
+      "geMetadata\022\005Image\022\257\001\n\006Delete\022+.yandex.cl" +
+      "oud.compute.v1.DeleteImageRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"U\202\323\344\223\002\037*\035/c" +
+      "ompute/v1/images/{image_id}\262\322*,\n\023DeleteI" +
+      "mageMetadata\022\025google.protobuf.Empty\022\255\001\n\016" +
+      "ListOperations\0223.yandex.cloud.compute.v1" +
+      ".ListImageOperationsRequest\0324.yandex.clo" +
+      "ud.compute.v1.ListImageOperationsRespons" +
+      "e\"0\202\323\344\223\002*\022(/compute/v1/images/{image_id}" +
+      "/operations\022\262\001\n\022ListAccessBindings\022..yan" +
+      "dex.cloud.access.ListAccessBindingsReque" +
+      "st\032/.yandex.cloud.access.ListAccessBindi" +
+      "ngsResponse\";\202\323\344\223\0025\0223/compute/v1/images/" +
+      "{resource_id}:listAccessBindings\022\361\001\n\021Set" +
+      "AccessBindings\022-.yandex.cloud.access.Set" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\211\001\202\323\344\223\0027\"2/compute/v1/i" +
+      "mages/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*H\n access.SetAccessBindingsMetadata\022$" +
+      "access.AccessBindingsOperationResult\022\375\001\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\217\001\202\323\344\223\002:\"5/co" +
+      "mpute/v1/images/{resource_id}:updateAcce" +
+      "ssBindings:\001*\262\322*K\n#access.UpdateAccessBi" +
+      "ndingsMetadata\022$access.AccessBindingsOpe" +
+      "rationResultBb\n\033yandex.cloud.api.compute" +
+      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

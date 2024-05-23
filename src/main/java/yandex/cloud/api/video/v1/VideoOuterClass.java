@@ -5624,9 +5624,9 @@ public final class VideoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/video/v1/video.proto\022\025yan" +
-      "dex.cloud.video.v1\032\037google/protobuf/time" +
-      "stamp.proto\032\036google/protobuf/duration.pr" +
-      "oto\"\231\007\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
+      "dex.cloud.video.v1\032\036google/protobuf/dura" +
+      "tion.proto\032\037google/protobuf/timestamp.pr" +
+      "oto\"\266\007\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
       "\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
       "\t\022\024\n\014thumbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162" +
       "(.yandex.cloud.video.v1.Video.VideoStatu" +
@@ -5648,18 +5648,19 @@ public final class VideoOuterClass {
       "\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022\t\n\005ERROR\020\007\"" +
       "U\n\020VisibilityStatus\022!\n\035VISIBILITY_STATUS" +
       "_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001\022\017\n\013UNPUBLI" +
-      "SHED\020\002B\010\n\006sourceB\017\n\raccess_rightsJ\004\010\007\020\010J" +
-      "\006\010\321\017\020\322\017\"\036\n\017VideoTUSDSource\022\013\n\003url\030\001 \001(\t\"" +
-      "\031\n\027VideoPublicAccessRights\"\035\n\033VideoAuthS" +
-      "ystemAccessRightsB\\\n\031yandex.cloud.api.vi" +
-      "deo.v1Z?github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/video/v1;videob\006proto3"
+      "SHED\020\002B\010\n\006sourceB\017\n\raccess_rightsJ\005\010f\020\310\001" +
+      "J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017J\004\010\n\020dJ\004\010\007\020\010J\006\010\321\017\020\322\017\"\036\n\017" +
+      "VideoTUSDSource\022\013\n\003url\030\001 \001(\t\"\031\n\027VideoPub" +
+      "licAccessRights\"\035\n\033VideoAuthSystemAccess" +
+      "RightsB\\\n\031yandex.cloud.api.video.v1Z?git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Video_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5691,8 +5692,8 @@ public final class VideoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor,
         new java.lang.String[] { });
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

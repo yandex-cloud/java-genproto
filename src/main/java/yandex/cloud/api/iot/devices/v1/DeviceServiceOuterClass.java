@@ -22843,11 +22843,11 @@ public final class DeviceServiceOuterClass {
       "\n0yandex/cloud/iot/devices/v1/device_ser" +
       "vice.proto\022\033yandex.cloud.iot.devices.v1\032" +
       "\034google/api/annotations.proto\032 google/pr" +
-      "otobuf/field_mask.proto\032\035yandex/cloud/va" +
-      "lidation.proto\032 yandex/cloud/api/operati" +
-      "on.proto\032&yandex/cloud/operation/operati" +
-      "on.proto\032(yandex/cloud/iot/devices/v1/de" +
-      "vice.proto\"q\n\020GetDeviceRequest\022\037\n\tdevice" +
+      "otobuf/field_mask.proto\032 yandex/cloud/ap" +
+      "i/operation.proto\032(yandex/cloud/iot/devi" +
+      "ces/v1/device.proto\032&yandex/cloud/operat" +
+      "ion/operation.proto\032\035yandex/cloud/valida" +
+      "tion.proto\"q\n\020GetDeviceRequest\022\037\n\tdevice" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\013device_view\030\002" +
       " \001(\0162\'.yandex.cloud.iot.devices.v1.Devic" +
       "eView\"\256\001\n\026GetByNameDeviceRequest\022!\n\013regi" +
@@ -22890,110 +22890,110 @@ public final class DeviceServiceOuterClass {
       "ice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036ListDevice" +
       "CertificatesResponse\022D\n\014certificates\030\001 \003" +
       "(\0132..yandex.cloud.iot.devices.v1.DeviceC" +
-      "ertificate\"X\n\033AddDeviceCertificateReques" +
+      "ertificate\"^\n\033AddDeviceCertificateReques" +
       "t\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020ce" +
-      "rtificate_data\030\003 \001(\t\"F\n\034AddDeviceCertifi" +
-      "cateMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013finge" +
-      "rprint\030\002 \001(\t\"d\n\036DeleteDeviceCertificateR" +
-      "equest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037De" +
-      "leteDeviceCertificateMetadata\022\037\n\tdevice_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListDevicePasswords" +
-      "Request\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"]\n\033ListDevicePasswordsResponse\022>\n\tpassw" +
-      "ords\030\001 \003(\0132+.yandex.cloud.iot.devices.v1" +
-      ".DevicePassword\"W\n\030AddDevicePasswordRequ" +
-      "est\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010" +
-      "password\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddDevicePas" +
-      "swordMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013pass" +
-      "word_id\030\002 \001(\t\"a\n\033DeleteDevicePasswordReq" +
-      "uest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
-      "\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034Dele" +
-      "teDevicePasswordMetadata\022\037\n\tdevice_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"\220\001\n\033ListDeviceOperationsReq" +
-      "uest\022\027\n\tdevice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
-      "n\n\034ListDeviceOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t2\260\023\n\rDevi" +
-      "ceService\022\206\001\n\003Get\022-.yandex.cloud.iot.dev" +
-      "ices.v1.GetDeviceRequest\032#.yandex.cloud." +
-      "iot.devices.v1.Device\"+\202\323\344\223\002%\022#/iot-devi" +
-      "ces/v1/devices/{device_id}\022\220\001\n\tGetByName" +
-      "\0223.yandex.cloud.iot.devices.v1.GetByName" +
-      "DeviceRequest\032#.yandex.cloud.iot.devices" +
-      ".v1.Device\")\202\323\344\223\002#\022!/iot-devices/v1/devi" +
-      "ces:getByName\022\212\001\n\004List\022/.yandex.cloud.io" +
-      "t.devices.v1.ListDevicesRequest\0320.yandex" +
-      ".cloud.iot.devices.v1.ListDevicesRespons" +
-      "e\"\037\202\323\344\223\002\031\022\027/iot-devices/v1/devices\022\243\001\n\006C" +
-      "reate\0220.yandex.cloud.iot.devices.v1.Crea" +
-      "teDeviceRequest\032!.yandex.cloud.operation" +
-      ".Operation\"D\202\323\344\223\002\034\"\027/iot-devices/v1/devi" +
-      "ces:\001*\262\322*\036\n\024CreateDeviceMetadata\022\006Device" +
-      "\022\257\001\n\006Update\0220.yandex.cloud.iot.devices.v" +
-      "1.UpdateDeviceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"P\202\323\344\223\002(2#/iot-devices/v" +
-      "1/devices/{device_id}:\001*\262\322*\036\n\024UpdateDevi" +
-      "ceMetadata\022\006Device\022\273\001\n\006Delete\0220.yandex.c" +
-      "loud.iot.devices.v1.DeleteDeviceRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\\\202\323\344\223" +
-      "\002%*#/iot-devices/v1/devices/{device_id}\262" +
-      "\322*-\n\024DeleteDeviceMetadata\022\025google.protob" +
-      "uf.Empty\022\305\001\n\020ListCertificates\022:.yandex.c" +
-      "loud.iot.devices.v1.ListDeviceCertificat" +
-      "esRequest\032;.yandex.cloud.iot.devices.v1." +
-      "ListDeviceCertificatesResponse\"8\202\323\344\223\0022\0220" +
-      "/iot-devices/v1/devices/{device_id}/cert" +
-      "ificates\022\337\001\n\016AddCertificate\0228.yandex.clo" +
-      "ud.iot.devices.v1.AddDeviceCertificateRe" +
+      "rtificate_data\030\003 \001(\tJ\004\010\002\020\003\"F\n\034AddDeviceC" +
+      "ertificateMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n" +
+      "\013fingerprint\030\002 \001(\t\"d\n\036DeleteDeviceCertif" +
+      "icateRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"e\n\037DeleteDeviceCertificateMetadata\022\037\n\td" +
+      "evice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerpr" +
+      "int\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListDevicePas" +
+      "swordsRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"]\n\033ListDevicePasswordsResponse\022>\n" +
+      "\tpasswords\030\001 \003(\0132+.yandex.cloud.iot.devi" +
+      "ces.v1.DevicePassword\"W\n\030AddDevicePasswo" +
+      "rdRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\032\n\010password\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddDev" +
+      "icePasswordMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023" +
+      "\n\013password_id\030\002 \001(\t\"a\n\033DeleteDevicePassw" +
+      "ordRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b" +
+      "\n\034DeleteDevicePasswordMetadata\022\037\n\tdevice" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033ListDeviceOperati" +
+      "onsRequest\022\027\n\tdevice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\"n\n\034ListDeviceOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\260\023" +
+      "\n\rDeviceService\022\206\001\n\003Get\022-.yandex.cloud.i" +
+      "ot.devices.v1.GetDeviceRequest\032#.yandex." +
+      "cloud.iot.devices.v1.Device\"+\202\323\344\223\002%\022#/io" +
+      "t-devices/v1/devices/{device_id}\022\220\001\n\tGet" +
+      "ByName\0223.yandex.cloud.iot.devices.v1.Get" +
+      "ByNameDeviceRequest\032#.yandex.cloud.iot.d" +
+      "evices.v1.Device\")\202\323\344\223\002#\022!/iot-devices/v" +
+      "1/devices:getByName\022\212\001\n\004List\022/.yandex.cl" +
+      "oud.iot.devices.v1.ListDevicesRequest\0320." +
+      "yandex.cloud.iot.devices.v1.ListDevicesR" +
+      "esponse\"\037\202\323\344\223\002\031\022\027/iot-devices/v1/devices" +
+      "\022\243\001\n\006Create\0220.yandex.cloud.iot.devices.v" +
+      "1.CreateDeviceRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"D\202\323\344\223\002\034\"\027/iot-devices/v" +
+      "1/devices:\001*\262\322*\036\n\024CreateDeviceMetadata\022\006" +
+      "Device\022\257\001\n\006Update\0220.yandex.cloud.iot.dev" +
+      "ices.v1.UpdateDeviceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"P\202\323\344\223\002(2#/iot-dev" +
+      "ices/v1/devices/{device_id}:\001*\262\322*\036\n\024Upda" +
+      "teDeviceMetadata\022\006Device\022\273\001\n\006Delete\0220.ya" +
+      "ndex.cloud.iot.devices.v1.DeleteDeviceRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"p\202\323\344\223\0025\"0/iot-devices/v1/devices/{devic" +
-      "e_id}/certificates:\001*\262\322*1\n\034AddDeviceCert" +
-      "ificateMetadata\022\021DeviceCertificate\022\370\001\n\021D" +
-      "eleteCertificate\022;.yandex.cloud.iot.devi" +
-      "ces.v1.DeleteDeviceCertificateRequest\032!." +
-      "yandex.cloud.operation.Operation\"\202\001\202\323\344\223\002" +
-      "@*>/iot-devices/v1/devices/{device_id}/c" +
-      "ertificates/{fingerprint}\262\322*8\n\037DeleteDev" +
-      "iceCertificateMetadata\022\025google.protobuf." +
-      "Empty\022\271\001\n\rListPasswords\0227.yandex.cloud.i" +
-      "ot.devices.v1.ListDevicePasswordsRequest" +
-      "\0328.yandex.cloud.iot.devices.v1.ListDevic" +
-      "ePasswordsResponse\"5\202\323\344\223\002/\022-/iot-devices" +
-      "/v1/devices/{device_id}/passwords\022\320\001\n\013Ad" +
-      "dPassword\0225.yandex.cloud.iot.devices.v1." +
-      "AddDevicePasswordRequest\032!.yandex.cloud." +
-      "operation.Operation\"g\202\323\344\223\0022\"-/iot-device" +
-      "s/v1/devices/{device_id}/passwords:\001*\262\322*" +
-      "+\n\031AddDevicePasswordMetadata\022\016DevicePass" +
-      "word\022\353\001\n\016DeletePassword\0228.yandex.cloud.i" +
-      "ot.devices.v1.DeleteDevicePasswordReques" +
-      "t\032!.yandex.cloud.operation.Operation\"|\202\323" +
-      "\344\223\002=*;/iot-devices/v1/devices/{device_id" +
-      "}/passwords/{password_id}\262\322*5\n\034DeleteDev" +
-      "icePasswordMetadata\022\025google.protobuf.Emp" +
-      "ty\022\275\001\n\016ListOperations\0228.yandex.cloud.iot" +
-      ".devices.v1.ListDeviceOperationsRequest\032" +
-      "9.yandex.cloud.iot.devices.v1.ListDevice" +
-      "OperationsResponse\"6\202\323\344\223\0020\022./iot-devices" +
-      "/v1/devices/{device_id}/operationsBj\n\037ya" +
-      "ndex.cloud.api.iot.devices.v1ZGgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "iot/devices/v1;devicesb\006proto3"
+      "\"\\\202\323\344\223\002%*#/iot-devices/v1/devices/{devic" +
+      "e_id}\262\322*-\n\024DeleteDeviceMetadata\022\025google." +
+      "protobuf.Empty\022\305\001\n\020ListCertificates\022:.ya" +
+      "ndex.cloud.iot.devices.v1.ListDeviceCert" +
+      "ificatesRequest\032;.yandex.cloud.iot.devic" +
+      "es.v1.ListDeviceCertificatesResponse\"8\202\323" +
+      "\344\223\0022\0220/iot-devices/v1/devices/{device_id" +
+      "}/certificates\022\337\001\n\016AddCertificate\0228.yand" +
+      "ex.cloud.iot.devices.v1.AddDeviceCertifi" +
+      "cateRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"p\202\323\344\223\0025\"0/iot-devices/v1/devices/" +
+      "{device_id}/certificates:\001*\262\322*1\n\034AddDevi" +
+      "ceCertificateMetadata\022\021DeviceCertificate" +
+      "\022\370\001\n\021DeleteCertificate\022;.yandex.cloud.io" +
+      "t.devices.v1.DeleteDeviceCertificateRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\202" +
+      "\001\202\323\344\223\002@*>/iot-devices/v1/devices/{device" +
+      "_id}/certificates/{fingerprint}\262\322*8\n\037Del" +
+      "eteDeviceCertificateMetadata\022\025google.pro" +
+      "tobuf.Empty\022\271\001\n\rListPasswords\0227.yandex.c" +
+      "loud.iot.devices.v1.ListDevicePasswordsR" +
+      "equest\0328.yandex.cloud.iot.devices.v1.Lis" +
+      "tDevicePasswordsResponse\"5\202\323\344\223\002/\022-/iot-d" +
+      "evices/v1/devices/{device_id}/passwords\022" +
+      "\320\001\n\013AddPassword\0225.yandex.cloud.iot.devic" +
+      "es.v1.AddDevicePasswordRequest\032!.yandex." +
+      "cloud.operation.Operation\"g\202\323\344\223\0022\"-/iot-" +
+      "devices/v1/devices/{device_id}/passwords" +
+      ":\001*\262\322*+\n\031AddDevicePasswordMetadata\022\016Devi" +
+      "cePassword\022\353\001\n\016DeletePassword\0228.yandex.c" +
+      "loud.iot.devices.v1.DeleteDevicePassword" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"|\202\323\344\223\002=*;/iot-devices/v1/devices/{dev" +
+      "ice_id}/passwords/{password_id}\262\322*5\n\034Del" +
+      "eteDevicePasswordMetadata\022\025google.protob" +
+      "uf.Empty\022\275\001\n\016ListOperations\0228.yandex.clo" +
+      "ud.iot.devices.v1.ListDeviceOperationsRe" +
+      "quest\0329.yandex.cloud.iot.devices.v1.List" +
+      "DeviceOperationsResponse\"6\202\323\344\223\0020\022./iot-d" +
+      "evices/v1/devices/{device_id}/operations" +
+      "Bj\n\037yandex.cloud.api.iot.devices.v1ZGgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/iot/devices/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iot.devices.v1.DeviceOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_iot_devices_v1_GetDeviceRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -23170,10 +23170,10 @@ public final class DeviceServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -28012,7 +28012,7 @@ public final class BackendGroupOuterClass {
       "protobuf/wrappers.proto\032-yandex/cloud/ap" +
       "ploadbalancer/v1/payload.proto\032)yandex/c" +
       "loud/apploadbalancer/v1/tls.proto\032\035yande" +
-      "x/cloud/validation.proto\"\322\003\n\014BackendGrou" +
+      "x/cloud/validation.proto\"\330\003\n\014BackendGrou" +
       "p\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013descripti" +
       "on\030\003 \001(\t\022\021\n\tfolder_id\030\004 \001(\t\022I\n\006labels\030\005 " +
       "\003(\01329.yandex.cloud.apploadbalancer.v1.Ba" +
@@ -28024,114 +28024,114 @@ public final class BackendGroupOuterClass {
       "cer.v1.StreamBackendGroupH\000\022.\n\ncreated_a" +
       "t\030\t \001(\0132\032.google.protobuf.Timestamp\032-\n\013L" +
       "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001B\t\n\007backend\"\274\001\n\022StreamBackendGroup\022@\n\010" +
-      "backends\030\001 \003(\0132..yandex.cloud.apploadbal" +
-      "ancer.v1.StreamBackend\022P\n\nconnection\030\002 \001" +
-      "(\0132:.yandex.cloud.apploadbalancer.v1.Con" +
-      "nectionSessionAffinityH\000B\022\n\020session_affi" +
-      "nity\"\314\002\n\020HttpBackendGroup\022>\n\010backends\030\001 " +
-      "\003(\0132,.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpBackend\022P\n\nconnection\030\002 \001(\0132:.yandex.c" +
-      "loud.apploadbalancer.v1.ConnectionSessio" +
-      "nAffinityH\000\022H\n\006header\030\003 \001(\01326.yandex.clo" +
-      "ud.apploadbalancer.v1.HeaderSessionAffin" +
-      "ityH\000\022H\n\006cookie\030\004 \001(\01326.yandex.cloud.app" +
-      "loadbalancer.v1.CookieSessionAffinityH\000B" +
-      "\022\n\020session_affinity\"\314\002\n\020GrpcBackendGroup" +
-      "\022>\n\010backends\030\001 \003(\0132,.yandex.cloud.apploa" +
-      "dbalancer.v1.GrpcBackend\022P\n\nconnection\030\002" +
-      " \001(\0132:.yandex.cloud.apploadbalancer.v1.C" +
-      "onnectionSessionAffinityH\000\022H\n\006header\030\003 \001" +
-      "(\01326.yandex.cloud.apploadbalancer.v1.Hea" +
-      "derSessionAffinityH\000\022H\n\006cookie\030\004 \001(\01326.y" +
-      "andex.cloud.apploadbalancer.v1.CookieSes" +
-      "sionAffinityH\000B\022\n\020session_affinity\"7\n\025He" +
-      "aderSessionAffinity\022\036\n\013header_name\030\001 \001(\t" +
-      "B\t\212\3101\0051-256\"X\n\025CookieSessionAffinity\022\027\n\004" +
-      "name\030\001 \001(\tB\t\212\3101\0051-256\022&\n\003ttl\030\002 \001(\0132\031.goo" +
-      "gle.protobuf.Duration\".\n\031ConnectionSessi" +
-      "onAffinity\022\021\n\tsource_ip\030\001 \001(\010\"\307\001\n\023LoadBa" +
-      "lancingConfig\022\"\n\017panic_threshold\030\001 \001(\003B\t" +
-      "\372\3071\0050-100\0221\n\036locality_aware_routing_perc" +
-      "ent\030\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_locality\030" +
-      "\003 \001(\010\022@\n\004mode\030\004 \001(\01622.yandex.cloud.applo" +
-      "adbalancer.v1.LoadBalancingMode\"\346\003\n\rStre" +
-      "amBackend\022.\n\004name\030\001 \001(\tB \362\3071\034[a-z][-a-z0" +
-      "-9]{1,61}[a-z0-9]\0223\n\016backend_weight\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022S\n\025load_b" +
-      "alancing_config\030\003 \001(\01324.yandex.cloud.app" +
-      "loadbalancer.v1.LoadBalancingConfig\022\031\n\004p" +
-      "ort\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtarget_groups\030" +
-      "\005 \001(\01324.yandex.cloud.apploadbalancer.v1." +
-      "TargetGroupsBackendH\000\022B\n\014healthchecks\030\006 " +
-      "\003(\0132,.yandex.cloud.apploadbalancer.v1.He" +
-      "althCheck\0228\n\003tls\030\007 \001(\0132+.yandex.cloud.ap" +
-      "ploadbalancer.v1.BackendTls\022\035\n\025enable_pr" +
-      "oxy_protocol\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011\001" +
-      "\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071\034" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_" +
-      "weight\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022S\n\025load_balancing_config\030\003 \001(\01324.yande" +
-      "x.cloud.apploadbalancer.v1.LoadBalancing" +
-      "Config\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtar" +
-      "get_groups\030\005 \001(\01324.yandex.cloud.apploadb" +
-      "alancer.v1.TargetGroupsBackendH\000\022O\n\016stor" +
-      "age_bucket\030\t \001(\01325.yandex.cloud.apploadb" +
-      "alancer.v1.StorageBucketBackendH\000\022B\n\014hea" +
-      "lthchecks\030\006 \003(\0132,.yandex.cloud.apploadba" +
-      "lancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yan" +
-      "dex.cloud.apploadbalancer.v1.BackendTls\022" +
-      "\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011\001" +
-      "\"\311\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071\034" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_" +
-      "weight\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022S\n\025load_balancing_config\030\003 \001(\01324.yande" +
-      "x.cloud.apploadbalancer.v1.LoadBalancing" +
-      "Config\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtar" +
-      "get_groups\030\005 \001(\01324.yandex.cloud.apploadb" +
-      "alancer.v1.TargetGroupsBackendH\000\022B\n\014heal" +
-      "thchecks\030\007 \003(\0132,.yandex.cloud.apploadbal" +
-      "ancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132+.yand" +
-      "ex.cloud.apploadbalancer.v1.BackendTlsB\024" +
-      "\n\014backend_type\022\004\300\3011\001\"7\n\023TargetGroupsBack" +
-      "end\022 \n\020target_group_ids\030\001 \003(\tB\006\202\3101\002>0\"\034\n" +
-      "\032PlaintextTransportSettings\"v\n\027SecureTra" +
-      "nsportSettings\022\013\n\003sni\030\001 \001(\t\022N\n\022validatio" +
-      "n_context\030\003 \001(\01322.yandex.cloud.apploadba" +
-      "lancer.v1.ValidationContext\"i\n\nBackendTl" +
-      "s\022\013\n\003sni\030\001 \001(\t\022N\n\022validation_context\030\003 \001" +
-      "(\01322.yandex.cloud.apploadbalancer.v1.Val" +
-      "idationContext\",\n\024StorageBucketBackend\022\024" +
-      "\n\006bucket\030\001 \001(\tB\004\350\3071\001\"\240\007\n\013HealthCheck\0220\n\007" +
-      "timeout\030\001 \001(\0132\031.google.protobuf.Duration" +
-      "B\004\350\3071\001\0221\n\010interval\030\002 \001(\0132\031.google.protob" +
-      "uf.DurationB\004\350\3071\001\022\037\n\027interval_jitter_per" +
-      "cent\030\003 \001(\001\022\031\n\021healthy_threshold\030\004 \001(\003\022\033\n" +
-      "\023unhealthy_threshold\030\005 \001(\003\022%\n\020healthchec" +
-      "k_port\030\006 \001(\003B\013\372\3071\0070-65535\022P\n\006stream\030\007 \001(" +
-      "\0132>.yandex.cloud.apploadbalancer.v1.Heal" +
-      "thCheck.StreamHealthCheckH\000\022L\n\004http\030\010 \001(" +
-      "\0132<.yandex.cloud.apploadbalancer.v1.Heal" +
-      "thCheck.HttpHealthCheckH\000\022L\n\004grpc\030\t \001(\0132" +
-      "<.yandex.cloud.apploadbalancer.v1.Health" +
-      "Check.GrpcHealthCheckH\000\022P\n\tplaintext\030\n \001" +
-      "(\0132;.yandex.cloud.apploadbalancer.v1.Pla" +
-      "intextTransportSettingsH\001\022G\n\003tls\030\013 \001(\01328" +
-      ".yandex.cloud.apploadbalancer.v1.SecureT" +
-      "ransportSettingsH\001\032\206\001\n\021StreamHealthCheck" +
-      "\0226\n\004send\030\001 \001(\0132(.yandex.cloud.apploadbal" +
-      "ancer.v1.Payload\0229\n\007receive\030\002 \001(\0132(.yand" +
-      "ex.cloud.apploadbalancer.v1.Payload\032F\n\017H" +
-      "ttpHealthCheck\022\014\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001" +
-      "(\tB\004\350\3071\001\022\021\n\tuse_http2\030\003 \001(\010\032\'\n\017GrpcHealt" +
-      "hCheck\022\024\n\014service_name\030\001 \001(\tB\023\n\013healthch" +
-      "eck\022\004\300\3011\001B\024\n\022transport_settings*T\n\021LoadB" +
-      "alancingMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDOM\020" +
-      "\001\022\021\n\rLEAST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n" +
-      "#yandex.cloud.api.apploadbalancer.v1ZSgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/apploadbalancer/v1;apploadbalance" +
-      "rb\006proto3"
+      "8\001B\t\n\007backendJ\004\010\010\020\t\"\274\001\n\022StreamBackendGro" +
+      "up\022@\n\010backends\030\001 \003(\0132..yandex.cloud.appl" +
+      "oadbalancer.v1.StreamBackend\022P\n\nconnecti" +
+      "on\030\002 \001(\0132:.yandex.cloud.apploadbalancer." +
+      "v1.ConnectionSessionAffinityH\000B\022\n\020sessio" +
+      "n_affinity\"\314\002\n\020HttpBackendGroup\022>\n\010backe" +
+      "nds\030\001 \003(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.HttpBackend\022P\n\nconnection\030\002 \001(\0132:.ya" +
+      "ndex.cloud.apploadbalancer.v1.Connection" +
+      "SessionAffinityH\000\022H\n\006header\030\003 \001(\01326.yand" +
+      "ex.cloud.apploadbalancer.v1.HeaderSessio" +
+      "nAffinityH\000\022H\n\006cookie\030\004 \001(\01326.yandex.clo" +
+      "ud.apploadbalancer.v1.CookieSessionAffin" +
+      "ityH\000B\022\n\020session_affinity\"\314\002\n\020GrpcBacken" +
+      "dGroup\022>\n\010backends\030\001 \003(\0132,.yandex.cloud." +
+      "apploadbalancer.v1.GrpcBackend\022P\n\nconnec" +
+      "tion\030\002 \001(\0132:.yandex.cloud.apploadbalance" +
+      "r.v1.ConnectionSessionAffinityH\000\022H\n\006head" +
+      "er\030\003 \001(\01326.yandex.cloud.apploadbalancer." +
+      "v1.HeaderSessionAffinityH\000\022H\n\006cookie\030\004 \001" +
+      "(\01326.yandex.cloud.apploadbalancer.v1.Coo" +
+      "kieSessionAffinityH\000B\022\n\020session_affinity" +
+      "\"7\n\025HeaderSessionAffinity\022\036\n\013header_name" +
+      "\030\001 \001(\tB\t\212\3101\0051-256\"X\n\025CookieSessionAffini" +
+      "ty\022\027\n\004name\030\001 \001(\tB\t\212\3101\0051-256\022&\n\003ttl\030\002 \001(\013" +
+      "2\031.google.protobuf.Duration\".\n\031Connectio" +
+      "nSessionAffinity\022\021\n\tsource_ip\030\001 \001(\010\"\307\001\n\023" +
+      "LoadBalancingConfig\022\"\n\017panic_threshold\030\001" +
+      " \001(\003B\t\372\3071\0050-100\0221\n\036locality_aware_routin" +
+      "g_percent\030\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_loc" +
+      "ality\030\003 \001(\010\022@\n\004mode\030\004 \001(\01622.yandex.cloud" +
+      ".apploadbalancer.v1.LoadBalancingMode\"\346\003" +
+      "\n\rStreamBackend\022.\n\004name\030\001 \001(\tB \362\3071\034[a-z]" +
+      "[-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_weigh" +
+      "t\030\002 \001(\0132\033.google.protobuf.Int64Value\022S\n\025" +
+      "load_balancing_config\030\003 \001(\01324.yandex.clo" +
+      "ud.apploadbalancer.v1.LoadBalancingConfi" +
+      "g\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtarget_g" +
+      "roups\030\005 \001(\01324.yandex.cloud.apploadbalanc" +
+      "er.v1.TargetGroupsBackendH\000\022B\n\014healthche" +
+      "cks\030\006 \003(\0132,.yandex.cloud.apploadbalancer" +
+      ".v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yandex.cl" +
+      "oud.apploadbalancer.v1.BackendTls\022\035\n\025ena" +
+      "ble_proxy_protocol\030\010 \001(\010B\024\n\014backend_type" +
+      "\022\004\300\3011\001\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\307" +
+      "1\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016ba" +
+      "ckend_weight\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022S\n\025load_balancing_config\030\003 \001(\01324" +
+      ".yandex.cloud.apploadbalancer.v1.LoadBal" +
+      "ancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022" +
+      "M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud.ap" +
+      "ploadbalancer.v1.TargetGroupsBackendH\000\022O" +
+      "\n\016storage_bucket\030\t \001(\01325.yandex.cloud.ap" +
+      "ploadbalancer.v1.StorageBucketBackendH\000\022" +
+      "B\n\014healthchecks\030\006 \003(\0132,.yandex.cloud.app" +
+      "loadbalancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\013" +
+      "2+.yandex.cloud.apploadbalancer.v1.Backe" +
+      "ndTls\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type" +
+      "\022\004\300\3011\001\"\317\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\307" +
+      "1\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016ba" +
+      "ckend_weight\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022S\n\025load_balancing_config\030\003 \001(\01324" +
+      ".yandex.cloud.apploadbalancer.v1.LoadBal" +
+      "ancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022" +
+      "M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud.ap" +
+      "ploadbalancer.v1.TargetGroupsBackendH\000\022B" +
+      "\n\014healthchecks\030\007 \003(\0132,.yandex.cloud.appl" +
+      "oadbalancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132" +
+      "+.yandex.cloud.apploadbalancer.v1.Backen" +
+      "dTlsB\024\n\014backend_type\022\004\300\3011\001J\004\010\006\020\007\"7\n\023Targ" +
+      "etGroupsBackend\022 \n\020target_group_ids\030\001 \003(" +
+      "\tB\006\202\3101\002>0\"\034\n\032PlaintextTransportSettings\"" +
+      "|\n\027SecureTransportSettings\022\013\n\003sni\030\001 \001(\t\022" +
+      "N\n\022validation_context\030\003 \001(\01322.yandex.clo" +
+      "ud.apploadbalancer.v1.ValidationContextJ" +
+      "\004\010\002\020\003\"o\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022vali" +
+      "dation_context\030\003 \001(\01322.yandex.cloud.appl" +
+      "oadbalancer.v1.ValidationContextJ\004\010\002\020\003\"," +
+      "\n\024StorageBucketBackend\022\024\n\006bucket\030\001 \001(\tB\004" +
+      "\350\3071\001\"\240\007\n\013HealthCheck\0220\n\007timeout\030\001 \001(\0132\031." +
+      "google.protobuf.DurationB\004\350\3071\001\0221\n\010interv" +
+      "al\030\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071" +
+      "\001\022\037\n\027interval_jitter_percent\030\003 \001(\001\022\031\n\021he" +
+      "althy_threshold\030\004 \001(\003\022\033\n\023unhealthy_thres" +
+      "hold\030\005 \001(\003\022%\n\020healthcheck_port\030\006 \001(\003B\013\372\307" +
+      "1\0070-65535\022P\n\006stream\030\007 \001(\0132>.yandex.cloud" +
+      ".apploadbalancer.v1.HealthCheck.StreamHe" +
+      "althCheckH\000\022L\n\004http\030\010 \001(\0132<.yandex.cloud" +
+      ".apploadbalancer.v1.HealthCheck.HttpHeal" +
+      "thCheckH\000\022L\n\004grpc\030\t \001(\0132<.yandex.cloud.a" +
+      "pploadbalancer.v1.HealthCheck.GrpcHealth" +
+      "CheckH\000\022P\n\tplaintext\030\n \001(\0132;.yandex.clou" +
+      "d.apploadbalancer.v1.PlaintextTransportS" +
+      "ettingsH\001\022G\n\003tls\030\013 \001(\01328.yandex.cloud.ap" +
+      "ploadbalancer.v1.SecureTransportSettings" +
+      "H\001\032\206\001\n\021StreamHealthCheck\0226\n\004send\030\001 \001(\0132(" +
+      ".yandex.cloud.apploadbalancer.v1.Payload" +
+      "\0229\n\007receive\030\002 \001(\0132(.yandex.cloud.appload" +
+      "balancer.v1.Payload\032F\n\017HttpHealthCheck\022\014" +
+      "\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_" +
+      "http2\030\003 \001(\010\032\'\n\017GrpcHealthCheck\022\024\n\014servic" +
+      "e_name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\3011\001B\024\n\022tra" +
+      "nsport_settings*T\n\021LoadBalancingMode\022\017\n\013" +
+      "ROUND_ROBIN\020\000\022\n\n\006RANDOM\020\001\022\021\n\rLEAST_REQUE" +
+      "ST\020\002\022\017\n\013MAGLEV_HASH\020\003Bz\n#yandex.cloud.ap" +
+      "i.apploadbalancer.v1ZSgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/apploadba" +
+      "lancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -18724,8 +18724,8 @@ public final class NodeGroupServiceOuterClass {
       ".proto\022\023yandex.cloud.k8s.v1\032\034google/api/" +
       "annotations.proto\032 google/protobuf/field" +
       "_mask.proto\032 yandex/cloud/api/operation." +
-      "proto\032$yandex/cloud/k8s/v1/node_group.pr" +
-      "oto\032\036yandex/cloud/k8s/v1/node.proto\032!yan" +
+      "proto\032\036yandex/cloud/k8s/v1/node.proto\032$y" +
+      "andex/cloud/k8s/v1/node_group.proto\032!yan" +
       "dex/cloud/k8s/v1/version.proto\032&yandex/c" +
       "loud/operation/operation.proto\032\035yandex/c" +
       "loud/validation.proto\"2\n\023GetNodeGroupReq" +
@@ -18744,7 +18744,7 @@ public final class NodeGroupServiceOuterClass {
       "age_token\030\002 \001(\t\"5\n\026DeleteNodeGroupReques" +
       "t\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\"0\n\027Delete" +
       "NodeGroupMetadata\022\025\n\rnode_group_id\030\001 \001(\t" +
-      "\"\240\010\n\026UpdateNodeGroupRequest\022\033\n\rnode_grou" +
+      "\"\246\010\n\026UpdateNodeGroupRequest\022\033\n\rnode_grou" +
       "p_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032." +
       "google.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB" +
       "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
@@ -18770,75 +18770,75 @@ public final class NodeGroupServiceOuterClass {
       "v1.UpdateNodeGroupRequest.NodeLabelsEntr" +
       "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
       " \001(\t:\0028\001\0321\n\017NodeLabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\027UpdateNodeGroupMe" +
-      "tadata\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\"\320\007\n\026" +
-      "CreateNodeGroupRequest\022\030\n\ncluster_id\030\001 \001" +
-      "(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z" +
-      "0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(" +
-      "\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\01327.yandex.c" +
-      "loud.k8s.v1.CreateNodeGroupRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      ">\n\rnode_template\030\005 \001(\0132!.yandex.cloud.k8" +
-      "s.v1.NodeTemplateB\004\350\3071\001\022<\n\014scale_policy\030" +
-      "\006 \001(\0132 .yandex.cloud.k8s.v1.ScalePolicyB" +
-      "\004\350\3071\001\022I\n\021allocation_policy\030\007 \001(\0132..yande" +
-      "x.cloud.k8s.v1.NodeGroupAllocationPolicy" +
-      "\0228\n\rdeploy_policy\030\r \001(\0132!.yandex.cloud.k" +
-      "8s.v1.DeployPolicy\022\017\n\007version\030\010 \001(\t\022K\n\022m" +
-      "aintenance_policy\030\t \001(\0132/.yandex.cloud.k" +
-      "8s.v1.NodeGroupMaintenancePolicy\022o\n\026allo" +
-      "wed_unsafe_sysctls\030\n \003(\tBO\212\3101\005<=253\362\3071B(" +
-      "[a-z0-9]([-_a-z0-9]*[a-z0-9])?\\.)*([a-z0" +
-      "-9][-_a-z0-9]*)?[a-z0-9*]\022/\n\013node_taints" +
-      "\030\013 \003(\0132\032.yandex.cloud.k8s.v1.Taint\022P\n\013no" +
-      "de_labels\030\014 \003(\0132;.yandex.cloud.k8s.v1.Cr" +
-      "eateNodeGroupRequest.NodeLabelsEntry\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\0321\n\017NodeLabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"0\n\027CreateNodeGroupMetadat" +
-      "a\022\025\n\rnode_group_id\030\001 \001(\t\"5\n\034AutoUpgradeN" +
-      "odeGroupMetadata\022\025\n\rnode_group_id\030\001 \001(\t\"" +
-      "\227\001\n\036ListNodeGroupOperationsRequest\022\033\n\rno" +
-      "de_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"q\n\037Lis" +
-      "tNodeGroupOperationsResponse\0225\n\noperatio" +
-      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
-      "ion\022\027\n\017next_page_token\030\002 \001(\t2\301\t\n\020NodeGro" +
-      "upService\022\212\001\n\003Get\022(.yandex.cloud.k8s.v1." +
-      "GetNodeGroupRequest\032\036.yandex.cloud.k8s.v" +
-      "1.NodeGroup\"9\202\323\344\223\0023\0221/managed-kubernetes" +
-      "/v1/nodeGroups/{node_group_id}\022\212\001\n\004List\022" +
-      "*.yandex.cloud.k8s.v1.ListNodeGroupsRequ" +
-      "est\032+.yandex.cloud.k8s.v1.ListNodeGroups" +
-      "Response\")\202\323\344\223\002#\022!/managed-kubernetes/v1" +
-      "/nodeGroups\022\256\001\n\006Create\022+.yandex.cloud.k8" +
-      "s.v1.CreateNodeGroupRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"T\202\323\344\223\002&\"!/managed" +
-      "-kubernetes/v1/nodeGroups:\001*\262\322*$\n\027Create" +
-      "NodeGroupMetadata\022\tNodeGroup\022\276\001\n\006Update\022" +
-      "+.yandex.cloud.k8s.v1.UpdateNodeGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "d\202\323\344\223\002621/managed-kubernetes/v1/nodeGrou" +
-      "ps/{node_group_id}:\001*\262\322*$\n\027UpdateNodeGro" +
-      "upMetadata\022\tNodeGroup\022\307\001\n\006Delete\022+.yande" +
-      "x.cloud.k8s.v1.DeleteNodeGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"m\202\323\344\223\0023" +
-      "*1/managed-kubernetes/v1/nodeGroups/{nod" +
-      "e_group_id}\262\322*0\n\027DeleteNodeGroupMetadata" +
-      "\022\025google.protobuf.Empty\022\301\001\n\016ListOperatio" +
-      "ns\0223.yandex.cloud.k8s.v1.ListNodeGroupOp" +
-      "erationsRequest\0324.yandex.cloud.k8s.v1.Li" +
-      "stNodeGroupOperationsResponse\"D\202\323\344\223\002>\022</" +
-      "managed-kubernetes/v1/nodeGroups/{node_g" +
-      "roup_id}/operations\022\222\001\n\tListNodes\022..yand" +
-      "ex.cloud.k8s.v1.ListNodeGroupNodesReques" +
-      "t\032/.yandex.cloud.k8s.v1.ListNodeGroupNod" +
-      "esResponse\"$\202\323\344\223\002\036\022\034/managed-kubernetes/" +
-      "v1/nodesBV\n\027yandex.cloud.api.k8s.v1Z;git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/k8s/v1;k8sb\006proto3"
+      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\007\020\010\"6\n\027UpdateNodeG" +
+      "roupMetadata\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071" +
+      "\001\"\320\007\n\026CreateNodeGroupRequest\022\030\n\ncluster_" +
+      "id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\01327.ya" +
+      "ndex.cloud.k8s.v1.CreateNodeGroupRequest" +
+      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
+      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
+      "a-z]*\022>\n\rnode_template\030\005 \001(\0132!.yandex.cl" +
+      "oud.k8s.v1.NodeTemplateB\004\350\3071\001\022<\n\014scale_p" +
+      "olicy\030\006 \001(\0132 .yandex.cloud.k8s.v1.ScaleP" +
+      "olicyB\004\350\3071\001\022I\n\021allocation_policy\030\007 \001(\0132." +
+      ".yandex.cloud.k8s.v1.NodeGroupAllocation" +
+      "Policy\0228\n\rdeploy_policy\030\r \001(\0132!.yandex.c" +
+      "loud.k8s.v1.DeployPolicy\022\017\n\007version\030\010 \001(" +
+      "\t\022K\n\022maintenance_policy\030\t \001(\0132/.yandex.c" +
+      "loud.k8s.v1.NodeGroupMaintenancePolicy\022o" +
+      "\n\026allowed_unsafe_sysctls\030\n \003(\tBO\212\3101\005<=25" +
+      "3\362\3071B([a-z0-9]([-_a-z0-9]*[a-z0-9])?\\.)*" +
+      "([a-z0-9][-_a-z0-9]*)?[a-z0-9*]\022/\n\013node_" +
+      "taints\030\013 \003(\0132\032.yandex.cloud.k8s.v1.Taint" +
+      "\022P\n\013node_labels\030\014 \003(\0132;.yandex.cloud.k8s" +
+      ".v1.CreateNodeGroupRequest.NodeLabelsEnt" +
+      "ry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\0321\n\017NodeLabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027CreateNodeGroupM" +
+      "etadata\022\025\n\rnode_group_id\030\001 \001(\t\"5\n\034AutoUp" +
+      "gradeNodeGroupMetadata\022\025\n\rnode_group_id\030" +
+      "\001 \001(\t\"\227\001\n\036ListNodeGroupOperationsRequest" +
+      "\022\033\n\rnode_group_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "q\n\037ListNodeGroupOperationsResponse\0225\n\nop" +
+      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
+      "Operation\022\027\n\017next_page_token\030\002 \001(\t2\301\t\n\020N" +
+      "odeGroupService\022\212\001\n\003Get\022(.yandex.cloud.k" +
+      "8s.v1.GetNodeGroupRequest\032\036.yandex.cloud" +
+      ".k8s.v1.NodeGroup\"9\202\323\344\223\0023\0221/managed-kube" +
+      "rnetes/v1/nodeGroups/{node_group_id}\022\212\001\n" +
+      "\004List\022*.yandex.cloud.k8s.v1.ListNodeGrou" +
+      "psRequest\032+.yandex.cloud.k8s.v1.ListNode" +
+      "GroupsResponse\")\202\323\344\223\002#\022!/managed-kuberne" +
+      "tes/v1/nodeGroups\022\256\001\n\006Create\022+.yandex.cl" +
+      "oud.k8s.v1.CreateNodeGroupRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"T\202\323\344\223\002&\"!/m" +
+      "anaged-kubernetes/v1/nodeGroups:\001*\262\322*$\n\027" +
+      "CreateNodeGroupMetadata\022\tNodeGroup\022\276\001\n\006U" +
+      "pdate\022+.yandex.cloud.k8s.v1.UpdateNodeGr" +
+      "oupRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"d\202\323\344\223\002621/managed-kubernetes/v1/no" +
+      "deGroups/{node_group_id}:\001*\262\322*$\n\027UpdateN" +
+      "odeGroupMetadata\022\tNodeGroup\022\307\001\n\006Delete\022+" +
+      ".yandex.cloud.k8s.v1.DeleteNodeGroupRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"m" +
+      "\202\323\344\223\0023*1/managed-kubernetes/v1/nodeGroup" +
+      "s/{node_group_id}\262\322*0\n\027DeleteNodeGroupMe" +
+      "tadata\022\025google.protobuf.Empty\022\301\001\n\016ListOp" +
+      "erations\0223.yandex.cloud.k8s.v1.ListNodeG" +
+      "roupOperationsRequest\0324.yandex.cloud.k8s" +
+      ".v1.ListNodeGroupOperationsResponse\"D\202\323\344" +
+      "\223\002>\022</managed-kubernetes/v1/nodeGroups/{" +
+      "node_group_id}/operations\022\222\001\n\tListNodes\022" +
+      "..yandex.cloud.k8s.v1.ListNodeGroupNodes" +
+      "Request\032/.yandex.cloud.k8s.v1.ListNodeGr" +
+      "oupNodesResponse\"$\202\323\344\223\002\036\022\034/managed-kuber" +
+      "netes/v1/nodesBV\n\027yandex.cloud.api.k8s.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18846,8 +18846,8 @@ public final class NodeGroupServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor(),
           yandex.cloud.api.k8s.v1.NodeOuterClass.getDescriptor(),
+          yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor(),
           yandex.cloud.api.k8s.v1.Version.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -18975,8 +18975,8 @@ public final class NodeGroupServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor();
     yandex.cloud.api.k8s.v1.NodeOuterClass.getDescriptor();
+    yandex.cloud.api.k8s.v1.NodeGroupOuterClass.getDescriptor();
     yandex.cloud.api.k8s.v1.Version.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

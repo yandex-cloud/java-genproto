@@ -9326,7 +9326,7 @@ public final class Apigateway {
       "s.apigateway.v1\032\037google/protobuf/timesta" +
       "mp.proto\032\'yandex/cloud/logging/v1/log_en" +
       "try.proto\032\035yandex/cloud/validation.proto" +
-      "\"\257\007\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "\"\265\007\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
       "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
       "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
       "ion\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud" +
@@ -9349,27 +9349,27 @@ public final class Apigateway {
       "loud.serverless.apigateway.v1.VariableIn" +
       "put:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
       "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
-      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016AttachedDo" +
-      "main\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_i" +
-      "d\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\t" +
-      "\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\t" +
-      "subnet_id\030\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010disabl" +
-      "ed\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfold" +
-      "er_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yande" +
-      "x.cloud.logging.v1.LogLevel.LevelB\r\n\013des" +
-      "tination\"\343\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010\372\3071" +
-      "\0040-99\022W\n\tvariables\030\002 \003(\0132<.yandex.cloud." +
-      "serverless.apigateway.v1.Canary.Variable" +
-      "sEntryB\006\202\3101\002>0\032f\n\016VariablesEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.serv" +
-      "erless.apigateway.v1.VariableInput:\0028\001\"|" +
-      "\n\rVariableInput\022\026\n\014string_value\030\001 \001(\tH\000\022" +
-      "\023\n\tint_value\030\002 \001(\003H\000\022\026\n\014double_value\030\003 \001" +
-      "(\001H\000\022\024\n\nbool_value\030\004 \001(\010H\000B\020\n\016variable_v" +
-      "alueB\201\001\n)yandex.cloud.api.serverless.api" +
-      "gateway.v1ZTgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/serverless/apigatew" +
-      "ay/v1;apigatewayb\006proto3"
+      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005J\004\010\006\020\007\"b\n\016Atta" +
+      "chedDomain\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certifi" +
+      "cate_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain" +
+      "\030\005 \001(\tJ\004\010\004\020\005\"5\n\014Connectivity\022\022\n\nnetwork_" +
+      "id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \003(\t\"\226\001\n\nLogOptio" +
+      "ns\022\020\n\010disabled\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001" +
+      "(\tH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004" +
+      " \001(\0162\'.yandex.cloud.logging.v1.LogLevel." +
+      "LevelB\r\n\013destination\"\343\001\n\006Canary\022\030\n\006weigh" +
+      "t\030\001 \001(\003B\010\372\3071\0040-99\022W\n\tvariables\030\002 \003(\0132<.y" +
+      "andex.cloud.serverless.apigateway.v1.Can" +
+      "ary.VariablesEntryB\006\202\3101\002>0\032f\n\016VariablesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yande" +
+      "x.cloud.serverless.apigateway.v1.Variabl" +
+      "eInput:\0028\001\"|\n\rVariableInput\022\026\n\014string_va" +
+      "lue\030\001 \001(\tH\000\022\023\n\tint_value\030\002 \001(\003H\000\022\026\n\014doub" +
+      "le_value\030\003 \001(\001H\000\022\024\n\nbool_value\030\004 \001(\010H\000B\020" +
+      "\n\016variable_valueB\201\001\n)yandex.cloud.api.se" +
+      "rverless.apigateway.v1ZTgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/serverl" +
+      "ess/apigateway/v1;apigatewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

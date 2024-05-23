@@ -9275,38 +9275,38 @@ public final class ParametrizationOuterClass {
       "\n0yandex/cloud/monitoring/v3/parametriza" +
       "tion.proto\022\032yandex.cloud.monitoring.v3\032," +
       "yandex/cloud/monitoring/v3/unit_format.p" +
-      "roto\"\217\001\n\024LabelValuesParameter\022\023\n\tfolder_" +
+      "roto\"\225\001\n\024LabelValuesParameter\022\023\n\tfolder_" +
       "id\030\002 \001(\tH\000\022\021\n\tselectors\030\023 \001(\t\022\021\n\tlabel_k" +
       "ey\030\024 \001(\t\022\027\n\017multiselectable\030\025 \001(\010\022\026\n\016def" +
-      "ault_values\030\026 \003(\tB\013\n\tcontainer\"R\n\017Custom" +
-      "Parameter\022\016\n\006values\030\001 \003(\t\022\027\n\017multiselect" +
-      "able\030\002 \001(\010\022\026\n\016default_values\030\003 \003(\t\"&\n\rTe" +
-      "xtParameter\022\025\n\rdefault_value\030\001 \001(\t\"e\n\017Do" +
-      "ubleParameter\022\025\n\rdefault_value\030\001 \001(\001\022;\n\013" +
-      "unit_format\030\002 \001(\0162&.yandex.cloud.monitor" +
-      "ing.v3.UnitFormat\"f\n\020IntegerParameter\022\025\n" +
-      "\rdefault_value\030\001 \001(\003\022;\n\013unit_format\030\002 \001(" +
-      "\0162&.yandex.cloud.monitoring.v3.UnitForma" +
-      "t\"-\n\023TextValuesParameter\022\026\n\016default_valu" +
-      "es\030\001 \003(\t\"\365\003\n\tParameter\022\014\n\004name\030\001 \001(\t\022\r\n\005" +
-      "title\030\002 \001(\t\022H\n\014label_values\030\003 \001(\01320.yand" +
-      "ex.cloud.monitoring.v3.LabelValuesParame" +
-      "terH\000\022=\n\006custom\030\004 \001(\0132+.yandex.cloud.mon" +
-      "itoring.v3.CustomParameterH\000\0229\n\004text\030\005 \001" +
-      "(\0132).yandex.cloud.monitoring.v3.TextPara" +
-      "meterH\000\022I\n\021integer_parameter\030\007 \001(\0132,.yan" +
-      "dex.cloud.monitoring.v3.IntegerParameter" +
-      "H\000\022G\n\020double_parameter\030\010 \001(\0132+.yandex.cl" +
-      "oud.monitoring.v3.DoubleParameterH\000\022F\n\013t" +
-      "ext_values\030\t \001(\0132/.yandex.cloud.monitori" +
-      "ng.v3.TextValuesParameterH\000\022\016\n\006hidden\030\006 " +
-      "\001(\010\022\023\n\013description\030\n \001(\tB\006\n\004data\"_\n\017Para" +
-      "metrization\0229\n\nparameters\030\001 \003(\0132%.yandex" +
-      ".cloud.monitoring.v3.Parameter\022\021\n\tselect" +
-      "ors\030\002 \001(\tBk\n\036yandex.cloud.api.monitoring" +
-      ".v3ZIgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/monitoring/v3;monitoringb\006" +
-      "proto3"
+      "ault_values\030\026 \003(\tB\013\n\tcontainerJ\004\010\003\020\023\"R\n\017" +
+      "CustomParameter\022\016\n\006values\030\001 \003(\t\022\027\n\017multi" +
+      "selectable\030\002 \001(\010\022\026\n\016default_values\030\003 \003(\t" +
+      "\"&\n\rTextParameter\022\025\n\rdefault_value\030\001 \001(\t" +
+      "\"e\n\017DoubleParameter\022\025\n\rdefault_value\030\001 \001" +
+      "(\001\022;\n\013unit_format\030\002 \001(\0162&.yandex.cloud.m" +
+      "onitoring.v3.UnitFormat\"f\n\020IntegerParame" +
+      "ter\022\025\n\rdefault_value\030\001 \001(\003\022;\n\013unit_forma" +
+      "t\030\002 \001(\0162&.yandex.cloud.monitoring.v3.Uni" +
+      "tFormat\"-\n\023TextValuesParameter\022\026\n\016defaul" +
+      "t_values\030\001 \003(\t\"\365\003\n\tParameter\022\014\n\004name\030\001 \001" +
+      "(\t\022\r\n\005title\030\002 \001(\t\022H\n\014label_values\030\003 \001(\0132" +
+      "0.yandex.cloud.monitoring.v3.LabelValues" +
+      "ParameterH\000\022=\n\006custom\030\004 \001(\0132+.yandex.clo" +
+      "ud.monitoring.v3.CustomParameterH\000\0229\n\004te" +
+      "xt\030\005 \001(\0132).yandex.cloud.monitoring.v3.Te" +
+      "xtParameterH\000\022I\n\021integer_parameter\030\007 \001(\013" +
+      "2,.yandex.cloud.monitoring.v3.IntegerPar" +
+      "ameterH\000\022G\n\020double_parameter\030\010 \001(\0132+.yan" +
+      "dex.cloud.monitoring.v3.DoubleParameterH" +
+      "\000\022F\n\013text_values\030\t \001(\0132/.yandex.cloud.mo" +
+      "nitoring.v3.TextValuesParameterH\000\022\016\n\006hid" +
+      "den\030\006 \001(\010\022\023\n\013description\030\n \001(\tB\006\n\004data\"_" +
+      "\n\017Parametrization\0229\n\nparameters\030\001 \003(\0132%." +
+      "yandex.cloud.monitoring.v3.Parameter\022\021\n\t" +
+      "selectors\030\002 \001(\tBk\n\036yandex.cloud.api.moni" +
+      "toring.v3ZIgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/monitoring/v3;monito" +
+      "ringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

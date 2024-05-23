@@ -18624,34 +18624,34 @@ public final class ClusterOuterClass {
       "\001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"k\n\017MasterEndpoint" +
       "s\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034\n\024exter" +
       "nal_v4_endpoint\030\002 \001(\t\022\034\n\024external_v6_end" +
-      "point\030\003 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cl" +
+      "point\030\003 \001(\t\"\326\001\n\022IPAllocationPolicy\022\037\n\027cl" +
       "uster_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4" +
       "_cidr_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27" +
       ",28\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027" +
       "cluster_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service" +
-      "_ipv6_cidr_block\030\007 \001(\t\"s\n\027MasterMaintena" +
-      "ncePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maint" +
-      "enance_window\030\002 \001(\0132&.yandex.cloud.k8s.v" +
-      "1.MaintenanceWindow\"\231\002\n\rMasterLogging\022\017\n" +
-      "\007enabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\307" +
-      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tf" +
-      "older_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
-      "_.]{0,63})?H\000\022\025\n\raudit_enabled\030\004 \001(\010\022\"\n\032" +
-      "cluster_autoscaler_enabled\030\005 \001(\010\022\036\n\026kube" +
-      "_apiserver_enabled\030\006 \001(\010\022\026\n\016events_enabl" +
-      "ed\030\007 \001(\010B\r\n\013destination\"\200\001\n\rNetworkPolic" +
-      "y\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8s.v" +
-      "1.NetworkPolicy.Provider\"0\n\010Provider\022\030\n\024" +
-      "PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KM" +
-      "SProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014" +
-      "routing_mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1" +
-      ".Cilium.RoutingMode\"7\n\013RoutingMode\022\034\n\030RO" +
-      "UTING_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016" +
-      "ReleaseChannel\022\037\n\033RELEASE_CHANNEL_UNSPEC" +
-      "IFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABL" +
-      "E\020\003BV\n\027yandex.cloud.api.k8s.v1Z;github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/k8s/v1;k8sb\006proto3"
+      "_ipv6_cidr_block\030\007 \001(\tJ\004\010\003\020\005\"s\n\027MasterMa" +
+      "intenancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n" +
+      "\022maintenance_window\030\002 \001(\0132&.yandex.cloud" +
+      ".k8s.v1.MaintenanceWindow\"\231\002\n\rMasterLogg" +
+      "ing\022\017\n\007enabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001" +
+      "(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H" +
+      "\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-z" +
+      "A-Z0-9_.]{0,63})?H\000\022\025\n\raudit_enabled\030\004 \001" +
+      "(\010\022\"\n\032cluster_autoscaler_enabled\030\005 \001(\010\022\036" +
+      "\n\026kube_apiserver_enabled\030\006 \001(\010\022\026\n\016events" +
+      "_enabled\030\007 \001(\010B\r\n\013destination\"\200\001\n\rNetwor" +
+      "kPolicy\022=\n\010provider\030\001 \001(\0162+.yandex.cloud" +
+      ".k8s.v1.NetworkPolicy.Provider\"0\n\010Provid" +
+      "er\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001" +
+      "\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cili" +
+      "um\022=\n\014routing_mode\030\001 \001(\0162\'.yandex.cloud." +
+      "k8s.v1.Cilium.RoutingMode\"7\n\013RoutingMode" +
+      "\022\034\n\030ROUTING_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL" +
+      "\020\001*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNEL_" +
+      "UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n" +
+      "\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;gi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

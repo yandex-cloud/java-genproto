@@ -4381,7 +4381,7 @@ public final class SubnetOuterClass {
     java.lang.String[] descriptorData = {
       "\n yandex/cloud/vpc/v1/subnet.proto\022\023yand" +
       "ex.cloud.vpc.v1\032\037google/protobuf/timesta" +
-      "mp.proto\"\207\003\n\006Subnet\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
+      "mp.proto\"\215\003\n\006Subnet\022\n\n\002id\030\001 \001(\t\022\021\n\tfolde" +
       "r_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google." +
       "protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013desc" +
       "ription\030\005 \001(\t\0227\n\006labels\030\006 \003(\0132\'.yandex.c" +
@@ -4391,13 +4391,13 @@ public final class SubnetOuterClass {
       "oute_table_id\030\014 \001(\t\0226\n\014dhcp_options\030\r \001(" +
       "\0132 .yandex.cloud.vpc.v1.DhcpOptions\032-\n\013L" +
       "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"T\n\013DhcpOptions\022\033\n\023domain_name_servers" +
-      "\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\t\022\023\n\013ntp_serve" +
-      "rs\030\003 \003(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSP" +
-      "ECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex." +
-      "cloud.api.vpc.v1Z;github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/vpc/v1;vpcb\006p" +
-      "roto3"
+      "8\001J\004\010\t\020\n\"T\n\013DhcpOptions\022\033\n\023domain_name_s" +
+      "ervers\030\001 \003(\t\022\023\n\013domain_name\030\002 \001(\t\022\023\n\013ntp" +
+      "_servers\030\003 \003(\t*;\n\tIpVersion\022\032\n\026IP_VERSIO" +
+      "N_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027y" +
+      "andex.cloud.api.vpc.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/vpc/v1;" +
+      "vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

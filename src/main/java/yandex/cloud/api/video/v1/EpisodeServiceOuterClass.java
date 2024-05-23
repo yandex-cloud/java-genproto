@@ -17101,80 +17101,81 @@ public final class EpisodeServiceOuterClass {
       "ion.proto\032&yandex/cloud/operation/operat" +
       "ion.proto\032#yandex/cloud/video/v1/episode" +
       ".proto\"\'\n\021GetEpisodeRequest\022\022\n\nepisode_i" +
-      "d\030\001 \001(\t\"\223\001\n\023ListEpisodesRequest\022\023\n\tstrea" +
+      "d\030\001 \001(\t\"\231\001\n\023ListEpisodesRequest\022\023\n\tstrea" +
       "m_id\030\001 \001(\tH\000\022\021\n\007line_id\030\002 \001(\tH\000\022\021\n\tpage_" +
       "size\030d \001(\003\022\022\n\npage_token\030e \001(\t\022\020\n\010order_" +
-      "by\030f \001(\t\022\016\n\006filter\030g \001(\tB\013\n\tparent_id\"a\n" +
-      "\024ListEpisodesResponse\0220\n\010episodes\030\001 \003(\0132" +
-      "\036.yandex.cloud.video.v1.Episode\022\027\n\017next_" +
-      "page_token\030d \001(\t\"\273\003\n\024CreateEpisodeReques" +
-      "t\022\023\n\tstream_id\030d \001(\tH\000\022\021\n\007line_id\030e \001(\tH" +
-      "\000\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\024\n" +
-      "\014thumbnail_id\030\004 \001(\t\022.\n\nstart_time\030\005 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022/\n\013finish_ti" +
-      "me\030\006 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013" +
-      "dvr_seconds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(" +
-      "\01320.yandex.cloud.video.v1.EpisodePublicA" +
-      "ccessParamsH\001\022S\n\022auth_system_access\030\352\007 \001" +
-      "(\01324.yandex.cloud.video.v1.EpisodeAuthSy" +
-      "stemAccessParamsH\001B\013\n\tparent_idB\017\n\racces" +
-      "s_rightsJ\004\010\001\020\002J\006\010\351\007\020\352\007\"\033\n\031EpisodePublicA" +
-      "ccessParams\"\037\n\035EpisodeAuthSystemAccessPa" +
-      "rams\"+\n\025CreateEpisodeMetadata\022\022\n\nepisode" +
-      "_id\030\001 \001(\t\"\304\003\n\024UpdateEpisodeRequest\022\022\n\nep" +
-      "isode_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n" +
-      "\013description\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t" +
-      "\022.\n\nstart_time\030\006 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022/\n\013finish_time\030\007 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J" +
-      "\n\rpublic_access\030\350\007 \001(\01320.yandex.cloud.vi" +
-      "deo.v1.EpisodePublicAccessParamsH\000\022S\n\022au" +
-      "th_system_access\030\352\007 \001(\01324.yandex.cloud.v" +
-      "ideo.v1.EpisodeAuthSystemAccessParamsH\000B" +
-      "\017\n\raccess_rightsJ\006\010\351\007\020\352\007\"+\n\025UpdateEpisod" +
-      "eMetadata\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteE" +
-      "pisodeRequest\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025Del" +
-      "eteEpisodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\321" +
-      "\001\n\033PerformEpisodeActionRequest\022\022\n\nepisod" +
-      "e_id\030\001 \001(\t\022?\n\007publish\030\352\007 \001(\0132+.yandex.cl" +
-      "oud.video.v1.PublishEpisodeActionH\000\022C\n\tu" +
-      "npublish\030\353\007 \001(\0132-.yandex.cloud.video.v1." +
-      "UnpublishEpisodeActionH\000B\010\n\006actionJ\006\010\350\007\020" +
-      "\351\007J\006\010\351\007\020\352\007\"\026\n\024PublishEpisodeAction\"\030\n\026Un" +
-      "publishEpisodeAction\"2\n\034PerformEpisodeAc" +
-      "tionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetE" +
-      "pisodePlayerURLRequest\022\022\n\nepisode_id\030\001 \001" +
-      "(\t\022:\n\006params\030\002 \001(\0132*.yandex.cloud.video." +
-      "v1.EpisodePlayerParams\"E\n\023EpisodePlayerP" +
-      "arams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n" +
-      "\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResp" +
-      "onse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344" +
-      "\006\n\016EpisodeService\022Q\n\003Get\022(.yandex.cloud." +
-      "video.v1.GetEpisodeRequest\032\036.yandex.clou" +
-      "d.video.v1.Episode\"\000\022a\n\004List\022*.yandex.cl" +
-      "oud.video.v1.ListEpisodesRequest\032+.yande" +
-      "x.cloud.video.v1.ListEpisodesResponse\"\000\022" +
-      "~\n\006Create\022+.yandex.cloud.video.v1.Create" +
-      "EpisodeRequest\032!.yandex.cloud.operation." +
-      "Operation\"$\262\322* \n\025CreateEpisodeMetadata\022\007" +
-      "Episode\022~\n\006Update\022+.yandex.cloud.video.v" +
-      "1.UpdateEpisodeRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"$\262\322* \n\025UpdateEpisodeMe" +
-      "tadata\022\007Episode\022\214\001\n\006Delete\022+.yandex.clou" +
-      "d.video.v1.DeleteEpisodeRequest\032!.yandex" +
-      ".cloud.operation.Operation\"2\262\322*.\n\025Delete" +
-      "EpisodeMetadata\022\025google.protobuf.Empty\022\223" +
-      "\001\n\rPerformAction\0222.yandex.cloud.video.v1" +
-      ".PerformEpisodeActionRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"+\262\322*\'\n\034PerformEp" +
-      "isodeActionMetadata\022\007Episode\022w\n\014GetPlaye" +
-      "rURL\0221.yandex.cloud.video.v1.GetEpisodeP" +
-      "layerURLRequest\0322.yandex.cloud.video.v1." +
-      "GetEpisodePlayerURLResponse\"\000B\\\n\031yandex." +
-      "cloud.api.video.v1Z?github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/video/v1;vi" +
-      "deob\006proto3"
+      "by\030f \001(\t\022\016\n\006filter\030g \001(\tB\013\n\tparent_idJ\004\010" +
+      "\003\020d\"g\n\024ListEpisodesResponse\0220\n\010episodes\030" +
+      "\001 \003(\0132\036.yandex.cloud.video.v1.Episode\022\027\n" +
+      "\017next_page_token\030d \001(\tJ\004\010\002\020d\"\310\003\n\024CreateE" +
+      "pisodeRequest\022\023\n\tstream_id\030d \001(\tH\000\022\021\n\007li" +
+      "ne_id\030e \001(\tH\000\022\r\n\005title\030\002 \001(\t\022\023\n\013descript" +
+      "ion\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001(\t\022.\n\nstart" +
+      "_time\030\005 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "/\n\013finish_time\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\023\n\013dvr_seconds\030\007 \001(\003\022J\n\rpublic_" +
+      "access\030\350\007 \001(\01320.yandex.cloud.video.v1.Ep" +
+      "isodePublicAccessParamsH\001\022S\n\022auth_system" +
+      "_access\030\352\007 \001(\01324.yandex.cloud.video.v1.E" +
+      "pisodeAuthSystemAccessParamsH\001B\013\n\tparent" +
+      "_idB\017\n\raccess_rightsJ\005\010f\020\350\007J\004\010\010\020dJ\004\010\001\020\002J" +
+      "\006\010\351\007\020\352\007\"\033\n\031EpisodePublicAccessParams\"\037\n\035" +
+      "EpisodeAuthSystemAccessParams\"+\n\025CreateE" +
+      "pisodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\313\003\n\024U" +
+      "pdateEpisodeRequest\022\022\n\nepisode_id\030\001 \001(\t\022" +
+      ".\n\nfield_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 " +
+      "\001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\022.\n\nstart_time\030" +
+      "\006 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fin" +
+      "ish_time\030\007 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpublic_access" +
+      "\030\350\007 \001(\01320.yandex.cloud.video.v1.EpisodeP" +
+      "ublicAccessParamsH\000\022S\n\022auth_system_acces" +
+      "s\030\352\007 \001(\01324.yandex.cloud.video.v1.Episode" +
+      "AuthSystemAccessParamsH\000B\017\n\raccess_right" +
+      "sJ\005\010\t\020\350\007J\006\010\351\007\020\352\007\"+\n\025UpdateEpisodeMetadat" +
+      "a\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteEpisodeRe" +
+      "quest\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025DeleteEpiso" +
+      "deMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\330\001\n\033Perfo" +
+      "rmEpisodeActionRequest\022\022\n\nepisode_id\030\001 \001" +
+      "(\t\022?\n\007publish\030\352\007 \001(\0132+.yandex.cloud.vide" +
+      "o.v1.PublishEpisodeActionH\000\022C\n\tunpublish" +
+      "\030\353\007 \001(\0132-.yandex.cloud.video.v1.Unpublis" +
+      "hEpisodeActionH\000B\010\n\006actionJ\005\010\002\020\350\007J\006\010\350\007\020\351" +
+      "\007J\006\010\351\007\020\352\007\"\026\n\024PublishEpisodeAction\"\030\n\026Unp" +
+      "ublishEpisodeAction\"2\n\034PerformEpisodeAct" +
+      "ionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetEp" +
+      "isodePlayerURLRequest\022\022\n\nepisode_id\030\001 \001(" +
+      "\t\022:\n\006params\030\002 \001(\0132*.yandex.cloud.video.v" +
+      "1.EpisodePlayerParams\"E\n\023EpisodePlayerPa" +
+      "rams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006" +
+      "hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerURLRespo" +
+      "nse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344\006" +
+      "\n\016EpisodeService\022Q\n\003Get\022(.yandex.cloud.v" +
+      "ideo.v1.GetEpisodeRequest\032\036.yandex.cloud" +
+      ".video.v1.Episode\"\000\022a\n\004List\022*.yandex.clo" +
+      "ud.video.v1.ListEpisodesRequest\032+.yandex" +
+      ".cloud.video.v1.ListEpisodesResponse\"\000\022~" +
+      "\n\006Create\022+.yandex.cloud.video.v1.CreateE" +
+      "pisodeRequest\032!.yandex.cloud.operation.O" +
+      "peration\"$\262\322* \n\025CreateEpisodeMetadata\022\007E" +
+      "pisode\022~\n\006Update\022+.yandex.cloud.video.v1" +
+      ".UpdateEpisodeRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"$\262\322* \n\025UpdateEpisodeMet" +
+      "adata\022\007Episode\022\214\001\n\006Delete\022+.yandex.cloud" +
+      ".video.v1.DeleteEpisodeRequest\032!.yandex." +
+      "cloud.operation.Operation\"2\262\322*.\n\025DeleteE" +
+      "pisodeMetadata\022\025google.protobuf.Empty\022\223\001" +
+      "\n\rPerformAction\0222.yandex.cloud.video.v1." +
+      "PerformEpisodeActionRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"+\262\322*\'\n\034PerformEpi" +
+      "sodeActionMetadata\022\007Episode\022w\n\014GetPlayer" +
+      "URL\0221.yandex.cloud.video.v1.GetEpisodePl" +
+      "ayerURLRequest\0322.yandex.cloud.video.v1.G" +
+      "etEpisodePlayerURLResponse\"\000B\\\n\031yandex.c" +
+      "loud.api.video.v1Z?github.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/video/v1;vid" +
+      "eob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -41653,17 +41653,17 @@ public final class PSCS {
       "le/protobuf/field_mask.proto\032\037google/pro" +
       "tobuf/timestamp.proto\032\033google/type/timeo" +
       "fday.proto\032 yandex/cloud/api/operation.p" +
-      "roto\032&yandex/cloud/operation/operation.p" +
-      "roto\032\035yandex/cloud/validation.proto\032*yan" +
-      "dex/cloud/mdb/sqlserver/v1/backup.proto\032" +
-      "+yandex/cloud/mdb/sqlserver/v1/cluster.p" +
-      "roto\032,yandex/cloud/mdb/sqlserver/v1/data" +
-      "base.proto\032(yandex/cloud/mdb/sqlserver/v" +
-      "1/user.proto\032;yandex/cloud/mdb/sqlserver" +
-      "/v1/config/sqlserver2016sp2.proto\0328yande" +
-      "x/cloud/mdb/sqlserver/v1/config/sqlserve" +
-      "r2017.proto\0328yandex/cloud/mdb/sqlserver/" +
-      "v1/config/sqlserver2019.proto\"5\n\021GetClus" +
+      "roto\032*yandex/cloud/mdb/sqlserver/v1/back" +
+      "up.proto\032+yandex/cloud/mdb/sqlserver/v1/" +
+      "cluster.proto\032;yandex/cloud/mdb/sqlserve" +
+      "r/v1/config/sqlserver2016sp2.proto\0328yand" +
+      "ex/cloud/mdb/sqlserver/v1/config/sqlserv" +
+      "er2017.proto\0328yandex/cloud/mdb/sqlserver" +
+      "/v1/config/sqlserver2019.proto\032,yandex/c" +
+      "loud/mdb/sqlserver/v1/database.proto\032(ya" +
+      "ndex/cloud/mdb/sqlserver/v1/user.proto\032&" +
+      "yandex/cloud/operation/operation.proto\032\035" +
+      "yandex/cloud/validation.proto\"5\n\021GetClus" +
       "terRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
       "<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolder_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
@@ -41712,7 +41712,7 @@ public final class PSCS {
       "0\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id" +
       "\030\001 \001(\t\"8\n\024BackupClusterRequest\022 \n\ncluste" +
       "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025BackupCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\327\005\n\025Restor" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\335\005\n\025Restor" +
       "eClusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001" +
       "\022.\n\004time\030\002 \001(\0132\032.google.protobuf.Timesta" +
       "mpB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001\362\3071\016[a-zA-Z0" +
@@ -41730,176 +41730,176 @@ public final class PSCS {
       "=50\022\032\n\022security_group_ids\030\014 \003(\t\022\033\n\023delet" +
       "ion_protection\030\r \001(\010\022\026\n\016host_group_ids\030\016" +
       " \003(\t\022\032\n\022service_account_id\030\017 \001(\t\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "?\n\026RestoreClusterMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033StartCluster" +
-      "FailoverRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101\005<=253\"" +
-      "2\n\034StartClusterFailoverMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001" +
-      " \001(\0132\032.google.protobuf.Timestamp\022F\n\007mess" +
-      "age\030\002 \003(\01325.yandex.cloud.mdb.sqlserver.v" +
-      "1.LogRecord.MessageEntry\032.\n\014MessageEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335\003\n\026Lis" +
-      "tClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014" +
-      "service_type\030\003 \001(\0162A.yandex.cloud.mdb.sq" +
-      "lserver.v1.ListClusterLogsRequest.Servic" +
-      "eType\022-\n\tfrom_time\030\004 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\307" +
-      "1\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022" +
-      "\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006filte" +
-      "r\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013ServiceType\022\034\n\030SE" +
-      "RVICE_TYPE_UNSPECIFIED\020\000\022\023\n\017SQLSERVER_ER" +
-      "ROR\020\001\022\031\n\025SQLSERVER_APPLICATION\020\002\"j\n\027List" +
-      "ClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(.yand" +
-      "ex.cloud.mdb.sqlserver.v1.LogRecord\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"~\n\034ListClusterOpera" +
-      "tionsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClus" +
-      "terOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"{\n\031ListClusterBack" +
-      "upsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\032ListCluste" +
-      "rBackupsResponse\0226\n\007backups\030\001 \003(\0132%.yand" +
-      "ex.cloud.mdb.sqlserver.v1.Backup\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"y\n\027ListClusterHostsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterHosts" +
-      "Response\0222\n\005hosts\030\001 \003(\0132#.yandex.cloud.m" +
-      "db.sqlserver.v1.Host\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"7\n\023StartClusterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopCluste" +
-      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\")\n\023StopClusterMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
-      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_" +
-      "folder_id\030\002 \001(\t\022\035\n\025destination_folder_id" +
-      "\030\003 \001(\t\"D\n\032UpdateClusterHostsMetadata\022\022\n\n" +
-      "cluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\\\n\010" +
-      "HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\ts" +
-      "ubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_publi" +
-      "c_ip\030\003 \001(\010\"t\n\016UpdateHostSpec\022\027\n\thost_nam" +
-      "e\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022\030\n\020assign_public_" +
-      "ip\030\003 \001(\010\"\217\001\n\031UpdateClusterHostsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\021upda" +
-      "te_host_specs\030\002 \003(\0132-.yandex.cloud.mdb.s" +
-      "qlserver.v1.UpdateHostSpecB\006\202\3101\002>0\"\262\010\n\nC" +
-      "onfigSpec\022\017\n\007version\030\001 \001(\t\022\202\001\n\033sqlserver" +
-      "_config_2016sp2std\030\002 \001(\0132?.yandex.cloud." +
-      "mdb.sqlserver.v1.config.SQLServerConfig2" +
-      "016sp2stdH\000R\032sqlserverConfig_2016sp2std\022" +
-      "\202\001\n\033sqlserver_config_2016sp2ent\030\005 \001(\0132?." +
-      "yandex.cloud.mdb.sqlserver.v1.config.SQL" +
-      "ServerConfig2016sp2entH\000R\032sqlserverConfi" +
-      "g_2016sp2ent\022y\n\030sqlserver_config_2017std" +
-      "\030\010 \001(\0132<.yandex.cloud.mdb.sqlserver.v1.c" +
-      "onfig.SQLServerConfig2017stdH\000R\027sqlserve" +
-      "rConfig_2017std\022y\n\030sqlserver_config_2017" +
-      "ent\030\t \001(\0132<.yandex.cloud.mdb.sqlserver.v" +
-      "1.config.SQLServerConfig2017entH\000R\027sqlse" +
-      "rverConfig_2017ent\022y\n\030sqlserver_config_2" +
-      "019std\030\n \001(\0132<.yandex.cloud.mdb.sqlserve" +
-      "r.v1.config.SQLServerConfig2019stdH\000R\027sq" +
-      "lserverConfig_2019std\022y\n\030sqlserver_confi" +
-      "g_2019ent\030\013 \001(\0132<.yandex.cloud.mdb.sqlse" +
-      "rver.v1.config.SQLServerConfig2019entH\000R" +
-      "\027sqlserverConfig_2019ent\022;\n\tresources\030\003 " +
-      "\001(\0132(.yandex.cloud.mdb.sqlserver.v1.Reso" +
-      "urces\0223\n\023backup_window_start\030\004 \001(\0132\026.goo" +
-      "gle.type.TimeOfDay\0225\n\006access\030\006 \001(\0132%.yan" +
-      "dex.cloud.mdb.sqlserver.v1.Access\022`\n\025sec" +
-      "ondary_connections\030\007 \001(\0162A.yandex.cloud." +
-      "mdb.sqlserver.v1.ClusterConfig.Secondary" +
-      "ConnectionsB\022\n\020sqlserver_config2\304\027\n\016Clus" +
-      "terService\022\220\001\n\003Get\0220.yandex.cloud.mdb.sq" +
-      "lserver.v1.GetClusterRequest\032&.yandex.cl" +
-      "oud.mdb.sqlserver.v1.Cluster\"/\202\323\344\223\002)\022\'/m" +
-      "db/sqlserver/v1/clusters/{cluster_id}\022\223\001" +
-      "\n\004List\0222.yandex.cloud.mdb.sqlserver.v1.L" +
-      "istClustersRequest\0323.yandex.cloud.mdb.sq" +
-      "lserver.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022" +
-      "\032/mdb/sqlserver/v1/clusters\022\253\001\n\006Create\0223" +
-      ".yandex.cloud.mdb.sqlserver.v1.CreateClu" +
-      "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"I\202\323\344\223\002\037\"\032/mdb/sqlserver/v1/cluste" +
-      "rs:\001*\262\322* \n\025CreateClusterMetadata\022\007Cluste" +
-      "r\022\270\001\n\006Update\0223.yandex.cloud.mdb.sqlserve" +
-      "r.v1.UpdateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"V\202\323\344\223\002,2\'/mdb/sqlse" +
-      "rver/v1/clusters/{cluster_id}:\001*\262\322* \n\025Up" +
-      "dateClusterMetadata\022\007Cluster\022\303\001\n\006Delete\022" +
-      "3.yandex.cloud.mdb.sqlserver.v1.DeleteCl" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
+      "\004\010\003\020\004\"?\n\026RestoreClusterMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033StartC" +
+      "lusterFailoverRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\3101\005" +
+      "<=253\"2\n\034StartClusterFailoverMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimes" +
+      "tamp\030\001 \001(\0132\032.google.protobuf.Timestamp\022F" +
+      "\n\007message\030\002 \003(\01325.yandex.cloud.mdb.sqlse" +
+      "rver.v1.LogRecord.MessageEntry\032.\n\014Messag" +
+      "eEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\335" +
+      "\003\n\026ListClusterLogsRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003" +
+      "(\t\022W\n\014service_type\030\003 \001(\0162A.yandex.cloud." +
+      "mdb.sqlserver.v1.ListClusterLogsRequest." +
+      "ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\035\n\tpage_size\030\006 \001" +
+      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005" +
+      "<=100\022\036\n\026always_next_page_token\030\010 \001(\010\022\032\n" +
+      "\006filter\030\t \001(\tB\n\212\3101\006<=1000\"[\n\013ServiceType" +
+      "\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\023\n\017SQLSER" +
+      "VER_ERROR\020\001\022\031\n\025SQLSERVER_APPLICATION\020\002\"j" +
+      "\n\027ListClusterLogsResponse\0226\n\004logs\030\001 \003(\0132" +
+      "(.yandex.cloud.mdb.sqlserver.v1.LogRecor" +
+      "d\022\027\n\017next_page_token\030\002 \001(\t\"~\n\034ListCluste" +
+      "rOperationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035Li" +
+      "stClusterOperationsResponse\0225\n\noperation" +
+      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t\"{\n\031ListClust" +
+      "erBackupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\032List" +
+      "ClusterBackupsResponse\0226\n\007backups\030\001 \003(\0132" +
+      "%.yandex.cloud.mdb.sqlserver.v1.Backup\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"y\n\027ListClusterHo" +
+      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListCluste" +
+      "rHostsResponse\0222\n\005hosts\030\001 \003(\0132#.yandex.c" +
+      "loud.mdb.sqlserver.v1.Host\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"7\n\023StartClusterRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClu" +
+      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022Stop" +
+      "ClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\"c\n\022MoveClusterRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinati" +
+      "on_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Move" +
+      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020s" +
+      "ource_folder_id\030\002 \001(\t\022\035\n\025destination_fol" +
+      "der_id\030\003 \001(\t\"D\n\032UpdateClusterHostsMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003" +
+      "(\t\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=5" +
+      "0\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign" +
+      "_public_ip\030\003 \001(\010\"t\n\016UpdateHostSpec\022\027\n\tho" +
+      "st_name\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\030\n\020assign_p" +
+      "ublic_ip\030\003 \001(\010\"\217\001\n\031UpdateClusterHostsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022P" +
+      "\n\021update_host_specs\030\002 \003(\0132-.yandex.cloud" +
+      ".mdb.sqlserver.v1.UpdateHostSpecB\006\202\3101\002>0" +
+      "\"\262\010\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022\202\001\n\033sql" +
+      "server_config_2016sp2std\030\002 \001(\0132?.yandex." +
+      "cloud.mdb.sqlserver.v1.config.SQLServerC" +
+      "onfig2016sp2stdH\000R\032sqlserverConfig_2016s" +
+      "p2std\022\202\001\n\033sqlserver_config_2016sp2ent\030\005 " +
+      "\001(\0132?.yandex.cloud.mdb.sqlserver.v1.conf" +
+      "ig.SQLServerConfig2016sp2entH\000R\032sqlserve" +
+      "rConfig_2016sp2ent\022y\n\030sqlserver_config_2" +
+      "017std\030\010 \001(\0132<.yandex.cloud.mdb.sqlserve" +
+      "r.v1.config.SQLServerConfig2017stdH\000R\027sq" +
+      "lserverConfig_2017std\022y\n\030sqlserver_confi" +
+      "g_2017ent\030\t \001(\0132<.yandex.cloud.mdb.sqlse" +
+      "rver.v1.config.SQLServerConfig2017entH\000R" +
+      "\027sqlserverConfig_2017ent\022y\n\030sqlserver_co" +
+      "nfig_2019std\030\n \001(\0132<.yandex.cloud.mdb.sq" +
+      "lserver.v1.config.SQLServerConfig2019std" +
+      "H\000R\027sqlserverConfig_2019std\022y\n\030sqlserver" +
+      "_config_2019ent\030\013 \001(\0132<.yandex.cloud.mdb" +
+      ".sqlserver.v1.config.SQLServerConfig2019" +
+      "entH\000R\027sqlserverConfig_2019ent\022;\n\tresour" +
+      "ces\030\003 \001(\0132(.yandex.cloud.mdb.sqlserver.v" +
+      "1.Resources\0223\n\023backup_window_start\030\004 \001(\013" +
+      "2\026.google.type.TimeOfDay\0225\n\006access\030\006 \001(\013" +
+      "2%.yandex.cloud.mdb.sqlserver.v1.Access\022" +
+      "`\n\025secondary_connections\030\007 \001(\0162A.yandex." +
+      "cloud.mdb.sqlserver.v1.ClusterConfig.Sec" +
+      "ondaryConnectionsB\022\n\020sqlserver_config2\304\027" +
+      "\n\016ClusterService\022\220\001\n\003Get\0220.yandex.cloud." +
+      "mdb.sqlserver.v1.GetClusterRequest\032&.yan" +
+      "dex.cloud.mdb.sqlserver.v1.Cluster\"/\202\323\344\223" +
+      "\002)\022\'/mdb/sqlserver/v1/clusters/{cluster_" +
+      "id}\022\223\001\n\004List\0222.yandex.cloud.mdb.sqlserve" +
+      "r.v1.ListClustersRequest\0323.yandex.cloud." +
+      "mdb.sqlserver.v1.ListClustersResponse\"\"\202" +
+      "\323\344\223\002\034\022\032/mdb/sqlserver/v1/clusters\022\253\001\n\006Cr" +
+      "eate\0223.yandex.cloud.mdb.sqlserver.v1.Cre" +
+      "ateClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"I\202\323\344\223\002\037\"\032/mdb/sqlserver/v1/" +
+      "clusters:\001*\262\322* \n\025CreateClusterMetadata\022\007" +
+      "Cluster\022\270\001\n\006Update\0223.yandex.cloud.mdb.sq" +
+      "lserver.v1.UpdateClusterRequest\032!.yandex" +
+      ".cloud.operation.Operation\"V\202\323\344\223\002,2\'/mdb" +
+      "/sqlserver/v1/clusters/{cluster_id}:\001*\262\322" +
+      "* \n\025UpdateClusterMetadata\022\007Cluster\022\303\001\n\006D" +
+      "elete\0223.yandex.cloud.mdb.sqlserver.v1.De" +
+      "leteClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"a\202\323\344\223\002)*\'/mdb/sqlserver/v1" +
+      "/clusters/{cluster_id}\262\322*.\n\025DeleteCluste" +
+      "rMetadata\022\025google.protobuf.Empty\022\270\001\n\005Sta" +
+      "rt\0222.yandex.cloud.mdb.sqlserver.v1.Start" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"X\202\323\344\223\002/\"-/mdb/sqlserver/v1/clu" +
+      "sters/{cluster_id}:start\262\322*\037\n\024StartClust" +
+      "erMetadata\022\007Cluster\022\264\001\n\004Stop\0221.yandex.cl" +
+      "oud.mdb.sqlserver.v1.StopClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
+      "\002.\",/mdb/sqlserver/v1/clusters/{cluster_" +
+      "id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clust" +
+      "er\022\267\001\n\004Move\0221.yandex.cloud.mdb.sqlserver" +
+      ".v1.MoveClusterRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"Y\202\323\344\223\0021\",/mdb/sqlserve" +
+      "r/v1/clusters/{cluster_id}:move:\001*\262\322*\036\n\023" +
+      "MoveClusterMetadata\022\007Cluster\022\274\001\n\006Backup\022" +
+      "3.yandex.cloud.mdb.sqlserver.v1.BackupCl" +
       "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"a\202\323\344\223\002)*\'/mdb/sqlserver/v1/clust" +
-      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
-      "ata\022\025google.protobuf.Empty\022\270\001\n\005Start\0222.y" +
-      "andex.cloud.mdb.sqlserver.v1.StartCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"X\202\323\344\223\002/\"-/mdb/sqlserver/v1/clusters/" +
-      "{cluster_id}:start\262\322*\037\n\024StartClusterMeta" +
-      "data\022\007Cluster\022\264\001\n\004Stop\0221.yandex.cloud.md" +
-      "b.sqlserver.v1.StopClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"V\202\323\344\223\002.\",/m" +
-      "db/sqlserver/v1/clusters/{cluster_id}:st" +
-      "op\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\267\001\n" +
-      "\004Move\0221.yandex.cloud.mdb.sqlserver.v1.Mo" +
-      "veClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/c" +
-      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
-      "usterMetadata\022\007Cluster\022\274\001\n\006Backup\0223.yand" +
-      "ex.cloud.mdb.sqlserver.v1.BackupClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"Z\202\323\344\223\0020\"./mdb/sqlserver/v1/clusters/{c" +
-      "luster_id}:backup\262\322* \n\025BackupClusterMeta" +
-      "data\022\007Cluster\022\266\001\n\007Restore\0224.yandex.cloud" +
-      ".mdb.sqlserver.v1.RestoreClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"R\202\323\344\223" +
-      "\002\'\"\"/mdb/sqlserver/v1/clusters:restore:\001" +
-      "*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\333" +
-      "\001\n\rStartFailover\022:.yandex.cloud.mdb.sqls" +
-      "erver.v1.StartClusterFailoverRequest\032!.y" +
-      "andex.cloud.operation.Operation\"k\202\323\344\223\002:\"" +
-      "5/mdb/sqlserver/v1/clusters/{cluster_id}" +
-      ":startFailover:\001*\262\322*\'\n\034StartClusterFailo" +
-      "verMetadata\022\007Cluster\022\257\001\n\010ListLogs\0225.yand" +
-      "ex.cloud.mdb.sqlserver.v1.ListClusterLog" +
-      "sRequest\0326.yandex.cloud.mdb.sqlserver.v1" +
-      ".ListClusterLogsResponse\"4\202\323\344\223\002.\022,/mdb/s" +
-      "qlserver/v1/clusters/{cluster_id}:logs\022\307" +
-      "\001\n\016ListOperations\022;.yandex.cloud.mdb.sql" +
-      "server.v1.ListClusterOperationsRequest\032<" +
-      ".yandex.cloud.mdb.sqlserver.v1.ListClust" +
-      "erOperationsResponse\":\202\323\344\223\0024\0222/mdb/sqlse" +
-      "rver/v1/clusters/{cluster_id}/operations" +
-      "\022\273\001\n\013ListBackups\0228.yandex.cloud.mdb.sqls" +
-      "erver.v1.ListClusterBackupsRequest\0329.yan" +
-      "dex.cloud.mdb.sqlserver.v1.ListClusterBa" +
-      "ckupsResponse\"7\202\323\344\223\0021\022//mdb/sqlserver/v1" +
-      "/clusters/{cluster_id}/backups\022\263\001\n\tListH" +
-      "osts\0226.yandex.cloud.mdb.sqlserver.v1.Lis" +
-      "tClusterHostsRequest\0327.yandex.cloud.mdb." +
-      "sqlserver.v1.ListClusterHostsResponse\"5\202" +
-      "\323\344\223\002/\022-/mdb/sqlserver/v1/clusters/{clust" +
-      "er_id}/hosts\022\347\001\n\013UpdateHosts\0228.yandex.cl" +
-      "oud.mdb.sqlserver.v1.UpdateClusterHostsR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"{\202\323\344\223\002>\"9/mdb/sqlserver/v1/clusters/{c" +
-      "luster_id}/hosts:batchUpdate:\001*\262\322*3\n\032Upd" +
-      "ateClusterHostsMetadata\022\025google.protobuf" +
-      ".EmptyBv\n!yandex.cloud.api.mdb.sqlserver" +
-      ".v1B\004PSCSZKgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/sqlserver/v1;sql" +
-      "serverb\006proto3"
+      "eration\"Z\202\323\344\223\0020\"./mdb/sqlserver/v1/clust" +
+      "ers/{cluster_id}:backup\262\322* \n\025BackupClust" +
+      "erMetadata\022\007Cluster\022\266\001\n\007Restore\0224.yandex" +
+      ".cloud.mdb.sqlserver.v1.RestoreClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"R\202\323\344\223\002\'\"\"/mdb/sqlserver/v1/clusters:res" +
+      "tore:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Clu" +
+      "ster\022\333\001\n\rStartFailover\022:.yandex.cloud.md" +
+      "b.sqlserver.v1.StartClusterFailoverReque" +
+      "st\032!.yandex.cloud.operation.Operation\"k\202" +
+      "\323\344\223\002:\"5/mdb/sqlserver/v1/clusters/{clust" +
+      "er_id}:startFailover:\001*\262\322*\'\n\034StartCluste" +
+      "rFailoverMetadata\022\007Cluster\022\257\001\n\010ListLogs\022" +
+      "5.yandex.cloud.mdb.sqlserver.v1.ListClus" +
+      "terLogsRequest\0326.yandex.cloud.mdb.sqlser" +
+      "ver.v1.ListClusterLogsResponse\"4\202\323\344\223\002.\022," +
+      "/mdb/sqlserver/v1/clusters/{cluster_id}:" +
+      "logs\022\307\001\n\016ListOperations\022;.yandex.cloud.m" +
+      "db.sqlserver.v1.ListClusterOperationsReq" +
+      "uest\032<.yandex.cloud.mdb.sqlserver.v1.Lis" +
+      "tClusterOperationsResponse\":\202\323\344\223\0024\0222/mdb" +
+      "/sqlserver/v1/clusters/{cluster_id}/oper" +
+      "ations\022\273\001\n\013ListBackups\0228.yandex.cloud.md" +
+      "b.sqlserver.v1.ListClusterBackupsRequest" +
+      "\0329.yandex.cloud.mdb.sqlserver.v1.ListClu" +
+      "sterBackupsResponse\"7\202\323\344\223\0021\022//mdb/sqlser" +
+      "ver/v1/clusters/{cluster_id}/backups\022\263\001\n" +
+      "\tListHosts\0226.yandex.cloud.mdb.sqlserver." +
+      "v1.ListClusterHostsRequest\0327.yandex.clou" +
+      "d.mdb.sqlserver.v1.ListClusterHostsRespo" +
+      "nse\"5\202\323\344\223\002/\022-/mdb/sqlserver/v1/clusters/" +
+      "{cluster_id}/hosts\022\347\001\n\013UpdateHosts\0228.yan" +
+      "dex.cloud.mdb.sqlserver.v1.UpdateCluster" +
+      "HostsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"{\202\323\344\223\002>\"9/mdb/sqlserver/v1/clust" +
+      "ers/{cluster_id}/hosts:batchUpdate:\001*\262\322*" +
+      "3\n\032UpdateClusterHostsMetadata\022\025google.pr" +
+      "otobuf.EmptyBv\n!yandex.cloud.api.mdb.sql" +
+      "server.v1B\004PSCSZKgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/sqlserver/" +
+      "v1;sqlserverb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -41909,15 +41909,15 @@ public final class PSCS {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.PSB.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.PSC.getDescriptor(),
-          yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor(),
-          yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor(),
           yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_sqlserver_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -42170,15 +42170,15 @@ public final class PSCS {
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.PSB.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.PSC.getDescriptor();
-    yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor();
-    yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2017.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2019.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.PSU.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1855,17 +1855,17 @@ public final class ResourcePresetOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/mdb/greenplum/v1/resource" +
       "_preset.proto\022\035yandex.cloud.mdb.greenplu" +
-      "m.v1\"\234\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
+      "m.v1\"\242\002\n\016ResourcePreset\022\n\n\002id\030\001 \001(\t\022\020\n\010z" +
       "one_ids\030\002 \003(\t\022\025\n\rdisk_type_ids\030\n \003(\t\022\r\n\005" +
       "cores\030\003 \001(\003\022\016\n\006memory\030\004 \001(\003\022@\n\004type\030\005 \001(" +
       "\01622.yandex.cloud.mdb.greenplum.v1.Resour" +
       "cePreset.Type\022\032\n\022host_count_divider\030\010 \001(" +
       "\003\022!\n\031max_segment_in_host_count\030\t \001(\003\"5\n\004" +
       "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MASTER\020\001\022\013" +
-      "\n\007SEGMENT\020\002Bp\n!yandex.cloud.api.mdb.gree" +
-      "nplum.v1ZKgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/greenplum/v1;gree" +
-      "nplumb\006proto3"
+      "\n\007SEGMENT\020\002J\004\010\006\020\010Bp\n!yandex.cloud.api.md" +
+      "b.greenplum.v1ZKgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/greenplum/v" +
+      "1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

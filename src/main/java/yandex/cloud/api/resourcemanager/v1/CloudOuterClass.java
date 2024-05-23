@@ -1855,17 +1855,17 @@ public final class CloudOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/resourcemanager/v1/cloud." +
       "proto\022\037yandex.cloud.resourcemanager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"\362\001\n\005Clou" +
+      "google/protobuf/timestamp.proto\"\370\001\n\005Clou" +
       "d\022\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013d" +
       "escription\030\004 \001(\t\022\027\n\017organization_id\030\006 \001(" +
       "\t\022B\n\006labels\030\007 \003(\01322.yandex.cloud.resourc" +
       "emanager.v1.Cloud.LabelsEntry\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001Bz\n#" +
-      "yandex.cloud.api.resourcemanager.v1ZSgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/resourcemanager/v1;resourcemanager" +
-      "b\006proto3"
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005" +
+      "\020\006Bz\n#yandex.cloud.api.resourcemanager.v" +
+      "1ZSgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/resourcemanager/v1;resourcem" +
+      "anagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

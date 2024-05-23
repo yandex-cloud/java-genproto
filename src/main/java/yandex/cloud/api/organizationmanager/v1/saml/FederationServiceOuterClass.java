@@ -20331,10 +20331,10 @@ public final class FederationServiceOuterClass {
       "i/annotations.proto\032\036google/protobuf/dur" +
       "ation.proto\032 google/protobuf/field_mask." +
       "proto\032 yandex/cloud/api/operation.proto\032" +
-      "6yandex/cloud/organizationmanager/v1/use" +
-      "r_account.proto\0329yandex/cloud/organizati" +
-      "onmanager/v1/saml/federation.proto\032&yand" +
-      "ex/cloud/operation/operation.proto\032\035yand" +
+      "&yandex/cloud/operation/operation.proto\032" +
+      "9yandex/cloud/organizationmanager/v1/sam" +
+      "l/federation.proto\0326yandex/cloud/organiz" +
+      "ationmanager/v1/user_account.proto\032\035yand" +
       "ex/cloud/validation.proto\"7\n\024GetFederati" +
       "onRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=" +
       "50\"\232\001\n\026ListFederationsRequest\022%\n\017organiz" +
@@ -20363,7 +20363,7 @@ public final class FederationServiceOuterClass {
       "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
       "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
       "value\030\002 \001(\t:\0028\001\"1\n\030CreateFederationMetad" +
-      "ata\022\025\n\rfederation_id\030\001 \001(\t\"\206\006\n\027UpdateFed" +
+      "ata\022\025\n\rfederation_id\030\001 \001(\t\"\214\006\n\027UpdateFed" +
       "erationRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212" +
       "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
       "otobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-" +
@@ -20383,96 +20383,96 @@ public final class FederationServiceOuterClass {
       "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
       "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013" +
       "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"1\n\030UpdateFederationMetadata\022\025\n\rfeder" +
-      "ation_id\030\001 \001(\t\":\n\027DeleteFederationReques" +
-      "t\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\"1\n\030De" +
-      "leteFederationMetadata\022\025\n\rfederation_id\030" +
-      "\001 \001(\t\"`\n\037AddFederatedUserAccountsRequest" +
-      "\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\034\n\010nam" +
-      "e_ids\030\002 \003(\tB\n\212\3101\006<=1000\"9\n AddFederatedU" +
-      "serAccountsMetadata\022\025\n\rfederation_id\030\001 \001" +
-      "(\t\"k\n AddFederatedUserAccountsResponse\022G" +
-      "\n\ruser_accounts\030\001 \003(\01320.yandex.cloud.org" +
-      "anizationmanager.v1.UserAccount\"r\n\"Delet" +
-      "eFederatedUserAccountsRequest\022#\n\rfederat" +
-      "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\013subject_id" +
-      "s\030\002 \003(\tB\022\202\3101\0061-1000\212\3101\0041-50\"<\n#DeleteFed" +
-      "eratedUserAccountsMetadata\022\025\n\rfederation" +
-      "_id\030\001 \001(\t\"^\n#DeleteFederatedUserAccounts" +
-      "Response\022\030\n\020deleted_subjects\030\001 \003(\t\022\035\n\025no" +
-      "n_existing_subjects\030\002 \003(\t\"\242\001\n ListFedera" +
-      "tedUserAccountsRequest\022#\n\rfederation_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=20" +
-      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1010\"\205\001\n!ListF" +
-      "ederatedUserAccountsResponse\022G\n\ruser_acc" +
-      "ounts\030\001 \003(\01320.yandex.cloud.organizationm" +
-      "anager.v1.UserAccount\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"\201\001\n\037ListFederationOperationsReque" +
-      "st\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token" +
-      "\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederationOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t2\373\020\n\021FederationService\022\276\001\n" +
-      "\003Get\022>.yandex.cloud.organizationmanager." +
-      "v1.saml.GetFederationRequest\0324.yandex.cl" +
-      "oud.organizationmanager.v1.saml.Federati" +
-      "on\"A\202\323\344\223\002;\0229/organization-manager/v1/sam" +
-      "l/federations/{federation_id}\022\276\001\n\004List\022@" +
-      ".yandex.cloud.organizationmanager.v1.sam" +
-      "l.ListFederationsRequest\032A.yandex.cloud." +
-      "organizationmanager.v1.saml.ListFederati" +
-      "onsResponse\"1\202\323\344\223\002+\022)/organization-manag" +
-      "er/v1/saml/federations\022\316\001\n\006Create\022A.yand" +
-      "ex.cloud.organizationmanager.v1.saml.Cre" +
-      "ateFederationRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"^\202\323\344\223\002.\")/organization-m" +
-      "anager/v1/saml/federations:\001*\262\322*&\n\030Creat" +
-      "eFederationMetadata\022\nFederation\022\336\001\n\006Upda" +
-      "te\022A.yandex.cloud.organizationmanager.v1" +
-      ".saml.UpdateFederationRequest\032!.yandex.c" +
-      "loud.operation.Operation\"n\202\323\344\223\002>29/organ" +
-      "ization-manager/v1/saml/federations/{fed" +
-      "eration_id}:\001*\262\322*&\n\030UpdateFederationMeta" +
-      "data\022\nFederation\022\346\001\n\006Delete\022A.yandex.clo" +
-      "ud.organizationmanager.v1.saml.DeleteFed" +
-      "erationRequest\032!.yandex.cloud.operation." +
-      "Operation\"v\202\323\344\223\002;*9/organization-manager" +
-      "/v1/saml/federations/{federation_id}\262\322*1" +
-      "\n\030DeleteFederationMetadata\022\025google.proto" +
-      "buf.Empty\022\236\002\n\017AddUserAccounts\022I.yandex.c" +
-      "loud.organizationmanager.v1.saml.AddFede" +
-      "ratedUserAccountsRequest\032!.yandex.cloud." +
-      "operation.Operation\"\234\001\202\323\344\223\002N\"I/organizat" +
-      "ion-manager/v1/saml/federations/{federat" +
-      "ion_id}:addUserAccounts:\001*\262\322*D\n AddFeder" +
-      "atedUserAccountsMetadata\022 AddFederatedUs" +
-      "erAccountsResponse\022\255\002\n\022DeleteUserAccount" +
-      "s\022L.yandex.cloud.organizationmanager.v1." +
-      "saml.DeleteFederatedUserAccountsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\245\001\202\323\344" +
-      "\223\002Q\"L/organization-manager/v1/saml/feder" +
-      "ations/{federation_id}:deleteUserAccount" +
-      "s:\001*\262\322*J\n#DeleteFederatedUserAccountsMet" +
-      "adata\022#DeleteFederatedUserAccountsRespon" +
-      "se\022\377\001\n\020ListUserAccounts\022J.yandex.cloud.o" +
-      "rganizationmanager.v1.saml.ListFederated" +
-      "UserAccountsRequest\032K.yandex.cloud.organ" +
-      "izationmanager.v1.saml.ListFederatedUser" +
-      "AccountsResponse\"R\202\323\344\223\002L\022J/organization-" +
-      "manager/v1/saml/federations/{federation_" +
-      "id}:listUserAccounts\022\365\001\n\016ListOperations\022" +
-      "I.yandex.cloud.organizationmanager.v1.sa" +
-      "ml.ListFederationOperationsRequest\032J.yan" +
-      "dex.cloud.organizationmanager.v1.saml.Li" +
-      "stFederationOperationsResponse\"L\202\323\344\223\002F\022D" +
+      "\0028\001J\004\010\013\020\014\"1\n\030UpdateFederationMetadata\022\025\n" +
+      "\rfederation_id\030\001 \001(\t\":\n\027DeleteFederation" +
+      "Request\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50" +
+      "\"1\n\030DeleteFederationMetadata\022\025\n\rfederati" +
+      "on_id\030\001 \001(\t\"`\n\037AddFederatedUserAccountsR" +
+      "equest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
+      "\034\n\010name_ids\030\002 \003(\tB\n\212\3101\006<=1000\"9\n AddFede" +
+      "ratedUserAccountsMetadata\022\025\n\rfederation_" +
+      "id\030\001 \001(\t\"k\n AddFederatedUserAccountsResp" +
+      "onse\022G\n\ruser_accounts\030\001 \003(\01320.yandex.clo" +
+      "ud.organizationmanager.v1.UserAccount\"r\n" +
+      "\"DeleteFederatedUserAccountsRequest\022#\n\rf" +
+      "ederation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\'\n\013subj" +
+      "ect_ids\030\002 \003(\tB\022\202\3101\0061-1000\212\3101\0041-50\"<\n#Del" +
+      "eteFederatedUserAccountsMetadata\022\025\n\rfede" +
+      "ration_id\030\001 \001(\t\"^\n#DeleteFederatedUserAc" +
+      "countsResponse\022\030\n\020deleted_subjects\030\001 \003(\t" +
+      "\022\035\n\025non_existing_subjects\030\002 \003(\t\"\242\001\n List" +
+      "FederatedUserAccountsRequest\022#\n\rfederati" +
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
+      "1\006<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1010\"\205\001\n" +
+      "!ListFederatedUserAccountsResponse\022G\n\rus" +
+      "er_accounts\030\001 \003(\01320.yandex.cloud.organiz" +
+      "ationmanager.v1.UserAccount\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"\201\001\n\037ListFederationOperation" +
+      "sRequest\022\037\n\rfederation_id\030\001 \001(\tB\010\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage" +
+      "_token\030\003 \001(\tB\n\212\3101\006<=2000\"r\n ListFederati" +
+      "onOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\373\020\n\021FederationServi" +
+      "ce\022\276\001\n\003Get\022>.yandex.cloud.organizationma" +
+      "nager.v1.saml.GetFederationRequest\0324.yan" +
+      "dex.cloud.organizationmanager.v1.saml.Fe" +
+      "deration\"A\202\323\344\223\002;\0229/organization-manager/" +
+      "v1/saml/federations/{federation_id}\022\276\001\n\004" +
+      "List\022@.yandex.cloud.organizationmanager." +
+      "v1.saml.ListFederationsRequest\032A.yandex." +
+      "cloud.organizationmanager.v1.saml.ListFe" +
+      "derationsResponse\"1\202\323\344\223\002+\022)/organization" +
+      "-manager/v1/saml/federations\022\316\001\n\006Create\022" +
+      "A.yandex.cloud.organizationmanager.v1.sa" +
+      "ml.CreateFederationRequest\032!.yandex.clou" +
+      "d.operation.Operation\"^\202\323\344\223\002.\")/organiza" +
+      "tion-manager/v1/saml/federations:\001*\262\322*&\n" +
+      "\030CreateFederationMetadata\022\nFederation\022\336\001" +
+      "\n\006Update\022A.yandex.cloud.organizationmana" +
+      "ger.v1.saml.UpdateFederationRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"n\202\323\344\223\002>29" +
       "/organization-manager/v1/saml/federation" +
-      "s/{federation_id}/operationsB\201\001\n,yandex." +
-      "cloud.api.organizationmanager.v1.samlZQg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/organizationmanager/v1/saml;saml" +
-      "b\006proto3"
+      "s/{federation_id}:\001*\262\322*&\n\030UpdateFederati" +
+      "onMetadata\022\nFederation\022\346\001\n\006Delete\022A.yand" +
+      "ex.cloud.organizationmanager.v1.saml.Del" +
+      "eteFederationRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"v\202\323\344\223\002;*9/organization-m" +
+      "anager/v1/saml/federations/{federation_i" +
+      "d}\262\322*1\n\030DeleteFederationMetadata\022\025google" +
+      ".protobuf.Empty\022\236\002\n\017AddUserAccounts\022I.ya" +
+      "ndex.cloud.organizationmanager.v1.saml.A" +
+      "ddFederatedUserAccountsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\234\001\202\323\344\223\002N\"I/org" +
+      "anization-manager/v1/saml/federations/{f" +
+      "ederation_id}:addUserAccounts:\001*\262\322*D\n Ad" +
+      "dFederatedUserAccountsMetadata\022 AddFeder" +
+      "atedUserAccountsResponse\022\255\002\n\022DeleteUserA" +
+      "ccounts\022L.yandex.cloud.organizationmanag" +
+      "er.v1.saml.DeleteFederatedUserAccountsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\245\001\202\323\344\223\002Q\"L/organization-manager/v1/saml" +
+      "/federations/{federation_id}:deleteUserA" +
+      "ccounts:\001*\262\322*J\n#DeleteFederatedUserAccou" +
+      "ntsMetadata\022#DeleteFederatedUserAccounts" +
+      "Response\022\377\001\n\020ListUserAccounts\022J.yandex.c" +
+      "loud.organizationmanager.v1.saml.ListFed" +
+      "eratedUserAccountsRequest\032K.yandex.cloud" +
+      ".organizationmanager.v1.saml.ListFederat" +
+      "edUserAccountsResponse\"R\202\323\344\223\002L\022J/organiz" +
+      "ation-manager/v1/saml/federations/{feder" +
+      "ation_id}:listUserAccounts\022\365\001\n\016ListOpera" +
+      "tions\022I.yandex.cloud.organizationmanager" +
+      ".v1.saml.ListFederationOperationsRequest" +
+      "\032J.yandex.cloud.organizationmanager.v1.s" +
+      "aml.ListFederationOperationsResponse\"L\202\323" +
+      "\344\223\002F\022D/organization-manager/v1/saml/fede" +
+      "rations/{federation_id}/operationsB\201\001\n,y" +
+      "andex.cloud.api.organizationmanager.v1.s" +
+      "amlZQgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/organizationmanager/v1/sam" +
+      "l;samlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20481,9 +20481,9 @@ public final class FederationServiceOuterClass {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.getDescriptor(),
-          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.getDescriptor(),
+          yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_organizationmanager_v1_saml_GetFederationRequest_descriptor =
@@ -20628,9 +20628,9 @@ public final class FederationServiceOuterClass {
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.getDescriptor();
-    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.organizationmanager.v1.saml.FederationOuterClass.getDescriptor();
+    yandex.cloud.api.organizationmanager.v1.UserAccountOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

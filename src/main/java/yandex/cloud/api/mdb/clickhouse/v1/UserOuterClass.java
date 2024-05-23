@@ -163,7 +163,7 @@ public final class UserOuterClass {
   }
   /**
    * <pre>
-   * A ClickHouse User resource. For more information, see 
+   * A ClickHouse User resource. For more information, see
    * the [Developer's guide](/docs/managed-clickhouse/concepts).
    * </pre>
    *
@@ -743,7 +743,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * A ClickHouse User resource. For more information, see 
+     * A ClickHouse User resource. For more information, see
      * the [Developer's guide](/docs/managed-clickhouse/concepts).
      * </pre>
      *
@@ -8372,7 +8372,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -8382,7 +8382,7 @@ public final class UserOuterClass {
     boolean hasMaxFinalThreads();
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -8392,7 +8392,7 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMaxFinalThreads();
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -8680,7 +8680,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -8692,7 +8692,7 @@ public final class UserOuterClass {
     boolean hasMemoryOvercommitRatioDenominator();
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -8704,7 +8704,7 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominator();
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -8716,7 +8716,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -8728,7 +8728,7 @@ public final class UserOuterClass {
     boolean hasMemoryOvercommitRatioDenominatorForUser();
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -8740,7 +8740,7 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominatorForUser();
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -8752,7 +8752,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -8764,7 +8764,7 @@ public final class UserOuterClass {
     boolean hasMemoryUsageOvercommitMaxWaitMicroseconds();
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -8776,7 +8776,7 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getMemoryUsageOvercommitMaxWaitMicroseconds();
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -17233,7 +17233,7 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value maxFinalThreads_;
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -17246,7 +17246,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -17259,7 +17259,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
      * </pre>
      *
@@ -17645,7 +17645,7 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value memoryOvercommitRatioDenominator_;
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -17660,7 +17660,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -17675,7 +17675,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -17692,7 +17692,7 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value memoryOvercommitRatioDenominatorForUser_;
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -17707,7 +17707,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -17722,7 +17722,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
      * Default: 1GiB
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -17739,7 +17739,7 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value memoryUsageOvercommitMaxWaitMicroseconds_;
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -17754,7 +17754,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -17769,7 +17769,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
      * Default: 5000000
      * Min_version: 22.5
      * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -41440,7 +41440,7 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxFinalThreadsBuilder_;
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41452,7 +41452,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41468,7 +41468,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41489,7 +41489,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41508,7 +41508,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41531,7 +41531,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41550,7 +41550,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41563,7 +41563,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -41579,7 +41579,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
        * </pre>
        *
@@ -42987,7 +42987,7 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryOvercommitRatioDenominatorBuilder_;
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43001,7 +43001,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43019,7 +43019,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43042,7 +43042,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43063,7 +43063,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43088,7 +43088,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43109,7 +43109,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43124,7 +43124,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43142,7 +43142,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
@@ -43169,7 +43169,7 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryOvercommitRatioDenominatorForUserBuilder_;
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43183,7 +43183,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43201,7 +43201,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43224,7 +43224,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43245,7 +43245,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43270,7 +43270,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43291,7 +43291,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43306,7 +43306,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43324,7 +43324,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query.
        * Default: 1GiB
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
@@ -43351,7 +43351,7 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryUsageOvercommitMaxWaitMicrosecondsBuilder_;
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43365,7 +43365,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43383,7 +43383,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43406,7 +43406,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43427,7 +43427,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43452,7 +43452,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43473,7 +43473,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43488,7 +43488,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -43506,7 +43506,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown.
        * Default: 5000000
        * Min_version: 22.5
        * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
@@ -46041,7 +46041,7 @@ public final class UserOuterClass {
       "ckhouse.v1.Permission\022>\n\010settings\030\004 \001(\0132" +
       ",.yandex.cloud.mdb.clickhouse.v1.UserSet" +
       "tings\0229\n\006quotas\030\005 \003(\0132).yandex.cloud.mdb" +
-      ".clickhouse.v1.UserQuota\"\365]\n\014UserSetting" +
+      ".clickhouse.v1.UserQuota\"\373]\n\014UserSetting" +
       "s\0226\n\010readonly\030\001 \001(\0132\033.google.protobuf.In" +
       "t64ValueB\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.g" +
       "oogle.protobuf.BoolValue\022A\n\035allow_intros" +
@@ -46342,19 +46342,19 @@ public final class UserOuterClass {
       "EMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
       "\020\000\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ" +
       "\020\001\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THRE" +
-      "ADPOOL\020\002\"\356\002\n\tUserQuota\022B\n\021interval_durat" +
-      "ion\030\001 \001(\0132\033.google.protobuf.Int64ValueB\n" +
-      "\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
-      "9\n\013result_rows\030\004 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016e" +
-      "xecution_time\030\006 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud.api.md" +
-      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/clickhouse" +
-      "/v1;clickhouseb\006proto3"
+      "ADPOOL\020\002J\004\010R\020T\"\356\002\n\tUserQuota\022B\n\021interval" +
+      "_duration\030\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006error" +
+      "s\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022<\n\016execution_time\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud." +
+      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
+      "khouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

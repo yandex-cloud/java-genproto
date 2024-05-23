@@ -19038,11 +19038,11 @@ public final class ApigatewayService {
       "apigateway_service.proto\022%yandex.cloud.s" +
       "erverless.apigateway.v1\032\034google/api/anno" +
       "tations.proto\032 google/protobuf/field_mas" +
-      "k.proto\032 yandex/cloud/api/operation.prot" +
-      "o\032 yandex/cloud/access/access.proto\0326yan" +
+      "k.proto\032 yandex/cloud/access/access.prot" +
+      "o\032 yandex/cloud/api/operation.proto\032&yan" +
+      "dex/cloud/operation/operation.proto\0326yan" +
       "dex/cloud/serverless/apigateway/v1/apiga" +
-      "teway.proto\032&yandex/cloud/operation/oper" +
-      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "teway.proto\032\035yandex/cloud/validation.pro" +
       "to\"4\n\024GetApiGatewayRequest\022\034\n\016api_gatewa" +
       "y_id\030\001 \001(\tB\004\350\3071\001\"g\n\025ListApiGatewayReques" +
       "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030" +
@@ -19092,110 +19092,110 @@ public final class ApigatewayService {
       "\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.clo" +
       "ud.serverless.apigateway.v1.VariableInpu" +
       "t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027DeleteApiGatewayR" +
-      "equest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\"]\n\020" +
+      "equest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\"c\n\020" +
       "AddDomainRequest\022\034\n\016api_gateway_id\030\001 \001(\t" +
       "B\004\350\3071\001\022\023\n\013domain_name\030\003 \001(\t\022\026\n\016certifica" +
-      "te_id\030\004 \001(\t\"L\n\023RemoveDomainRequest\022\034\n\016ap" +
-      "i_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 " +
-      "\001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayMetadata\022\026\n" +
-      "\016api_gateway_id\030\001 \001(\t\"2\n\030UpdateApiGatewa" +
-      "yMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030Del" +
-      "eteApiGatewayMetadata\022\026\n\016api_gateway_id\030" +
-      "\001 \001(\t\"k\n\021AddDomainMetadata\022\026\n\016api_gatewa" +
-      "y_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\022\023\n\013domain_" +
-      "name\030\003 \001(\t\022\026\n\016certificate_id\030\004 \001(\t\"A\n\024Re" +
-      "moveDomainMetadata\022\026\n\016api_gateway_id\030\001 \001" +
-      "(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025ListOperations" +
-      "Request\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
-      "\006<=1000\"h\n\026ListOperationsResponse\0225\n\nope" +
-      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
-      "peration\022\027\n\017next_page_token\030\002 \001(\t\"\300\001\n\025Ge" +
-      "tOpenapiSpecRequest\022\034\n\016api_gateway_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.yandex.cloud" +
-      ".serverless.apigateway.v1.GetOpenapiSpec" +
-      "Request.Format\"4\n\006Format\022\026\n\022FORMAT_UNSPE" +
-      "CIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026GetOpena" +
-      "piSpecResponse\022\026\n\016api_gateway_id\030\001 \001(\t\022\024" +
-      "\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGatewayServi" +
-      "ce\022\253\001\n\003Get\022;.yandex.cloud.serverless.api" +
-      "gateway.v1.GetApiGatewayRequest\0321.yandex" +
-      ".cloud.serverless.apigateway.v1.ApiGatew" +
-      "ay\"4\202\323\344\223\002.\022,/apigateways/v1/apigateways/" +
-      "{api_gateway_id}\022\250\001\n\004List\022<.yandex.cloud" +
-      ".serverless.apigateway.v1.ListApiGateway" +
-      "Request\032=.yandex.cloud.serverless.apigat" +
-      "eway.v1.ListApiGatewayResponse\"#\202\323\344\223\002\035\022\033" +
-      "/apigateways/v1/apigateways\022\275\001\n\006Create\022>" +
-      ".yandex.cloud.serverless.apigateway.v1.C" +
-      "reateApiGatewayRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"P\202\323\344\223\002 \"\033/apigateways/" +
-      "v1/apigateways:\001*\262\322*&\n\030CreateApiGatewayM" +
-      "etadata\022\nApiGateway\022\316\001\n\006Update\022>.yandex." +
-      "cloud.serverless.apigateway.v1.UpdateApi" +
-      "GatewayRequest\032!.yandex.cloud.operation." +
-      "Operation\"a\202\323\344\223\00212,/apigateways/v1/apiga" +
-      "teways/{api_gateway_id}:\001*\262\322*&\n\030UpdateAp" +
-      "iGatewayMetadata\022\nApiGateway\022\326\001\n\006Delete\022" +
-      ">.yandex.cloud.serverless.apigateway.v1." +
-      "DeleteApiGatewayRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"i\202\323\344\223\002.*,/apigateways" +
-      "/v1/apigateways/{api_gateway_id}\262\322*1\n\030De" +
-      "leteApiGatewayMetadata\022\025google.protobuf." +
-      "Empty\022\330\001\n\tAddDomain\0227.yandex.cloud.serve" +
-      "rless.apigateway.v1.AddDomainRequest\032!.y" +
-      "andex.cloud.operation.Operation\"o\202\323\344\223\002;\"" +
-      "6/apigateways/v1/apigateways/{api_gatewa" +
-      "y_id}:addDomain:\001*\262\322**\n\021AddDomainMetadat" +
-      "a\022\025google.protobuf.Empty\022\344\001\n\014RemoveDomai" +
-      "n\022:.yandex.cloud.serverless.apigateway.v" +
-      "1.RemoveDomainRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"u\202\323\344\223\002>\"9/apigateways/v" +
-      "1/apigateways/{api_gateway_id}:removeDom" +
-      "ain:\001*\262\322*-\n\024RemoveDomainMetadata\022\025google" +
-      ".protobuf.Empty\022\310\001\n\016GetOpenapiSpec\022<.yan" +
-      "dex.cloud.serverless.apigateway.v1.GetOp" +
-      "enapiSpecRequest\032=.yandex.cloud.serverle" +
-      "ss.apigateway.v1.GetOpenapiSpecResponse\"" +
-      "9\202\323\344\223\0023\0221/apigateways/v1/apigateways/{ap" +
-      "i_gateway_id}:spec\022\316\001\n\016ListOperations\022<." +
-      "yandex.cloud.serverless.apigateway.v1.Li" +
-      "stOperationsRequest\032=.yandex.cloud.serve" +
-      "rless.apigateway.v1.ListOperationsRespon" +
-      "se\"?\202\323\344\223\0029\0227/apigateways/v1/apigateways/" +
-      "{api_gateway_id}/operations\022\273\001\n\022ListAcce" +
-      "ssBindings\022..yandex.cloud.access.ListAcc" +
-      "essBindingsRequest\032/.yandex.cloud.access" +
-      ".ListAccessBindingsResponse\"D\202\323\344\223\002>\022</ap" +
-      "igateways/v1/apigateways/{resource_id}:l" +
-      "istAccessBindings\022\353\001\n\021SetAccessBindings\022" +
-      "-.yandex.cloud.access.SetAccessBindingsR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\203\001\202\323\344\223\002@\";/apigateways/v1/apigateways/" +
-      "{resource_id}:setAccessBindings:\001*\262\322*9\n " +
-      "access.SetAccessBindingsMetadata\022\025google" +
-      ".protobuf.Empty\022\367\001\n\024UpdateAccessBindings" +
-      "\0220.yandex.cloud.access.UpdateAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\211\001\202\323\344\223\002C2>/apigateways/v1/apigatew" +
-      "ays/{resource_id}:updateAccessBindings:\001" +
-      "*\262\322*<\n#access.UpdateAccessBindingsMetada" +
-      "ta\022\025google.protobuf.EmptyB\201\001\n)yandex.clo" +
-      "ud.api.serverless.apigateway.v1ZTgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/apigateway/v1;apigatewayb\006p" +
-      "roto3"
+      "te_id\030\004 \001(\tJ\004\010\002\020\003\"L\n\023RemoveDomainRequest" +
+      "\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain" +
+      "_id\030\002 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayMetad" +
+      "ata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030UpdateApi" +
+      "GatewayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"" +
+      "2\n\030DeleteApiGatewayMetadata\022\026\n\016api_gatew" +
+      "ay_id\030\001 \001(\t\"k\n\021AddDomainMetadata\022\026\n\016api_" +
+      "gateway_id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\022\023\n\013d" +
+      "omain_name\030\003 \001(\t\022\026\n\016certificate_id\030\004 \001(\t" +
+      "\"A\n\024RemoveDomainMetadata\022\026\n\016api_gateway_" +
+      "id\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"\217\001\n\025ListOper" +
+      "ationsRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
+      "\tB\n\212\3101\006<=1000\"h\n\026ListOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\300\001\n\025GetOpenapiSpecRequest\022\034\n\016api_gateway" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022S\n\006format\030\002 \001(\0162C.yandex" +
+      ".cloud.serverless.apigateway.v1.GetOpena" +
+      "piSpecRequest.Format\"4\n\006Format\022\026\n\022FORMAT" +
+      "_UNSPECIFIED\020\000\022\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026Ge" +
+      "tOpenapiSpecResponse\022\026\n\016api_gateway_id\030\001" +
+      " \001(\t\022\024\n\014openapi_spec\030\002 \001(\t2\332\023\n\021ApiGatewa" +
+      "yService\022\253\001\n\003Get\022;.yandex.cloud.serverle" +
+      "ss.apigateway.v1.GetApiGatewayRequest\0321." +
+      "yandex.cloud.serverless.apigateway.v1.Ap" +
+      "iGateway\"4\202\323\344\223\002.\022,/apigateways/v1/apigat" +
+      "eways/{api_gateway_id}\022\250\001\n\004List\022<.yandex" +
+      ".cloud.serverless.apigateway.v1.ListApiG" +
+      "atewayRequest\032=.yandex.cloud.serverless." +
+      "apigateway.v1.ListApiGatewayResponse\"#\202\323" +
+      "\344\223\002\035\022\033/apigateways/v1/apigateways\022\275\001\n\006Cr" +
+      "eate\022>.yandex.cloud.serverless.apigatewa" +
+      "y.v1.CreateApiGatewayRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"P\202\323\344\223\002 \"\033/apigat" +
+      "eways/v1/apigateways:\001*\262\322*&\n\030CreateApiGa" +
+      "tewayMetadata\022\nApiGateway\022\316\001\n\006Update\022>.y" +
+      "andex.cloud.serverless.apigateway.v1.Upd" +
+      "ateApiGatewayRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"a\202\323\344\223\00212,/apigateways/v1" +
+      "/apigateways/{api_gateway_id}:\001*\262\322*&\n\030Up" +
+      "dateApiGatewayMetadata\022\nApiGateway\022\326\001\n\006D" +
+      "elete\022>.yandex.cloud.serverless.apigatew" +
+      "ay.v1.DeleteApiGatewayRequest\032!.yandex.c" +
+      "loud.operation.Operation\"i\202\323\344\223\002.*,/apiga" +
+      "teways/v1/apigateways/{api_gateway_id}\262\322" +
+      "*1\n\030DeleteApiGatewayMetadata\022\025google.pro" +
+      "tobuf.Empty\022\330\001\n\tAddDomain\0227.yandex.cloud" +
+      ".serverless.apigateway.v1.AddDomainReque" +
+      "st\032!.yandex.cloud.operation.Operation\"o\202" +
+      "\323\344\223\002;\"6/apigateways/v1/apigateways/{api_" +
+      "gateway_id}:addDomain:\001*\262\322**\n\021AddDomainM" +
+      "etadata\022\025google.protobuf.Empty\022\344\001\n\014Remov" +
+      "eDomain\022:.yandex.cloud.serverless.apigat" +
+      "eway.v1.RemoveDomainRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"u\202\323\344\223\002>\"9/apigate" +
+      "ways/v1/apigateways/{api_gateway_id}:rem" +
+      "oveDomain:\001*\262\322*-\n\024RemoveDomainMetadata\022\025" +
+      "google.protobuf.Empty\022\310\001\n\016GetOpenapiSpec" +
+      "\022<.yandex.cloud.serverless.apigateway.v1" +
+      ".GetOpenapiSpecRequest\032=.yandex.cloud.se" +
+      "rverless.apigateway.v1.GetOpenapiSpecRes" +
+      "ponse\"9\202\323\344\223\0023\0221/apigateways/v1/apigatewa" +
+      "ys/{api_gateway_id}:spec\022\316\001\n\016ListOperati" +
+      "ons\022<.yandex.cloud.serverless.apigateway" +
+      ".v1.ListOperationsRequest\032=.yandex.cloud" +
+      ".serverless.apigateway.v1.ListOperations" +
+      "Response\"?\202\323\344\223\0029\0227/apigateways/v1/apigat" +
+      "eways/{api_gateway_id}/operations\022\273\001\n\022Li" +
+      "stAccessBindings\022..yandex.cloud.access.L" +
+      "istAccessBindingsRequest\032/.yandex.cloud." +
+      "access.ListAccessBindingsResponse\"D\202\323\344\223\002" +
+      ">\022</apigateways/v1/apigateways/{resource" +
+      "_id}:listAccessBindings\022\353\001\n\021SetAccessBin" +
+      "dings\022-.yandex.cloud.access.SetAccessBin" +
+      "dingsRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\203\001\202\323\344\223\002@\";/apigateways/v1/apigat" +
+      "eways/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
+      "google.protobuf.Empty\022\367\001\n\024UpdateAccessBi" +
+      "ndings\0220.yandex.cloud.access.UpdateAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\211\001\202\323\344\223\002C2>/apigateways/v1/ap" +
+      "igateways/{resource_id}:updateAccessBind" +
+      "ings:\001*\262\322*<\n#access.UpdateAccessBindings" +
+      "Metadata\022\025google.protobuf.EmptyB\201\001\n)yand" +
+      "ex.cloud.api.serverless.apigateway.v1ZTg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/serverless/apigateway/v1;apigate" +
+      "wayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
-          yandex.cloud.api.serverless.apigateway.v1.Apigateway.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_serverless_apigateway_v1_GetApiGatewayRequest_descriptor =
@@ -19339,10 +19339,10 @@ public final class ApigatewayService {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
-    yandex.cloud.api.serverless.apigateway.v1.Apigateway.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

@@ -13401,96 +13401,96 @@ public final class CommunityServiceOuterClass {
       "ommunity_id\030\001 \001(\t\"4\n\026DeleteCommunityRequ" +
       "est\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\"/\n\027Delet" +
       "eCommunityMetadata\022\024\n\014community_id\030\001 \001(\t" +
-      "\"\255\001\n\026ListCommunitiesRequest\022\021\n\tpage_size" +
+      "\"\263\001\n\026ListCommunitiesRequest\022\021\n\tpage_size" +
       "\030\001 \001(\003\022\022\n\npage_token\030\002 \001(\t\022#\n\033name_or_de" +
       "scription_pattern\030\003 \001(\t\022\023\n\013owned_by_id\030\005" +
       " \001(\t\022\023\n\013list_public\030\006 \001(\010\022\035\n\017organizatio" +
-      "n_id\030\007 \001(\tB\004\350\3071\001\"n\n\027ListCommunitiesRespo" +
-      "nse\022:\n\013communities\030\001 \003(\0132%.yandex.cloud." +
-      "datasphere.v2.Community\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\":\n\"SetCommunityAccessBindingsMe" +
-      "tadata\022\024\n\014community_id\030\001 \001(\t\"=\n%UpdateCo" +
-      "mmunityAccessBindingsMetadata\022\024\n\014communi" +
-      "ty_id\030\001 \001(\t\"\243\001\n\033AddCommunityResourceRequ" +
-      "est\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "E\n\rresource_type\030\002 \001(\0162(.yandex.cloud.da" +
-      "tasphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013resour" +
-      "ce_id\030\003 \001(\tB\004\350\3071\001\"\246\001\n\036RemoveCommunityRes" +
-      "ourceRequest\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022E\n\rresource_type\030\002 \001(\0162(.yandex" +
-      ".cloud.datasphere.v2.ResourceTypeB\004\350\3071\001\022" +
-      "\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"=\n\037GetCommuni" +
-      "tyRestrictionsRequest\022\032\n\014community_id\030\001 " +
-      "\001(\tB\004\350\3071\001\"|\n\037SetCommunityRestrictionsReq" +
-      "uest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022=\n\014rest" +
-      "rictions\030\002 \003(\0132\'.yandex.cloud.datasphere" +
-      ".v2.Restriction2\346\023\n\020CommunityService\022\256\001\n" +
-      "\006Create\0222.yandex.cloud.datasphere.v2.Cre" +
-      "ateCommunityRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"M\202\323\344\223\002\037\"\032/datasphere/v2/c" +
-      "ommunities:\001*\262\322*$\n\027CreateCommunityMetada" +
-      "ta\022\tCommunity\022\220\001\n\003Get\022/.yandex.cloud.dat" +
-      "asphere.v2.GetCommunityRequest\032%.yandex." +
-      "cloud.datasphere.v2.Community\"1\202\323\344\223\002+\022)/" +
-      "datasphere/v2/communities/{community_id}" +
-      "\022\275\001\n\006Update\0222.yandex.cloud.datasphere.v2" +
-      ".UpdateCommunityRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\\\202\323\344\223\002.2)/datasphere/" +
-      "v2/communities/{community_id}:\001*\262\322*$\n\027Up" +
-      "dateCommunityMetadata\022\tCommunity\022\306\001\n\006Del" +
-      "ete\0222.yandex.cloud.datasphere.v2.DeleteC" +
-      "ommunityRequest\032!.yandex.cloud.operation" +
-      ".Operation\"e\202\323\344\223\002+*)/datasphere/v2/commu" +
-      "nities/{community_id}\262\322*0\n\027DeleteCommuni" +
-      "tyMetadata\022\025google.protobuf.Empty\022\223\001\n\004Li" +
-      "st\0222.yandex.cloud.datasphere.v2.ListComm" +
-      "unitiesRequest\0323.yandex.cloud.datasphere" +
-      ".v2.ListCommunitiesResponse\"\"\202\323\344\223\002\034\022\032/da" +
-      "tasphere/v2/communities\022\266\001\n\022ListAccessBi" +
-      "ndings\022..yandex.cloud.access.ListAccessB" +
-      "indingsRequest\032/.yandex.cloud.access.Lis" +
-      "tAccessBindingsResponse\"?\202\323\344\223\0029\0227/datasp" +
-      "here/v2/communities/{resource_id}:access" +
-      "Bindings\022\354\001\n\021SetAccessBindings\022-.yandex." +
-      "cloud.access.SetAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\204\001\202\323\344\223\002" +
-      "?\":/datasphere/v2/communities/{resource_" +
-      "id}:setAccessBindings:\001*\262\322*;\n\"SetCommuni" +
-      "tyAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\370\001\n\024UpdateAccessBindings\0220.yande" +
-      "x.cloud.access.UpdateAccessBindingsReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\212\001" +
-      "\202\323\344\223\002B2=/datasphere/v2/communities/{reso" +
-      "urce_id}:updateAccessBindings:\001*\262\322*>\n%Up" +
-      "dateCommunityAccessBindingsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\305\001\n\013AddResource\0227.yan" +
-      "dex.cloud.datasphere.v2.AddCommunityReso" +
-      "urceRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"Z\202\323\344\223\0029\"4/datasphere/v2/communiti" +
-      "es/{resource_id}:addResource:\001*\262\322*\027\022\025goo" +
-      "gle.protobuf.Empty\022\316\001\n\016RemoveResource\022:." +
-      "yandex.cloud.datasphere.v2.RemoveCommuni" +
+      "n_id\030\007 \001(\tB\004\350\3071\001J\004\010\004\020\005\"n\n\027ListCommunitie" +
+      "sResponse\022:\n\013communities\030\001 \003(\0132%.yandex." +
+      "cloud.datasphere.v2.Community\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\":\n\"SetCommunityAccessBind" +
+      "ingsMetadata\022\024\n\014community_id\030\001 \001(\t\"=\n%Up" +
+      "dateCommunityAccessBindingsMetadata\022\024\n\014c" +
+      "ommunity_id\030\001 \001(\t\"\243\001\n\033AddCommunityResour" +
+      "ceRequest\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022E\n\rresource_type\030\002 \001(\0162(.yandex.cl" +
+      "oud.datasphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013" +
+      "resource_id\030\003 \001(\tB\004\350\3071\001\"\246\001\n\036RemoveCommun" +
+      "ityResourceRequest\022\"\n\014community_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022E\n\rresource_type\030\002 \001(\0162(." +
+      "yandex.cloud.datasphere.v2.ResourceTypeB" +
+      "\004\350\3071\001\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"=\n\037GetC" +
+      "ommunityRestrictionsRequest\022\032\n\014community" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"|\n\037SetCommunityRestricti" +
+      "onsRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022=" +
+      "\n\014restrictions\030\002 \003(\0132\'.yandex.cloud.data" +
+      "sphere.v2.Restriction2\346\023\n\020CommunityServi" +
+      "ce\022\256\001\n\006Create\0222.yandex.cloud.datasphere." +
+      "v2.CreateCommunityRequest\032!.yandex.cloud" +
+      ".operation.Operation\"M\202\323\344\223\002\037\"\032/dataspher" +
+      "e/v2/communities:\001*\262\322*$\n\027CreateCommunity" +
+      "Metadata\022\tCommunity\022\220\001\n\003Get\022/.yandex.clo" +
+      "ud.datasphere.v2.GetCommunityRequest\032%.y" +
+      "andex.cloud.datasphere.v2.Community\"1\202\323\344" +
+      "\223\002+\022)/datasphere/v2/communities/{communi" +
+      "ty_id}\022\275\001\n\006Update\0222.yandex.cloud.datasph" +
+      "ere.v2.UpdateCommunityRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\\\202\323\344\223\002.2)/datas" +
+      "phere/v2/communities/{community_id}:\001*\262\322" +
+      "*$\n\027UpdateCommunityMetadata\022\tCommunity\022\306" +
+      "\001\n\006Delete\0222.yandex.cloud.datasphere.v2.D" +
+      "eleteCommunityRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"e\202\323\344\223\002+*)/datasphere/v2" +
+      "/communities/{community_id}\262\322*0\n\027DeleteC" +
+      "ommunityMetadata\022\025google.protobuf.Empty\022" +
+      "\223\001\n\004List\0222.yandex.cloud.datasphere.v2.Li" +
+      "stCommunitiesRequest\0323.yandex.cloud.data" +
+      "sphere.v2.ListCommunitiesResponse\"\"\202\323\344\223\002" +
+      "\034\022\032/datasphere/v2/communities\022\266\001\n\022ListAc" +
+      "cessBindings\022..yandex.cloud.access.ListA" +
+      "ccessBindingsRequest\032/.yandex.cloud.acce" +
+      "ss.ListAccessBindingsResponse\"?\202\323\344\223\0029\0227/" +
+      "datasphere/v2/communities/{resource_id}:" +
+      "accessBindings\022\354\001\n\021SetAccessBindings\022-.y" +
+      "andex.cloud.access.SetAccessBindingsRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\204" +
+      "\001\202\323\344\223\002?\":/datasphere/v2/communities/{res" +
+      "ource_id}:setAccessBindings:\001*\262\322*;\n\"SetC" +
+      "ommunityAccessBindingsMetadata\022\025google.p" +
+      "rotobuf.Empty\022\370\001\n\024UpdateAccessBindings\0220" +
+      ".yandex.cloud.access.UpdateAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\212\001\202\323\344\223\002B2=/datasphere/v2/communities" +
+      "/{resource_id}:updateAccessBindings:\001*\262\322" +
+      "*>\n%UpdateCommunityAccessBindingsMetadat" +
+      "a\022\025google.protobuf.Empty\022\305\001\n\013AddResource" +
+      "\0227.yandex.cloud.datasphere.v2.AddCommuni" +
       "tyResourceRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"]\202\323\344\223\002<\"7/datasphere/v2/com" +
-      "munities/{resource_id}:removeResource:\001*" +
-      "\262\322*\027\022\025google.protobuf.Empty\022\233\001\n\023GetRestr" +
-      "ictionsMeta\022\026.google.protobuf.Empty\0327.ya" +
-      "ndex.cloud.datasphere.v2.GetRestrictions" +
-      "MetaResponse\"3\202\323\344\223\002-\022+/datasphere/v2/com" +
-      "munities/restrictionsMeta\022\300\001\n\017GetRestric" +
-      "tions\022;.yandex.cloud.datasphere.v2.GetCo" +
-      "mmunityRestrictionsRequest\0320.yandex.clou" +
-      "d.datasphere.v2.RestrictionsResponse\">\202\323" +
-      "\344\223\0028\0226/datasphere/v2/communities/{commun" +
-      "ity_id}:restrictions\022\321\001\n\017SetRestrictions" +
-      "\022;.yandex.cloud.datasphere.v2.SetCommuni" +
-      "tyRestrictionsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"^\202\323\344\223\002>\"9/datasphere/v2" +
-      "/communities/{community_id}:setRestricti" +
-      "ons:\001*\262\322*\026\022\024RestrictionsResponseBk\n\036yand" +
-      "ex.cloud.api.datasphere.v2ZIgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/dat" +
-      "asphere/v2;datasphereb\006proto3"
+      "on.Operation\"Z\202\323\344\223\0029\"4/datasphere/v2/com" +
+      "munities/{resource_id}:addResource:\001*\262\322*" +
+      "\027\022\025google.protobuf.Empty\022\316\001\n\016RemoveResou" +
+      "rce\022:.yandex.cloud.datasphere.v2.RemoveC" +
+      "ommunityResourceRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"]\202\323\344\223\002<\"7/datasphere/" +
+      "v2/communities/{resource_id}:removeResou" +
+      "rce:\001*\262\322*\027\022\025google.protobuf.Empty\022\233\001\n\023Ge" +
+      "tRestrictionsMeta\022\026.google.protobuf.Empt" +
+      "y\0327.yandex.cloud.datasphere.v2.GetRestri" +
+      "ctionsMetaResponse\"3\202\323\344\223\002-\022+/datasphere/" +
+      "v2/communities/restrictionsMeta\022\300\001\n\017GetR" +
+      "estrictions\022;.yandex.cloud.datasphere.v2" +
+      ".GetCommunityRestrictionsRequest\0320.yande" +
+      "x.cloud.datasphere.v2.RestrictionsRespon" +
+      "se\">\202\323\344\223\0028\0226/datasphere/v2/communities/{" +
+      "community_id}:restrictions\022\321\001\n\017SetRestri" +
+      "ctions\022;.yandex.cloud.datasphere.v2.SetC" +
+      "ommunityRestrictionsRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"^\202\323\344\223\002>\"9/datasph" +
+      "ere/v2/communities/{community_id}:setRes" +
+      "trictions:\001*\262\322*\026\022\024RestrictionsResponseBk" +
+      "\n\036yandex.cloud.api.datasphere.v2ZIgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/datasphere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

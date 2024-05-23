@@ -12113,7 +12113,7 @@ public final class BackupServiceOuterClass {
       OVERWRITE_OLDER(2),
       /**
        * <pre>
-       * None does not overwrites files at all. 
+       * None does not overwrites files at all.
        * </pre>
        *
        * <code>OVERWRITE_NONE = 3;</code>
@@ -12148,7 +12148,7 @@ public final class BackupServiceOuterClass {
       public static final int OVERWRITE_OLDER_VALUE = 2;
       /**
        * <pre>
-       * None does not overwrites files at all. 
+       * None does not overwrites files at all.
        * </pre>
        *
        * <code>OVERWRITE_NONE = 3;</code>
@@ -17345,7 +17345,7 @@ public final class BackupServiceOuterClass {
       "ge\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001(\t\022\037\n\027dst_c" +
       "ompute_instance_id\030\003 \001(\t\"\024\n\022TargetPathOr" +
       "iginal\" \n\020TargetPathCustom\022\014\n\004path\030\001 \001(\t" +
-      "\"\365\002\n\024FilesRecoveryOptions\022O\n\toverwrite\030\001" +
+      "\"\373\002\n\024FilesRecoveryOptions\022O\n\toverwrite\030\001" +
       " \001(\01626.yandex.cloud.backup.v1.FilesRecov" +
       "eryOptions.OverwriteB\004\350\3071\000\022\036\n\020reboot_if_" +
       "needed\030\002 \001(\010B\004\350\3071\000\022>\n\010original\030d \001(\0132*.y" +
@@ -17354,51 +17354,51 @@ public final class BackupServiceOuterClass {
       ".v1.TargetPathCustomH\000\"b\n\tOverwrite\022\031\n\025O" +
       "VERWRITE_UNSPECIFIED\020\000\022\021\n\rOVERWRITE_ALL\020" +
       "\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVERWRITE_NONE" +
-      "\020\003B\014\n\004type\022\004\300\3011\001\"\265\001\n\031StartFilesRecoveryR" +
-      "equest\022!\n\023compute_instance_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022@\n\004opts\030\003 \001(\013" +
-      "2,.yandex.cloud.backup.v1.FilesRecoveryO" +
-      "ptionsB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>0" +
-      "\"\221\001\n\032StartFilesRecoveryMetadata\022\033\n\023progr" +
-      "ess_percentage\030\001 \001(\001\022!\n\023compute_instance" +
-      "_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\003 \001(\tB\004\350\3071\001" +
-      "\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>0\"Y\n\023DeleteBa" +
-      "ckupRequest\022)\n\023compute_instance_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\"" +
-      "F\n\024DeleteBackupMetadata\022\033\n\023compute_insta" +
-      "nce_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\373\010\n\rBack" +
-      "upService\022{\n\004List\022*.yandex.cloud.backup." +
-      "v1.ListBackupsRequest\032+.yandex.cloud.bac" +
-      "kup.v1.ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/bac" +
-      "kup/v1/backups\022\244\001\n\014ListArchives\022+.yandex" +
-      ".cloud.backup.v1.ListArchivesRequest\032,.y" +
-      "andex.cloud.backup.v1.ListArchivesRespon" +
-      "se\"9\202\323\344\223\0023\0221/backup/v1/backups/{compute_" +
-      "instance_id}/archives\022\216\001\n\tListFiles\022(.ya" +
-      "ndex.cloud.backup.v1.ListFilesRequest\032)." +
-      "yandex.cloud.backup.v1.ListFilesResponse" +
-      "\",\202\323\344\223\002&\022$/backup/v1/backups/{backup_id}" +
-      "/files\022w\n\003Get\022(.yandex.cloud.backup.v1.G" +
-      "etBackupRequest\032\036.yandex.cloud.backup.v1" +
-      ".Backup\"&\202\323\344\223\002 \022\036/backup/v1/backups/{bac" +
-      "kup_id}\022\313\001\n\rStartRecovery\022,.yandex.cloud" +
-      ".backup.v1.StartRecoveryRequest\032!.yandex" +
-      ".cloud.operation.Operation\"i\202\323\344\223\0021\",/bac" +
-      "kup/v1/backups/{backup_id}:startRecovery" +
-      ":\001*\262\322*.\n\025StartRecoveryMetadata\022\025google.p" +
-      "rotobuf.Empty\022\243\001\n\022StartFilesRecovery\0221.y" +
-      "andex.cloud.backup.v1.StartFilesRecovery" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"7\262\322*3\n\032StartFilesRecoveryMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\307\001\n\006Delete\022+.yandex." +
-      "cloud.backup.v1.DeleteBackupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"m\202\323\344\223\0026*4" +
-      "/backup/v1/backups/{compute_instance_id}" +
-      "/{backup_id}\262\322*-\n\024DeleteBackupMetadata\022\025" +
-      "google.protobuf.EmptyB_\n\032yandex.cloud.ap" +
-      "i.backup.v1ZAgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/backup/v1;backupb\006" +
-      "proto3"
+      "\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031StartFilesRec" +
+      "overyRequest\022!\n\023compute_instance_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022@\n\004opts" +
+      "\030\003 \001(\0132,.yandex.cloud.backup.v1.FilesRec" +
+      "overyOptionsB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006" +
+      "\202\3101\002>0\"\221\001\n\032StartFilesRecoveryMetadata\022\033\n" +
+      "\023progress_percentage\030\001 \001(\001\022!\n\023compute_in" +
+      "stance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\003 \001(\t" +
+      "B\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202\3101\002>0\"Y\n\023De" +
+      "leteBackupRequest\022)\n\023compute_instance_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB" +
+      "\004\350\3071\001\"F\n\024DeleteBackupMetadata\022\033\n\023compute" +
+      "_instance_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\373\010" +
+      "\n\rBackupService\022{\n\004List\022*.yandex.cloud.b" +
+      "ackup.v1.ListBackupsRequest\032+.yandex.clo" +
+      "ud.backup.v1.ListBackupsResponse\"\032\202\323\344\223\002\024" +
+      "\022\022/backup/v1/backups\022\244\001\n\014ListArchives\022+." +
+      "yandex.cloud.backup.v1.ListArchivesReque" +
+      "st\032,.yandex.cloud.backup.v1.ListArchives" +
+      "Response\"9\202\323\344\223\0023\0221/backup/v1/backups/{co" +
+      "mpute_instance_id}/archives\022\216\001\n\tListFile" +
+      "s\022(.yandex.cloud.backup.v1.ListFilesRequ" +
+      "est\032).yandex.cloud.backup.v1.ListFilesRe" +
+      "sponse\",\202\323\344\223\002&\022$/backup/v1/backups/{back" +
+      "up_id}/files\022w\n\003Get\022(.yandex.cloud.backu" +
+      "p.v1.GetBackupRequest\032\036.yandex.cloud.bac" +
+      "kup.v1.Backup\"&\202\323\344\223\002 \022\036/backup/v1/backup" +
+      "s/{backup_id}\022\313\001\n\rStartRecovery\022,.yandex" +
+      ".cloud.backup.v1.StartRecoveryRequest\032!." +
+      "yandex.cloud.operation.Operation\"i\202\323\344\223\0021" +
+      "\",/backup/v1/backups/{backup_id}:startRe" +
+      "covery:\001*\262\322*.\n\025StartRecoveryMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\243\001\n\022StartFilesRecove" +
+      "ry\0221.yandex.cloud.backup.v1.StartFilesRe" +
+      "coveryRequest\032!.yandex.cloud.operation.O" +
+      "peration\"7\262\322*3\n\032StartFilesRecoveryMetada" +
+      "ta\022\025google.protobuf.Empty\022\307\001\n\006Delete\022+.y" +
+      "andex.cloud.backup.v1.DeleteBackupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"m\202\323" +
+      "\344\223\0026*4/backup/v1/backups/{compute_instan" +
+      "ce_id}/{backup_id}\262\322*-\n\024DeleteBackupMeta" +
+      "data\022\025google.protobuf.EmptyB_\n\032yandex.cl" +
+      "oud.api.backup.v1ZAgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/backup/v1;ba" +
+      "ckupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -22879,7 +22879,7 @@ public final class ConnectorOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/mdb/kafka/v1/connector.pr" +
       "oto\022\031yandex.cloud.mdb.kafka.v1\032\036google/p" +
-      "rotobuf/wrappers.proto\"\237\003\n\rConnectorSpec" +
+      "rotobuf/wrappers.proto\"\245\003\n\rConnectorSpec" +
       "\022\014\n\004name\030\001 \001(\t\022.\n\ttasks_max\030\002 \001(\0132\033.goog" +
       "le.protobuf.Int64Value\022L\n\nproperties\030\003 \003" +
       "(\01328.yandex.cloud.mdb.kafka.v1.Connector" +
@@ -22890,93 +22890,94 @@ public final class ConnectorOuterClass {
       "ex.cloud.mdb.kafka.v1.ConnectorConfigS3S" +
       "inkSpecH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(" +
       "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020connector_config" +
-      "\"\243\003\n\023UpdateConnectorSpec\022.\n\ttasks_max\030\001 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022R\n\nprop" +
-      "erties\030\002 \003(\0132>.yandex.cloud.mdb.kafka.v1" +
-      ".UpdateConnectorSpec.PropertiesEntry\022a\n\034" +
-      "connector_config_mirrormaker\030\n \001(\01329.yan" +
-      "dex.cloud.mdb.kafka.v1.ConnectorConfigMi" +
-      "rrorMakerSpecH\000\022^\n\030connector_config_s3_s" +
-      "ink\030\013 \001(\0132:.yandex.cloud.mdb.kafka.v1.Up" +
-      "dateConnectorConfigS3SinkSpecH\000\0321\n\017Prope" +
-      "rtiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001B\022\n\020connector_config\"\375\001\n\036ConnectorConf" +
-      "igMirrorMakerSpec\022H\n\016source_cluster\030\001 \001(" +
-      "\01320.yandex.cloud.mdb.kafka.v1.ClusterCon" +
-      "nectionSpec\022H\n\016target_cluster\030\002 \001(\01320.ya" +
-      "ndex.cloud.mdb.kafka.v1.ClusterConnectio" +
-      "nSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022replication_fac" +
-      "tor\030\004 \001(\0132\033.google.protobuf.Int64Value\"\326" +
-      "\001\n\025ClusterConnectionSpec\022\r\n\005alias\030\001 \001(\t\022" +
-      "B\n\014this_cluster\030\002 \001(\0132*.yandex.cloud.mdb" +
-      ".kafka.v1.ThisClusterSpecH\000\022T\n\020external_" +
-      "cluster\030\003 \001(\01328.yandex.cloud.mdb.kafka.v" +
-      "1.ExternalClusterConnectionSpecH\000B\024\n\022clu" +
-      "ster_connection\"\021\n\017ThisClusterSpec\"\300\001\n\035E" +
-      "xternalClusterConnectionSpec\022\031\n\021bootstra" +
-      "p_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 \001(\t\022\025" +
-      "\n\rsasl_password\030\003 \001(\t\022\026\n\016sasl_mechanism\030" +
-      "\004 \001(\t\022\031\n\021security_protocol\030\005 \001(\t\022#\n\033ssl_" +
-      "truststore_certificates\030\006 \001(\t\"\305\001\n\031Connec" +
-      "torConfigS3SinkSpec\022\016\n\006topics\030\001 \001(\t\022\035\n\025f" +
-      "ile_compression_type\030\002 \001(\t\0225\n\020file_max_r" +
-      "ecords\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022B\n\rs3_connection\030\004 \001(\0132+.yandex.cloud." +
-      "mdb.kafka.v1.S3ConnectionSpec\"\254\001\n\037Update" +
-      "ConnectorConfigS3SinkSpec\022\016\n\006topics\030\001 \001(" +
-      "\t\0225\n\020file_max_records\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022B\n\rs3_connection\030\003 \001(\0132" +
-      "+.yandex.cloud.mdb.kafka.v1.S3Connection" +
-      "Spec\"{\n\020S3ConnectionSpec\022\023\n\013bucket_name\030" +
-      "\001 \001(\t\022G\n\013external_s3\030\002 \001(\01320.yandex.clou" +
-      "d.mdb.kafka.v1.ExternalS3StorageSpecH\000B\t" +
-      "\n\007storage\"k\n\025ExternalS3StorageSpec\022\025\n\rac" +
-      "cess_key_id\030\001 \001(\t\022\031\n\021secret_access_key\030\002" +
-      " \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006region\030\004 \001(\t\"\222" +
-      "\005\n\tConnector\022\014\n\004name\030\001 \001(\t\022.\n\ttasks_max\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64Value\022H\n\npr" +
-      "operties\030\003 \003(\01324.yandex.cloud.mdb.kafka." +
-      "v1.Connector.PropertiesEntry\022;\n\006health\030\004" +
-      " \001(\0162+.yandex.cloud.mdb.kafka.v1.Connect" +
-      "or.Health\022;\n\006status\030\005 \001(\0162+.yandex.cloud" +
-      ".mdb.kafka.v1.Connector.Status\022\022\n\ncluste" +
-      "r_id\030\006 \001(\t\022]\n\034connector_config_mirrormak" +
-      "er\030\n \001(\01325.yandex.cloud.mdb.kafka.v1.Con" +
-      "nectorConfigMirrorMakerH\000\022T\n\030connector_c" +
-      "onfig_s3_sink\030\013 \001(\01320.yandex.cloud.mdb.k" +
-      "afka.v1.ConnectorConfigS3SinkH\000\0321\n\017Prope" +
-      "rtiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016STATUS_UNKNOW" +
-      "N\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022\n\n\006PAUSED\020\003B" +
-      "\022\n\020connector_config\"\361\001\n\032ConnectorConfigM" +
-      "irrorMaker\022D\n\016source_cluster\030\001 \001(\0132,.yan" +
-      "dex.cloud.mdb.kafka.v1.ClusterConnection" +
-      "\022D\n\016target_cluster\030\002 \001(\0132,.yandex.cloud." +
-      "mdb.kafka.v1.ClusterConnection\022\016\n\006topics" +
-      "\030\003 \001(\t\0227\n\022replication_factor\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\312\001\n\021ClusterConne" +
-      "ction\022\r\n\005alias\030\001 \001(\t\022>\n\014this_cluster\030\002 \001" +
-      "(\0132&.yandex.cloud.mdb.kafka.v1.ThisClust" +
-      "erH\000\022P\n\020external_cluster\030\003 \001(\01324.yandex." +
-      "cloud.mdb.kafka.v1.ExternalClusterConnec" +
-      "tionH\000B\024\n\022cluster_connection\"\r\n\013ThisClus" +
-      "ter\"\200\001\n\031ExternalClusterConnection\022\031\n\021boo" +
-      "tstrap_servers\030\001 \001(\t\022\025\n\rsasl_username\030\002 " +
-      "\001(\t\022\026\n\016sasl_mechanism\030\004 \001(\t\022\031\n\021security_" +
-      "protocol\030\005 \001(\t\"\275\001\n\025ConnectorConfigS3Sink" +
-      "\022\016\n\006topics\030\001 \001(\t\022\035\n\025file_compression_typ" +
-      "e\030\002 \001(\t\0225\n\020file_max_records\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022>\n\rs3_connection\030" +
-      "\004 \001(\0132\'.yandex.cloud.mdb.kafka.v1.S3Conn" +
-      "ection\"s\n\014S3Connection\022\023\n\013bucket_name\030\001 " +
-      "\001(\t\022C\n\013external_s3\030\002 \001(\0132,.yandex.cloud." +
-      "mdb.kafka.v1.ExternalS3StorageH\000B\t\n\007stor" +
-      "age\"L\n\021ExternalS3Storage\022\025\n\raccess_key_i" +
-      "d\030\001 \001(\t\022\020\n\010endpoint\030\002 \001(\t\022\016\n\006region\030\003 \001(" +
-      "\tBd\n\035yandex.cloud.api.mdb.kafka.v1ZCgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/kafka/v1;kafkab\006proto3"
+      "J\004\010\004\020\n\"\251\003\n\023UpdateConnectorSpec\022.\n\ttasks_" +
+      "max\030\001 \001(\0132\033.google.protobuf.Int64Value\022R" +
+      "\n\nproperties\030\002 \003(\0132>.yandex.cloud.mdb.ka" +
+      "fka.v1.UpdateConnectorSpec.PropertiesEnt" +
+      "ry\022a\n\034connector_config_mirrormaker\030\n \001(\013" +
+      "29.yandex.cloud.mdb.kafka.v1.ConnectorCo" +
+      "nfigMirrorMakerSpecH\000\022^\n\030connector_confi" +
+      "g_s3_sink\030\013 \001(\0132:.yandex.cloud.mdb.kafka" +
+      ".v1.UpdateConnectorConfigS3SinkSpecH\000\0321\n" +
+      "\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001B\022\n\020connector_configJ\004\010\003\020\n\"\375\001\n\036C" +
+      "onnectorConfigMirrorMakerSpec\022H\n\016source_" +
+      "cluster\030\001 \001(\01320.yandex.cloud.mdb.kafka.v" +
+      "1.ClusterConnectionSpec\022H\n\016target_cluste" +
+      "r\030\002 \001(\01320.yandex.cloud.mdb.kafka.v1.Clus" +
+      "terConnectionSpec\022\016\n\006topics\030\003 \001(\t\0227\n\022rep" +
+      "lication_factor\030\004 \001(\0132\033.google.protobuf." +
+      "Int64Value\"\326\001\n\025ClusterConnectionSpec\022\r\n\005" +
+      "alias\030\001 \001(\t\022B\n\014this_cluster\030\002 \001(\0132*.yand" +
+      "ex.cloud.mdb.kafka.v1.ThisClusterSpecH\000\022" +
+      "T\n\020external_cluster\030\003 \001(\01328.yandex.cloud" +
+      ".mdb.kafka.v1.ExternalClusterConnectionS" +
+      "pecH\000B\024\n\022cluster_connection\"\021\n\017ThisClust" +
+      "erSpec\"\300\001\n\035ExternalClusterConnectionSpec" +
+      "\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025\n\rsasl_user" +
+      "name\030\002 \001(\t\022\025\n\rsasl_password\030\003 \001(\t\022\026\n\016sas" +
+      "l_mechanism\030\004 \001(\t\022\031\n\021security_protocol\030\005" +
+      " \001(\t\022#\n\033ssl_truststore_certificates\030\006 \001(" +
+      "\t\"\305\001\n\031ConnectorConfigS3SinkSpec\022\016\n\006topic" +
+      "s\030\001 \001(\t\022\035\n\025file_compression_type\030\002 \001(\t\0225" +
+      "\n\020file_max_records\030\003 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022B\n\rs3_connection\030\004 \001(\0132+.y" +
+      "andex.cloud.mdb.kafka.v1.S3ConnectionSpe" +
+      "c\"\254\001\n\037UpdateConnectorConfigS3SinkSpec\022\016\n" +
+      "\006topics\030\001 \001(\t\0225\n\020file_max_records\030\002 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022B\n\rs3_conne" +
+      "ction\030\003 \001(\0132+.yandex.cloud.mdb.kafka.v1." +
+      "S3ConnectionSpec\"{\n\020S3ConnectionSpec\022\023\n\013" +
+      "bucket_name\030\001 \001(\t\022G\n\013external_s3\030\002 \001(\01320" +
+      ".yandex.cloud.mdb.kafka.v1.ExternalS3Sto" +
+      "rageSpecH\000B\t\n\007storage\"k\n\025ExternalS3Stora" +
+      "geSpec\022\025\n\raccess_key_id\030\001 \001(\t\022\031\n\021secret_" +
+      "access_key\030\002 \001(\t\022\020\n\010endpoint\030\003 \001(\t\022\016\n\006re" +
+      "gion\030\004 \001(\t\"\230\005\n\tConnector\022\014\n\004name\030\001 \001(\t\022." +
+      "\n\ttasks_max\030\002 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022H\n\nproperties\030\003 \003(\01324.yandex.clou" +
+      "d.mdb.kafka.v1.Connector.PropertiesEntry" +
+      "\022;\n\006health\030\004 \001(\0162+.yandex.cloud.mdb.kafk" +
+      "a.v1.Connector.Health\022;\n\006status\030\005 \001(\0162+." +
+      "yandex.cloud.mdb.kafka.v1.Connector.Stat" +
+      "us\022\022\n\ncluster_id\030\006 \001(\t\022]\n\034connector_conf" +
+      "ig_mirrormaker\030\n \001(\01325.yandex.cloud.mdb." +
+      "kafka.v1.ConnectorConfigMirrorMakerH\000\022T\n" +
+      "\030connector_config_s3_sink\030\013 \001(\01320.yandex" +
+      ".cloud.mdb.kafka.v1.ConnectorConfigS3Sin" +
+      "kH\000\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"@\n\006Status\022\022\n\016S" +
+      "TATUS_UNKNOWN\020\000\022\013\n\007RUNNING\020\001\022\t\n\005ERROR\020\002\022" +
+      "\n\n\006PAUSED\020\003B\022\n\020connector_configJ\004\010\007\020\n\"\361\001" +
+      "\n\032ConnectorConfigMirrorMaker\022D\n\016source_c" +
+      "luster\030\001 \001(\0132,.yandex.cloud.mdb.kafka.v1" +
+      ".ClusterConnection\022D\n\016target_cluster\030\002 \001" +
+      "(\0132,.yandex.cloud.mdb.kafka.v1.ClusterCo" +
+      "nnection\022\016\n\006topics\030\003 \001(\t\0227\n\022replication_" +
+      "factor\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\"\312\001\n\021ClusterConnection\022\r\n\005alias\030\001 \001(\t\022>" +
+      "\n\014this_cluster\030\002 \001(\0132&.yandex.cloud.mdb." +
+      "kafka.v1.ThisClusterH\000\022P\n\020external_clust" +
+      "er\030\003 \001(\01324.yandex.cloud.mdb.kafka.v1.Ext" +
+      "ernalClusterConnectionH\000B\024\n\022cluster_conn" +
+      "ection\"\r\n\013ThisCluster\"\206\001\n\031ExternalCluste" +
+      "rConnection\022\031\n\021bootstrap_servers\030\001 \001(\t\022\025" +
+      "\n\rsasl_username\030\002 \001(\t\022\026\n\016sasl_mechanism\030" +
+      "\004 \001(\t\022\031\n\021security_protocol\030\005 \001(\tJ\004\010\003\020\004\"\275" +
+      "\001\n\025ConnectorConfigS3Sink\022\016\n\006topics\030\001 \001(\t" +
+      "\022\035\n\025file_compression_type\030\002 \001(\t\0225\n\020file_" +
+      "max_records\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022>\n\rs3_connection\030\004 \001(\0132\'.yandex.c" +
+      "loud.mdb.kafka.v1.S3Connection\"s\n\014S3Conn" +
+      "ection\022\023\n\013bucket_name\030\001 \001(\t\022C\n\013external_" +
+      "s3\030\002 \001(\0132,.yandex.cloud.mdb.kafka.v1.Ext" +
+      "ernalS3StorageH\000B\t\n\007storage\"L\n\021ExternalS" +
+      "3Storage\022\025\n\raccess_key_id\030\001 \001(\t\022\020\n\010endpo" +
+      "int\030\002 \001(\t\022\016\n\006region\030\003 \001(\tBd\n\035yandex.clou" +
+      "d.api.mdb.kafka.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/kafka/v" +
+      "1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

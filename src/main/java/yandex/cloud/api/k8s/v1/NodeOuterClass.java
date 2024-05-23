@@ -771,7 +771,7 @@ public final class NodeOuterClass {
     }
     /**
      * <pre>
-     * Kubernetes node info 
+     * Kubernetes node info
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.k8s.v1.Node.KubernetesStatus}
@@ -1323,7 +1323,7 @@ public final class NodeOuterClass {
       }
       /**
        * <pre>
-       * Kubernetes node info 
+       * Kubernetes node info
        * </pre>
        *
        * Protobuf type {@code yandex.cloud.k8s.v1.Node.KubernetesStatus}
@@ -23157,7 +23157,7 @@ public final class NodeOuterClass {
       "ect\"Y\n\006Effect\022\026\n\022EFFECT_UNSPECIFIED\020\000\022\017\n" +
       "\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO_SCHEDULE\020\002\022\016" +
       "\n\nNO_EXECUTE\020\003\"<\n\016AttachedVolume\022\023\n\013driv" +
-      "er_name\030\001 \001(\t\022\025\n\rvolume_handle\030\002 \001(\t\"\323\013\n" +
+      "er_name\030\001 \001(\t\022\025\n\rvolume_handle\030\002 \001(\t\"\345\013\n" +
       "\014NodeTemplate\022\027\n\004name\030\r \001(\tB\t\212\3101\005<=128\022t" +
       "\n\006labels\030\017 \003(\0132-.yandex.cloud.k8s.v1.Nod" +
       "eTemplate.LabelsEntryB5\202\3101\004<=32\212\3101\005<=128" +
@@ -23195,38 +23195,38 @@ public final class NodeOuterClass {
       "rRuntimeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020T" +
       "YPE_UNSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAIN" +
       "ERD\020\002\032+\n\030ContainerNetworkSettings\022\017\n\007pod" +
-      "_mtu\030\001 \001(\003\"\303\001\n\013GpuSettings\022\026\n\016gpu_cluste" +
-      "r_id\030\001 \001(\t\022H\n\017gpu_environment\030\002 \001(\0162/.ya" +
-      "ndex.cloud.k8s.v1.GpuSettings.GpuEnviron" +
-      "ment\"R\n\016GpuEnvironment\022\037\n\033GPU_ENVIRONMEN" +
-      "T_UNSPECIFIED\020\000\022\025\n\021RUNC_DRIVERS_CUDA\020\001\022\010" +
-      "\n\004RUNC\020\002\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsub" +
-      "net_ids\030\002 \003(\t\022E\n\027primary_v4_address_spec" +
-      "\030\003 \001(\0132$.yandex.cloud.k8s.v1.NodeAddress" +
-      "Spec\022E\n\027primary_v6_address_spec\030\004 \001(\0132$." +
-      "yandex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022s" +
-      "ecurity_group_ids\030\005 \003(\t\"\222\001\n\017NodeAddressS" +
-      "pec\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yande" +
-      "x.cloud.k8s.v1.OneToOneNatSpec\022<\n\020dns_re" +
-      "cord_specs\030\002 \003(\0132\".yandex.cloud.k8s.v1.D" +
-      "nsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 " +
-      "\001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 " +
-      "\001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToOn" +
-      "eNatSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.cl" +
-      "oud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n" +
-      "\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372" +
-      "\3071\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
-      "\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\222\001\n\010DiskSpec\022^\n\014" +
-      "disk_type_id\030\001 \001(\tBH\362\3071D|network-ssd|net" +
-      "work-hdd|network-ssd-nonreplicated|netwo" +
-      "rk-ssd-io-m3\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-4" +
-      "398046511104\"\'\n\020SchedulingPolicy\022\023\n\013pree" +
-      "mptible\030\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022plac" +
-      "ement_group_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_" +
-      "VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020" +
-      "\002BV\n\027yandex.cloud.api.k8s.v1Z;github.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/k" +
-      "8s/v1;k8sb\006proto3"
+      "_mtu\030\001 \001(\003J\004\010\016\020\017J\004\010\021\020\022J\004\010\010\020\n\"\303\001\n\013GpuSett" +
+      "ings\022\026\n\016gpu_cluster_id\030\001 \001(\t\022H\n\017gpu_envi" +
+      "ronment\030\002 \001(\0162/.yandex.cloud.k8s.v1.GpuS" +
+      "ettings.GpuEnvironment\"R\n\016GpuEnvironment" +
+      "\022\037\n\033GPU_ENVIRONMENT_UNSPECIFIED\020\000\022\025\n\021RUN" +
+      "C_DRIVERS_CUDA\020\001\022\010\n\004RUNC\020\002\"\324\001\n\024NetworkIn" +
+      "terfaceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027prima" +
+      "ry_v4_address_spec\030\003 \001(\0132$.yandex.cloud." +
+      "k8s.v1.NodeAddressSpec\022E\n\027primary_v6_add" +
+      "ress_spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.No" +
+      "deAddressSpec\022\032\n\022security_group_ids\030\005 \003(" +
+      "\t\"\222\001\n\017NodeAddressSpec\022A\n\023one_to_one_nat_" +
+      "spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.OneToOn" +
+      "eNatSpec\022<\n\020dns_record_specs\030\002 \003(\0132\".yan" +
+      "dex.cloud.k8s.v1.DnsRecordSpec\"_\n\rDnsRec" +
+      "ordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_" +
+      "id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003pt" +
+      "r\030\004 \001(\010\"E\n\017OneToOneNatSpec\0222\n\nip_version" +
+      "\030\001 \001(\0162\036.yandex.cloud.k8s.v1.IpVersion\"y" +
+      "\n\rResourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0" +
+      "\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fractio" +
+      "n\030\003 \001(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=" +
+      "0\"\222\001\n\010DiskSpec\022^\n\014disk_type_id\030\001 \001(\tBH\362\307" +
+      "1D|network-ssd|network-hdd|network-ssd-n" +
+      "onreplicated|network-ssd-io-m3\022&\n\tdisk_s" +
+      "ize\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Schedu" +
+      "lingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017Place" +
+      "mentPolicy\022\032\n\022placement_group_id\030\001 \001(\t*;" +
+      "\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022" +
+      "\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud.api." +
+      "k8s.v1Z;github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

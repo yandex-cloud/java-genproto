@@ -6418,62 +6418,62 @@ public final class CustomerServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n.yandex/cloud/billing/v1/customer_servi" +
       "ce.proto\022\027yandex.cloud.billing.v1\032\034googl" +
-      "e/api/annotations.proto\032&yandex/cloud/bi" +
-      "lling/v1/customer.proto\032 yandex/cloud/ap" +
-      "i/operation.proto\032&yandex/cloud/operatio" +
+      "e/api/annotations.proto\032 yandex/cloud/ap" +
+      "i/operation.proto\032&yandex/cloud/billing/" +
+      "v1/customer.proto\032&yandex/cloud/operatio" +
       "n/operation.proto\032\035yandex/cloud/validati" +
-      "on.proto\"w\n\024ListCustomersRequest\022!\n\013rese" +
+      "on.proto\"}\n\024ListCustomersRequest\022!\n\013rese" +
       "ller_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
       "\030\003 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\004 \001(\tB\t" +
-      "\212\3101\005<=100\"f\n\025ListCustomersResponse\0224\n\tcu" +
-      "stomers\030\001 \003(\0132!.yandex.cloud.billing.v1." +
-      "Customer\022\027\n\017next_page_token\030\002 \001(\t\"\255\001\n\025In" +
-      "viteCustomerRequest\022!\n\013reseller_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\022\036\n\020in" +
-      "vitation_email\030\003 \001(\tB\004\350\3071\001\022=\n\006person\030\004 \001" +
-      "(\0132\'.yandex.cloud.billing.v1.CustomerPer" +
-      "sonB\004\350\3071\001\"\233\001\n#CreateResellerServedCustom" +
-      "erRequest\022!\n\013reseller_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\022=\n\006person\030\003 \001(\013" +
-      "2\'.yandex.cloud.billing.v1.CustomerPerso" +
-      "nB\004\350\3071\001\"<\n\027ActivateCustomerRequest\022!\n\013cu" +
-      "stomer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\";\n\026Suspend" +
-      "CustomerRequest\022!\n\013customer_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"<\n\020CustomerMetadata\022\023\n\013resell" +
-      "er_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t2\205\007\n\017Cus" +
-      "tomerService\022\204\001\n\004List\022-.yandex.cloud.bil" +
-      "ling.v1.ListCustomersRequest\032..yandex.cl" +
-      "oud.billing.v1.ListCustomersResponse\"\035\202\323" +
-      "\344\223\002\027\022\025/billing/v1/customers\022\244\001\n\006Invite\022." +
-      ".yandex.cloud.billing.v1.InviteCustomerR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"G\202\323\344\223\002!\"\034/billing/v1/customers:invite:" +
-      "\001*\262\322*\034\n\020CustomerMetadata\022\010Customer\022\326\001\n\024C" +
-      "reateResellerServed\022<.yandex.cloud.billi" +
-      "ng.v1.CreateResellerServedCustomerReques" +
-      "t\032!.yandex.cloud.operation.Operation\"]\202\323" +
-      "\344\223\0027\"2/billing/v1/customers:createResell" +
-      "erServedCustomer:\001*\262\322*\034\n\020CustomerMetadat" +
-      "a\022\010Customer\022\265\001\n\010Activate\0220.yandex.cloud." +
-      "billing.v1.ActivateCustomerRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"T\202\323\344\223\002.\",/" +
-      "billing/v1/customers/{customer_id}:activ" +
-      "ate\262\322*\034\n\020CustomerMetadata\022\010Customer\022\262\001\n\007" +
-      "Suspend\022/.yandex.cloud.billing.v1.Suspen" +
-      "dCustomerRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"S\202\323\344\223\002-\"+/billing/v1/custome" +
-      "rs/{customer_id}:suspend\262\322*\034\n\020CustomerMe" +
-      "tadata\022\010CustomerBb\n\033yandex.cloud.api.bil" +
-      "ling.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/billing/v1;billingb\006pr" +
-      "oto3"
+      "\212\3101\005<=100J\004\010\002\020\003\"f\n\025ListCustomersResponse" +
+      "\0224\n\tcustomers\030\001 \003(\0132!.yandex.cloud.billi" +
+      "ng.v1.Customer\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "\255\001\n\025InviteCustomerRequest\022!\n\013reseller_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001" +
+      "\022\036\n\020invitation_email\030\003 \001(\tB\004\350\3071\001\022=\n\006pers" +
+      "on\030\004 \001(\0132\'.yandex.cloud.billing.v1.Custo" +
+      "merPersonB\004\350\3071\001\"\233\001\n#CreateResellerServed" +
+      "CustomerRequest\022!\n\013reseller_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\022=\n\006person" +
+      "\030\003 \001(\0132\'.yandex.cloud.billing.v1.Custome" +
+      "rPersonB\004\350\3071\001\"<\n\027ActivateCustomerRequest" +
+      "\022!\n\013customer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\";\n\026S" +
+      "uspendCustomerRequest\022!\n\013customer_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"<\n\020CustomerMetadata\022\023\n\013" +
+      "reseller_id\030\001 \001(\t\022\023\n\013customer_id\030\002 \001(\t2\205" +
+      "\007\n\017CustomerService\022\204\001\n\004List\022-.yandex.clo" +
+      "ud.billing.v1.ListCustomersRequest\032..yan" +
+      "dex.cloud.billing.v1.ListCustomersRespon" +
+      "se\"\035\202\323\344\223\002\027\022\025/billing/v1/customers\022\244\001\n\006In" +
+      "vite\022..yandex.cloud.billing.v1.InviteCus" +
+      "tomerRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"G\202\323\344\223\002!\"\034/billing/v1/customers:i" +
+      "nvite:\001*\262\322*\034\n\020CustomerMetadata\022\010Customer" +
+      "\022\326\001\n\024CreateResellerServed\022<.yandex.cloud" +
+      ".billing.v1.CreateResellerServedCustomer" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"]\202\323\344\223\0027\"2/billing/v1/customers:create" +
+      "ResellerServedCustomer:\001*\262\322*\034\n\020CustomerM" +
+      "etadata\022\010Customer\022\265\001\n\010Activate\0220.yandex." +
+      "cloud.billing.v1.ActivateCustomerRequest" +
+      "\032!.yandex.cloud.operation.Operation\"T\202\323\344" +
+      "\223\002.\",/billing/v1/customers/{customer_id}" +
+      ":activate\262\322*\034\n\020CustomerMetadata\022\010Custome" +
+      "r\022\262\001\n\007Suspend\022/.yandex.cloud.billing.v1." +
+      "SuspendCustomerRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"S\202\323\344\223\002-\"+/billing/v1/c" +
+      "ustomers/{customer_id}:suspend\262\322*\034\n\020Cust" +
+      "omerMetadata\022\010CustomerBb\n\033yandex.cloud.a" +
+      "pi.billing.v1ZCgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/billing/v1;billi" +
+      "ngb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          yandex.cloud.api.billing.v1.CustomerOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.billing.v1.CustomerOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -6529,8 +6529,8 @@ public final class CustomerServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    yandex.cloud.api.billing.v1.CustomerOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.billing.v1.CustomerOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

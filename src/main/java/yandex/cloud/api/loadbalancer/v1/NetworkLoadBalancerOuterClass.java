@@ -7988,9 +7988,9 @@ public final class NetworkLoadBalancerOuterClass {
       "\n8yandex/cloud/loadbalancer/v1/network_l" +
       "oad_balancer.proto\022\034yandex.cloud.loadbal" +
       "ancer.v1\032\037google/protobuf/timestamp.prot" +
-      "o\032\035yandex/cloud/validation.proto\032/yandex" +
-      "/cloud/loadbalancer/v1/health_check.prot" +
-      "o\"\272\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "o\032/yandex/cloud/loadbalancer/v1/health_c" +
+      "heck.proto\032\035yandex/cloud/validation.prot" +
+      "o\"\300\007\n\023NetworkLoadBalancer\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022M\n\006labels\030\006 \003(\0132=.ya" +
@@ -8013,35 +8013,35 @@ public final class NetworkLoadBalancerOuterClass {
       "ETING\020\006\022\014\n\010INACTIVE\020\007\"8\n\004Type\022\024\n\020TYPE_UN" +
       "SPECIFIED\020\000\022\014\n\010EXTERNAL\020\001\022\014\n\010INTERNAL\020\002\"" +
       "M\n\017SessionAffinity\022 \n\034SESSION_AFFINITY_U" +
-      "NSPECIFIED\020\000\022\030\n\024CLIENT_IP_PORT_PROTO\020\001\"\205" +
-      "\001\n\023AttachedTargetGroup\022%\n\017target_group_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\rhealth_checks\030\002" +
-      " \003(\0132).yandex.cloud.loadbalancer.v1.Heal" +
-      "thCheckB\005\202\3101\0011\"\227\002\n\010Listener\022\014\n\004name\030\001 \001(" +
-      "\t\022\017\n\007address\030\002 \001(\t\022\014\n\004port\030\003 \001(\003\022A\n\010prot" +
-      "ocol\030\004 \001(\0162/.yandex.cloud.loadbalancer.v" +
-      "1.Listener.Protocol\022\023\n\013target_port\030\005 \001(\003" +
-      "\022\021\n\tsubnet_id\030\006 \001(\t\022;\n\nip_version\030\007 \001(\0162" +
-      "\'.yandex.cloud.loadbalancer.v1.IpVersion" +
-      "\"6\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFIED\020\000\022\007" +
-      "\n\003TCP\020\001\022\007\n\003UDP\020\002\"\332\001\n\013TargetState\022\021\n\tsubn" +
-      "et_id\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022@\n\006status\030\003" +
-      " \001(\01620.yandex.cloud.loadbalancer.v1.Targ" +
-      "etState.Status\"e\n\006Status\022\026\n\022STATUS_UNSPE" +
-      "CIFIED\020\000\022\013\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002\022\r\n\tUN" +
-      "HEALTHY\020\003\022\014\n\010DRAINING\020\004\022\014\n\010INACTIVE\020\005*;\n" +
-      "\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010" +
-      "\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bq\n yandex.cloud.api.l" +
-      "oadbalancer.v1ZMgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/loadbalancer/v1" +
-      ";loadbalancerb\006proto3"
+      "NSPECIFIED\020\000\022\030\n\024CLIENT_IP_PORT_PROTO\020\001J\004" +
+      "\010\010\020\t\"\205\001\n\023AttachedTargetGroup\022%\n\017target_g" +
+      "roup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G\n\rhealth_ch" +
+      "ecks\030\002 \003(\0132).yandex.cloud.loadbalancer.v" +
+      "1.HealthCheckB\005\202\3101\0011\"\227\002\n\010Listener\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022\014\n\004port\030\003 \001(\003\022A" +
+      "\n\010protocol\030\004 \001(\0162/.yandex.cloud.loadbala" +
+      "ncer.v1.Listener.Protocol\022\023\n\013target_port" +
+      "\030\005 \001(\003\022\021\n\tsubnet_id\030\006 \001(\t\022;\n\nip_version\030" +
+      "\007 \001(\0162\'.yandex.cloud.loadbalancer.v1.IpV" +
+      "ersion\"6\n\010Protocol\022\030\n\024PROTOCOL_UNSPECIFI" +
+      "ED\020\000\022\007\n\003TCP\020\001\022\007\n\003UDP\020\002\"\332\001\n\013TargetState\022\021" +
+      "\n\tsubnet_id\030\001 \001(\t\022\017\n\007address\030\002 \001(\t\022@\n\006st" +
+      "atus\030\003 \001(\01620.yandex.cloud.loadbalancer.v" +
+      "1.TargetState.Status\"e\n\006Status\022\026\n\022STATUS" +
+      "_UNSPECIFIED\020\000\022\013\n\007INITIAL\020\001\022\013\n\007HEALTHY\020\002" +
+      "\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAINING\020\004\022\014\n\010INACTIV" +
+      "E\020\005*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFI" +
+      "ED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bq\n yandex.cloud" +
+      ".api.loadbalancer.v1ZMgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/loadbalan" +
+      "cer/v1;loadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_loadbalancer_v1_NetworkLoadBalancer_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -8081,8 +8081,8 @@ public final class NetworkLoadBalancerOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.loadbalancer.v1.HealthCheckOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

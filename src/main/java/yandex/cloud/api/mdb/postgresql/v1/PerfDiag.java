@@ -12542,46 +12542,46 @@ public final class PerfDiag {
       "nt_addr\030\020 \001(\t\022\027\n\017client_hostname\030\021 \001(\t\022\023" +
       "\n\013client_port\030\022 \001(\003\022\023\n\013backend_xid\030\023 \001(\003" +
       "\022\024\n\014backend_xmin\030\024 \001(\003\022\025\n\rblocking_pids\030" +
-      "\026 \001(\t\022\020\n\010query_id\030\027 \001(\tJ\004\010\025\020\026\"o\n\nPrimary" +
+      "\026 \001(\t\022\020\n\010query_id\030\027 \001(\tJ\004\010\025\020\026\"u\n\nPrimary" +
       "Key\022\014\n\004host\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022\020\n\010datab" +
       "ase\030\004 \001(\t\022\020\n\010toplevel\030\005 \001(\010\022\020\n\010query_id\030" +
-      "\006 \001(\t\022\017\n\007plan_id\030\007 \001(\t\"\234\t\n\nQueryStats\022(\n" +
-      "\004time\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\r\n\005query\030\002 \001(\t\022\027\n\017normalized_plan\030\003 \001(\t\022" +
-      "\024\n\014example_plan\030\004 \001(\t\022\r\n\005plans\030\005 \001(\003\022\027\n\017" +
-      "total_plan_time\030\006 \001(\001\022\025\n\rmin_plan_time\030\007" +
-      " \001(\001\022\025\n\rmax_plan_time\030\010 \001(\001\022\026\n\016mean_plan" +
-      "_time\030\t \001(\001\022\030\n\020stddev_plan_time\030\n \001(\001\022\r\n" +
-      "\005calls\030\013 \001(\003\022\022\n\ntotal_time\030\014 \001(\001\022\020\n\010min_" +
-      "time\030\r \001(\001\022\020\n\010max_time\030\016 \001(\001\022\021\n\tmean_tim" +
-      "e\030\017 \001(\001\022\023\n\013stddev_time\030\020 \001(\001\022\014\n\004rows\030\021 \001" +
-      "(\003\022\027\n\017shared_blks_hit\030\022 \001(\003\022\030\n\020shared_bl" +
-      "ks_read\030\023 \001(\003\022\033\n\023shared_blks_dirtied\030\024 \001" +
-      "(\003\022\033\n\023shared_blks_written\030\025 \001(\003\022\026\n\016local" +
-      "_blks_hit\030\026 \001(\003\022\027\n\017local_blks_read\030\027 \001(\003" +
-      "\022\032\n\022local_blks_dirtied\030\030 \001(\003\022\032\n\022local_bl" +
-      "ks_written\030\031 \001(\003\022\026\n\016temp_blks_read\030\032 \001(\003" +
-      "\022\031\n\021temp_blks_written\030\033 \001(\003\022\025\n\rblk_read_" +
-      "time\030\034 \001(\001\022\026\n\016blk_write_time\030\035 \001(\001\022\032\n\022te" +
-      "mp_blk_read_time\030\036 \001(\001\022\033\n\023temp_blk_write" +
-      "_time\030\037 \001(\001\022\023\n\013wal_records\030  \001(\003\022\017\n\007wal_" +
-      "fpi\030! \001(\003\022\021\n\twal_bytes\030\" \001(\003\022\025\n\rjit_func" +
-      "tions\030# \001(\003\022\033\n\023jit_generation_time\030$ \001(\001" +
-      "\022\032\n\022jit_inlining_count\030% \001(\003\022\031\n\021jit_inli" +
-      "ning_time\030& \001(\001\022\036\n\026jit_optimization_coun" +
-      "t\030\' \001(\003\022\035\n\025jit_optimization_time\030( \001(\001\022\032" +
-      "\n\022jit_emission_count\030) \001(\003\022\031\n\021jit_emissi" +
-      "on_time\030* \001(\001\022\024\n\014startup_cost\030+ \001(\003\022\022\n\nt" +
-      "otal_cost\030, \001(\003\022\021\n\tplan_rows\030- \001(\003\022\022\n\npl" +
-      "an_width\030. \001(\003\022\r\n\005reads\030/ \001(\003\022\016\n\006writes\030" +
-      "0 \001(\003\022\021\n\tuser_time\0301 \001(\001\022\023\n\013system_time\030" +
-      "2 \001(\001\"\204\001\n\016QueryStatement\0227\n\003key\030\001 \001(\0132*." +
-      "yandex.cloud.mdb.postgresql.v1.PrimaryKe" +
-      "y\0229\n\005stats\030\002 \001(\0132*.yandex.cloud.mdb.post" +
-      "gresql.v1.QueryStatsBs\n\"yandex.cloud.api" +
-      ".mdb.postgresql.v1ZMgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/postgre" +
-      "sql/v1;postgresqlb\006proto3"
+      "\006 \001(\t\022\017\n\007plan_id\030\007 \001(\tJ\004\010\003\020\004\"\234\t\n\nQuerySt" +
+      "ats\022(\n\004time\030\001 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\r\n\005query\030\002 \001(\t\022\027\n\017normalized_plan\030" +
+      "\003 \001(\t\022\024\n\014example_plan\030\004 \001(\t\022\r\n\005plans\030\005 \001" +
+      "(\003\022\027\n\017total_plan_time\030\006 \001(\001\022\025\n\rmin_plan_" +
+      "time\030\007 \001(\001\022\025\n\rmax_plan_time\030\010 \001(\001\022\026\n\016mea" +
+      "n_plan_time\030\t \001(\001\022\030\n\020stddev_plan_time\030\n " +
+      "\001(\001\022\r\n\005calls\030\013 \001(\003\022\022\n\ntotal_time\030\014 \001(\001\022\020" +
+      "\n\010min_time\030\r \001(\001\022\020\n\010max_time\030\016 \001(\001\022\021\n\tme" +
+      "an_time\030\017 \001(\001\022\023\n\013stddev_time\030\020 \001(\001\022\014\n\004ro" +
+      "ws\030\021 \001(\003\022\027\n\017shared_blks_hit\030\022 \001(\003\022\030\n\020sha" +
+      "red_blks_read\030\023 \001(\003\022\033\n\023shared_blks_dirti" +
+      "ed\030\024 \001(\003\022\033\n\023shared_blks_written\030\025 \001(\003\022\026\n" +
+      "\016local_blks_hit\030\026 \001(\003\022\027\n\017local_blks_read" +
+      "\030\027 \001(\003\022\032\n\022local_blks_dirtied\030\030 \001(\003\022\032\n\022lo" +
+      "cal_blks_written\030\031 \001(\003\022\026\n\016temp_blks_read" +
+      "\030\032 \001(\003\022\031\n\021temp_blks_written\030\033 \001(\003\022\025\n\rblk" +
+      "_read_time\030\034 \001(\001\022\026\n\016blk_write_time\030\035 \001(\001" +
+      "\022\032\n\022temp_blk_read_time\030\036 \001(\001\022\033\n\023temp_blk" +
+      "_write_time\030\037 \001(\001\022\023\n\013wal_records\030  \001(\003\022\017" +
+      "\n\007wal_fpi\030! \001(\003\022\021\n\twal_bytes\030\" \001(\003\022\025\n\rji" +
+      "t_functions\030# \001(\003\022\033\n\023jit_generation_time" +
+      "\030$ \001(\001\022\032\n\022jit_inlining_count\030% \001(\003\022\031\n\021ji" +
+      "t_inlining_time\030& \001(\001\022\036\n\026jit_optimizatio" +
+      "n_count\030\' \001(\003\022\035\n\025jit_optimization_time\030(" +
+      " \001(\001\022\032\n\022jit_emission_count\030) \001(\003\022\031\n\021jit_" +
+      "emission_time\030* \001(\001\022\024\n\014startup_cost\030+ \001(" +
+      "\003\022\022\n\ntotal_cost\030, \001(\003\022\021\n\tplan_rows\030- \001(\003" +
+      "\022\022\n\nplan_width\030. \001(\003\022\r\n\005reads\030/ \001(\003\022\016\n\006w" +
+      "rites\0300 \001(\003\022\021\n\tuser_time\0301 \001(\001\022\023\n\013system" +
+      "_time\0302 \001(\001\"\204\001\n\016QueryStatement\0227\n\003key\030\001 " +
+      "\001(\0132*.yandex.cloud.mdb.postgresql.v1.Pri" +
+      "maryKey\0229\n\005stats\030\002 \001(\0132*.yandex.cloud.md" +
+      "b.postgresql.v1.QueryStatsBs\n\"yandex.clo" +
+      "ud.api.mdb.postgresql.v1ZMgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/p" +
+      "ostgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

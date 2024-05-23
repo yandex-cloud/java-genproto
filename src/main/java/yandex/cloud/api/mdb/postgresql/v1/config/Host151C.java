@@ -14653,7 +14653,7 @@ public final class Host151C {
       "\n5yandex/cloud/mdb/postgresql/v1/config/" +
       "host15_1c.proto\022%yandex.cloud.mdb.postgr" +
       "esql.v1.config\032\036google/protobuf/wrappers" +
-      ".proto\032\035yandex/cloud/validation.proto\"\320." +
+      ".proto\032\035yandex/cloud/validation.proto\"\334." +
       "\n\031PostgresqlHostConfig15_1C\022=\n\030recovery_" +
       "min_apply_delay\030\001 \001(\0132\033.google.protobuf." +
       "Int64Value\0223\n\016shared_buffers\030\002 \001(\0132\033.goo" +
@@ -14803,10 +14803,10 @@ public final class Host151C {
       "ML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X" +
       "\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022" +
       "\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_C" +
-      "ONTENT\020\002B\201\001\n)yandex.cloud.api.mdb.postgr" +
-      "esql.v1.configZTgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/postgresql/" +
-      "v1/config;postgresqlb\006proto3"
+      "ONTENT\020\002J\004\0104\0206J\004\010,\020-B\201\001\n)yandex.cloud.ap" +
+      "i.mdb.postgresql.v1.configZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/postgresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3877,7 +3877,7 @@ public final class DiskPlacementGroupOuterClass {
     java.lang.String[] descriptorData = {
       "\n2yandex/cloud/compute/v1/disk_placement" +
       "_group.proto\022\027yandex.cloud.compute.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\356\004\n\022DiskP" +
+      "oogle/protobuf/timestamp.proto\"\364\004\n\022DiskP" +
       "lacementGroup\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descriptio" +
@@ -3893,12 +3893,12 @@ public final class DiskPlacementGroupOuterClass {
       "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
       "\"G\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
       "EATING\020\001\022\t\n\005READY\020\002\022\014\n\010DELETING\020\004B\024\n\022pla" +
-      "cement_strategy\"\035\n\033DiskSpreadPlacementSt" +
-      "rategy\"4\n\036DiskPartitionPlacementStrategy" +
-      "\022\022\n\npartitions\030\001 \001(\003Bb\n\033yandex.cloud.api" +
-      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/compute/v1;compute" +
-      "b\006proto3"
+      "cement_strategyJ\004\010\n\020\013\"\035\n\033DiskSpreadPlace" +
+      "mentStrategy\"4\n\036DiskPartitionPlacementSt" +
+      "rategy\022\022\n\npartitions\030\001 \001(\003Bb\n\033yandex.clo" +
+      "ud.api.compute.v1ZCgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/compute/v1;c" +
+      "omputeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

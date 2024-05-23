@@ -3155,20 +3155,20 @@ public final class PredicateOuterClass {
       "\n3yandex/cloud/serverless/triggers/v1/pr" +
       "edicate.proto\022#yandex.cloud.serverless.t" +
       "riggers.v1\032\035yandex/cloud/validation.prot" +
-      "o\"\305\001\n\tPredicate\022J\n\rand_predicate\030\002 \001(\01321" +
+      "o\"\313\001\n\tPredicate\022J\n\rand_predicate\030\002 \001(\01321" +
       ".yandex.cloud.serverless.triggers.v1.And" +
       "PredicateH\000\022Y\n\025field_value_predicate\030\004 \001" +
       "(\01328.yandex.cloud.serverless.triggers.v1" +
       ".FieldValuePredicateH\000B\021\n\tpredicate\022\004\300\3011" +
-      "\001\"Q\n\014AndPredicate\022A\n\tpredicate\030\001 \003(\0132..y" +
-      "andex.cloud.serverless.triggers.v1.Predi" +
-      "cate\"s\n\023FieldValuePredicate\022\030\n\nfield_pat" +
-      "h\030\001 \001(\tB\004\350\3071\001\022\017\n\005exact\030\003 \001(\tH\000\022\020\n\006prefix" +
-      "\030\010 \001(\tH\000\022\020\n\006suffix\030\t \001(\tH\000B\r\n\005value\022\004\300\3011" +
-      "\001B{\n\'yandex.cloud.api.serverless.trigger" +
-      "s.v1ZPgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/serverless/triggers/v1;tr" +
-      "iggersb\006proto3"
+      "\001J\004\010\003\020\004\"Q\n\014AndPredicate\022A\n\tpredicate\030\001 \003" +
+      "(\0132..yandex.cloud.serverless.triggers.v1" +
+      ".Predicate\"\177\n\023FieldValuePredicate\022\030\n\nfie" +
+      "ld_path\030\001 \001(\tB\004\350\3071\001\022\017\n\005exact\030\003 \001(\tH\000\022\020\n\006" +
+      "prefix\030\010 \001(\tH\000\022\020\n\006suffix\030\t \001(\tH\000B\r\n\005valu" +
+      "e\022\004\300\3011\001J\004\010\004\020\010J\004\010\002\020\003B{\n\'yandex.cloud.api." +
+      "serverless.triggers.v1ZPgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/serverl" +
+      "ess/triggers/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

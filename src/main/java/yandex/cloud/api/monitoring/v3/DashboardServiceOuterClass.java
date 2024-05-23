@@ -13371,101 +13371,101 @@ public final class DashboardServiceOuterClass {
       "\n2yandex/cloud/monitoring/v3/dashboard_s" +
       "ervice.proto\022\032yandex.cloud.monitoring.v3" +
       "\032\034google/api/annotations.proto\032 yandex/c" +
-      "loud/api/operation.proto\032&yandex/cloud/o" +
-      "peration/operation.proto\032\035yandex/cloud/v" +
-      "alidation.proto\032*yandex/cloud/monitoring" +
-      "/v3/dashboard.proto\0320yandex/cloud/monito" +
-      "ring/v3/parametrization.proto\032\'yandex/cl" +
-      "oud/monitoring/v3/widget.proto\"9\n\023GetDas" +
+      "loud/api/operation.proto\032*yandex/cloud/m" +
+      "onitoring/v3/dashboard.proto\0320yandex/clo" +
+      "ud/monitoring/v3/parametrization.proto\032\'" +
+      "yandex/cloud/monitoring/v3/widget.proto\032" +
+      "&yandex/cloud/operation/operation.proto\032" +
+      "\035yandex/cloud/validation.proto\"9\n\023GetDas" +
       "hboardRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"\241\001\n\025ListDashboardsRequest\022!\n\tf" +
+      "\001\212\3101\004<=50\"\247\001\n\025ListDashboardsRequest\022!\n\tf" +
       "older_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n\tpage_s" +
       "ize\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\024 \001(" +
       "\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101\006<=1000" +
-      "B\013\n\tcontainer\"l\n\026ListDashboardsResponse\022" +
-      "9\n\ndashboards\030\001 \003(\0132%.yandex.cloud.monit" +
-      "oring.v3.Dashboard\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\237\004\n\026CreateDashboardRequest\022!\n\tfolder" +
-      "_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030\023 \001(\tB" +
-      "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
-      "\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels" +
-      "\030\025 \003(\0132>.yandex.cloud.monitoring.v3.Crea" +
-      "teDashboardRequest.LabelsEntryBG\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
-      "\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\026 \001(\t\0223" +
-      "\n\007widgets\030\027 \003(\0132\".yandex.cloud.monitorin" +
-      "g.v3.Widget\022D\n\017parametrization\030\030 \001(\0132+.y" +
-      "andex.cloud.monitoring.v3.Parametrizatio" +
-      "n\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_link\030\033 " +
-      "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\031\020\032\"/\n\027CreateD" +
-      "ashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"\241" +
-      "\004\n\026UpdateDashboardRequest\022\"\n\014dashboard_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071" +
-      " |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013des" +
-      "cription\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels\030\004 \003" +
-      "(\0132>.yandex.cloud.monitoring.v3.UpdateDa" +
-      "shboardRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[" +
-      "a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\0223\n\007wi" +
-      "dgets\030\006 \003(\0132\".yandex.cloud.monitoring.v3" +
-      ".Widget\022D\n\017parametrization\030\007 \001(\0132+.yande" +
-      "x.cloud.monitoring.v3.Parametrization\022\014\n" +
-      "\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014manag" +
-      "ed_link\030\033 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\032\"/\n\027UpdateDash" +
-      "boardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"J\n\026D" +
-      "eleteDashboardRequest\022\"\n\014dashboard_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 \001(\t\"/\n\027Delet" +
-      "eDashboardMetadata\022\024\n\014dashboard_id\030\001 \001(\t" +
-      "\"\202\001\n\036ListDashboardOperationsRequest\022\"\n\014d" +
-      "ashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"q\n\037ListDashboardOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\267\010\n\020DashboardService\022\217\001\n\003Get\022/." +
-      "yandex.cloud.monitoring.v3.GetDashboardR" +
-      "equest\032%.yandex.cloud.monitoring.v3.Dash" +
-      "board\"0\202\323\344\223\002*\022(/monitoring/v3/dashboards" +
-      "/{dashboard_id}\022\220\001\n\004List\0221.yandex.cloud." +
-      "monitoring.v3.ListDashboardsRequest\0322.ya" +
-      "ndex.cloud.monitoring.v3.ListDashboardsR" +
-      "esponse\"!\202\323\344\223\002\033\022\031/monitoring/v3/dashboar" +
-      "ds\022\255\001\n\006Create\0222.yandex.cloud.monitoring." +
-      "v3.CreateDashboardRequest\032!.yandex.cloud" +
-      ".operation.Operation\"L\202\323\344\223\002\036\"\031/monitorin" +
-      "g/v3/dashboards:\001*\262\322*$\n\027CreateDashboardM" +
-      "etadata\022\tDashboard\022\274\001\n\006Update\0222.yandex.c" +
-      "loud.monitoring.v3.UpdateDashboardReques" +
-      "t\032!.yandex.cloud.operation.Operation\"[\202\323" +
-      "\344\223\002-2(/monitoring/v3/dashboards/{dashboa" +
-      "rd_id}:\001*\262\322*$\n\027UpdateDashboardMetadata\022\t" +
-      "Dashboard\022\305\001\n\006Delete\0222.yandex.cloud.moni" +
-      "toring.v3.DeleteDashboardRequest\032!.yande" +
-      "x.cloud.operation.Operation\"d\202\323\344\223\002**(/mo" +
-      "nitoring/v3/dashboards/{dashboard_id}\262\322*" +
-      "0\n\027DeleteDashboardMetadata\022\025google.proto" +
-      "buf.Empty\022\306\001\n\016ListOperations\022:.yandex.cl" +
-      "oud.monitoring.v3.ListDashboardOperation" +
-      "sRequest\032;.yandex.cloud.monitoring.v3.Li" +
-      "stDashboardOperationsResponse\";\202\323\344\223\0025\0223/" +
-      "monitoring/v3/dashboards/{dashboard_id}/" +
-      "operationsBk\n\036yandex.cloud.api.monitorin" +
-      "g.v3ZIgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/monitoring/v3;monitoringb" +
-      "\006proto3"
+      "B\013\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashboardsRes" +
+      "ponse\0229\n\ndashboards\030\001 \003(\0132%.yandex.cloud" +
+      ".monitoring.v3.Dashboard\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\245\004\n\026CreateDashboardRequest\022!\n\t" +
+      "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004name\030" +
+      "\023 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9" +
+      "])?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227\001\n\006" +
+      "labels\030\025 \003(\0132>.yandex.cloud.monitoring.v" +
+      "3.CreateDashboardRequest.LabelsEntryBG\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title\030\026" +
+      " \001(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cloud.mon" +
+      "itoring.v3.Widget\022D\n\017parametrization\030\030 \001" +
+      "(\0132+.yandex.cloud.monitoring.v3.Parametr" +
+      "ization\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_l" +
+      "ink\030\033 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\031\020" +
+      "\032\"/\n\027CreateDashboardMetadata\022\024\n\014dashboar" +
+      "d_id\030\001 \001(\t\"\241\004\n\026UpdateDashboardRequest\022\"\n" +
+      "\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004nam" +
+      "e\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0" +
+      "-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\227\001" +
+      "\n\006labels\030\004 \003(\0132>.yandex.cloud.monitoring" +
+      ".v3.UpdateDashboardRequest.LabelsEntryBG" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
+      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005title" +
+      "\030\005 \001(\t\0223\n\007widgets\030\006 \003(\0132\".yandex.cloud.m" +
+      "onitoring.v3.Widget\022D\n\017parametrization\030\007" +
+      " \001(\0132+.yandex.cloud.monitoring.v3.Parame" +
+      "trization\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 " +
+      "\001(\t\022\024\n\014managed_link\030\033 \001(\t\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\032\"/" +
+      "\n\027UpdateDashboardMetadata\022\024\n\014dashboard_i" +
+      "d\030\001 \001(\t\"J\n\026DeleteDashboardRequest\022\"\n\014das" +
+      "hboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004etag\030\002 " +
+      "\001(\t\"/\n\027DeleteDashboardMetadata\022\024\n\014dashbo" +
+      "ard_id\030\001 \001(\t\"\202\001\n\036ListDashboardOperations" +
+      "Request\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037ListDashboa" +
+      "rdOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\267\010\n\020DashboardServic" +
+      "e\022\217\001\n\003Get\022/.yandex.cloud.monitoring.v3.G" +
+      "etDashboardRequest\032%.yandex.cloud.monito" +
+      "ring.v3.Dashboard\"0\202\323\344\223\002*\022(/monitoring/v" +
+      "3/dashboards/{dashboard_id}\022\220\001\n\004List\0221.y" +
+      "andex.cloud.monitoring.v3.ListDashboards" +
+      "Request\0322.yandex.cloud.monitoring.v3.Lis" +
+      "tDashboardsResponse\"!\202\323\344\223\002\033\022\031/monitoring" +
+      "/v3/dashboards\022\255\001\n\006Create\0222.yandex.cloud" +
+      ".monitoring.v3.CreateDashboardRequest\032!." +
+      "yandex.cloud.operation.Operation\"L\202\323\344\223\002\036" +
+      "\"\031/monitoring/v3/dashboards:\001*\262\322*$\n\027Crea" +
+      "teDashboardMetadata\022\tDashboard\022\274\001\n\006Updat" +
+      "e\0222.yandex.cloud.monitoring.v3.UpdateDas" +
+      "hboardRequest\032!.yandex.cloud.operation.O" +
+      "peration\"[\202\323\344\223\002-2(/monitoring/v3/dashboa" +
+      "rds/{dashboard_id}:\001*\262\322*$\n\027UpdateDashboa" +
+      "rdMetadata\022\tDashboard\022\305\001\n\006Delete\0222.yande" +
+      "x.cloud.monitoring.v3.DeleteDashboardReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "d\202\323\344\223\002**(/monitoring/v3/dashboards/{dash" +
+      "board_id}\262\322*0\n\027DeleteDashboardMetadata\022\025" +
+      "google.protobuf.Empty\022\306\001\n\016ListOperations" +
+      "\022:.yandex.cloud.monitoring.v3.ListDashbo" +
+      "ardOperationsRequest\032;.yandex.cloud.moni" +
+      "toring.v3.ListDashboardOperationsRespons" +
+      "e\";\202\323\344\223\0025\0223/monitoring/v3/dashboards/{da" +
+      "shboard_id}/operationsBk\n\036yandex.cloud.a" +
+      "pi.monitoring.v3ZIgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/monitoring/v3" +
+      ";monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.monitoring.v3.DashboardOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.WidgetOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_GetDashboardRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13559,11 +13559,11 @@ public final class DashboardServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.monitoring.v3.DashboardOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.WidgetOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

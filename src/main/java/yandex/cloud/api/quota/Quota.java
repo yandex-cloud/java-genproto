@@ -2935,16 +2935,16 @@ public final class Quota {
   static {
     java.lang.String[] descriptorData = {
       "\n\036yandex/cloud/quota/quota.proto\022\022yandex" +
-      ".cloud.quota\"9\n\013QuotaMetric\022\014\n\004name\030\001 \001(" +
-      "\t\022\r\n\005limit\030\003 \001(\003\022\r\n\005usage\030\004 \001(\001\"*\n\013Metri" +
-      "cLimit\022\014\n\004name\030\001 \001(\t\022\r\n\005limit\030\002 \001(\003\"\236\001\n\014" +
-      "QuotaFailure\022>\n\nviolations\030\002 \003(\0132*.yande" +
-      "x.cloud.quota.QuotaFailure.Violation\032N\n\t" +
-      "Violation\022/\n\006metric\030\001 \001(\0132\037.yandex.cloud" +
-      ".quota.QuotaMetric\022\020\n\010required\030\002 \001(\003BV\n\026" +
-      "yandex.cloud.api.quotaZ<github.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/quota;q" +
-      "uotab\006proto3"
+      ".cloud.quota\"?\n\013QuotaMetric\022\014\n\004name\030\001 \001(" +
+      "\t\022\r\n\005limit\030\003 \001(\003\022\r\n\005usage\030\004 \001(\001J\004\010\002\020\003\"*\n" +
+      "\013MetricLimit\022\014\n\004name\030\001 \001(\t\022\r\n\005limit\030\002 \001(" +
+      "\003\"\236\001\n\014QuotaFailure\022>\n\nviolations\030\002 \003(\0132*" +
+      ".yandex.cloud.quota.QuotaFailure.Violati" +
+      "on\032N\n\tViolation\022/\n\006metric\030\001 \001(\0132\037.yandex" +
+      ".cloud.quota.QuotaMetric\022\020\n\010required\030\002 \001" +
+      "(\003BV\n\026yandex.cloud.api.quotaZ<github.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/q" +
+      "uota;quotab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

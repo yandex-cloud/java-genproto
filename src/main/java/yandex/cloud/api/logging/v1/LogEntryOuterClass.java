@@ -6867,22 +6867,22 @@ public final class LogEntryOuterClass {
       "ex.cloud.logging.v1.LogLevel.Level\022\034\n\007me" +
       "ssage\030\003 \001(\tB\013\272\3101\007<=65536\022:\n\014json_payload" +
       "\030\004 \001(\0132\027.google.protobuf.StructB\013\272\3101\007<=6" +
-      "5536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<=63\"\245\001\n\020" +
+      "5536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<=63\"\253\001\n\020" +
       "LogEntryDefaults\0226\n\005level\030\002 \001(\0162\'.yandex" +
       ".cloud.logging.v1.LogLevel.Level\022:\n\014json" +
       "_payload\030\004 \001(\0132\027.google.protobuf.StructB" +
       "\013\272\3101\007<=65536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<" +
-      "=63\"\231\001\n\013Destination\022;\n\014log_group_id\030\001 \001(" +
-      "\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000" +
-      "\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA" +
-      "-Z0-9_.]{0,63})?H\000B\023\n\013destination\022\004\300\3011\001\"" +
-      "\242\001\n\010LogLevel\0226\n\005level\030\001 \001(\0162\'.yandex.clo" +
-      "ud.logging.v1.LogLevel.Level\"^\n\005Level\022\025\n" +
-      "\021LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG" +
-      "\020\002\022\010\n\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FAT" +
-      "AL\020\006Bb\n\033yandex.cloud.api.logging.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/logging/v1;loggingb\006proto3"
+      "=63J\004\010\003\020\004\"\231\001\n\013Destination\022;\n\014log_group_i" +
+      "d\030\001 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,6" +
+      "3})?H\000\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z]" +
+      "[-a-zA-Z0-9_.]{0,63})?H\000B\023\n\013destination\022" +
+      "\004\300\3011\001\"\242\001\n\010LogLevel\0226\n\005level\030\001 \001(\0162\'.yand" +
+      "ex.cloud.logging.v1.LogLevel.Level\"^\n\005Le" +
+      "vel\022\025\n\021LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n" +
+      "\005DEBUG\020\002\022\010\n\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022" +
+      "\t\n\005FATAL\020\006Bb\n\033yandex.cloud.api.logging.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/logging/v1;loggingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

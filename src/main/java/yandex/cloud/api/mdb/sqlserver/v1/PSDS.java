@@ -13904,10 +13904,10 @@ public final class PSDS {
       "_service.proto\022\035yandex.cloud.mdb.sqlserv" +
       "er.v1\032\034google/api/annotations.proto\032\037goo" +
       "gle/protobuf/timestamp.proto\032 yandex/clo" +
-      "ud/api/operation.proto\032&yandex/cloud/ope" +
-      "ration/operation.proto\032\035yandex/cloud/val" +
-      "idation.proto\032,yandex/cloud/mdb/sqlserve" +
-      "r/v1/database.proto\"m\n\022GetDatabaseReques" +
+      "ud/api/operation.proto\032,yandex/cloud/mdb" +
+      "/sqlserver/v1/database.proto\032&yandex/clo" +
+      "ud/operation/operation.proto\032\035yandex/clo" +
+      "ud/validation.proto\"m\n\022GetDatabaseReques" +
       "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rd" +
       "atabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
       "A-Z0-9_-]*\"v\n\024ListDatabasesRequest\022 \n\ncl" +
@@ -13925,70 +13925,70 @@ public final class PSDS {
       "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdatabase_name\030" +
       "\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"C\n" +
       "\026DeleteDatabaseMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\275\001\n\026RestoreDa" +
+      "\001(\t\022\025\n\rdatabase_name\030\002 \001(\t\"\303\001\n\026RestoreDa" +
       "tabaseRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
       "\3101\004<=50\022\033\n\rdatabase_name\030\002 \001(\tB\004\350\3071\001\022\033\n\r" +
       "from_database\030\003 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\004" +
       " \001(\tB\004\350\3071\001\022.\n\004time\030\006 \001(\0132\032.google.protob" +
-      "uf.TimestampB\004\350\3071\001\"\206\001\n\027RestoreDatabaseMe" +
-      "tadata\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rdata" +
-      "base_name\030\002 \001(\tB\004\350\3071\001\022\033\n\rfrom_database\030\003" +
-      " \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\004 \001(\tB\004\350\3071\001\"\233\001\n\033" +
-      "ImportDatabaseBackupRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rdatabase_name\030\002" +
-      " \001(\tB\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071\001\022\017\n\007s" +
-      "3_path\030\004 \001(\t\022\023\n\005files\030\005 \003(\tB\004\350\3071\001\"\177\n\034Imp" +
-      "ortDatabaseBackupMetadata\022\030\n\ncluster_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022\033\n\rdatabase_name\030\002 \001(\tB\004\350\3071\001" +
-      "\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071\001\022\017\n\007s3_path\030\004 \001" +
-      "(\t\"\226\001\n\033ExportDatabaseBackupRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rdatabase" +
-      "_name\030\002 \001(\tB\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\307" +
-      "1\001\022\017\n\007s3_path\030\004 \001(\t\022\016\n\006prefix\030\005 \001(\t\"\177\n\034E" +
-      "xportDatabaseBackupMetadata\022\030\n\ncluster_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022\033\n\rdatabase_name\030\002 \001(\tB\004\350\307" +
-      "1\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071\001\022\017\n\007s3_path\030\004" +
-      " \001(\t2\276\013\n\017DatabaseService\022\254\001\n\003Get\0221.yande" +
-      "x.cloud.mdb.sqlserver.v1.GetDatabaseRequ" +
-      "est\032\'.yandex.cloud.mdb.sqlserver.v1.Data" +
-      "base\"I\202\323\344\223\002C\022A/mdb/sqlserver/v1/clusters" +
-      "/{cluster_id}/databases/{database_name}\022" +
-      "\254\001\n\004List\0223.yandex.cloud.mdb.sqlserver.v1" +
-      ".ListDatabasesRequest\0324.yandex.cloud.mdb" +
-      ".sqlserver.v1.ListDatabasesResponse\"9\202\323\344" +
-      "\223\0023\0221/mdb/sqlserver/v1/clusters/{cluster" +
-      "_id}/databases\022\305\001\n\006Create\0224.yandex.cloud" +
-      ".mdb.sqlserver.v1.CreateDatabaseRequest\032" +
-      "!.yandex.cloud.operation.Operation\"b\202\323\344\223" +
-      "\0026\"1/mdb/sqlserver/v1/clusters/{cluster_" +
-      "id}/databases:\001*\262\322*\"\n\026CreateDatabaseMeta" +
-      "data\022\010Database\022\320\001\n\007Restore\0225.yandex.clou" +
-      "d.mdb.sqlserver.v1.RestoreDatabaseReques" +
-      "t\032!.yandex.cloud.operation.Operation\"k\202\323" +
-      "\344\223\002>\"9/mdb/sqlserver/v1/clusters/{cluste" +
-      "r_id}/databases:restore:\001*\262\322*#\n\027RestoreD" +
-      "atabaseMetadata\022\010Database\022\336\001\n\014ImportBack" +
-      "up\022:.yandex.cloud.mdb.sqlserver.v1.Impor" +
-      "tDatabaseBackupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"o\202\323\344\223\002=\"8/mdb/sqlserve" +
-      "r/v1/clusters/{cluster_id}/databases:imp" +
-      "ort:\001*\262\322*(\n\034ImportDatabaseBackupMetadata" +
-      "\022\010Database\022\356\001\n\014ExportBackup\022:.yandex.clo" +
-      "ud.mdb.sqlserver.v1.ExportDatabaseBackup" +
+      "uf.TimestampB\004\350\3071\001J\004\010\005\020\006\"\206\001\n\027RestoreData" +
+      "baseMetadata\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\033" +
+      "\n\rdatabase_name\030\002 \001(\tB\004\350\3071\001\022\033\n\rfrom_data" +
+      "base\030\003 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\004 \001(\tB\004\350\3071" +
+      "\001\"\233\001\n\033ImportDatabaseBackupRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rdatabase_" +
+      "name\030\002 \001(\tB\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071" +
+      "\001\022\017\n\007s3_path\030\004 \001(\t\022\023\n\005files\030\005 \003(\tB\004\350\3071\001\"" +
+      "\177\n\034ImportDatabaseBackupMetadata\022\030\n\nclust" +
+      "er_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rdatabase_name\030\002 \001(\t" +
+      "B\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071\001\022\017\n\007s3_pa" +
+      "th\030\004 \001(\t\"\226\001\n\033ExportDatabaseBackupRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rda" +
+      "tabase_name\030\002 \001(\tB\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001" +
+      "(\tB\004\350\3071\001\022\017\n\007s3_path\030\004 \001(\t\022\016\n\006prefix\030\005 \001(" +
+      "\t\"\177\n\034ExportDatabaseBackupMetadata\022\030\n\nclu" +
+      "ster_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rdatabase_name\030\002 \001" +
+      "(\tB\004\350\3071\001\022\027\n\ts3_bucket\030\003 \001(\tB\004\350\3071\001\022\017\n\007s3_" +
+      "path\030\004 \001(\t2\276\013\n\017DatabaseService\022\254\001\n\003Get\0221" +
+      ".yandex.cloud.mdb.sqlserver.v1.GetDataba" +
+      "seRequest\032\'.yandex.cloud.mdb.sqlserver.v" +
+      "1.Database\"I\202\323\344\223\002C\022A/mdb/sqlserver/v1/cl" +
+      "usters/{cluster_id}/databases/{database_" +
+      "name}\022\254\001\n\004List\0223.yandex.cloud.mdb.sqlser" +
+      "ver.v1.ListDatabasesRequest\0324.yandex.clo" +
+      "ud.mdb.sqlserver.v1.ListDatabasesRespons" +
+      "e\"9\202\323\344\223\0023\0221/mdb/sqlserver/v1/clusters/{c" +
+      "luster_id}/databases\022\305\001\n\006Create\0224.yandex" +
+      ".cloud.mdb.sqlserver.v1.CreateDatabaseRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"b\202\323\344\223\0026\"1/mdb/sqlserver/v1/clusters/{cl" +
+      "uster_id}/databases:\001*\262\322*\"\n\026CreateDataba" +
+      "seMetadata\022\010Database\022\320\001\n\007Restore\0225.yande" +
+      "x.cloud.mdb.sqlserver.v1.RestoreDatabase" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"\177\202\323\344\223\002M\"H/mdb/sqlserver/v1/clusters/{" +
-      "cluster_id}/databases/{database_name}:ex" +
-      "port:\001*\262\322*(\n\034ExportDatabaseBackupMetadat" +
-      "a\022\010Database\022\337\001\n\006Delete\0224.yandex.cloud.md" +
-      "b.sqlserver.v1.DeleteDatabaseRequest\032!.y" +
-      "andex.cloud.operation.Operation\"|\202\323\344\223\002C*" +
-      "A/mdb/sqlserver/v1/clusters/{cluster_id}" +
-      "/databases/{database_name}\262\322*/\n\026DeleteDa" +
-      "tabaseMetadata\022\025google.protobuf.EmptyBv\n" +
-      "!yandex.cloud.api.mdb.sqlserver.v1B\004PSDS" +
-      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/sqlserver/v1;sqlserverb\006p" +
-      "roto3"
+      "on\"k\202\323\344\223\002>\"9/mdb/sqlserver/v1/clusters/{" +
+      "cluster_id}/databases:restore:\001*\262\322*#\n\027Re" +
+      "storeDatabaseMetadata\022\010Database\022\336\001\n\014Impo" +
+      "rtBackup\022:.yandex.cloud.mdb.sqlserver.v1" +
+      ".ImportDatabaseBackupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"o\202\323\344\223\002=\"8/mdb/sq" +
+      "lserver/v1/clusters/{cluster_id}/databas" +
+      "es:import:\001*\262\322*(\n\034ImportDatabaseBackupMe" +
+      "tadata\022\010Database\022\356\001\n\014ExportBackup\022:.yand" +
+      "ex.cloud.mdb.sqlserver.v1.ExportDatabase" +
+      "BackupRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\177\202\323\344\223\002M\"H/mdb/sqlserver/v1/clus" +
+      "ters/{cluster_id}/databases/{database_na" +
+      "me}:export:\001*\262\322*(\n\034ExportDatabaseBackupM" +
+      "etadata\022\010Database\022\337\001\n\006Delete\0224.yandex.cl" +
+      "oud.mdb.sqlserver.v1.DeleteDatabaseReque" +
+      "st\032!.yandex.cloud.operation.Operation\"|\202" +
+      "\323\344\223\002C*A/mdb/sqlserver/v1/clusters/{clust" +
+      "er_id}/databases/{database_name}\262\322*/\n\026De" +
+      "leteDatabaseMetadata\022\025google.protobuf.Em" +
+      "ptyBv\n!yandex.cloud.api.mdb.sqlserver.v1" +
+      "B\004PSDSZKgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/sqlserver/v1;sqlser" +
+      "verb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13996,9 +13996,9 @@ public final class PSDS {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
-          yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_sqlserver_v1_GetDatabaseRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14091,9 +14091,9 @@ public final class PSDS {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
-    yandex.cloud.api.mdb.sqlserver.v1.PSD.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

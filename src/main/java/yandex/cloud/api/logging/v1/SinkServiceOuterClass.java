@@ -12350,103 +12350,103 @@ public final class SinkServiceOuterClass {
       "\n*yandex/cloud/logging/v1/sink_service.p" +
       "roto\022\027yandex.cloud.logging.v1\032\034google/ap" +
       "i/annotations.proto\032 google/protobuf/fie" +
-      "ld_mask.proto\032 yandex/cloud/api/operatio" +
-      "n.proto\032 yandex/cloud/access/access.prot" +
+      "ld_mask.proto\032 yandex/cloud/access/acces" +
+      "s.proto\032 yandex/cloud/api/operation.prot" +
       "o\032\"yandex/cloud/logging/v1/sink.proto\032&y" +
       "andex/cloud/operation/operation.proto\032\035y" +
       "andex/cloud/validation.proto\"/\n\016GetSinkR" +
-      "equest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"\201\001" +
+      "equest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"\207\001" +
       "\n\020ListSinksRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=64\022\021\n\tpage_size\030\003 \001(\003\022\035\n\npage_t" +
       "oken\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212" +
-      "\3101\006<=1000\"Z\n\021ListSinksResponse\022,\n\005sinks\030" +
-      "\001 \003(\0132\035.yandex.cloud.logging.v1.Sink\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\324\003\n\021CreateSinkRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\004" +
-      "name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-" +
-      "z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\207\001" +
-      "\n\006labels\030\004 \003(\01326.yandex.cloud.logging.v1" +
-      ".CreateSinkRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022$\n\022service_account_id\030\005 " +
-      "\001(\tB\010\212\3101\004<=64\0220\n\003yds\030\006 \001(\0132!.yandex.clou" +
-      "d.logging.v1.Sink.YdsH\000\022.\n\002s3\030\007 \001(\0132 .ya" +
-      "ndex.cloud.logging.v1.Sink.S3H\000\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014" +
-      "\n\004sink\022\004\300\3011\001\"%\n\022CreateSinkMetadata\022\017\n\007si" +
-      "nk_id\030\001 \001(\t\"\203\004\n\021UpdateSinkRequest\022\035\n\007sin" +
-      "k_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\013update_mask\030" +
-      "\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004nam" +
-      "e\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-" +
-      "9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\207\001\n\006l" +
-      "abels\030\005 \003(\01326.yandex.cloud.logging.v1.Up" +
-      "dateSinkRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
-      "][-_0-9a-z]*\022$\n\022service_account_id\030\006 \001(\t" +
-      "B\010\212\3101\004<=64\0220\n\003yds\030\007 \001(\0132!.yandex.cloud.l" +
-      "ogging.v1.Sink.YdsH\000\022.\n\002s3\030\010 \001(\0132 .yande" +
-      "x.cloud.logging.v1.Sink.S3H\000\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004s" +
-      "ink\022\004\300\3011\001\"%\n\022UpdateSinkMetadata\022\017\n\007sink_" +
-      "id\030\001 \001(\t\"2\n\021DeleteSinkRequest\022\035\n\007sink_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"%\n\022DeleteSinkMetada" +
-      "ta\022\017\n\007sink_id\030\001 \001(\t\"\224\001\n\031ListSinkOperatio" +
-      "nsRequest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\"l\n\032ListSinkOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\221\014\n\013SinkService\022r\n\003Get\022\'.yandex.cloud.l" +
-      "ogging.v1.GetSinkRequest\032\035.yandex.cloud." +
-      "logging.v1.Sink\"#\202\323\344\223\002\035\022\033/logging/v1/sin" +
-      "ks/{sink_id}\022x\n\004List\022).yandex.cloud.logg" +
-      "ing.v1.ListSinksRequest\032*.yandex.cloud.l" +
-      "ogging.v1.ListSinksResponse\"\031\202\323\344\223\002\023\022\021/lo" +
-      "gging/v1/sinks\022\223\001\n\006Create\022*.yandex.cloud" +
-      ".logging.v1.CreateSinkRequest\032!.yandex.c" +
-      "loud.operation.Operation\":\202\323\344\223\002\026\"\021/loggi" +
-      "ng/v1/sinks:\001*\262\322*\032\n\022CreateSinkMetadata\022\004" +
-      "Sink\022\235\001\n\006Update\022*.yandex.cloud.logging.v" +
-      "1.UpdateSinkRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"D\202\323\344\223\002 2\033/logging/v1/sink" +
-      "s/{sink_id}:\001*\262\322*\032\n\022UpdateSinkMetadata\022\004" +
-      "Sink\022\253\001\n\006Delete\022*.yandex.cloud.logging.v" +
-      "1.DeleteSinkRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"R\202\323\344\223\002\035*\033/logging/v1/sink" +
-      "s/{sink_id}\262\322*+\n\022DeleteSinkMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\251\001\n\016ListOperations\0222." +
-      "yandex.cloud.logging.v1.ListSinkOperatio" +
-      "nsRequest\0323.yandex.cloud.logging.v1.List" +
-      "SinkOperationsResponse\".\202\323\344\223\002(\022&/logging" +
-      "/v1/sinks/{sink_id}/operations\022\261\001\n\022ListA" +
-      "ccessBindings\022..yandex.cloud.access.List" +
-      "AccessBindingsRequest\032/.yandex.cloud.acc" +
-      "ess.ListAccessBindingsResponse\":\202\323\344\223\0024\0222" +
-      "/logging/v1/sinks/{resource_id}:listAcce" +
-      "ssBindings\022\340\001\n\021SetAccessBindings\022-.yande" +
-      "x.cloud.access.SetAccessBindingsRequest\032" +
-      "!.yandex.cloud.operation.Operation\"y\202\323\344\223" +
-      "\0026\"1/logging/v1/sinks/{resource_id}:setA" +
-      "ccessBindings:\001*\262\322*9\n access.SetAccessBi" +
-      "ndingsMetadata\022\025google.protobuf.Empty\022\354\001" +
-      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
-      "cess.UpdateAccessBindingsRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\177\202\323\344\223\002924/lo" +
-      "gging/v1/sinks/{resource_id}:updateAcces" +
-      "sBindings:\001*\262\322*<\n#access.UpdateAccessBin" +
-      "dingsMetadata\022\025google.protobuf.EmptyBb\n\033" +
-      "yandex.cloud.api.logging.v1ZCgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/lo" +
-      "gging/v1;loggingb\006proto3"
+      "\3101\006<=1000J\004\010\002\020\003\"Z\n\021ListSinksResponse\022,\n\005" +
+      "sinks\030\001 \003(\0132\035.yandex.cloud.logging.v1.Si" +
+      "nk\022\027\n\017next_page_token\030\002 \001(\t\"\324\003\n\021CreateSi" +
+      "nkRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "64\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1," +
+      "61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "256\022\207\001\n\006labels\030\004 \003(\01326.yandex.cloud.logg" +
+      "ing.v1.CreateSinkRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022$\n\022service_account" +
+      "_id\030\005 \001(\tB\010\212\3101\004<=64\0220\n\003yds\030\006 \001(\0132!.yande" +
+      "x.cloud.logging.v1.Sink.YdsH\000\022.\n\002s3\030\007 \001(" +
+      "\0132 .yandex.cloud.logging.v1.Sink.S3H\000\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\014\n\004sink\022\004\300\3011\001\"%\n\022CreateSinkMetadata" +
+      "\022\017\n\007sink_id\030\001 \001(\t\"\203\004\n\021UpdateSinkRequest\022" +
+      "\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\013update" +
+      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}" +
+      "[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
+      "\022\207\001\n\006labels\030\005 \003(\01326.yandex.cloud.logging" +
+      ".v1.UpdateSinkRequest.LabelsEntryB?\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022" +
+      "\022\020[a-z][-_0-9a-z]*\022$\n\022service_account_id" +
+      "\030\006 \001(\tB\010\212\3101\004<=64\0220\n\003yds\030\007 \001(\0132!.yandex.c" +
+      "loud.logging.v1.Sink.YdsH\000\022.\n\002s3\030\010 \001(\0132 " +
+      ".yandex.cloud.logging.v1.Sink.S3H\000\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001B\014\n\004sink\022\004\300\3011\001\"%\n\022UpdateSinkMetadata\022\017\n" +
+      "\007sink_id\030\001 \001(\t\"2\n\021DeleteSinkRequest\022\035\n\007s" +
+      "ink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"%\n\022DeleteSink" +
+      "Metadata\022\017\n\007sink_id\030\001 \001(\t\"\224\001\n\031ListSinkOp" +
+      "erationsRequest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
+      " \001(\tB\n\212\3101\006<=1000\"l\n\032ListSinkOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t2\221\014\n\013SinkService\022r\n\003Get\022\'.yandex.c" +
+      "loud.logging.v1.GetSinkRequest\032\035.yandex." +
+      "cloud.logging.v1.Sink\"#\202\323\344\223\002\035\022\033/logging/" +
+      "v1/sinks/{sink_id}\022x\n\004List\022).yandex.clou" +
+      "d.logging.v1.ListSinksRequest\032*.yandex.c" +
+      "loud.logging.v1.ListSinksResponse\"\031\202\323\344\223\002" +
+      "\023\022\021/logging/v1/sinks\022\223\001\n\006Create\022*.yandex" +
+      ".cloud.logging.v1.CreateSinkRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\":\202\323\344\223\002\026\"\021" +
+      "/logging/v1/sinks:\001*\262\322*\032\n\022CreateSinkMeta" +
+      "data\022\004Sink\022\235\001\n\006Update\022*.yandex.cloud.log" +
+      "ging.v1.UpdateSinkRequest\032!.yandex.cloud" +
+      ".operation.Operation\"D\202\323\344\223\002 2\033/logging/v" +
+      "1/sinks/{sink_id}:\001*\262\322*\032\n\022UpdateSinkMeta" +
+      "data\022\004Sink\022\253\001\n\006Delete\022*.yandex.cloud.log" +
+      "ging.v1.DeleteSinkRequest\032!.yandex.cloud" +
+      ".operation.Operation\"R\202\323\344\223\002\035*\033/logging/v" +
+      "1/sinks/{sink_id}\262\322*+\n\022DeleteSinkMetadat" +
+      "a\022\025google.protobuf.Empty\022\251\001\n\016ListOperati" +
+      "ons\0222.yandex.cloud.logging.v1.ListSinkOp" +
+      "erationsRequest\0323.yandex.cloud.logging.v" +
+      "1.ListSinkOperationsResponse\".\202\323\344\223\002(\022&/l" +
+      "ogging/v1/sinks/{sink_id}/operations\022\261\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\":\202\323" +
+      "\344\223\0024\0222/logging/v1/sinks/{resource_id}:li" +
+      "stAccessBindings\022\340\001\n\021SetAccessBindings\022-" +
+      ".yandex.cloud.access.SetAccessBindingsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"y\202\323\344\223\0026\"1/logging/v1/sinks/{resource_id" +
+      "}:setAccessBindings:\001*\262\322*9\n access.SetAc" +
+      "cessBindingsMetadata\022\025google.protobuf.Em" +
+      "pty\022\354\001\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\177\202\323\344\223\002" +
+      "924/logging/v1/sinks/{resource_id}:updat" +
+      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "tyBb\n\033yandex.cloud.api.logging.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/logging/v1;loggingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.logging.v1.SinkOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -12544,8 +12544,8 @@ public final class SinkServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.logging.v1.SinkOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

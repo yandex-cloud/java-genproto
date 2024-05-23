@@ -37318,7 +37318,7 @@ public final class Postgresql16 {
       "postgresql16.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\275l\n\022PostgresqlConfig16\0224\n\017max_connectio" +
+      "\"\345l\n\022PostgresqlConfig16\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -37665,7 +37665,8 @@ public final class Postgresql16 {
       "ML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X" +
       "\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022" +
       "\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_C" +
-      "ONTENT\020\002\"\217\002\n\025PostgresqlConfigSet16\022S\n\020ef" +
+      "ONTENT\020\002J\004\010N\020PJ\004\010j\020kJ\004\010}\020~J\006\010\225\001\020\226\001J\006\010\246\001\020" +
+      "\247\001J\004\010@\020A\"\217\002\n\025PostgresqlConfigSet16\022S\n\020ef" +
       "fective_config\030\001 \001(\01329.yandex.cloud.mdb." +
       "postgresql.v1.config.PostgresqlConfig16\022" +
       "N\n\013user_config\030\002 \001(\01329.yandex.cloud.mdb." +

@@ -19002,9 +19002,9 @@ public final class BackendGroupServiceOuterClass {
       "d_group_service.proto\022\037yandex.cloud.appl" +
       "oadbalancer.v1\032\034google/api/annotations.p" +
       "roto\032 google/protobuf/field_mask.proto\032 " +
-      "yandex/cloud/api/operation.proto\032&yandex" +
-      "/cloud/operation/operation.proto\0323yandex" +
+      "yandex/cloud/api/operation.proto\0323yandex" +
       "/cloud/apploadbalancer/v1/backend_group." +
+      "proto\032&yandex/cloud/operation/operation." +
       "proto\032\035yandex/cloud/validation.proto\"8\n\026" +
       "GetBackendGroupRequest\022\036\n\020backend_group_" +
       "id\030\001 \001(\tB\004\350\3071\001\"\215\001\n\030ListBackendGroupsRequ" +
@@ -19049,86 +19049,87 @@ public final class BackendGroupServiceOuterClass {
       "balancer.v1.StreamBackendGroupH\000\032-\n\013Labe" +
       "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B" +
       "\t\n\007backend\"6\n\032CreateBackendGroupMetadata" +
-      "\022\030\n\020backend_group_id\030\001 \001(\t\"\202\002\n\021AddBacken" +
+      "\022\030\n\020backend_group_id\030\001 \001(\t\"\210\002\n\021AddBacken" +
       "dRequest\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001" +
       "\022<\n\004http\030\002 \001(\0132,.yandex.cloud.apploadbal" +
       "ancer.v1.HttpBackendH\000\022<\n\004grpc\030\003 \001(\0132,.y" +
       "andex.cloud.apploadbalancer.v1.GrpcBacke" +
       "ndH\000\022@\n\006stream\030\005 \001(\0132..yandex.cloud.appl" +
       "oadbalancer.v1.StreamBackendH\000B\017\n\007backen" +
-      "d\022\004\300\3011\001\"D\n\022AddBackendMetadata\022\030\n\020backend" +
-      "_group_id\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\266\002" +
-      "\n\024UpdateBackendRequest\022\036\n\020backend_group_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022<\n\004http\030\003 \001(\0132,." +
-      "yandex.cloud.apploadbalancer.v1.HttpBack" +
-      "endH\000\022<\n\004grpc\030\004 \001(\0132,.yandex.cloud.applo" +
-      "adbalancer.v1.GrpcBackendH\000\022@\n\006stream\030\005 " +
-      "\001(\0132..yandex.cloud.apploadbalancer.v1.St" +
-      "reamBackendH\000B\017\n\007backend\022\004\300\3011\001\"G\n\025Update" +
-      "BackendMetadata\022\030\n\020backend_group_id\030\001 \001(" +
-      "\t\022\024\n\014backend_name\030\002 \001(\t\"R\n\024RemoveBackend" +
-      "Request\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\032\n\014backend_name\030\002 \001(\tB\004\350\3071\001\"G\n\025RemoveBac" +
-      "kendMetadata\022\030\n\020backend_group_id\030\001 \001(\t\022\024" +
-      "\n\014backend_name\030\002 \001(\t\"\211\001\n!ListBackendGrou" +
-      "pOperationsRequest\022&\n\020backend_group_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"t\n\"ListBackendGroupOperationsResponse\0225" +
-      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
-      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\361" +
-      "\016\n\023BackendGroupService\022\253\001\n\003Get\0227.yandex." +
-      "cloud.apploadbalancer.v1.GetBackendGroup" +
-      "Request\032-.yandex.cloud.apploadbalancer.v" +
-      "1.BackendGroup\"<\202\323\344\223\0026\0224/apploadbalancer" +
-      "/v1/backendGroups/{backend_group_id}\022\250\001\n" +
-      "\004List\0229.yandex.cloud.apploadbalancer.v1." +
-      "ListBackendGroupsRequest\032:.yandex.cloud." +
-      "apploadbalancer.v1.ListBackendGroupsResp" +
-      "onse\")\202\323\344\223\002#\022!/apploadbalancer/v1/backen" +
-      "dGroups\022\303\001\n\006Create\022:.yandex.cloud.apploa" +
-      "dbalancer.v1.CreateBackendGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"Z\202\323\344\223\002" +
-      "&\"!/apploadbalancer/v1/backendGroups:\001*\262" +
-      "\322**\n\032CreateBackendGroupMetadata\022\014Backend" +
-      "Group\022\326\001\n\006Update\022:.yandex.cloud.apploadb" +
-      "alancer.v1.UpdateBackendGroupRequest\032!.y" +
-      "andex.cloud.operation.Operation\"m\202\323\344\223\00292" +
-      "4/apploadbalancer/v1/backendGroups/{back" +
-      "end_group_id}:\001*\262\322**\n\032UpdateBackendGroup" +
-      "Metadata\022\014BackendGroup\022\334\001\n\006Delete\022:.yand" +
-      "ex.cloud.apploadbalancer.v1.DeleteBacken" +
-      "dGroupRequest\032!.yandex.cloud.operation.O" +
-      "peration\"s\202\323\344\223\0026*4/apploadbalancer/v1/ba" +
-      "ckendGroups/{backend_group_id}\262\322*3\n\032Dele" +
-      "teBackendGroupMetadata\022\025google.protobuf." +
-      "Empty\022\325\001\n\nAddBackend\0222.yandex.cloud.appl" +
-      "oadbalancer.v1.AddBackendRequest\032!.yande" +
-      "x.cloud.operation.Operation\"p\202\323\344\223\002D\"?/ap" +
-      "ploadbalancer/v1/backendGroups/{backend_" +
-      "group_id}:addBackend:\001*\262\322*\"\n\022AddBackendM" +
-      "etadata\022\014BackendGroup\022\341\001\n\rRemoveBackend\022" +
-      "5.yandex.cloud.apploadbalancer.v1.Remove" +
-      "BackendRequest\032!.yandex.cloud.operation." +
-      "Operation\"v\202\323\344\223\002G\"B/apploadbalancer/v1/b" +
-      "ackendGroups/{backend_group_id}:removeBa" +
-      "ckend:\001*\262\322*%\n\025RemoveBackendMetadata\022\014Bac" +
-      "kendGroup\022\341\001\n\rUpdateBackend\0225.yandex.clo" +
-      "ud.apploadbalancer.v1.UpdateBackendReque" +
-      "st\032!.yandex.cloud.operation.Operation\"v\202" +
-      "\323\344\223\002G\"B/apploadbalancer/v1/backendGroups" +
-      "/{backend_group_id}:updateBackend:\001*\262\322*%" +
-      "\n\025UpdateBackendMetadata\022\014BackendGroup\022\342\001" +
-      "\n\016ListOperations\022B.yandex.cloud.apploadb" +
-      "alancer.v1.ListBackendGroupOperationsReq" +
-      "uest\032C.yandex.cloud.apploadbalancer.v1.L" +
-      "istBackendGroupOperationsResponse\"G\202\323\344\223\002" +
-      "A\022?/apploadbalancer/v1/backendGroups/{ba" +
-      "ckend_group_id}/operationsBz\n#yandex.clo" +
-      "ud.api.apploadbalancer.v1ZSgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/appl" +
-      "oadbalancer/v1;apploadbalancerb\006proto3"
+      "d\022\004\300\3011\001J\004\010\004\020\005\"D\n\022AddBackendMetadata\022\030\n\020b" +
+      "ackend_group_id\030\001 \001(\t\022\024\n\014backend_name\030\002 " +
+      "\001(\t\"\266\002\n\024UpdateBackendRequest\022\036\n\020backend_" +
+      "group_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022<\n\004http\030\003 " +
+      "\001(\0132,.yandex.cloud.apploadbalancer.v1.Ht" +
+      "tpBackendH\000\022<\n\004grpc\030\004 \001(\0132,.yandex.cloud" +
+      ".apploadbalancer.v1.GrpcBackendH\000\022@\n\006str" +
+      "eam\030\005 \001(\0132..yandex.cloud.apploadbalancer" +
+      ".v1.StreamBackendH\000B\017\n\007backend\022\004\300\3011\001\"G\n\025" +
+      "UpdateBackendMetadata\022\030\n\020backend_group_i" +
+      "d\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"R\n\024RemoveB" +
+      "ackendRequest\022\036\n\020backend_group_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\032\n\014backend_name\030\002 \001(\tB\004\350\3071\001\"G\n\025Rem" +
+      "oveBackendMetadata\022\030\n\020backend_group_id\030\001" +
+      " \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\211\001\n!ListBacke" +
+      "ndGroupOperationsRequest\022&\n\020backend_grou" +
+      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"t\n\"ListBackendGroupOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t2\361\016\n\023BackendGroupService\022\253\001\n\003Get\0227.y" +
+      "andex.cloud.apploadbalancer.v1.GetBacken" +
+      "dGroupRequest\032-.yandex.cloud.apploadbala" +
+      "ncer.v1.BackendGroup\"<\202\323\344\223\0026\0224/apploadba" +
+      "lancer/v1/backendGroups/{backend_group_i" +
+      "d}\022\250\001\n\004List\0229.yandex.cloud.apploadbalanc" +
+      "er.v1.ListBackendGroupsRequest\032:.yandex." +
+      "cloud.apploadbalancer.v1.ListBackendGrou" +
+      "psResponse\")\202\323\344\223\002#\022!/apploadbalancer/v1/" +
+      "backendGroups\022\303\001\n\006Create\022:.yandex.cloud." +
+      "apploadbalancer.v1.CreateBackendGroupReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "Z\202\323\344\223\002&\"!/apploadbalancer/v1/backendGrou" +
+      "ps:\001*\262\322**\n\032CreateBackendGroupMetadata\022\014B" +
+      "ackendGroup\022\326\001\n\006Update\022:.yandex.cloud.ap" +
+      "ploadbalancer.v1.UpdateBackendGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"m\202" +
+      "\323\344\223\002924/apploadbalancer/v1/backendGroups" +
+      "/{backend_group_id}:\001*\262\322**\n\032UpdateBacken" +
+      "dGroupMetadata\022\014BackendGroup\022\334\001\n\006Delete\022" +
+      ":.yandex.cloud.apploadbalancer.v1.Delete" +
+      "BackendGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"s\202\323\344\223\0026*4/apploadbalancer" +
+      "/v1/backendGroups/{backend_group_id}\262\322*3" +
+      "\n\032DeleteBackendGroupMetadata\022\025google.pro" +
+      "tobuf.Empty\022\325\001\n\nAddBackend\0222.yandex.clou" +
+      "d.apploadbalancer.v1.AddBackendRequest\032!" +
+      ".yandex.cloud.operation.Operation\"p\202\323\344\223\002" +
+      "D\"?/apploadbalancer/v1/backendGroups/{ba" +
+      "ckend_group_id}:addBackend:\001*\262\322*\"\n\022AddBa" +
+      "ckendMetadata\022\014BackendGroup\022\341\001\n\rRemoveBa" +
+      "ckend\0225.yandex.cloud.apploadbalancer.v1." +
+      "RemoveBackendRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"v\202\323\344\223\002G\"B/apploadbalance" +
+      "r/v1/backendGroups/{backend_group_id}:re" +
+      "moveBackend:\001*\262\322*%\n\025RemoveBackendMetadat" +
+      "a\022\014BackendGroup\022\341\001\n\rUpdateBackend\0225.yand" +
+      "ex.cloud.apploadbalancer.v1.UpdateBacken" +
+      "dRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"v\202\323\344\223\002G\"B/apploadbalancer/v1/backend" +
+      "Groups/{backend_group_id}:updateBackend:" +
+      "\001*\262\322*%\n\025UpdateBackendMetadata\022\014BackendGr" +
+      "oup\022\342\001\n\016ListOperations\022B.yandex.cloud.ap" +
+      "ploadbalancer.v1.ListBackendGroupOperati" +
+      "onsRequest\032C.yandex.cloud.apploadbalance" +
+      "r.v1.ListBackendGroupOperationsResponse\"" +
+      "G\202\323\344\223\002A\022?/apploadbalancer/v1/backendGrou" +
+      "ps/{backend_group_id}/operationsBz\n#yand" +
+      "ex.cloud.api.apploadbalancer.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/apploadbalancer/v1;apploadbalancerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19136,8 +19137,8 @@ public final class BackendGroupServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_apploadbalancer_v1_GetBackendGroupRequest_descriptor =
@@ -19270,8 +19271,8 @@ public final class BackendGroupServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

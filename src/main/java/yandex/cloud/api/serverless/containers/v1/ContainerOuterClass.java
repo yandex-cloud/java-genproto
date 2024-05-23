@@ -16802,7 +16802,7 @@ public final class ContainerOuterClass {
       ".containers.v1\032\036google/protobuf/duration" +
       ".proto\032\037google/protobuf/timestamp.proto\032" +
       "\'yandex/cloud/logging/v1/log_entry.proto" +
-      "\032\035yandex/cloud/validation.proto\"\245\003\n\tCont" +
+      "\032\035yandex/cloud/validation.proto\"\253\003\n\tCont" +
       "ainer\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
       "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
       "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
@@ -16813,64 +16813,64 @@ public final class ContainerOuterClass {
       "tus\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
       "\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETI" +
-      "NG\020\003\022\t\n\005ERROR\020\004\"\254\007\n\010Revision\022\n\n\002id\030\001 \001(\t" +
-      "\022\024\n\014container_id\030\002 \001(\t\022\023\n\013description\030\003 " +
-      "\001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022;\n\005image\030\005 \001(\0132,.yandex.clou" +
-      "d.serverless.containers.v1.Image\022C\n\treso" +
-      "urces\030\006 \001(\01320.yandex.cloud.serverless.co" +
-      "ntainers.v1.Resources\0224\n\021execution_timeo" +
-      "ut\030\007 \001(\0132\031.google.protobuf.Duration\022\023\n\013c" +
-      "oncurrency\030\010 \001(\003\022\032\n\022service_account_id\030\t" +
-      " \001(\t\022F\n\006status\030\n \001(\01626.yandex.cloud.serv" +
-      "erless.containers.v1.Revision.Status\022>\n\007" +
-      "secrets\030\013 \003(\0132-.yandex.cloud.serverless." +
-      "containers.v1.Secret\022I\n\014connectivity\030\014 \001" +
-      "(\01323.yandex.cloud.serverless.containers." +
-      "v1.Connectivity\022P\n\020provision_policy\030\r \001(" +
-      "\01326.yandex.cloud.serverless.containers.v" +
-      "1.ProvisionPolicy\022L\n\016scaling_policy\030\016 \001(" +
-      "\01324.yandex.cloud.serverless.containers.v" +
-      "1.ScalingPolicy\022F\n\013log_options\030\017 \001(\01321.y" +
-      "andex.cloud.serverless.containers.v1.Log" +
-      "Options\022K\n\016storage_mounts\030\020 \003(\01323.yandex" +
-      ".cloud.serverless.containers.v1.StorageM" +
-      "ount\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OBSOLETE\020\003\"\360" +
-      "\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n\014image_dig" +
-      "est\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..yandex.clou" +
-      "d.serverless.containers.v1.Command\0229\n\004ar" +
-      "gs\030\004 \001(\0132+.yandex.cloud.serverless.conta" +
-      "iners.v1.Args\022y\n\013environment\030\005 \003(\0132=.yan" +
-      "dex.cloud.serverless.containers.v1.Image" +
-      ".EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA" +
-      "-Z][a-zA-Z0-9_]*\022\023\n\013working_dir\030\006 \001(\t\0322\n" +
-      "\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007command\030\001 \003(\t\"\024\n" +
-      "\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResources\022(\n\006memo" +
-      "ry\030\001 \001(\003B\030\372\3071\024134217728-4294967296\022\026\n\005co" +
-      "res\030\002 \001(\003B\007\372\3071\0030-2\022 \n\rcore_fraction\030\003 \001(" +
-      "\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n\rmin_i" +
-      "nstances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\n" +
-      "version_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environ" +
-      "ment_variable\030\004 \001(\tH\000B\013\n\treference\"B\n\014Co" +
-      "nnectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\036\n\nsubnet" +
-      "_ids\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\340\001\n\nLogOptions\022\020\n" +
-      "\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362" +
-      "\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\t" +
-      "folder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-" +
-      "9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yand" +
-      "ex.cloud.logging.v1.LogLevel.LevelB\r\n\013de" +
-      "stination\"J\n\rScalingPolicy\022\034\n\024zone_insta" +
-      "nces_limit\030\001 \001(\003\022\033\n\023zone_requests_limit\030" +
-      "\002 \001(\003\"\246\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001(" +
-      "\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pre" +
-      "fix\030\002 \001(\t\022\021\n\tread_only\030\004 \001(\010\022:\n\020mount_po" +
-      "int_path\030\005 \001(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a" +
-      "-zA-Z/]*J\004\010\003\020\004B\201\001\n)yandex.cloud.api.serv" +
-      "erless.containers.v1ZTgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/serverles" +
-      "s/containers/v1;containersb\006proto3"
+      "NG\020\003\022\t\n\005ERROR\020\004J\004\010\007\020\010\"\254\007\n\010Revision\022\n\n\002id" +
+      "\030\001 \001(\t\022\024\n\014container_id\030\002 \001(\t\022\023\n\013descript" +
+      "ion\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022;\n\005image\030\005 \001(\0132,.yande" +
+      "x.cloud.serverless.containers.v1.Image\022C" +
+      "\n\tresources\030\006 \001(\01320.yandex.cloud.serverl" +
+      "ess.containers.v1.Resources\0224\n\021execution" +
+      "_timeout\030\007 \001(\0132\031.google.protobuf.Duratio" +
+      "n\022\023\n\013concurrency\030\010 \001(\003\022\032\n\022service_accoun" +
+      "t_id\030\t \001(\t\022F\n\006status\030\n \001(\01626.yandex.clou" +
+      "d.serverless.containers.v1.Revision.Stat" +
+      "us\022>\n\007secrets\030\013 \003(\0132-.yandex.cloud.serve" +
+      "rless.containers.v1.Secret\022I\n\014connectivi" +
+      "ty\030\014 \001(\01323.yandex.cloud.serverless.conta" +
+      "iners.v1.Connectivity\022P\n\020provision_polic" +
+      "y\030\r \001(\01326.yandex.cloud.serverless.contai" +
+      "ners.v1.ProvisionPolicy\022L\n\016scaling_polic" +
+      "y\030\016 \001(\01324.yandex.cloud.serverless.contai" +
+      "ners.v1.ScalingPolicy\022F\n\013log_options\030\017 \001" +
+      "(\01321.yandex.cloud.serverless.containers." +
+      "v1.LogOptions\022K\n\016storage_mounts\030\020 \003(\01323." +
+      "yandex.cloud.serverless.containers.v1.St" +
+      "orageMount\"H\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OBSOLE" +
+      "TE\020\003\"\360\002\n\005Image\022\021\n\timage_url\030\001 \001(\t\022\024\n\014ima" +
+      "ge_digest\030\002 \001(\t\022?\n\007command\030\003 \001(\0132..yande" +
+      "x.cloud.serverless.containers.v1.Command" +
+      "\0229\n\004args\030\004 \001(\0132+.yandex.cloud.serverless" +
+      ".containers.v1.Args\022y\n\013environment\030\005 \003(\013" +
+      "2=.yandex.cloud.serverless.containers.v1" +
+      ".Image.EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022" +
+      "\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013working_dir\030\006 " +
+      "\001(\t\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007command\030\001 " +
+      "\003(\t\"\024\n\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResources\022(" +
+      "\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-4294967296" +
+      "\022\026\n\005cores\030\002 \001(\003B\007\372\3071\0030-2\022 \n\rcore_fractio" +
+      "n\030\003 \001(\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n" +
+      "\rmin_instances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001" +
+      "(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024e" +
+      "nvironment_variable\030\004 \001(\tH\000B\013\n\treference" +
+      "\"B\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\036\n\n" +
+      "subnet_ids\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\340\001\n\nLogOpti" +
+      "ons\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002 " +
+      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
+      "H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-" +
+      "zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162" +
+      "\'.yandex.cloud.logging.v1.LogLevel.Level" +
+      "B\r\n\013destination\"J\n\rScalingPolicy\022\034\n\024zone" +
+      "_instances_limit\030\001 \001(\003\022\033\n\023zone_requests_" +
+      "limit\030\002 \001(\003\"\246\001\n\014StorageMount\0221\n\tbucket_i" +
+      "d\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022" +
+      "\016\n\006prefix\030\002 \001(\t\022\021\n\tread_only\030\004 \001(\010\022:\n\020mo" +
+      "unt_point_path\030\005 \001(\tB \350\3071\001\212\3101\0051-300\362\3071\017[" +
+      "-_0-9a-zA-Z/]*J\004\010\003\020\004B\201\001\n)yandex.cloud.ap" +
+      "i.serverless.containers.v1ZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ser" +
+      "verless/containers/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -5535,7 +5535,7 @@ public final class Redis {
       "\n,yandex/cloud/mdb/redis/v1/config/redis" +
       ".proto\022 yandex.cloud.mdb.redis.v1.config" +
       "\032\036google/protobuf/wrappers.proto\032\035yandex" +
-      "/cloud/validation.proto\"\200\t\n\013RedisConfig\022" +
+      "/cloud/validation.proto\"\214\t\n\013RedisConfig\022" +
       "W\n\020maxmemory_policy\030\001 \001(\0162=.yandex.cloud" +
       ".mdb.redis.v1.config.RedisConfig.Maxmemo" +
       "ryPolicy\022,\n\007timeout\030\002 \001(\0132\033.google.proto" +
@@ -5554,26 +5554,26 @@ public final class Redis {
       ".yandex.cloud.mdb.redis.v1.config.RedisC" +
       "onfig.ClientOutputBufferLimit\022@\n\021maxmemo" +
       "ry_percent\030\n \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\010\372\3071\0041-75\032\311\001\n\027ClientOutputBufferLi" +
+      "ValueB\010\372\3071\0041-75\032\325\001\n\027ClientOutputBufferLi" +
       "mit\0228\n\nhard_limit\030\001 \001(\0132\033.google.protobu" +
       "f.Int64ValueB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(" +
       "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
       ":\n\014soft_seconds\030\005 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\"\304\001\n\017MaxmemoryPolicy\022" +
-      " \n\034MAXMEMORY_POLICY_UNSPECIFIED\020\000\022\020\n\014VOL" +
-      "ATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE" +
-      "_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n\017VOLATILE_RAND" +
-      "OM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL" +
-      "\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016RedisConfigSet\022G\n" +
-      "\020effective_config\030\001 \001(\0132-.yandex.cloud.m" +
-      "db.redis.v1.config.RedisConfig\022B\n\013user_c" +
-      "onfig\030\002 \001(\0132-.yandex.cloud.mdb.redis.v1." +
-      "config.RedisConfig\022E\n\016default_config\030\003 \001" +
-      "(\0132-.yandex.cloud.mdb.redis.v1.config.Re" +
-      "disConfigBr\n$yandex.cloud.api.mdb.redis." +
-      "v1.configZJgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/redis/v1/config;" +
-      "redisb\006proto3"
+      "Int64ValueB\007\372\3071\003>=0J\004\010\004\020\005J\004\010\002\020\003\"\304\001\n\017Maxm" +
+      "emoryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPECIF" +
+      "IED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU\020\002" +
+      "\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n\017V" +
+      "OLATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020\n\014" +
+      "VOLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016Redis" +
+      "ConfigSet\022G\n\020effective_config\030\001 \001(\0132-.ya" +
+      "ndex.cloud.mdb.redis.v1.config.RedisConf" +
+      "ig\022B\n\013user_config\030\002 \001(\0132-.yandex.cloud.m" +
+      "db.redis.v1.config.RedisConfig\022E\n\016defaul" +
+      "t_config\030\003 \001(\0132-.yandex.cloud.mdb.redis." +
+      "v1.config.RedisConfigBr\n$yandex.cloud.ap" +
+      "i.mdb.redis.v1.configZJgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/redi" +
+      "s/v1/config;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

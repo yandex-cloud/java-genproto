@@ -15014,11 +15014,11 @@ public final class ClusterOuterClass {
       "proto\022\035yandex.cloud.mdb.greenplum.v1\032\037go" +
       "ogle/protobuf/timestamp.proto\032\036google/pr" +
       "otobuf/wrappers.proto\032\033google/type/timeo" +
-      "fday.proto\032\035yandex/cloud/validation.prot" +
-      "o\032*yandex/cloud/mdb/greenplum/v1/config." +
-      "proto\032/yandex/cloud/mdb/greenplum/v1/mai" +
-      "ntenance.proto\032\'yandex/cloud/mdb/greenpl" +
-      "um/v1/pxf.proto\"\365\013\n\007Cluster\022\n\n\002id\030\001 \001(\t\022" +
+      "fday.proto\032*yandex/cloud/mdb/greenplum/v" +
+      "1/config.proto\032/yandex/cloud/mdb/greenpl" +
+      "um/v1/maintenance.proto\032\'yandex/cloud/md" +
+      "b/greenplum/v1/pxf.proto\032\035yandex/cloud/v" +
+      "alidation.proto\"\373\013\n\007Cluster\022\n\n\002id\030\001 \001(\t\022" +
       "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\032\n\004name\030\004 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132..yandex." +
@@ -15056,50 +15056,50 @@ public final class ClusterOuterClass {
       "ED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006Status\022\022\n\016STATUS" +
       "_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n" +
       "\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007" +
-      "STOPPED\020\006\022\014\n\010STARTING\020\007\"\311\006\n\020ClusterConfi" +
-      "gSet\022s\n\031greenplum_config_set_6_17\030\001 \001(\0132" +
+      "STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\031\020\032\"\317\006\n\020Cluste" +
+      "rConfigSet\022s\n\031greenplum_config_set_6_17\030" +
+      "\001 \001(\01325.yandex.cloud.mdb.greenplum.v1.Gr" +
+      "eenplumConfigSet6_17H\000R\027greenplumConfigS" +
+      "et_6_17\022s\n\031greenplum_config_set_6_19\030\002 \001" +
+      "(\01325.yandex.cloud.mdb.greenplum.v1.Green" +
+      "plumConfigSet6_19H\000R\027greenplumConfigSet_" +
+      "6_19\022s\n\031greenplum_config_set_6_21\030\004 \001(\0132" +
       "5.yandex.cloud.mdb.greenplum.v1.Greenplu" +
-      "mConfigSet6_17H\000R\027greenplumConfigSet_6_1" +
-      "7\022s\n\031greenplum_config_set_6_19\030\002 \001(\01325.y" +
+      "mConfigSet6_21H\000R\027greenplumConfigSet_6_2" +
+      "1\022s\n\031greenplum_config_set_6_22\030\005 \001(\01325.y" +
       "andex.cloud.mdb.greenplum.v1.GreenplumCo" +
-      "nfigSet6_19H\000R\027greenplumConfigSet_6_19\022s" +
-      "\n\031greenplum_config_set_6_21\030\004 \001(\01325.yand" +
-      "ex.cloud.mdb.greenplum.v1.GreenplumConfi" +
-      "gSet6_21H\000R\027greenplumConfigSet_6_21\022s\n\031g" +
-      "reenplum_config_set_6_22\030\005 \001(\01325.yandex." +
+      "nfigSet6_22H\000R\027greenplumConfigSet_6_22\022j" +
+      "\n\026greenplum_config_set_6\030\t \001(\01322.yandex." +
       "cloud.mdb.greenplum.v1.GreenplumConfigSe" +
-      "t6_22H\000R\027greenplumConfigSet_6_22\022j\n\026gree" +
-      "nplum_config_set_6\030\t \001(\01322.yandex.cloud." +
-      "mdb.greenplum.v1.GreenplumConfigSet6H\000R\024" +
-      "greenplumConfigSet_6\022F\n\004pool\030\003 \001(\01328.yan" +
-      "dex.cloud.mdb.greenplum.v1.ConnectionPoo" +
-      "lerConfigSet\022X\n\025background_activities\030\006 " +
-      "\001(\01329.yandex.cloud.mdb.greenplum.v1.Back" +
-      "groundActivitiesConfig\022?\n\npxf_config\030\010 \001" +
-      "(\0132+.yandex.cloud.mdb.greenplum.v1.PXFCo" +
-      "nfigSetB\022\n\020greenplum_config\"=\n\nMonitorin" +
-      "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
-      "link\030\003 \001(\t\"\252\002\n\017GreenplumConfig\022\017\n\007versio" +
-      "n\030\001 \001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.g" +
-      "oogle.type.TimeOfDay\022H\n\031backup_retain_pe" +
-      "riod_days\030\t \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\010\372\3071\0041-60\0225\n\006access\030\003 \001(\0132%.yandex." +
-      "cloud.mdb.greenplum.v1.Access\022\031\n\007zone_id" +
-      "\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101" +
-      "\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Acces" +
-      "s\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n" +
-      "\rdata_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestor" +
-      "eConfig\0223\n\023backup_window_start\030\001 \001(\0132\026.g" +
-      "oogle.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.y" +
-      "andex.cloud.mdb.greenplum.v1.Access\022\031\n\007z" +
-      "one_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(" +
-      "\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n" +
-      "\020RestoreResources\022\032\n\022resource_preset_id\030" +
-      "\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\036\n\014CloudStorage" +
-      "\022\016\n\006enable\030\001 \001(\010Bp\n!yandex.cloud.api.mdb" +
-      ".greenplum.v1ZKgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/mdb/greenplum/v1" +
-      ";greenplumb\006proto3"
+      "t6H\000R\024greenplumConfigSet_6\022F\n\004pool\030\003 \001(\013" +
+      "28.yandex.cloud.mdb.greenplum.v1.Connect" +
+      "ionPoolerConfigSet\022X\n\025background_activit" +
+      "ies\030\006 \001(\01329.yandex.cloud.mdb.greenplum.v" +
+      "1.BackgroundActivitiesConfig\022?\n\npxf_conf" +
+      "ig\030\010 \001(\0132+.yandex.cloud.mdb.greenplum.v1" +
+      ".PXFConfigSetB\022\n\020greenplum_configJ\004\010\007\020\010\"" +
+      "=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\260\002\n\017GreenplumConf" +
+      "ig\022\017\n\007version\030\001 \001(\t\0223\n\023backup_window_sta" +
+      "rt\030\002 \001(\0132\026.google.type.TimeOfDay\022H\n\031back" +
+      "up_retain_period_days\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\010\372\3071\0041-60\0225\n\006access\030\003 \001" +
+      "(\0132%.yandex.cloud.mdb.greenplum.v1.Acces" +
+      "s\022\031\n\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_i" +
+      "d\030\005 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\006 " +
+      "\001(\010J\004\010\007\020\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017" +
+      "\n\007web_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\326" +
+      "\001\n\026GreenplumRestoreConfig\0223\n\023backup_wind" +
+      "ow_start\030\001 \001(\0132\026.google.type.TimeOfDay\0225" +
+      "\n\006access\030\002 \001(\0132%.yandex.cloud.mdb.greenp" +
+      "lum.v1.Access\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50" +
+      "\022\033\n\tsubnet_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_" +
+      "public_ip\030\005 \001(\010\"A\n\020RestoreResources\022\032\n\022r" +
+      "esource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001" +
+      "(\003\"\036\n\014CloudStorage\022\016\n\006enable\030\001 \001(\010Bp\n!ya" +
+      "ndex.cloud.api.mdb.greenplum.v1ZKgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15107,10 +15107,10 @@ public final class ClusterOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
-          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.Pxf.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -15176,10 +15176,10 @@ public final class ClusterOuterClass {
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
-    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.Maintenance.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.Pxf.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -41178,7 +41178,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\344-\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\276.\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -41189,7 +41189,7 @@ public final class TriggerOuterClass {
       ".RuleB\004\350\3071\001\022C\n\006status\030\t \001(\01623.yandex.clo" +
       "ud.serverless.triggers.v1.Trigger.Status" +
       "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032\366\006\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex" +
+      "\001(\t:\0028\001\032\374\006\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex" +
       ".cloud.serverless.triggers.v1.Trigger.Ti" +
       "merH\000\022R\n\rmessage_queue\030\003 \001(\01329.yandex.cl" +
       "oud.serverless.triggers.v1.Trigger.Messa" +
@@ -41211,167 +41211,170 @@ public final class TriggerOuterClass {
       "stream\030\014 \001(\0132/.yandex.cloud.serverless.t" +
       "riggers.v1.DataStreamH\000\0229\n\004mail\030\r \001(\0132)." +
       "yandex.cloud.serverless.triggers.v1.Mail" +
-      "H\000B\014\n\004rule\022\004\300\3011\001\032\341\003\n\005Timer\022&\n\017cron_expre" +
-      "ssion\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\033\n\007payload\030\002 " +
-      "\001(\tB\n\212\3101\006<=4096\022R\n\017invoke_function\030e \001(\013" +
-      "27.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeFunctionOnceH\000\022b\n\032invoke_function_w" +
-      "ith_retry\030g \001(\0132<.yandex.cloud.serverles" +
-      "s.triggers.v1.InvokeFunctionWithRetryH\000\022" +
-      "d\n\033invoke_container_with_retry\030h \001(\0132=.y" +
+      "H\000B\014\n\004rule\022\004\300\3011\001J\004\010\007\020\t\032\355\003\n\005Timer\022&\n\017cron" +
+      "_expression\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022\033\n\007payl" +
+      "oad\030\002 \001(\tB\n\212\3101\006<=4096\022R\n\017invoke_function" +
+      "\030e \001(\01327.yandex.cloud.serverless.trigger" +
+      "s.v1.InvokeFunctionOnceH\000\022b\n\032invoke_func" +
+      "tion_with_retry\030g \001(\0132<.yandex.cloud.ser" +
+      "verless.triggers.v1.InvokeFunctionWithRe" +
+      "tryH\000\022d\n\033invoke_container_with_retry\030h \001" +
+      "(\0132=.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeContainerWithRetryH\000\022e\n\033gateway_w" +
+      "ebsocket_broadcast\030i \001(\0132>.yandex.cloud." +
+      "serverless.triggers.v1.GatewayWebsocketB" +
+      "roadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020gJ\004\010\003\020e\032\221" +
+      "\004\n\014MessageQueue\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022" +
+      "(\n\022service_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022P\n\016batch_settings\030\004 \001(\01322.yandex.cloud" +
+      ".serverless.triggers.v1.BatchSettingsB\004\350" +
+      "\3071\001\022@\n\022visibility_timeout\030\005 \001(\0132\031.google" +
+      ".protobuf.DurationB\t\372\3071\005<=12h\022R\n\017invoke_" +
+      "function\030e \001(\01327.yandex.cloud.serverless" +
+      ".triggers.v1.InvokeFunctionOnceH\000\022T\n\020inv" +
+      "oke_container\030f \001(\01328.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeContainerOnceH\000\022" +
+      "e\n\033gateway_websocket_broadcast\030g \001(\0132>.y" +
+      "andex.cloud.serverless.triggers.v1.Gatew" +
+      "ayWebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001J\004" +
+      "\010\014\020eJ\004\010\006\020\013\032\313\003\n\nIoTMessage\022\031\n\013registry_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nmqtt_" +
+      "topic\030\003 \001(\t\022J\n\016batch_settings\030\004 \001(\01322.ya" +
+      "ndex.cloud.serverless.triggers.v1.BatchS" +
+      "ettings\022W\n\017invoke_function\030e \001(\0132<.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeFun" +
+      "ctionWithRetryH\000\022Y\n\020invoke_container\030f \001" +
+      "(\0132=.yandex.cloud.serverless.triggers.v1" +
+      ".InvokeContainerWithRetryH\000\022e\n\033gateway_w" +
+      "ebsocket_broadcast\030g \001(\0132>.yandex.cloud." +
+      "serverless.triggers.v1.GatewayWebsocketB" +
+      "roadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\005\020e\032\274\003\n\020IoT" +
+      "BrokerMessage\022\027\n\tbroker_id\030\001 \001(\tB\004\350\3071\001\022\022" +
+      "\n\nmqtt_topic\030\002 \001(\t\022J\n\016batch_settings\030\003 \001" +
+      "(\01322.yandex.cloud.serverless.triggers.v1" +
+      ".BatchSettings\022W\n\017invoke_function\030e \001(\0132" +
+      "<.yandex.cloud.serverless.triggers.v1.In" +
+      "vokeFunctionWithRetryH\000\022Y\n\020invoke_contai" +
+      "ner\030f \001(\0132=.yandex.cloud.serverless.trig" +
+      "gers.v1.InvokeContainerWithRetryH\000\022e\n\033ga" +
+      "teway_websocket_broadcast\030g \001(\0132>.yandex" +
+      ".cloud.serverless.triggers.v1.GatewayWeb" +
+      "socketBroadcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\004\020e\032" +
+      "\246\004\n\rObjectStorage\022_\n\nevent_type\030\003 \003(\0162C." +
+      "yandex.cloud.serverless.triggers.v1.Trig" +
+      "ger.ObjectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbu" +
+      "cket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030" +
+      "\007 \001(\t\022J\n\016batch_settings\030\010 \001(\01322.yandex.c" +
+      "loud.serverless.triggers.v1.BatchSetting" +
+      "s\022W\n\017invoke_function\030e \001(\0132<.yandex.clou" +
+      "d.serverless.triggers.v1.InvokeFunctionW" +
+      "ithRetryH\000\022Y\n\020invoke_container\030f \001(\0132=.y" +
       "andex.cloud.serverless.triggers.v1.Invok" +
       "eContainerWithRetryH\000\022e\n\033gateway_websock" +
-      "et_broadcast\030i \001(\0132>.yandex.cloud.server" +
-      "less.triggers.v1.GatewayWebsocketBroadca" +
-      "stH\000B\016\n\006action\022\004\300\3011\001\032\205\004\n\014MessageQueue\022\026\n" +
-      "\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_account" +
-      "_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_setting" +
-      "s\030\004 \001(\01322.yandex.cloud.serverless.trigge" +
-      "rs.v1.BatchSettingsB\004\350\3071\001\022@\n\022visibility_" +
-      "timeout\030\005 \001(\0132\031.google.protobuf.Duration" +
-      "B\t\372\3071\005<=12h\022R\n\017invoke_function\030e \001(\01327.y" +
-      "andex.cloud.serverless.triggers.v1.Invok" +
-      "eFunctionOnceH\000\022T\n\020invoke_container\030f \001(" +
-      "\01328.yandex.cloud.serverless.triggers.v1." +
-      "InvokeContainerOnceH\000\022e\n\033gateway_websock" +
       "et_broadcast\030g \001(\0132>.yandex.cloud.server" +
       "less.triggers.v1.GatewayWebsocketBroadca" +
-      "stH\000B\016\n\006action\022\004\300\3011\001\032\305\003\n\nIoTMessage\022\031\n\013r" +
-      "egistry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(" +
-      "\t\022\022\n\nmqtt_topic\030\003 \001(\t\022J\n\016batch_settings\030" +
-      "\004 \001(\01322.yandex.cloud.serverless.triggers" +
-      ".v1.BatchSettings\022W\n\017invoke_function\030e \001" +
-      "(\0132<.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeFunctionWithRetryH\000\022Y\n\020invoke_con" +
-      "tainer\030f \001(\0132=.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeContainerWithRetryH\000\022e\n" +
-      "\033gateway_websocket_broadcast\030g \001(\0132>.yan" +
-      "dex.cloud.serverless.triggers.v1.Gateway" +
-      "WebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\032\266\003\n" +
-      "\020IoTBrokerMessage\022\027\n\tbroker_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022\022\n\nmqtt_topic\030\002 \001(\t\022J\n\016batch_settings" +
-      "\030\003 \001(\01322.yandex.cloud.serverless.trigger" +
-      "s.v1.BatchSettings\022W\n\017invoke_function\030e " +
-      "\001(\0132<.yandex.cloud.serverless.triggers.v" +
-      "1.InvokeFunctionWithRetryH\000\022Y\n\020invoke_co" +
-      "ntainer\030f \001(\0132=.yandex.cloud.serverless." +
-      "triggers.v1.InvokeContainerWithRetryH\000\022e" +
-      "\n\033gateway_websocket_broadcast\030g \001(\0132>.ya" +
-      "ndex.cloud.serverless.triggers.v1.Gatewa" +
-      "yWebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\032\232\004" +
-      "\n\rObjectStorage\022_\n\nevent_type\030\003 \003(\0162C.ya" +
-      "ndex.cloud.serverless.triggers.v1.Trigge" +
-      "r.ObjectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbuck" +
-      "et_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 " +
-      "\001(\t\022J\n\016batch_settings\030\010 \001(\01322.yandex.clo" +
-      "ud.serverless.triggers.v1.BatchSettings\022" +
-      "W\n\017invoke_function\030e \001(\0132<.yandex.cloud." +
-      "serverless.triggers.v1.InvokeFunctionWit" +
-      "hRetryH\000\022Y\n\020invoke_container\030f \001(\0132=.yan" +
-      "dex.cloud.serverless.triggers.v1.InvokeC" +
-      "ontainerWithRetryH\000\022e\n\033gateway_websocket" +
-      "_broadcast\030g \001(\0132>.yandex.cloud.serverle" +
-      "ss.triggers.v1.GatewayWebsocketBroadcast" +
-      "H\000B\016\n\006action\022\004\300\3011\001\032\245\004\n\021ContainerRegistry" +
-      "\022c\n\nevent_type\030\003 \003(\0162G.yandex.cloud.serv" +
-      "erless.triggers.v1.Trigger.ContainerRegi" +
-      "stryEventTypeB\006\202\3101\002>0\022\023\n\013registry_id\030\004 \001" +
-      "(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t\022J\n\016b" +
-      "atch_settings\030\007 \001(\01322.yandex.cloud.serve" +
-      "rless.triggers.v1.BatchSettings\022W\n\017invok" +
-      "e_function\030e \001(\0132<.yandex.cloud.serverle" +
-      "ss.triggers.v1.InvokeFunctionWithRetryH\000" +
-      "\022Y\n\020invoke_container\030f \001(\0132=.yandex.clou" +
-      "d.serverless.triggers.v1.InvokeContainer" +
-      "WithRetryH\000\022e\n\033gateway_websocket_broadca" +
-      "st\030g \001(\0132>.yandex.cloud.serverless.trigg" +
-      "ers.v1.GatewayWebsocketBroadcastH\000B\016\n\006ac" +
-      "tion\022\004\300\3011\001\032\300\002\n\tCloudLogs\022\024\n\014log_group_id" +
-      "\030\001 \003(\t\022Y\n\016batch_settings\030\002 \001(\0132;.yandex." +
-      "cloud.serverless.triggers.v1.CloudLogsBa" +
-      "tchSettingsB\004\350\3071\001\022W\n\017invoke_function\030e \001" +
-      "(\0132<.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeFunctionWithRetryH\000\022Y\n\020invoke_con" +
-      "tainer\030f \001(\0132=.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeContainerWithRetryH\000B\016\n" +
-      "\006action\022\004\300\3011\001\032\263\005\n\007Logging\022\036\n\014log_group_i" +
-      "d\030\001 \001(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 \003(\t" +
-      "B)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=" +
-      "100\022>\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-" +
-      "a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022?\n\013stream_na" +
-      "me\030\007 \003(\tB*\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0" +
-      "-9]\202\3101\005<=100\022A\n\006levels\030\005 \003(\0162\'.yandex.cl" +
-      "oud.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022" +
-      "W\n\016batch_settings\030\006 \001(\01329.yandex.cloud.s" +
-      "erverless.triggers.v1.LoggingBatchSettin" +
-      "gsB\004\350\3071\001\022W\n\017invoke_function\030e \001(\0132<.yand" +
-      "ex.cloud.serverless.triggers.v1.InvokeFu" +
-      "nctionWithRetryH\000\022Y\n\020invoke_container\030g " +
-      "\001(\0132=.yandex.cloud.serverless.triggers.v" +
-      "1.InvokeContainerWithRetryH\000\022e\n\033gateway_" +
-      "websocket_broadcast\030h \001(\0132>.yandex.cloud" +
-      ".serverless.triggers.v1.GatewayWebsocket" +
-      "BroadcastH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectSt" +
-      "orageEventType\022)\n%OBJECT_STORAGE_EVENT_T" +
-      "YPE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVEN" +
-      "T_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE" +
-      "_EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_ST" +
-      "ORAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Con" +
-      "tainerRegistryEventType\022-\n)CONTAINER_REG" +
-      "ISTRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAI" +
-      "NER_REGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022." +
-      "\n*CONTAINER_REGISTRY_EVENT_TYPE_DELETE_I" +
-      "MAGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_" +
-      "CREATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY" +
-      "_EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status" +
-      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006" +
-      "PAUSED\020\002\"i\n\022InvokeFunctionOnce\022!\n\013functi" +
-      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_ta" +
-      "g\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027" +
-      "InvokeFunctionWithRetry\022!\n\013function_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t" +
-      "\022\032\n\022service_account_id\030\003 \001(\t\022J\n\016retry_se" +
-      "ttings\030\004 \001(\01322.yandex.cloud.serverless.t" +
-      "riggers.v1.RetrySettings\022O\n\021dead_letter_" +
-      "queue\030\005 \001(\01324.yandex.cloud.serverless.tr" +
-      "iggers.v1.PutQueueMessage\"c\n\023InvokeConta" +
-      "inerOnce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id" +
-      "\030\004 \001(\t\"\205\002\n\030InvokeContainerWithRetry\022\"\n\014c" +
-      "ontainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030" +
-      "\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022J\n\016ret" +
-      "ry_settings\030\005 \001(\01322.yandex.cloud.serverl" +
-      "ess.triggers.v1.RetrySettings\022O\n\021dead_le" +
-      "tter_queue\030\006 \001(\01324.yandex.cloud.serverle" +
-      "ss.triggers.v1.PutQueueMessage\"{\n\031Gatewa" +
-      "yWebsocketBroadcast\022 \n\ngateway_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022(\n\022ser" +
-      "vice_account_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\"M\n\017P" +
-      "utQueueMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022serv" +
-      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"Z\n\rBa" +
-      "tchSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n" +
-      "\006cutoff\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "B\004\350\3071\001\"g\n\026CloudLogsBatchSettings\022\027\n\004size" +
-      "\030\001 \001(\003B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\t\372\3071\0051s-1m\"f\n\024Loggi" +
-      "ngBatchSettings\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-100" +
-      "0\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\t\372\3071\0051s-1m\"m\n\rRetrySettings\022\037\n\016retr" +
-      "y_attempts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 " +
-      "\001(\0132\031.google.protobuf.DurationB\016\372\3071\00610s-" +
-      "1m\350\3071\001\"\201\003\n\rBillingBudget\022(\n\022billing_acco" +
-      "unt_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030" +
-      "\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_function\030e \001(\013" +
-      "2<.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
-      "iner\030g \001(\0132=.yandex.cloud.serverless.tri" +
-      "ggers.v1.InvokeContainerWithRetryH\000\022e\n\033g" +
-      "ateway_websocket_broadcast\030h \001(\0132>.yande" +
-      "x.cloud.serverless.triggers.v1.GatewayWe" +
-      "bsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001\"j\n\027Da" +
+      "stH\000B\016\n\006action\022\004\300\3011\001J\004\010\t\020eJ\004\010\005\020\006\032\253\004\n\021Con" +
+      "tainerRegistry\022c\n\nevent_type\030\003 \003(\0162G.yan" +
+      "dex.cloud.serverless.triggers.v1.Trigger" +
+      ".ContainerRegistryEventTypeB\006\202\3101\002>0\022\023\n\013r" +
+      "egistry_id\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003" +
+      "tag\030\006 \001(\t\022J\n\016batch_settings\030\007 \001(\01322.yand" +
+      "ex.cloud.serverless.triggers.v1.BatchSet" +
+      "tings\022W\n\017invoke_function\030e \001(\0132<.yandex." +
+      "cloud.serverless.triggers.v1.InvokeFunct" +
+      "ionWithRetryH\000\022Y\n\020invoke_container\030f \001(\013" +
+      "2=.yandex.cloud.serverless.triggers.v1.I" +
+      "nvokeContainerWithRetryH\000\022e\n\033gateway_web" +
+      "socket_broadcast\030g \001(\0132>.yandex.cloud.se" +
+      "rverless.triggers.v1.GatewayWebsocketBro" +
+      "adcastH\000B\016\n\006action\022\004\300\3011\001J\004\010\010\020e\032\306\002\n\tCloud" +
+      "Logs\022\024\n\014log_group_id\030\001 \003(\t\022Y\n\016batch_sett" +
+      "ings\030\002 \001(\0132;.yandex.cloud.serverless.tri" +
+      "ggers.v1.CloudLogsBatchSettingsB\004\350\3071\001\022W\n" +
+      "\017invoke_function\030e \001(\0132<.yandex.cloud.se" +
+      "rverless.triggers.v1.InvokeFunctionWithR" +
+      "etryH\000\022Y\n\020invoke_container\030f \001(\0132=.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeCon" +
+      "tainerWithRetryH\000B\016\n\006action\022\004\300\3011\001J\004\010\003\020e\032" +
+      "\305\005\n\007Logging\022\036\n\014log_group_id\030\001 \001(\tB\010\212\3101\004<" +
+      "=50\022@\n\rresource_type\030\003 \003(\tB)\362\3071\034[a-zA-Z]" +
+      "[-a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022>\n\013resourc" +
+      "e_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1" +
+      ",62}\202\3101\005<=100\022?\n\013stream_name\030\007 \003(\tB*\362\3071\035" +
+      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\202\3101\005<=100\022A" +
+      "\n\006levels\030\005 \003(\0162\'.yandex.cloud.logging.v1" +
+      ".LogLevel.LevelB\010\202\3101\004<=10\022W\n\016batch_setti" +
+      "ngs\030\006 \001(\01329.yandex.cloud.serverless.trig" +
+      "gers.v1.LoggingBatchSettingsB\004\350\3071\001\022W\n\017in" +
+      "voke_function\030e \001(\0132<.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeFunctionWithRetr" +
+      "yH\000\022Y\n\020invoke_container\030g \001(\0132=.yandex.c" +
+      "loud.serverless.triggers.v1.InvokeContai" +
+      "nerWithRetryH\000\022e\n\033gateway_websocket_broa" +
+      "dcast\030h \001(\0132>.yandex.cloud.serverless.tr" +
+      "iggers.v1.GatewayWebsocketBroadcastH\000B\016\n" +
+      "\006action\022\004\300\3011\001J\004\010\010\020eJ\004\010f\020gJ\004\010\002\020\003\"\312\001\n\026Obje" +
+      "ctStorageEventType\022)\n%OBJECT_STORAGE_EVE" +
+      "NT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_" +
+      "EVENT_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STO" +
+      "RAGE_EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJEC" +
+      "T_STORAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n" +
+      "\032ContainerRegistryEventType\022-\n)CONTAINER" +
+      "_REGISTRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CO" +
+      "NTAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE" +
+      "\020\001\022.\n*CONTAINER_REGISTRY_EVENT_TYPE_DELE" +
+      "TE_IMAGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_T" +
+      "YPE_CREATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGI" +
+      "STRY_EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006St" +
+      "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001" +
+      "\022\n\n\006PAUSED\020\002J\004\010\007\020\010\"i\n\022InvokeFunctionOnce" +
+      "\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014f" +
+      "unction_tag\030\002 \001(\t\022\032\n\022service_account_id\030" +
+      "\003 \001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!\n\013fun" +
+      "ction_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function" +
+      "_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\022J" +
+      "\n\016retry_settings\030\004 \001(\01322.yandex.cloud.se" +
+      "rverless.triggers.v1.RetrySettings\022O\n\021de" +
+      "ad_letter_queue\030\005 \001(\01324.yandex.cloud.ser" +
+      "verless.triggers.v1.PutQueueMessage\"i\n\023I" +
+      "nvokeContainerOnce\022\"\n\014container_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_" +
+      "account_id\030\004 \001(\tJ\004\010\002\020\003\"\213\002\n\030InvokeContain" +
+      "erWithRetry\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account" +
+      "_id\030\004 \001(\t\022J\n\016retry_settings\030\005 \001(\01322.yand" +
+      "ex.cloud.serverless.triggers.v1.RetrySet" +
+      "tings\022O\n\021dead_letter_queue\030\006 \001(\01324.yande" +
+      "x.cloud.serverless.triggers.v1.PutQueueM" +
+      "essageJ\004\010\002\020\003\"{\n\031GatewayWebsocketBroadcas" +
+      "t\022 \n\ngateway_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004p" +
+      "ath\030\002 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\003 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"S\n\017PutQueueMessage\022\020\n\010" +
+      "queue_id\030\013 \001(\t\022(\n\022service_account_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50J\004\010\003\020\013\"Z\n\rBatchSettings\022" +
+      "\030\n\004size\030\001 \001(\003B\n\372\3071\0060-1000\022/\n\006cutoff\030\002 \001(" +
+      "\0132\031.google.protobuf.DurationB\004\350\3071\001\"g\n\026Cl" +
+      "oudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
+      "0-100\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf." +
+      "DurationB\t\372\3071\0051s-1m\"f\n\024LoggingBatchSetti" +
+      "ngs\022\030\n\004size\030\001 \001(\003B\n\372\3071\0061-1000\0224\n\006cutoff\030" +
+      "\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071\0051s" +
+      "-1m\"m\n\rRetrySettings\022\037\n\016retry_attempts\030\001" +
+      " \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.google" +
+      ".protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\215\003\n\rB" +
+      "illingBudget\022(\n\022billing_account_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<" +
+      "=50\022W\n\017invoke_function\030e \001(\0132<.yandex.cl" +
+      "oud.serverless.triggers.v1.InvokeFunctio" +
+      "nWithRetryH\000\022Y\n\020invoke_container\030g \001(\0132=" +
+      ".yandex.cloud.serverless.triggers.v1.Inv" +
+      "okeContainerWithRetryH\000\022e\n\033gateway_webso" +
+      "cket_broadcast\030h \001(\0132>.yandex.cloud.serv" +
+      "erless.triggers.v1.GatewayWebsocketBroad" +
+      "castH\000B\016\n\006action\022\004\300\3011\001J\004\010f\020gJ\004\010\003\020e\"j\n\027Da" +
       "taStreamBatchSettings\022\031\n\004size\030\001 \001(\003B\013\372\3071" +
       "\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.google.protob" +
-      "uf.DurationB\t\372\3071\0051s-1m\"\335\003\n\nDataStream\022\020\n" +
+      "uf.DurationB\t\372\3071\0051s-1m\"\351\003\n\nDataStream\022\020\n" +
       "\010endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(\t\022\016\n\006str" +
       "eam\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022T\n" +
       "\016batch_settings\030\005 \001(\0132<.yandex.cloud.ser" +
@@ -41383,31 +41386,32 @@ public final class TriggerOuterClass {
       "okeContainerWithRetryH\000\022e\n\033gateway_webso" +
       "cket_broadcast\030\020 \001(\0132>.yandex.cloud.serv" +
       "erless.triggers.v1.GatewayWebsocketBroad" +
-      "castH\000B\016\n\006action\022\004\300\3011\001\"v\n\033ObjectStorageB" +
-      "ucketSettings\022-\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-" +
-      "63\362\3071\016[-.0-9a-zA-Z]*\022(\n\022service_account_" +
-      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\352\003\n\004Mail\022\r\n\005email" +
-      "\030\002 \001(\t\022J\n\016batch_settings\030\003 \001(\01322.yandex." +
-      "cloud.serverless.triggers.v1.BatchSettin" +
-      "gs\022\\\n\022attachments_bucket\030\004 \001(\0132@.yandex." +
-      "cloud.serverless.triggers.v1.ObjectStora" +
-      "geBucketSettings\022W\n\017invoke_function\030e \001(" +
-      "\0132<.yandex.cloud.serverless.triggers.v1." +
-      "InvokeFunctionWithRetryH\000\022Y\n\020invoke_cont" +
-      "ainer\030g \001(\0132=.yandex.cloud.serverless.tr" +
-      "iggers.v1.InvokeContainerWithRetryH\000\022e\n\033" +
-      "gateway_websocket_broadcast\030h \001(\0132>.yand" +
-      "ex.cloud.serverless.triggers.v1.GatewayW" +
-      "ebsocketBroadcastH\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013" +
-      "TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020" +
-      "\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_M" +
-      "ESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n\016OBJE" +
-      "CT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006\022\016\n\n" +
-      "CLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_BUD" +
-      "GET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.cloud" +
-      ".api.serverless.triggers.v1ZPgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/se" +
-      "rverless/triggers/v1;triggersb\006proto3"
+      "castH\000B\016\n\006action\022\004\300\3011\001J\004\010\016\020\017J\004\010\006\020\r\"v\n\033Ob" +
+      "jectStorageBucketSettings\022-\n\tbucket_id\030\001" +
+      " \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022(\n\022serv" +
+      "ice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\366\003\n\004M" +
+      "ail\022\r\n\005email\030\002 \001(\t\022J\n\016batch_settings\030\003 \001" +
+      "(\01322.yandex.cloud.serverless.triggers.v1" +
+      ".BatchSettings\022\\\n\022attachments_bucket\030\004 \001" +
+      "(\0132@.yandex.cloud.serverless.triggers.v1" +
+      ".ObjectStorageBucketSettings\022W\n\017invoke_f" +
+      "unction\030e \001(\0132<.yandex.cloud.serverless." +
+      "triggers.v1.InvokeFunctionWithRetryH\000\022Y\n" +
+      "\020invoke_container\030g \001(\0132=.yandex.cloud.s" +
+      "erverless.triggers.v1.InvokeContainerWit" +
+      "hRetryH\000\022e\n\033gateway_websocket_broadcast\030" +
+      "h \001(\0132>.yandex.cloud.serverless.triggers" +
+      ".v1.GatewayWebsocketBroadcastH\000B\016\n\006actio" +
+      "n\022\004\300\3011\001J\004\010f\020gJ\004\010\005\020e*\342\001\n\013TriggerType\022\034\n\030T" +
+      "RIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\r" +
+      "MESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_" +
+      "BROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022" +
+      "CONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007" +
+      "LOGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010" +
+      "\n\004MAIL\020\013B{\n\'yandex.cloud.api.serverless." +
+      "triggers.v1ZPgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/serverless/trigger" +
+      "s/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

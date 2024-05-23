@@ -2080,21 +2080,21 @@ public final class Opensearch {
       "\n6yandex/cloud/mdb/opensearch/v1/config/" +
       "opensearch.proto\022%yandex.cloud.mdb.opens" +
       "earch.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\212" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\220" +
       "\001\n\021OpenSearchConfig2\0225\n\020max_clause_count" +
       "\030\003 \001(\0132\033.google.protobuf.Int64Value\022\034\n\024f" +
       "ielddata_cache_size\030\004 \001(\t\022 \n\030reindex_rem" +
-      "ote_whitelist\030\006 \001(\t\"\221\002\n\024OpenSearchConfig" +
-      "Set2\022X\n\020effective_config\030\001 \001(\01328.yandex." +
-      "cloud.mdb.opensearch.v1.config.OpenSearc" +
-      "hConfig2B\004\350\3071\001\022M\n\013user_config\030\002 \001(\01328.ya" +
-      "ndex.cloud.mdb.opensearch.v1.config.Open" +
-      "SearchConfig2\022P\n\016default_config\030\003 \001(\01328." +
-      "yandex.cloud.mdb.opensearch.v1.config.Op" +
-      "enSearchConfig2Bz\n\"yandex.cloud.api.mdb." +
-      "opensearch.v1ZTgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/mdb/opensearch/v" +
-      "1/config;opensearchb\006proto3"
+      "ote_whitelist\030\006 \001(\tJ\004\010\005\020\006\"\221\002\n\024OpenSearch" +
+      "ConfigSet2\022X\n\020effective_config\030\001 \001(\01328.y" +
+      "andex.cloud.mdb.opensearch.v1.config.Ope" +
+      "nSearchConfig2B\004\350\3071\001\022M\n\013user_config\030\002 \001(" +
+      "\01328.yandex.cloud.mdb.opensearch.v1.confi" +
+      "g.OpenSearchConfig2\022P\n\016default_config\030\003 " +
+      "\001(\01328.yandex.cloud.mdb.opensearch.v1.con" +
+      "fig.OpenSearchConfig2Bz\n\"yandex.cloud.ap" +
+      "i.mdb.opensearch.v1ZTgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/opense" +
+      "arch/v1/config;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
