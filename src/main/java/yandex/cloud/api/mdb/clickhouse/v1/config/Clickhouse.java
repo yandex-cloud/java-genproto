@@ -1754,7 +1754,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -1764,7 +1764,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -1774,7 +1774,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -38297,7 +38297,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -38310,7 +38310,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -38323,7 +38323,7 @@ public final class Clickhouse {
     /**
      * <pre>
      * The default database.
-     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+     * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
      *
      * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50813,7 +50813,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50825,7 +50825,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50841,7 +50841,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50862,7 +50862,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50881,7 +50881,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50904,7 +50904,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50923,7 +50923,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50936,7 +50936,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>
@@ -50952,7 +50952,7 @@ public final class Clickhouse {
       /**
        * <pre>
        * The default database.
-       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
+       * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](/docs/managed-clickhouse/operations/databases#list-db).
        * </pre>
        *
        * <code>.google.protobuf.StringValue default_database = 43;</code>

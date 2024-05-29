@@ -31,12 +31,12 @@ public final class PxfService {
         getClusterIdBytes();
 
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     java.lang.String getDatasourceName();
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     com.google.protobuf.ByteString
@@ -174,7 +174,7 @@ public final class PxfService {
     public static final int DATASOURCE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object datasourceName_;
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     @java.lang.Override
@@ -191,7 +191,7 @@ public final class PxfService {
       }
     }
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     @java.lang.Override
@@ -606,7 +606,7 @@ public final class PxfService {
 
       private java.lang.Object datasourceName_ = "";
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The datasourceName.
        */
       public java.lang.String getDatasourceName() {
@@ -622,7 +622,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for datasourceName.
        */
       public com.google.protobuf.ByteString
@@ -639,7 +639,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The datasourceName to set.
        * @return This builder for chaining.
        */
@@ -654,7 +654,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasourceName() {
@@ -664,7 +664,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for datasourceName to set.
        * @return This builder for chaining.
        */
@@ -749,12 +749,12 @@ public final class PxfService {
         getClusterIdBytes();
 
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     java.lang.String getDatasourceName();
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     com.google.protobuf.ByteString
@@ -892,7 +892,7 @@ public final class PxfService {
     public static final int DATASOURCE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object datasourceName_;
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     @java.lang.Override
@@ -909,7 +909,7 @@ public final class PxfService {
       }
     }
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     @java.lang.Override
@@ -1324,7 +1324,7 @@ public final class PxfService {
 
       private java.lang.Object datasourceName_ = "";
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The datasourceName.
        */
       public java.lang.String getDatasourceName() {
@@ -1340,7 +1340,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for datasourceName.
        */
       public com.google.protobuf.ByteString
@@ -1357,7 +1357,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The datasourceName to set.
        * @return This builder for chaining.
        */
@@ -1372,7 +1372,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasourceName() {
@@ -1382,7 +1382,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for datasourceName to set.
        * @return This builder for chaining.
        */
@@ -1467,12 +1467,12 @@ public final class PxfService {
         getClusterIdBytes();
 
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     java.lang.String getDatasourceName();
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     com.google.protobuf.ByteString
@@ -1610,7 +1610,7 @@ public final class PxfService {
     public static final int DATASOURCE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object datasourceName_;
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     @java.lang.Override
@@ -1627,7 +1627,7 @@ public final class PxfService {
       }
     }
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     @java.lang.Override
@@ -2042,7 +2042,7 @@ public final class PxfService {
 
       private java.lang.Object datasourceName_ = "";
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The datasourceName.
        */
       public java.lang.String getDatasourceName() {
@@ -2058,7 +2058,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for datasourceName.
        */
       public com.google.protobuf.ByteString
@@ -2075,7 +2075,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The datasourceName to set.
        * @return This builder for chaining.
        */
@@ -2090,7 +2090,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasourceName() {
@@ -2100,7 +2100,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for datasourceName to set.
        * @return This builder for chaining.
        */
@@ -5291,12 +5291,12 @@ public final class PxfService {
         getClusterIdBytes();
 
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     java.lang.String getDatasourceName();
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     com.google.protobuf.ByteString
@@ -5434,7 +5434,7 @@ public final class PxfService {
     public static final int DATASOURCE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object datasourceName_;
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The datasourceName.
      */
     @java.lang.Override
@@ -5451,7 +5451,7 @@ public final class PxfService {
       }
     }
     /**
-     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for datasourceName.
      */
     @java.lang.Override
@@ -5866,7 +5866,7 @@ public final class PxfService {
 
       private java.lang.Object datasourceName_ = "";
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The datasourceName.
        */
       public java.lang.String getDatasourceName() {
@@ -5882,7 +5882,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for datasourceName.
        */
       public com.google.protobuf.ByteString
@@ -5899,7 +5899,7 @@ public final class PxfService {
         }
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The datasourceName to set.
        * @return This builder for chaining.
        */
@@ -5914,7 +5914,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasourceName() {
@@ -5924,7 +5924,7 @@ public final class PxfService {
         return this;
       }
       /**
-       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string datasource_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for datasourceName to set.
        * @return This builder for chaining.
        */
@@ -6048,55 +6048,57 @@ public final class PxfService {
       "pi/operation.proto\032\035yandex/cloud/validat" +
       "ion.proto\032&yandex/cloud/operation/operat" +
       "ion.proto\032\'yandex/cloud/mdb/greenplum/v1" +
-      "/pxf.proto\"g\n\033CreatePXFDatasourceMetadat" +
-      "a\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\017d" +
-      "atasource_name\030\002 \001(\tB\r\350\3071\001\212\3101\0053-200\"g\n\033U" +
-      "pdatePXFDatasourceMetadata\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\017datasource_name\030" +
-      "\002 \001(\tB\r\350\3071\001\212\3101\0053-200\"g\n\033DeletePXFDatasou" +
-      "rceMetadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022&\n\017datasource_name\030\002 \001(\tB\r\350\3071\001\212\3101\005" +
-      "3-200\"=\n\031ListPXFDatasourcesRequest\022 \n\ncl" +
-      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"_\n\032ListPXFD" +
-      "atasourcesResponse\022A\n\013datasources\030\001 \003(\0132" +
-      ",.yandex.cloud.mdb.greenplum.v1.PXFDatas" +
-      "ource\"\200\001\n\032CreatePXFDatasourceRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022@\n\ndataso" +
-      "urce\030\002 \001(\0132,.yandex.cloud.mdb.greenplum." +
-      "v1.PXFDatasource\"\261\001\n\032UpdatePXFDatasource" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022@\n\ndatasource\030\003 \001(\0132,.yandex." +
-      "cloud.mdb.greenplum.v1.PXFDatasource\"f\n\032" +
-      "DeletePXFDatasourceRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\017datasource_name\030" +
-      "\002 \001(\tB\r\350\3071\001\212\3101\0053-2002\223\007\n\024PXFDatasourceSe" +
-      "rvice\022\300\001\n\004List\0228.yandex.cloud.mdb.greenp" +
-      "lum.v1.ListPXFDatasourcesRequest\0329.yande" +
-      "x.cloud.mdb.greenplum.v1.ListPXFDatasour" +
-      "cesResponse\"C\202\323\344\223\002=\022;/managed-greenplum/" +
-      "v1/clusters/{cluster_id}/pxf_datasources" +
-      "\022\336\001\n\006Create\0229.yandex.cloud.mdb.greenplum" +
-      ".v1.CreatePXFDatasourceRequest\032!.yandex." +
-      "cloud.operation.Operation\"v\202\323\344\223\002@\";/mana" +
-      "ged-greenplum/v1/clusters/{cluster_id}/p" +
-      "xf_datasources:\001*\262\322*,\n\033CreatePXFDatasour" +
-      "ceMetadata\022\rPXFDatasource\022\336\001\n\006Update\0229.y" +
-      "andex.cloud.mdb.greenplum.v1.UpdatePXFDa" +
-      "tasourceRequest\032!.yandex.cloud.operation" +
-      ".Operation\"v\202\323\344\223\002@2;/managed-greenplum/v" +
-      "1/clusters/{cluster_id}/pxf_datasources:" +
-      "\001*\262\322*,\n\033UpdatePXFDatasourceMetadata\022\rPXF" +
-      "Datasource\022\365\001\n\006Delete\0229.yandex.cloud.mdb" +
-      ".greenplum.v1.DeletePXFDatasourceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\214\001\202\323" +
-      "\344\223\002N*L/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}/pxf_datasource/{datasource_nam" +
-      "e}\262\322*4\n\033DeletePXFDatasourceMetadata\022\025goo" +
-      "gle.protobuf.EmptyBp\n!yandex.cloud.api.m" +
-      "db.greenplum.v1ZKgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/greenplum/" +
-      "v1;greenplumb\006proto3"
+      "/pxf.proto\"}\n\033CreatePXFDatasourceMetadat" +
+      "a\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\017d" +
+      "atasource_name\030\002 \001(\tB#\350\3071\001\212\3101\0053-200\362\3071\022^" +
+      "[^\\|/*?.,;\"\'<>]+$\"}\n\033UpdatePXFDatasource" +
+      "Metadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022<\n\017datasource_name\030\002 \001(\tB#\350\3071\001\212\3101\0053-2" +
+      "00\362\3071\022^[^\\|/*?.,;\"\'<>]+$\"}\n\033DeletePXFDat" +
+      "asourceMetadata\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022<\n\017datasource_name\030\002 \001(\tB#\350\3071\001" +
+      "\212\3101\0053-200\362\3071\022^[^\\|/*?.,;\"\'<>]+$\"=\n\031ListP" +
+      "XFDatasourcesRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"_\n\032ListPXFDatasourcesResp" +
+      "onse\022A\n\013datasources\030\001 \003(\0132,.yandex.cloud" +
+      ".mdb.greenplum.v1.PXFDatasource\"\200\001\n\032Crea" +
+      "tePXFDatasourceRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022@\n\ndatasource\030\002 \001(\0132,.y" +
+      "andex.cloud.mdb.greenplum.v1.PXFDatasour" +
+      "ce\"\261\001\n\032UpdatePXFDatasourceRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_ma" +
+      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\022@\n\n" +
+      "datasource\030\003 \001(\0132,.yandex.cloud.mdb.gree" +
+      "nplum.v1.PXFDatasource\"|\n\032DeletePXFDatas" +
+      "ourceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022<\n\017datasource_name\030\002 \001(\tB#\350\3071\001\212\3101" +
+      "\0053-200\362\3071\022^[^\\|/*?.,;\"\'<>]+$2\223\007\n\024PXFData" +
+      "sourceService\022\300\001\n\004List\0228.yandex.cloud.md" +
+      "b.greenplum.v1.ListPXFDatasourcesRequest" +
+      "\0329.yandex.cloud.mdb.greenplum.v1.ListPXF" +
+      "DatasourcesResponse\"C\202\323\344\223\002=\022;/managed-gr" +
+      "eenplum/v1/clusters/{cluster_id}/pxf_dat" +
+      "asources\022\336\001\n\006Create\0229.yandex.cloud.mdb.g" +
+      "reenplum.v1.CreatePXFDatasourceRequest\032!" +
+      ".yandex.cloud.operation.Operation\"v\202\323\344\223\002" +
+      "@\";/managed-greenplum/v1/clusters/{clust" +
+      "er_id}/pxf_datasources:\001*\262\322*,\n\033CreatePXF" +
+      "DatasourceMetadata\022\rPXFDatasource\022\336\001\n\006Up" +
+      "date\0229.yandex.cloud.mdb.greenplum.v1.Upd" +
+      "atePXFDatasourceRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"v\202\323\344\223\002@2;/managed-gre" +
+      "enplum/v1/clusters/{cluster_id}/pxf_data" +
+      "sources:\001*\262\322*,\n\033UpdatePXFDatasourceMetad" +
+      "ata\022\rPXFDatasource\022\365\001\n\006Delete\0229.yandex.c" +
+      "loud.mdb.greenplum.v1.DeletePXFDatasourc" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\214\001\202\323\344\223\002N*L/managed-greenplum/v1/clus" +
+      "ters/{cluster_id}/pxf_datasource/{dataso" +
+      "urce_name}\262\322*4\n\033DeletePXFDatasourceMetad" +
+      "ata\022\025google.protobuf.EmptyBp\n!yandex.clo" +
+      "ud.api.mdb.greenplum.v1ZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
+      "eenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6161,6 +6163,7 @@ public final class PxfService {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

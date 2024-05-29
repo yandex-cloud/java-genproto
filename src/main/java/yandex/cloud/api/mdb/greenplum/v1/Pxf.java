@@ -152,7 +152,7 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xmx field is set.
      */
     boolean hasXmx();
@@ -161,7 +161,7 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xmx.
      */
     com.google.protobuf.Int64Value getXmx();
@@ -170,22 +170,22 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getXmxOrBuilder();
 
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xms field is set.
      */
     boolean hasXms();
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xms.
      */
     com.google.protobuf.Int64Value getXms();
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getXmsOrBuilder();
   }
@@ -596,7 +596,7 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xmx field is set.
      */
     @java.lang.Override
@@ -608,7 +608,7 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xmx.
      */
     @java.lang.Override
@@ -620,7 +620,7 @@ public final class Pxf {
      * JVM
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getXmxOrBuilder() {
@@ -630,7 +630,7 @@ public final class Pxf {
     public static final int XMS_FIELD_NUMBER = 9;
     private com.google.protobuf.Int64Value xms_;
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xms field is set.
      */
     @java.lang.Override
@@ -638,7 +638,7 @@ public final class Pxf {
       return xms_ != null;
     }
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xms.
      */
     @java.lang.Override
@@ -646,7 +646,7 @@ public final class Pxf {
       return xms_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : xms_;
     }
     /**
-     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+     * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getXmsOrBuilder() {
@@ -2121,7 +2121,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return Whether the xmx field is set.
        */
       public boolean hasXmx() {
@@ -2132,7 +2132,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return The xmx.
        */
       public com.google.protobuf.Int64Value getXmx() {
@@ -2147,7 +2147,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXmx(com.google.protobuf.Int64Value value) {
         if (xmxBuilder_ == null) {
@@ -2167,7 +2167,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXmx(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2185,7 +2185,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder mergeXmx(com.google.protobuf.Int64Value value) {
         if (xmxBuilder_ == null) {
@@ -2207,7 +2207,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder clearXmx() {
         if (xmxBuilder_ == null) {
@@ -2225,7 +2225,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getXmxBuilder() {
         
@@ -2237,7 +2237,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getXmxOrBuilder() {
         if (xmxBuilder_ != null) {
@@ -2252,7 +2252,7 @@ public final class Pxf {
        * JVM
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2272,14 +2272,14 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> xmsBuilder_;
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return Whether the xms field is set.
        */
       public boolean hasXms() {
         return xmsBuilder_ != null || xms_ != null;
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return The xms.
        */
       public com.google.protobuf.Int64Value getXms() {
@@ -2290,7 +2290,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXms(com.google.protobuf.Int64Value value) {
         if (xmsBuilder_ == null) {
@@ -2306,7 +2306,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXms(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2320,7 +2320,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder mergeXms(com.google.protobuf.Int64Value value) {
         if (xmsBuilder_ == null) {
@@ -2338,7 +2338,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder clearXms() {
         if (xmsBuilder_ == null) {
@@ -2352,7 +2352,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getXmsBuilder() {
         
@@ -2360,7 +2360,7 @@ public final class Pxf {
         return getXmsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getXmsOrBuilder() {
         if (xmsBuilder_ != null) {
@@ -2371,7 +2371,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "64-16384"];</code>
+       * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3630,12 +3630,12 @@ public final class Pxf {
     com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder();
 
     /**
-     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString
@@ -3857,7 +3857,7 @@ public final class Pxf {
     public static final int ENDPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The endpoint.
      */
     @java.lang.Override
@@ -3874,7 +3874,7 @@ public final class Pxf {
       }
     }
     /**
-     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for endpoint.
      */
     @java.lang.Override
@@ -4531,7 +4531,7 @@ public final class Pxf {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The endpoint.
        */
       public java.lang.String getEndpoint() {
@@ -4547,7 +4547,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for endpoint.
        */
       public com.google.protobuf.ByteString
@@ -4564,7 +4564,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The endpoint to set.
        * @return This builder for chaining.
        */
@@ -4579,7 +4579,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearEndpoint() {
@@ -4589,7 +4589,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
        */
@@ -4686,7 +4686,7 @@ public final class Pxf {
      * Matches jdbc.url
      * </pre>
      *
-     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The url.
      */
     java.lang.String getUrl();
@@ -4695,7 +4695,7 @@ public final class Pxf {
      * Matches jdbc.url
      * </pre>
      *
-     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for url.
      */
     com.google.protobuf.ByteString
@@ -4800,7 +4800,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      * @return Whether the statementQueryTimeout field is set.
      */
     boolean hasStatementQueryTimeout();
@@ -4809,7 +4809,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      * @return The statementQueryTimeout.
      */
     com.google.protobuf.Int64Value getStatementQueryTimeout();
@@ -4818,7 +4818,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder();
 
@@ -4854,7 +4854,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      * @return Whether the poolMaximumSize field is set.
      */
     boolean hasPoolMaximumSize();
@@ -4863,7 +4863,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      * @return The poolMaximumSize.
      */
     com.google.protobuf.Int64Value getPoolMaximumSize();
@@ -4872,7 +4872,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder();
 
@@ -5219,7 +5219,7 @@ public final class Pxf {
      * Matches jdbc.url
      * </pre>
      *
-     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -5240,7 +5240,7 @@ public final class Pxf {
      * Matches jdbc.url
      * </pre>
      *
-     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for url.
      */
     @java.lang.Override
@@ -5433,7 +5433,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      * @return Whether the statementQueryTimeout field is set.
      */
     @java.lang.Override
@@ -5445,7 +5445,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      * @return The statementQueryTimeout.
      */
     @java.lang.Override
@@ -5457,7 +5457,7 @@ public final class Pxf {
      * Matches jdbc.statement.querytimeout
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder() {
@@ -5509,7 +5509,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      * @return Whether the poolMaximumSize field is set.
      */
     @java.lang.Override
@@ -5521,7 +5521,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      * @return The poolMaximumSize.
      */
     @java.lang.Override
@@ -5533,7 +5533,7 @@ public final class Pxf {
      * Matches jdbc.pool.property.maximumpoolsize
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder() {
@@ -6349,7 +6349,7 @@ public final class Pxf {
        * Matches jdbc.url
        * </pre>
        *
-       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The url.
        */
       public java.lang.String getUrl() {
@@ -6369,7 +6369,7 @@ public final class Pxf {
        * Matches jdbc.url
        * </pre>
        *
-       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for url.
        */
       public com.google.protobuf.ByteString
@@ -6390,7 +6390,7 @@ public final class Pxf {
        * Matches jdbc.url
        * </pre>
        *
-       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The url to set.
        * @return This builder for chaining.
        */
@@ -6409,7 +6409,7 @@ public final class Pxf {
        * Matches jdbc.url
        * </pre>
        *
-       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
@@ -6423,7 +6423,7 @@ public final class Pxf {
        * Matches jdbc.url
        * </pre>
        *
-       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
        */
@@ -6949,7 +6949,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        * @return Whether the statementQueryTimeout field is set.
        */
       public boolean hasStatementQueryTimeout() {
@@ -6960,7 +6960,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        * @return The statementQueryTimeout.
        */
       public com.google.protobuf.Int64Value getStatementQueryTimeout() {
@@ -6975,7 +6975,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public Builder setStatementQueryTimeout(com.google.protobuf.Int64Value value) {
         if (statementQueryTimeoutBuilder_ == null) {
@@ -6995,7 +6995,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public Builder setStatementQueryTimeout(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7013,7 +7013,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public Builder mergeStatementQueryTimeout(com.google.protobuf.Int64Value value) {
         if (statementQueryTimeoutBuilder_ == null) {
@@ -7035,7 +7035,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public Builder clearStatementQueryTimeout() {
         if (statementQueryTimeoutBuilder_ == null) {
@@ -7053,7 +7053,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getStatementQueryTimeoutBuilder() {
         
@@ -7065,7 +7065,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder() {
         if (statementQueryTimeoutBuilder_ != null) {
@@ -7080,7 +7080,7 @@ public final class Pxf {
        * Matches jdbc.statement.querytimeout
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -7259,7 +7259,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        * @return Whether the poolMaximumSize field is set.
        */
       public boolean hasPoolMaximumSize() {
@@ -7270,7 +7270,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        * @return The poolMaximumSize.
        */
       public com.google.protobuf.Int64Value getPoolMaximumSize() {
@@ -7285,7 +7285,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public Builder setPoolMaximumSize(com.google.protobuf.Int64Value value) {
         if (poolMaximumSizeBuilder_ == null) {
@@ -7305,7 +7305,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public Builder setPoolMaximumSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7323,7 +7323,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public Builder mergePoolMaximumSize(com.google.protobuf.Int64Value value) {
         if (poolMaximumSizeBuilder_ == null) {
@@ -7345,7 +7345,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public Builder clearPoolMaximumSize() {
         if (poolMaximumSizeBuilder_ == null) {
@@ -7363,7 +7363,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getPoolMaximumSizeBuilder() {
         
@@ -7375,7 +7375,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder() {
         if (poolMaximumSizeBuilder_ != null) {
@@ -7390,7 +7390,7 @@ public final class Pxf {
        * Matches jdbc.pool.property.maximumpoolsize
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -11332,6 +11332,26 @@ public final class Pxf {
 
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+     * </pre>
+     *
+     * <code>string nameservices = 5;</code>
+     * @return The nameservices.
+     */
+    java.lang.String getNameservices();
+    /**
+     * <pre>
+     * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+     * </pre>
+     *
+     * <code>string nameservices = 5;</code>
+     * @return The bytes for nameservices.
+     */
+    com.google.protobuf.ByteString
+        getNameservicesBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs}
@@ -11346,6 +11366,7 @@ public final class Pxf {
       super(builder);
     }
     private PXFDatasourceHDFSDfs() {
+      nameservices_ = "";
     }
 
     @java.lang.Override
@@ -11429,6 +11450,12 @@ public final class Pxf {
                   NamenodesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               namenodes_.getMutableMap().put(
                   namenodes__.getKey(), namenodes__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nameservices_ = s;
               break;
             }
             default: {
@@ -11634,6 +11661,52 @@ public final class Pxf {
       return map.get(key);
     }
 
+    public static final int NAMESERVICES_FIELD_NUMBER = 5;
+    private volatile java.lang.Object nameservices_;
+    /**
+     * <pre>
+     * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+     * </pre>
+     *
+     * <code>string nameservices = 5;</code>
+     * @return The nameservices.
+     */
+    @java.lang.Override
+    public java.lang.String getNameservices() {
+      java.lang.Object ref = nameservices_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nameservices_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+     * </pre>
+     *
+     * <code>string nameservices = 5;</code>
+     * @return The bytes for nameservices.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameservicesBytes() {
+      java.lang.Object ref = nameservices_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nameservices_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11663,6 +11736,9 @@ public final class Pxf {
           internalGetNamenodes(),
           NamenodesDefaultEntryHolder.defaultEntry,
           4);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nameservices_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, nameservices_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11693,6 +11769,9 @@ public final class Pxf {
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, namenodes__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nameservices_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, nameservices_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11726,6 +11805,8 @@ public final class Pxf {
       }
       if (!internalGetNamenodes().equals(
           other.internalGetNamenodes())) return false;
+      if (!getNameservices()
+          .equals(other.getNameservices())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11753,6 +11834,8 @@ public final class Pxf {
         hash = (37 * hash) + NAMENODES_FIELD_NUMBER;
         hash = (53 * hash) + internalGetNamenodes().hashCode();
       }
+      hash = (37 * hash) + NAMESERVICES_FIELD_NUMBER;
+      hash = (53 * hash) + getNameservices().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11927,6 +12010,8 @@ public final class Pxf {
           useDatanodeHostnameBuilder_ = null;
         }
         internalGetMutableNamenodes().clear();
+        nameservices_ = "";
+
         return this;
       }
 
@@ -11971,6 +12056,7 @@ public final class Pxf {
         }
         result.namenodes_ = internalGetNamenodes();
         result.namenodes_.makeImmutable();
+        result.nameservices_ = nameservices_;
         onBuilt();
         return result;
       }
@@ -12030,6 +12116,10 @@ public final class Pxf {
         }
         internalGetMutableNamenodes().mergeFrom(
             other.internalGetNamenodes());
+        if (!other.getNameservices().isEmpty()) {
+          nameservices_ = other.nameservices_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12545,6 +12635,102 @@ public final class Pxf {
           java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> values) {
         internalGetMutableNamenodes().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object nameservices_ = "";
+      /**
+       * <pre>
+       * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+       * </pre>
+       *
+       * <code>string nameservices = 5;</code>
+       * @return The nameservices.
+       */
+      public java.lang.String getNameservices() {
+        java.lang.Object ref = nameservices_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nameservices_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+       * </pre>
+       *
+       * <code>string nameservices = 5;</code>
+       * @return The bytes for nameservices.
+       */
+      public com.google.protobuf.ByteString
+          getNameservicesBytes() {
+        java.lang.Object ref = nameservices_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nameservices_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+       * </pre>
+       *
+       * <code>string nameservices = 5;</code>
+       * @param value The nameservices to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameservices(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nameservices_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+       * </pre>
+       *
+       * <code>string nameservices = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNameservices() {
+        
+        nameservices_ = getDefaultInstance().getNameservices();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Corresponds well-known HDFS client setting "dfs.nameservices" for this datasource
+       * </pre>
+       *
+       * <code>string nameservices = 5;</code>
+       * @param value The bytes for nameservices to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameservicesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nameservices_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -19749,12 +19935,12 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -20010,7 +20196,7 @@ public final class Pxf {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -20027,7 +20213,7 @@ public final class Pxf {
       }
     }
     /**
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -20609,7 +20795,7 @@ public final class Pxf {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -20625,7 +20811,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -20642,7 +20828,7 @@ public final class Pxf {
         }
       }
       /**
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -20657,7 +20843,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -20667,7 +20853,7 @@ public final class Pxf {
         return this;
       }
       /**
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -21386,7 +21572,7 @@ public final class Pxf {
       "\n\'yandex/cloud/mdb/greenplum/v1/pxf.prot" +
       "o\022\035yandex.cloud.mdb.greenplum.v1\032\036google" +
       "/protobuf/wrappers.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"\305\004\n\tPXFConfig\022B\n\022connect" +
+      "alidation.proto\"\275\004\n\tPXFConfig\022B\n\022connect" +
       "ion_timeout\030\001 \001(\0132\033.google.protobuf.Int6" +
       "4ValueB\t\372\3071\0055-600\022>\n\016upload_timeout\030\002 \001(" +
       "\0132\033.google.protobuf.Int64ValueB\t\372\3071\0055-60" +
@@ -21398,118 +21584,120 @@ public final class Pxf {
       "pool_queue_capacity\030\006 \001(\0132\033.google.proto" +
       "buf.Int64ValueB\007\372\3071\003>=0\022>\n\rpool_max_size" +
       "\030\007 \001(\0132\033.google.protobuf.Int64ValueB\n\372\3071" +
-      "\0061-1024\0226\n\003xmx\030\010 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\014\372\3071\01064-16384\0226\n\003xms\030\t \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\014\372\3071\01064-16384\"" +
-      "\331\001\n\014PXFConfigSet\022H\n\020effective_config\030\001 \001" +
-      "(\0132(.yandex.cloud.mdb.greenplum.v1.PXFCo" +
-      "nfigB\004\350\3071\001\022=\n\013user_config\030\002 \001(\0132(.yandex" +
-      ".cloud.mdb.greenplum.v1.PXFConfig\022@\n\016def" +
-      "ault_config\030\003 \001(\0132(.yandex.cloud.mdb.gre" +
-      "enplum.v1.PXFConfig\"\235\001\n\017PXFDatasourceS3\022" +
-      "\035\n\naccess_key\030\001 \001(\tB\t\212\3101\005<=200\022\035\n\nsecret" +
-      "_key\030\002 \001(\tB\t\212\3101\005<=200\022/\n\013fast_upload\030\003 \001" +
-      "(\0132\032.google.protobuf.BoolValue\022\033\n\010endpoi" +
-      "nt\030\004 \001(\tB\t\212\3101\005<=200\"\246\005\n\021PXFDatasourceJDB" +
-      "C\022\030\n\006driver\030\001 \001(\tB\010\212\3101\004<=50\022\026\n\003url\030\002 \001(\t" +
-      "B\t\212\3101\005<=200\022\027\n\004user\030\003 \001(\tB\t\212\3101\005<=200\022\033\n\010" +
-      "password\030\004 \001(\tB\t\212\3101\005<=200\022F\n\024statement_b" +
-      "atch_size\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\013\372\3071\00750-1000\022G\n\024statement_fetch_siz" +
-      "e\030\006 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
-      "1\01050-10000\022G\n\027statement_query_timeout\030\007 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\t\372\3071\0055-" +
-      "600\0220\n\014pool_enabled\030\010 \001(\0132\032.google.proto" +
-      "buf.BoolValue\022B\n\021pool_maximum_size\030\t \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\n\372\3071\00610-20" +
-      "0\022M\n\027pool_connection_timeout\030\n \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\017\372\3071\0135000-600000" +
-      "\022G\n\021pool_idle_timeout\030\013 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\017\372\3071\0135000-600000\022A\n\021poo" +
-      "l_minimum_idle\030\014 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\t\372\3071\0050-200\"^\n\021PXFDatasourceCor" +
-      "e\022\035\n\ndefault_fs\030\001 \001(\tB\t\212\3101\005<=200\022*\n\026secu" +
-      "rity_auth_to_local\030\002 \001(\tB\n\212\3101\006<=1000\"\317\002\n" +
-      "\025PXFDatasourceKerberos\022*\n\006enable\030\001 \001(\0132\032" +
-      ".google.protobuf.BoolValue\022\032\n\007primary\030\002 " +
-      "\001(\tB\t\212\3101\005<=128\022\031\n\005realm\030\003 \001(\tB\n\212\3101\006<=100" +
-      "0\022\'\n\013kdc_servers\030\004 \003(\tB\022\202\3101\005<=200\212\3101\0051-2" +
-      "00\022\037\n\014admin_server\030\005 \001(\tB\t\212\3101\005<=128\022!\n\016d" +
-      "efault_domain\030\006 \001(\tB\t\212\3101\005<=128\022f\n\rkeytab" +
-      "_base64\030\007 \001(\tBO\362\3071@^(?:[A-Za-z0-9+/]{4})" +
-      "*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=" +
-      ")?$\212\3101\007<=65536\"\255\001\n\034PXFDatasourceHDFSDfsN" +
-      "amenode\022\037\n\013rpc_address\030\001 \001(\tB\n\212\3101\006<=1000" +
-      "\022\'\n\023service_rpc_address\030\002 \001(\tB\n\212\3101\006<=100" +
-      "0\022 \n\014http_address\030\003 \001(\tB\n\212\3101\006<=1000\022!\n\rh" +
-      "ttps_address\030\004 \001(\tB\n\212\3101\006<=1000\"\247\003\n\024PXFDa" +
-      "tasourceHDFSDfs\022A\n\035ha_automatic_failover" +
-      "_enabled\030\001 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022>\n\032block_access_token_enabled\030\002 \001(\0132\032" +
-      ".google.protobuf.BoolValue\0229\n\025use_datano" +
-      "de_hostname\030\003 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022b\n\tnamenodes\030\004 \003(\0132B.yandex.cloud." +
-      "mdb.greenplum.v1.PXFDatasourceHDFSDfs.Na" +
-      "menodesEntryB\013\202\3101\007<=10000\032m\n\016NamenodesEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022J\n\005value\030\002 \001(\0132;.yandex" +
-      ".cloud.mdb.greenplum.v1.PXFDatasourceHDF" +
-      "SDfsNamenode:\0028\001\"\226\002\n\031PXFDatasourceHDFSYa" +
-      "rnHaRm\022\037\n\027resourcemanager_address\030\001 \001(\t\022" +
-      ")\n!resourcemanager_scheduler_address\030\002 \001" +
-      "(\t\0220\n(resourcemanager_resource_tracker_a" +
-      "ddress\030\003 \001(\t\022%\n\035resourcemanager_admin_ad" +
-      "dress\030\004 \001(\t\022&\n\036resourcemanager_webapp_ad" +
-      "dress\030\005 \001(\t\022,\n$resourcemanager_webapp_ht" +
-      "tps_address\030\006 \001(\t\"\347\003\n\025PXFDatasourceHDFSY" +
-      "arn\022>\n\032resourcemanager_ha_enabled\030\001 \001(\0132" +
-      "\032.google.protobuf.BoolValue\022L\n(resourcem" +
-      "anager_ha_auto_failover_enabled\030\002 \001(\0132\032." +
-      "google.protobuf.BoolValue\022M\n)resourceman" +
-      "ager_ha_auto_failover_embedded\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022.\n\032resourcemana" +
-      "ger_cluster_id\030\004 \001(\tB\n\212\3101\006<=1000\022Z\n\005ha_r" +
-      "m\030\005 \003(\0132>.yandex.cloud.mdb.greenplum.v1." +
-      "PXFDatasourceHDFSYarn.HaRmEntryB\013\202\3101\007<=1" +
-      "0000\032e\n\tHaRmEntry\022\013\n\003key\030\001 \001(\t\022G\n\005value\030" +
-      "\002 \001(\01328.yandex.cloud.mdb.greenplum.v1.PX" +
-      "FDatasourceHDFSYarnHaRm:\0028\001\"\344\003\n\021PXFDatas" +
-      "ourceHDFS\022>\n\004core\030\001 \001(\01320.yandex.cloud.m" +
-      "db.greenplum.v1.PXFDatasourceCore\022F\n\010ker" +
-      "beros\030\002 \001(\01324.yandex.cloud.mdb.greenplum" +
-      ".v1.PXFDatasourceKerberos\0226\n\022user_impers" +
-      "onation\030\003 \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=128\022F\n\027sasl_c" +
-      "onnection_retries\030\005 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_hosts\030\006 \003(\t" +
-      "B\022\202\3101\005<=200\212\3101\0051-200\022@\n\003dfs\030\007 \001(\01323.yand" +
-      "ex.cloud.mdb.greenplum.v1.PXFDatasourceH" +
-      "DFSDfs\022B\n\004yarn\030\010 \001(\01324.yandex.cloud.mdb." +
-      "greenplum.v1.PXFDatasourceHDFSYarn\"\222\004\n\021P" +
-      "XFDatasourceHive\022>\n\004core\030\001 \001(\01320.yandex." +
-      "cloud.mdb.greenplum.v1.PXFDatasourceCore" +
-      "\022F\n\010kerberos\030\002 \001(\01324.yandex.cloud.mdb.gr" +
-      "eenplum.v1.PXFDatasourceKerberos\0226\n\022user" +
-      "_impersonation\030\003 \001(\0132\032.google.protobuf.B" +
-      "oolValue\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=128\022F\n" +
-      "\027sasl_connection_retries\030\005 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_host" +
-      "s\030\006 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\022\'\n\003ppd\030\007 \001(\013" +
-      "2\032.google.protobuf.BoolValue\022*\n\016metastor" +
-      "e_uris\030\010 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\0220\n\034meta" +
-      "store_kerberos_principal\030\t \001(\tB\n\212\3101\006<=10" +
-      "00\022+\n\027auth_kerberos_principal\030\n \001(\tB\n\212\3101" +
-      "\006<=1000\"\274\002\n\rPXFDatasource\022\033\n\004name\030\001 \001(\tB" +
-      "\r\350\3071\001\212\3101\0053-200\022<\n\002s3\030\002 \001(\0132..yandex.clou" +
-      "d.mdb.greenplum.v1.PXFDatasourceS3H\000\022@\n\004" +
-      "jdbc\030\003 \001(\01320.yandex.cloud.mdb.greenplum." +
-      "v1.PXFDatasourceJDBCH\000\022@\n\004hdfs\030\004 \001(\01320.y" +
+      "\0061-1024\0222\n\003xmx\030\010 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\010\372\3071\004>=64\0222\n\003xms\030\t \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\010\372\3071\004>=64\"\331\001\n\014PXFC" +
+      "onfigSet\022H\n\020effective_config\030\001 \001(\0132(.yan" +
+      "dex.cloud.mdb.greenplum.v1.PXFConfigB\004\350\307" +
+      "1\001\022=\n\013user_config\030\002 \001(\0132(.yandex.cloud.m" +
+      "db.greenplum.v1.PXFConfig\022@\n\016default_con" +
+      "fig\030\003 \001(\0132(.yandex.cloud.mdb.greenplum.v" +
+      "1.PXFConfig\"\341\001\n\017PXFDatasourceS3\022\035\n\nacces" +
+      "s_key\030\001 \001(\tB\t\212\3101\005<=200\022\035\n\nsecret_key\030\002 \001" +
+      "(\tB\t\212\3101\005<=200\022/\n\013fast_upload\030\003 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022_\n\010endpoint\030\004 \001(\t" +
+      "BM\212\3101\005<=200\362\3071@(((s3|https?)://)?([a-z0-" +
+      "9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?\"" +
+      "\250\005\n\021PXFDatasourceJDBC\022\030\n\006driver\030\001 \001(\tB\010\212" +
+      "\3101\004<=50\022\027\n\003url\030\002 \001(\tB\n\212\3101\006<=1000\022\027\n\004user" +
+      "\030\003 \001(\tB\t\212\3101\005<=200\022\033\n\010password\030\004 \001(\tB\t\212\3101" +
+      "\005<=200\022F\n\024statement_batch_size\030\005 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\013\372\3071\00750-1000\022G" +
+      "\n\024statement_fetch_size\030\006 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\014\372\3071\01050-10000\022I\n\027state" +
+      "ment_query_timeout\030\007 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\013\372\3071\0075-43200\0220\n\014pool_enabl" +
+      "ed\030\010 \001(\0132\032.google.protobuf.BoolValue\022A\n\021" +
+      "pool_maximum_size\030\t \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\t\372\3071\0051-200\022M\n\027pool_connecti" +
+      "on_timeout\030\n \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\017\372\3071\0135000-600000\022G\n\021pool_idle_time" +
+      "out\030\013 \001(\0132\033.google.protobuf.Int64ValueB\017" +
+      "\372\3071\0135000-600000\022A\n\021pool_minimum_idle\030\014 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\t\372\3071\0050-2" +
+      "00\"^\n\021PXFDatasourceCore\022\035\n\ndefault_fs\030\001 " +
+      "\001(\tB\t\212\3101\005<=200\022*\n\026security_auth_to_local" +
+      "\030\002 \001(\tB\n\212\3101\006<=1000\"\317\002\n\025PXFDatasourceKerb" +
+      "eros\022*\n\006enable\030\001 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022\032\n\007primary\030\002 \001(\tB\t\212\3101\005<=128\022\031\n\005" +
+      "realm\030\003 \001(\tB\n\212\3101\006<=1000\022\'\n\013kdc_servers\030\004" +
+      " \003(\tB\022\202\3101\005<=200\212\3101\0051-200\022\037\n\014admin_server" +
+      "\030\005 \001(\tB\t\212\3101\005<=128\022!\n\016default_domain\030\006 \001(" +
+      "\tB\t\212\3101\005<=128\022f\n\rkeytab_base64\030\007 \001(\tBO\362\3071" +
+      "@^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{" +
+      "2}==|[A-Za-z0-9+/]{3}=)?$\212\3101\007<=65536\"\255\001\n" +
+      "\034PXFDatasourceHDFSDfsNamenode\022\037\n\013rpc_add" +
+      "ress\030\001 \001(\tB\n\212\3101\006<=1000\022\'\n\023service_rpc_ad" +
+      "dress\030\002 \001(\tB\n\212\3101\006<=1000\022 \n\014http_address\030" +
+      "\003 \001(\tB\n\212\3101\006<=1000\022!\n\rhttps_address\030\004 \001(\t" +
+      "B\n\212\3101\006<=1000\"\275\003\n\024PXFDatasourceHDFSDfs\022A\n" +
+      "\035ha_automatic_failover_enabled\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022>\n\032block_access" +
+      "_token_enabled\030\002 \001(\0132\032.google.protobuf.B" +
+      "oolValue\0229\n\025use_datanode_hostname\030\003 \001(\0132" +
+      "\032.google.protobuf.BoolValue\022b\n\tnamenodes" +
+      "\030\004 \003(\0132B.yandex.cloud.mdb.greenplum.v1.P" +
+      "XFDatasourceHDFSDfs.NamenodesEntryB\013\202\3101\007" +
+      "<=10000\022\024\n\014nameservices\030\005 \001(\t\032m\n\016Namenod" +
+      "esEntry\022\013\n\003key\030\001 \001(\t\022J\n\005value\030\002 \001(\0132;.ya" +
+      "ndex.cloud.mdb.greenplum.v1.PXFDatasourc" +
+      "eHDFSDfsNamenode:\0028\001\"\226\002\n\031PXFDatasourceHD" +
+      "FSYarnHaRm\022\037\n\027resourcemanager_address\030\001 " +
+      "\001(\t\022)\n!resourcemanager_scheduler_address" +
+      "\030\002 \001(\t\0220\n(resourcemanager_resource_track" +
+      "er_address\030\003 \001(\t\022%\n\035resourcemanager_admi" +
+      "n_address\030\004 \001(\t\022&\n\036resourcemanager_webap" +
+      "p_address\030\005 \001(\t\022,\n$resourcemanager_webap" +
+      "p_https_address\030\006 \001(\t\"\347\003\n\025PXFDatasourceH" +
+      "DFSYarn\022>\n\032resourcemanager_ha_enabled\030\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\022L\n(resou" +
+      "rcemanager_ha_auto_failover_enabled\030\002 \001(" +
+      "\0132\032.google.protobuf.BoolValue\022M\n)resourc" +
+      "emanager_ha_auto_failover_embedded\030\003 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022.\n\032resource" +
+      "manager_cluster_id\030\004 \001(\tB\n\212\3101\006<=1000\022Z\n\005" +
+      "ha_rm\030\005 \003(\0132>.yandex.cloud.mdb.greenplum" +
+      ".v1.PXFDatasourceHDFSYarn.HaRmEntryB\013\202\3101" +
+      "\007<=10000\032e\n\tHaRmEntry\022\013\n\003key\030\001 \001(\t\022G\n\005va" +
+      "lue\030\002 \001(\01328.yandex.cloud.mdb.greenplum.v" +
+      "1.PXFDatasourceHDFSYarnHaRm:\0028\001\"\344\003\n\021PXFD" +
+      "atasourceHDFS\022>\n\004core\030\001 \001(\01320.yandex.clo" +
+      "ud.mdb.greenplum.v1.PXFDatasourceCore\022F\n" +
+      "\010kerberos\030\002 \001(\01324.yandex.cloud.mdb.green" +
+      "plum.v1.PXFDatasourceKerberos\0226\n\022user_im" +
+      "personation\030\003 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=128\022F\n\027sa" +
+      "sl_connection_retries\030\005 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_hosts\030\006" +
+      " \003(\tB\022\202\3101\005<=200\212\3101\0051-200\022@\n\003dfs\030\007 \001(\01323." +
+      "yandex.cloud.mdb.greenplum.v1.PXFDatasou" +
+      "rceHDFSDfs\022B\n\004yarn\030\010 \001(\01324.yandex.cloud." +
+      "mdb.greenplum.v1.PXFDatasourceHDFSYarn\"\222" +
+      "\004\n\021PXFDatasourceHive\022>\n\004core\030\001 \001(\01320.yan" +
+      "dex.cloud.mdb.greenplum.v1.PXFDatasource" +
+      "Core\022F\n\010kerberos\030\002 \001(\01324.yandex.cloud.md" +
+      "b.greenplum.v1.PXFDatasourceKerberos\0226\n\022" +
+      "user_impersonation\030\003 \001(\0132\032.google.protob" +
+      "uf.BoolValue\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=12" +
+      "8\022F\n\027sasl_connection_retries\030\005 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_" +
+      "hosts\030\006 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\022\'\n\003ppd\030\007" +
+      " \001(\0132\032.google.protobuf.BoolValue\022*\n\016meta" +
+      "store_uris\030\010 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\0220\n\034" +
+      "metastore_kerberos_principal\030\t \001(\tB\n\212\3101\006" +
+      "<=1000\022+\n\027auth_kerberos_principal\030\n \001(\tB" +
+      "\n\212\3101\006<=1000\"\322\002\n\rPXFDatasource\0221\n\004name\030\001 " +
+      "\001(\tB#\350\3071\001\212\3101\0053-200\362\3071\022^[^\\|/*?.,;\"\'<>]+$" +
+      "\022<\n\002s3\030\002 \001(\0132..yandex.cloud.mdb.greenplu" +
+      "m.v1.PXFDatasourceS3H\000\022@\n\004jdbc\030\003 \001(\01320.y" +
       "andex.cloud.mdb.greenplum.v1.PXFDatasour" +
-      "ceHDFSH\000\022@\n\004hive\030\005 \001(\01320.yandex.cloud.md" +
-      "b.greenplum.v1.PXFDatasourceHiveH\000B\n\n\010se" +
-      "ttingsBp\n!yandex.cloud.api.mdb.greenplum" +
-      ".v1ZKgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/greenplum/v1;greenplum" +
-      "b\006proto3"
+      "ceJDBCH\000\022@\n\004hdfs\030\004 \001(\01320.yandex.cloud.md" +
+      "b.greenplum.v1.PXFDatasourceHDFSH\000\022@\n\004hi" +
+      "ve\030\005 \001(\01320.yandex.cloud.mdb.greenplum.v1" +
+      ".PXFDatasourceHiveH\000B\n\n\010settingsBp\n!yand" +
+      "ex.cloud.api.mdb.greenplum.v1ZKgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21564,7 +21752,7 @@ public final class Pxf {
     internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor,
-        new java.lang.String[] { "HaAutomaticFailoverEnabled", "BlockAccessTokenEnabled", "UseDatanodeHostname", "Namenodes", });
+        new java.lang.String[] { "HaAutomaticFailoverEnabled", "BlockAccessTokenEnabled", "UseDatanodeHostname", "Namenodes", "Nameservices", });
     internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_fieldAccessorTable = new

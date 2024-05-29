@@ -2874,7 +2874,7 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -2883,7 +2883,7 @@ public final class FormatSchemaServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3126,7 +3126,7 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3147,7 +3147,7 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3804,7 +3804,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3824,7 +3824,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3845,7 +3845,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3864,7 +3864,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -3878,7 +3878,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
@@ -4804,7 +4804,7 @@ public final class FormatSchemaServiceOuterClass {
 
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -4813,7 +4813,7 @@ public final class FormatSchemaServiceOuterClass {
     java.lang.String getUri();
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5059,7 +5059,7 @@ public final class FormatSchemaServiceOuterClass {
     private volatile java.lang.Object uri_;
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5080,7 +5080,7 @@ public final class FormatSchemaServiceOuterClass {
     }
     /**
      * <pre>
-     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
      * </pre>
      *
      * <code>string uri = 4;</code>
@@ -5791,7 +5791,7 @@ public final class FormatSchemaServiceOuterClass {
       private java.lang.Object uri_ = "";
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5811,7 +5811,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5832,7 +5832,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5851,7 +5851,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>
@@ -5865,7 +5865,7 @@ public final class FormatSchemaServiceOuterClass {
       }
       /**
        * <pre>
-       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * [Link to the file](/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
        * </pre>
        *
        * <code>string uri = 4;</code>

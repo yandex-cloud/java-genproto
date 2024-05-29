@@ -10847,6 +10847,16 @@ public final class PolicyServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getComputeInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Progress of the backup process.
+     * </pre>
+     *
+     * <code>double progress_percentage = 3;</code>
+     * @return The progressPercentage.
+     */
+    double getProgressPercentage();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ExecuteMetadata}
@@ -10905,6 +10915,11 @@ public final class PolicyServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               computeInstanceId_ = s;
+              break;
+            }
+            case 25: {
+
+              progressPercentage_ = input.readDouble();
               break;
             }
             default: {
@@ -11031,6 +11046,21 @@ public final class PolicyServiceOuterClass {
       }
     }
 
+    public static final int PROGRESS_PERCENTAGE_FIELD_NUMBER = 3;
+    private double progressPercentage_;
+    /**
+     * <pre>
+     * Progress of the backup process.
+     * </pre>
+     *
+     * <code>double progress_percentage = 3;</code>
+     * @return The progressPercentage.
+     */
+    @java.lang.Override
+    public double getProgressPercentage() {
+      return progressPercentage_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11051,6 +11081,9 @@ public final class PolicyServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, computeInstanceId_);
       }
+      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
+        output.writeDouble(3, progressPercentage_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11065,6 +11098,10 @@ public final class PolicyServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, computeInstanceId_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(progressPercentage_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, progressPercentage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11085,6 +11122,9 @@ public final class PolicyServiceOuterClass {
           .equals(other.getPolicyId())) return false;
       if (!getComputeInstanceId()
           .equals(other.getComputeInstanceId())) return false;
+      if (java.lang.Double.doubleToLongBits(getProgressPercentage())
+          != java.lang.Double.doubleToLongBits(
+              other.getProgressPercentage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11100,6 +11140,9 @@ public final class PolicyServiceOuterClass {
       hash = (53 * hash) + getPolicyId().hashCode();
       hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + PROGRESS_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getProgressPercentage()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11237,6 +11280,8 @@ public final class PolicyServiceOuterClass {
 
         computeInstanceId_ = "";
 
+        progressPercentage_ = 0D;
+
         return this;
       }
 
@@ -11265,6 +11310,7 @@ public final class PolicyServiceOuterClass {
         yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ExecuteMetadata result = new yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ExecuteMetadata(this);
         result.policyId_ = policyId_;
         result.computeInstanceId_ = computeInstanceId_;
+        result.progressPercentage_ = progressPercentage_;
         onBuilt();
         return result;
       }
@@ -11320,6 +11366,9 @@ public final class PolicyServiceOuterClass {
         if (!other.getComputeInstanceId().isEmpty()) {
           computeInstanceId_ = other.computeInstanceId_;
           onChanged();
+        }
+        if (other.getProgressPercentage() != 0D) {
+          setProgressPercentage(other.getProgressPercentage());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11538,6 +11587,49 @@ public final class PolicyServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double progressPercentage_ ;
+      /**
+       * <pre>
+       * Progress of the backup process.
+       * </pre>
+       *
+       * <code>double progress_percentage = 3;</code>
+       * @return The progressPercentage.
+       */
+      @java.lang.Override
+      public double getProgressPercentage() {
+        return progressPercentage_;
+      }
+      /**
+       * <pre>
+       * Progress of the backup process.
+       * </pre>
+       *
+       * <code>double progress_percentage = 3;</code>
+       * @param value The progressPercentage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgressPercentage(double value) {
+        
+        progressPercentage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Progress of the backup process.
+       * </pre>
+       *
+       * <code>double progress_percentage = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgressPercentage() {
+        
+        progressPercentage_ = 0D;
         onChanged();
         return this;
       }
@@ -13303,53 +13395,53 @@ public final class PolicyServiceOuterClass {
       "andex.cloud.backup.v1.PolicyApplication\"" +
       "\\\n\016ExecuteRequest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\307" +
       "1\001\212\3101\004<=50\022)\n\023compute_instance_id\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"A\n\017ExecuteMetadata\022\021\n\tpoli" +
+      "\014\350\3071\001\212\3101\004<=50\"^\n\017ExecuteMetadata\022\021\n\tpoli" +
       "cy_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t" +
-      "\"[\n\rRevokeRequest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022)\n\023compute_instance_id\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"@\n\016RevokeMetadata\022\021\n\tpolic" +
-      "y_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t2" +
-      "\327\013\n\rPolicyService\022~\n\004List\022+.yandex.cloud" +
-      ".backup.v1.ListPoliciesRequest\032,.yandex." +
-      "cloud.backup.v1.ListPoliciesResponse\"\033\202\323" +
-      "\344\223\002\025\022\023/backup/v1/policies\022\232\001\n\006Create\022+.y" +
-      "andex.cloud.backup.v1.CreatePolicyReques" +
-      "t\032!.yandex.cloud.operation.Operation\"@\202\323" +
-      "\344\223\002\030\"\023/backup/v1/policies:\001*\262\322*\036\n\024Create" +
-      "PolicyMetadata\022\006Policy\022x\n\003Get\022(.yandex.c" +
-      "loud.backup.v1.GetPolicyRequest\032\036.yandex" +
-      ".cloud.backup.v1.Policy\"\'\202\323\344\223\002!\022\037/backup" +
-      "/v1/policies/{policy_id}\022\246\001\n\006Update\022+.ya" +
-      "ndex.cloud.backup.v1.UpdatePolicyRequest" +
-      "\032!.yandex.cloud.operation.Operation\"L\202\323\344" +
-      "\223\002$2\037/backup/v1/policies/{policy_id}:\001*\262" +
-      "\322*\036\n\024UpdatePolicyMetadata\022\006Policy\022\262\001\n\006De" +
-      "lete\022+.yandex.cloud.backup.v1.DeletePoli" +
-      "cyRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"X\202\323\344\223\002!*\037/backup/v1/policies/{polic" +
-      "y_id}\262\322*-\n\024DeletePolicyMetadata\022\025google." +
-      "protobuf.Empty\022\270\001\n\005Apply\022*.yandex.cloud." +
-      "backup.v1.ApplyPolicyRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"`\202\323\344\223\002*\"%/backup" +
-      "/v1/policies/{policy_id}:apply:\001*\262\322*,\n\023A" +
-      "pplyPolicyMetadata\022\025google.protobuf.Empt" +
-      "y\022\253\001\n\020ListApplications\022/.yandex.cloud.ba" +
-      "ckup.v1.ListApplicationsRequest\0320.yandex" +
-      ".cloud.backup.v1.ListApplicationsRespons" +
-      "e\"4\202\323\344\223\002.\022,/backup/v1/policies/{policy_i" +
-      "d}/applications\022\264\001\n\007Execute\022&.yandex.clo" +
-      "ud.backup.v1.ExecuteRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"^\202\323\344\223\002,\"\'/backup/" +
-      "v1/policies/{policy_id}:execute:\001*\262\322*(\n\017" +
-      "ExecuteMetadata\022\025google.protobuf.Empty\022\260" +
-      "\001\n\006Revoke\022%.yandex.cloud.backup.v1.Revok" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\\\202\323\344\223\002+\"&/backup/v1/policies/{policy" +
-      "_id}:revoke:\001*\262\322*\'\n\016RevokeMetadata\022\025goog" +
-      "le.protobuf.EmptyB_\n\032yandex.cloud.api.ba" +
-      "ckup.v1ZAgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/backup/v1;backupb\006prot" +
-      "o3"
+      "\022\033\n\023progress_percentage\030\003 \001(\001\"[\n\rRevokeR" +
+      "equest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      ")\n\023compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"@\n\016RevokeMetadata\022\021\n\tpolicy_id\030\001 \001(\t\022" +
+      "\033\n\023compute_instance_id\030\002 \001(\t2\327\013\n\rPolicyS" +
+      "ervice\022~\n\004List\022+.yandex.cloud.backup.v1." +
+      "ListPoliciesRequest\032,.yandex.cloud.backu" +
+      "p.v1.ListPoliciesResponse\"\033\202\323\344\223\002\025\022\023/back" +
+      "up/v1/policies\022\232\001\n\006Create\022+.yandex.cloud" +
+      ".backup.v1.CreatePolicyRequest\032!.yandex." +
+      "cloud.operation.Operation\"@\202\323\344\223\002\030\"\023/back" +
+      "up/v1/policies:\001*\262\322*\036\n\024CreatePolicyMetad" +
+      "ata\022\006Policy\022x\n\003Get\022(.yandex.cloud.backup" +
+      ".v1.GetPolicyRequest\032\036.yandex.cloud.back" +
+      "up.v1.Policy\"\'\202\323\344\223\002!\022\037/backup/v1/policie" +
+      "s/{policy_id}\022\246\001\n\006Update\022+.yandex.cloud." +
+      "backup.v1.UpdatePolicyRequest\032!.yandex.c" +
+      "loud.operation.Operation\"L\202\323\344\223\002$2\037/backu" +
+      "p/v1/policies/{policy_id}:\001*\262\322*\036\n\024Update" +
+      "PolicyMetadata\022\006Policy\022\262\001\n\006Delete\022+.yand" +
+      "ex.cloud.backup.v1.DeletePolicyRequest\032!" +
+      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
+      "!*\037/backup/v1/policies/{policy_id}\262\322*-\n\024" +
+      "DeletePolicyMetadata\022\025google.protobuf.Em" +
+      "pty\022\270\001\n\005Apply\022*.yandex.cloud.backup.v1.A" +
+      "pplyPolicyRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"`\202\323\344\223\002*\"%/backup/v1/policie" +
+      "s/{policy_id}:apply:\001*\262\322*,\n\023ApplyPolicyM" +
+      "etadata\022\025google.protobuf.Empty\022\253\001\n\020ListA" +
+      "pplications\022/.yandex.cloud.backup.v1.Lis" +
+      "tApplicationsRequest\0320.yandex.cloud.back" +
+      "up.v1.ListApplicationsResponse\"4\202\323\344\223\002.\022," +
+      "/backup/v1/policies/{policy_id}/applicat" +
+      "ions\022\264\001\n\007Execute\022&.yandex.cloud.backup.v" +
+      "1.ExecuteRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"^\202\323\344\223\002,\"\'/backup/v1/policies" +
+      "/{policy_id}:execute:\001*\262\322*(\n\017ExecuteMeta" +
+      "data\022\025google.protobuf.Empty\022\260\001\n\006Revoke\022%" +
+      ".yandex.cloud.backup.v1.RevokeRequest\032!." +
+      "yandex.cloud.operation.Operation\"\\\202\323\344\223\002+" +
+      "\"&/backup/v1/policies/{policy_id}:revoke" +
+      ":\001*\262\322*\'\n\016RevokeMetadata\022\025google.protobuf" +
+      ".EmptyB_\n\032yandex.cloud.api.backup.v1ZAgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13449,7 +13541,7 @@ public final class PolicyServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ExecuteMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ExecuteMetadata_descriptor,
-        new java.lang.String[] { "PolicyId", "ComputeInstanceId", });
+        new java.lang.String[] { "PolicyId", "ComputeInstanceId", "ProgressPercentage", });
     internal_static_yandex_cloud_backup_v1_RevokeRequest_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_backup_v1_RevokeRequest_fieldAccessorTable = new

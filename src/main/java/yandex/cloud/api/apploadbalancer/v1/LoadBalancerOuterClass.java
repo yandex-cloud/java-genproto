@@ -4507,7 +4507,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -4517,7 +4517,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -4527,7 +4527,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -4776,7 +4776,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -4789,7 +4789,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -4805,7 +4805,7 @@ public final class LoadBalancerOuterClass {
     /**
      * <pre>
      * Internal IPv4 endpoint address.
-     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5442,7 +5442,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5455,7 +5455,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5478,7 +5478,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5499,7 +5499,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5518,7 +5518,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5545,7 +5545,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5569,7 +5569,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5580,7 +5580,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
@@ -5599,7 +5599,7 @@ public final class LoadBalancerOuterClass {
       /**
        * <pre>
        * Internal IPv4 endpoint address.
-       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * To enable the use of listeners with internal addresses, [contact support](/docs/support/overview#response-time).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>

@@ -1343,7 +1343,7 @@ public final class VersionServiceOuterClass {
 
     /**
      * <pre>
-     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1352,7 +1352,7 @@ public final class VersionServiceOuterClass {
     int getReleaseChannelValue();
     /**
      * <pre>
-     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1503,7 +1503,7 @@ public final class VersionServiceOuterClass {
     private int releaseChannel_;
     /**
      * <pre>
-     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1514,7 +1514,7 @@ public final class VersionServiceOuterClass {
     }
     /**
      * <pre>
-     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+     * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
      * </pre>
      *
      * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1917,7 +1917,7 @@ public final class VersionServiceOuterClass {
       private int releaseChannel_ = 0;
       /**
        * <pre>
-       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1928,7 +1928,7 @@ public final class VersionServiceOuterClass {
       }
       /**
        * <pre>
-       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1943,7 +1943,7 @@ public final class VersionServiceOuterClass {
       }
       /**
        * <pre>
-       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1957,7 +1957,7 @@ public final class VersionServiceOuterClass {
       }
       /**
        * <pre>
-       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>
@@ -1975,7 +1975,7 @@ public final class VersionServiceOuterClass {
       }
       /**
        * <pre>
-       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/release-channels-and-updates).
+       * Release channel: `RAPID`, `REGULAR` or `STABLE`. For more details see [documentation](/docs/managed-kubernetes/concepts/release-channels-and-updates).
        * </pre>
        *
        * <code>.yandex.cloud.k8s.v1.ReleaseChannel release_channel = 1;</code>

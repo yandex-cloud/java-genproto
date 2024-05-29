@@ -29,6 +29,18 @@ public final class AgentRegistrationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getComputeInstanceIdBytes();
+
+    /**
+     * <code>string agent_version = 2;</code>
+     * @return The agentVersion.
+     */
+    java.lang.String getAgentVersion();
+    /**
+     * <code>string agent_version = 2;</code>
+     * @return The bytes for agentVersion.
+     */
+    com.google.protobuf.ByteString
+        getAgentVersionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.RegisterRequest}
@@ -44,6 +56,7 @@ public final class AgentRegistrationServiceOuterClass {
     }
     private RegisterRequest() {
       computeInstanceId_ = "";
+      agentVersion_ = "";
     }
 
     @java.lang.Override
@@ -80,6 +93,12 @@ public final class AgentRegistrationServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               computeInstanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentVersion_ = s;
               break;
             }
             default: {
@@ -152,6 +171,44 @@ public final class AgentRegistrationServiceOuterClass {
       }
     }
 
+    public static final int AGENT_VERSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object agentVersion_;
+    /**
+     * <code>string agent_version = 2;</code>
+     * @return The agentVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentVersion() {
+      java.lang.Object ref = agentVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string agent_version = 2;</code>
+     * @return The bytes for agentVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentVersionBytes() {
+      java.lang.Object ref = agentVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -169,6 +226,9 @@ public final class AgentRegistrationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, computeInstanceId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, agentVersion_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -180,6 +240,9 @@ public final class AgentRegistrationServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, computeInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, agentVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -198,6 +261,8 @@ public final class AgentRegistrationServiceOuterClass {
 
       if (!getComputeInstanceId()
           .equals(other.getComputeInstanceId())) return false;
+      if (!getAgentVersion()
+          .equals(other.getAgentVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -211,6 +276,8 @@ public final class AgentRegistrationServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + AGENT_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -346,6 +413,8 @@ public final class AgentRegistrationServiceOuterClass {
         super.clear();
         computeInstanceId_ = "";
 
+        agentVersion_ = "";
+
         return this;
       }
 
@@ -373,6 +442,7 @@ public final class AgentRegistrationServiceOuterClass {
       public yandex.cloud.api.loadtesting.agent.v1.AgentRegistrationServiceOuterClass.RegisterRequest buildPartial() {
         yandex.cloud.api.loadtesting.agent.v1.AgentRegistrationServiceOuterClass.RegisterRequest result = new yandex.cloud.api.loadtesting.agent.v1.AgentRegistrationServiceOuterClass.RegisterRequest(this);
         result.computeInstanceId_ = computeInstanceId_;
+        result.agentVersion_ = agentVersion_;
         onBuilt();
         return result;
       }
@@ -423,6 +493,10 @@ public final class AgentRegistrationServiceOuterClass {
         if (other == yandex.cloud.api.loadtesting.agent.v1.AgentRegistrationServiceOuterClass.RegisterRequest.getDefaultInstance()) return this;
         if (!other.getComputeInstanceId().isEmpty()) {
           computeInstanceId_ = other.computeInstanceId_;
+          onChanged();
+        }
+        if (!other.getAgentVersion().isEmpty()) {
+          agentVersion_ = other.agentVersion_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -526,6 +600,82 @@ public final class AgentRegistrationServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object agentVersion_ = "";
+      /**
+       * <code>string agent_version = 2;</code>
+       * @return The agentVersion.
+       */
+      public java.lang.String getAgentVersion() {
+        java.lang.Object ref = agentVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agentVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string agent_version = 2;</code>
+       * @return The bytes for agentVersion.
+       */
+      public com.google.protobuf.ByteString
+          getAgentVersionBytes() {
+        java.lang.Object ref = agentVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agentVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string agent_version = 2;</code>
+       * @param value The agentVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agentVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_version = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentVersion() {
+        
+        agentVersion_ = getDefaultInstance().getAgentVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_version = 2;</code>
+       * @param value The bytes for agentVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agentVersion_ = value;
         onChanged();
         return this;
       }
@@ -2770,28 +2920,28 @@ public final class AgentRegistrationServiceOuterClass {
       "ud.loadtesting.agent.v1\032 yandex/cloud/ap" +
       "i/operation.proto\032&yandex/cloud/operatio" +
       "n/operation.proto\032\034google/api/annotation" +
-      "s.proto\".\n\017RegisterRequest\022\033\n\023compute_in" +
-      "stance_id\030\001 \001(\t\"-\n\020RegisterResponse\022\031\n\021a" +
-      "gent_instance_id\030\001 \001(\t\"s\n\034ExternalAgentR" +
-      "egisterRequest\022\021\n\tfolder_id\030\001 \001(\t\022\033\n\023com" +
-      "pute_instance_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\025\n\r" +
-      "agent_version\030\004 \001(\t\":\n\035ExternalAgentRegi" +
-      "sterMetadata\022\031\n\021agent_instance_id\030\001 \001(\t2" +
-      "\262\003\n\030AgentRegistrationService\022\245\001\n\010Registe" +
-      "r\0222.yandex.cloud.loadtesting.agent.v1.Re" +
-      "gisterRequest\0323.yandex.cloud.loadtesting" +
-      ".agent.v1.RegisterResponse\"0\202\323\344\223\002*\"%/loa" +
-      "dtesting/agent/v1/agents/register:\001*\022\355\001\n" +
-      "\025ExternalAgentRegister\022?.yandex.cloud.lo" +
-      "adtesting.agent.v1.ExternalAgentRegister" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"p\202\323\344\223\0028\"3/loadtesting/agent/v1/agents" +
-      "/externalAgentsRegister:\001*\262\322*.\n\035External" +
-      "AgentRegisterMetadata\022\rAgentInstanceBt\n%" +
-      "yandex.cloud.api.loadtesting.agent.v1ZKg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/loadtesting/agent/v1;agentb\006prot" +
-      "o3"
+      "s.proto\"E\n\017RegisterRequest\022\033\n\023compute_in" +
+      "stance_id\030\001 \001(\t\022\025\n\ragent_version\030\002 \001(\t\"-" +
+      "\n\020RegisterResponse\022\031\n\021agent_instance_id\030" +
+      "\001 \001(\t\"s\n\034ExternalAgentRegisterRequest\022\021\n" +
+      "\tfolder_id\030\001 \001(\t\022\033\n\023compute_instance_id\030" +
+      "\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\025\n\ragent_version\030\004 \001" +
+      "(\t\":\n\035ExternalAgentRegisterMetadata\022\031\n\021a" +
+      "gent_instance_id\030\001 \001(\t2\262\003\n\030AgentRegistra" +
+      "tionService\022\245\001\n\010Register\0222.yandex.cloud." +
+      "loadtesting.agent.v1.RegisterRequest\0323.y" +
+      "andex.cloud.loadtesting.agent.v1.Registe" +
+      "rResponse\"0\202\323\344\223\002*\"%/loadtesting/agent/v1" +
+      "/agents/register:\001*\022\355\001\n\025ExternalAgentReg" +
+      "ister\022?.yandex.cloud.loadtesting.agent.v" +
+      "1.ExternalAgentRegisterRequest\032!.yandex." +
+      "cloud.operation.Operation\"p\202\323\344\223\0028\"3/load" +
+      "testing/agent/v1/agents/externalAgentsRe" +
+      "gister:\001*\262\322*.\n\035ExternalAgentRegisterMeta" +
+      "data\022\rAgentInstanceBt\n%yandex.cloud.api." +
+      "loadtesting.agent.v1ZKgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/loadtesti" +
+      "ng/agent/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2805,7 +2955,7 @@ public final class AgentRegistrationServiceOuterClass {
     internal_static_yandex_cloud_loadtesting_agent_v1_RegisterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_RegisterRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", });
+        new java.lang.String[] { "ComputeInstanceId", "AgentVersion", });
     internal_static_yandex_cloud_loadtesting_agent_v1_RegisterResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_loadtesting_agent_v1_RegisterResponse_fieldAccessorTable = new

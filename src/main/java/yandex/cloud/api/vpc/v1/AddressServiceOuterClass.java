@@ -6891,7 +6891,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * required: DNS record name (absolute, or relative to the DNS zone used)
+     * Required. DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -6900,7 +6900,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getFqdn();
     /**
      * <pre>
-     * required: DNS record name (absolute, or relative to the DNS zone used)
+     * Required. DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -6911,7 +6911,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * required: id of public zone
+     * Required. ID of the public DNS zone. The maximum string length in characters is 20.
      * </pre>
      *
      * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -6920,7 +6920,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getDnsZoneId();
     /**
      * <pre>
-     * required: id of public zone
+     * Required. ID of the public DNS zone. The maximum string length in characters is 20.
      * </pre>
      *
      * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -6931,7 +6931,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * optional, 0-86400
+     * TTL of record. Acceptable values are 0 to 86400, inclusive.
      * </pre>
      *
      * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
@@ -6941,7 +6941,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * optional, set if PTR record required
+     * Optional. If the PTR record is required, this parameter must be set to "true".
      * </pre>
      *
      * <code>bool ptr = 4;</code>
@@ -7054,7 +7054,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object fqdn_;
     /**
      * <pre>
-     * required: DNS record name (absolute, or relative to the DNS zone used)
+     * Required. DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7075,7 +7075,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * required: DNS record name (absolute, or relative to the DNS zone used)
+     * Required. DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7100,7 +7100,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object dnsZoneId_;
     /**
      * <pre>
-     * required: id of public zone
+     * Required. ID of the public DNS zone. The maximum string length in characters is 20.
      * </pre>
      *
      * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7121,7 +7121,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * required: id of public zone
+     * Required. ID of the public DNS zone. The maximum string length in characters is 20.
      * </pre>
      *
      * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7146,7 +7146,7 @@ public final class AddressServiceOuterClass {
     private long ttl_;
     /**
      * <pre>
-     * optional, 0-86400
+     * TTL of record. Acceptable values are 0 to 86400, inclusive.
      * </pre>
      *
      * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
@@ -7161,7 +7161,7 @@ public final class AddressServiceOuterClass {
     private boolean ptr_;
     /**
      * <pre>
-     * optional, set if PTR record required
+     * Optional. If the PTR record is required, this parameter must be set to "true".
      * </pre>
      *
      * <code>bool ptr = 4;</code>
@@ -7530,7 +7530,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object fqdn_ = "";
       /**
        * <pre>
-       * required: DNS record name (absolute, or relative to the DNS zone used)
+       * Required. DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7550,7 +7550,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: DNS record name (absolute, or relative to the DNS zone used)
+       * Required. DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7571,7 +7571,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: DNS record name (absolute, or relative to the DNS zone used)
+       * Required. DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7590,7 +7590,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: DNS record name (absolute, or relative to the DNS zone used)
+       * Required. DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7604,7 +7604,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: DNS record name (absolute, or relative to the DNS zone used)
+       * Required. DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
@@ -7626,7 +7626,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object dnsZoneId_ = "";
       /**
        * <pre>
-       * required: id of public zone
+       * Required. ID of the public DNS zone. The maximum string length in characters is 20.
        * </pre>
        *
        * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7646,7 +7646,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: id of public zone
+       * Required. ID of the public DNS zone. The maximum string length in characters is 20.
        * </pre>
        *
        * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7667,7 +7667,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: id of public zone
+       * Required. ID of the public DNS zone. The maximum string length in characters is 20.
        * </pre>
        *
        * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7686,7 +7686,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: id of public zone
+       * Required. ID of the public DNS zone. The maximum string length in characters is 20.
        * </pre>
        *
        * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7700,7 +7700,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * required: id of public zone
+       * Required. ID of the public DNS zone. The maximum string length in characters is 20.
        * </pre>
        *
        * <code>string dns_zone_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "20"];</code>
@@ -7722,7 +7722,7 @@ public final class AddressServiceOuterClass {
       private long ttl_ ;
       /**
        * <pre>
-       * optional, 0-86400
+       * TTL of record. Acceptable values are 0 to 86400, inclusive.
        * </pre>
        *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
@@ -7734,7 +7734,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * optional, 0-86400
+       * TTL of record. Acceptable values are 0 to 86400, inclusive.
        * </pre>
        *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
@@ -7749,7 +7749,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * optional, 0-86400
+       * TTL of record. Acceptable values are 0 to 86400, inclusive.
        * </pre>
        *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
@@ -7765,7 +7765,7 @@ public final class AddressServiceOuterClass {
       private boolean ptr_ ;
       /**
        * <pre>
-       * optional, set if PTR record required
+       * Optional. If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>
@@ -7777,7 +7777,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * optional, set if PTR record required
+       * Optional. If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>
@@ -7792,7 +7792,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * optional, set if PTR record required
+       * Optional. If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>

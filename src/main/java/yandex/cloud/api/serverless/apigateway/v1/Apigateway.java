@@ -416,6 +416,33 @@ public final class Apigateway {
      * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder getCanaryOrBuilder();
+
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * @return Whether the executionTimeout field is set.
+     */
+    boolean hasExecutionTimeout();
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * @return The executionTimeout.
+     */
+    com.google.protobuf.Duration getExecutionTimeout();
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ApiGateway}
@@ -596,6 +623,19 @@ public final class Apigateway {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(canary_);
                 canary_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 130: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (executionTimeout_ != null) {
+                subBuilder = executionTimeout_.toBuilder();
+              }
+              executionTimeout_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(executionTimeout_);
+                executionTimeout_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1542,6 +1582,44 @@ public final class Apigateway {
       return getCanary();
     }
 
+    public static final int EXECUTION_TIMEOUT_FIELD_NUMBER = 16;
+    private com.google.protobuf.Duration executionTimeout_;
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * @return Whether the executionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasExecutionTimeout() {
+      return executionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     * @return The executionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getExecutionTimeout() {
+      return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
+    }
+    /**
+     * <pre>
+     * Timeout for gateway call execution
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
+      return getExecutionTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1603,6 +1681,9 @@ public final class Apigateway {
           14);
       if (canary_ != null) {
         output.writeMessage(15, getCanary());
+      }
+      if (executionTimeout_ != null) {
+        output.writeMessage(16, getExecutionTimeout());
       }
       unknownFields.writeTo(output);
     }
@@ -1675,6 +1756,10 @@ public final class Apigateway {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getCanary());
       }
+      if (executionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getExecutionTimeout());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1729,6 +1814,11 @@ public final class Apigateway {
         if (!getCanary()
             .equals(other.getCanary())) return false;
       }
+      if (hasExecutionTimeout() != other.hasExecutionTimeout()) return false;
+      if (hasExecutionTimeout()) {
+        if (!getExecutionTimeout()
+            .equals(other.getExecutionTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1781,6 +1871,10 @@ public final class Apigateway {
       if (hasCanary()) {
         hash = (37 * hash) + CANARY_FIELD_NUMBER;
         hash = (53 * hash) + getCanary().hashCode();
+      }
+      if (hasExecutionTimeout()) {
+        hash = (37 * hash) + EXECUTION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getExecutionTimeout().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1988,6 +2082,12 @@ public final class Apigateway {
           canary_ = null;
           canaryBuilder_ = null;
         }
+        if (executionTimeoutBuilder_ == null) {
+          executionTimeout_ = null;
+        } else {
+          executionTimeout_ = null;
+          executionTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -2054,6 +2154,11 @@ public final class Apigateway {
           result.canary_ = canary_;
         } else {
           result.canary_ = canaryBuilder_.build();
+        }
+        if (executionTimeoutBuilder_ == null) {
+          result.executionTimeout_ = executionTimeout_;
+        } else {
+          result.executionTimeout_ = executionTimeoutBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2171,6 +2276,9 @@ public final class Apigateway {
             other.internalGetVariables());
         if (other.hasCanary()) {
           mergeCanary(other.getCanary());
+        }
+        if (other.hasExecutionTimeout()) {
+          mergeExecutionTimeout(other.getExecutionTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4100,6 +4208,161 @@ public final class Apigateway {
           canary_ = null;
         }
         return canaryBuilder_;
+      }
+
+      private com.google.protobuf.Duration executionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> executionTimeoutBuilder_;
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * @return Whether the executionTimeout field is set.
+       */
+      public boolean hasExecutionTimeout() {
+        return executionTimeoutBuilder_ != null || executionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       * @return The executionTimeout.
+       */
+      public com.google.protobuf.Duration getExecutionTimeout() {
+        if (executionTimeoutBuilder_ == null) {
+          return executionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
+        } else {
+          return executionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public Builder setExecutionTimeout(com.google.protobuf.Duration value) {
+        if (executionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          executionTimeout_ = value;
+          onChanged();
+        } else {
+          executionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public Builder setExecutionTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (executionTimeoutBuilder_ == null) {
+          executionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          executionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public Builder mergeExecutionTimeout(com.google.protobuf.Duration value) {
+        if (executionTimeoutBuilder_ == null) {
+          if (executionTimeout_ != null) {
+            executionTimeout_ =
+              com.google.protobuf.Duration.newBuilder(executionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            executionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          executionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public Builder clearExecutionTimeout() {
+        if (executionTimeoutBuilder_ == null) {
+          executionTimeout_ = null;
+          onChanged();
+        } else {
+          executionTimeout_ = null;
+          executionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getExecutionTimeoutBuilder() {
+        
+        onChanged();
+        return getExecutionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getExecutionTimeoutOrBuilder() {
+        if (executionTimeoutBuilder_ != null) {
+          return executionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return executionTimeout_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : executionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for gateway call execution
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration execution_timeout = 16 [(.yandex.cloud.value) = "&lt;=600s"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getExecutionTimeoutFieldBuilder() {
+        if (executionTimeoutBuilder_ == null) {
+          executionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getExecutionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          executionTimeout_ = null;
+        }
+        return executionTimeoutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9323,57 +9586,61 @@ public final class Apigateway {
     java.lang.String[] descriptorData = {
       "\n6yandex/cloud/serverless/apigateway/v1/" +
       "apigateway.proto\022%yandex.cloud.serverles" +
-      "s.apigateway.v1\032\037google/protobuf/timesta" +
-      "mp.proto\032\'yandex/cloud/logging/v1/log_en" +
-      "try.proto\032\035yandex/cloud/validation.proto" +
-      "\"\265\007\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
-      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
-      "ion\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud" +
-      ".serverless.apigateway.v1.ApiGateway.Lab" +
-      "elsEntry\022H\n\006status\030\010 \001(\01628.yandex.cloud." +
-      "serverless.apigateway.v1.ApiGateway.Stat" +
-      "us\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t" +
-      "\022O\n\020attached_domains\030\013 \003(\01325.yandex.clou" +
-      "d.serverless.apigateway.v1.AttachedDomai" +
-      "n\022I\n\014connectivity\030\014 \001(\01323.yandex.cloud.s" +
-      "erverless.apigateway.v1.Connectivity\022F\n\013" +
-      "log_options\030\r \001(\01321.yandex.cloud.serverl" +
-      "ess.apigateway.v1.LogOptions\022S\n\tvariable" +
-      "s\030\016 \003(\0132@.yandex.cloud.serverless.apigat" +
-      "eway.v1.ApiGateway.VariablesEntry\022=\n\006can" +
-      "ary\030\017 \001(\0132-.yandex.cloud.serverless.apig" +
-      "ateway.v1.Canary\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016VariablesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.c" +
-      "loud.serverless.apigateway.v1.VariableIn" +
-      "put:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
-      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005J\004\010\006\020\007\"b\n\016Atta" +
-      "chedDomain\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certifi" +
-      "cate_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain" +
-      "\030\005 \001(\tJ\004\010\004\020\005\"5\n\014Connectivity\022\022\n\nnetwork_" +
-      "id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \003(\t\"\226\001\n\nLogOptio" +
-      "ns\022\020\n\010disabled\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001" +
-      "(\tH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004" +
-      " \001(\0162\'.yandex.cloud.logging.v1.LogLevel." +
-      "LevelB\r\n\013destination\"\343\001\n\006Canary\022\030\n\006weigh" +
-      "t\030\001 \001(\003B\010\372\3071\0040-99\022W\n\tvariables\030\002 \003(\0132<.y" +
-      "andex.cloud.serverless.apigateway.v1.Can" +
-      "ary.VariablesEntryB\006\202\3101\002>0\032f\n\016VariablesE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yande" +
-      "x.cloud.serverless.apigateway.v1.Variabl" +
-      "eInput:\0028\001\"|\n\rVariableInput\022\026\n\014string_va" +
-      "lue\030\001 \001(\tH\000\022\023\n\tint_value\030\002 \001(\003H\000\022\026\n\014doub" +
-      "le_value\030\003 \001(\001H\000\022\024\n\nbool_value\030\004 \001(\010H\000B\020" +
-      "\n\016variable_valueB\201\001\n)yandex.cloud.api.se" +
-      "rverless.apigateway.v1ZTgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/serverl" +
-      "ess/apigateway/v1;apigatewayb\006proto3"
+      "s.apigateway.v1\032\036google/protobuf/duratio" +
+      "n.proto\032\037google/protobuf/timestamp.proto" +
+      "\032\'yandex/cloud/logging/v1/log_entry.prot" +
+      "o\032\035yandex/cloud/validation.proto\"\367\007\n\nApi" +
+      "Gateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022." +
+      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(" +
+      "\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud.serverl" +
+      "ess.apigateway.v1.ApiGateway.LabelsEntry" +
+      "\022H\n\006status\030\010 \001(\01628.yandex.cloud.serverle" +
+      "ss.apigateway.v1.ApiGateway.Status\022\016\n\006do" +
+      "main\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t\022O\n\020atta" +
+      "ched_domains\030\013 \003(\01325.yandex.cloud.server" +
+      "less.apigateway.v1.AttachedDomain\022I\n\014con" +
+      "nectivity\030\014 \001(\01323.yandex.cloud.serverles" +
+      "s.apigateway.v1.Connectivity\022F\n\013log_opti" +
+      "ons\030\r \001(\01321.yandex.cloud.serverless.apig" +
+      "ateway.v1.LogOptions\022S\n\tvariables\030\016 \003(\0132" +
+      "@.yandex.cloud.serverless.apigateway.v1." +
+      "ApiGateway.VariablesEntry\022=\n\006canary\030\017 \001(" +
+      "\0132-.yandex.cloud.serverless.apigateway.v" +
+      "1.Canary\022@\n\021execution_timeout\030\020 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\n\372\3071\006<=600s\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\032f\n\016VariablesEntry\022\013\n\003key\030\001 \001(\t\022C\n\005valu" +
+      "e\030\002 \001(\01324.yandex.cloud.serverless.apigat" +
+      "eway.v1.VariableInput:\0028\001\"a\n\006Status\022\026\n\022S" +
+      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
+      "IVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATI" +
+      "NG\020\005J\004\010\006\020\007\"b\n\016AttachedDomain\022\021\n\tdomain_i" +
+      "d\030\001 \001(\t\022\026\n\016certificate_id\030\002 \001(\t\022\017\n\007enabl" +
+      "ed\030\003 \001(\010\022\016\n\006domain\030\005 \001(\tJ\004\010\004\020\005\"5\n\014Connec" +
+      "tivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsubnet_id\030" +
+      "\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022\026" +
+      "\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_id\030\003 \001(" +
+      "\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.lo" +
+      "gging.v1.LogLevel.LevelB\r\n\013destination\"\343" +
+      "\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010\372\3071\0040-99\022W\n\tv" +
+      "ariables\030\002 \003(\0132<.yandex.cloud.serverless" +
+      ".apigateway.v1.Canary.VariablesEntryB\006\202\310" +
+      "1\002>0\032f\n\016VariablesEntry\022\013\n\003key\030\001 \001(\t\022C\n\005v" +
+      "alue\030\002 \001(\01324.yandex.cloud.serverless.api" +
+      "gateway.v1.VariableInput:\0028\001\"|\n\rVariable" +
+      "Input\022\026\n\014string_value\030\001 \001(\tH\000\022\023\n\tint_val" +
+      "ue\030\002 \001(\003H\000\022\026\n\014double_value\030\003 \001(\001H\000\022\024\n\nbo" +
+      "ol_value\030\004 \001(\010H\000B\020\n\016variable_valueB\201\001\n)y" +
+      "andex.cloud.api.serverless.apigateway.v1" +
+      "ZTgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/serverless/apigateway/v1;apig" +
+      "atewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -9383,7 +9650,7 @@ public final class Apigateway {
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", "AttachedDomains", "Connectivity", "LogOptions", "Variables", "Canary", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", "AttachedDomains", "Connectivity", "LogOptions", "Variables", "Canary", "ExecutionTimeout", });
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_fieldAccessorTable = new
@@ -9438,6 +9705,7 @@ public final class Apigateway {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

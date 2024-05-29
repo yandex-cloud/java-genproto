@@ -266,7 +266,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -275,7 +275,7 @@ public final class AddressOuterClass {
         getDnsRecordsList();
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -283,7 +283,7 @@ public final class AddressOuterClass {
     yandex.cloud.api.vpc.v1.AddressOuterClass.DnsRecord getDnsRecords(int index);
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -291,7 +291,7 @@ public final class AddressOuterClass {
     int getDnsRecordsCount();
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -300,7 +300,7 @@ public final class AddressOuterClass {
         getDnsRecordsOrBuilderList();
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -1274,7 +1274,7 @@ public final class AddressOuterClass {
     private java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.DnsRecord> dnsRecords_;
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -1285,7 +1285,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -1297,7 +1297,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -1308,7 +1308,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -1319,7 +1319,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * Optional dns record specifications
+     * Optional DNS record specifications
      * </pre>
      *
      * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3102,7 +3102,7 @@ public final class AddressOuterClass {
 
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3116,7 +3116,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3130,7 +3130,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3144,7 +3144,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3165,7 +3165,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3183,7 +3183,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3203,7 +3203,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3224,7 +3224,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3242,7 +3242,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3260,7 +3260,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3279,7 +3279,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3296,7 +3296,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3313,7 +3313,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3324,7 +3324,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3338,7 +3338,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3353,7 +3353,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3364,7 +3364,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -3376,7 +3376,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * Optional dns record specifications
+       * Optional DNS record specifications
        * </pre>
        *
        * <code>repeated .yandex.cloud.vpc.v1.DnsRecord dns_records = 20;</code>
@@ -5301,7 +5301,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * DNS record name (absolute, or relative to the DNS zone used)
+     * DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1;</code>
@@ -5310,7 +5310,7 @@ public final class AddressOuterClass {
     java.lang.String getFqdn();
     /**
      * <pre>
-     * DNS record name (absolute, or relative to the DNS zone used)
+     * DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1;</code>
@@ -5321,7 +5321,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * id of public zone
+     * ID of the public DNS zone.
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5330,7 +5330,7 @@ public final class AddressOuterClass {
     java.lang.String getDnsZoneId();
     /**
      * <pre>
-     * id of public zone
+     * ID of the public DNS zone.
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5341,7 +5341,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * TTL of record
+     * TTL of record.
      * </pre>
      *
      * <code>int64 ttl = 3;</code>
@@ -5351,7 +5351,7 @@ public final class AddressOuterClass {
 
     /**
      * <pre>
-     * set if PTR record required
+     * If the PTR record is required, this parameter must be set to "true".
      * </pre>
      *
      * <code>bool ptr = 4;</code>
@@ -5464,7 +5464,7 @@ public final class AddressOuterClass {
     private volatile java.lang.Object fqdn_;
     /**
      * <pre>
-     * DNS record name (absolute, or relative to the DNS zone used)
+     * DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1;</code>
@@ -5485,7 +5485,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * DNS record name (absolute, or relative to the DNS zone used)
+     * DNS record name (absolute or relative to the DNS zone in use).
      * </pre>
      *
      * <code>string fqdn = 1;</code>
@@ -5510,7 +5510,7 @@ public final class AddressOuterClass {
     private volatile java.lang.Object dnsZoneId_;
     /**
      * <pre>
-     * id of public zone
+     * ID of the public DNS zone.
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5531,7 +5531,7 @@ public final class AddressOuterClass {
     }
     /**
      * <pre>
-     * id of public zone
+     * ID of the public DNS zone.
      * </pre>
      *
      * <code>string dns_zone_id = 2;</code>
@@ -5556,7 +5556,7 @@ public final class AddressOuterClass {
     private long ttl_;
     /**
      * <pre>
-     * TTL of record
+     * TTL of record.
      * </pre>
      *
      * <code>int64 ttl = 3;</code>
@@ -5571,7 +5571,7 @@ public final class AddressOuterClass {
     private boolean ptr_;
     /**
      * <pre>
-     * set if PTR record required
+     * If the PTR record is required, this parameter must be set to "true".
      * </pre>
      *
      * <code>bool ptr = 4;</code>
@@ -5940,7 +5940,7 @@ public final class AddressOuterClass {
       private java.lang.Object fqdn_ = "";
       /**
        * <pre>
-       * DNS record name (absolute, or relative to the DNS zone used)
+       * DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1;</code>
@@ -5960,7 +5960,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * DNS record name (absolute, or relative to the DNS zone used)
+       * DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1;</code>
@@ -5981,7 +5981,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * DNS record name (absolute, or relative to the DNS zone used)
+       * DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1;</code>
@@ -6000,7 +6000,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * DNS record name (absolute, or relative to the DNS zone used)
+       * DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1;</code>
@@ -6014,7 +6014,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * DNS record name (absolute, or relative to the DNS zone used)
+       * DNS record name (absolute or relative to the DNS zone in use).
        * </pre>
        *
        * <code>string fqdn = 1;</code>
@@ -6036,7 +6036,7 @@ public final class AddressOuterClass {
       private java.lang.Object dnsZoneId_ = "";
       /**
        * <pre>
-       * id of public zone
+       * ID of the public DNS zone.
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6056,7 +6056,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * id of public zone
+       * ID of the public DNS zone.
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6077,7 +6077,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * id of public zone
+       * ID of the public DNS zone.
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6096,7 +6096,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * id of public zone
+       * ID of the public DNS zone.
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6110,7 +6110,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * id of public zone
+       * ID of the public DNS zone.
        * </pre>
        *
        * <code>string dns_zone_id = 2;</code>
@@ -6132,7 +6132,7 @@ public final class AddressOuterClass {
       private long ttl_ ;
       /**
        * <pre>
-       * TTL of record
+       * TTL of record.
        * </pre>
        *
        * <code>int64 ttl = 3;</code>
@@ -6144,7 +6144,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * TTL of record
+       * TTL of record.
        * </pre>
        *
        * <code>int64 ttl = 3;</code>
@@ -6159,7 +6159,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * TTL of record
+       * TTL of record.
        * </pre>
        *
        * <code>int64 ttl = 3;</code>
@@ -6175,7 +6175,7 @@ public final class AddressOuterClass {
       private boolean ptr_ ;
       /**
        * <pre>
-       * set if PTR record required
+       * If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>
@@ -6187,7 +6187,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * set if PTR record required
+       * If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>
@@ -6202,7 +6202,7 @@ public final class AddressOuterClass {
       }
       /**
        * <pre>
-       * set if PTR record required
+       * If the PTR record is required, this parameter must be set to "true".
        * </pre>
        *
        * <code>bool ptr = 4;</code>
