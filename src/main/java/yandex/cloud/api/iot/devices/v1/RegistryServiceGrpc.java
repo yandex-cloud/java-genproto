@@ -545,6 +545,68 @@ public final class RegistryServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Disable",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableMethod;
+    if ((getDisableMethod = RegistryServiceGrpc.getDisableMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getDisableMethod = RegistryServiceGrpc.getDisableMethod) == null) {
+          RegistryServiceGrpc.getDisableMethod = getDisableMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Disable"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Disable"))
+              .build();
+        }
+      }
+    }
+    return getDisableMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Enable",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnableMethod;
+    if ((getEnableMethod = RegistryServiceGrpc.getEnableMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getEnableMethod = RegistryServiceGrpc.getEnableMethod) == null) {
+          RegistryServiceGrpc.getEnableMethod = getEnableMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Enable"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("Enable"))
+              .build();
+        }
+      }
+    }
+    return getEnableMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -764,6 +826,26 @@ public final class RegistryServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Disables the specified registry.
+     * </pre>
+     */
+    public void disable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enables the specified registry.
+     * </pre>
+     */
+    public void enable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -885,6 +967,20 @@ public final class RegistryServiceGrpc {
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest,
                 yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getDisableMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DISABLE)))
+          .addMethod(
+            getEnableMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ENABLE)))
           .build();
     }
   }
@@ -1090,6 +1186,28 @@ public final class RegistryServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Disables the specified registry.
+     * </pre>
+     */
+    public void disable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Enables the specified registry.
+     * </pre>
+     */
+    public void enable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1275,6 +1393,26 @@ public final class RegistryServiceGrpc {
     public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse listOperations(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Disables the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation disable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Enables the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation enable(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableMethod(), getCallOptions(), request);
     }
   }
 
@@ -1479,6 +1617,28 @@ public final class RegistryServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Disables the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> disable(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Enables the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> enable(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1498,6 +1658,8 @@ public final class RegistryServiceGrpc {
   private static final int METHODID_ADD_DATA_STREAM_EXPORT = 14;
   private static final int METHODID_DELETE_DATA_STREAM_EXPORT = 15;
   private static final int METHODID_LIST_OPERATIONS = 16;
+  private static final int METHODID_DISABLE = 17;
+  private static final int METHODID_ENABLE = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1584,6 +1746,14 @@ public final class RegistryServiceGrpc {
           serviceImpl.listOperations((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistryOperationsResponse>) responseObserver);
           break;
+        case METHODID_DISABLE:
+          serviceImpl.disable((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ENABLE:
+          serviceImpl.enable((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1662,6 +1832,8 @@ public final class RegistryServiceGrpc {
               .addMethod(getAddDataStreamExportMethod())
               .addMethod(getDeleteDataStreamExportMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getDisableMethod())
+              .addMethod(getEnableMethod())
               .build();
         }
       }

@@ -20,7 +20,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -29,7 +30,8 @@ public final class Pxf {
     boolean hasConnectionTimeout();
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -38,7 +40,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getConnectionTimeout();
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -46,23 +49,39 @@ public final class Pxf {
     com.google.protobuf.Int64ValueOrBuilder getConnectionTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      * @return Whether the uploadTimeout field is set.
      */
     boolean hasUploadTimeout();
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      * @return The uploadTimeout.
      */
     com.google.protobuf.Int64Value getUploadTimeout();
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getUploadTimeoutOrBuilder();
 
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -71,7 +90,8 @@ public final class Pxf {
     boolean hasMaxThreads();
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -80,7 +100,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getMaxThreads();
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -88,68 +109,119 @@ public final class Pxf {
     com.google.protobuf.Int64ValueOrBuilder getMaxThreadsOrBuilder();
 
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      * @return Whether the poolAllowCoreThreadTimeout field is set.
      */
     boolean hasPoolAllowCoreThreadTimeout();
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      * @return The poolAllowCoreThreadTimeout.
      */
     com.google.protobuf.BoolValue getPoolAllowCoreThreadTimeout();
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getPoolAllowCoreThreadTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return Whether the poolCoreSize field is set.
      */
     boolean hasPoolCoreSize();
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return The poolCoreSize.
      */
     com.google.protobuf.Int64Value getPoolCoreSize();
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getPoolCoreSizeOrBuilder();
 
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      * @return Whether the poolQueueCapacity field is set.
      */
     boolean hasPoolQueueCapacity();
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      * @return The poolQueueCapacity.
      */
     com.google.protobuf.Int64Value getPoolQueueCapacity();
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getPoolQueueCapacityOrBuilder();
 
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return Whether the poolMaxSize field is set.
      */
     boolean hasPoolMaxSize();
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return The poolMaxSize.
      */
     com.google.protobuf.Int64Value getPoolMaxSize();
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getPoolMaxSizeOrBuilder();
 
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -158,7 +230,7 @@ public final class Pxf {
     boolean hasXmx();
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -167,7 +239,7 @@ public final class Pxf {
     com.google.protobuf.Int64Value getXmx();
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -175,16 +247,28 @@ public final class Pxf {
     com.google.protobuf.Int64ValueOrBuilder getXmxOrBuilder();
 
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xms field is set.
      */
     boolean hasXms();
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xms.
      */
     com.google.protobuf.Int64Value getXms();
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getXmsOrBuilder();
@@ -387,7 +471,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value connectionTimeout_;
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -399,7 +484,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -411,7 +497,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Connection
+     * Timeout for connection to the Apache Tomcat® server when making read requests.
+     * Specify values in seconds.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -424,6 +511,11 @@ public final class Pxf {
     public static final int UPLOAD_TIMEOUT_FIELD_NUMBER = 2;
     private com.google.protobuf.Int64Value uploadTimeout_;
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      * @return Whether the uploadTimeout field is set.
      */
@@ -432,6 +524,11 @@ public final class Pxf {
       return uploadTimeout_ != null;
     }
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      * @return The uploadTimeout.
      */
@@ -440,6 +537,11 @@ public final class Pxf {
       return uploadTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : uploadTimeout_;
     }
     /**
+     * <pre>
+     * Timeout for connection to the Apache Tomcat® server when making write requests.
+     * Specify the values in seconds.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
      */
     @java.lang.Override
@@ -451,7 +553,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value maxThreads_;
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -463,7 +566,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -475,7 +579,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Thread pool
+     * Maximum number of the Apache Tomcat® threads.
+     * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -488,6 +593,10 @@ public final class Pxf {
     public static final int POOL_ALLOW_CORE_THREAD_TIMEOUT_FIELD_NUMBER = 4;
     private com.google.protobuf.BoolValue poolAllowCoreThreadTimeout_;
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      * @return Whether the poolAllowCoreThreadTimeout field is set.
      */
@@ -496,6 +605,10 @@ public final class Pxf {
       return poolAllowCoreThreadTimeout_ != null;
     }
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      * @return The poolAllowCoreThreadTimeout.
      */
@@ -504,6 +617,10 @@ public final class Pxf {
       return poolAllowCoreThreadTimeout_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : poolAllowCoreThreadTimeout_;
     }
     /**
+     * <pre>
+     * Determines whether the timeout for core streaming threads is permitted.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
      */
     @java.lang.Override
@@ -514,6 +631,10 @@ public final class Pxf {
     public static final int POOL_CORE_SIZE_FIELD_NUMBER = 5;
     private com.google.protobuf.Int64Value poolCoreSize_;
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return Whether the poolCoreSize field is set.
      */
@@ -522,6 +643,10 @@ public final class Pxf {
       return poolCoreSize_ != null;
     }
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return The poolCoreSize.
      */
@@ -530,6 +655,10 @@ public final class Pxf {
       return poolCoreSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolCoreSize_;
     }
     /**
+     * <pre>
+     * Number of core streaming threads per pool.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
      */
     @java.lang.Override
@@ -540,6 +669,11 @@ public final class Pxf {
     public static final int POOL_QUEUE_CAPACITY_FIELD_NUMBER = 6;
     private com.google.protobuf.Int64Value poolQueueCapacity_;
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      * @return Whether the poolQueueCapacity field is set.
      */
@@ -548,6 +682,11 @@ public final class Pxf {
       return poolQueueCapacity_ != null;
     }
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      * @return The poolQueueCapacity.
      */
@@ -556,6 +695,11 @@ public final class Pxf {
       return poolQueueCapacity_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolQueueCapacity_;
     }
     /**
+     * <pre>
+     * Maximum number of requests you can add to a pool queue for core streaming threads.
+     * If `0`, no pool queue is generated.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     @java.lang.Override
@@ -566,6 +710,10 @@ public final class Pxf {
     public static final int POOL_MAX_SIZE_FIELD_NUMBER = 7;
     private com.google.protobuf.Int64Value poolMaxSize_;
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return Whether the poolMaxSize field is set.
      */
@@ -574,6 +722,10 @@ public final class Pxf {
       return poolMaxSize_ != null;
     }
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      * @return The poolMaxSize.
      */
@@ -582,6 +734,10 @@ public final class Pxf {
       return poolMaxSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolMaxSize_;
     }
     /**
+     * <pre>
+     * Maximum allowed number of core streaming threads.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
      */
     @java.lang.Override
@@ -593,7 +749,7 @@ public final class Pxf {
     private com.google.protobuf.Int64Value xmx_;
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -605,7 +761,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -617,7 +773,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * JVM
+     * Initial size, in megabytes, of the JVM heap for the PXF daemon.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -630,6 +786,10 @@ public final class Pxf {
     public static final int XMS_FIELD_NUMBER = 9;
     private com.google.protobuf.Int64Value xms_;
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return Whether the xms field is set.
      */
@@ -638,6 +798,10 @@ public final class Pxf {
       return xms_ != null;
     }
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      * @return The xms.
      */
@@ -646,6 +810,10 @@ public final class Pxf {
       return xms_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : xms_;
     }
     /**
+     * <pre>
+     * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
      */
     @java.lang.Override
@@ -1213,7 +1381,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> connectionTimeoutBuilder_;
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1224,7 +1393,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1239,7 +1409,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1259,7 +1430,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1277,7 +1449,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1299,7 +1472,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1317,7 +1491,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1329,7 +1504,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1344,7 +1520,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Connection
+       * Timeout for connection to the Apache Tomcat® server when making read requests.
+       * Specify values in seconds.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value connection_timeout = 1 [(.yandex.cloud.value) = "5-600"];</code>
@@ -1367,6 +1544,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> uploadTimeoutBuilder_;
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        * @return Whether the uploadTimeout field is set.
        */
@@ -1374,6 +1556,11 @@ public final class Pxf {
         return uploadTimeoutBuilder_ != null || uploadTimeout_ != null;
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        * @return The uploadTimeout.
        */
@@ -1385,6 +1572,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public Builder setUploadTimeout(com.google.protobuf.Int64Value value) {
@@ -1401,6 +1593,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public Builder setUploadTimeout(
@@ -1415,6 +1612,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public Builder mergeUploadTimeout(com.google.protobuf.Int64Value value) {
@@ -1433,6 +1635,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public Builder clearUploadTimeout() {
@@ -1447,6 +1654,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getUploadTimeoutBuilder() {
@@ -1455,6 +1667,11 @@ public final class Pxf {
         return getUploadTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getUploadTimeoutOrBuilder() {
@@ -1466,6 +1683,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Timeout for connection to the Apache Tomcat® server when making write requests.
+       * Specify the values in seconds.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value upload_timeout = 2 [(.yandex.cloud.value) = "5-600"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1487,7 +1709,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxThreadsBuilder_;
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1498,7 +1721,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1513,7 +1737,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1533,7 +1758,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1551,7 +1777,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1573,7 +1800,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1591,7 +1819,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1603,7 +1832,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1618,7 +1848,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Thread pool
+       * Maximum number of the Apache Tomcat® threads.
+       * To prevent situations when requests get stuck or fail due to running out of memory or malfunctioning of the Java garbage collector, specify the number of the Apache Tomcat® threads. Learn more about adjusting the number of threads in the [VMware Greenplum® Platform Extension Framework](https://docs.vmware.com/en/VMware-Greenplum-Platform-Extension-Framework/6.9/greenplum-platform-extension-framework/cfg_mem.html) documentation.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_threads = 3 [(.yandex.cloud.value) = "1-1024"];</code>
@@ -1641,6 +1872,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> poolAllowCoreThreadTimeoutBuilder_;
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        * @return Whether the poolAllowCoreThreadTimeout field is set.
        */
@@ -1648,6 +1883,10 @@ public final class Pxf {
         return poolAllowCoreThreadTimeoutBuilder_ != null || poolAllowCoreThreadTimeout_ != null;
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        * @return The poolAllowCoreThreadTimeout.
        */
@@ -1659,6 +1898,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public Builder setPoolAllowCoreThreadTimeout(com.google.protobuf.BoolValue value) {
@@ -1675,6 +1918,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public Builder setPoolAllowCoreThreadTimeout(
@@ -1689,6 +1936,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public Builder mergePoolAllowCoreThreadTimeout(com.google.protobuf.BoolValue value) {
@@ -1707,6 +1958,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public Builder clearPoolAllowCoreThreadTimeout() {
@@ -1721,6 +1976,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public com.google.protobuf.BoolValue.Builder getPoolAllowCoreThreadTimeoutBuilder() {
@@ -1729,6 +1988,10 @@ public final class Pxf {
         return getPoolAllowCoreThreadTimeoutFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getPoolAllowCoreThreadTimeoutOrBuilder() {
@@ -1740,6 +2003,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the timeout for core streaming threads is permitted.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue pool_allow_core_thread_timeout = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1760,6 +2027,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolCoreSizeBuilder_;
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        * @return Whether the poolCoreSize field is set.
        */
@@ -1767,6 +2038,10 @@ public final class Pxf {
         return poolCoreSizeBuilder_ != null || poolCoreSize_ != null;
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        * @return The poolCoreSize.
        */
@@ -1778,6 +2053,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder setPoolCoreSize(com.google.protobuf.Int64Value value) {
@@ -1794,6 +2073,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder setPoolCoreSize(
@@ -1808,6 +2091,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder mergePoolCoreSize(com.google.protobuf.Int64Value value) {
@@ -1826,6 +2113,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder clearPoolCoreSize() {
@@ -1840,6 +2131,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getPoolCoreSizeBuilder() {
@@ -1848,6 +2143,10 @@ public final class Pxf {
         return getPoolCoreSizeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPoolCoreSizeOrBuilder() {
@@ -1859,6 +2158,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Number of core streaming threads per pool.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_core_size = 5 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1879,6 +2182,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolQueueCapacityBuilder_;
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return Whether the poolQueueCapacity field is set.
        */
@@ -1886,6 +2194,11 @@ public final class Pxf {
         return poolQueueCapacityBuilder_ != null || poolQueueCapacity_ != null;
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        * @return The poolQueueCapacity.
        */
@@ -1897,6 +2210,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setPoolQueueCapacity(com.google.protobuf.Int64Value value) {
@@ -1913,6 +2231,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setPoolQueueCapacity(
@@ -1927,6 +2250,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder mergePoolQueueCapacity(com.google.protobuf.Int64Value value) {
@@ -1945,6 +2273,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder clearPoolQueueCapacity() {
@@ -1959,6 +2292,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getPoolQueueCapacityBuilder() {
@@ -1967,6 +2305,11 @@ public final class Pxf {
         return getPoolQueueCapacityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPoolQueueCapacityOrBuilder() {
@@ -1978,6 +2321,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of requests you can add to a pool queue for core streaming threads.
+       * If `0`, no pool queue is generated.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_queue_capacity = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1998,6 +2346,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolMaxSizeBuilder_;
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        * @return Whether the poolMaxSize field is set.
        */
@@ -2005,6 +2357,10 @@ public final class Pxf {
         return poolMaxSizeBuilder_ != null || poolMaxSize_ != null;
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        * @return The poolMaxSize.
        */
@@ -2016,6 +2372,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder setPoolMaxSize(com.google.protobuf.Int64Value value) {
@@ -2032,6 +2392,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder setPoolMaxSize(
@@ -2046,6 +2410,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder mergePoolMaxSize(com.google.protobuf.Int64Value value) {
@@ -2064,6 +2432,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public Builder clearPoolMaxSize() {
@@ -2078,6 +2450,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getPoolMaxSizeBuilder() {
@@ -2086,6 +2462,10 @@ public final class Pxf {
         return getPoolMaxSizeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getPoolMaxSizeOrBuilder() {
@@ -2097,6 +2477,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum allowed number of core streaming threads.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value pool_max_size = 7 [(.yandex.cloud.value) = "1-1024"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2118,7 +2502,7 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> xmxBuilder_;
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2129,7 +2513,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2144,7 +2528,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2164,7 +2548,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2182,7 +2566,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2204,7 +2588,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2222,7 +2606,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2234,7 +2618,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2249,7 +2633,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * JVM
+       * Initial size, in megabytes, of the JVM heap for the PXF daemon.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value xmx = 8 [(.yandex.cloud.value) = "&gt;=64"];</code>
@@ -2272,6 +2656,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> xmsBuilder_;
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return Whether the xms field is set.
        */
@@ -2279,6 +2667,10 @@ public final class Pxf {
         return xmsBuilder_ != null || xms_ != null;
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        * @return The xms.
        */
@@ -2290,6 +2682,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXms(com.google.protobuf.Int64Value value) {
@@ -2306,6 +2702,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder setXms(
@@ -2320,6 +2720,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder mergeXms(com.google.protobuf.Int64Value value) {
@@ -2338,6 +2742,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public Builder clearXms() {
@@ -2352,6 +2760,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getXmsBuilder() {
@@ -2360,6 +2772,10 @@ public final class Pxf {
         return getXmsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getXmsOrBuilder() {
@@ -2371,6 +2787,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum size, in megabytes, of the JVM heap for the PXF daemon.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value xms = 9 [(.yandex.cloud.value) = "&gt;=64"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2460,7 +2880,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2469,7 +2889,7 @@ public final class Pxf {
     boolean hasUserConfig();
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2478,7 +2898,7 @@ public final class Pxf {
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig getUserConfig();
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2487,7 +2907,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -2496,7 +2916,7 @@ public final class Pxf {
     boolean hasDefaultConfig();
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -2505,7 +2925,7 @@ public final class Pxf {
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig getDefaultConfig();
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -2658,7 +3078,7 @@ public final class Pxf {
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig userConfig_;
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2670,7 +3090,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2682,7 +3102,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * User-defined settings
+     * User-defined settings.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -2696,7 +3116,7 @@ public final class Pxf {
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig defaultConfig_;
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -2708,7 +3128,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -2720,7 +3140,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Default configuration
+     * Default configuration.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3229,7 +3649,7 @@ public final class Pxf {
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder> userConfigBuilder_;
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3240,7 +3660,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3255,7 +3675,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3275,7 +3695,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3293,7 +3713,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3315,7 +3735,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3333,7 +3753,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3345,7 +3765,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3360,7 +3780,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * User-defined settings
+       * User-defined settings.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig user_config = 2;</code>
@@ -3384,7 +3804,7 @@ public final class Pxf {
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder> defaultConfigBuilder_;
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3395,7 +3815,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3410,7 +3830,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3430,7 +3850,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3448,7 +3868,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3470,7 +3890,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3488,7 +3908,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3500,7 +3920,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3515,7 +3935,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Default configuration
+       * Default configuration.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig default_config = 3;</code>
@@ -3591,11 +4011,19 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Public key to access S3 storage.
+     * </pre>
+     *
      * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
+     * <pre>
+     * Public key to access S3 storage.
+     * </pre>
+     *
      * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for accessKey.
      */
@@ -3603,11 +4031,19 @@ public final class Pxf {
         getAccessKeyBytes();
 
     /**
+     * <pre>
+     * Secret key to access S3 storage.
+     * </pre>
+     *
      * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The secretKey.
      */
     java.lang.String getSecretKey();
     /**
+     * <pre>
+     * Secret key to access S3 storage.
+     * </pre>
+     *
      * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for secretKey.
      */
@@ -3615,26 +4051,49 @@ public final class Pxf {
         getSecretKeyBytes();
 
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      * @return Whether the fastUpload field is set.
      */
     boolean hasFastUpload();
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      * @return The fastUpload.
      */
     com.google.protobuf.BoolValue getFastUpload();
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder();
 
     /**
+     * <pre>
+     * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+     * </pre>
+     *
      * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
+     * <pre>
+     * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+     * </pre>
+     *
      * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for endpoint.
      */
@@ -3755,6 +4214,10 @@ public final class Pxf {
     public static final int ACCESS_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKey_;
     /**
+     * <pre>
+     * Public key to access S3 storage.
+     * </pre>
+     *
      * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The accessKey.
      */
@@ -3772,6 +4235,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Public key to access S3 storage.
+     * </pre>
+     *
      * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for accessKey.
      */
@@ -3793,6 +4260,10 @@ public final class Pxf {
     public static final int SECRET_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretKey_;
     /**
+     * <pre>
+     * Secret key to access S3 storage.
+     * </pre>
+     *
      * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The secretKey.
      */
@@ -3810,6 +4281,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Secret key to access S3 storage.
+     * </pre>
+     *
      * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for secretKey.
      */
@@ -3831,6 +4306,11 @@ public final class Pxf {
     public static final int FAST_UPLOAD_FIELD_NUMBER = 3;
     private com.google.protobuf.BoolValue fastUpload_;
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      * @return Whether the fastUpload field is set.
      */
@@ -3839,6 +4319,11 @@ public final class Pxf {
       return fastUpload_ != null;
     }
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      * @return The fastUpload.
      */
@@ -3847,6 +4332,11 @@ public final class Pxf {
       return fastUpload_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fastUpload_;
     }
     /**
+     * <pre>
+     * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+     * The fast upload is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
      */
     @java.lang.Override
@@ -3857,6 +4347,10 @@ public final class Pxf {
     public static final int ENDPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object endpoint_;
     /**
+     * <pre>
+     * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+     * </pre>
+     *
      * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The endpoint.
      */
@@ -3874,6 +4368,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+     * </pre>
+     *
      * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for endpoint.
      */
@@ -4260,6 +4758,10 @@ public final class Pxf {
 
       private java.lang.Object accessKey_ = "";
       /**
+       * <pre>
+       * Public key to access S3 storage.
+       * </pre>
+       *
        * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The accessKey.
        */
@@ -4276,6 +4778,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Public key to access S3 storage.
+       * </pre>
+       *
        * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for accessKey.
        */
@@ -4293,6 +4799,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Public key to access S3 storage.
+       * </pre>
+       *
        * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -4308,6 +4818,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Public key to access S3 storage.
+       * </pre>
+       *
        * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
@@ -4318,6 +4832,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Public key to access S3 storage.
+       * </pre>
+       *
        * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -4336,6 +4854,10 @@ public final class Pxf {
 
       private java.lang.Object secretKey_ = "";
       /**
+       * <pre>
+       * Secret key to access S3 storage.
+       * </pre>
+       *
        * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The secretKey.
        */
@@ -4352,6 +4874,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Secret key to access S3 storage.
+       * </pre>
+       *
        * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for secretKey.
        */
@@ -4369,6 +4895,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Secret key to access S3 storage.
+       * </pre>
+       *
        * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The secretKey to set.
        * @return This builder for chaining.
@@ -4384,6 +4914,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Secret key to access S3 storage.
+       * </pre>
+       *
        * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
@@ -4394,6 +4928,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Secret key to access S3 storage.
+       * </pre>
+       *
        * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for secretKey to set.
        * @return This builder for chaining.
@@ -4414,6 +4952,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fastUploadBuilder_;
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        * @return Whether the fastUpload field is set.
        */
@@ -4421,6 +4964,11 @@ public final class Pxf {
         return fastUploadBuilder_ != null || fastUpload_ != null;
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        * @return The fastUpload.
        */
@@ -4432,6 +4980,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public Builder setFastUpload(com.google.protobuf.BoolValue value) {
@@ -4448,6 +5001,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public Builder setFastUpload(
@@ -4462,6 +5020,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public Builder mergeFastUpload(com.google.protobuf.BoolValue value) {
@@ -4480,6 +5043,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public Builder clearFastUpload() {
@@ -4494,6 +5062,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public com.google.protobuf.BoolValue.Builder getFastUploadBuilder() {
@@ -4502,6 +5075,11 @@ public final class Pxf {
         return getFastUploadFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder() {
@@ -4513,6 +5091,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Manages a fast upload of big files to S3 storage. In case of the `false` value, the PXF generates files on disk before sending them to the S3 storage. In case of the `true` value, the PXF generates files in RAM (the PXF writes to disc only if there is not enough RAM).
+       * The fast upload is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4531,6 +5114,10 @@ public final class Pxf {
 
       private java.lang.Object endpoint_ = "";
       /**
+       * <pre>
+       * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+       * </pre>
+       *
        * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The endpoint.
        */
@@ -4547,6 +5134,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+       * </pre>
+       *
        * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for endpoint.
        */
@@ -4564,6 +5155,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+       * </pre>
+       *
        * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -4579,6 +5174,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+       * </pre>
+       *
        * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
@@ -4589,6 +5188,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * S3 storage address. The default value is `storage.yandexcloud.net` used for Yandex Object Storage.
+       * </pre>
+       *
        * <code>string endpoint = 4 [(.yandex.cloud.pattern) = "(((s3|https?)://)?([a-z0-9]([a-z0-9-]*[a-z0-9])?[.])+[a-z]{2,})?", (.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -4663,7 +5266,16 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.driver
+     * JDBC driver class in Java. The possible values are the following:
+     * * `com.simba.athena.jdbc.Driver`
+     * * `com.clickhouse.jdbc.ClickHouseDriver`
+     * * `com.ibm.as400.access.AS400JDBCDriver`
+     * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+     * * `com.mysql.cj.jdbc.Driver`
+     * * `org.postgresql.Driver`
+     * * `oracle.jdbc.driver.OracleDriver`
+     * * `net.snowflake.client.jdbc.SnowflakeDriver`
+     * * `io.trino.jdbc.TrinoDriver`
      * </pre>
      *
      * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4672,7 +5284,16 @@ public final class Pxf {
     java.lang.String getDriver();
     /**
      * <pre>
-     * Matches jdbc.driver
+     * JDBC driver class in Java. The possible values are the following:
+     * * `com.simba.athena.jdbc.Driver`
+     * * `com.clickhouse.jdbc.ClickHouseDriver`
+     * * `com.ibm.as400.access.AS400JDBCDriver`
+     * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+     * * `com.mysql.cj.jdbc.Driver`
+     * * `org.postgresql.Driver`
+     * * `oracle.jdbc.driver.OracleDriver`
+     * * `net.snowflake.client.jdbc.SnowflakeDriver`
+     * * `io.trino.jdbc.TrinoDriver`
      * </pre>
      *
      * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4683,7 +5304,10 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.url
+     * URL that the JDBC driver uses to connect to the database. Examples:
+     * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+     * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+     * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
      * </pre>
      *
      * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4692,7 +5316,10 @@ public final class Pxf {
     java.lang.String getUrl();
     /**
      * <pre>
-     * Matches jdbc.url
+     * URL that the JDBC driver uses to connect to the database. Examples:
+     * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+     * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+     * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
      * </pre>
      *
      * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4703,7 +5330,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.user
+     * Username of the DB owner.
      * </pre>
      *
      * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -4712,7 +5339,7 @@ public final class Pxf {
     java.lang.String getUser();
     /**
      * <pre>
-     * Matches jdbc.user
+     * Username of the DB owner.
      * </pre>
      *
      * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -4723,7 +5350,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.password
+     * Password of the DB owner.
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -4732,7 +5359,7 @@ public final class Pxf {
     java.lang.String getPassword();
     /**
      * <pre>
-     * Matches jdbc.password
+     * Password of the DB owner.
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -4743,7 +5370,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -4752,7 +5380,8 @@ public final class Pxf {
     boolean hasStatementBatchSize();
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -4761,7 +5390,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getStatementBatchSize();
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -4770,7 +5400,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -4779,7 +5410,8 @@ public final class Pxf {
     boolean hasStatementFetchSize();
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -4788,7 +5420,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getStatementFetchSize();
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -4797,7 +5430,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -4806,7 +5440,8 @@ public final class Pxf {
     boolean hasStatementQueryTimeout();
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -4815,7 +5450,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getStatementQueryTimeout();
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -4824,7 +5460,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -4833,7 +5469,7 @@ public final class Pxf {
     boolean hasPoolEnabled();
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -4842,7 +5478,7 @@ public final class Pxf {
     com.google.protobuf.BoolValue getPoolEnabled();
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -4851,7 +5487,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -4860,7 +5497,8 @@ public final class Pxf {
     boolean hasPoolMaximumSize();
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -4869,7 +5507,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getPoolMaximumSize();
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -4878,7 +5517,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4887,7 +5527,8 @@ public final class Pxf {
     boolean hasPoolConnectionTimeout();
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4896,7 +5537,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getPoolConnectionTimeout();
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4905,7 +5547,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4914,7 +5557,8 @@ public final class Pxf {
     boolean hasPoolIdleTimeout();
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4923,7 +5567,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getPoolIdleTimeout();
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -4932,7 +5577,8 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -4941,7 +5587,8 @@ public final class Pxf {
     boolean hasPoolMinimumIdle();
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -4950,7 +5597,8 @@ public final class Pxf {
     com.google.protobuf.Int64Value getPoolMinimumIdle();
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -5170,7 +5818,16 @@ public final class Pxf {
     private volatile java.lang.Object driver_;
     /**
      * <pre>
-     * Matches jdbc.driver
+     * JDBC driver class in Java. The possible values are the following:
+     * * `com.simba.athena.jdbc.Driver`
+     * * `com.clickhouse.jdbc.ClickHouseDriver`
+     * * `com.ibm.as400.access.AS400JDBCDriver`
+     * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+     * * `com.mysql.cj.jdbc.Driver`
+     * * `org.postgresql.Driver`
+     * * `oracle.jdbc.driver.OracleDriver`
+     * * `net.snowflake.client.jdbc.SnowflakeDriver`
+     * * `io.trino.jdbc.TrinoDriver`
      * </pre>
      *
      * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5191,7 +5848,16 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.driver
+     * JDBC driver class in Java. The possible values are the following:
+     * * `com.simba.athena.jdbc.Driver`
+     * * `com.clickhouse.jdbc.ClickHouseDriver`
+     * * `com.ibm.as400.access.AS400JDBCDriver`
+     * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+     * * `com.mysql.cj.jdbc.Driver`
+     * * `org.postgresql.Driver`
+     * * `oracle.jdbc.driver.OracleDriver`
+     * * `net.snowflake.client.jdbc.SnowflakeDriver`
+     * * `io.trino.jdbc.TrinoDriver`
      * </pre>
      *
      * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5216,7 +5882,10 @@ public final class Pxf {
     private volatile java.lang.Object url_;
     /**
      * <pre>
-     * Matches jdbc.url
+     * URL that the JDBC driver uses to connect to the database. Examples:
+     * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+     * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+     * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
      * </pre>
      *
      * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -5237,7 +5906,10 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.url
+     * URL that the JDBC driver uses to connect to the database. Examples:
+     * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+     * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+     * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
      * </pre>
      *
      * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -5262,7 +5934,7 @@ public final class Pxf {
     private volatile java.lang.Object user_;
     /**
      * <pre>
-     * Matches jdbc.user
+     * Username of the DB owner.
      * </pre>
      *
      * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -5283,7 +5955,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.user
+     * Username of the DB owner.
      * </pre>
      *
      * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -5308,7 +5980,7 @@ public final class Pxf {
     private volatile java.lang.Object password_;
     /**
      * <pre>
-     * Matches jdbc.password
+     * Password of the DB owner.
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -5329,7 +6001,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.password
+     * Password of the DB owner.
      * </pre>
      *
      * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -5354,7 +6026,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value statementBatchSize_;
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -5366,7 +6039,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -5378,7 +6052,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.batchsize
+     * Number of rows to read in an external table, in a batch.
+     * The default value is `100`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -5392,7 +6067,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value statementFetchSize_;
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -5404,7 +6080,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -5416,7 +6093,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.fetchsize
+     * Number of rows to fetch (buffer) when reading from an external table.
+     * The default value is `1000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -5430,7 +6108,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value statementQueryTimeout_;
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -5442,7 +6121,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -5454,7 +6134,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.statement.querytimeout
+     * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+     * The default value is `60`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -5468,7 +6149,7 @@ public final class Pxf {
     private com.google.protobuf.BoolValue poolEnabled_;
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -5480,7 +6161,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -5492,7 +6173,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.enabled
+     * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -5506,7 +6187,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value poolMaximumSize_;
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -5518,7 +6200,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -5530,7 +6213,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.maximumpoolsize
+     * Maximum number of connections to the DB backend.
+     * The default value is `5`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -5544,7 +6228,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value poolConnectionTimeout_;
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5556,7 +6241,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5568,7 +6254,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.connectiontimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5582,7 +6269,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value poolIdleTimeout_;
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5594,7 +6282,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5606,7 +6295,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.idletimeout
+     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * The default value is `30000`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -5620,7 +6310,8 @@ public final class Pxf {
     private com.google.protobuf.Int64Value poolMinimumIdle_;
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -5632,7 +6323,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -5644,7 +6336,8 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Matches jdbc.pool.property.minimumidle
+     * Minimum number of idle connections maintained in the connection pool.
+     * The default value is `0`.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -6250,7 +6943,16 @@ public final class Pxf {
       private java.lang.Object driver_ = "";
       /**
        * <pre>
-       * Matches jdbc.driver
+       * JDBC driver class in Java. The possible values are the following:
+       * * `com.simba.athena.jdbc.Driver`
+       * * `com.clickhouse.jdbc.ClickHouseDriver`
+       * * `com.ibm.as400.access.AS400JDBCDriver`
+       * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+       * * `com.mysql.cj.jdbc.Driver`
+       * * `org.postgresql.Driver`
+       * * `oracle.jdbc.driver.OracleDriver`
+       * * `net.snowflake.client.jdbc.SnowflakeDriver`
+       * * `io.trino.jdbc.TrinoDriver`
        * </pre>
        *
        * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6270,7 +6972,16 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.driver
+       * JDBC driver class in Java. The possible values are the following:
+       * * `com.simba.athena.jdbc.Driver`
+       * * `com.clickhouse.jdbc.ClickHouseDriver`
+       * * `com.ibm.as400.access.AS400JDBCDriver`
+       * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+       * * `com.mysql.cj.jdbc.Driver`
+       * * `org.postgresql.Driver`
+       * * `oracle.jdbc.driver.OracleDriver`
+       * * `net.snowflake.client.jdbc.SnowflakeDriver`
+       * * `io.trino.jdbc.TrinoDriver`
        * </pre>
        *
        * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6291,7 +7002,16 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.driver
+       * JDBC driver class in Java. The possible values are the following:
+       * * `com.simba.athena.jdbc.Driver`
+       * * `com.clickhouse.jdbc.ClickHouseDriver`
+       * * `com.ibm.as400.access.AS400JDBCDriver`
+       * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+       * * `com.mysql.cj.jdbc.Driver`
+       * * `org.postgresql.Driver`
+       * * `oracle.jdbc.driver.OracleDriver`
+       * * `net.snowflake.client.jdbc.SnowflakeDriver`
+       * * `io.trino.jdbc.TrinoDriver`
        * </pre>
        *
        * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6310,7 +7030,16 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.driver
+       * JDBC driver class in Java. The possible values are the following:
+       * * `com.simba.athena.jdbc.Driver`
+       * * `com.clickhouse.jdbc.ClickHouseDriver`
+       * * `com.ibm.as400.access.AS400JDBCDriver`
+       * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+       * * `com.mysql.cj.jdbc.Driver`
+       * * `org.postgresql.Driver`
+       * * `oracle.jdbc.driver.OracleDriver`
+       * * `net.snowflake.client.jdbc.SnowflakeDriver`
+       * * `io.trino.jdbc.TrinoDriver`
        * </pre>
        *
        * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6324,7 +7053,16 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.driver
+       * JDBC driver class in Java. The possible values are the following:
+       * * `com.simba.athena.jdbc.Driver`
+       * * `com.clickhouse.jdbc.ClickHouseDriver`
+       * * `com.ibm.as400.access.AS400JDBCDriver`
+       * * `com.microsoft.sqlserver.jdbc.SQLServerDriver`
+       * * `com.mysql.cj.jdbc.Driver`
+       * * `org.postgresql.Driver`
+       * * `oracle.jdbc.driver.OracleDriver`
+       * * `net.snowflake.client.jdbc.SnowflakeDriver`
+       * * `io.trino.jdbc.TrinoDriver`
        * </pre>
        *
        * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6346,7 +7084,10 @@ public final class Pxf {
       private java.lang.Object url_ = "";
       /**
        * <pre>
-       * Matches jdbc.url
+       * URL that the JDBC driver uses to connect to the database. Examples:
+       * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+       * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+       * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
        * </pre>
        *
        * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6366,7 +7107,10 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.url
+       * URL that the JDBC driver uses to connect to the database. Examples:
+       * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+       * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+       * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
        * </pre>
        *
        * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6387,7 +7131,10 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.url
+       * URL that the JDBC driver uses to connect to the database. Examples:
+       * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+       * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+       * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
        * </pre>
        *
        * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6406,7 +7153,10 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.url
+       * URL that the JDBC driver uses to connect to the database. Examples:
+       * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+       * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+       * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
        * </pre>
        *
        * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6420,7 +7170,10 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.url
+       * URL that the JDBC driver uses to connect to the database. Examples:
+       * * `jdbc:mysql://mysqlhost:3306/testdb`: Local MySQL DB.
+       * * `jdbc:postgresql://c-&lt;cluster_id&gt;.rw.mdb.yandexcloud.net:6432/db1`: Managed Service for PostgreSQL cluster. The address contains the special FQDN of the cluster's master.
+       * * `jdbc:oracle:thin:&#64;host.example:1521:orcl`: Oracle DB.
        * </pre>
        *
        * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -6442,7 +7195,7 @@ public final class Pxf {
       private java.lang.Object user_ = "";
       /**
        * <pre>
-       * Matches jdbc.user
+       * Username of the DB owner.
        * </pre>
        *
        * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6462,7 +7215,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.user
+       * Username of the DB owner.
        * </pre>
        *
        * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6483,7 +7236,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.user
+       * Username of the DB owner.
        * </pre>
        *
        * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6502,7 +7255,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.user
+       * Username of the DB owner.
        * </pre>
        *
        * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6516,7 +7269,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.user
+       * Username of the DB owner.
        * </pre>
        *
        * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6538,7 +7291,7 @@ public final class Pxf {
       private java.lang.Object password_ = "";
       /**
        * <pre>
-       * Matches jdbc.password
+       * Password of the DB owner.
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6558,7 +7311,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.password
+       * Password of the DB owner.
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6579,7 +7332,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.password
+       * Password of the DB owner.
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6598,7 +7351,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.password
+       * Password of the DB owner.
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6612,7 +7365,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.password
+       * Password of the DB owner.
        * </pre>
        *
        * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
@@ -6636,7 +7389,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementBatchSizeBuilder_;
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6647,7 +7401,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6662,7 +7417,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6682,7 +7438,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6700,7 +7457,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6722,7 +7480,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6740,7 +7499,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6752,7 +7512,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6767,7 +7528,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.batchsize
+       * Number of rows to read in an external table, in a batch.
+       * The default value is `100`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
@@ -6791,7 +7553,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementFetchSizeBuilder_;
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6802,7 +7565,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6817,7 +7581,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6837,7 +7602,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6855,7 +7621,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6877,7 +7644,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6895,7 +7663,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6907,7 +7676,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6922,7 +7692,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.fetchsize
+       * Number of rows to fetch (buffer) when reading from an external table.
+       * The default value is `1000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
@@ -6946,7 +7717,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementQueryTimeoutBuilder_;
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -6957,7 +7729,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -6972,7 +7745,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -6992,7 +7766,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7010,7 +7785,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7032,7 +7808,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7050,7 +7827,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7062,7 +7840,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7077,7 +7856,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.statement.querytimeout
+       * Amount of time (in seconds) the JDBC driver waits for a statement to run. This timeout applies to statements created for both read and write operations.
+       * The default value is `60`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-43200"];</code>
@@ -7101,7 +7881,7 @@ public final class Pxf {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> poolEnabledBuilder_;
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7112,7 +7892,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7127,7 +7907,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7147,7 +7927,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7165,7 +7945,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7187,7 +7967,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7205,7 +7985,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7217,7 +7997,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7232,7 +8012,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.enabled
+       * Determines whether JDBC connection pooling is used in a server configuration. By default, it is used.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
@@ -7256,7 +8036,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolMaximumSizeBuilder_;
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7267,7 +8048,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7282,7 +8064,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7302,7 +8085,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7320,7 +8104,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7342,7 +8127,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7360,7 +8146,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7372,7 +8159,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7387,7 +8175,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.maximumpoolsize
+       * Maximum number of connections to the DB backend.
+       * The default value is `5`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "1-200"];</code>
@@ -7411,7 +8200,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolConnectionTimeoutBuilder_;
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7422,7 +8212,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7437,7 +8228,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7457,7 +8249,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7475,7 +8268,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7497,7 +8291,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7515,7 +8310,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7527,7 +8323,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7542,7 +8339,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.connectiontimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7566,7 +8364,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolIdleTimeoutBuilder_;
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7577,7 +8376,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7592,7 +8392,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7612,7 +8413,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7630,7 +8432,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7652,7 +8455,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7670,7 +8474,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7682,7 +8487,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7697,7 +8503,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.idletimeout
+       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * The default value is `30000`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
@@ -7721,7 +8528,8 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolMinimumIdleBuilder_;
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7732,7 +8540,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7747,7 +8556,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7767,7 +8577,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7785,7 +8596,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7807,7 +8619,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7825,7 +8638,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7837,7 +8651,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7852,7 +8667,8 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Matches jdbc.pool.property.minimumidle
+       * Minimum number of idle connections maintained in the connection pool.
+       * The default value is `0`.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
@@ -7928,11 +8744,19 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * URI whose scheme and authority determine the file system implementation.
+     * </pre>
+     *
      * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The defaultFs.
      */
     java.lang.String getDefaultFs();
     /**
+     * <pre>
+     * URI whose scheme and authority determine the file system implementation.
+     * </pre>
+     *
      * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for defaultFs.
      */
@@ -7940,11 +8764,19 @@ public final class Pxf {
         getDefaultFsBytes();
 
     /**
+     * <pre>
+     * Rules for mapping Kerberos principals to operating system user accounts.
+     * </pre>
+     *
      * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The securityAuthToLocal.
      */
     java.lang.String getSecurityAuthToLocal();
     /**
+     * <pre>
+     * Rules for mapping Kerberos principals to operating system user accounts.
+     * </pre>
+     *
      * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for securityAuthToLocal.
      */
@@ -8045,6 +8877,10 @@ public final class Pxf {
     public static final int DEFAULT_FS_FIELD_NUMBER = 1;
     private volatile java.lang.Object defaultFs_;
     /**
+     * <pre>
+     * URI whose scheme and authority determine the file system implementation.
+     * </pre>
+     *
      * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The defaultFs.
      */
@@ -8062,6 +8898,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * URI whose scheme and authority determine the file system implementation.
+     * </pre>
+     *
      * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
      * @return The bytes for defaultFs.
      */
@@ -8083,6 +8923,10 @@ public final class Pxf {
     public static final int SECURITY_AUTH_TO_LOCAL_FIELD_NUMBER = 2;
     private volatile java.lang.Object securityAuthToLocal_;
     /**
+     * <pre>
+     * Rules for mapping Kerberos principals to operating system user accounts.
+     * </pre>
+     *
      * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The securityAuthToLocal.
      */
@@ -8100,6 +8944,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Rules for mapping Kerberos principals to operating system user accounts.
+     * </pre>
+     *
      * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for securityAuthToLocal.
      */
@@ -8439,6 +9287,10 @@ public final class Pxf {
 
       private java.lang.Object defaultFs_ = "";
       /**
+       * <pre>
+       * URI whose scheme and authority determine the file system implementation.
+       * </pre>
+       *
        * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The defaultFs.
        */
@@ -8455,6 +9307,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * URI whose scheme and authority determine the file system implementation.
+       * </pre>
+       *
        * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return The bytes for defaultFs.
        */
@@ -8472,6 +9328,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * URI whose scheme and authority determine the file system implementation.
+       * </pre>
+       *
        * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The defaultFs to set.
        * @return This builder for chaining.
@@ -8487,6 +9347,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * URI whose scheme and authority determine the file system implementation.
+       * </pre>
+       *
        * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @return This builder for chaining.
        */
@@ -8497,6 +9361,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * URI whose scheme and authority determine the file system implementation.
+       * </pre>
+       *
        * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
        * @param value The bytes for defaultFs to set.
        * @return This builder for chaining.
@@ -8515,6 +9383,10 @@ public final class Pxf {
 
       private java.lang.Object securityAuthToLocal_ = "";
       /**
+       * <pre>
+       * Rules for mapping Kerberos principals to operating system user accounts.
+       * </pre>
+       *
        * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The securityAuthToLocal.
        */
@@ -8531,6 +9403,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Rules for mapping Kerberos principals to operating system user accounts.
+       * </pre>
+       *
        * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for securityAuthToLocal.
        */
@@ -8548,6 +9424,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Rules for mapping Kerberos principals to operating system user accounts.
+       * </pre>
+       *
        * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The securityAuthToLocal to set.
        * @return This builder for chaining.
@@ -8563,6 +9443,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Rules for mapping Kerberos principals to operating system user accounts.
+       * </pre>
+       *
        * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -8573,6 +9457,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Rules for mapping Kerberos principals to operating system user accounts.
+       * </pre>
+       *
        * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for securityAuthToLocal to set.
        * @return This builder for chaining.
@@ -8646,26 +9534,46 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      * @return Whether the enable field is set.
      */
     boolean hasEnable();
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      * @return The enable.
      */
     com.google.protobuf.BoolValue getEnable();
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getEnableOrBuilder();
 
     /**
+     * <pre>
+     * Host of the primary KDC server (Key Distribution Center).
+     * </pre>
+     *
      * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The primary.
      */
     java.lang.String getPrimary();
     /**
+     * <pre>
+     * Host of the primary KDC server (Key Distribution Center).
+     * </pre>
+     *
      * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for primary.
      */
@@ -8673,11 +9581,19 @@ public final class Pxf {
         getPrimaryBytes();
 
     /**
+     * <pre>
+     * Kerberos realm for a Greenplum® DB.
+     * </pre>
+     *
      * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The realm.
      */
     java.lang.String getRealm();
     /**
+     * <pre>
+     * Kerberos realm for a Greenplum® DB.
+     * </pre>
+     *
      * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for realm.
      */
@@ -8685,23 +9601,39 @@ public final class Pxf {
         getRealmBytes();
 
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the kdcServers.
      */
     java.util.List<java.lang.String>
         getKdcServersList();
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of kdcServers.
      */
     int getKdcServersCount();
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The kdcServers at the given index.
      */
     java.lang.String getKdcServers(int index);
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the kdcServers at the given index.
@@ -8710,11 +9642,19 @@ public final class Pxf {
         getKdcServersBytes(int index);
 
     /**
+     * <pre>
+     * Administration server host. Usually, this is the primary Kerberos server.
+     * </pre>
+     *
      * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The adminServer.
      */
     java.lang.String getAdminServer();
     /**
+     * <pre>
+     * Administration server host. Usually, this is the primary Kerberos server.
+     * </pre>
+     *
      * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for adminServer.
      */
@@ -8722,11 +9662,19 @@ public final class Pxf {
         getAdminServerBytes();
 
     /**
+     * <pre>
+     * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+     * </pre>
+     *
      * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The defaultDomain.
      */
     java.lang.String getDefaultDomain();
     /**
+     * <pre>
+     * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+     * </pre>
+     *
      * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for defaultDomain.
      */
@@ -8734,11 +9682,19 @@ public final class Pxf {
         getDefaultDomainBytes();
 
     /**
+     * <pre>
+     * Base64 encoded contents of the keytab file.
+     * </pre>
+     *
      * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
      * @return The keytabBase64.
      */
     java.lang.String getKeytabBase64();
     /**
+     * <pre>
+     * Base64 encoded contents of the keytab file.
+     * </pre>
+     *
      * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
      * @return The bytes for keytabBase64.
      */
@@ -8887,6 +9843,10 @@ public final class Pxf {
     public static final int ENABLE_FIELD_NUMBER = 1;
     private com.google.protobuf.BoolValue enable_;
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      * @return Whether the enable field is set.
      */
@@ -8895,6 +9855,10 @@ public final class Pxf {
       return enable_ != null;
     }
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      * @return The enable.
      */
@@ -8903,6 +9867,10 @@ public final class Pxf {
       return enable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enable_;
     }
     /**
+     * <pre>
+     * Determines whether the Kerberos authentication server is used. By default, it is not used.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue enable = 1;</code>
      */
     @java.lang.Override
@@ -8913,6 +9881,10 @@ public final class Pxf {
     public static final int PRIMARY_FIELD_NUMBER = 2;
     private volatile java.lang.Object primary_;
     /**
+     * <pre>
+     * Host of the primary KDC server (Key Distribution Center).
+     * </pre>
+     *
      * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The primary.
      */
@@ -8930,6 +9902,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Host of the primary KDC server (Key Distribution Center).
+     * </pre>
+     *
      * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for primary.
      */
@@ -8951,6 +9927,10 @@ public final class Pxf {
     public static final int REALM_FIELD_NUMBER = 3;
     private volatile java.lang.Object realm_;
     /**
+     * <pre>
+     * Kerberos realm for a Greenplum® DB.
+     * </pre>
+     *
      * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The realm.
      */
@@ -8968,6 +9948,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Kerberos realm for a Greenplum® DB.
+     * </pre>
+     *
      * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for realm.
      */
@@ -8989,6 +9973,10 @@ public final class Pxf {
     public static final int KDC_SERVERS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList kdcServers_;
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the kdcServers.
      */
@@ -8997,6 +9985,10 @@ public final class Pxf {
       return kdcServers_;
     }
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of kdcServers.
      */
@@ -9004,6 +9996,10 @@ public final class Pxf {
       return kdcServers_.size();
     }
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The kdcServers at the given index.
@@ -9012,6 +10008,10 @@ public final class Pxf {
       return kdcServers_.get(index);
     }
     /**
+     * <pre>
+     * KDC server hosts.
+     * </pre>
+     *
      * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the kdcServers at the given index.
@@ -9024,6 +10024,10 @@ public final class Pxf {
     public static final int ADMIN_SERVER_FIELD_NUMBER = 5;
     private volatile java.lang.Object adminServer_;
     /**
+     * <pre>
+     * Administration server host. Usually, this is the primary Kerberos server.
+     * </pre>
+     *
      * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The adminServer.
      */
@@ -9041,6 +10045,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Administration server host. Usually, this is the primary Kerberos server.
+     * </pre>
+     *
      * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for adminServer.
      */
@@ -9062,6 +10070,10 @@ public final class Pxf {
     public static final int DEFAULT_DOMAIN_FIELD_NUMBER = 6;
     private volatile java.lang.Object defaultDomain_;
     /**
+     * <pre>
+     * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+     * </pre>
+     *
      * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The defaultDomain.
      */
@@ -9079,6 +10091,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+     * </pre>
+     *
      * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for defaultDomain.
      */
@@ -9100,6 +10116,10 @@ public final class Pxf {
     public static final int KEYTAB_BASE64_FIELD_NUMBER = 7;
     private volatile java.lang.Object keytabBase64_;
     /**
+     * <pre>
+     * Base64 encoded contents of the keytab file.
+     * </pre>
+     *
      * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
      * @return The keytabBase64.
      */
@@ -9117,6 +10137,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Base64 encoded contents of the keytab file.
+     * </pre>
+     *
      * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
      * @return The bytes for keytabBase64.
      */
@@ -9575,6 +10599,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableBuilder_;
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        * @return Whether the enable field is set.
        */
@@ -9582,6 +10610,10 @@ public final class Pxf {
         return enableBuilder_ != null || enable_ != null;
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        * @return The enable.
        */
@@ -9593,6 +10625,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public Builder setEnable(com.google.protobuf.BoolValue value) {
@@ -9609,6 +10645,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public Builder setEnable(
@@ -9623,6 +10663,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public Builder mergeEnable(com.google.protobuf.BoolValue value) {
@@ -9641,6 +10685,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public Builder clearEnable() {
@@ -9655,6 +10703,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public com.google.protobuf.BoolValue.Builder getEnableBuilder() {
@@ -9663,6 +10715,10 @@ public final class Pxf {
         return getEnableFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getEnableOrBuilder() {
@@ -9674,6 +10730,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the Kerberos authentication server is used. By default, it is not used.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue enable = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9692,6 +10752,10 @@ public final class Pxf {
 
       private java.lang.Object primary_ = "";
       /**
+       * <pre>
+       * Host of the primary KDC server (Key Distribution Center).
+       * </pre>
+       *
        * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The primary.
        */
@@ -9708,6 +10772,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Host of the primary KDC server (Key Distribution Center).
+       * </pre>
+       *
        * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for primary.
        */
@@ -9725,6 +10793,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Host of the primary KDC server (Key Distribution Center).
+       * </pre>
+       *
        * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The primary to set.
        * @return This builder for chaining.
@@ -9740,6 +10812,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Host of the primary KDC server (Key Distribution Center).
+       * </pre>
+       *
        * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -9750,6 +10826,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Host of the primary KDC server (Key Distribution Center).
+       * </pre>
+       *
        * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for primary to set.
        * @return This builder for chaining.
@@ -9768,6 +10848,10 @@ public final class Pxf {
 
       private java.lang.Object realm_ = "";
       /**
+       * <pre>
+       * Kerberos realm for a Greenplum® DB.
+       * </pre>
+       *
        * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The realm.
        */
@@ -9784,6 +10868,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Kerberos realm for a Greenplum® DB.
+       * </pre>
+       *
        * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for realm.
        */
@@ -9801,6 +10889,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Kerberos realm for a Greenplum® DB.
+       * </pre>
+       *
        * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The realm to set.
        * @return This builder for chaining.
@@ -9816,6 +10908,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Kerberos realm for a Greenplum® DB.
+       * </pre>
+       *
        * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -9826,6 +10922,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Kerberos realm for a Greenplum® DB.
+       * </pre>
+       *
        * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for realm to set.
        * @return This builder for chaining.
@@ -9850,6 +10950,10 @@ public final class Pxf {
          }
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return A list containing the kdcServers.
        */
@@ -9858,6 +10962,10 @@ public final class Pxf {
         return kdcServers_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return The count of kdcServers.
        */
@@ -9865,6 +10973,10 @@ public final class Pxf {
         return kdcServers_.size();
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the element to return.
        * @return The kdcServers at the given index.
@@ -9873,6 +10985,10 @@ public final class Pxf {
         return kdcServers_.get(index);
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the kdcServers at the given index.
@@ -9882,6 +10998,10 @@ public final class Pxf {
         return kdcServers_.getByteString(index);
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index to set the value at.
        * @param value The kdcServers to set.
@@ -9898,6 +11018,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The kdcServers to add.
        * @return This builder for chaining.
@@ -9913,6 +11037,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param values The kdcServers to add.
        * @return This builder for chaining.
@@ -9926,6 +11054,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return This builder for chaining.
        */
@@ -9936,6 +11068,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * KDC server hosts.
+       * </pre>
+       *
        * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The bytes of the kdcServers to add.
        * @return This builder for chaining.
@@ -9954,6 +11090,10 @@ public final class Pxf {
 
       private java.lang.Object adminServer_ = "";
       /**
+       * <pre>
+       * Administration server host. Usually, this is the primary Kerberos server.
+       * </pre>
+       *
        * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The adminServer.
        */
@@ -9970,6 +11110,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Administration server host. Usually, this is the primary Kerberos server.
+       * </pre>
+       *
        * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for adminServer.
        */
@@ -9987,6 +11131,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Administration server host. Usually, this is the primary Kerberos server.
+       * </pre>
+       *
        * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The adminServer to set.
        * @return This builder for chaining.
@@ -10002,6 +11150,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Administration server host. Usually, this is the primary Kerberos server.
+       * </pre>
+       *
        * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -10012,6 +11164,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Administration server host. Usually, this is the primary Kerberos server.
+       * </pre>
+       *
        * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for adminServer to set.
        * @return This builder for chaining.
@@ -10030,6 +11186,10 @@ public final class Pxf {
 
       private java.lang.Object defaultDomain_ = "";
       /**
+       * <pre>
+       * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+       * </pre>
+       *
        * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The defaultDomain.
        */
@@ -10046,6 +11206,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+       * </pre>
+       *
        * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for defaultDomain.
        */
@@ -10063,6 +11227,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+       * </pre>
+       *
        * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The defaultDomain to set.
        * @return This builder for chaining.
@@ -10078,6 +11246,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+       * </pre>
+       *
        * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -10088,6 +11260,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Domain that is used for the host name extension. Applicable when Kerberos 4 service members become Kerberos 5 service members (for example, when rcmd.hostname is replaced with host/hostname.domain).
+       * </pre>
+       *
        * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for defaultDomain to set.
        * @return This builder for chaining.
@@ -10106,6 +11282,10 @@ public final class Pxf {
 
       private java.lang.Object keytabBase64_ = "";
       /**
+       * <pre>
+       * Base64 encoded contents of the keytab file.
+       * </pre>
+       *
        * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
        * @return The keytabBase64.
        */
@@ -10122,6 +11302,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Base64 encoded contents of the keytab file.
+       * </pre>
+       *
        * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
        * @return The bytes for keytabBase64.
        */
@@ -10139,6 +11323,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Base64 encoded contents of the keytab file.
+       * </pre>
+       *
        * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
        * @param value The keytabBase64 to set.
        * @return This builder for chaining.
@@ -10154,6 +11342,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Base64 encoded contents of the keytab file.
+       * </pre>
+       *
        * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
        * @return This builder for chaining.
        */
@@ -10164,6 +11356,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Base64 encoded contents of the keytab file.
+       * </pre>
+       *
        * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
        * @param value The bytes for keytabBase64 to set.
        * @return This builder for chaining.
@@ -11255,55 +12451,107 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      * @return Whether the haAutomaticFailoverEnabled field is set.
      */
     boolean hasHaAutomaticFailoverEnabled();
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      * @return The haAutomaticFailoverEnabled.
      */
     com.google.protobuf.BoolValue getHaAutomaticFailoverEnabled();
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getHaAutomaticFailoverEnabledOrBuilder();
 
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      * @return Whether the blockAccessTokenEnabled field is set.
      */
     boolean hasBlockAccessTokenEnabled();
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      * @return The blockAccessTokenEnabled.
      */
     com.google.protobuf.BoolValue getBlockAccessTokenEnabled();
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getBlockAccessTokenEnabledOrBuilder();
 
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      * @return Whether the useDatanodeHostname field is set.
      */
     boolean hasUseDatanodeHostname();
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      * @return The useDatanodeHostname.
      */
     com.google.protobuf.BoolValue getUseDatanodeHostname();
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getUseDatanodeHostnameOrBuilder();
 
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     int getNamenodesCount();
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     boolean containsNamenodes(
@@ -11315,11 +12563,21 @@ public final class Pxf {
     java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
     getNamenodes();
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
     getNamenodesMap();
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -11327,6 +12585,11 @@ public final class Pxf {
         java.lang.String key,
         yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode defaultValue);
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -11505,6 +12768,11 @@ public final class Pxf {
     public static final int HA_AUTOMATIC_FAILOVER_ENABLED_FIELD_NUMBER = 1;
     private com.google.protobuf.BoolValue haAutomaticFailoverEnabled_;
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      * @return Whether the haAutomaticFailoverEnabled field is set.
      */
@@ -11513,6 +12781,11 @@ public final class Pxf {
       return haAutomaticFailoverEnabled_ != null;
     }
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      * @return The haAutomaticFailoverEnabled.
      */
@@ -11521,6 +12794,11 @@ public final class Pxf {
       return haAutomaticFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : haAutomaticFailoverEnabled_;
     }
     /**
+     * <pre>
+     * Determines whether automatic failover is enabled for the high availability of the file system.
+     * The automatic failover is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
      */
     @java.lang.Override
@@ -11531,6 +12809,11 @@ public final class Pxf {
     public static final int BLOCK_ACCESS_TOKEN_ENABLED_FIELD_NUMBER = 2;
     private com.google.protobuf.BoolValue blockAccessTokenEnabled_;
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      * @return Whether the blockAccessTokenEnabled field is set.
      */
@@ -11539,6 +12822,11 @@ public final class Pxf {
       return blockAccessTokenEnabled_ != null;
     }
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      * @return The blockAccessTokenEnabled.
      */
@@ -11547,6 +12835,11 @@ public final class Pxf {
       return blockAccessTokenEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : blockAccessTokenEnabled_;
     }
     /**
+     * <pre>
+     * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+     * The check of access tokens is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
      */
     @java.lang.Override
@@ -11557,6 +12850,10 @@ public final class Pxf {
     public static final int USE_DATANODE_HOSTNAME_FIELD_NUMBER = 3;
     private com.google.protobuf.BoolValue useDatanodeHostname_;
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      * @return Whether the useDatanodeHostname field is set.
      */
@@ -11565,6 +12862,10 @@ public final class Pxf {
       return useDatanodeHostname_ != null;
     }
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      * @return The useDatanodeHostname.
      */
@@ -11573,6 +12874,10 @@ public final class Pxf {
       return useDatanodeHostname_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useDatanodeHostname_;
     }
     /**
+     * <pre>
+     * Determines whether the datanode hostname is used when connecting to datanodes.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
      */
     @java.lang.Override
@@ -11607,6 +12912,11 @@ public final class Pxf {
       return internalGetNamenodes().getMap().size();
     }
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -11625,6 +12935,11 @@ public final class Pxf {
       return getNamenodesMap();
     }
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -11633,6 +12948,11 @@ public final class Pxf {
       return internalGetNamenodes().getMap();
     }
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -11646,6 +12966,11 @@ public final class Pxf {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * List of HDFS service logical names.
+     * Specify them separated by commas. The names can be arbitrary.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -12154,6 +13479,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> haAutomaticFailoverEnabledBuilder_;
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        * @return Whether the haAutomaticFailoverEnabled field is set.
        */
@@ -12161,6 +13491,11 @@ public final class Pxf {
         return haAutomaticFailoverEnabledBuilder_ != null || haAutomaticFailoverEnabled_ != null;
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        * @return The haAutomaticFailoverEnabled.
        */
@@ -12172,6 +13507,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public Builder setHaAutomaticFailoverEnabled(com.google.protobuf.BoolValue value) {
@@ -12188,6 +13528,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public Builder setHaAutomaticFailoverEnabled(
@@ -12202,6 +13547,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public Builder mergeHaAutomaticFailoverEnabled(com.google.protobuf.BoolValue value) {
@@ -12220,6 +13570,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public Builder clearHaAutomaticFailoverEnabled() {
@@ -12234,6 +13589,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public com.google.protobuf.BoolValue.Builder getHaAutomaticFailoverEnabledBuilder() {
@@ -12242,6 +13602,11 @@ public final class Pxf {
         return getHaAutomaticFailoverEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getHaAutomaticFailoverEnabledOrBuilder() {
@@ -12253,6 +13618,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether automatic failover is enabled for the high availability of the file system.
+       * The automatic failover is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12273,6 +13643,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> blockAccessTokenEnabledBuilder_;
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        * @return Whether the blockAccessTokenEnabled field is set.
        */
@@ -12280,6 +13655,11 @@ public final class Pxf {
         return blockAccessTokenEnabledBuilder_ != null || blockAccessTokenEnabled_ != null;
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        * @return The blockAccessTokenEnabled.
        */
@@ -12291,6 +13671,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public Builder setBlockAccessTokenEnabled(com.google.protobuf.BoolValue value) {
@@ -12307,6 +13692,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public Builder setBlockAccessTokenEnabled(
@@ -12321,6 +13711,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public Builder mergeBlockAccessTokenEnabled(com.google.protobuf.BoolValue value) {
@@ -12339,6 +13734,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public Builder clearBlockAccessTokenEnabled() {
@@ -12353,6 +13753,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public com.google.protobuf.BoolValue.Builder getBlockAccessTokenEnabledBuilder() {
@@ -12361,6 +13766,11 @@ public final class Pxf {
         return getBlockAccessTokenEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getBlockAccessTokenEnabledOrBuilder() {
@@ -12372,6 +13782,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * If `true`, access tokens are used as capabilities for accessing datanodes. If `false`, no access tokens are checked on accessing datanodes.
+       * The check of access tokens is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12392,6 +13807,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useDatanodeHostnameBuilder_;
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        * @return Whether the useDatanodeHostname field is set.
        */
@@ -12399,6 +13818,10 @@ public final class Pxf {
         return useDatanodeHostnameBuilder_ != null || useDatanodeHostname_ != null;
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        * @return The useDatanodeHostname.
        */
@@ -12410,6 +13833,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public Builder setUseDatanodeHostname(com.google.protobuf.BoolValue value) {
@@ -12426,6 +13853,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public Builder setUseDatanodeHostname(
@@ -12440,6 +13871,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public Builder mergeUseDatanodeHostname(com.google.protobuf.BoolValue value) {
@@ -12458,6 +13893,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public Builder clearUseDatanodeHostname() {
@@ -12472,6 +13911,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public com.google.protobuf.BoolValue.Builder getUseDatanodeHostnameBuilder() {
@@ -12480,6 +13923,10 @@ public final class Pxf {
         return getUseDatanodeHostnameFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getUseDatanodeHostnameOrBuilder() {
@@ -12491,6 +13938,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the datanode hostname is used when connecting to datanodes.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12534,6 +13985,11 @@ public final class Pxf {
         return internalGetNamenodes().getMap().size();
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -12552,6 +14008,11 @@ public final class Pxf {
         return getNamenodesMap();
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -12560,6 +14021,11 @@ public final class Pxf {
         return internalGetNamenodes().getMap();
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -12573,6 +14039,11 @@ public final class Pxf {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -12594,6 +14065,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -12613,6 +14089,11 @@ public final class Pxf {
         return internalGetMutableNamenodes().getMutableMap();
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       public Builder putNamenodes(
@@ -12628,6 +14109,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of HDFS service logical names.
+       * Specify them separated by commas. The names can be arbitrary.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -14109,56 +15595,106 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      * @return Whether the resourcemanagerHaEnabled field is set.
      */
     boolean hasResourcemanagerHaEnabled();
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      * @return The resourcemanagerHaEnabled.
      */
     com.google.protobuf.BoolValue getResourcemanagerHaEnabled();
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaEnabledOrBuilder();
 
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
      */
     boolean hasResourcemanagerHaAutoFailoverEnabled();
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      * @return The resourcemanagerHaAutoFailoverEnabled.
      */
     com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEnabled();
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEnabledOrBuilder();
 
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
      */
     boolean hasResourcemanagerHaAutoFailoverEmbedded();
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      * @return The resourcemanagerHaAutoFailoverEmbedded.
      */
     com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEmbedded();
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEmbeddedOrBuilder();
 
     /**
+     * <pre>
+     * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+     * </pre>
+     *
      * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The resourcemanagerClusterId.
      */
     java.lang.String getResourcemanagerClusterId();
     /**
+     * <pre>
+     * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+     * </pre>
+     *
      * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for resourcemanagerClusterId.
      */
@@ -14166,10 +15702,18 @@ public final class Pxf {
         getResourcemanagerClusterIdBytes();
 
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     int getHaRmCount();
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     boolean containsHaRm(
@@ -14181,11 +15725,19 @@ public final class Pxf {
     java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
     getHaRm();
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
     getHaRmMap();
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -14193,6 +15745,10 @@ public final class Pxf {
         java.lang.String key,
         yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm defaultValue);
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -14351,6 +15907,11 @@ public final class Pxf {
     public static final int RESOURCEMANAGER_HA_ENABLED_FIELD_NUMBER = 1;
     private com.google.protobuf.BoolValue resourcemanagerHaEnabled_;
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      * @return Whether the resourcemanagerHaEnabled field is set.
      */
@@ -14359,6 +15920,11 @@ public final class Pxf {
       return resourcemanagerHaEnabled_ != null;
     }
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      * @return The resourcemanagerHaEnabled.
      */
@@ -14367,6 +15933,11 @@ public final class Pxf {
       return resourcemanagerHaEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaEnabled_;
     }
     /**
+     * <pre>
+     * Determines whether high availability is enabled for YARN's ResourceManager services.
+     * The high availability is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
      */
     @java.lang.Override
@@ -14377,6 +15948,11 @@ public final class Pxf {
     public static final int RESOURCEMANAGER_HA_AUTO_FAILOVER_ENABLED_FIELD_NUMBER = 2;
     private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEnabled_;
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
      */
@@ -14385,6 +15961,11 @@ public final class Pxf {
       return resourcemanagerHaAutoFailoverEnabled_ != null;
     }
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      * @return The resourcemanagerHaAutoFailoverEnabled.
      */
@@ -14393,6 +15974,11 @@ public final class Pxf {
       return resourcemanagerHaAutoFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEnabled_;
     }
     /**
+     * <pre>
+     * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+     * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
      */
     @java.lang.Override
@@ -14403,6 +15989,10 @@ public final class Pxf {
     public static final int RESOURCEMANAGER_HA_AUTO_FAILOVER_EMBEDDED_FIELD_NUMBER = 3;
     private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEmbedded_;
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
      */
@@ -14411,6 +16001,10 @@ public final class Pxf {
       return resourcemanagerHaAutoFailoverEmbedded_ != null;
     }
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      * @return The resourcemanagerHaAutoFailoverEmbedded.
      */
@@ -14419,6 +16013,10 @@ public final class Pxf {
       return resourcemanagerHaAutoFailoverEmbedded_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEmbedded_;
     }
     /**
+     * <pre>
+     * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
      */
     @java.lang.Override
@@ -14429,6 +16027,10 @@ public final class Pxf {
     public static final int RESOURCEMANAGER_CLUSTER_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object resourcemanagerClusterId_;
     /**
+     * <pre>
+     * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+     * </pre>
+     *
      * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The resourcemanagerClusterId.
      */
@@ -14446,6 +16048,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+     * </pre>
+     *
      * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for resourcemanagerClusterId.
      */
@@ -14491,6 +16097,10 @@ public final class Pxf {
       return internalGetHaRm().getMap().size();
     }
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
 
@@ -14509,6 +16119,10 @@ public final class Pxf {
       return getHaRmMap();
     }
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -14517,6 +16131,10 @@ public final class Pxf {
       return internalGetHaRm().getMap();
     }
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -14530,6 +16148,10 @@ public final class Pxf {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Highly available ResourceManager service.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
      */
     @java.lang.Override
@@ -14992,6 +16614,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaEnabledBuilder_;
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        * @return Whether the resourcemanagerHaEnabled field is set.
        */
@@ -14999,6 +16626,11 @@ public final class Pxf {
         return resourcemanagerHaEnabledBuilder_ != null || resourcemanagerHaEnabled_ != null;
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        * @return The resourcemanagerHaEnabled.
        */
@@ -15010,6 +16642,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public Builder setResourcemanagerHaEnabled(com.google.protobuf.BoolValue value) {
@@ -15026,6 +16663,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public Builder setResourcemanagerHaEnabled(
@@ -15040,6 +16682,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public Builder mergeResourcemanagerHaEnabled(com.google.protobuf.BoolValue value) {
@@ -15058,6 +16705,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public Builder clearResourcemanagerHaEnabled() {
@@ -15072,6 +16724,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public com.google.protobuf.BoolValue.Builder getResourcemanagerHaEnabledBuilder() {
@@ -15080,6 +16737,11 @@ public final class Pxf {
         return getResourcemanagerHaEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaEnabledOrBuilder() {
@@ -15091,6 +16753,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether high availability is enabled for YARN's ResourceManager services.
+       * The high availability is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15111,6 +16778,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaAutoFailoverEnabledBuilder_;
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
        */
@@ -15118,6 +16790,11 @@ public final class Pxf {
         return resourcemanagerHaAutoFailoverEnabledBuilder_ != null || resourcemanagerHaAutoFailoverEnabled_ != null;
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        * @return The resourcemanagerHaAutoFailoverEnabled.
        */
@@ -15129,6 +16806,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public Builder setResourcemanagerHaAutoFailoverEnabled(com.google.protobuf.BoolValue value) {
@@ -15145,6 +16827,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public Builder setResourcemanagerHaAutoFailoverEnabled(
@@ -15159,6 +16846,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public Builder mergeResourcemanagerHaAutoFailoverEnabled(com.google.protobuf.BoolValue value) {
@@ -15177,6 +16869,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public Builder clearResourcemanagerHaAutoFailoverEnabled() {
@@ -15191,6 +16888,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public com.google.protobuf.BoolValue.Builder getResourcemanagerHaAutoFailoverEnabledBuilder() {
@@ -15199,6 +16901,11 @@ public final class Pxf {
         return getResourcemanagerHaAutoFailoverEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEnabledOrBuilder() {
@@ -15210,6 +16917,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether another ResourceManager should automatically become active when the active ResourceManager has failed and does not respond.
+       * The switch of ResourceManagers is enabled by default if the high availability is enabled.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15230,6 +16942,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaAutoFailoverEmbeddedBuilder_;
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
        */
@@ -15237,6 +16953,10 @@ public final class Pxf {
         return resourcemanagerHaAutoFailoverEmbeddedBuilder_ != null || resourcemanagerHaAutoFailoverEmbedded_ != null;
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        * @return The resourcemanagerHaAutoFailoverEmbedded.
        */
@@ -15248,6 +16968,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public Builder setResourcemanagerHaAutoFailoverEmbedded(com.google.protobuf.BoolValue value) {
@@ -15264,6 +16988,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public Builder setResourcemanagerHaAutoFailoverEmbedded(
@@ -15278,6 +17006,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public Builder mergeResourcemanagerHaAutoFailoverEmbedded(com.google.protobuf.BoolValue value) {
@@ -15296,6 +17028,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public Builder clearResourcemanagerHaAutoFailoverEmbedded() {
@@ -15310,6 +17046,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public com.google.protobuf.BoolValue.Builder getResourcemanagerHaAutoFailoverEmbeddedBuilder() {
@@ -15318,6 +17058,10 @@ public final class Pxf {
         return getResourcemanagerHaAutoFailoverEmbeddedFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEmbeddedOrBuilder() {
@@ -15329,6 +17073,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Determines whether the embedded ActiveStandbyElector method should be used for the election of the active ResourceManager. If the current active ResourceManager has failed and does not respond, the ActiveStandbyElector method makes another ResourceManager active which then takes over.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15347,6 +17095,10 @@ public final class Pxf {
 
       private java.lang.Object resourcemanagerClusterId_ = "";
       /**
+       * <pre>
+       * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+       * </pre>
+       *
        * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The resourcemanagerClusterId.
        */
@@ -15363,6 +17115,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+       * </pre>
+       *
        * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for resourcemanagerClusterId.
        */
@@ -15380,6 +17136,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+       * </pre>
+       *
        * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The resourcemanagerClusterId to set.
        * @return This builder for chaining.
@@ -15395,6 +17155,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+       * </pre>
+       *
        * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -15405,6 +17169,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Cluster ID. Specify it, so the ResourceManager service does not become active for a different cluster.
+       * </pre>
+       *
        * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for resourcemanagerClusterId to set.
        * @return This builder for chaining.
@@ -15448,6 +17216,10 @@ public final class Pxf {
         return internalGetHaRm().getMap().size();
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -15466,6 +17238,10 @@ public final class Pxf {
         return getHaRmMap();
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -15474,6 +17250,10 @@ public final class Pxf {
         return internalGetHaRm().getMap();
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -15487,6 +17267,10 @@ public final class Pxf {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       @java.lang.Override
@@ -15508,6 +17292,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -15527,6 +17315,10 @@ public final class Pxf {
         return internalGetMutableHaRm().getMutableMap();
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
       public Builder putHaRm(
@@ -15542,6 +17334,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Highly available ResourceManager service.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
        */
 
@@ -15609,56 +17405,103 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return Whether the core field is set.
      */
     boolean hasCore();
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return The core.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore();
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder();
 
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return Whether the kerberos field is set.
      */
     boolean hasKerberos();
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return The kerberos.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos();
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder();
 
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return Whether the userImpersonation field is set.
      */
     boolean hasUserImpersonation();
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return The userImpersonation.
      */
     com.google.protobuf.BoolValue getUserImpersonation();
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder();
 
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The username.
      */
     java.lang.String getUsername();
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for username.
      */
@@ -15666,38 +17509,73 @@ public final class Pxf {
         getUsernameBytes();
 
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return Whether the saslConnectionRetries field is set.
      */
     boolean hasSaslConnectionRetries();
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return The saslConnectionRetries.
      */
     com.google.protobuf.Int64Value getSaslConnectionRetries();
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder();
 
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the zkHosts.
      */
     java.util.List<java.lang.String>
         getZkHostsList();
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of zkHosts.
      */
     int getZkHostsCount();
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The zkHosts at the given index.
      */
     java.lang.String getZkHosts(int index);
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the zkHosts at the given index.
@@ -15706,31 +17584,55 @@ public final class Pxf {
         getZkHostsBytes(int index);
 
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      * @return Whether the dfs field is set.
      */
     boolean hasDfs();
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      * @return The dfs.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDfs();
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder getDfsOrBuilder();
 
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      * @return Whether the yarn field is set.
      */
     boolean hasYarn();
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      * @return The yarn.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getYarn();
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder getYarnOrBuilder();
@@ -15914,6 +17816,10 @@ public final class Pxf {
     public static final int CORE_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return Whether the core field is set.
      */
@@ -15922,6 +17828,10 @@ public final class Pxf {
       return core_ != null;
     }
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return The core.
      */
@@ -15930,6 +17840,10 @@ public final class Pxf {
       return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
     }
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      */
     @java.lang.Override
@@ -15940,6 +17854,10 @@ public final class Pxf {
     public static final int KERBEROS_FIELD_NUMBER = 2;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return Whether the kerberos field is set.
      */
@@ -15948,6 +17866,10 @@ public final class Pxf {
       return kerberos_ != null;
     }
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return The kerberos.
      */
@@ -15956,6 +17878,10 @@ public final class Pxf {
       return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
     }
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      */
     @java.lang.Override
@@ -15966,6 +17892,11 @@ public final class Pxf {
     public static final int USER_IMPERSONATION_FIELD_NUMBER = 3;
     private com.google.protobuf.BoolValue userImpersonation_;
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return Whether the userImpersonation field is set.
      */
@@ -15974,6 +17905,11 @@ public final class Pxf {
       return userImpersonation_ != null;
     }
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return The userImpersonation.
      */
@@ -15982,6 +17918,11 @@ public final class Pxf {
       return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
     }
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      */
     @java.lang.Override
@@ -15992,6 +17933,10 @@ public final class Pxf {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The username.
      */
@@ -16009,6 +17954,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for username.
      */
@@ -16030,6 +17979,11 @@ public final class Pxf {
     public static final int SASL_CONNECTION_RETRIES_FIELD_NUMBER = 5;
     private com.google.protobuf.Int64Value saslConnectionRetries_;
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return Whether the saslConnectionRetries field is set.
      */
@@ -16038,6 +17992,11 @@ public final class Pxf {
       return saslConnectionRetries_ != null;
     }
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return The saslConnectionRetries.
      */
@@ -16046,6 +18005,11 @@ public final class Pxf {
       return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
     }
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      */
     @java.lang.Override
@@ -16056,6 +18020,11 @@ public final class Pxf {
     public static final int ZK_HOSTS_FIELD_NUMBER = 6;
     private com.google.protobuf.LazyStringList zkHosts_;
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the zkHosts.
      */
@@ -16064,6 +18033,11 @@ public final class Pxf {
       return zkHosts_;
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of zkHosts.
      */
@@ -16071,6 +18045,11 @@ public final class Pxf {
       return zkHosts_.size();
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The zkHosts at the given index.
@@ -16079,6 +18058,11 @@ public final class Pxf {
       return zkHosts_.get(index);
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the zkHosts at the given index.
@@ -16091,6 +18075,10 @@ public final class Pxf {
     public static final int DFS_FIELD_NUMBER = 7;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs dfs_;
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      * @return Whether the dfs field is set.
      */
@@ -16099,6 +18087,10 @@ public final class Pxf {
       return dfs_ != null;
     }
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      * @return The dfs.
      */
@@ -16107,6 +18099,10 @@ public final class Pxf {
       return dfs_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance() : dfs_;
     }
     /**
+     * <pre>
+     * Settings of the distributed file system.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
      */
     @java.lang.Override
@@ -16117,6 +18113,10 @@ public final class Pxf {
     public static final int YARN_FIELD_NUMBER = 8;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn yarn_;
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      * @return Whether the yarn field is set.
      */
@@ -16125,6 +18125,10 @@ public final class Pxf {
       return yarn_ != null;
     }
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      * @return The yarn.
      */
@@ -16133,6 +18137,10 @@ public final class Pxf {
       return yarn_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance() : yarn_;
     }
     /**
+     * <pre>
+     * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
      */
     @java.lang.Override
@@ -16662,6 +18670,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> coreBuilder_;
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        * @return Whether the core field is set.
        */
@@ -16669,6 +18681,10 @@ public final class Pxf {
         return coreBuilder_ != null || core_ != null;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        * @return The core.
        */
@@ -16680,6 +18696,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder setCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
@@ -16696,6 +18716,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder setCore(
@@ -16710,6 +18734,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder mergeCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
@@ -16728,6 +18756,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder clearCore() {
@@ -16742,6 +18774,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder getCoreBuilder() {
@@ -16750,6 +18786,10 @@ public final class Pxf {
         return getCoreFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
@@ -16761,6 +18801,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16781,6 +18825,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> kerberosBuilder_;
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        * @return Whether the kerberos field is set.
        */
@@ -16788,6 +18836,10 @@ public final class Pxf {
         return kerberosBuilder_ != null || kerberos_ != null;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        * @return The kerberos.
        */
@@ -16799,6 +18851,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder setKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
@@ -16815,6 +18871,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder setKerberos(
@@ -16829,6 +18889,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder mergeKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
@@ -16847,6 +18911,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder clearKerberos() {
@@ -16861,6 +18929,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder getKerberosBuilder() {
@@ -16869,6 +18941,10 @@ public final class Pxf {
         return getKerberosFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
@@ -16880,6 +18956,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16900,6 +18980,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> userImpersonationBuilder_;
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        * @return Whether the userImpersonation field is set.
        */
@@ -16907,6 +18992,11 @@ public final class Pxf {
         return userImpersonationBuilder_ != null || userImpersonation_ != null;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        * @return The userImpersonation.
        */
@@ -16918,6 +19008,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder setUserImpersonation(com.google.protobuf.BoolValue value) {
@@ -16934,6 +19029,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder setUserImpersonation(
@@ -16948,6 +19048,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder mergeUserImpersonation(com.google.protobuf.BoolValue value) {
@@ -16966,6 +19071,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder clearUserImpersonation() {
@@ -16980,6 +19090,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public com.google.protobuf.BoolValue.Builder getUserImpersonationBuilder() {
@@ -16988,6 +19103,11 @@ public final class Pxf {
         return getUserImpersonationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
@@ -16999,6 +19119,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17017,6 +19142,10 @@ public final class Pxf {
 
       private java.lang.Object username_ = "";
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The username.
        */
@@ -17033,6 +19162,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for username.
        */
@@ -17050,6 +19183,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The username to set.
        * @return This builder for chaining.
@@ -17065,6 +19202,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -17075,6 +19216,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -17095,6 +19240,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> saslConnectionRetriesBuilder_;
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        * @return Whether the saslConnectionRetries field is set.
        */
@@ -17102,6 +19252,11 @@ public final class Pxf {
         return saslConnectionRetriesBuilder_ != null || saslConnectionRetries_ != null;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        * @return The saslConnectionRetries.
        */
@@ -17113,6 +19268,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder setSaslConnectionRetries(com.google.protobuf.Int64Value value) {
@@ -17129,6 +19289,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder setSaslConnectionRetries(
@@ -17143,6 +19308,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder mergeSaslConnectionRetries(com.google.protobuf.Int64Value value) {
@@ -17161,6 +19331,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder clearSaslConnectionRetries() {
@@ -17175,6 +19350,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getSaslConnectionRetriesBuilder() {
@@ -17183,6 +19363,11 @@ public final class Pxf {
         return getSaslConnectionRetriesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
@@ -17194,6 +19379,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17218,6 +19408,11 @@ public final class Pxf {
          }
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return A list containing the zkHosts.
        */
@@ -17226,6 +19421,11 @@ public final class Pxf {
         return zkHosts_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return The count of zkHosts.
        */
@@ -17233,6 +19433,11 @@ public final class Pxf {
         return zkHosts_.size();
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the element to return.
        * @return The zkHosts at the given index.
@@ -17241,6 +19446,11 @@ public final class Pxf {
         return zkHosts_.get(index);
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the zkHosts at the given index.
@@ -17250,6 +19460,11 @@ public final class Pxf {
         return zkHosts_.getByteString(index);
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index to set the value at.
        * @param value The zkHosts to set.
@@ -17266,6 +19481,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The zkHosts to add.
        * @return This builder for chaining.
@@ -17281,6 +19501,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param values The zkHosts to add.
        * @return This builder for chaining.
@@ -17294,6 +19519,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return This builder for chaining.
        */
@@ -17304,6 +19534,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The bytes of the zkHosts to add.
        * @return This builder for chaining.
@@ -17324,6 +19559,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder> dfsBuilder_;
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        * @return Whether the dfs field is set.
        */
@@ -17331,6 +19570,10 @@ public final class Pxf {
         return dfsBuilder_ != null || dfs_ != null;
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        * @return The dfs.
        */
@@ -17342,6 +19585,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public Builder setDfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs value) {
@@ -17358,6 +19605,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public Builder setDfs(
@@ -17372,6 +19623,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public Builder mergeDfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs value) {
@@ -17390,6 +19645,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public Builder clearDfs() {
@@ -17404,6 +19663,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder getDfsBuilder() {
@@ -17412,6 +19675,10 @@ public final class Pxf {
         return getDfsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder getDfsOrBuilder() {
@@ -17423,6 +19690,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the distributed file system.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17443,6 +19714,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder> yarnBuilder_;
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        * @return Whether the yarn field is set.
        */
@@ -17450,6 +19725,10 @@ public final class Pxf {
         return yarnBuilder_ != null || yarn_ != null;
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        * @return The yarn.
        */
@@ -17461,6 +19740,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public Builder setYarn(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn value) {
@@ -17477,6 +19760,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public Builder setYarn(
@@ -17491,6 +19778,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public Builder mergeYarn(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn value) {
@@ -17509,6 +19800,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public Builder clearYarn() {
@@ -17523,6 +19818,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder getYarnBuilder() {
@@ -17531,6 +19830,10 @@ public final class Pxf {
         return getYarnFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder getYarnOrBuilder() {
@@ -17542,6 +19845,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the ResourceManager service that is responsible for tracking resources in a cluster and scheduling applications (e.g., MapReduce jobs).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17615,56 +19922,103 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return Whether the core field is set.
      */
     boolean hasCore();
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return The core.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore();
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder();
 
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return Whether the kerberos field is set.
      */
     boolean hasKerberos();
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return The kerberos.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos();
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder();
 
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return Whether the userImpersonation field is set.
      */
     boolean hasUserImpersonation();
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return The userImpersonation.
      */
     com.google.protobuf.BoolValue getUserImpersonation();
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder();
 
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The username.
      */
     java.lang.String getUsername();
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for username.
      */
@@ -17672,38 +20026,73 @@ public final class Pxf {
         getUsernameBytes();
 
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return Whether the saslConnectionRetries field is set.
      */
     boolean hasSaslConnectionRetries();
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return The saslConnectionRetries.
      */
     com.google.protobuf.Int64Value getSaslConnectionRetries();
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder();
 
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the zkHosts.
      */
     java.util.List<java.lang.String>
         getZkHostsList();
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of zkHosts.
      */
     int getZkHostsCount();
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The zkHosts at the given index.
      */
     java.lang.String getZkHosts(int index);
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the zkHosts at the given index.
@@ -17712,38 +20101,69 @@ public final class Pxf {
         getZkHostsBytes(int index);
 
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      * @return Whether the ppd field is set.
      */
     boolean hasPpd();
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      * @return The ppd.
      */
     com.google.protobuf.BoolValue getPpd();
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getPpdOrBuilder();
 
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the metastoreUris.
      */
     java.util.List<java.lang.String>
         getMetastoreUrisList();
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of metastoreUris.
      */
     int getMetastoreUrisCount();
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The metastoreUris at the given index.
      */
     java.lang.String getMetastoreUris(int index);
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the metastoreUris at the given index.
@@ -17752,11 +20172,19 @@ public final class Pxf {
         getMetastoreUrisBytes(int index);
 
     /**
+     * <pre>
+     * Service principal for the Metastore Thrift server.
+     * </pre>
+     *
      * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The metastoreKerberosPrincipal.
      */
     java.lang.String getMetastoreKerberosPrincipal();
     /**
+     * <pre>
+     * Service principal for the Metastore Thrift server.
+     * </pre>
+     *
      * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for metastoreKerberosPrincipal.
      */
@@ -17764,11 +20192,19 @@ public final class Pxf {
         getMetastoreKerberosPrincipalBytes();
 
     /**
+     * <pre>
+     * Kerberos server principal.
+     * </pre>
+     *
      * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The authKerberosPrincipal.
      */
     java.lang.String getAuthKerberosPrincipal();
     /**
+     * <pre>
+     * Kerberos server principal.
+     * </pre>
+     *
      * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for authKerberosPrincipal.
      */
@@ -17968,6 +20404,10 @@ public final class Pxf {
     public static final int CORE_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return Whether the core field is set.
      */
@@ -17976,6 +20416,10 @@ public final class Pxf {
       return core_ != null;
     }
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      * @return The core.
      */
@@ -17984,6 +20428,10 @@ public final class Pxf {
       return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
     }
     /**
+     * <pre>
+     * Settings of the file system and security rules.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
      */
     @java.lang.Override
@@ -17994,6 +20442,10 @@ public final class Pxf {
     public static final int KERBEROS_FIELD_NUMBER = 2;
     private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return Whether the kerberos field is set.
      */
@@ -18002,6 +20454,10 @@ public final class Pxf {
       return kerberos_ != null;
     }
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      * @return The kerberos.
      */
@@ -18010,6 +20466,10 @@ public final class Pxf {
       return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
     }
     /**
+     * <pre>
+     * Settings of the Kerberos network authentication protocol.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
      */
     @java.lang.Override
@@ -18020,6 +20480,11 @@ public final class Pxf {
     public static final int USER_IMPERSONATION_FIELD_NUMBER = 3;
     private com.google.protobuf.BoolValue userImpersonation_;
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return Whether the userImpersonation field is set.
      */
@@ -18028,6 +20493,11 @@ public final class Pxf {
       return userImpersonation_ != null;
     }
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      * @return The userImpersonation.
      */
@@ -18036,6 +20506,11 @@ public final class Pxf {
       return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
     }
     /**
+     * <pre>
+     * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+     * The authentication is disabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
      */
     @java.lang.Override
@@ -18046,6 +20521,10 @@ public final class Pxf {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The username.
      */
@@ -18063,6 +20542,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+     * </pre>
+     *
      * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
      * @return The bytes for username.
      */
@@ -18084,6 +20567,11 @@ public final class Pxf {
     public static final int SASL_CONNECTION_RETRIES_FIELD_NUMBER = 5;
     private com.google.protobuf.Int64Value saslConnectionRetries_;
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return Whether the saslConnectionRetries field is set.
      */
@@ -18092,6 +20580,11 @@ public final class Pxf {
       return saslConnectionRetries_ != null;
     }
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      * @return The saslConnectionRetries.
      */
@@ -18100,6 +20593,11 @@ public final class Pxf {
       return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
     }
     /**
+     * <pre>
+     * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+     * The default value is `5`.
+     * </pre>
+     *
      * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
      */
     @java.lang.Override
@@ -18110,6 +20608,11 @@ public final class Pxf {
     public static final int ZK_HOSTS_FIELD_NUMBER = 6;
     private com.google.protobuf.LazyStringList zkHosts_;
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the zkHosts.
      */
@@ -18118,6 +20621,11 @@ public final class Pxf {
       return zkHosts_;
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of zkHosts.
      */
@@ -18125,6 +20633,11 @@ public final class Pxf {
       return zkHosts_.size();
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The zkHosts at the given index.
@@ -18133,6 +20646,11 @@ public final class Pxf {
       return zkHosts_.get(index);
     }
     /**
+     * <pre>
+     * ZooKeeper server hosts.
+     * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+     * </pre>
+     *
      * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the zkHosts at the given index.
@@ -18145,6 +20663,11 @@ public final class Pxf {
     public static final int PPD_FIELD_NUMBER = 7;
     private com.google.protobuf.BoolValue ppd_;
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      * @return Whether the ppd field is set.
      */
@@ -18153,6 +20676,11 @@ public final class Pxf {
       return ppd_ != null;
     }
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      * @return The ppd.
      */
@@ -18161,6 +20689,11 @@ public final class Pxf {
       return ppd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ppd_;
     }
     /**
+     * <pre>
+     * Specifies if predicate pushdown is enabled for queries on external tables.
+     * The predicate pushdown is enabled by default.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue ppd = 7;</code>
      */
     @java.lang.Override
@@ -18171,6 +20704,10 @@ public final class Pxf {
     public static final int METASTORE_URIS_FIELD_NUMBER = 8;
     private com.google.protobuf.LazyStringList metastoreUris_;
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return A list containing the metastoreUris.
      */
@@ -18179,6 +20716,10 @@ public final class Pxf {
       return metastoreUris_;
     }
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @return The count of metastoreUris.
      */
@@ -18186,6 +20727,10 @@ public final class Pxf {
       return metastoreUris_.size();
     }
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the element to return.
      * @return The metastoreUris at the given index.
@@ -18194,6 +20739,10 @@ public final class Pxf {
       return metastoreUris_.get(index);
     }
     /**
+     * <pre>
+     * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+     * </pre>
+     *
      * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the metastoreUris at the given index.
@@ -18206,6 +20755,10 @@ public final class Pxf {
     public static final int METASTORE_KERBEROS_PRINCIPAL_FIELD_NUMBER = 9;
     private volatile java.lang.Object metastoreKerberosPrincipal_;
     /**
+     * <pre>
+     * Service principal for the Metastore Thrift server.
+     * </pre>
+     *
      * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The metastoreKerberosPrincipal.
      */
@@ -18223,6 +20776,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Service principal for the Metastore Thrift server.
+     * </pre>
+     *
      * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for metastoreKerberosPrincipal.
      */
@@ -18244,6 +20801,10 @@ public final class Pxf {
     public static final int AUTH_KERBEROS_PRINCIPAL_FIELD_NUMBER = 10;
     private volatile java.lang.Object authKerberosPrincipal_;
     /**
+     * <pre>
+     * Kerberos server principal.
+     * </pre>
+     *
      * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The authKerberosPrincipal.
      */
@@ -18261,6 +20822,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Kerberos server principal.
+     * </pre>
+     *
      * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for authKerberosPrincipal.
      */
@@ -18839,6 +21404,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> coreBuilder_;
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        * @return Whether the core field is set.
        */
@@ -18846,6 +21415,10 @@ public final class Pxf {
         return coreBuilder_ != null || core_ != null;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        * @return The core.
        */
@@ -18857,6 +21430,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder setCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
@@ -18873,6 +21450,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder setCore(
@@ -18887,6 +21468,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder mergeCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
@@ -18905,6 +21490,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public Builder clearCore() {
@@ -18919,6 +21508,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder getCoreBuilder() {
@@ -18927,6 +21520,10 @@ public final class Pxf {
         return getCoreFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
@@ -18938,6 +21535,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the file system and security rules.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -18958,6 +21559,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> kerberosBuilder_;
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        * @return Whether the kerberos field is set.
        */
@@ -18965,6 +21570,10 @@ public final class Pxf {
         return kerberosBuilder_ != null || kerberos_ != null;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        * @return The kerberos.
        */
@@ -18976,6 +21585,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder setKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
@@ -18992,6 +21605,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder setKerberos(
@@ -19006,6 +21623,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder mergeKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
@@ -19024,6 +21645,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public Builder clearKerberos() {
@@ -19038,6 +21663,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder getKerberosBuilder() {
@@ -19046,6 +21675,10 @@ public final class Pxf {
         return getKerberosFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
@@ -19057,6 +21690,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of the Kerberos network authentication protocol.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19077,6 +21714,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> userImpersonationBuilder_;
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        * @return Whether the userImpersonation field is set.
        */
@@ -19084,6 +21726,11 @@ public final class Pxf {
         return userImpersonationBuilder_ != null || userImpersonation_ != null;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        * @return The userImpersonation.
        */
@@ -19095,6 +21742,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder setUserImpersonation(com.google.protobuf.BoolValue value) {
@@ -19111,6 +21763,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder setUserImpersonation(
@@ -19125,6 +21782,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder mergeUserImpersonation(com.google.protobuf.BoolValue value) {
@@ -19143,6 +21805,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public Builder clearUserImpersonation() {
@@ -19157,6 +21824,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public com.google.protobuf.BoolValue.Builder getUserImpersonationBuilder() {
@@ -19165,6 +21837,11 @@ public final class Pxf {
         return getUserImpersonationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
@@ -19176,6 +21853,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Enables authentication on behalf of the Greenplum® user when connecting to the remote file storage or DBMS.
+       * The authentication is disabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19194,6 +21876,10 @@ public final class Pxf {
 
       private java.lang.Object username_ = "";
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The username.
        */
@@ -19210,6 +21896,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return The bytes for username.
        */
@@ -19227,6 +21917,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The username to set.
        * @return This builder for chaining.
@@ -19242,6 +21936,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @return This builder for chaining.
        */
@@ -19252,6 +21950,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Login username for the remote file storage or DBMS if authentication on behalf of the Greenplum® user is enabled.
+       * </pre>
+       *
        * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -19272,6 +21974,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> saslConnectionRetriesBuilder_;
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        * @return Whether the saslConnectionRetries field is set.
        */
@@ -19279,6 +21986,11 @@ public final class Pxf {
         return saslConnectionRetriesBuilder_ != null || saslConnectionRetries_ != null;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        * @return The saslConnectionRetries.
        */
@@ -19290,6 +22002,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder setSaslConnectionRetries(com.google.protobuf.Int64Value value) {
@@ -19306,6 +22023,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder setSaslConnectionRetries(
@@ -19320,6 +22042,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder mergeSaslConnectionRetries(com.google.protobuf.Int64Value value) {
@@ -19338,6 +22065,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public Builder clearSaslConnectionRetries() {
@@ -19352,6 +22084,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getSaslConnectionRetriesBuilder() {
@@ -19360,6 +22097,11 @@ public final class Pxf {
         return getSaslConnectionRetriesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
@@ -19371,6 +22113,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Maximum number of times that PXF retries a SASL connection request after a refused connection returns a `GSS initiate failed` error.
+       * The default value is `5`.
+       * </pre>
+       *
        * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19395,6 +22142,11 @@ public final class Pxf {
          }
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return A list containing the zkHosts.
        */
@@ -19403,6 +22155,11 @@ public final class Pxf {
         return zkHosts_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return The count of zkHosts.
        */
@@ -19410,6 +22167,11 @@ public final class Pxf {
         return zkHosts_.size();
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the element to return.
        * @return The zkHosts at the given index.
@@ -19418,6 +22180,11 @@ public final class Pxf {
         return zkHosts_.get(index);
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the zkHosts at the given index.
@@ -19427,6 +22194,11 @@ public final class Pxf {
         return zkHosts_.getByteString(index);
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index to set the value at.
        * @param value The zkHosts to set.
@@ -19443,6 +22215,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The zkHosts to add.
        * @return This builder for chaining.
@@ -19458,6 +22235,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param values The zkHosts to add.
        * @return This builder for chaining.
@@ -19471,6 +22253,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return This builder for chaining.
        */
@@ -19481,6 +22268,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * ZooKeeper server hosts.
+       * Specify values in the `&lt;address&gt;:&lt;port&gt;` format.
+       * </pre>
+       *
        * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The bytes of the zkHosts to add.
        * @return This builder for chaining.
@@ -19501,6 +22293,11 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> ppdBuilder_;
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        * @return Whether the ppd field is set.
        */
@@ -19508,6 +22305,11 @@ public final class Pxf {
         return ppdBuilder_ != null || ppd_ != null;
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        * @return The ppd.
        */
@@ -19519,6 +22321,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public Builder setPpd(com.google.protobuf.BoolValue value) {
@@ -19535,6 +22342,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public Builder setPpd(
@@ -19549,6 +22361,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public Builder mergePpd(com.google.protobuf.BoolValue value) {
@@ -19567,6 +22384,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public Builder clearPpd() {
@@ -19581,6 +22403,11 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public com.google.protobuf.BoolValue.Builder getPpdBuilder() {
@@ -19589,6 +22416,11 @@ public final class Pxf {
         return getPpdFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getPpdOrBuilder() {
@@ -19600,6 +22432,11 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Specifies if predicate pushdown is enabled for queries on external tables.
+       * The predicate pushdown is enabled by default.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue ppd = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -19624,6 +22461,10 @@ public final class Pxf {
          }
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return A list containing the metastoreUris.
        */
@@ -19632,6 +22473,10 @@ public final class Pxf {
         return metastoreUris_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return The count of metastoreUris.
        */
@@ -19639,6 +22484,10 @@ public final class Pxf {
         return metastoreUris_.size();
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the element to return.
        * @return The metastoreUris at the given index.
@@ -19647,6 +22496,10 @@ public final class Pxf {
         return metastoreUris_.get(index);
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the metastoreUris at the given index.
@@ -19656,6 +22509,10 @@ public final class Pxf {
         return metastoreUris_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param index The index to set the value at.
        * @param value The metastoreUris to set.
@@ -19672,6 +22529,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The metastoreUris to add.
        * @return This builder for chaining.
@@ -19687,6 +22548,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param values The metastoreUris to add.
        * @return This builder for chaining.
@@ -19700,6 +22565,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @return This builder for chaining.
        */
@@ -19710,6 +22579,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * List of URIs separated by commas. To request metadata, the remote DBMS connects to Metastore by one of these URIs.
+       * </pre>
+       *
        * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
        * @param value The bytes of the metastoreUris to add.
        * @return This builder for chaining.
@@ -19728,6 +22601,10 @@ public final class Pxf {
 
       private java.lang.Object metastoreKerberosPrincipal_ = "";
       /**
+       * <pre>
+       * Service principal for the Metastore Thrift server.
+       * </pre>
+       *
        * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The metastoreKerberosPrincipal.
        */
@@ -19744,6 +22621,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Service principal for the Metastore Thrift server.
+       * </pre>
+       *
        * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for metastoreKerberosPrincipal.
        */
@@ -19761,6 +22642,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Service principal for the Metastore Thrift server.
+       * </pre>
+       *
        * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The metastoreKerberosPrincipal to set.
        * @return This builder for chaining.
@@ -19776,6 +22661,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Service principal for the Metastore Thrift server.
+       * </pre>
+       *
        * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -19786,6 +22675,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Service principal for the Metastore Thrift server.
+       * </pre>
+       *
        * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for metastoreKerberosPrincipal to set.
        * @return This builder for chaining.
@@ -19804,6 +22697,10 @@ public final class Pxf {
 
       private java.lang.Object authKerberosPrincipal_ = "";
       /**
+       * <pre>
+       * Kerberos server principal.
+       * </pre>
+       *
        * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The authKerberosPrincipal.
        */
@@ -19820,6 +22717,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Kerberos server principal.
+       * </pre>
+       *
        * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for authKerberosPrincipal.
        */
@@ -19837,6 +22738,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Kerberos server principal.
+       * </pre>
+       *
        * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The authKerberosPrincipal to set.
        * @return This builder for chaining.
@@ -19852,6 +22757,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Kerberos server principal.
+       * </pre>
+       *
        * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -19862,6 +22771,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Kerberos server principal.
+       * </pre>
+       *
        * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for authKerberosPrincipal to set.
        * @return This builder for chaining.
@@ -19935,11 +22848,19 @@ public final class Pxf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Data source name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Data source name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for name.
      */
@@ -19947,61 +22868,109 @@ public final class Pxf {
         getNameBytes();
 
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      * @return Whether the s3 field is set.
      */
     boolean hasS3();
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      * @return The s3.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getS3();
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder getS3OrBuilder();
 
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      * @return Whether the jdbc field is set.
      */
     boolean hasJdbc();
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      * @return The jdbc.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getJdbc();
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder getJdbcOrBuilder();
 
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      * @return Whether the hdfs field is set.
      */
     boolean hasHdfs();
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      * @return The hdfs.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getHdfs();
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder getHdfsOrBuilder();
 
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      * @return Whether the hive field is set.
      */
     boolean hasHive();
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      * @return The hive.
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getHive();
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder getHiveOrBuilder();
@@ -20196,6 +23165,10 @@ public final class Pxf {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Data source name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The name.
      */
@@ -20213,6 +23186,10 @@ public final class Pxf {
       }
     }
     /**
+     * <pre>
+     * Data source name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
      * @return The bytes for name.
      */
@@ -20233,6 +23210,10 @@ public final class Pxf {
 
     public static final int S3_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      * @return Whether the s3 field is set.
      */
@@ -20241,6 +23222,10 @@ public final class Pxf {
       return settingsCase_ == 2;
     }
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      * @return The s3.
      */
@@ -20252,6 +23237,10 @@ public final class Pxf {
       return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Settings of an external S3 data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
      */
     @java.lang.Override
@@ -20264,6 +23253,10 @@ public final class Pxf {
 
     public static final int JDBC_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      * @return Whether the jdbc field is set.
      */
@@ -20272,6 +23265,10 @@ public final class Pxf {
       return settingsCase_ == 3;
     }
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      * @return The jdbc.
      */
@@ -20283,6 +23280,10 @@ public final class Pxf {
       return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Settings of an external JDBC data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
      */
     @java.lang.Override
@@ -20295,6 +23296,10 @@ public final class Pxf {
 
     public static final int HDFS_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      * @return Whether the hdfs field is set.
      */
@@ -20303,6 +23308,10 @@ public final class Pxf {
       return settingsCase_ == 4;
     }
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      * @return The hdfs.
      */
@@ -20314,6 +23323,10 @@ public final class Pxf {
       return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Settings of an external HDFS data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
      */
     @java.lang.Override
@@ -20326,6 +23339,10 @@ public final class Pxf {
 
     public static final int HIVE_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      * @return Whether the hive field is set.
      */
@@ -20334,6 +23351,10 @@ public final class Pxf {
       return settingsCase_ == 5;
     }
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      * @return The hive.
      */
@@ -20345,6 +23366,10 @@ public final class Pxf {
       return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Settings of an external Hive data source.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
      */
     @java.lang.Override
@@ -20795,6 +23820,10 @@ public final class Pxf {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Data source name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The name.
        */
@@ -20811,6 +23840,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Data source name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return The bytes for name.
        */
@@ -20828,6 +23861,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Data source name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -20843,6 +23880,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Data source name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @return This builder for chaining.
        */
@@ -20853,6 +23894,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Data source name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "^[^&#92;&#92;|/&#42;?.,;&#92;"&#92;'&lt;&gt;]+$", (.yandex.cloud.length) = "3-200"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -20872,6 +23917,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder> s3Builder_;
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        * @return Whether the s3 field is set.
        */
@@ -20880,6 +23929,10 @@ public final class Pxf {
         return settingsCase_ == 2;
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        * @return The s3.
        */
@@ -20898,6 +23951,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       public Builder setS3(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 value) {
@@ -20914,6 +23971,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       public Builder setS3(
@@ -20928,6 +23989,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       public Builder mergeS3(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 value) {
@@ -20950,6 +24015,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       public Builder clearS3() {
@@ -20969,12 +24038,20 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder getS3Builder() {
         return getS3FieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       @java.lang.Override
@@ -20989,6 +24066,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external S3 data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21013,6 +24094,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder> jdbcBuilder_;
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        * @return Whether the jdbc field is set.
        */
@@ -21021,6 +24106,10 @@ public final class Pxf {
         return settingsCase_ == 3;
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        * @return The jdbc.
        */
@@ -21039,6 +24128,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       public Builder setJdbc(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC value) {
@@ -21055,6 +24148,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       public Builder setJdbc(
@@ -21069,6 +24166,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       public Builder mergeJdbc(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC value) {
@@ -21091,6 +24192,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       public Builder clearJdbc() {
@@ -21110,12 +24215,20 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder getJdbcBuilder() {
         return getJdbcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       @java.lang.Override
@@ -21130,6 +24243,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external JDBC data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21154,6 +24271,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder> hdfsBuilder_;
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        * @return Whether the hdfs field is set.
        */
@@ -21162,6 +24283,10 @@ public final class Pxf {
         return settingsCase_ == 4;
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        * @return The hdfs.
        */
@@ -21180,6 +24305,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       public Builder setHdfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS value) {
@@ -21196,6 +24325,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       public Builder setHdfs(
@@ -21210,6 +24343,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       public Builder mergeHdfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS value) {
@@ -21232,6 +24369,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       public Builder clearHdfs() {
@@ -21251,12 +24392,20 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder getHdfsBuilder() {
         return getHdfsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       @java.lang.Override
@@ -21271,6 +24420,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external HDFS data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21295,6 +24448,10 @@ public final class Pxf {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder> hiveBuilder_;
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        * @return Whether the hive field is set.
        */
@@ -21303,6 +24460,10 @@ public final class Pxf {
         return settingsCase_ == 5;
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        * @return The hive.
        */
@@ -21321,6 +24482,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       public Builder setHive(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive value) {
@@ -21337,6 +24502,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       public Builder setHive(
@@ -21351,6 +24520,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       public Builder mergeHive(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive value) {
@@ -21373,6 +24546,10 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       public Builder clearHive() {
@@ -21392,12 +24569,20 @@ public final class Pxf {
         return this;
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder getHiveBuilder() {
         return getHiveFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       @java.lang.Override
@@ -21412,6 +24597,10 @@ public final class Pxf {
         }
       }
       /**
+       * <pre>
+       * Settings of an external Hive data source.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

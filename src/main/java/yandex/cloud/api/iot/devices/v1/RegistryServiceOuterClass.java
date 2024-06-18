@@ -29823,6 +29823,2422 @@ public final class RegistryServiceOuterClass {
 
   }
 
+  public interface DisableRegistryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.DisableRegistryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry to disable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to disable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.DisableRegistryRequest}
+   */
+  public static final class DisableRegistryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DisableRegistryRequest)
+      DisableRegistryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableRegistryRequest.newBuilder() to construct.
+    private DisableRegistryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableRegistryRequest() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableRegistryRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableRegistryRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry to disable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry to disable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.DisableRegistryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.DisableRegistryRequest)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry to disable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to disable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to disable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to disable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to disable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.DisableRegistryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.DisableRegistryRequest)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableRegistryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DisableRegistryRequest>() {
+      @java.lang.Override
+      public DisableRegistryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableRegistryRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableRegistryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableRegistryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DisableRegistryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.DisableRegistryMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry that was disabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry that was disabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.DisableRegistryMetadata}
+   */
+  public static final class DisableRegistryMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.DisableRegistryMetadata)
+      DisableRegistryMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisableRegistryMetadata.newBuilder() to construct.
+    private DisableRegistryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisableRegistryMetadata() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisableRegistryMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisableRegistryMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry that was disabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry that was disabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.DisableRegistryMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.DisableRegistryMetadata)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry that was disabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that was disabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that was disabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that was disabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that was disabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.DisableRegistryMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.DisableRegistryMetadata)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisableRegistryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DisableRegistryMetadata>() {
+      @java.lang.Override
+      public DisableRegistryMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisableRegistryMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisableRegistryMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisableRegistryMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.DisableRegistryMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableRegistryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.EnableRegistryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry to enable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to enable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.EnableRegistryRequest}
+   */
+  public static final class EnableRegistryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.EnableRegistryRequest)
+      EnableRegistryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableRegistryRequest.newBuilder() to construct.
+    private EnableRegistryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableRegistryRequest() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableRegistryRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableRegistryRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry to enable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry to enable.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.EnableRegistryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.EnableRegistryRequest)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry to enable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to enable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to enable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to enable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to enable.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.EnableRegistryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.EnableRegistryRequest)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableRegistryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EnableRegistryRequest>() {
+      @java.lang.Override
+      public EnableRegistryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableRegistryRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableRegistryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableRegistryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnableRegistryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.EnableRegistryMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry that was enabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry that was enabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.EnableRegistryMetadata}
+   */
+  public static final class EnableRegistryMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.EnableRegistryMetadata)
+      EnableRegistryMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnableRegistryMetadata.newBuilder() to construct.
+    private EnableRegistryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnableRegistryMetadata() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnableRegistryMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnableRegistryMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry that was enabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The registryId.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry that was enabled.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for registryId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata other = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata) obj;
+
+      if (!getRegistryId()
+          .equals(other.getRegistryId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.EnableRegistryMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.EnableRegistryMetadata)
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.class, yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata build() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata buildPartial() {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata result = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata other) {
+        if (other == yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry that was enabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The registryId.
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that was enabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for registryId.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that was enabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that was enabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that was enabled.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for registryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.EnableRegistryMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.EnableRegistryMetadata)
+    private static final yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnableRegistryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<EnableRegistryMetadata>() {
+      @java.lang.Override
+      public EnableRegistryMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnableRegistryMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnableRegistryMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnableRegistryMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.EnableRegistryMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_GetRegistryRequest_descriptor;
   private static final 
@@ -29998,6 +32414,26 @@ public final class RegistryServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -30112,93 +32548,108 @@ public final class RegistryServiceOuterClass {
       "!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"k\n\035Li" +
       "stDataStreamExportsResponse\022J\n\023data_stre" +
       "am_exports\030\001 \003(\0132-.yandex.cloud.iot.devi" +
-      "ces.v1.DataStreamExport2\372\031\n\017RegistryServ" +
-      "ice\022\217\001\n\003Get\022/.yandex.cloud.iot.devices.v" +
-      "1.GetRegistryRequest\032%.yandex.cloud.iot." +
-      "devices.v1.Registry\"0\202\323\344\223\002*\022(/iot-device" +
-      "s/v1/registries/{registry_id}\022\227\001\n\tGetByN" +
-      "ame\0225.yandex.cloud.iot.devices.v1.GetByN" +
-      "ameRegistryRequest\032%.yandex.cloud.iot.de" +
-      "vices.v1.Registry\",\202\323\344\223\002&\022$/iot-devices/" +
-      "v1/registries:getByName\022\223\001\n\004List\0222.yande" +
-      "x.cloud.iot.devices.v1.ListRegistriesReq" +
-      "uest\0323.yandex.cloud.iot.devices.v1.ListR" +
-      "egistriesResponse\"\"\202\323\344\223\002\034\022\032/iot-devices/" +
-      "v1/registries\022\254\001\n\006Create\0222.yandex.cloud." +
-      "iot.devices.v1.CreateRegistryRequest\032!.y" +
-      "andex.cloud.operation.Operation\"K\202\323\344\223\002\037\"" +
-      "\032/iot-devices/v1/registries:\001*\262\322*\"\n\026Crea" +
-      "teRegistryMetadata\022\010Registry\022\272\001\n\006Update\022" +
-      "2.yandex.cloud.iot.devices.v1.UpdateRegi" +
-      "stryRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"Y\202\323\344\223\002-2(/iot-devices/v1/registri" +
-      "es/{registry_id}:\001*\262\322*\"\n\026UpdateRegistryM" +
-      "etadata\022\010Registry\022\304\001\n\006Delete\0222.yandex.cl" +
-      "oud.iot.devices.v1.DeleteRegistryRequest" +
-      "\032!.yandex.cloud.operation.Operation\"c\202\323\344" +
-      "\223\002**(/iot-devices/v1/registries/{registr" +
-      "y_id}\262\322*/\n\026DeleteRegistryMetadata\022\025googl" +
-      "e.protobuf.Empty\022\316\001\n\020ListCertificates\022<." +
-      "yandex.cloud.iot.devices.v1.ListRegistry" +
-      "CertificatesRequest\032=.yandex.cloud.iot.d" +
-      "evices.v1.ListRegistryCertificatesRespon" +
-      "se\"=\202\323\344\223\0027\0225/iot-devices/v1/registries/{" +
-      "registry_id}/certificates\022\352\001\n\016AddCertifi" +
-      "cate\022:.yandex.cloud.iot.devices.v1.AddRe" +
-      "gistryCertificateRequest\032!.yandex.cloud." +
-      "operation.Operation\"y\202\323\344\223\002:\"5/iot-device" +
-      "s/v1/registries/{registry_id}/certificat" +
-      "es:\001*\262\322*5\n\036AddRegistryCertificateMetadat" +
-      "a\022\023RegistryCertificate\022\201\002\n\021DeleteCertifi" +
-      "cate\022=.yandex.cloud.iot.devices.v1.Delet" +
-      "eRegistryCertificateRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\211\001\202\323\344\223\002E*C/iot-de" +
-      "vices/v1/registries/{registry_id}/certif" +
-      "icates/{fingerprint}\262\322*:\n!DeleteRegistry" +
-      "CertificateMetadata\022\025google.protobuf.Emp" +
-      "ty\022\302\001\n\rListPasswords\0229.yandex.cloud.iot." +
-      "devices.v1.ListRegistryPasswordsRequest\032" +
-      ":.yandex.cloud.iot.devices.v1.ListRegist" +
-      "ryPasswordsResponse\":\202\323\344\223\0024\0222/iot-device" +
-      "s/v1/registries/{registry_id}/passwords\022" +
-      "\333\001\n\013AddPassword\0227.yandex.cloud.iot.devic" +
-      "es.v1.AddRegistryPasswordRequest\032!.yande" +
-      "x.cloud.operation.Operation\"p\202\323\344\223\0027\"2/io" +
-      "t-devices/v1/registries/{registry_id}/pa" +
-      "sswords:\001*\262\322*/\n\033AddRegistryPasswordMetad" +
-      "ata\022\020RegistryPassword\022\365\001\n\016DeletePassword" +
-      "\022:.yandex.cloud.iot.devices.v1.DeleteReg" +
-      "istryPasswordRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\203\001\202\323\344\223\002B*@/iot-devices/v" +
-      "1/registries/{registry_id}/passwords/{pa" +
-      "ssword_id}\262\322*7\n\036DeleteRegistryPasswordMe" +
-      "tadata\022\025google.protobuf.Empty\022\332\001\n\026ListDe" +
-      "viceTopicAliases\022:.yandex.cloud.iot.devi" +
-      "ces.v1.ListDeviceTopicAliasesRequest\032;.y" +
-      "andex.cloud.iot.devices.v1.ListDeviceTop" +
-      "icAliasesResponse\"G\202\323\344\223\002A\022?/iot-devices/" +
-      "v1/registries/{registry_id}:listDeviceTo" +
-      "picAliases\022\216\001\n\025ListDataStreamExports\0229.y" +
-      "andex.cloud.iot.devices.v1.ListDataStrea" +
-      "mExportsRequest\032:.yandex.cloud.iot.devic" +
-      "es.v1.ListDataStreamExportsResponse\022\246\001\n\023" +
-      "AddDataStreamExport\0227.yandex.cloud.iot.d" +
-      "evices.v1.AddDataStreamExportRequest\032!.y" +
-      "andex.cloud.operation.Operation\"3\262\322*/\n\033A" +
-      "ddDataStreamExportMetadata\022\020DataStreamEx" +
-      "port\022\264\001\n\026DeleteDataStreamExport\022:.yandex" +
-      ".cloud.iot.devices.v1.DeleteDataStreamEx" +
-      "portRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\";\262\322*7\n\036DeleteDataStreamExportMeta" +
-      "data\022\025google.protobuf.Empty\022\306\001\n\016ListOper" +
-      "ations\022:.yandex.cloud.iot.devices.v1.Lis" +
-      "tRegistryOperationsRequest\032;.yandex.clou" +
-      "d.iot.devices.v1.ListRegistryOperationsR" +
-      "esponse\";\202\323\344\223\0025\0223/iot-devices/v1/registr" +
-      "ies/{registry_id}/operationsBj\n\037yandex.c" +
-      "loud.api.iot.devices.v1ZGgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/iot/de" +
-      "vices/v1;devicesb\006proto3"
+      "ces.v1.DataStreamExport\"3\n\026DisableRegist" +
+      "ryRequest\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\"4\n\027" +
+      "DisableRegistryMetadata\022\031\n\013registry_id\030\001" +
+      " \001(\tB\004\350\3071\001\"2\n\025EnableRegistryRequest\022\031\n\013r" +
+      "egistry_id\030\001 \001(\tB\004\350\3071\001\"3\n\026EnableRegistry" +
+      "Metadata\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\0012\200\035\n\017" +
+      "RegistryService\022\217\001\n\003Get\022/.yandex.cloud.i" +
+      "ot.devices.v1.GetRegistryRequest\032%.yande" +
+      "x.cloud.iot.devices.v1.Registry\"0\202\323\344\223\002*\022" +
+      "(/iot-devices/v1/registries/{registry_id" +
+      "}\022\227\001\n\tGetByName\0225.yandex.cloud.iot.devic" +
+      "es.v1.GetByNameRegistryRequest\032%.yandex." +
+      "cloud.iot.devices.v1.Registry\",\202\323\344\223\002&\022$/" +
+      "iot-devices/v1/registries:getByName\022\223\001\n\004" +
+      "List\0222.yandex.cloud.iot.devices.v1.ListR" +
+      "egistriesRequest\0323.yandex.cloud.iot.devi" +
+      "ces.v1.ListRegistriesResponse\"\"\202\323\344\223\002\034\022\032/" +
+      "iot-devices/v1/registries\022\254\001\n\006Create\0222.y" +
+      "andex.cloud.iot.devices.v1.CreateRegistr" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"K\202\323\344\223\002\037\"\032/iot-devices/v1/registries:" +
+      "\001*\262\322*\"\n\026CreateRegistryMetadata\022\010Registry" +
+      "\022\272\001\n\006Update\0222.yandex.cloud.iot.devices.v" +
+      "1.UpdateRegistryRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"Y\202\323\344\223\002-2(/iot-devices" +
+      "/v1/registries/{registry_id}:\001*\262\322*\"\n\026Upd" +
+      "ateRegistryMetadata\022\010Registry\022\304\001\n\006Delete" +
+      "\0222.yandex.cloud.iot.devices.v1.DeleteReg" +
+      "istryRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"c\202\323\344\223\002**(/iot-devices/v1/registr" +
+      "ies/{registry_id}\262\322*/\n\026DeleteRegistryMet" +
+      "adata\022\025google.protobuf.Empty\022\316\001\n\020ListCer" +
+      "tificates\022<.yandex.cloud.iot.devices.v1." +
+      "ListRegistryCertificatesRequest\032=.yandex" +
+      ".cloud.iot.devices.v1.ListRegistryCertif" +
+      "icatesResponse\"=\202\323\344\223\0027\0225/iot-devices/v1/" +
+      "registries/{registry_id}/certificates\022\352\001" +
+      "\n\016AddCertificate\022:.yandex.cloud.iot.devi" +
+      "ces.v1.AddRegistryCertificateRequest\032!.y" +
+      "andex.cloud.operation.Operation\"y\202\323\344\223\002:\"" +
+      "5/iot-devices/v1/registries/{registry_id" +
+      "}/certificates:\001*\262\322*5\n\036AddRegistryCertif" +
+      "icateMetadata\022\023RegistryCertificate\022\201\002\n\021D" +
+      "eleteCertificate\022=.yandex.cloud.iot.devi" +
+      "ces.v1.DeleteRegistryCertificateRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\211\001\202\323\344" +
+      "\223\002E*C/iot-devices/v1/registries/{registr" +
+      "y_id}/certificates/{fingerprint}\262\322*:\n!De" +
+      "leteRegistryCertificateMetadata\022\025google." +
+      "protobuf.Empty\022\302\001\n\rListPasswords\0229.yande" +
+      "x.cloud.iot.devices.v1.ListRegistryPassw" +
+      "ordsRequest\032:.yandex.cloud.iot.devices.v" +
+      "1.ListRegistryPasswordsResponse\":\202\323\344\223\0024\022" +
+      "2/iot-devices/v1/registries/{registry_id" +
+      "}/passwords\022\333\001\n\013AddPassword\0227.yandex.clo" +
+      "ud.iot.devices.v1.AddRegistryPasswordReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "p\202\323\344\223\0027\"2/iot-devices/v1/registries/{reg" +
+      "istry_id}/passwords:\001*\262\322*/\n\033AddRegistryP" +
+      "asswordMetadata\022\020RegistryPassword\022\365\001\n\016De" +
+      "letePassword\022:.yandex.cloud.iot.devices." +
+      "v1.DeleteRegistryPasswordRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\203\001\202\323\344\223\002B*@/i" +
+      "ot-devices/v1/registries/{registry_id}/p" +
+      "asswords/{password_id}\262\322*7\n\036DeleteRegist" +
+      "ryPasswordMetadata\022\025google.protobuf.Empt" +
+      "y\022\332\001\n\026ListDeviceTopicAliases\022:.yandex.cl" +
+      "oud.iot.devices.v1.ListDeviceTopicAliase" +
+      "sRequest\032;.yandex.cloud.iot.devices.v1.L" +
+      "istDeviceTopicAliasesResponse\"G\202\323\344\223\002A\022?/" +
+      "iot-devices/v1/registries/{registry_id}:" +
+      "listDeviceTopicAliases\022\216\001\n\025ListDataStrea" +
+      "mExports\0229.yandex.cloud.iot.devices.v1.L" +
+      "istDataStreamExportsRequest\032:.yandex.clo" +
+      "ud.iot.devices.v1.ListDataStreamExportsR" +
+      "esponse\022\246\001\n\023AddDataStreamExport\0227.yandex" +
+      ".cloud.iot.devices.v1.AddDataStreamExpor" +
+      "tRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"3\262\322*/\n\033AddDataStreamExportMetadata\022\020" +
+      "DataStreamExport\022\264\001\n\026DeleteDataStreamExp" +
+      "ort\022:.yandex.cloud.iot.devices.v1.Delete" +
+      "DataStreamExportRequest\032!.yandex.cloud.o" +
+      "peration.Operation\";\262\322*7\n\036DeleteDataStre" +
+      "amExportMetadata\022\025google.protobuf.Empty\022" +
+      "\306\001\n\016ListOperations\022:.yandex.cloud.iot.de" +
+      "vices.v1.ListRegistryOperationsRequest\032;" +
+      ".yandex.cloud.iot.devices.v1.ListRegistr" +
+      "yOperationsResponse\";\202\323\344\223\0025\0223/iot-device" +
+      "s/v1/registries/{registry_id}/operations" +
+      "\022\302\001\n\007Disable\0223.yandex.cloud.iot.devices." +
+      "v1.DisableRegistryRequest\032!.yandex.cloud" +
+      ".operation.Operation\"_\202\323\344\223\0022\"0/iot-devic" +
+      "es/v1/registries/{registry_id}:disable\262\322" +
+      "*#\n\027DisableRegistryMetadata\022\010Registry\022\276\001" +
+      "\n\006Enable\0222.yandex.cloud.iot.devices.v1.E" +
+      "nableRegistryRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"]\202\323\344\223\0021\"//iot-devices/v1" +
+      "/registries/{registry_id}:enable\262\322*\"\n\026En" +
+      "ableRegistryMetadata\022\010RegistryBj\n\037yandex" +
+      ".cloud.api.iot.devices.v1ZGgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/iot/" +
+      "devices/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30420,6 +32871,30 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDataStreamExportsResponse_descriptor,
         new java.lang.String[] { "DataStreamExports", });
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_DisableRegistryRequest_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_DisableRegistryMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_EnableRegistryRequest_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_EnableRegistryMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

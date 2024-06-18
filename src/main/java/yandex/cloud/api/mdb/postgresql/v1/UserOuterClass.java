@@ -324,8 +324,8 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -334,8 +334,8 @@ public final class UserOuterClass {
     boolean hasDeletionProtection();
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -344,8 +344,8 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getDeletionProtection();
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -845,8 +845,8 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue deletionProtection_;
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -858,8 +858,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -871,8 +871,8 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Deletion Protection inhibits deletion of the user
-     * Default value: `unspecified` (inherits cluster's deletion_protection)
+     * Determines whether the user deletion protection is enabled.
+     * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2451,8 +2451,8 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> deletionProtectionBuilder_;
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2463,8 +2463,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2479,8 +2479,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2500,8 +2500,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2519,8 +2519,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2542,8 +2542,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2561,8 +2561,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2574,8 +2574,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -2590,8 +2590,8 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Deletion Protection inhibits deletion of the user
-       * Default value: `unspecified` (inherits cluster's deletion_protection)
+       * Determines whether the user deletion protection is enabled.
+       * The default value is `unspecified`. In this case, the user configuration inherits the cluster's deletion protection settings.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
@@ -6222,28 +6222,93 @@ public final class UserOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return A list containing the log.
      */
     java.util.List<yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog> getLogList();
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return The count of log.
      */
     int getLogCount();
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @param index The index of the element to return.
      * @return The log at the given index.
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog getLog(int index);
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return A list containing the enum numeric values on the wire for log.
      */
     java.util.List<java.lang.Integer>
     getLogValueList();
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of log at the given index.
@@ -6530,6 +6595,19 @@ public final class UserOuterClass {
               }
             };
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return A list containing the log.
      */
@@ -6539,6 +6617,19 @@ public final class UserOuterClass {
           java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog>(log_, log_converter_);
     }
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return The count of log.
      */
@@ -6547,6 +6638,19 @@ public final class UserOuterClass {
       return log_.size();
     }
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @param index The index of the element to return.
      * @return The log at the given index.
@@ -6556,6 +6660,19 @@ public final class UserOuterClass {
       return log_converter_.convert(log_.get(index));
     }
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @return A list containing the enum numeric values on the wire for log.
      */
@@ -6565,6 +6682,19 @@ public final class UserOuterClass {
       return log_;
     }
     /**
+     * <pre>
+     * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+     * The possible values are the following:
+     * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+     * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+     * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+     * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+     * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+     * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of log at the given index.
@@ -6913,6 +7043,19 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @return A list containing the log.
        */
@@ -6921,6 +7064,19 @@ public final class UserOuterClass {
             java.lang.Integer, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.PGAuditSettingsLog>(log_, log_converter_);
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @return The count of log.
        */
@@ -6928,6 +7084,19 @@ public final class UserOuterClass {
         return log_.size();
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param index The index of the element to return.
        * @return The log at the given index.
@@ -6936,6 +7105,19 @@ public final class UserOuterClass {
         return log_converter_.convert(log_.get(index));
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param index The index to set the value at.
        * @param value The log to set.
@@ -6952,6 +7134,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param value The log to add.
        * @return This builder for chaining.
@@ -6966,6 +7161,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param values The log to add.
        * @return This builder for chaining.
@@ -6980,6 +7188,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @return This builder for chaining.
        */
@@ -6990,6 +7211,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @return A list containing the enum numeric values on the wire for log.
        */
@@ -6998,6 +7232,19 @@ public final class UserOuterClass {
         return java.util.Collections.unmodifiableList(log_);
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of log at the given index.
@@ -7006,6 +7253,19 @@ public final class UserOuterClass {
         return log_.get(index);
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of log at the given index.
@@ -7019,6 +7279,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param value The enum numeric value on the wire for log to add.
        * @return This builder for chaining.
@@ -7030,6 +7303,19 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Defines which user queries will be written to the audit log. Corresponds to the [Pg audit log](https://yandex.cloud/en/docs/managed-postgresql/concepts/settings-list#setting-pg-audit-log) user setting.
+       * The possible values are the following:
+       * * PG_AUDIT_SETTINGS_LOG_READ: `SELECT` and `COPY` queries are logged if the data source is a relation or query.
+       * * PG_AUDIT_SETTINGS_LOG_WRITE: `INSERT`, `UPDATE`, `DELETE`, `TRUNCATE`, and `COPY` queries are logged if the data target is a relation.
+       * * PG_AUDIT_SETTINGS_LOG_FUNCTION: Function invocations and `DO` sections are logged.
+       * * PG_AUDIT_SETTINGS_LOG_ROLE: Statements related to role and privilege management, such as `GRANT`, `REVOKE`, or `CREATE/ALTER/DROP ROLE`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_DDL: Any `DDL` statements that do not belong to the `ROLE` class are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC: Miscellaneous commands, such as `DISCARD`, `FETCH`, `CHECKPOINT`, `VACUUM`, and `SET`, are logged.
+       * * PG_AUDIT_SETTINGS_LOG_MISC_SET: Miscellaneous `SET` commands, e.g., `SET ROLE`, are logged.
+       * The default value is PG_AUDIT_SETTINGS_LOG_UNSPECIFIED. In this case, the parameter is not configured.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.PGAuditSettings.PGAuditSettingsLog log = 1;</code>
        * @param values The enum numeric values on the wire for log to add.
        * @return This builder for chaining.
@@ -7104,7 +7390,7 @@ public final class UserOuterClass {
      * <pre>
      * SQL sets an isolation level for each transaction.
      * This setting defines the default isolation level to be set for all new SQL transactions.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -7115,7 +7401,7 @@ public final class UserOuterClass {
      * <pre>
      * SQL sets an isolation level for each transaction.
      * This setting defines the default isolation level to be set for all new SQL transactions.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -7163,7 +7449,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -7177,7 +7463,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -7191,7 +7477,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -7203,7 +7489,7 @@ public final class UserOuterClass {
      * This setting defines whether DBMS will commit transaction in a synchronous way.
      * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
      * These operations guarantee different levels of the data safety and visibility in the cluster.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -7215,7 +7501,7 @@ public final class UserOuterClass {
      * This setting defines whether DBMS will commit transaction in a synchronous way.
      * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
      * These operations guarantee different levels of the data safety and visibility in the cluster.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -7259,7 +7545,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * This setting specifies which SQL statements should be logged (on the user level).
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -7269,7 +7555,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * This setting specifies which SQL statements should be logged (on the user level).
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -7280,7 +7566,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Mode that the connection pooler is working in with specified user.
-     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -7290,7 +7576,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Mode that the connection pooler is working in with specified user.
-     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -7301,7 +7587,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -7311,7 +7597,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -7321,7 +7607,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -7373,7 +7659,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -7386,7 +7672,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -7399,7 +7685,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -7408,9 +7694,9 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -7419,9 +7705,9 @@ public final class UserOuterClass {
     boolean hasIdleInTransactionSessionTimeout();
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -7430,9 +7716,9 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getIdleInTransactionSessionTimeout();
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -7441,11 +7727,11 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -7454,11 +7740,11 @@ public final class UserOuterClass {
     boolean hasStatementTimeout();
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -7467,11 +7753,11 @@ public final class UserOuterClass {
     com.google.protobuf.Int64Value getStatementTimeout();
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -7479,16 +7765,28 @@ public final class UserOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getStatementTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      * @return Whether the pgaudit field is set.
      */
     boolean hasPgaudit();
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      * @return The pgaudit.
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings getPgaudit();
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder();
@@ -8405,7 +8703,7 @@ public final class UserOuterClass {
      * <pre>
      * SQL sets an isolation level for each transaction.
      * This setting defines the default isolation level to be set for all new SQL transactions.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -8418,7 +8716,7 @@ public final class UserOuterClass {
      * <pre>
      * SQL sets an isolation level for each transaction.
      * This setting defines the default isolation level to be set for all new SQL transactions.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -8483,7 +8781,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -8500,7 +8798,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -8517,7 +8815,7 @@ public final class UserOuterClass {
      * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
      * Value of `0` forces PostgreSQL to log the duration of all statements.
      * Value of `-1` (default) disables logging of the duration of statements.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -8534,7 +8832,7 @@ public final class UserOuterClass {
      * This setting defines whether DBMS will commit transaction in a synchronous way.
      * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
      * These operations guarantee different levels of the data safety and visibility in the cluster.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -8548,7 +8846,7 @@ public final class UserOuterClass {
      * This setting defines whether DBMS will commit transaction in a synchronous way.
      * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
      * These operations guarantee different levels of the data safety and visibility in the cluster.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -8609,7 +8907,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * This setting specifies which SQL statements should be logged (on the user level).
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -8621,7 +8919,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * This setting specifies which SQL statements should be logged (on the user level).
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -8638,7 +8936,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Mode that the connection pooler is working in with specified user.
-     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -8650,7 +8948,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Mode that the connection pooler is working in with specified user.
-     * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+     * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -8667,7 +8965,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8680,7 +8978,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8693,7 +8991,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * User can use prepared statements with transaction pooling.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -8761,7 +9059,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -8777,7 +9075,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -8793,7 +9091,7 @@ public final class UserOuterClass {
      * Terminate replication connections that are inactive for longer than this amount of time. 
      * Default value: `60000` (60 seconds).
      * Value of `0` disables the timeout mechanism.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -8807,9 +9105,9 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value idleInTransactionSessionTimeout_;
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -8821,9 +9119,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -8835,9 +9133,9 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-     * Values of `0` (default) disables the timeout.
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+     * The default value is `0`, which disables the timeout.
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -8851,11 +9149,11 @@ public final class UserOuterClass {
     private com.google.protobuf.Int64Value statementTimeout_;
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -8867,11 +9165,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -8883,11 +9181,11 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * The maximum time (in milliseconds) to wait for statement
+     * The maximum time (in milliseconds) to wait for statement.
      * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
      * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
      * Value of `0` (default) disables the timeout
-     * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+     * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -8900,6 +9198,10 @@ public final class UserOuterClass {
     public static final int PGAUDIT_FIELD_NUMBER = 13;
     private yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings pgaudit_;
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      * @return Whether the pgaudit field is set.
      */
@@ -8908,6 +9210,10 @@ public final class UserOuterClass {
       return pgaudit_ != null;
     }
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      * @return The pgaudit.
      */
@@ -8916,6 +9222,10 @@ public final class UserOuterClass {
       return pgaudit_ == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.getDefaultInstance() : pgaudit_;
     }
     /**
+     * <pre>
+     * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
      */
     @java.lang.Override
@@ -9551,7 +9861,7 @@ public final class UserOuterClass {
        * <pre>
        * SQL sets an isolation level for each transaction.
        * This setting defines the default isolation level to be set for all new SQL transactions.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -9564,7 +9874,7 @@ public final class UserOuterClass {
        * <pre>
        * SQL sets an isolation level for each transaction.
        * This setting defines the default isolation level to be set for all new SQL transactions.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -9581,7 +9891,7 @@ public final class UserOuterClass {
        * <pre>
        * SQL sets an isolation level for each transaction.
        * This setting defines the default isolation level to be set for all new SQL transactions.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -9597,7 +9907,7 @@ public final class UserOuterClass {
        * <pre>
        * SQL sets an isolation level for each transaction.
        * This setting defines the default isolation level to be set for all new SQL transactions.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -9617,7 +9927,7 @@ public final class UserOuterClass {
        * <pre>
        * SQL sets an isolation level for each transaction.
        * This setting defines the default isolation level to be set for all new SQL transactions.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/transaction-iso.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.TransactionIsolation default_transaction_isolation = 1;</code>
@@ -9813,7 +10123,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9829,7 +10139,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9849,7 +10159,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9874,7 +10184,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9897,7 +10207,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9924,7 +10234,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9947,7 +10257,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9964,7 +10274,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -9984,7 +10294,7 @@ public final class UserOuterClass {
        * E.g., if this setting's value is set to `500`, a statement that took 300 milliseconds to complete will not be logged; on the other hand, the one that took 2000 milliseconds to complete, will be logged.
        * Value of `0` forces PostgreSQL to log the duration of all statements.
        * Value of `-1` (default) disables logging of the duration of statements.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_min_duration_statement = 3;</code>
@@ -10009,7 +10319,7 @@ public final class UserOuterClass {
        * This setting defines whether DBMS will commit transaction in a synchronous way.
        * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
        * These operations guarantee different levels of the data safety and visibility in the cluster.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -10023,7 +10333,7 @@ public final class UserOuterClass {
        * This setting defines whether DBMS will commit transaction in a synchronous way.
        * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
        * These operations guarantee different levels of the data safety and visibility in the cluster.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -10041,7 +10351,7 @@ public final class UserOuterClass {
        * This setting defines whether DBMS will commit transaction in a synchronous way.
        * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
        * These operations guarantee different levels of the data safety and visibility in the cluster.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -10058,7 +10368,7 @@ public final class UserOuterClass {
        * This setting defines whether DBMS will commit transaction in a synchronous way.
        * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
        * These operations guarantee different levels of the data safety and visibility in the cluster.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -10079,7 +10389,7 @@ public final class UserOuterClass {
        * This setting defines whether DBMS will commit transaction in a synchronous way.
        * When synchronization is enabled, cluster waits for the synchronous operations to be completed prior to reporting `success` to the client.
        * These operations guarantee different levels of the data safety and visibility in the cluster.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.SynchronousCommit synchronous_commit = 4;</code>
@@ -10269,7 +10579,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * This setting specifies which SQL statements should be logged (on the user level).
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -10281,7 +10591,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * This setting specifies which SQL statements should be logged (on the user level).
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -10297,7 +10607,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * This setting specifies which SQL statements should be logged (on the user level).
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -10312,7 +10622,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * This setting specifies which SQL statements should be logged (on the user level).
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -10331,7 +10641,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * This setting specifies which SQL statements should be logged (on the user level).
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-logging.html).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.LogStatement log_statement = 6;</code>
@@ -10348,7 +10658,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Mode that the connection pooler is working in with specified user.
-       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -10360,7 +10670,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Mode that the connection pooler is working in with specified user.
-       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -10376,7 +10686,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Mode that the connection pooler is working in with specified user.
-       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -10391,7 +10701,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Mode that the connection pooler is working in with specified user.
-       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -10410,7 +10720,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Mode that the connection pooler is working in with specified user.
-       * See in-depth description in [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string)
+       * For more information, see the [Odyssey documentation](https://github.com/yandex/odyssey/blob/master/documentation/configuration.md#pool-string).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.UserSettings.PoolingMode pool_mode = 7;</code>
@@ -10429,7 +10739,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10441,7 +10751,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10457,7 +10767,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10478,7 +10788,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10497,7 +10807,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10520,7 +10830,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10539,7 +10849,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10552,7 +10862,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10568,7 +10878,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * User can use prepared statements with transaction pooling.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-prepare.html).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue prepared_statements_pooling = 8;</code>
@@ -10787,7 +11097,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10802,7 +11112,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10821,7 +11131,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10845,7 +11155,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10867,7 +11177,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10893,7 +11203,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10915,7 +11225,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10931,7 +11241,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10950,7 +11260,7 @@ public final class UserOuterClass {
        * Terminate replication connections that are inactive for longer than this amount of time. 
        * Default value: `60000` (60 seconds).
        * Value of `0` disables the timeout mechanism.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-replication.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value wal_sender_timeout = 10;</code>
@@ -10974,9 +11284,9 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleInTransactionSessionTimeoutBuilder_;
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -10987,9 +11297,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11004,9 +11314,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11026,9 +11336,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11046,9 +11356,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11070,9 +11380,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11090,9 +11400,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11104,9 +11414,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11121,9 +11431,9 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Sets the maximum allowed idle time (in milliseconds) between queries, when in a transaction.
-       * Values of `0` (default) disables the timeout.
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * Sets the maximum allowed idle time, in milliseconds, between queries while in a transaction.
+       * The default value is `0`, which disables the timeout.
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value idle_in_transaction_session_timeout = 11 [(.yandex.cloud.value) = "0-2147483647"];</code>
@@ -11147,11 +11457,11 @@ public final class UserOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementTimeoutBuilder_;
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11162,11 +11472,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11181,11 +11491,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11205,11 +11515,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11227,11 +11537,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11253,11 +11563,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11275,11 +11585,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11291,11 +11601,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11310,11 +11620,11 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * The maximum time (in milliseconds) to wait for statement
+       * The maximum time (in milliseconds) to wait for statement.
        * The timeout is measured from the time a command arrives at the server until it is completed by the server. 
        * If `log_min_error_statement` is set to ERROR or lower, the statement that timed out will also be logged.
        * Value of `0` (default) disables the timeout
-       * See in-depth description in [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html)
+       * For more information, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/runtime-config-client.html).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value statement_timeout = 12;</code>
@@ -11337,6 +11647,10 @@ public final class UserOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder, yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder> pgauditBuilder_;
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        * @return Whether the pgaudit field is set.
        */
@@ -11344,6 +11658,10 @@ public final class UserOuterClass {
         return pgauditBuilder_ != null || pgaudit_ != null;
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        * @return The pgaudit.
        */
@@ -11355,6 +11673,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public Builder setPgaudit(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings value) {
@@ -11371,6 +11693,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public Builder setPgaudit(
@@ -11385,6 +11711,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public Builder mergePgaudit(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings value) {
@@ -11403,6 +11733,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public Builder clearPgaudit() {
@@ -11417,6 +11751,10 @@ public final class UserOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettings.Builder getPgauditBuilder() {
@@ -11425,6 +11763,10 @@ public final class UserOuterClass {
         return getPgauditFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.PGAuditSettingsOrBuilder getPgauditOrBuilder() {
@@ -11436,6 +11778,10 @@ public final class UserOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings of the [PostgreSQL Audit Extension](https://www.pgaudit.org/) (pgaudit).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PGAuditSettings pgaudit = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

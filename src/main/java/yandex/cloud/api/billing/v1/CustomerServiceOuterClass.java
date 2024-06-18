@@ -2070,7 +2070,7 @@ public final class CustomerServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
+     * Billing account ID of the reseller that the customer will be associated with.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2079,7 +2079,7 @@ public final class CustomerServiceOuterClass {
     java.lang.String getResellerId();
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
+     * Billing account ID of the reseller that the customer will be associated with.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2270,7 +2270,7 @@ public final class CustomerServiceOuterClass {
     private volatile java.lang.Object resellerId_;
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
+     * Billing account ID of the reseller that the customer will be associated with.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2291,7 +2291,7 @@ public final class CustomerServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the reseller that customer will be associated with.
+     * Billing account ID of the reseller that the customer will be associated with.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2811,7 +2811,7 @@ public final class CustomerServiceOuterClass {
       private java.lang.Object resellerId_ = "";
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
+       * Billing account ID of the reseller that the customer will be associated with.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2831,7 +2831,7 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
+       * Billing account ID of the reseller that the customer will be associated with.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2852,7 +2852,7 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
+       * Billing account ID of the reseller that the customer will be associated with.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2871,7 +2871,7 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
+       * Billing account ID of the reseller that the customer will be associated with.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2885,7 +2885,7 @@ public final class CustomerServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the reseller that customer will be associated with.
+       * Billing account ID of the reseller that the customer will be associated with.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>

@@ -3104,6 +3104,16 @@ public final class FunctionOuterClass {
      * @return The tmpfsSize.
      */
     long getTmpfsSize();
+
+    /**
+     * <pre>
+     * The maximum number of requests processed by a function instance at the same time
+     * </pre>
+     *
+     * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The concurrency.
+     */
+    long getConcurrency();
   }
   /**
    * <pre>
@@ -3353,6 +3363,11 @@ public final class FunctionOuterClass {
             case 184: {
 
               tmpfsSize_ = input.readInt64();
+              break;
+            }
+            case 192: {
+
+              concurrency_ = input.readInt64();
               break;
             }
             default: {
@@ -4522,6 +4537,21 @@ public final class FunctionOuterClass {
       return tmpfsSize_;
     }
 
+    public static final int CONCURRENCY_FIELD_NUMBER = 24;
+    private long concurrency_;
+    /**
+     * <pre>
+     * The maximum number of requests processed by a function instance at the same time
+     * </pre>
+     *
+     * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The concurrency.
+     */
+    @java.lang.Override
+    public long getConcurrency() {
+      return concurrency_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4604,6 +4634,9 @@ public final class FunctionOuterClass {
       }
       if (tmpfsSize_ != 0L) {
         output.writeInt64(23, tmpfsSize_);
+      }
+      if (concurrency_ != 0L) {
+        output.writeInt64(24, concurrency_);
       }
       unknownFields.writeTo(output);
     }
@@ -4707,6 +4740,10 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(23, tmpfsSize_);
       }
+      if (concurrency_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(24, concurrency_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4781,6 +4818,8 @@ public final class FunctionOuterClass {
       }
       if (getTmpfsSize()
           != other.getTmpfsSize()) return false;
+      if (getConcurrency()
+          != other.getConcurrency()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4858,6 +4897,9 @@ public final class FunctionOuterClass {
       hash = (37 * hash) + TMPFS_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTmpfsSize());
+      hash = (37 * hash) + CONCURRENCY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConcurrency());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5095,6 +5137,8 @@ public final class FunctionOuterClass {
         }
         tmpfsSize_ = 0L;
 
+        concurrency_ = 0L;
+
         return this;
       }
 
@@ -5189,6 +5233,7 @@ public final class FunctionOuterClass {
           result.asyncInvocationConfig_ = asyncInvocationConfigBuilder_.build();
         }
         result.tmpfsSize_ = tmpfsSize_;
+        result.concurrency_ = concurrency_;
         onBuilt();
         return result;
       }
@@ -5357,6 +5402,9 @@ public final class FunctionOuterClass {
         }
         if (other.getTmpfsSize() != 0L) {
           setTmpfsSize(other.getTmpfsSize());
+        }
+        if (other.getConcurrency() != 0L) {
+          setConcurrency(other.getConcurrency());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8253,6 +8301,49 @@ public final class FunctionOuterClass {
       public Builder clearTmpfsSize() {
         
         tmpfsSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long concurrency_ ;
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return The concurrency.
+       */
+      @java.lang.Override
+      public long getConcurrency() {
+        return concurrency_;
+      }
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @param value The concurrency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConcurrency(long value) {
+        
+        concurrency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConcurrency() {
+        
+        concurrency_ = 0L;
         onChanged();
         return this;
       }
@@ -19539,7 +19630,7 @@ public final class FunctionOuterClass {
       "s.v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003k" +
       "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n" +
       "\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006A" +
-      "CTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\270\t\n\007Ver" +
+      "CTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\327\t\n\007Ver" +
       "sion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n" +
       "\013description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated" +
       "_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n" +
@@ -19565,53 +19656,54 @@ public final class FunctionOuterClass {
       "unctions.v1.StorageMount\022\\\n\027async_invoca" +
       "tion_config\030\026 \001(\0132;.yandex.cloud.serverl" +
       "ess.functions.v1.AsyncInvocationConfig\022\022" +
-      "\n\ntmpfs_size\030\027 \001(\003\0322\n\020EnvironmentEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedS" +
-      "erviceAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIF" +
-      "IED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014J\004\010" +
-      "\004\020\005\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\3071\02413" +
-      "4217728-4294967296\"O\n\007Package\022\031\n\013bucket_" +
-      "name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350" +
-      "\3071\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nn" +
-      "etwork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002" +
-      ">0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013function_id\030" +
-      "\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022/\n\013modified_a" +
-      "t\030\004 \001(\0132\032.google.protobuf.Timestamp\022#\n\033p" +
-      "rovisioned_instances_count\030\006 \001(\003\022\034\n\024zone" +
-      "_instances_limit\030\007 \001(\003\022\033\n\023zone_requests_" +
-      "limit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022" +
-      "\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024envi" +
-      "ronment_variable\030\004 \001(\tH\000B\013\n\treference\"\340\001" +
-      "\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_gr" +
-      "oup_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_." +
-      "]{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-" +
-      "zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_lev" +
-      "el\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLe" +
-      "vel.LevelB\r\n\013destination\"\237\001\n\014StorageMoun" +
-      "t\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-" +
-      ".0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_po" +
-      "int_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-9a" +
-      "-zA-Z]*\022\021\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncInvo" +
-      "cationConfig\022 \n\rretries_count\030\001 \001(\003B\t\372\3071" +
-      "\0050-100\022h\n\016success_target\030\002 \001(\0132J.yandex." +
-      "cloud.serverless.functions.v1.AsyncInvoc" +
-      "ationConfig.ResponseTargetB\004\350\3071\001\022h\n\016fail" +
-      "ure_target\030\003 \001(\0132J.yandex.cloud.serverle" +
-      "ss.functions.v1.AsyncInvocationConfig.Re" +
-      "sponseTargetB\004\350\3071\001\022\032\n\022service_account_id" +
-      "\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014empty_targe" +
-      "t\030\001 \001(\01321.yandex.cloud.serverless.functi" +
-      "ons.v1.EmptyTargetH\000\022E\n\nymq_target\030\002 \001(\013" +
-      "2/.yandex.cloud.serverless.functions.v1." +
-      "YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarget" +
-      "\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_acc" +
-      "ount_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTarg" +
-      "etB~\n(yandex.cloud.api.serverless.functi" +
-      "ons.v1ZRgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/serverless/functions/v1" +
-      ";functionsb\006proto3"
+      "\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(\003B" +
+      "\010\372\3071\0040-16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceAcc" +
+      "ountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010" +
+      "CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014J\004\010\004\020\005\"5\n\tRe" +
+      "sources\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-4" +
+      "294967296\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(" +
+      "\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sh" +
+      "a256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nnetwork_id" +
+      "\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\370\001" +
+      "\n\rScalingPolicy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003" +
+      "tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022/\n\013modified_at\030\004 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022#\n\033provisione" +
+      "d_instances_count\030\006 \001(\003\022\034\n\024zone_instance" +
+      "s_limit\030\007 \001(\003\022\033\n\023zone_requests_limit\030\010 \001" +
+      "(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversio" +
+      "n_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_v" +
+      "ariable\030\004 \001(\tH\000B\013\n\treference\"\340\001\n\nLogOpti" +
+      "ons\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002 " +
+      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
+      "H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-" +
+      "zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162" +
+      "\'.yandex.cloud.logging.v1.LogLevel.Level" +
+      "B\r\n\013destination\"\237\001\n\014StorageMount\0221\n\tbuck" +
+      "et_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-" +
+      "Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_point_name\030" +
+      "\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021" +
+      "\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncInvocationCon" +
+      "fig\022 \n\rretries_count\030\001 \001(\003B\t\372\3071\0050-100\022h\n" +
+      "\016success_target\030\002 \001(\0132J.yandex.cloud.ser" +
+      "verless.functions.v1.AsyncInvocationConf" +
+      "ig.ResponseTargetB\004\350\3071\001\022h\n\016failure_targe" +
+      "t\030\003 \001(\0132J.yandex.cloud.serverless.functi" +
+      "ons.v1.AsyncInvocationConfig.ResponseTar" +
+      "getB\004\350\3071\001\022\032\n\022service_account_id\030\004 \001(\t\032\262\001" +
+      "\n\016ResponseTarget\022I\n\014empty_target\030\001 \001(\01321" +
+      ".yandex.cloud.serverless.functions.v1.Em" +
+      "ptyTargetH\000\022E\n\nymq_target\030\002 \001(\0132/.yandex" +
+      ".cloud.serverless.functions.v1.YMQTarget" +
+      "H\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarget\022\027\n\tqueue" +
+      "_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTargetB~\n(yan" +
+      "dex.cloud.api.serverless.functions.v1ZRg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/serverless/functions/v1;function" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19638,7 +19730,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new

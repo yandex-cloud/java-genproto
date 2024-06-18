@@ -629,6 +629,50 @@ public final class Jobs {
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.ArgumentOrBuilder getArgumentsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> 
+        getOutputDatasetsList();
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getOutputDatasets(int index);
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    int getOutputDatasetsCount();
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> 
+        getOutputDatasetsOrBuilderList();
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getOutputDatasetsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -654,6 +698,7 @@ public final class Jobs {
       cmd_ = "";
       cloudInstanceTypes_ = java.util.Collections.emptyList();
       arguments_ = java.util.Collections.emptyList();
+      outputDatasets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -778,6 +823,15 @@ public final class Jobs {
                   input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.Argument.parser(), extensionRegistry));
               break;
             }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+                outputDatasets_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              outputDatasets_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -810,6 +864,9 @@ public final class Jobs {
         }
         if (((mutable_bitField0_ & 0x00000020) != 0)) {
           arguments_ = java.util.Collections.unmodifiableList(arguments_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) != 0)) {
+          outputDatasets_ = java.util.Collections.unmodifiableList(outputDatasets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1307,6 +1364,66 @@ public final class Jobs {
       return arguments_.get(index);
     }
 
+    public static final int OUTPUT_DATASETS_FIELD_NUMBER = 11;
+    private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> outputDatasets_;
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> getOutputDatasetsList() {
+      return outputDatasets_;
+    }
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> 
+        getOutputDatasetsOrBuilderList() {
+      return outputDatasets_;
+    }
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    @java.lang.Override
+    public int getOutputDatasetsCount() {
+      return outputDatasets_.size();
+    }
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getOutputDatasets(int index) {
+      return outputDatasets_.get(index);
+    }
+    /**
+     * <pre>
+     * List of DataSets descriptions to create
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getOutputDatasetsOrBuilder(
+        int index) {
+      return outputDatasets_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1350,6 +1467,9 @@ public final class Jobs {
       }
       for (int i = 0; i < arguments_.size(); i++) {
         output.writeMessage(10, arguments_.get(i));
+      }
+      for (int i = 0; i < outputDatasets_.size(); i++) {
+        output.writeMessage(11, outputDatasets_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1407,6 +1527,10 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, arguments_.get(i));
       }
+      for (int i = 0; i < outputDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, outputDatasets_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1448,6 +1572,8 @@ public final class Jobs {
       }
       if (!getArgumentsList()
           .equals(other.getArgumentsList())) return false;
+      if (!getOutputDatasetsList()
+          .equals(other.getOutputDatasetsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1495,6 +1621,10 @@ public final class Jobs {
       if (getArgumentsCount() > 0) {
         hash = (37 * hash) + ARGUMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getArgumentsList().hashCode();
+      }
+      if (getOutputDatasetsCount() > 0) {
+        hash = (37 * hash) + OUTPUT_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputDatasetsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1632,6 +1762,7 @@ public final class Jobs {
           getOutputFilesFieldBuilder();
           getCloudInstanceTypesFieldBuilder();
           getArgumentsFieldBuilder();
+          getOutputDatasetsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1680,6 +1811,12 @@ public final class Jobs {
           bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           argumentsBuilder_.clear();
+        }
+        if (outputDatasetsBuilder_ == null) {
+          outputDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          outputDatasetsBuilder_.clear();
         }
         return this;
       }
@@ -1765,6 +1902,15 @@ public final class Jobs {
           result.arguments_ = arguments_;
         } else {
           result.arguments_ = argumentsBuilder_.build();
+        }
+        if (outputDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            outputDatasets_ = java.util.Collections.unmodifiableList(outputDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.outputDatasets_ = outputDatasets_;
+        } else {
+          result.outputDatasets_ = outputDatasetsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1948,6 +2094,32 @@ public final class Jobs {
                    getArgumentsFieldBuilder() : null;
             } else {
               argumentsBuilder_.addAllMessages(other.arguments_);
+            }
+          }
+        }
+        if (outputDatasetsBuilder_ == null) {
+          if (!other.outputDatasets_.isEmpty()) {
+            if (outputDatasets_.isEmpty()) {
+              outputDatasets_ = other.outputDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureOutputDatasetsIsMutable();
+              outputDatasets_.addAll(other.outputDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outputDatasets_.isEmpty()) {
+            if (outputDatasetsBuilder_.isEmpty()) {
+              outputDatasetsBuilder_.dispose();
+              outputDatasetsBuilder_ = null;
+              outputDatasets_ = other.outputDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              outputDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutputDatasetsFieldBuilder() : null;
+            } else {
+              outputDatasetsBuilder_.addAllMessages(other.outputDatasets_);
             }
           }
         }
@@ -3968,6 +4140,318 @@ public final class Jobs {
           arguments_ = null;
         }
         return argumentsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> outputDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureOutputDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          outputDatasets_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc>(outputDatasets_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> outputDatasetsBuilder_;
+
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> getOutputDatasetsList() {
+        if (outputDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outputDatasets_);
+        } else {
+          return outputDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public int getOutputDatasetsCount() {
+        if (outputDatasetsBuilder_ == null) {
+          return outputDatasets_.size();
+        } else {
+          return outputDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getOutputDatasets(int index) {
+        if (outputDatasetsBuilder_ == null) {
+          return outputDatasets_.get(index);
+        } else {
+          return outputDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder setOutputDatasets(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc value) {
+        if (outputDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.set(index, value);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder setOutputDatasets(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder builderForValue) {
+        if (outputDatasetsBuilder_ == null) {
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder addOutputDatasets(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc value) {
+        if (outputDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.add(value);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder addOutputDatasets(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc value) {
+        if (outputDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.add(index, value);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder addOutputDatasets(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder builderForValue) {
+        if (outputDatasetsBuilder_ == null) {
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder addOutputDatasets(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder builderForValue) {
+        if (outputDatasetsBuilder_ == null) {
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder addAllOutputDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc> values) {
+        if (outputDatasetsBuilder_ == null) {
+          ensureOutputDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outputDatasets_);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder clearOutputDatasets() {
+        if (outputDatasetsBuilder_ == null) {
+          outputDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public Builder removeOutputDatasets(int index) {
+        if (outputDatasetsBuilder_ == null) {
+          ensureOutputDatasetsIsMutable();
+          outputDatasets_.remove(index);
+          onChanged();
+        } else {
+          outputDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder getOutputDatasetsBuilder(
+          int index) {
+        return getOutputDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getOutputDatasetsOrBuilder(
+          int index) {
+        if (outputDatasetsBuilder_ == null) {
+          return outputDatasets_.get(index);  } else {
+          return outputDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> 
+           getOutputDatasetsOrBuilderList() {
+        if (outputDatasetsBuilder_ != null) {
+          return outputDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outputDatasets_);
+        }
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder addOutputDatasetsBuilder() {
+        return getOutputDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder addOutputDatasetsBuilder(
+          int index) {
+        return getOutputDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of DataSets descriptions to create
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc output_datasets = 11;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder> 
+           getOutputDatasetsBuilderList() {
+        return getOutputDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> 
+          getOutputDatasetsFieldBuilder() {
+        if (outputDatasetsBuilder_ == null) {
+          outputDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder>(
+                  outputDatasets_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          outputDatasets_ = null;
+        }
+        return outputDatasetsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12689,6 +13173,2263 @@ public final class Jobs {
 
   }
 
+  public interface OutputDatasetDescOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name to create dataset with
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name to create dataset with
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description to show in UI
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description to show in UI
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Size of dataset to create
+     * </pre>
+     *
+     * <code>int64 size_gb = 4;</code>
+     * @return The sizeGb.
+     */
+    long getSizeGb();
+
+    /**
+     * <pre>
+     * Var name to replace in cmd, like in FileDesc
+     * </pre>
+     *
+     * <code>string var = 5;</code>
+     * @return The var.
+     */
+    java.lang.String getVar();
+    /**
+     * <pre>
+     * Var name to replace in cmd, like in FileDesc
+     * </pre>
+     *
+     * <code>string var = 5;</code>
+     * @return The bytes for var.
+     */
+    com.google.protobuf.ByteString
+        getVarBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc}
+   */
+  public static final class OutputDatasetDesc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc)
+      OutputDatasetDescOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OutputDatasetDesc.newBuilder() to construct.
+    private OutputDatasetDesc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OutputDatasetDesc() {
+      name_ = "";
+      description_ = "";
+      var_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OutputDatasetDesc();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OutputDatasetDesc(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 32: {
+
+              sizeGb_ = input.readInt64();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              var_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name to create dataset with
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name to create dataset with
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description to show in UI
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description to show in UI
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 3;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int SIZE_GB_FIELD_NUMBER = 4;
+    private long sizeGb_;
+    /**
+     * <pre>
+     * Size of dataset to create
+     * </pre>
+     *
+     * <code>int64 size_gb = 4;</code>
+     * @return The sizeGb.
+     */
+    @java.lang.Override
+    public long getSizeGb() {
+      return sizeGb_;
+    }
+
+    public static final int VAR_FIELD_NUMBER = 5;
+    private volatile java.lang.Object var_;
+    /**
+     * <pre>
+     * Var name to replace in cmd, like in FileDesc
+     * </pre>
+     *
+     * <code>string var = 5;</code>
+     * @return The var.
+     */
+    @java.lang.Override
+    public java.lang.String getVar() {
+      java.lang.Object ref = var_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        var_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Var name to replace in cmd, like in FileDesc
+     * </pre>
+     *
+     * <code>string var = 5;</code>
+     * @return The bytes for var.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVarBytes() {
+      java.lang.Object ref = var_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        var_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          3);
+      if (sizeGb_ != 0L) {
+        output.writeInt64(4, sizeGb_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(var_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, var_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, labels__);
+      }
+      if (sizeGb_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, sizeGb_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(var_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, var_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (getSizeGb()
+          != other.getSizeGb()) return false;
+      if (!getVar()
+          .equals(other.getVar())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + SIZE_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSizeGb());
+      hash = (37 * hash) + VAR_FIELD_NUMBER;
+      hash = (53 * hash) + getVar().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        sizeGb_ = 0L;
+
+        var_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc(this);
+        int from_bitField0_ = bitField0_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.sizeGb_ = sizeGb_;
+        result.var_ = var_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (other.getSizeGb() != 0L) {
+          setSizeGb(other.getSizeGb());
+        }
+        if (!other.getVar().isEmpty()) {
+          var_ = other.var_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name to create dataset with
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name to create dataset with
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name to create dataset with
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name to create dataset with
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name to create dataset with
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description to show in UI
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description to show in UI
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description to show in UI
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description to show in UI
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description to show in UI
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private long sizeGb_ ;
+      /**
+       * <pre>
+       * Size of dataset to create
+       * </pre>
+       *
+       * <code>int64 size_gb = 4;</code>
+       * @return The sizeGb.
+       */
+      @java.lang.Override
+      public long getSizeGb() {
+        return sizeGb_;
+      }
+      /**
+       * <pre>
+       * Size of dataset to create
+       * </pre>
+       *
+       * <code>int64 size_gb = 4;</code>
+       * @param value The sizeGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSizeGb(long value) {
+        
+        sizeGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of dataset to create
+       * </pre>
+       *
+       * <code>int64 size_gb = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSizeGb() {
+        
+        sizeGb_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object var_ = "";
+      /**
+       * <pre>
+       * Var name to replace in cmd, like in FileDesc
+       * </pre>
+       *
+       * <code>string var = 5;</code>
+       * @return The var.
+       */
+      public java.lang.String getVar() {
+        java.lang.Object ref = var_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          var_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Var name to replace in cmd, like in FileDesc
+       * </pre>
+       *
+       * <code>string var = 5;</code>
+       * @return The bytes for var.
+       */
+      public com.google.protobuf.ByteString
+          getVarBytes() {
+        java.lang.Object ref = var_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          var_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Var name to replace in cmd, like in FileDesc
+       * </pre>
+       *
+       * <code>string var = 5;</code>
+       * @param value The var to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        var_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Var name to replace in cmd, like in FileDesc
+       * </pre>
+       *
+       * <code>string var = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVar() {
+        
+        var_ = getDefaultInstance().getVar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Var name to replace in cmd, like in FileDesc
+       * </pre>
+       *
+       * <code>string var = 5;</code>
+       * @param value The bytes for var to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        var_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OutputDatasetDesc>
+        PARSER = new com.google.protobuf.AbstractParser<OutputDatasetDesc>() {
+      @java.lang.Override
+      public OutputDatasetDesc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OutputDatasetDesc(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OutputDatasetDesc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OutputDatasetDesc> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OutputDatasetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.OutputDataset)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     * @return Whether the desc field is set.
+     */
+    boolean hasDesc();
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     * @return The desc.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDesc();
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getDescOrBuilder();
+
+    /**
+     * <pre>
+     * Id of created dataset
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Id of created dataset
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.OutputDataset}
+   */
+  public static final class OutputDataset extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.OutputDataset)
+      OutputDatasetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OutputDataset.newBuilder() to construct.
+    private OutputDataset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OutputDataset() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OutputDataset();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OutputDataset(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder subBuilder = null;
+              if (desc_ != null) {
+                subBuilder = desc_.toBuilder();
+              }
+              desc_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(desc_);
+                desc_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.Builder.class);
+    }
+
+    public static final int DESC_FIELD_NUMBER = 1;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc desc_;
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     * @return Whether the desc field is set.
+     */
+    @java.lang.Override
+    public boolean hasDesc() {
+      return desc_ != null;
+    }
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     * @return The desc.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDesc() {
+      return desc_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance() : desc_;
+    }
+    /**
+     * <pre>
+     * Dataset description
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getDescOrBuilder() {
+      return getDesc();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Id of created dataset
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Id of created dataset
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (desc_ != null) {
+        output.writeMessage(1, getDesc());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (desc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDesc());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset) obj;
+
+      if (hasDesc() != other.hasDesc()) return false;
+      if (hasDesc()) {
+        if (!getDesc()
+            .equals(other.getDesc())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDesc()) {
+        hash = (37 * hash) + DESC_FIELD_NUMBER;
+        hash = (53 * hash) + getDesc().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.OutputDataset}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.OutputDataset)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (descBuilder_ == null) {
+          desc_ = null;
+        } else {
+          desc_ = null;
+          descBuilder_ = null;
+        }
+        id_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset(this);
+        if (descBuilder_ == null) {
+          result.desc_ = desc_;
+        } else {
+          result.desc_ = descBuilder_.build();
+        }
+        result.id_ = id_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset.getDefaultInstance()) return this;
+        if (other.hasDesc()) {
+          mergeDesc(other.getDesc());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc desc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> descBuilder_;
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       * @return Whether the desc field is set.
+       */
+      public boolean hasDesc() {
+        return descBuilder_ != null || desc_ != null;
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       * @return The desc.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc getDesc() {
+        if (descBuilder_ == null) {
+          return desc_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance() : desc_;
+        } else {
+          return descBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public Builder setDesc(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc value) {
+        if (descBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          desc_ = value;
+          onChanged();
+        } else {
+          descBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public Builder setDesc(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder builderForValue) {
+        if (descBuilder_ == null) {
+          desc_ = builderForValue.build();
+          onChanged();
+        } else {
+          descBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public Builder mergeDesc(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc value) {
+        if (descBuilder_ == null) {
+          if (desc_ != null) {
+            desc_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.newBuilder(desc_).mergeFrom(value).buildPartial();
+          } else {
+            desc_ = value;
+          }
+          onChanged();
+        } else {
+          descBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public Builder clearDesc() {
+        if (descBuilder_ == null) {
+          desc_ = null;
+          onChanged();
+        } else {
+          desc_ = null;
+          descBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder getDescBuilder() {
+        
+        onChanged();
+        return getDescFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getDescOrBuilder() {
+        if (descBuilder_ != null) {
+          return descBuilder_.getMessageOrBuilder();
+        } else {
+          return desc_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.getDefaultInstance() : desc_;
+        }
+      }
+      /**
+       * <pre>
+       * Dataset description
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.OutputDatasetDesc desc = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder> 
+          getDescFieldBuilder() {
+        if (descBuilder_ == null) {
+          descBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder>(
+                  getDesc(),
+                  getParentForChildren(),
+                  isClean());
+          desc_ = null;
+        }
+        return descBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Id of created dataset
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of created dataset
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Id of created dataset
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of created dataset
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Id of created dataset
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.OutputDataset)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.OutputDataset)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OutputDataset>
+        PARSER = new com.google.protobuf.AbstractParser<OutputDataset>() {
+      @java.lang.Override
+      public OutputDataset parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OutputDataset(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OutputDataset> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OutputDataset> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDataset getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface JobOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.Job)
       com.google.protobuf.MessageOrBuilder {
@@ -17831,6 +20572,21 @@ public final class Jobs {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17852,7 +20608,7 @@ public final class Jobs {
       "\n*yandex/cloud/datasphere/v2/jobs/jobs.p" +
       "roto\022\037yandex.cloud.datasphere.v2.jobs\032\037g" +
       "oogle/protobuf/timestamp.proto\032\035yandex/c" +
-      "loud/validation.proto\"\220\004\n\rJobParameters\022" +
+      "loud/validation.proto\"\335\004\n\rJobParameters\022" +
       ":\n\013input_files\030\001 \003(\0132%.yandex.cloud.data" +
       "sphere.v2.jobs.File\022?\n\014output_files\030\002 \003(" +
       "\0132).yandex.cloud.datasphere.v2.jobs.File" +
@@ -17865,61 +20621,71 @@ public final class Jobs {
       "Y\n\030extended_working_storage\030\t \001(\01327.yand" +
       "ex.cloud.datasphere.v2.jobs.ExtendedWork" +
       "ingStorage\022<\n\targuments\030\n \003(\0132).yandex.c" +
-      "loud.datasphere.v2.jobs.Argument\"!\n\021Clou" +
-      "dInstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026Extended" +
-      "WorkingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.cl" +
-      "oud.datasphere.v2.jobs.ExtendedWorkingSt" +
-      "orage.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013St" +
-      "orageType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022" +
-      "\007\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yande" +
-      "x.cloud.datasphere.v2.jobs.FileDesc\022\016\n\006s" +
-      "ha256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compr" +
-      "ession_type\030\004 \001(\01624.yandex.cloud.datasph" +
-      "ere.v2.jobs.FileCompressionType\"O\n\013Stora" +
-      "geFile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.data" +
-      "sphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010File" +
-      "Desc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Envi" +
-      "ronment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.dat" +
-      "asphere.v2.jobs.Environment.VarsEntry\022\"\n" +
-      "\030docker_image_resource_id\030\002 \001(\tH\000\022M\n\021doc" +
-      "ker_image_spec\030\003 \001(\01320.yandex.cloud.data" +
-      "sphere.v2.jobs.DockerImageSpecH\000\022>\n\npyth" +
-      "on_env\030\004 \001(\0132*.yandex.cloud.datasphere.v" +
-      "2.jobs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001" +
-      "\n\017DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010" +
-      "username\030\002 \001(\t\022\035\n\023password_plain_text\030\003 " +
-      "\001(\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000" +
-      "B\n\n\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030" +
-      "\001 \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.cl" +
-      "oud.datasphere.v2.jobs.File\"\231\005\n\003Job\022\n\n\002i" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\nc" +
-      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022.\n\nstarted_at\030\021 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022/\n\013finished_at\030\005 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022:\n\006status\030\006 \001(\0162*.y" +
-      "andex.cloud.datasphere.v2.jobs.JobStatus" +
-      "\022\016\n\006config\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022" +
-      "\022\n\nproject_id\030\t \001(\t\022F\n\016job_parameters\030\n " +
-      "\001(\0132..yandex.cloud.datasphere.v2.jobs.Jo" +
-      "bParameters\0223\n\017data_expires_at\030\013 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\024\n\014data_cleared" +
-      "\030\014 \001(\010\022;\n\014output_files\030\r \003(\0132%.yandex.cl" +
-      "oud.datasphere.v2.jobs.File\0228\n\tlog_files" +
-      "\030\016 \003(\0132%.yandex.cloud.datasphere.v2.jobs" +
-      ".File\022?\n\020diagnostic_files\030\017 \003(\0132%.yandex" +
-      ".cloud.datasphere.v2.jobs.File\022\027\n\017data_s" +
-      "ize_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013return_c" +
-      "ode\030\001 \001(\003*O\n\023FileCompressionType\022%\n!FILE" +
-      "_COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020" +
-      "\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_STATUS_U" +
-      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020" +
-      "\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005" +
-      "ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex.cloud.a" +
-      "pi.datasphere.v2.jobsB\004JobsZNgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/da" +
-      "tasphere/v2/jobs;datasphereb\006proto3"
+      "loud.datasphere.v2.jobs.Argument\022K\n\017outp" +
+      "ut_datasets\030\013 \003(\01322.yandex.cloud.datasph" +
+      "ere.v2.jobs.OutputDatasetDesc\"!\n\021CloudIn" +
+      "stanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026ExtendedWor" +
+      "kingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.cloud" +
+      ".datasphere.v2.jobs.ExtendedWorkingStora" +
+      "ge.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013Stora" +
+      "geType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022\007\n\003" +
+      "SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yandex.c" +
+      "loud.datasphere.v2.jobs.FileDesc\022\016\n\006sha2" +
+      "56\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compress" +
+      "ion_type\030\004 \001(\01624.yandex.cloud.datasphere" +
+      ".v2.jobs.FileCompressionType\"O\n\013StorageF" +
+      "ile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.datasph" +
+      "ere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010FileDes" +
+      "c\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Environ" +
+      "ment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.datasp" +
+      "here.v2.jobs.Environment.VarsEntry\022\"\n\030do" +
+      "cker_image_resource_id\030\002 \001(\tH\000\022M\n\021docker" +
+      "_image_spec\030\003 \001(\01320.yandex.cloud.datasph" +
+      "ere.v2.jobs.DockerImageSpecH\000\022>\n\npython_" +
+      "env\030\004 \001(\0132*.yandex.cloud.datasphere.v2.j" +
+      "obs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n\017D" +
+      "ockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010use" +
+      "rname\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001(\t" +
+      "H\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B\n\n" +
+      "\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030\001 \001" +
+      "(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.cloud" +
+      ".datasphere.v2.jobs.File\"\323\001\n\021OutputDatas" +
+      "etDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(" +
+      "\t\022N\n\006labels\030\003 \003(\0132>.yandex.cloud.datasph" +
+      "ere.v2.jobs.OutputDatasetDesc.LabelsEntr" +
+      "y\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"]" +
+      "\n\rOutputDataset\022@\n\004desc\030\001 \001(\01322.yandex.c" +
+      "loud.datasphere.v2.jobs.OutputDatasetDes" +
+      "c\022\n\n\002id\030\002 \001(\t\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022.\n\nstarted" +
+      "_at\030\021 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
+      "\013finished_at\030\005 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022:\n\006status\030\006 \001(\0162*.yandex.cloud.da" +
+      "tasphere.v2.jobs.JobStatus\022\016\n\006config\030\007 \001" +
+      "(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022\n\nproject_id\030" +
+      "\t \001(\t\022F\n\016job_parameters\030\n \001(\0132..yandex.c" +
+      "loud.datasphere.v2.jobs.JobParameters\0223\n" +
+      "\017data_expires_at\030\013 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014outp" +
+      "ut_files\030\r \003(\0132%.yandex.cloud.datasphere" +
+      ".v2.jobs.File\0228\n\tlog_files\030\016 \003(\0132%.yande" +
+      "x.cloud.datasphere.v2.jobs.File\022?\n\020diagn" +
+      "ostic_files\030\017 \003(\0132%.yandex.cloud.datasph" +
+      "ere.v2.jobs.File\022\027\n\017data_size_bytes\030\020 \001(" +
+      "\003\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003*O\n\023F" +
+      "ileCompressionType\022%\n!FILE_COMPRESSION_T" +
+      "YPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n" +
+      "\tJobStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING" +
+      "_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCAN" +
+      "CELLED\020\006B{\n#yandex.cloud.api.datasphere." +
+      "v2.jobsB\004JobsZNgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/datasphere/v2/jo" +
+      "bs;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17932,7 +20698,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor,
-        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", });
+        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", "OutputDatasets", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_fieldAccessorTable = new
@@ -17993,14 +20759,32 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_descriptor,
         new java.lang.String[] { "CondaYaml", "LocalModules", });
-    internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor =
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor,
+        new java.lang.String[] { "Name", "Description", "Labels", "SizeGb", "Var", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor,
+        new java.lang.String[] { "Desc", "Id", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor,
         new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "StartedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", "LogFiles", "DiagnosticFiles", "DataSizeBytes", });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor,

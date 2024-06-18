@@ -14927,7 +14927,7 @@ public final class ProjectServiceOuterClass {
 
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -14936,7 +14936,7 @@ public final class ProjectServiceOuterClass {
     boolean hasInputVariables();
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -14945,7 +14945,7 @@ public final class ProjectServiceOuterClass {
     com.google.protobuf.Struct getInputVariables();
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -14993,6 +14993,46 @@ public final class ProjectServiceOuterClass {
     com.google.protobuf.ByteString
         getOutputVariableNamesBytes(int index);
 
+    /**
+     * <pre>
+     *Specification of the VM
+     * </pre>
+     *
+     * <code>string spec = 6;</code>
+     * @return The spec.
+     */
+    java.lang.String getSpec();
+    /**
+     * <pre>
+     *Specification of the VM
+     * </pre>
+     *
+     * <code>string spec = 6;</code>
+     * @return The bytes for spec.
+     */
+    com.google.protobuf.ByteString
+        getSpecBytes();
+
+    /**
+     * <pre>
+     *ID of the Spark Connector
+     * </pre>
+     *
+     * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The sparkConnectorId.
+     */
+    java.lang.String getSparkConnectorId();
+    /**
+     * <pre>
+     *ID of the Spark Connector
+     * </pre>
+     *
+     * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for sparkConnectorId.
+     */
+    com.google.protobuf.ByteString
+        getSparkConnectorIdBytes();
+
     public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ProjectExecutionRequest.TargetCase getTargetCase();
   }
   /**
@@ -15010,6 +15050,8 @@ public final class ProjectServiceOuterClass {
     private ProjectExecutionRequest() {
       projectId_ = "";
       outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      spec_ = "";
+      sparkConnectorId_ = "";
     }
 
     @java.lang.Override
@@ -15081,6 +15123,18 @@ public final class ProjectServiceOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               outputVariableNames_.add(s);
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              spec_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sparkConnectorId_ = s;
               break;
             }
             default: {
@@ -15346,7 +15400,7 @@ public final class ProjectServiceOuterClass {
     private com.google.protobuf.Struct inputVariables_;
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -15358,7 +15412,7 @@ public final class ProjectServiceOuterClass {
     }
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -15370,7 +15424,7 @@ public final class ProjectServiceOuterClass {
     }
     /**
      * <pre>
-     * Values of input variables.
+     * Values of input variables. Input variables will be available in the project as environment variables.
      * </pre>
      *
      * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -15431,6 +15485,98 @@ public final class ProjectServiceOuterClass {
       return outputVariableNames_.getByteString(index);
     }
 
+    public static final int SPEC_FIELD_NUMBER = 6;
+    private volatile java.lang.Object spec_;
+    /**
+     * <pre>
+     *Specification of the VM
+     * </pre>
+     *
+     * <code>string spec = 6;</code>
+     * @return The spec.
+     */
+    @java.lang.Override
+    public java.lang.String getSpec() {
+      java.lang.Object ref = spec_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        spec_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *Specification of the VM
+     * </pre>
+     *
+     * <code>string spec = 6;</code>
+     * @return The bytes for spec.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpecBytes() {
+      java.lang.Object ref = spec_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spec_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPARK_CONNECTOR_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object sparkConnectorId_;
+    /**
+     * <pre>
+     *ID of the Spark Connector
+     * </pre>
+     *
+     * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The sparkConnectorId.
+     */
+    @java.lang.Override
+    public java.lang.String getSparkConnectorId() {
+      java.lang.Object ref = sparkConnectorId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sparkConnectorId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *ID of the Spark Connector
+     * </pre>
+     *
+     * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for sparkConnectorId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSparkConnectorIdBytes() {
+      java.lang.Object ref = sparkConnectorId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sparkConnectorId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15459,6 +15605,12 @@ public final class ProjectServiceOuterClass {
       }
       for (int i = 0; i < outputVariableNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, outputVariableNames_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spec_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, spec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkConnectorId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sparkConnectorId_);
       }
       unknownFields.writeTo(output);
     }
@@ -15490,6 +15642,12 @@ public final class ProjectServiceOuterClass {
         size += dataSize;
         size += 1 * getOutputVariableNamesList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spec_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, spec_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sparkConnectorId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sparkConnectorId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15514,6 +15672,10 @@ public final class ProjectServiceOuterClass {
       }
       if (!getOutputVariableNamesList()
           .equals(other.getOutputVariableNamesList())) return false;
+      if (!getSpec()
+          .equals(other.getSpec())) return false;
+      if (!getSparkConnectorId()
+          .equals(other.getSparkConnectorId())) return false;
       if (!getTargetCase().equals(other.getTargetCase())) return false;
       switch (targetCase_) {
         case 2:
@@ -15548,6 +15710,10 @@ public final class ProjectServiceOuterClass {
         hash = (37 * hash) + OUTPUT_VARIABLE_NAMES_FIELD_NUMBER;
         hash = (53 * hash) + getOutputVariableNamesList().hashCode();
       }
+      hash = (37 * hash) + SPEC_FIELD_NUMBER;
+      hash = (53 * hash) + getSpec().hashCode();
+      hash = (37 * hash) + SPARK_CONNECTOR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSparkConnectorId().hashCode();
       switch (targetCase_) {
         case 2:
           hash = (37 * hash) + NOTEBOOK_ID_FIELD_NUMBER;
@@ -15703,6 +15869,10 @@ public final class ProjectServiceOuterClass {
         }
         outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        spec_ = "";
+
+        sparkConnectorId_ = "";
+
         targetCase_ = 0;
         target_ = null;
         return this;
@@ -15749,6 +15919,8 @@ public final class ProjectServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.outputVariableNames_ = outputVariableNames_;
+        result.spec_ = spec_;
+        result.sparkConnectorId_ = sparkConnectorId_;
         result.targetCase_ = targetCase_;
         onBuilt();
         return result;
@@ -15813,6 +15985,14 @@ public final class ProjectServiceOuterClass {
             ensureOutputVariableNamesIsMutable();
             outputVariableNames_.addAll(other.outputVariableNames_);
           }
+          onChanged();
+        }
+        if (!other.getSpec().isEmpty()) {
+          spec_ = other.spec_;
+          onChanged();
+        }
+        if (!other.getSparkConnectorId().isEmpty()) {
+          sparkConnectorId_ = other.sparkConnectorId_;
           onChanged();
         }
         switch (other.getTargetCase()) {
@@ -16238,7 +16418,7 @@ public final class ProjectServiceOuterClass {
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> inputVariablesBuilder_;
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16249,7 +16429,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16264,7 +16444,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16284,7 +16464,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16302,7 +16482,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16324,7 +16504,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16342,7 +16522,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16354,7 +16534,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16369,7 +16549,7 @@ public final class ProjectServiceOuterClass {
       }
       /**
        * <pre>
-       * Values of input variables.
+       * Values of input variables. Input variables will be available in the project as environment variables.
        * </pre>
        *
        * <code>.google.protobuf.Struct input_variables = 4;</code>
@@ -16530,6 +16710,198 @@ public final class ProjectServiceOuterClass {
   checkByteStringIsUtf8(value);
         ensureOutputVariableNamesIsMutable();
         outputVariableNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object spec_ = "";
+      /**
+       * <pre>
+       *Specification of the VM
+       * </pre>
+       *
+       * <code>string spec = 6;</code>
+       * @return The spec.
+       */
+      public java.lang.String getSpec() {
+        java.lang.Object ref = spec_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          spec_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Specification of the VM
+       * </pre>
+       *
+       * <code>string spec = 6;</code>
+       * @return The bytes for spec.
+       */
+      public com.google.protobuf.ByteString
+          getSpecBytes() {
+        java.lang.Object ref = spec_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Specification of the VM
+       * </pre>
+       *
+       * <code>string spec = 6;</code>
+       * @param value The spec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpec(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        spec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Specification of the VM
+       * </pre>
+       *
+       * <code>string spec = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpec() {
+        
+        spec_ = getDefaultInstance().getSpec();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Specification of the VM
+       * </pre>
+       *
+       * <code>string spec = 6;</code>
+       * @param value The bytes for spec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        spec_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sparkConnectorId_ = "";
+      /**
+       * <pre>
+       *ID of the Spark Connector
+       * </pre>
+       *
+       * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The sparkConnectorId.
+       */
+      public java.lang.String getSparkConnectorId() {
+        java.lang.Object ref = sparkConnectorId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sparkConnectorId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of the Spark Connector
+       * </pre>
+       *
+       * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for sparkConnectorId.
+       */
+      public com.google.protobuf.ByteString
+          getSparkConnectorIdBytes() {
+        java.lang.Object ref = sparkConnectorId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sparkConnectorId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of the Spark Connector
+       * </pre>
+       *
+       * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The sparkConnectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkConnectorId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sparkConnectorId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of the Spark Connector
+       * </pre>
+       *
+       * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSparkConnectorId() {
+        
+        sparkConnectorId_ = getDefaultInstance().getSparkConnectorId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of the Spark Connector
+       * </pre>
+       *
+       * <code>string spark_connector_id = 7 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for sparkConnectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSparkConnectorIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sparkConnectorId_ = value;
         onChanged();
         return this;
       }
@@ -17778,29 +18150,34 @@ public final class ProjectServiceOuterClass {
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the outputVariables field is set.
      */
-    boolean hasOutputVariables();
+    @java.lang.Deprecated boolean hasOutputVariables();
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The outputVariables.
      */
-    com.google.protobuf.Struct getOutputVariables();
+    @java.lang.Deprecated com.google.protobuf.Struct getOutputVariables();
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
      */
-    com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder();
 
     /**
      * <pre>
@@ -17976,36 +18353,41 @@ public final class ProjectServiceOuterClass {
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the outputVariables field is set.
      */
     @java.lang.Override
-    public boolean hasOutputVariables() {
+    @java.lang.Deprecated public boolean hasOutputVariables() {
       return outputVariables_ != null;
     }
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The outputVariables.
      */
     @java.lang.Override
-    public com.google.protobuf.Struct getOutputVariables() {
+    @java.lang.Deprecated public com.google.protobuf.Struct getOutputVariables() {
       return outputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : outputVariables_;
     }
     /**
      * <pre>
      * Values of output variables resulting from the execution.
+     * Deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
       return getOutputVariables();
     }
 
@@ -18486,23 +18868,27 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the outputVariables field is set.
        */
-      public boolean hasOutputVariables() {
+      @java.lang.Deprecated public boolean hasOutputVariables() {
         return outputVariablesBuilder_ != null || outputVariables_ != null;
       }
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The outputVariables.
        */
-      public com.google.protobuf.Struct getOutputVariables() {
+      @java.lang.Deprecated public com.google.protobuf.Struct getOutputVariables() {
         if (outputVariablesBuilder_ == null) {
           return outputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : outputVariables_;
         } else {
@@ -18512,11 +18898,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public Builder setOutputVariables(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder setOutputVariables(com.google.protobuf.Struct value) {
         if (outputVariablesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18532,11 +18919,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public Builder setOutputVariables(
+      @java.lang.Deprecated public Builder setOutputVariables(
           com.google.protobuf.Struct.Builder builderForValue) {
         if (outputVariablesBuilder_ == null) {
           outputVariables_ = builderForValue.build();
@@ -18550,11 +18938,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public Builder mergeOutputVariables(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder mergeOutputVariables(com.google.protobuf.Struct value) {
         if (outputVariablesBuilder_ == null) {
           if (outputVariables_ != null) {
             outputVariables_ =
@@ -18572,11 +18961,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public Builder clearOutputVariables() {
+      @java.lang.Deprecated public Builder clearOutputVariables() {
         if (outputVariablesBuilder_ == null) {
           outputVariables_ = null;
           onChanged();
@@ -18590,11 +18980,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public com.google.protobuf.Struct.Builder getOutputVariablesBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.Struct.Builder getOutputVariablesBuilder() {
         
         onChanged();
         return getOutputVariablesFieldBuilder().getBuilder();
@@ -18602,11 +18993,12 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
-      public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
         if (outputVariablesBuilder_ != null) {
           return outputVariablesBuilder_.getMessageOrBuilder();
         } else {
@@ -18617,9 +19009,10 @@ public final class ProjectServiceOuterClass {
       /**
        * <pre>
        * Values of output variables resulting from the execution.
+       * Deprecated
        * </pre>
        *
-       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       * <code>.google.protobuf.Struct output_variables = 2 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
@@ -27441,141 +27834,143 @@ public final class ProjectServiceOuterClass {
       "\n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014unit" +
       "_balance\030\002 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\",\n\026SetUnitBalanceMetadata\022\022\n\nproject" +
-      "_id\030\001 \001(\t\"\336\001\n\027ProjectExecutionRequest\022 \n" +
+      "_id\030\001 \001(\t\"\223\002\n\027ProjectExecutionRequest\022 \n" +
       "\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013noteb" +
       "ook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\036\n\007cell_id\030\003 \001" +
       "(\tB\013\030\001\212\3101\005<=200H\000\0220\n\017input_variables\030\004 \001" +
       "(\0132\027.google.protobuf.Struct\022\035\n\025output_va" +
-      "riable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~\n\030Pr" +
-      "ojectExecutionMetadata\022\022\n\nproject_id\030\001 \001" +
-      "(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007" +
-      "cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target\022\004\300\301" +
-      "1\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rcheck" +
-      "point_id\030\001 \001(\t\0221\n\020output_variables\030\002 \001(\013" +
-      "2\027.google.protobuf.Struct\022E\n\020execution_s" +
-      "tatus\030\003 \001(\0162+.yandex.cloud.datasphere.v2" +
-      ".ExecutionStatus\"\233\001\n\022CellOutputsRequest\022" +
-      " \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007cel" +
-      "l_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpoint_" +
-      "id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\"&\n\023CellOutputsResponse\022\017\n" +
-      "\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariablesRequ" +
-      "est\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n" +
-      "\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n\016var" +
-      "iable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004 \001(\t" +
-      "\"G\n\031GetStateVariablesResponse\022*\n\tvariabl" +
-      "es\030\001 \001(\0132\027.google.protobuf.Struct\"6\n Set" +
-      "ProjectAccessBindingsMetadata\022\022\n\nproject" +
-      "_id\030\001 \001(\t\"9\n#UpdateProjectAccessBindings" +
-      "Metadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033AddReso" +
-      "urceToProjectRequest\022 \n\nproject_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\0162(." +
-      "yandex.cloud.datasphere.v2.ResourceType\022" +
-      "\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n RemoveRes" +
-      "ourceFromProjectRequest\022 \n\nproject_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\016" +
-      "2(.yandex.cloud.datasphere.v2.ResourceTy" +
-      "pe\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"9\n\035GetProj" +
-      "ectRestrictionsRequest\022\030\n\nproject_id\030\001 \001" +
-      "(\tB\004\350\3071\001\"x\n\035SetProjectRestrictionsReques" +
-      "t\022\030\n\nproject_id\030\001 \001(\tB\004\350\3071\001\022=\n\014restricti" +
-      "ons\030\002 \003(\0132\'.yandex.cloud.datasphere.v2.R" +
-      "estriction*S\n\017ExecutionStatus\022 \n\034EXECUTI" +
-      "ON_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR" +
-      "\020\002\022\013\n\007ABORTED\020\0032\242\034\n\016ProjectService\022\245\001\n\006C" +
-      "reate\0220.yandex.cloud.datasphere.v2.Creat" +
-      "eProjectRequest\032!.yandex.cloud.operation" +
-      ".Operation\"F\202\323\344\223\002\034\"\027/datasphere/v2/proje" +
-      "cts:\001*\262\322* \n\025CreateProjectMetadata\022\007Proje" +
-      "ct\022\262\001\n\006Update\0220.yandex.cloud.datasphere." +
-      "v2.UpdateProjectRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"S\202\323\344\223\002)2$/datasphere/" +
-      "v2/projects/{project_id}:\001*\262\322* \n\025UpdateP" +
-      "rojectMetadata\022\007Project\022\275\001\n\006Delete\0220.yan" +
-      "dex.cloud.datasphere.v2.DeleteProjectReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "^\202\323\344\223\002&*$/datasphere/v2/projects/{projec" +
-      "t_id}\262\322*.\n\025DeleteProjectMetadata\022\025google" +
-      ".protobuf.Empty\022\275\001\n\004Open\022..yandex.cloud." +
-      "datasphere.v2.OpenProjectRequest\032!.yande" +
-      "x.cloud.operation.Operation\"b\202\323\344\223\002.\")/da" +
-      "tasphere/v2/projects/{project_id}:open:\001" +
-      "*\262\322**\n\023OpenProjectMetadata\022\023OpenProjectR" +
-      "esponse\022\207\001\n\003Get\022-.yandex.cloud.dataspher" +
-      "e.v2.GetProjectRequest\032#.yandex.cloud.da" +
-      "tasphere.v2.Project\",\202\323\344\223\002&\022$/datasphere" +
-      "/v2/projects/{project_id}\022\212\001\n\004List\022/.yan" +
-      "dex.cloud.datasphere.v2.ListProjectsRequ" +
-      "est\0320.yandex.cloud.datasphere.v2.ListPro" +
-      "jectsResponse\"\037\202\323\344\223\002\031\022\027/datasphere/v2/pr" +
-      "ojects\022\261\001\n\016GetUnitBalance\0221.yandex.cloud" +
-      ".datasphere.v2.GetUnitBalanceRequest\0322.y" +
-      "andex.cloud.datasphere.v2.GetUnitBalance" +
-      "Response\"8\202\323\344\223\0022\0220/datasphere/v2/project" +
-      "s/{project_id}:unitBalance\022\326\001\n\016SetUnitBa" +
-      "lance\0221.yandex.cloud.datasphere.v2.SetUn" +
-      "itBalanceRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"n\202\323\344\223\0025\"0/datasphere/v2/proj" +
-      "ects/{project_id}:unitBalance:\001*\262\322*/\n\026Se" +
-      "tUnitBalanceMetadata\022\025google.protobuf.Em" +
-      "pty\022\322\001\n\007Execute\0223.yandex.cloud.dataspher" +
-      "e.v2.ProjectExecutionRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"o\202\323\344\223\0021\",/datasp" +
-      "here/v2/projects/{project_id}:execute:\001*" +
-      "\262\322*4\n\030ProjectExecutionMetadata\022\030ProjectE" +
-      "xecutionResponse\022\253\001\n\016GetCellOutputs\022..ya" +
-      "ndex.cloud.datasphere.v2.CellOutputsRequ" +
-      "est\032/.yandex.cloud.datasphere.v2.CellOut" +
-      "putsResponse\"8\202\323\344\223\0022\0220/datasphere/v2/pro" +
-      "jects/{project_id}:cellOutputs\022\275\001\n\021GetSt" +
-      "ateVariables\0224.yandex.cloud.datasphere.v" +
-      "2.GetStateVariablesRequest\0325.yandex.clou" +
-      "d.datasphere.v2.GetStateVariablesRespons" +
-      "e\";\202\323\344\223\0025\0223/datasphere/v2/projects/{proj" +
-      "ect_id}:stateVariables\022\263\001\n\022ListAccessBin" +
-      "dings\022..yandex.cloud.access.ListAccessBi" +
-      "ndingsRequest\032/.yandex.cloud.access.List" +
-      "AccessBindingsResponse\"<\202\323\344\223\0026\0224/datasph" +
-      "ere/v2/projects/{resource_id}:accessBind" +
-      "ings\022\346\001\n\021SetAccessBindings\022-.yandex.clou" +
-      "d.access.SetAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\177\202\323\344\223\002<\"7/d" +
-      "atasphere/v2/projects/{resource_id}:setA" +
-      "ccessBindings:\001*\262\322*9\n SetProjectAccessBi" +
-      "ndingsMetadata\022\025google.protobuf.Empty\022\363\001" +
-      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
-      "cess.UpdateAccessBindingsRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\205\001\202\323\344\223\002?2:/d" +
-      "atasphere/v2/projects/{resource_id}:upda" +
-      "teAccessBindings:\001*\262\322*<\n#UpdateProjectAc" +
-      "cessBindingsMetadata\022\025google.protobuf.Em" +
-      "pty\022\302\001\n\013AddResource\0227.yandex.cloud.datas" +
-      "phere.v2.AddResourceToProjectRequest\032!.y" +
-      "andex.cloud.operation.Operation\"W\202\323\344\223\0026\"" +
-      "1/datasphere/v2/projects/{resource_id}:a" +
-      "ddResource:\001*\262\322*\027\022\025google.protobuf.Empty" +
-      "\022\315\001\n\016RemoveResource\022<.yandex.cloud.datas" +
-      "phere.v2.RemoveResourceFromProjectReques" +
-      "t\032!.yandex.cloud.operation.Operation\"Z\202\323" +
-      "\344\223\0029\"4/datasphere/v2/projects/{resource_" +
-      "id}:removeResource:\001*\262\322*\027\022\025google.protob" +
-      "uf.Empty\022\230\001\n\023GetRestrictionsMeta\022\026.googl" +
-      "e.protobuf.Empty\0327.yandex.cloud.datasphe" +
-      "re.v2.GetRestrictionsMetaResponse\"0\202\323\344\223\002" +
-      "*\022(/datasphere/v2/projects/restrictionsM" +
-      "eta\022\271\001\n\017GetRestrictions\0229.yandex.cloud.d" +
-      "atasphere.v2.GetProjectRestrictionsReque" +
-      "st\0320.yandex.cloud.datasphere.v2.Restrict" +
-      "ionsResponse\"9\202\323\344\223\0023\0221/datasphere/v2/pro" +
-      "jects/{project_id}:restrictions\022\312\001\n\017SetR" +
-      "estrictions\0229.yandex.cloud.datasphere.v2" +
-      ".SetProjectRestrictionsRequest\032!.yandex." +
-      "cloud.operation.Operation\"Y\202\323\344\223\0029\"4/data" +
-      "sphere/v2/projects/{project_id}:setRestr" +
-      "ictions:\001*\262\322*\026\022\024RestrictionsResponseBk\n\036" +
-      "yandex.cloud.api.datasphere.v2ZIgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/datasphere/v2;datasphereb\006proto3"
+      "riable_names\030\005 \003(\t\022\014\n\004spec\030\006 \001(\t\022%\n\022spar" +
+      "k_connector_id\030\007 \001(\tB\t\212\3101\005<=200B\016\n\006targe" +
+      "t\022\004\300\3011\001\"~\n\030ProjectExecutionMetadata\022\022\n\np" +
+      "roject_id\030\001 \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\310" +
+      "1\005<=200H\000\022\034\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B" +
+      "\016\n\006target\022\004\300\3011\001\"\257\001\n\030ProjectExecutionResp" +
+      "onse\022\025\n\rcheckpoint_id\030\001 \001(\t\0225\n\020output_va" +
+      "riables\030\002 \001(\0132\027.google.protobuf.StructB\002" +
+      "\030\001\022E\n\020execution_status\030\003 \001(\0162+.yandex.cl" +
+      "oud.datasphere.v2.ExecutionStatus\"\233\001\n\022Ce" +
+      "llOutputsRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\036\n\007cell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=2" +
+      "00\022\025\n\rcheckpoint_id\030\003 \001(\t\022,\n\010start_at\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\"&\n\023CellO" +
+      "utputsResponse\022\017\n\007outputs\030\001 \003(\t\"\217\001\n\030GetS" +
+      "tateVariablesRequest\022 \n\nproject_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\"\n\013notebook_id\030\002 \001(\tB\r\350\3071" +
+      "\001\212\3101\005<=200\022\026\n\016variable_names\030\003 \003(\t\022\025\n\rch" +
+      "eckpoint_id\030\004 \001(\t\"G\n\031GetStateVariablesRe" +
+      "sponse\022*\n\tvariables\030\001 \001(\0132\027.google.proto" +
+      "buf.Struct\"6\n SetProjectAccessBindingsMe" +
+      "tadata\022\022\n\nproject_id\030\001 \001(\t\"9\n#UpdateProj" +
+      "ectAccessBindingsMetadata\022\022\n\nproject_id\030" +
+      "\001 \001(\t\"\233\001\n\033AddResourceToProjectRequest\022 \n" +
+      "\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresou" +
+      "rce_type\030\002 \001(\0162(.yandex.cloud.datasphere" +
+      ".v2.ResourceType\022\031\n\013resource_id\030\003 \001(\tB\004\350" +
+      "\3071\001\"\240\001\n RemoveResourceFromProjectRequest" +
+      "\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rre" +
+      "source_type\030\002 \001(\0162(.yandex.cloud.datasph" +
+      "ere.v2.ResourceType\022\031\n\013resource_id\030\003 \001(\t" +
+      "B\004\350\3071\001\"9\n\035GetProjectRestrictionsRequest\022" +
+      "\030\n\nproject_id\030\001 \001(\tB\004\350\3071\001\"x\n\035SetProjectR" +
+      "estrictionsRequest\022\030\n\nproject_id\030\001 \001(\tB\004" +
+      "\350\3071\001\022=\n\014restrictions\030\002 \003(\0132\'.yandex.clou" +
+      "d.datasphere.v2.Restriction*S\n\017Execution" +
+      "Status\022 \n\034EXECUTION_STATUS_UNSPECIFIED\020\000" +
+      "\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\242\034\n\016Pro" +
+      "jectService\022\245\001\n\006Create\0220.yandex.cloud.da" +
+      "tasphere.v2.CreateProjectRequest\032!.yande" +
+      "x.cloud.operation.Operation\"F\202\323\344\223\002\034\"\027/da" +
+      "tasphere/v2/projects:\001*\262\322* \n\025CreateProje" +
+      "ctMetadata\022\007Project\022\262\001\n\006Update\0220.yandex." +
+      "cloud.datasphere.v2.UpdateProjectRequest" +
+      "\032!.yandex.cloud.operation.Operation\"S\202\323\344" +
+      "\223\002)2$/datasphere/v2/projects/{project_id" +
+      "}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Project" +
+      "\022\275\001\n\006Delete\0220.yandex.cloud.datasphere.v2" +
+      ".DeleteProjectRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"^\202\323\344\223\002&*$/datasphere/v2" +
+      "/projects/{project_id}\262\322*.\n\025DeleteProjec" +
+      "tMetadata\022\025google.protobuf.Empty\022\275\001\n\004Ope" +
+      "n\022..yandex.cloud.datasphere.v2.OpenProje" +
+      "ctRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"b\202\323\344\223\002.\")/datasphere/v2/projects/{p" +
+      "roject_id}:open:\001*\262\322**\n\023OpenProjectMetad" +
+      "ata\022\023OpenProjectResponse\022\207\001\n\003Get\022-.yande" +
+      "x.cloud.datasphere.v2.GetProjectRequest\032" +
+      "#.yandex.cloud.datasphere.v2.Project\",\202\323" +
+      "\344\223\002&\022$/datasphere/v2/projects/{project_i" +
+      "d}\022\212\001\n\004List\022/.yandex.cloud.datasphere.v2" +
+      ".ListProjectsRequest\0320.yandex.cloud.data" +
+      "sphere.v2.ListProjectsResponse\"\037\202\323\344\223\002\031\022\027" +
+      "/datasphere/v2/projects\022\261\001\n\016GetUnitBalan" +
+      "ce\0221.yandex.cloud.datasphere.v2.GetUnitB" +
+      "alanceRequest\0322.yandex.cloud.datasphere." +
+      "v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/data" +
+      "sphere/v2/projects/{project_id}:unitBala" +
+      "nce\022\326\001\n\016SetUnitBalance\0221.yandex.cloud.da" +
+      "tasphere.v2.SetUnitBalanceRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"n\202\323\344\223\0025\"0/d" +
+      "atasphere/v2/projects/{project_id}:unitB" +
+      "alance:\001*\262\322*/\n\026SetUnitBalanceMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\322\001\n\007Execute\0223.yande" +
+      "x.cloud.datasphere.v2.ProjectExecutionRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"o\202\323\344\223\0021\",/datasphere/v2/projects/{proje" +
+      "ct_id}:execute:\001*\262\322*4\n\030ProjectExecutionM" +
+      "etadata\022\030ProjectExecutionResponse\022\253\001\n\016Ge" +
+      "tCellOutputs\022..yandex.cloud.datasphere.v" +
+      "2.CellOutputsRequest\032/.yandex.cloud.data" +
+      "sphere.v2.CellOutputsResponse\"8\202\323\344\223\0022\0220/" +
+      "datasphere/v2/projects/{project_id}:cell" +
+      "Outputs\022\275\001\n\021GetStateVariables\0224.yandex.c" +
+      "loud.datasphere.v2.GetStateVariablesRequ" +
+      "est\0325.yandex.cloud.datasphere.v2.GetStat" +
+      "eVariablesResponse\";\202\323\344\223\0025\0223/datasphere/" +
+      "v2/projects/{project_id}:stateVariables\022" +
+      "\263\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
+      "cess.ListAccessBindingsRequest\032/.yandex." +
+      "cloud.access.ListAccessBindingsResponse\"" +
+      "<\202\323\344\223\0026\0224/datasphere/v2/projects/{resour" +
+      "ce_id}:accessBindings\022\346\001\n\021SetAccessBindi" +
+      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\177\202\323\344\223\002<\"7/datasphere/v2/projects/{" +
+      "resource_id}:setAccessBindings:\001*\262\322*9\n S" +
+      "etProjectAccessBindingsMetadata\022\025google." +
+      "protobuf.Empty\022\363\001\n\024UpdateAccessBindings\022" +
+      "0.yandex.cloud.access.UpdateAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\205\001\202\323\344\223\002?2:/datasphere/v2/projects/{" +
+      "resource_id}:updateAccessBindings:\001*\262\322*<" +
+      "\n#UpdateProjectAccessBindingsMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\302\001\n\013AddResource\0227.y" +
+      "andex.cloud.datasphere.v2.AddResourceToP" +
+      "rojectRequest\032!.yandex.cloud.operation.O" +
+      "peration\"W\202\323\344\223\0026\"1/datasphere/v2/project" +
+      "s/{resource_id}:addResource:\001*\262\322*\027\022\025goog" +
+      "le.protobuf.Empty\022\315\001\n\016RemoveResource\022<.y" +
+      "andex.cloud.datasphere.v2.RemoveResource" +
+      "FromProjectRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"Z\202\323\344\223\0029\"4/datasphere/v2/pr" +
+      "ojects/{resource_id}:removeResource:\001*\262\322" +
+      "*\027\022\025google.protobuf.Empty\022\230\001\n\023GetRestric" +
+      "tionsMeta\022\026.google.protobuf.Empty\0327.yand" +
+      "ex.cloud.datasphere.v2.GetRestrictionsMe" +
+      "taResponse\"0\202\323\344\223\002*\022(/datasphere/v2/proje" +
+      "cts/restrictionsMeta\022\271\001\n\017GetRestrictions" +
+      "\0229.yandex.cloud.datasphere.v2.GetProject" +
+      "RestrictionsRequest\0320.yandex.cloud.datas" +
+      "phere.v2.RestrictionsResponse\"9\202\323\344\223\0023\0221/" +
+      "datasphere/v2/projects/{project_id}:rest" +
+      "rictions\022\312\001\n\017SetRestrictions\0229.yandex.cl" +
+      "oud.datasphere.v2.SetProjectRestrictions" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"Y\202\323\344\223\0029\"4/datasphere/v2/projects/{pro" +
+      "ject_id}:setRestrictions:\001*\262\322*\026\022\024Restric" +
+      "tionsResponseBk\n\036yandex.cloud.api.datasp" +
+      "here.v2ZIgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/datasphere/v2;datasphe" +
+      "reb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27707,7 +28102,7 @@ public final class ProjectServiceOuterClass {
     internal_static_yandex_cloud_datasphere_v2_ProjectExecutionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_ProjectExecutionRequest_descriptor,
-        new java.lang.String[] { "ProjectId", "NotebookId", "CellId", "InputVariables", "OutputVariableNames", "Target", });
+        new java.lang.String[] { "ProjectId", "NotebookId", "CellId", "InputVariables", "OutputVariableNames", "Spec", "SparkConnectorId", "Target", });
     internal_static_yandex_cloud_datasphere_v2_ProjectExecutionMetadata_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_datasphere_v2_ProjectExecutionMetadata_fieldAccessorTable = new

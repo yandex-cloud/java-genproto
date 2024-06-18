@@ -9735,6 +9735,1649 @@ public final class ApiKeyServiceOuterClass {
 
   }
 
+  public interface ListApiKeyScopesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.ListApiKeyScopesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListApiKeyScopesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyScopesRequest}
+   */
+  public static final class ListApiKeyScopesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ListApiKeyScopesRequest)
+      ListApiKeyScopesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListApiKeyScopesRequest.newBuilder() to construct.
+    private ListApiKeyScopesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListApiKeyScopesRequest() {
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListApiKeyScopesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListApiKeyScopesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.Builder.class);
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 1;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListApiKeyScopesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the
+     * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pageSize_ != 0L) {
+        output.writeInt64(1, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest other = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest) obj;
+
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyScopesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.ListApiKeyScopesRequest)
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest build() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest buildPartial() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest(this);
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest other) {
+        if (other == yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest.getDefaultInstance()) return this;
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyScopesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyScopesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListApiKeyScopesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 1 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the
+       * [ListApiKeyScopesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 2 [(.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.ListApiKeyScopesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.ListApiKeyScopesRequest)
+    private static final yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest();
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListApiKeyScopesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListApiKeyScopesRequest>() {
+      @java.lang.Override
+      public ListApiKeyScopesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListApiKeyScopesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListApiKeyScopesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListApiKeyScopesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListApiKeyScopesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.ListApiKeyScopesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @return A list containing the scopes.
+     */
+    java.util.List<java.lang.String>
+        getScopesList();
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @return The count of scopes.
+     */
+    int getScopesCount();
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    java.lang.String getScopes(int index);
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    com.google.protobuf.ByteString
+        getScopesBytes(int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyScopesResponse}
+   */
+  public static final class ListApiKeyScopesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ListApiKeyScopesResponse)
+      ListApiKeyScopesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListApiKeyScopesResponse.newBuilder() to construct.
+    private ListApiKeyScopesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListApiKeyScopesResponse() {
+      scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListApiKeyScopesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListApiKeyScopesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                scopes_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              scopes_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.Builder.class);
+    }
+
+    public static final int SCOPES_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList scopes_;
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @return A list containing the scopes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getScopesList() {
+      return scopes_;
+    }
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @return The count of scopes.
+     */
+    public int getScopesCount() {
+      return scopes_.size();
+    }
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @param index The index of the element to return.
+     * @return The scopes at the given index.
+     */
+    public java.lang.String getScopes(int index) {
+      return scopes_.get(index);
+    }
+    /**
+     * <pre>
+     * List of scopes
+     * </pre>
+     *
+     * <code>repeated string scopes = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scopes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getScopesBytes(int index) {
+      return scopes_.getByteString(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+     * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < scopes_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scopes_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < scopes_.size(); i++) {
+          dataSize += computeStringSizeNoTag(scopes_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getScopesList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse other = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse) obj;
+
+      if (!getScopesList()
+          .equals(other.getScopesList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getScopesCount() > 0) {
+        hash = (37 * hash) + SCOPES_FIELD_NUMBER;
+        hash = (53 * hash) + getScopesList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.ListApiKeyScopesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.ListApiKeyScopesResponse)
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.class, yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse build() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse buildPartial() {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse result = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = scopes_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.scopes_ = scopes_;
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse other) {
+        if (other == yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse.getDefaultInstance()) return this;
+        if (!other.scopes_.isEmpty()) {
+          if (scopes_.isEmpty()) {
+            scopes_ = other.scopes_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureScopesIsMutable();
+            scopes_.addAll(other.scopes_);
+          }
+          onChanged();
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureScopesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          scopes_ = new com.google.protobuf.LazyStringArrayList(scopes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @return A list containing the scopes.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getScopesList() {
+        return scopes_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @return The count of scopes.
+       */
+      public int getScopesCount() {
+        return scopes_.size();
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param index The index of the element to return.
+       * @return The scopes at the given index.
+       */
+      public java.lang.String getScopes(int index) {
+        return scopes_.get(index);
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scopes at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getScopesBytes(int index) {
+        return scopes_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The scopes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopes(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param value The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopes(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param values The scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllScopes(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureScopesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scopes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopes() {
+        scopes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of scopes
+       * </pre>
+       *
+       * <code>repeated string scopes = 1;</code>
+       * @param value The bytes of the scopes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addScopesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureScopesIsMutable();
+        scopes_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListApiKeyScopesRequest.page_size], use the [next_page_token] as the value
+       * for the [ListApiKeyScopesRequest.page_token] query parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.ListApiKeyScopesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.ListApiKeyScopesResponse)
+    private static final yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse();
+    }
+
+    public static yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListApiKeyScopesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListApiKeyScopesResponse>() {
+      @java.lang.Override
+      public ListApiKeyScopesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListApiKeyScopesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListApiKeyScopesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListApiKeyScopesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ApiKeyServiceOuterClass.ListApiKeyScopesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_GetApiKeyRequest_descriptor;
   private static final 
@@ -9790,6 +11433,16 @@ public final class ApiKeyServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9832,32 +11485,39 @@ public final class ApiKeyServiceOuterClass {
       "\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\"" +
       "n\n\034ListApiKeyOperationsResponse\0225\n\nopera" +
       "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t2\352\006\n\rApiK" +
-      "eyService\022r\n\004List\022\'.yandex.cloud.iam.v1." +
-      "ListApiKeysRequest\032(.yandex.cloud.iam.v1" +
-      ".ListApiKeysResponse\"\027\202\323\344\223\002\021\022\017/iam/v1/ap" +
-      "iKeys\022o\n\003Get\022%.yandex.cloud.iam.v1.GetAp" +
-      "iKeyRequest\032\033.yandex.cloud.iam.v1.ApiKey" +
-      "\"$\202\323\344\223\002\036\022\034/iam/v1/apiKeys/{api_key_id}\022y" +
-      "\n\006Create\022(.yandex.cloud.iam.v1.CreateApi" +
-      "KeyRequest\032).yandex.cloud.iam.v1.CreateA" +
-      "piKeyResponse\"\032\202\323\344\223\002\024\"\017/iam/v1/apiKeys:\001" +
-      "*\022\240\001\n\006Update\022(.yandex.cloud.iam.v1.Updat" +
-      "eApiKeyRequest\032!.yandex.cloud.operation." +
-      "Operation\"I\202\323\344\223\002!2\034/iam/v1/apiKeys/{api_" +
-      "key_id}:\001*\262\322*\036\n\024UpdateApiKeyMetadata\022\006Ap" +
-      "iKey\022\254\001\n\006Delete\022(.yandex.cloud.iam.v1.De" +
-      "leteApiKeyRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"U\202\323\344\223\002\036*\034/iam/v1/apiKeys/{a" +
-      "pi_key_id}\262\322*-\n\024DeleteApiKeyMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\246\001\n\016ListOperations\0220" +
-      ".yandex.cloud.iam.v1.ListApiKeyOperation" +
-      "sRequest\0321.yandex.cloud.iam.v1.ListApiKe" +
-      "yOperationsResponse\"/\202\323\344\223\002)\022\'/iam/v1/api" +
-      "Keys/{api_key_id}/operationsBV\n\027yandex.c" +
-      "loud.api.iam.v1Z;github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/iam/v1;iamb\006pr" +
-      "oto3"
+      "ration\022\027\n\017next_page_token\030\002 \001(\t\"X\n\027ListA" +
+      "piKeyScopesRequest\022\035\n\tpage_size\030\001 \001(\003B\n\372" +
+      "\3071\0060-1000\022\036\n\npage_token\030\002 \001(\tB\n\212\3101\006<=200" +
+      "0\"C\n\030ListApiKeyScopesResponse\022\016\n\006scopes\030" +
+      "\001 \003(\t\022\027\n\017next_page_token\030\002 \001(\t2\366\007\n\rApiKe" +
+      "yService\022r\n\004List\022\'.yandex.cloud.iam.v1.L" +
+      "istApiKeysRequest\032(.yandex.cloud.iam.v1." +
+      "ListApiKeysResponse\"\027\202\323\344\223\002\021\022\017/iam/v1/api" +
+      "Keys\022o\n\003Get\022%.yandex.cloud.iam.v1.GetApi" +
+      "KeyRequest\032\033.yandex.cloud.iam.v1.ApiKey\"" +
+      "$\202\323\344\223\002\036\022\034/iam/v1/apiKeys/{api_key_id}\022y\n" +
+      "\006Create\022(.yandex.cloud.iam.v1.CreateApiK" +
+      "eyRequest\032).yandex.cloud.iam.v1.CreateAp" +
+      "iKeyResponse\"\032\202\323\344\223\002\024\"\017/iam/v1/apiKeys:\001*" +
+      "\022\240\001\n\006Update\022(.yandex.cloud.iam.v1.Update" +
+      "ApiKeyRequest\032!.yandex.cloud.operation.O" +
+      "peration\"I\202\323\344\223\002!2\034/iam/v1/apiKeys/{api_k" +
+      "ey_id}:\001*\262\322*\036\n\024UpdateApiKeyMetadata\022\006Api" +
+      "Key\022\254\001\n\006Delete\022(.yandex.cloud.iam.v1.Del" +
+      "eteApiKeyRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"U\202\323\344\223\002\036*\034/iam/v1/apiKeys/{ap" +
+      "i_key_id}\262\322*-\n\024DeleteApiKeyMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\246\001\n\016ListOperations\0220." +
+      "yandex.cloud.iam.v1.ListApiKeyOperations" +
+      "Request\0321.yandex.cloud.iam.v1.ListApiKey" +
+      "OperationsResponse\"/\202\323\344\223\002)\022\'/iam/v1/apiK" +
+      "eys/{api_key_id}/operations\022\211\001\n\nListScop" +
+      "es\022,.yandex.cloud.iam.v1.ListApiKeyScope" +
+      "sRequest\032-.yandex.cloud.iam.v1.ListApiKe" +
+      "yScopesResponse\"\036\202\323\344\223\002\030\022\026/iam/v1/apiKeys" +
+      "/scopesBV\n\027yandex.cloud.api.iam.v1Z;gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/iam/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9936,6 +11596,18 @@ public final class ApiKeyServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ListApiKeyOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_ListApiKeyScopesRequest_descriptor,
+        new java.lang.String[] { "PageSize", "PageToken", });
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_ListApiKeyScopesResponse_descriptor,
+        new java.lang.String[] { "Scopes", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

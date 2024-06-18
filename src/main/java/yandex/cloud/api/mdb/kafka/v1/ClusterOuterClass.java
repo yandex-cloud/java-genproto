@@ -6152,6 +6152,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder getRestApiConfigOrBuilder();
+
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -6292,6 +6319,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(restApiConfig_);
                 restApiConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9066,6 +9106,44 @@ public final class ClusterOuterClass {
       return getRestApiConfig();
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 11;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * DiskSizeAutoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9109,6 +9187,9 @@ public final class ClusterOuterClass {
       }
       if (restApiConfig_ != null) {
         output.writeMessage(10, getRestApiConfig());
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(11, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -9162,6 +9243,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getRestApiConfig());
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9212,6 +9297,11 @@ public final class ClusterOuterClass {
         if (!getRestApiConfig()
             .equals(other.getRestApiConfig())) return false;
       }
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9257,6 +9347,10 @@ public final class ClusterOuterClass {
       if (hasRestApiConfig()) {
         hash = (37 * hash) + REST_API_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getRestApiConfig().hashCode();
+      }
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9431,6 +9525,12 @@ public final class ClusterOuterClass {
           restApiConfig_ = null;
           restApiConfigBuilder_ = null;
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         return this;
       }
 
@@ -9491,6 +9591,11 @@ public final class ClusterOuterClass {
           result.restApiConfig_ = restApiConfig_;
         } else {
           result.restApiConfig_ = restApiConfigBuilder_.build();
+        }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9577,6 +9682,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasRestApiConfig()) {
           mergeRestApiConfig(other.getRestApiConfig());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10761,6 +10869,161 @@ public final class ClusterOuterClass {
           restApiConfig_ = null;
         }
         return restApiConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * DiskSizeAutoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -26082,6 +26345,697 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface DiskSizeAutoscalingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
+     * </pre>
+     *
+     * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    long getPlannedUsageThreshold();
+
+    /**
+     * <pre>
+     * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
+     * </pre>
+     *
+     * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    long getEmergencyUsageThreshold();
+
+    /**
+     * <pre>
+     * New storage size (in bytes) that is set when one of the thresholds is achieved.
+     * </pre>
+     *
+     * <code>int64 disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    long getDiskSizeLimit();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling}
+   */
+  public static final class DiskSizeAutoscaling extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling)
+      DiskSizeAutoscalingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskSizeAutoscaling.newBuilder() to construct.
+    private DiskSizeAutoscaling(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskSizeAutoscaling() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskSizeAutoscaling();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskSizeAutoscaling(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              plannedUsageThreshold_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              emergencyUsageThreshold_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              diskSizeLimit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+    }
+
+    public static final int PLANNED_USAGE_THRESHOLD_FIELD_NUMBER = 1;
+    private long plannedUsageThreshold_;
+    /**
+     * <pre>
+     * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
+     * </pre>
+     *
+     * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    @java.lang.Override
+    public long getPlannedUsageThreshold() {
+      return plannedUsageThreshold_;
+    }
+
+    public static final int EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER = 2;
+    private long emergencyUsageThreshold_;
+    /**
+     * <pre>
+     * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
+     * </pre>
+     *
+     * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    @java.lang.Override
+    public long getEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_;
+    }
+
+    public static final int DISK_SIZE_LIMIT_FIELD_NUMBER = 3;
+    private long diskSizeLimit_;
+    /**
+     * <pre>
+     * New storage size (in bytes) that is set when one of the thresholds is achieved.
+     * </pre>
+     *
+     * <code>int64 disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    @java.lang.Override
+    public long getDiskSizeLimit() {
+      return diskSizeLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plannedUsageThreshold_ != 0L) {
+        output.writeInt64(1, plannedUsageThreshold_);
+      }
+      if (emergencyUsageThreshold_ != 0L) {
+        output.writeInt64(2, emergencyUsageThreshold_);
+      }
+      if (diskSizeLimit_ != 0L) {
+        output.writeInt64(3, diskSizeLimit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plannedUsageThreshold_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, plannedUsageThreshold_);
+      }
+      if (emergencyUsageThreshold_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, emergencyUsageThreshold_);
+      }
+      if (diskSizeLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, diskSizeLimit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling) obj;
+
+      if (getPlannedUsageThreshold()
+          != other.getPlannedUsageThreshold()) return false;
+      if (getEmergencyUsageThreshold()
+          != other.getEmergencyUsageThreshold()) return false;
+      if (getDiskSizeLimit()
+          != other.getDiskSizeLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLANNED_USAGE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlannedUsageThreshold());
+      hash = (37 * hash) + EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEmergencyUsageThreshold());
+      hash = (37 * hash) + DISK_SIZE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDiskSizeLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling)
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        plannedUsageThreshold_ = 0L;
+
+        emergencyUsageThreshold_ = 0L;
+
+        diskSizeLimit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling build() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling buildPartial() {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling(this);
+        result.plannedUsageThreshold_ = plannedUsageThreshold_;
+        result.emergencyUsageThreshold_ = emergencyUsageThreshold_;
+        result.diskSizeLimit_ = diskSizeLimit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling) {
+          return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling other) {
+        if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance()) return this;
+        if (other.getPlannedUsageThreshold() != 0L) {
+          setPlannedUsageThreshold(other.getPlannedUsageThreshold());
+        }
+        if (other.getEmergencyUsageThreshold() != 0L) {
+          setEmergencyUsageThreshold(other.getEmergencyUsageThreshold());
+        }
+        if (other.getDiskSizeLimit() != 0L) {
+          setDiskSizeLimit(other.getDiskSizeLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long plannedUsageThreshold_ ;
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The plannedUsageThreshold.
+       */
+      @java.lang.Override
+      public long getPlannedUsageThreshold() {
+        return plannedUsageThreshold_;
+      }
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @param value The plannedUsageThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlannedUsageThreshold(long value) {
+        
+        plannedUsageThreshold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlannedUsageThreshold() {
+        
+        plannedUsageThreshold_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long emergencyUsageThreshold_ ;
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The emergencyUsageThreshold.
+       */
+      @java.lang.Override
+      public long getEmergencyUsageThreshold() {
+        return emergencyUsageThreshold_;
+      }
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @param value The emergencyUsageThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmergencyUsageThreshold(long value) {
+        
+        emergencyUsageThreshold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmergencyUsageThreshold() {
+        
+        emergencyUsageThreshold_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long diskSizeLimit_ ;
+      /**
+       * <pre>
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @return The diskSizeLimit.
+       */
+      @java.lang.Override
+      public long getDiskSizeLimit() {
+        return diskSizeLimit_;
+      }
+      /**
+       * <pre>
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @param value The diskSizeLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskSizeLimit(long value) {
+        
+        diskSizeLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskSizeLimit() {
+        
+        diskSizeLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling)
+    private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling();
+    }
+
+    public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskSizeAutoscaling>
+        PARSER = new com.google.protobuf.AbstractParser<DiskSizeAutoscaling>() {
+      @java.lang.Override
+      public DiskSizeAutoscaling parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskSizeAutoscaling(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskSizeAutoscaling> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskSizeAutoscaling> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor;
   private static final 
@@ -26142,6 +27096,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_Access_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26157,131 +27116,137 @@ public final class ClusterOuterClass {
       "timestamp.proto\032\036google/protobuf/wrapper" +
       "s.proto\032&yandex/cloud/mdb/kafka/v1/commo" +
       "n.proto\032+yandex/cloud/mdb/kafka/v1/maint" +
-      "enance.proto\"\231\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
-      "folder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n" +
-      "\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yan" +
-      "dex.cloud.mdb.kafka.v1.Cluster.LabelsEnt" +
-      "ry\022C\n\013environment\030\007 \001(\0162..yandex.cloud.m" +
-      "db.kafka.v1.Cluster.Environment\0229\n\nmonit" +
-      "oring\030\010 \003(\0132%.yandex.cloud.mdb.kafka.v1." +
-      "Monitoring\0225\n\006config\030\t \001(\0132%.yandex.clou" +
-      "d.mdb.kafka.v1.ConfigSpec\022\022\n\nnetwork_id\030" +
-      "\n \001(\t\0229\n\006health\030\013 \001(\0162).yandex.cloud.mdb" +
-      ".kafka.v1.Cluster.Health\0229\n\006status\030\014 \001(\016" +
-      "2).yandex.cloud.mdb.kafka.v1.Cluster.Sta" +
-      "tus\022\032\n\022security_group_ids\030\r \003(\t\022\026\n\016host_" +
-      "group_ids\030\016 \003(\t\022\033\n\023deletion_protection\030\017" +
-      " \001(\010\022H\n\022maintenance_window\030\020 \001(\0132,.yande" +
-      "x.cloud.mdb.kafka.v1.MaintenanceWindow\022J" +
-      "\n\021planned_operation\030\021 \001(\0132/.yandex.cloud" +
-      ".mdb.kafka.v1.MaintenanceOperation\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIF" +
-      "IED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006" +
-      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATU" +
-      "S_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t" +
-      "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
-      "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
-      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
-      "k\030\003 \001(\t\"\237\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
-      ":\n\005kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka." +
-      "v1.ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/" +
-      ".yandex.cloud.mdb.kafka.v1.ConfigSpec.Zo" +
-      "okeeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_coun" +
-      "t\030\005 \001(\0132\033.google.protobuf.Int64Value\022\030\n\020" +
-      "assign_public_ip\030\006 \001(\010\022\034\n\020unmanaged_topi" +
-      "cs\030\007 \001(\010B\002\030\001\022\027\n\017schema_registry\030\010 \001(\010\0221\n" +
-      "\006access\030\t \001(\0132!.yandex.cloud.mdb.kafka.v" +
-      "1.Access\022L\n\017rest_api_config\030\n \001(\01323.yand" +
-      "ex.cloud.mdb.kafka.v1.ConfigSpec.RestAPI" +
-      "Config\032\200\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.ya" +
-      "ndex.cloud.mdb.kafka.v1.Resources\022V\n\020kaf" +
-      "ka_config_2_8\030\004 \001(\0132).yandex.cloud.mdb.k" +
-      "afka.v1.KafkaConfig2_8H\000R\017kafkaConfig_2_" +
-      "8\022P\n\016kafka_config_3\030\005 \001(\0132\'.yandex.cloud" +
-      ".mdb.kafka.v1.KafkaConfig3H\000R\rkafkaConfi" +
-      "g_3B\016\n\014kafka_configJ\004\010\002\020\004\032D\n\tZookeeper\0227" +
-      "\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.kaf" +
-      "ka.v1.Resources\032 \n\rRestAPIConfig\022\017\n\007enab" +
-      "led\030\001 \001(\010\"P\n\tResources\022\032\n\022resource_prese" +
-      "t_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_ty" +
-      "pe_id\030\003 \001(\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compre" +
-      "ssion_type\030\001 \001(\0162*.yandex.cloud.mdb.kafk" +
-      "a.v1.CompressionType\022@\n\033log_flush_interv" +
-      "al_messages\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033." +
-      "google.protobuf.Int64Value\022D\n\037log_flush_" +
-      "scheduler_interval_ms\030\004 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0228\n\023log_retention_bytes\030" +
-      "\005 \001(\0132\033.google.protobuf.Int64Value\0228\n\023lo" +
-      "g_retention_hours\030\006 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022:\n\025log_retention_minutes\030\007 " +
-      "\001(\0132\033.google.protobuf.Int64Value\0225\n\020log_" +
-      "retention_ms\030\010 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0226\n\021log_segment_bytes\030\t \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0223\n\017log_prealloca" +
-      "te\030\n \001(\0132\032.google.protobuf.BoolValue\022=\n\030" +
-      "socket_send_buffer_bytes\030\013 \001(\0132\033.google." +
-      "protobuf.Int64Value\022@\n\033socket_receive_bu" +
-      "ffer_bytes\030\014 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022=\n\031auto_create_topics_enable\030\r \001(\013" +
-      "2\032.google.protobuf.BoolValue\0223\n\016num_part" +
-      "itions\030\016 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022?\n\032default_replication_factor\030\017 \001(\0132\033." +
-      "google.protobuf.Int64Value\0226\n\021message_ma" +
-      "x_bytes\030\020 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022\031\n\021ssl_cipher_s" +
-      "uites\030\022 \003(\t\022>\n\031offsets_retention_minutes" +
-      "\030\023 \001(\0132\033.google.protobuf.Int64Value\022I\n\027s" +
-      "asl_enabled_mechanisms\030\024 \003(\0162(.yandex.cl" +
-      "oud.mdb.kafka.v1.SaslMechanism\"\276\t\n\014Kafka" +
-      "Config3\022D\n\020compression_type\030\001 \001(\0162*.yand" +
-      "ex.cloud.mdb.kafka.v1.CompressionType\022@\n" +
-      "\033log_flush_interval_messages\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022:\n\025log_flush_int" +
-      "erval_ms\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022D\n\037log_flush_scheduler_interval_ms\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\0228\n\023log" +
-      "_retention_bytes\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0228\n\023log_retention_hours\030\006 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022:\n\025log_ret" +
-      "ention_minutes\030\007 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0226\n\021log_segment_" +
-      "bytes\030\t \001(\0132\033.google.protobuf.Int64Value" +
-      "\0223\n\017log_preallocate\030\n \001(\0132\032.google.proto" +
-      "buf.BoolValue\022=\n\030socket_send_buffer_byte" +
-      "s\030\013 \001(\0132\033.google.protobuf.Int64Value\022@\n\033" +
-      "socket_receive_buffer_bytes\030\014 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022=\n\031auto_create_to" +
-      "pics_enable\030\r \001(\0132\032.google.protobuf.Bool" +
-      "Value\0223\n\016num_partitions\030\016 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022?\n\032default_replicatio" +
-      "n_factor\030\017 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0226\n\021message_max_bytes\030\020 \001(\0132\033.google." +
-      "protobuf.Int64Value\022<\n\027replica_fetch_max" +
-      "_bytes\030\021 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets_" +
-      "retention_minutes\030\023 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022I\n\027sasl_enabled_mechanisms\030" +
-      "\024 \003(\0162(.yandex.cloud.mdb.kafka.v1.SaslMe" +
-      "chanism\"\203\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
-      "r_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(" +
-      "\0162$.yandex.cloud.mdb.kafka.v1.Host.Role\022" +
-      "7\n\tresources\030\005 \001(\0132$.yandex.cloud.mdb.ka" +
-      "fka.v1.Resources\0226\n\006health\030\006 \001(\0162&.yande" +
-      "x.cloud.mdb.kafka.v1.Host.Health\022\021\n\tsubn" +
-      "et_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n" +
-      "\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r" +
-      "\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005" +
-      "ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020\010\"\037\n" +
-      "\006Access\022\025\n\rdata_transfer\030\001 \001(\010Bd\n\035yandex" +
-      ".cloud.api.mdb.kafka.v1ZCgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/ka" +
-      "fka/v1;kafkab\006proto3"
+      "enance.proto\032\035yandex/cloud/validation.pr" +
+      "oto\"\231\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
+      "ion\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud" +
+      ".mdb.kafka.v1.Cluster.LabelsEntry\022C\n\013env" +
+      "ironment\030\007 \001(\0162..yandex.cloud.mdb.kafka." +
+      "v1.Cluster.Environment\0229\n\nmonitoring\030\010 \003" +
+      "(\0132%.yandex.cloud.mdb.kafka.v1.Monitorin" +
+      "g\0225\n\006config\030\t \001(\0132%.yandex.cloud.mdb.kaf" +
+      "ka.v1.ConfigSpec\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006" +
+      "health\030\013 \001(\0162).yandex.cloud.mdb.kafka.v1" +
+      ".Cluster.Health\0229\n\006status\030\014 \001(\0162).yandex" +
+      ".cloud.mdb.kafka.v1.Cluster.Status\022\032\n\022se" +
+      "curity_group_ids\030\r \003(\t\022\026\n\016host_group_ids" +
+      "\030\016 \003(\t\022\033\n\023deletion_protection\030\017 \001(\010\022H\n\022m" +
+      "aintenance_window\030\020 \001(\0132,.yandex.cloud.m" +
+      "db.kafka.v1.MaintenanceWindow\022J\n\021planned" +
+      "_operation\030\021 \001(\0132/.yandex.cloud.mdb.kafk" +
+      "a.v1.MaintenanceOperation\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
+      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
+      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n" +
+      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
+      "\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN" +
+      "\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003" +
+      "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
+      "\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 " +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\356" +
+      "\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n\005kafka\030" +
+      "\002 \001(\0132+.yandex.cloud.mdb.kafka.v1.Config" +
+      "Spec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.yandex.c" +
+      "loud.mdb.kafka.v1.ConfigSpec.Zookeeper\022\017" +
+      "\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_count\030\005 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022\030\n\020assign_pu" +
+      "blic_ip\030\006 \001(\010\022\034\n\020unmanaged_topics\030\007 \001(\010B" +
+      "\002\030\001\022\027\n\017schema_registry\030\010 \001(\010\0221\n\006access\030\t" +
+      " \001(\0132!.yandex.cloud.mdb.kafka.v1.Access\022" +
+      "L\n\017rest_api_config\030\n \001(\01323.yandex.cloud." +
+      "mdb.kafka.v1.ConfigSpec.RestAPIConfig\022M\n" +
+      "\025disk_size_autoscaling\030\013 \001(\0132..yandex.cl" +
+      "oud.mdb.kafka.v1.DiskSizeAutoscaling\032\200\002\n" +
+      "\005Kafka\0227\n\tresources\030\001 \001(\0132$.yandex.cloud" +
+      ".mdb.kafka.v1.Resources\022V\n\020kafka_config_" +
+      "2_8\030\004 \001(\0132).yandex.cloud.mdb.kafka.v1.Ka" +
+      "fkaConfig2_8H\000R\017kafkaConfig_2_8\022P\n\016kafka" +
+      "_config_3\030\005 \001(\0132\'.yandex.cloud.mdb.kafka" +
+      ".v1.KafkaConfig3H\000R\rkafkaConfig_3B\016\n\014kaf" +
+      "ka_configJ\004\010\002\020\004\032D\n\tZookeeper\0227\n\tresource" +
+      "s\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Reso" +
+      "urces\032 \n\rRestAPIConfig\022\017\n\007enabled\030\001 \001(\010\"" +
+      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
+      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
+      "\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compression_type" +
+      "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
+      "essionType\022@\n\033log_flush_interval_message" +
+      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
+      "log_flush_interval_ms\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022D\n\037log_flush_scheduler_" +
+      "interval_ms\030\004 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
+      "n_hours\030\006 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0225\n\020log_retention_" +
+      "ms\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
+      "\021log_segment_bytes\030\t \001(\0132\033.google.protob" +
+      "uf.Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032" +
+      ".google.protobuf.BoolValue\022=\n\030socket_sen" +
+      "d_buffer_bytes\030\013 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022@\n\033socket_receive_buffer_bytes" +
+      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
+      "uto_create_topics_enable\030\r \001(\0132\032.google." +
+      "protobuf.BoolValue\0223\n\016num_partitions\030\016 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022?\n\032defau" +
+      "lt_replication_factor\030\017 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0226\n\021message_max_bytes\030\020 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022<\n\027repl" +
+      "ica_fetch_max_bytes\030\021 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(" +
+      "\t\022>\n\031offsets_retention_minutes\030\023 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022I\n\027sasl_enable" +
+      "d_mechanisms\030\024 \003(\0162(.yandex.cloud.mdb.ka" +
+      "fka.v1.SaslMechanism\"\276\t\n\014KafkaConfig3\022D\n" +
+      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
+      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
+      "_interval_messages\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
+      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0228\n\023log_retention" +
+      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025log_retention_min" +
+      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
+      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
+      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
+      "google.protobuf.Int64Value\022@\n\033socket_rec" +
+      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
+      "e\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016n" +
+      "um_partitions\030\016 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022?\n\032default_replication_factor\030\017" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021mes" +
+      "sage_max_bytes\030\020 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022<\n\027replica_fetch_max_bytes\030\021 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022\031\n\021ssl_c" +
+      "ipher_suites\030\022 \003(\t\022>\n\031offsets_retention_" +
+      "minutes\030\023 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162(.ya" +
+      "ndex.cloud.mdb.kafka.v1.SaslMechanism\"\203\003" +
+      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
+      "\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex" +
+      ".cloud.mdb.kafka.v1.Host.Role\0227\n\tresourc" +
+      "es\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Res" +
+      "ources\0226\n\006health\030\006 \001(\0162&.yandex.cloud.md" +
+      "b.kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(" +
+      "\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020R" +
+      "OLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPE" +
+      "R\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020\010\"\037\n\006Access\022\025\n" +
+      "\rdata_transfer\030\001 \001(\010\"\220\001\n\023DiskSizeAutosca" +
+      "ling\022.\n\027planned_usage_threshold\030\001 \001(\003B\r\350" +
+      "\3071\000\372\3071\0050-100\0220\n\031emergency_usage_threshol" +
+      "d\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_size_limi" +
+      "t\030\003 \001(\003Bd\n\035yandex.cloud.api.mdb.kafka.v1" +
+      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26291,6 +27256,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor(),
           yandex.cloud.api.mdb.kafka.v1.Maintenance.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -26315,7 +27281,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -26364,11 +27330,24 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Access_descriptor,
         new java.lang.String[] { "DataTransfer", });
+    internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_DiskSizeAutoscaling_descriptor,
+        new java.lang.String[] { "PlannedUsageThreshold", "EmergencyUsageThreshold", "DiskSizeLimit", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DescriptorProtos.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Maintenance.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

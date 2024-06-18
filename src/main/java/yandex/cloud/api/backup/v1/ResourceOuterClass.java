@@ -193,6 +193,47 @@ public final class ResourceOuterClass {
      * @return The isActive.
      */
     boolean getIsActive();
+
+    /**
+     * <pre>
+     * Status of resource initialization in cloud backup service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+     * @return The enum numeric value on the wire for initStatus.
+     */
+    int getInitStatusValue();
+    /**
+     * <pre>
+     * Status of resource initialization in cloud backup service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+     * @return The initStatus.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus getInitStatus();
+
+    /**
+     * <pre>
+     * Metadata to provide details about instance registration process
+     * if status is FAILED_REGISTRATION or REGISTERING
+     * </pre>
+     *
+     * <code>string metadata = 14;</code>
+     * @return The metadata.
+     */
+    java.lang.String getMetadata();
+    /**
+     * <pre>
+     * Metadata to provide details about instance registration process
+     * if status is FAILED_REGISTRATION or REGISTERING
+     * </pre>
+     *
+     * <code>string metadata = 14;</code>
+     * @return The bytes for metadata.
+     */
+    com.google.protobuf.ByteString
+        getMetadataBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Resource}
@@ -211,6 +252,8 @@ public final class ResourceOuterClass {
       status_ = 0;
       statusDetails_ = "";
       resourceId_ = "";
+      initStatus_ = 0;
+      metadata_ = "";
     }
 
     @java.lang.Override
@@ -337,6 +380,18 @@ public final class ResourceOuterClass {
             case 96: {
 
               isActive_ = input.readBool();
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+
+              initStatus_ = rawValue;
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              metadata_ = s;
               break;
             }
             default: {
@@ -557,6 +612,173 @@ public final class ResourceOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.Resource.Status)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.backup.v1.Resource.InitStatus}
+     */
+    public enum InitStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>INIT_STATUS_UNSPECIFIED = 0;</code>
+       */
+      INIT_STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Registration of instance in cloud backups have started.
+       * </pre>
+       *
+       * <code>REGISTERING = 1;</code>
+       */
+      REGISTERING(1),
+      /**
+       * <pre>
+       * Instance is registered in cloud backups.
+       * </pre>
+       *
+       * <code>REGISTRED = 2;</code>
+       */
+      REGISTRED(2),
+      /**
+       * <pre>
+       * Instance registration failed.
+       * </pre>
+       *
+       * <code>FAILED_REGISTRATION = 3;</code>
+       */
+      FAILED_REGISTRATION(3),
+      /**
+       * <pre>
+       * Instance is deleted from cloud backup service.
+       * </pre>
+       *
+       * <code>DELETED = 4;</code>
+       */
+      DELETED(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>INIT_STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int INIT_STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Registration of instance in cloud backups have started.
+       * </pre>
+       *
+       * <code>REGISTERING = 1;</code>
+       */
+      public static final int REGISTERING_VALUE = 1;
+      /**
+       * <pre>
+       * Instance is registered in cloud backups.
+       * </pre>
+       *
+       * <code>REGISTRED = 2;</code>
+       */
+      public static final int REGISTRED_VALUE = 2;
+      /**
+       * <pre>
+       * Instance registration failed.
+       * </pre>
+       *
+       * <code>FAILED_REGISTRATION = 3;</code>
+       */
+      public static final int FAILED_REGISTRATION_VALUE = 3;
+      /**
+       * <pre>
+       * Instance is deleted from cloud backup service.
+       * </pre>
+       *
+       * <code>DELETED = 4;</code>
+       */
+      public static final int DELETED_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InitStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static InitStatus forNumber(int value) {
+        switch (value) {
+          case 0: return INIT_STATUS_UNSPECIFIED;
+          case 1: return REGISTERING;
+          case 2: return REGISTRED;
+          case 3: return FAILED_REGISTRATION;
+          case 4: return DELETED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<InitStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          InitStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<InitStatus>() {
+              public InitStatus findValueByNumber(int number) {
+                return InitStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final InitStatus[] VALUES = values();
+
+      public static InitStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private InitStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.Resource.InitStatus)
     }
 
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
@@ -885,6 +1107,81 @@ public final class ResourceOuterClass {
       return isActive_;
     }
 
+    public static final int INIT_STATUS_FIELD_NUMBER = 13;
+    private int initStatus_;
+    /**
+     * <pre>
+     * Status of resource initialization in cloud backup service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+     * @return The enum numeric value on the wire for initStatus.
+     */
+    @java.lang.Override public int getInitStatusValue() {
+      return initStatus_;
+    }
+    /**
+     * <pre>
+     * Status of resource initialization in cloud backup service.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+     * @return The initStatus.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus getInitStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus result = yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.valueOf(initStatus_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 14;
+    private volatile java.lang.Object metadata_;
+    /**
+     * <pre>
+     * Metadata to provide details about instance registration process
+     * if status is FAILED_REGISTRATION or REGISTERING
+     * </pre>
+     *
+     * <code>string metadata = 14;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public java.lang.String getMetadata() {
+      java.lang.Object ref = metadata_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metadata_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Metadata to provide details about instance registration process
+     * if status is FAILED_REGISTRATION or REGISTERING
+     * </pre>
+     *
+     * <code>string metadata = 14;</code>
+     * @return The bytes for metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetadataBytes() {
+      java.lang.Object ref = metadata_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metadata_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -934,6 +1231,12 @@ public final class ResourceOuterClass {
       }
       if (isActive_ != false) {
         output.writeBool(12, isActive_);
+      }
+      if (initStatus_ != yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.INIT_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(13, initStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, metadata_);
       }
       unknownFields.writeTo(output);
     }
@@ -989,6 +1292,13 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(12, isActive_);
       }
+      if (initStatus_ != yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.INIT_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, initStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, metadata_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1039,6 +1349,9 @@ public final class ResourceOuterClass {
           .equals(other.getResourceId())) return false;
       if (getIsActive()
           != other.getIsActive()) return false;
+      if (initStatus_ != other.initStatus_) return false;
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1086,6 +1399,10 @@ public final class ResourceOuterClass {
       hash = (37 * hash) + IS_ACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsActive());
+      hash = (37 * hash) + INIT_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + initStatus_;
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1259,6 +1576,10 @@ public final class ResourceOuterClass {
 
         isActive_ = false;
 
+        initStatus_ = 0;
+
+        metadata_ = "";
+
         return this;
       }
 
@@ -1313,6 +1634,8 @@ public final class ResourceOuterClass {
         }
         result.resourceId_ = resourceId_;
         result.isActive_ = isActive_;
+        result.initStatus_ = initStatus_;
+        result.metadata_ = metadata_;
         onBuilt();
         return result;
       }
@@ -1399,6 +1722,13 @@ public final class ResourceOuterClass {
         }
         if (other.getIsActive() != false) {
           setIsActive(other.getIsActive());
+        }
+        if (other.initStatus_ != 0) {
+          setInitStatusValue(other.getInitStatusValue());
+        }
+        if (!other.getMetadata().isEmpty()) {
+          metadata_ = other.metadata_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2429,6 +2759,181 @@ public final class ResourceOuterClass {
       public Builder clearIsActive() {
         
         isActive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int initStatus_ = 0;
+      /**
+       * <pre>
+       * Status of resource initialization in cloud backup service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+       * @return The enum numeric value on the wire for initStatus.
+       */
+      @java.lang.Override public int getInitStatusValue() {
+        return initStatus_;
+      }
+      /**
+       * <pre>
+       * Status of resource initialization in cloud backup service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+       * @param value The enum numeric value on the wire for initStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitStatusValue(int value) {
+        
+        initStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of resource initialization in cloud backup service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+       * @return The initStatus.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus getInitStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus result = yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.valueOf(initStatus_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of resource initialization in cloud backup service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+       * @param value The initStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitStatus(yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.InitStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        initStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of resource initialization in cloud backup service.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.Resource.InitStatus init_status = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitStatus() {
+        
+        initStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metadata_ = "";
+      /**
+       * <pre>
+       * Metadata to provide details about instance registration process
+       * if status is FAILED_REGISTRATION or REGISTERING
+       * </pre>
+       *
+       * <code>string metadata = 14;</code>
+       * @return The metadata.
+       */
+      public java.lang.String getMetadata() {
+        java.lang.Object ref = metadata_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metadata_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Metadata to provide details about instance registration process
+       * if status is FAILED_REGISTRATION or REGISTERING
+       * </pre>
+       *
+       * <code>string metadata = 14;</code>
+       * @return The bytes for metadata.
+       */
+      public com.google.protobuf.ByteString
+          getMetadataBytes() {
+        java.lang.Object ref = metadata_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metadata_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Metadata to provide details about instance registration process
+       * if status is FAILED_REGISTRATION or REGISTERING
+       * </pre>
+       *
+       * <code>string metadata = 14;</code>
+       * @param value The metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadata(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        metadata_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata to provide details about instance registration process
+       * if status is FAILED_REGISTRATION or REGISTERING
+       * </pre>
+       *
+       * <code>string metadata = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadata() {
+        
+        metadata_ = getDefaultInstance().getMetadata();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata to provide details about instance registration process
+       * if status is FAILED_REGISTRATION or REGISTERING
+       * </pre>
+       *
+       * <code>string metadata = 14;</code>
+       * @param value The bytes for metadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        metadata_ = value;
         onChanged();
         return this;
       }
@@ -5983,7 +6488,7 @@ public final class ResourceOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/backup/v1/resource.proto\022" +
       "\026yandex.cloud.backup.v1\032\037google/protobuf" +
-      "/timestamp.proto\"\210\004\n\010Resource\022\033\n\023compute" +
+      "/timestamp.proto\"\315\005\n\010Resource\022\033\n\023compute" +
       "_instance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032" +
       ".google.protobuf.Timestamp\022.\n\nupdated_at" +
       "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\016\n\006on" +
@@ -5994,32 +6499,37 @@ public final class ResourceOuterClass {
       "\032.google.protobuf.Timestamp\0224\n\020next_back" +
       "up_time\030\n \001(\0132\032.google.protobuf.Timestam" +
       "p\022\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(" +
-      "\010\"`\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\010\n\004I" +
-      "DLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\nRECOVERING\020\003\022\n\n\006" +
-      "FAILED\020\004\022\t\n\005OTHER\020\005\"*\n\010Progress\022\017\n\007curre" +
-      "nt\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Task\022\n\n\002id\030\001" +
-      " \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpolicy_id\030\003" +
-      " \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.cloud.backup" +
-      ".v1.Task.Type\0222\n\010progress\030\005 \001(\0132 .yandex" +
-      ".cloud.backup.v1.Progress\0223\n\006status\030\006 \001(" +
-      "\0162#.yandex.cloud.backup.v1.Task.Status\022/" +
-      "\n\013enqueued_at\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022.\n\nstarted_at\030\010 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\0220\n\014completed_at\030" +
-      "\n \001(\0132\032.google.protobuf.Timestamp\022\033\n\023com" +
-      "pute_instance_id\030\013 \001(\t\0226\n\013result_code\030\014 " +
-      "\001(\0162!.yandex.cloud.backup.v1.Task.Code\"E" +
-      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001" +
-      "\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d\n\006Status\022" +
-      "\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n" +
-      "\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\t" +
-      "COMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020" +
-      "\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCAN" +
-      "CELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006B_\n" +
-      "\032yandex.cloud.api.backup.v1ZAgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ba" +
-      "ckup/v1;backupb\006proto3"
+      "\010\022@\n\013init_status\030\r \001(\0162+.yandex.cloud.ba" +
+      "ckup.v1.Resource.InitStatus\022\020\n\010metadata\030" +
+      "\016 \001(\t\"`\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\010\n\004IDLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\nRECOVERING\020\003" +
+      "\022\n\n\006FAILED\020\004\022\t\n\005OTHER\020\005\"o\n\nInitStatus\022\033\n" +
+      "\027INIT_STATUS_UNSPECIFIED\020\000\022\017\n\013REGISTERIN" +
+      "G\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED_REGISTRATIO" +
+      "N\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress\022\017\n\007current\030" +
+      "\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Task\022\n\n\002id\030\001 \001(" +
+      "\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpolicy_id\030\003 \001(" +
+      "\t\022/\n\004type\030\004 \001(\0162!.yandex.cloud.backup.v1" +
+      ".Task.Type\0222\n\010progress\030\005 \001(\0132 .yandex.cl" +
+      "oud.backup.v1.Progress\0223\n\006status\030\006 \001(\0162#" +
+      ".yandex.cloud.backup.v1.Task.Status\022/\n\013e" +
+      "nqueued_at\030\007 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022.\n\nstarted_at\030\010 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\0220\n\014completed_at\030\n \001" +
+      "(\0132\032.google.protobuf.Timestamp\022\033\n\023comput" +
+      "e_instance_id\030\013 \001(\t\0226\n\013result_code\030\014 \001(\016" +
+      "2!.yandex.cloud.backup.v1.Task.Code\"E\n\004T" +
+      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n" +
+      "\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010AS" +
+      "SIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOM" +
+      "PLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020\000\022\006" +
+      "\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCANCEL" +
+      "LED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006B_\n\032ya" +
+      "ndex.cloud.api.backup.v1ZAgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/backu" +
+      "p/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6031,7 +6541,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_backup_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Resource_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", });
+        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", });
     internal_static_yandex_cloud_backup_v1_Progress_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_Progress_fieldAccessorTable = new

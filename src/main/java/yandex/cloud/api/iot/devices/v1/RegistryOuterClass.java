@@ -453,6 +453,14 @@ public final class RegistryOuterClass {
        * <code>DELETING = 3;</code>
        */
       DELETING(3),
+      /**
+       * <pre>
+       * Registry is disabled.
+       * </pre>
+       *
+       * <code>DISABLED = 4;</code>
+       */
+      DISABLED(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -484,6 +492,14 @@ public final class RegistryOuterClass {
        * <code>DELETING = 3;</code>
        */
       public static final int DELETING_VALUE = 3;
+      /**
+       * <pre>
+       * Registry is disabled.
+       * </pre>
+       *
+       * <code>DISABLED = 4;</code>
+       */
+      public static final int DISABLED_VALUE = 4;
 
 
       public final int getNumber() {
@@ -514,6 +530,7 @@ public final class RegistryOuterClass {
           case 1: return CREATING;
           case 2: return ACTIVE;
           case 3: return DELETING;
+          case 4: return DISABLED;
           default: return null;
         }
       }
@@ -9131,7 +9148,7 @@ public final class RegistryOuterClass {
       "roto\022\033yandex.cloud.iot.devices.v1\032\037googl" +
       "e/protobuf/timestamp.proto\032\'yandex/cloud" +
       "/logging/v1/log_entry.proto\032\035yandex/clou" +
-      "d/validation.proto\"\312\003\n\010Registry\022\n\n\002id\030\001 " +
+      "d/validation.proto\"\330\003\n\010Registry\022\n\n\002id\030\001 " +
       "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
       "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
       " \001(\t\022\023\n\013description\030\005 \001(\t\022A\n\006labels\030\006 \003(" +
@@ -9141,30 +9158,30 @@ public final class RegistryOuterClass {
       "g_group_id\030\010 \001(\t\022<\n\013log_options\030\t \001(\0132\'." +
       "yandex.cloud.iot.devices.v1.LogOptions\032-" +
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\"" +
-      "\211\001\n\023RegistryCertificate\022\023\n\013registry_id\030\001" +
-      " \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certificate" +
-      "_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\"E\n\013DeviceAlias\022\021\n\tde" +
-      "vice_id\030\001 \001(\t\022\024\n\014topic_prefix\030\002 \001(\t\022\r\n\005a" +
-      "lias\030\003 \001(\t\"c\n\020RegistryPassword\022\023\n\013regist" +
-      "ry_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncreated_at\030\003 " +
-      "\001(\0132\032.google.protobuf.Timestamp\"\312\001\n\020Data" +
-      "StreamExport\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023" +
-      "\n\013registry_id\030\003 \001(\t\022\031\n\021mqtt_topic_filter" +
-      "\030\004 \001(\t\022\020\n\010database\030\005 \001(\t\022\016\n\006stream\030\006 \001(\t" +
-      "\022\032\n\022service_account_id\030\007 \001(\t\022.\n\ncreated_" +
-      "at\030\010 \001(\0132\032.google.protobuf.Timestamp\"\340\001\n" +
-      "\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_gro" +
-      "up_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]" +
-      "{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-z" +
-      "A-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_leve" +
-      "l\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLev" +
-      "el.LevelB\r\n\013destinationBj\n\037yandex.cloud." +
-      "api.iot.devices.v1ZGgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/iot/devices" +
-      "/v1;devicesb\006proto3"
+      "\t:\0028\001\"V\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022" +
+      "\014\n\010DISABLED\020\004\"\211\001\n\023RegistryCertificate\022\023\n" +
+      "\013registry_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022" +
+      "\030\n\020certificate_data\030\003 \001(\t\022.\n\ncreated_at\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\"E\n\013Dev" +
+      "iceAlias\022\021\n\tdevice_id\030\001 \001(\t\022\024\n\014topic_pre" +
+      "fix\030\002 \001(\t\022\r\n\005alias\030\003 \001(\t\"c\n\020RegistryPass" +
+      "word\022\023\n\013registry_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n" +
+      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stamp\"\312\001\n\020DataStreamExport\022\n\n\002id\030\001 \001(\t\022\014" +
+      "\n\004name\030\002 \001(\t\022\023\n\013registry_id\030\003 \001(\t\022\031\n\021mqt" +
+      "t_topic_filter\030\004 \001(\t\022\020\n\010database\030\005 \001(\t\022\016" +
+      "\n\006stream\030\006 \001(\t\022\032\n\022service_account_id\030\007 \001" +
+      "(\t\022.\n\ncreated_at\030\010 \001(\0132\032.google.protobuf" +
+      ".Timestamp\"\340\001\n\nLogOptions\022\020\n\010disabled\030\001 " +
+      "\001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z]" +
+      "[-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id\030\003 " +
+      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
+      "H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cloud.log" +
+      "ging.v1.LogLevel.LevelB\r\n\013destinationBj\n" +
+      "\037yandex.cloud.api.iot.devices.v1ZGgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/iot/devices/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

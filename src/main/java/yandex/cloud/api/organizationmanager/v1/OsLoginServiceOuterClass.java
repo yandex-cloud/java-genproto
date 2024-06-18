@@ -9278,10 +9278,10 @@ public final class OsLoginServiceOuterClass {
 
     /**
      * <pre>
-     * 1 - 2^63 - 1
+     * 1000 - 2^63 - 1
      * </pre>
      *
-     * <code>int64 uid = 3 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+     * <code>int64 uid = 3 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
      * @return The uid.
      */
     long getUid();
@@ -9536,10 +9536,10 @@ public final class OsLoginServiceOuterClass {
     private long uid_;
     /**
      * <pre>
-     * 1 - 2^63 - 1
+     * 1000 - 2^63 - 1
      * </pre>
      *
-     * <code>int64 uid = 3 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+     * <code>int64 uid = 3 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
      * @return The uid.
      */
     @java.lang.Override
@@ -10225,10 +10225,10 @@ public final class OsLoginServiceOuterClass {
       private long uid_ ;
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @return The uid.
        */
       @java.lang.Override
@@ -10237,10 +10237,10 @@ public final class OsLoginServiceOuterClass {
       }
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @param value The uid to set.
        * @return This builder for chaining.
        */
@@ -10252,10 +10252,10 @@ public final class OsLoginServiceOuterClass {
       }
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 3 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUid() {
@@ -11206,10 +11206,10 @@ public final class OsLoginServiceOuterClass {
 
     /**
      * <pre>
-     * 1 - 2^63 - 1
+     * 1000 - 2^63 - 1
      * </pre>
      *
-     * <code>int64 uid = 4 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+     * <code>int64 uid = 4 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
      * @return The uid.
      */
     long getUid();
@@ -11481,10 +11481,10 @@ public final class OsLoginServiceOuterClass {
     private long uid_;
     /**
      * <pre>
-     * 1 - 2^63 - 1
+     * 1000 - 2^63 - 1
      * </pre>
      *
-     * <code>int64 uid = 4 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+     * <code>int64 uid = 4 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
      * @return The uid.
      */
     @java.lang.Override
@@ -12207,10 +12207,10 @@ public final class OsLoginServiceOuterClass {
       private long uid_ ;
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @return The uid.
        */
       @java.lang.Override
@@ -12219,10 +12219,10 @@ public final class OsLoginServiceOuterClass {
       }
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @param value The uid to set.
        * @return This builder for chaining.
        */
@@ -12234,10 +12234,10 @@ public final class OsLoginServiceOuterClass {
       }
       /**
        * <pre>
-       * 1 - 2^63 - 1
+       * 1000 - 2^63 - 1
        * </pre>
        *
-       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1-9223372036854775807"];</code>
+       * <code>int64 uid = 4 [(.yandex.cloud.value) = "1000-9223372036854775807"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUid() {
@@ -15893,81 +15893,81 @@ public final class OsLoginServiceOuterClass {
       "anization_id\030\002 \001(\t\022\022\n\nsubject_id\030\003 \001(\t\022\r" +
       "\n\005login\030\004 \001(\t\022\013\n\003uid\030\005 \001(\003\022\022\n\nis_default" +
       "\030\006 \001(\010\022\026\n\016home_directory\030\007 \001(\t\022\r\n\005shell\030" +
-      "\010 \001(\t\"\214\002\n\033UpdateOsLoginProfileRequest\022)\n" +
+      "\010 \001(\t\"\217\002\n\033UpdateOsLoginProfileRequest\022)\n" +
       "\023os_login_profile_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
       "\022,\n\005login\030\002 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r^[^.]*?" +
-      "[^~.]$\022&\n\003uid\030\003 \001(\003B\031\372\3071\0251-9223372036854" +
-      "775807\022!\n\016home_directory\030\004 \001(\tB\t\212\3101\005<=25" +
-      "5\022\030\n\005shell\030\005 \001(\tB\t\212\3101\005<=255\022/\n\013update_ma" +
-      "sk\030\006 \001(\0132\032.google.protobuf.FieldMask\"7\n\033" +
-      "DeleteOsLoginProfileRequest\022\030\n\002id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\365\001\n\033CreateOsLoginProfileRe" +
-      "quest\022%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\034\n\nsubject_id\030\002 \001(\tB\010\212\3101\004<=50\022,\n\005lo" +
-      "gin\030\003 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r^[^.]*?[^~.]$" +
-      "\022&\n\003uid\030\004 \001(\003B\031\372\3071\0251-9223372036854775807" +
-      "\022!\n\016home_directory\030\005 \001(\tB\t\212\3101\005<=255\022\030\n\005s" +
-      "hell\030\006 \001(\tB\t\212\3101\005<=255\";\n\034UpdateOsLoginPr" +
-      "ofileMetadata\022\033\n\023os_login_profile_id\030\001 \001" +
-      "(\t\";\n\034DeleteOsLoginProfileMetadata\022\033\n\023os" +
-      "_login_profile_id\030\001 \001(\t\"h\n\034CreateOsLogin" +
-      "ProfileMetadata\022\033\n\023os_login_profile_id\030\001" +
-      " \001(\t\022\027\n\017organization_id\030\002 \001(\t\022\022\n\nsubject" +
-      "_id\030\003 \001(\t\"8\n\035UpdateOsLoginSettingsMetada" +
-      "ta\022\027\n\017organization_id\030\001 \001(\t\"k\n SetDefaul" +
-      "tOsLoginProfileMetadata\022#\n\033previous_defa" +
-      "ult_profile_id\030\001 \001(\t\022\"\n\032current_default_" +
-      "profile_id\030\002 \001(\t2\301\016\n\016OsLoginService\022\325\001\n\013" +
-      "GetSettings\022>.yandex.cloud.organizationm" +
-      "anager.v1.GetOsLoginSettingsRequest\0324.ya" +
-      "ndex.cloud.organizationmanager.v1.OsLogi" +
-      "nSettings\"P\202\323\344\223\002J\022H/organization-manager" +
-      "/v1/organizations/{organization_id}/osLo" +
-      "ginSettings\022\200\002\n\016UpdateSettings\022A.yandex." +
-      "cloud.organizationmanager.v1.UpdateOsLog" +
-      "inSettingsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\207\001\202\323\344\223\002M2H/organization-man" +
-      "ager/v1/organizations/{organization_id}/" +
-      "osLoginSettings:\001*\262\322*0\n\035UpdateOsLoginSet" +
-      "tingsMetadata\022\017OsLoginSettings\022\310\001\n\nGetPr" +
-      "ofile\022=.yandex.cloud.organizationmanager" +
-      ".v1.GetOsLoginProfileRequest\0323.yandex.cl" +
-      "oud.organizationmanager.v1.OsLoginProfil" +
-      "e\"F\202\323\344\223\002@\022>/organization-manager/v1/osLo" +
-      "ginProfiles/{os_login_profile_id}\022\303\001\n\014Li" +
-      "stProfiles\022?.yandex.cloud.organizationma" +
-      "nager.v1.ListOsLoginProfilesRequest\032@.ya" +
-      "ndex.cloud.organizationmanager.v1.ListOs" +
-      "LoginProfilesResponse\"0\202\323\344\223\002*\022(/organiza" +
-      "tion-manager/v1/osLoginProfiles\022\333\001\n\rCrea" +
-      "teProfile\022@.yandex.cloud.organizationman" +
-      "ager.v1.CreateOsLoginProfileRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"e\202\323\344\223\002-\"(" +
-      "/organization-manager/v1/osLoginProfiles" +
-      ":\001*\262\322*.\n\034CreateOsLoginProfileMetadata\022\016O" +
-      "sLoginProfile\022\361\001\n\rUpdateProfile\022@.yandex" +
-      ".cloud.organizationmanager.v1.UpdateOsLo" +
-      "ginProfileRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"{\202\323\344\223\002C2>/organization-mana" +
-      "ger/v1/osLoginProfiles/{os_login_profile" +
-      "_id}:\001*\262\322*.\n\034UpdateOsLoginProfileMetadat" +
-      "a\022\016OsLoginProfile\022\211\002\n\021SetDefaultProfile\022" +
-      "D.yandex.cloud.organizationmanager.v1.Se" +
-      "tDefaultOsLoginProfileRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\212\001\202\323\344\223\002N\"I/orga" +
-      "nization-manager/v1/osLoginProfiles/{os_" +
-      "login_profile_id}:setDefault:\001*\262\322*2\n Set" +
-      "DefaultOsLoginProfileMetadata\022\016OsLoginPr" +
-      "ofile\022\344\001\n\rDeleteProfile\022@.yandex.cloud.o" +
-      "rganizationmanager.v1.DeleteOsLoginProfi" +
-      "leRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"n\202\323\344\223\002/*-/organization-manager/v1/o" +
-      "sLoginProfiles/{id}\262\322*5\n\034DeleteOsLoginPr" +
-      "ofileMetadata\022\025google.protobuf.EmptyB\206\001\n" +
-      "\'yandex.cloud.api.organizationmanager.v1" +
-      "Z[github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/organizationmanager/v1;organi" +
-      "zationmanagerb\006proto3"
+      "[^~.]$\022)\n\003uid\030\003 \001(\003B\034\372\3071\0301000-9223372036" +
+      "854775807\022!\n\016home_directory\030\004 \001(\tB\t\212\3101\005<" +
+      "=255\022\030\n\005shell\030\005 \001(\tB\t\212\3101\005<=255\022/\n\013update" +
+      "_mask\030\006 \001(\0132\032.google.protobuf.FieldMask\"" +
+      "7\n\033DeleteOsLoginProfileRequest\022\030\n\002id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\370\001\n\033CreateOsLoginProfil" +
+      "eRequest\022%\n\017organization_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022\034\n\nsubject_id\030\002 \001(\tB\010\212\3101\004<=50\022,\n" +
+      "\005login\030\003 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r^[^.]*?[^~" +
+      ".]$\022)\n\003uid\030\004 \001(\003B\034\372\3071\0301000-9223372036854" +
+      "775807\022!\n\016home_directory\030\005 \001(\tB\t\212\3101\005<=25" +
+      "5\022\030\n\005shell\030\006 \001(\tB\t\212\3101\005<=255\";\n\034UpdateOsL" +
+      "oginProfileMetadata\022\033\n\023os_login_profile_" +
+      "id\030\001 \001(\t\";\n\034DeleteOsLoginProfileMetadata" +
+      "\022\033\n\023os_login_profile_id\030\001 \001(\t\"h\n\034CreateO" +
+      "sLoginProfileMetadata\022\033\n\023os_login_profil" +
+      "e_id\030\001 \001(\t\022\027\n\017organization_id\030\002 \001(\t\022\022\n\ns" +
+      "ubject_id\030\003 \001(\t\"8\n\035UpdateOsLoginSettings" +
+      "Metadata\022\027\n\017organization_id\030\001 \001(\t\"k\n Set" +
+      "DefaultOsLoginProfileMetadata\022#\n\033previou" +
+      "s_default_profile_id\030\001 \001(\t\022\"\n\032current_de" +
+      "fault_profile_id\030\002 \001(\t2\301\016\n\016OsLoginServic" +
+      "e\022\325\001\n\013GetSettings\022>.yandex.cloud.organiz" +
+      "ationmanager.v1.GetOsLoginSettingsReques" +
+      "t\0324.yandex.cloud.organizationmanager.v1." +
+      "OsLoginSettings\"P\202\323\344\223\002J\022H/organization-m" +
+      "anager/v1/organizations/{organization_id" +
+      "}/osLoginSettings\022\200\002\n\016UpdateSettings\022A.y" +
+      "andex.cloud.organizationmanager.v1.Updat" +
+      "eOsLoginSettingsRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\207\001\202\323\344\223\002M2H/organizati" +
+      "on-manager/v1/organizations/{organizatio" +
+      "n_id}/osLoginSettings:\001*\262\322*0\n\035UpdateOsLo" +
+      "ginSettingsMetadata\022\017OsLoginSettings\022\310\001\n" +
+      "\nGetProfile\022=.yandex.cloud.organizationm" +
+      "anager.v1.GetOsLoginProfileRequest\0323.yan" +
+      "dex.cloud.organizationmanager.v1.OsLogin" +
+      "Profile\"F\202\323\344\223\002@\022>/organization-manager/v" +
+      "1/osLoginProfiles/{os_login_profile_id}\022" +
+      "\303\001\n\014ListProfiles\022?.yandex.cloud.organiza" +
+      "tionmanager.v1.ListOsLoginProfilesReques" +
+      "t\032@.yandex.cloud.organizationmanager.v1." +
+      "ListOsLoginProfilesResponse\"0\202\323\344\223\002*\022(/or" +
+      "ganization-manager/v1/osLoginProfiles\022\333\001" +
+      "\n\rCreateProfile\022@.yandex.cloud.organizat" +
+      "ionmanager.v1.CreateOsLoginProfileReques" +
+      "t\032!.yandex.cloud.operation.Operation\"e\202\323" +
+      "\344\223\002-\"(/organization-manager/v1/osLoginPr" +
+      "ofiles:\001*\262\322*.\n\034CreateOsLoginProfileMetad" +
+      "ata\022\016OsLoginProfile\022\361\001\n\rUpdateProfile\022@." +
+      "yandex.cloud.organizationmanager.v1.Upda" +
+      "teOsLoginProfileRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"{\202\323\344\223\002C2>/organizatio" +
+      "n-manager/v1/osLoginProfiles/{os_login_p" +
+      "rofile_id}:\001*\262\322*.\n\034UpdateOsLoginProfileM" +
+      "etadata\022\016OsLoginProfile\022\211\002\n\021SetDefaultPr" +
+      "ofile\022D.yandex.cloud.organizationmanager" +
+      ".v1.SetDefaultOsLoginProfileRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\212\001\202\323\344\223\002N\"" +
+      "I/organization-manager/v1/osLoginProfile" +
+      "s/{os_login_profile_id}:setDefault:\001*\262\322*" +
+      "2\n SetDefaultOsLoginProfileMetadata\022\016OsL" +
+      "oginProfile\022\344\001\n\rDeleteProfile\022@.yandex.c" +
+      "loud.organizationmanager.v1.DeleteOsLogi" +
+      "nProfileRequest\032!.yandex.cloud.operation" +
+      ".Operation\"n\202\323\344\223\002/*-/organization-manage" +
+      "r/v1/osLoginProfiles/{id}\262\322*5\n\034DeleteOsL" +
+      "oginProfileMetadata\022\025google.protobuf.Emp" +
+      "tyB\206\001\n\'yandex.cloud.api.organizationmana" +
+      "ger.v1Z[github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/organizationmanager/v1;" +
+      "organizationmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

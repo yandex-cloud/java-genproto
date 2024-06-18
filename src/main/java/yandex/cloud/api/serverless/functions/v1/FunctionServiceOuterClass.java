@@ -17699,6 +17699,16 @@ public final class FunctionServiceOuterClass {
      */
     long getTmpfsSize();
 
+    /**
+     * <pre>
+     * The maximum number of requests processed by a function instance at the same time
+     * </pre>
+     *
+     * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The concurrency.
+     */
+    long getConcurrency();
+
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.PackageSourceCase getPackageSourceCase();
   }
   /**
@@ -17931,6 +17941,11 @@ public final class FunctionServiceOuterClass {
             case 184: {
 
               tmpfsSize_ = input.readInt64();
+              break;
+            }
+            case 192: {
+
+              concurrency_ = input.readInt64();
               break;
             }
             default: {
@@ -18977,6 +18992,21 @@ public final class FunctionServiceOuterClass {
       return tmpfsSize_;
     }
 
+    public static final int CONCURRENCY_FIELD_NUMBER = 24;
+    private long concurrency_;
+    /**
+     * <pre>
+     * The maximum number of requests processed by a function instance at the same time
+     * </pre>
+     *
+     * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+     * @return The concurrency.
+     */
+    @java.lang.Override
+    public long getConcurrency() {
+      return concurrency_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19054,6 +19084,9 @@ public final class FunctionServiceOuterClass {
       }
       if (tmpfsSize_ != 0L) {
         output.writeInt64(23, tmpfsSize_);
+      }
+      if (concurrency_ != 0L) {
+        output.writeInt64(24, concurrency_);
       }
       unknownFields.writeTo(output);
     }
@@ -19151,6 +19184,10 @@ public final class FunctionServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(23, tmpfsSize_);
       }
+      if (concurrency_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(24, concurrency_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19213,6 +19250,8 @@ public final class FunctionServiceOuterClass {
       }
       if (getTmpfsSize()
           != other.getTmpfsSize()) return false;
+      if (getConcurrency()
+          != other.getConcurrency()) return false;
       if (!getPackageSourceCase().equals(other.getPackageSourceCase())) return false;
       switch (packageSourceCase_) {
         case 9:
@@ -19294,6 +19333,9 @@ public final class FunctionServiceOuterClass {
       hash = (37 * hash) + TMPFS_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTmpfsSize());
+      hash = (37 * hash) + CONCURRENCY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConcurrency());
       switch (packageSourceCase_) {
         case 9:
           hash = (37 * hash) + PACKAGE_FIELD_NUMBER;
@@ -19529,6 +19571,8 @@ public final class FunctionServiceOuterClass {
         }
         tmpfsSize_ = 0L;
 
+        concurrency_ = 0L;
+
         packageSourceCase_ = 0;
         packageSource_ = null;
         return this;
@@ -19629,6 +19673,7 @@ public final class FunctionServiceOuterClass {
           result.asyncInvocationConfig_ = asyncInvocationConfigBuilder_.build();
         }
         result.tmpfsSize_ = tmpfsSize_;
+        result.concurrency_ = concurrency_;
         result.packageSourceCase_ = packageSourceCase_;
         onBuilt();
         return result;
@@ -19781,6 +19826,9 @@ public final class FunctionServiceOuterClass {
         }
         if (other.getTmpfsSize() != 0L) {
           setTmpfsSize(other.getTmpfsSize());
+        }
+        if (other.getConcurrency() != 0L) {
+          setConcurrency(other.getConcurrency());
         }
         switch (other.getPackageSourceCase()) {
           case PACKAGE: {
@@ -22612,6 +22660,49 @@ public final class FunctionServiceOuterClass {
       public Builder clearTmpfsSize() {
         
         tmpfsSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long concurrency_ ;
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return The concurrency.
+       */
+      @java.lang.Override
+      public long getConcurrency() {
+        return concurrency_;
+      }
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @param value The concurrency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConcurrency(long value) {
+        
+        concurrency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of requests processed by a function instance at the same time
+       * </pre>
+       *
+       * <code>int64 concurrency = 24 [(.yandex.cloud.value) = "0-16"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConcurrency() {
+        
+        concurrency_ = 0L;
         onChanged();
         return this;
       }
@@ -35444,7 +35535,7 @@ public final class FunctionServiceOuterClass {
       "<=1000\"p\n\036ListFunctionOperationsResponse" +
       "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
       "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\211\n\n\034CreateFunctionVersionRequest\022\031\n\013fun" +
+      "\"\250\n\n\034CreateFunctionVersionRequest\022\031\n\013fun" +
       "ction_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(\tB\004\350" +
       "\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022\030\n\ne" +
       "ntrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005 \001(\013" +
@@ -35472,163 +35563,164 @@ public final class FunctionServiceOuterClass {
       "s.v1.StorageMount\022\\\n\027async_invocation_co" +
       "nfig\030\026 \001(\0132;.yandex.cloud.serverless.fun" +
       "ctions.v1.AsyncInvocationConfig\022\022\n\ntmpfs" +
-      "_size\030\027 \001(\003\0322\n\020EnvironmentEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceA" +
-      "ccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001B\026\n\016package_source\022\004\300\3011\001J\004\010\016\020\017J\004\010\020\020\021" +
-      "J\004\010\025\020\026J\004\010\010\020\t\"<\n\035CreateFunctionVersionMet" +
-      "adata\022\033\n\023function_version_id\030\001 \001(\t\"]\n\025Se" +
-      "tFunctionTagRequest\022!\n\023function_version_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-" +
-      "_0-9a-z]*\"`\n\030RemoveFunctionTagRequest\022!\n" +
-      "\023function_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030" +
-      "\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"5\n\026SetFuncti" +
-      "onTagMetadata\022\033\n\023function_version_id\030\001 \001" +
-      "(\t\"8\n\031RemoveFunctionTagMetadata\022\033\n\023funct" +
-      "ion_version_id\030\001 \001(\t\"\301\001\n\035ListFunctionTag" +
-      "HistoryRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[a-z][-_0-9a-z]*|[$]" +
-      "latest\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n" +
-      "\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005" +
-      " \001(\tB\n\212\3101\006<=1000\"\200\003\n\036ListFunctionTagHist" +
-      "oryResponse\022\202\001\n\033function_tag_history_rec" +
-      "ord\030\001 \003(\0132].yandex.cloud.serverless.func" +
-      "tions.v1.ListFunctionTagHistoryResponse." +
-      "FunctionTagHistoryRecord\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\032\277\001\n\030FunctionTagHistoryRecord\022\023" +
-      "\n\013function_id\030\001 \001(\t\022\033\n\023function_version_" +
-      "id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t\0222\n\016effective_from\030" +
-      "\004 \001(\0132\032.google.protobuf.Timestamp\0220\n\014eff" +
-      "ective_to\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"u\n\032ListScalingPoliciesRequest\022\031\n\013fun" +
-      "ction_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"\205\001\n\033ListScalingPoliciesResponse\022M\n\020sc" +
-      "aling_policies\030\001 \003(\01323.yandex.cloud.serv" +
-      "erless.functions.v1.ScalingPolicy\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\357\001\n\027SetScalingPolicyR" +
-      "equest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag" +
-      "\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]late" +
-      "st\022/\n\033provisioned_instances_count\030\004 \001(\003B" +
-      "\n\372\3071\0060-1000\022(\n\024zone_instances_limit\030\005 \001(" +
-      "\003B\n\372\3071\0060-1000\022\'\n\023zone_requests_limit\030\006 \001" +
-      "(\003B\n\372\3071\0060-1000J\004\010\003\020\004\"/\n\030SetScalingPolicy" +
-      "Metadata\022\023\n\013function_id\030\001 \001(\t\"h\n\032RemoveS" +
-      "calingPolicyRequest\022\031\n\013function_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-9" +
-      "a-z]*|[$]latest\"2\n\033RemoveScalingPolicyMe" +
-      "tadata\022\023\n\013function_id\030\001 \001(\t2\304!\n\017Function" +
-      "Service\022\236\001\n\003Get\0228.yandex.cloud.serverles" +
-      "s.functions.v1.GetFunctionRequest\032..yand" +
-      "ex.cloud.serverless.functions.v1.Functio" +
-      "n\"-\202\323\344\223\002\'\022%/functions/v1/functions/{func" +
-      "tion_id}\022\240\001\n\004List\022:.yandex.cloud.serverl" +
-      "ess.functions.v1.ListFunctionsRequest\032;." +
-      "yandex.cloud.serverless.functions.v1.Lis" +
-      "tFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functions/v" +
-      "1/functions\022\262\001\n\006Create\022;.yandex.cloud.se" +
-      "rverless.functions.v1.CreateFunctionRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"H" +
-      "\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262\322*\"\n\026" +
-      "CreateFunctionMetadata\022\010Function\022\300\001\n\006Upd" +
-      "ate\022;.yandex.cloud.serverless.functions." +
-      "v1.UpdateFunctionRequest\032!.yandex.cloud." +
-      "operation.Operation\"V\202\323\344\223\002*2%/functions/" +
-      "v1/functions/{function_id}:\001*\262\322*\"\n\026Updat" +
-      "eFunctionMetadata\022\010Function\022\312\001\n\006Delete\022;" +
-      ".yandex.cloud.serverless.functions.v1.De" +
-      "leteFunctionRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"`\202\323\344\223\002\'*%/functions/v1/fu" +
-      "nctions/{function_id}\262\322*/\n\026DeleteFunctio" +
-      "nMetadata\022\025google.protobuf.Empty\022\262\001\n\nGet" +
-      "Version\022?.yandex.cloud.serverless.functi" +
-      "ons.v1.GetFunctionVersionRequest\032-.yande" +
-      "x.cloud.serverless.functions.v1.Version\"" +
-      "4\202\323\344\223\002.\022,/functions/v1/versions/{functio" +
-      "n_version_id}\022\254\001\n\017GetVersionByTag\022D.yand" +
-      "ex.cloud.serverless.functions.v1.GetFunc" +
-      "tionVersionByTagRequest\032-.yandex.cloud.s" +
-      "erverless.functions.v1.Version\"$\202\323\344\223\002\036\022\034" +
-      "/functions/v1/versions:byTag\022\267\001\n\014ListVer" +
-      "sions\022B.yandex.cloud.serverless.function" +
-      "s.v1.ListFunctionsVersionsRequest\032C.yand" +
-      "ex.cloud.serverless.functions.v1.ListFun" +
-      "ctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/functio" +
-      "ns/v1/versions\022\346\001\n\rDeleteVersion\022B.yande" +
-      "x.cloud.serverless.functions.v1.DeleteFu" +
-      "nctionVersionRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"n\202\323\344\223\002.*,/functions/v1/v" +
-      "ersions/{function_version_id}\262\322*6\n\035Delet" +
-      "eFunctionVersionMetadata\022\025google.protobu" +
-      "f.Empty\022\315\001\n\006SetTag\022;.yandex.cloud.server" +
-      "less.functions.v1.SetFunctionTagRequest\032" +
-      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
-      "\0028\"3/functions/v1/versions/{function_ver" +
-      "sion_id}:setTag:\001*\262\322*!\n\026SetFunctionTagMe" +
-      "tadata\022\007Version\022\331\001\n\tRemoveTag\022>.yandex.c" +
-      "loud.serverless.functions.v1.RemoveFunct" +
-      "ionTagRequest\032!.yandex.cloud.operation.O" +
-      "peration\"i\202\323\344\223\002;\"6/functions/v1/versions" +
-      "/{function_version_id}:removeTag:\001*\262\322*$\n" +
-      "\031RemoveFunctionTagMetadata\022\007Version\022\325\001\n\016" +
-      "ListTagHistory\022C.yandex.cloud.serverless" +
-      ".functions.v1.ListFunctionTagHistoryRequ" +
-      "est\032D.yandex.cloud.serverless.functions." +
-      "v1.ListFunctionTagHistoryResponse\"8\202\323\344\223\002" +
-      "2\0220/functions/v1/functions/{function_id}" +
-      ":tagHistory\022\305\001\n\rCreateVersion\022B.yandex.c" +
-      "loud.serverless.functions.v1.CreateFunct" +
-      "ionVersionRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"M\202\323\344\223\002\033\"\026/functions/v1/vers" +
-      "ions:\001*\262\322*(\n\035CreateFunctionVersionMetada" +
-      "ta\022\007Version\022\245\001\n\014ListRuntimes\0229.yandex.cl" +
-      "oud.serverless.functions.v1.ListRuntimes" +
-      "Request\032:.yandex.cloud.serverless.functi" +
-      "ons.v1.ListRuntimesResponse\"\036\202\323\344\223\002\030\022\026/fu" +
-      "nctions/v1/runtimes\022\325\001\n\016ListOperations\022C" +
-      ".yandex.cloud.serverless.functions.v1.Li" +
-      "stFunctionOperationsRequest\032D.yandex.clo" +
-      "ud.serverless.functions.v1.ListFunctionO" +
-      "perationsResponse\"8\202\323\344\223\0022\0220/functions/v1" +
-      "/functions/{function_id}/operations\022\267\001\n\022" +
-      "ListAccessBindings\022..yandex.cloud.access" +
-      ".ListAccessBindingsRequest\032/.yandex.clou" +
-      "d.access.ListAccessBindingsResponse\"@\202\323\344" +
-      "\223\002:\0228/functions/v1/functions/{resource_i" +
-      "d}:listAccessBindings\022\346\001\n\021SetAccessBindi" +
-      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\177\202\323\344\223\002<\"7/functions/v1/functions/{" +
-      "resource_id}:setAccessBindings:\001*\262\322*9\n a" +
-      "ccess.SetAccessBindingsMetadata\022\025google." +
-      "protobuf.Empty\022\363\001\n\024UpdateAccessBindings\022" +
-      "0.yandex.cloud.access.UpdateAccessBindin" +
-      "gsRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\205\001\202\323\344\223\002?\":/functions/v1/functions/{" +
-      "resource_id}:updateAccessBindings:\001*\262\322*<" +
-      "\n#access.UpdateAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\331\001\n\023ListScalingPoli" +
-      "cies\022@.yandex.cloud.serverless.functions" +
-      ".v1.ListScalingPoliciesRequest\032A.yandex." +
-      "cloud.serverless.functions.v1.ListScalin" +
-      "gPoliciesResponse\"=\202\323\344\223\0027\0225/functions/v1" +
-      "/functions/{function_id}/scalingPolicies" +
-      "\022\344\001\n\020SetScalingPolicy\022=.yandex.cloud.ser" +
-      "verless.functions.v1.SetScalingPolicyReq" +
+      "_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(\003B\010\372\3071\0040-" +
+      "16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\032;\n\031NamedServiceAccountsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\026\n\016p" +
+      "ackage_source\022\004\300\3011\001J\004\010\016\020\017J\004\010\020\020\021J\004\010\025\020\026J\004\010" +
+      "\010\020\t\"<\n\035CreateFunctionVersionMetadata\022\033\n\023" +
+      "function_version_id\030\001 \001(\t\"]\n\025SetFunction" +
+      "TagRequest\022!\n\023function_version_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*" +
+      "\"`\n\030RemoveFunctionTagRequest\022!\n\023function" +
+      "_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\307" +
+      "1\020[a-z][-_0-9a-z]*\"5\n\026SetFunctionTagMeta" +
+      "data\022\033\n\023function_version_id\030\001 \001(\t\"8\n\031Rem" +
+      "oveFunctionTagMetadata\022\033\n\023function_versi" +
+      "on_id\030\001 \001(\t\"\301\001\n\035ListFunctionTagHistoryRe" +
+      "quest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030" +
+      "\002 \001(\tB\036\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n" +
+      "\tpage_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
+      "en\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101" +
+      "\006<=1000\"\200\003\n\036ListFunctionTagHistoryRespon" +
+      "se\022\202\001\n\033function_tag_history_record\030\001 \003(\013" +
+      "2].yandex.cloud.serverless.functions.v1." +
+      "ListFunctionTagHistoryResponse.FunctionT" +
+      "agHistoryRecord\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\032\277\001\n\030FunctionTagHistoryRecord\022\023\n\013functio" +
+      "n_id\030\001 \001(\t\022\033\n\023function_version_id\030\003 \001(\t\022" +
+      "\013\n\003tag\030\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\0220\n\014effective_to" +
+      "\030\005 \001(\0132\032.google.protobuf.Timestamp\"u\n\032Li" +
+      "stScalingPoliciesRequest\022\031\n\013function_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
+      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n\033Li" +
+      "stScalingPoliciesResponse\022M\n\020scaling_pol" +
+      "icies\030\001 \003(\01323.yandex.cloud.serverless.fu" +
+      "nctions.v1.ScalingPolicy\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\357\001\n\027SetScalingPolicyRequest\022\031\n" +
+      "\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350" +
+      "\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022/\n\033pro" +
+      "visioned_instances_count\030\004 \001(\003B\n\372\3071\0060-10" +
+      "00\022(\n\024zone_instances_limit\030\005 \001(\003B\n\372\3071\0060-" +
+      "1000\022\'\n\023zone_requests_limit\030\006 \001(\003B\n\372\3071\0060" +
+      "-1000J\004\010\003\020\004\"/\n\030SetScalingPolicyMetadata\022" +
+      "\023\n\013function_id\030\001 \001(\t\"h\n\032RemoveScalingPol" +
+      "icyRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
+      "\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]" +
+      "latest\"2\n\033RemoveScalingPolicyMetadata\022\023\n" +
+      "\013function_id\030\001 \001(\t2\304!\n\017FunctionService\022\236" +
+      "\001\n\003Get\0228.yandex.cloud.serverless.functio" +
+      "ns.v1.GetFunctionRequest\032..yandex.cloud." +
+      "serverless.functions.v1.Function\"-\202\323\344\223\002\'" +
+      "\022%/functions/v1/functions/{function_id}\022" +
+      "\240\001\n\004List\022:.yandex.cloud.serverless.funct" +
+      "ions.v1.ListFunctionsRequest\032;.yandex.cl" +
+      "oud.serverless.functions.v1.ListFunction" +
+      "sResponse\"\037\202\323\344\223\002\031\022\027/functions/v1/functio" +
+      "ns\022\262\001\n\006Create\022;.yandex.cloud.serverless." +
+      "functions.v1.CreateFunctionRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"H\202\323\344\223\002\034\"\027/" +
+      "functions/v1/functions:\001*\262\322*\"\n\026CreateFun" +
+      "ctionMetadata\022\010Function\022\300\001\n\006Update\022;.yan" +
+      "dex.cloud.serverless.functions.v1.Update" +
+      "FunctionRequest\032!.yandex.cloud.operation" +
+      ".Operation\"V\202\323\344\223\002*2%/functions/v1/functi" +
+      "ons/{function_id}:\001*\262\322*\"\n\026UpdateFunction" +
+      "Metadata\022\010Function\022\312\001\n\006Delete\022;.yandex.c" +
+      "loud.serverless.functions.v1.DeleteFunct" +
+      "ionRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"`\202\323\344\223\002\'*%/functions/v1/functions/{" +
+      "function_id}\262\322*/\n\026DeleteFunctionMetadata" +
+      "\022\025google.protobuf.Empty\022\262\001\n\nGetVersion\022?" +
+      ".yandex.cloud.serverless.functions.v1.Ge" +
+      "tFunctionVersionRequest\032-.yandex.cloud.s" +
+      "erverless.functions.v1.Version\"4\202\323\344\223\002.\022," +
+      "/functions/v1/versions/{function_version" +
+      "_id}\022\254\001\n\017GetVersionByTag\022D.yandex.cloud." +
+      "serverless.functions.v1.GetFunctionVersi" +
+      "onByTagRequest\032-.yandex.cloud.serverless" +
+      ".functions.v1.Version\"$\202\323\344\223\002\036\022\034/function" +
+      "s/v1/versions:byTag\022\267\001\n\014ListVersions\022B.y" +
+      "andex.cloud.serverless.functions.v1.List" +
+      "FunctionsVersionsRequest\032C.yandex.cloud." +
+      "serverless.functions.v1.ListFunctionsVer" +
+      "sionsResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/ver" +
+      "sions\022\346\001\n\rDeleteVersion\022B.yandex.cloud.s" +
+      "erverless.functions.v1.DeleteFunctionVer" +
+      "sionRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"n\202\323\344\223\002.*,/functions/v1/versions/{" +
+      "function_version_id}\262\322*6\n\035DeleteFunction" +
+      "VersionMetadata\022\025google.protobuf.Empty\022\315" +
+      "\001\n\006SetTag\022;.yandex.cloud.serverless.func" +
+      "tions.v1.SetFunctionTagRequest\032!.yandex." +
+      "cloud.operation.Operation\"c\202\323\344\223\0028\"3/func" +
+      "tions/v1/versions/{function_version_id}:" +
+      "setTag:\001*\262\322*!\n\026SetFunctionTagMetadata\022\007V" +
+      "ersion\022\331\001\n\tRemoveTag\022>.yandex.cloud.serv" +
+      "erless.functions.v1.RemoveFunctionTagReq" +
       "uest\032!.yandex.cloud.operation.Operation\"" +
-      "n\202\323\344\223\002;\"6/functions/v1/functions/{functi" +
-      "on_id}:setScalingPolicy:\001*\262\322*)\n\030SetScali" +
-      "ngPolicyMetadata\022\rScalingPolicy\022\370\001\n\023Remo" +
-      "veScalingPolicy\022@.yandex.cloud.serverles" +
-      "s.functions.v1.RemoveScalingPolicyReques" +
-      "t\032!.yandex.cloud.operation.Operation\"|\202\323" +
-      "\344\223\002>\"9/functions/v1/functions/{function_" +
-      "id}:removeScalingPolicy:\001*\262\322*4\n\033RemoveSc" +
-      "alingPolicyMetadata\022\025google.protobuf.Emp" +
-      "tyB~\n(yandex.cloud.api.serverless.functi" +
-      "ons.v1ZRgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/serverless/functions/v1" +
-      ";functionsb\006proto3"
+      "i\202\323\344\223\002;\"6/functions/v1/versions/{functio" +
+      "n_version_id}:removeTag:\001*\262\322*$\n\031RemoveFu" +
+      "nctionTagMetadata\022\007Version\022\325\001\n\016ListTagHi" +
+      "story\022C.yandex.cloud.serverless.function" +
+      "s.v1.ListFunctionTagHistoryRequest\032D.yan" +
+      "dex.cloud.serverless.functions.v1.ListFu" +
+      "nctionTagHistoryResponse\"8\202\323\344\223\0022\0220/funct" +
+      "ions/v1/functions/{function_id}:tagHisto" +
+      "ry\022\305\001\n\rCreateVersion\022B.yandex.cloud.serv" +
+      "erless.functions.v1.CreateFunctionVersio" +
+      "nRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"M\202\323\344\223\002\033\"\026/functions/v1/versions:\001*\262\322" +
+      "*(\n\035CreateFunctionVersionMetadata\022\007Versi" +
+      "on\022\245\001\n\014ListRuntimes\0229.yandex.cloud.serve" +
+      "rless.functions.v1.ListRuntimesRequest\032:" +
+      ".yandex.cloud.serverless.functions.v1.Li" +
+      "stRuntimesResponse\"\036\202\323\344\223\002\030\022\026/functions/v" +
+      "1/runtimes\022\325\001\n\016ListOperations\022C.yandex.c" +
+      "loud.serverless.functions.v1.ListFunctio" +
+      "nOperationsRequest\032D.yandex.cloud.server" +
+      "less.functions.v1.ListFunctionOperations" +
+      "Response\"8\202\323\344\223\0022\0220/functions/v1/function" +
+      "s/{function_id}/operations\022\267\001\n\022ListAcces" +
+      "sBindings\022..yandex.cloud.access.ListAcce" +
+      "ssBindingsRequest\032/.yandex.cloud.access." +
+      "ListAccessBindingsResponse\"@\202\323\344\223\002:\0228/fun" +
+      "ctions/v1/functions/{resource_id}:listAc" +
+      "cessBindings\022\346\001\n\021SetAccessBindings\022-.yan" +
+      "dex.cloud.access.SetAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\177\202\323" +
+      "\344\223\002<\"7/functions/v1/functions/{resource_" +
+      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
+      "AccessBindingsMetadata\022\025google.protobuf." +
+      "Empty\022\363\001\n\024UpdateAccessBindings\0220.yandex." +
+      "cloud.access.UpdateAccessBindingsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\205\001\202\323" +
+      "\344\223\002?\":/functions/v1/functions/{resource_" +
+      "id}:updateAccessBindings:\001*\262\322*<\n#access." +
+      "UpdateAccessBindingsMetadata\022\025google.pro" +
+      "tobuf.Empty\022\331\001\n\023ListScalingPolicies\022@.ya" +
+      "ndex.cloud.serverless.functions.v1.ListS" +
+      "calingPoliciesRequest\032A.yandex.cloud.ser" +
+      "verless.functions.v1.ListScalingPolicies" +
+      "Response\"=\202\323\344\223\0027\0225/functions/v1/function" +
+      "s/{function_id}/scalingPolicies\022\344\001\n\020SetS" +
+      "calingPolicy\022=.yandex.cloud.serverless.f" +
+      "unctions.v1.SetScalingPolicyRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"n\202\323\344\223\002;\"6" +
+      "/functions/v1/functions/{function_id}:se" +
+      "tScalingPolicy:\001*\262\322*)\n\030SetScalingPolicyM" +
+      "etadata\022\rScalingPolicy\022\370\001\n\023RemoveScaling" +
+      "Policy\022@.yandex.cloud.serverless.functio" +
+      "ns.v1.RemoveScalingPolicyRequest\032!.yande" +
+      "x.cloud.operation.Operation\"|\202\323\344\223\002>\"9/fu" +
+      "nctions/v1/functions/{function_id}:remov" +
+      "eScalingPolicy:\001*\262\322*4\n\033RemoveScalingPoli" +
+      "cyMetadata\022\025google.protobuf.EmptyB~\n(yan" +
+      "dex.cloud.api.serverless.functions.v1ZRg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/serverless/functions/v1;function" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35774,7 +35866,7 @@ public final class FunctionServiceOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor,
-        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "VersionId", "Environment", "Tag", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "PackageSource", });
+        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "VersionId", "Environment", "Tag", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", "PackageSource", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_fieldAccessorTable = new

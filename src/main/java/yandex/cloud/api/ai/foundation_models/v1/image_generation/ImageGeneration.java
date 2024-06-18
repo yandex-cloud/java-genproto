@@ -718,6 +718,606 @@ public final class ImageGeneration {
 
   }
 
+  public interface AspectRatioOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Weight of width in image.
+     * </pre>
+     *
+     * <code>int64 width_ratio = 1;</code>
+     * @return The widthRatio.
+     */
+    long getWidthRatio();
+
+    /**
+     * <pre>
+     * Weight of height in image.
+     * </pre>
+     *
+     * <code>int64 height_ratio = 2;</code>
+     * @return The heightRatio.
+     */
+    long getHeightRatio();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio}
+   */
+  public static final class AspectRatio extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio)
+      AspectRatioOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AspectRatio.newBuilder() to construct.
+    private AspectRatio(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AspectRatio() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AspectRatio();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AspectRatio(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              widthRatio_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              heightRatio_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.class, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder.class);
+    }
+
+    public static final int WIDTH_RATIO_FIELD_NUMBER = 1;
+    private long widthRatio_;
+    /**
+     * <pre>
+     * Weight of width in image.
+     * </pre>
+     *
+     * <code>int64 width_ratio = 1;</code>
+     * @return The widthRatio.
+     */
+    @java.lang.Override
+    public long getWidthRatio() {
+      return widthRatio_;
+    }
+
+    public static final int HEIGHT_RATIO_FIELD_NUMBER = 2;
+    private long heightRatio_;
+    /**
+     * <pre>
+     * Weight of height in image.
+     * </pre>
+     *
+     * <code>int64 height_ratio = 2;</code>
+     * @return The heightRatio.
+     */
+    @java.lang.Override
+    public long getHeightRatio() {
+      return heightRatio_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (widthRatio_ != 0L) {
+        output.writeInt64(1, widthRatio_);
+      }
+      if (heightRatio_ != 0L) {
+        output.writeInt64(2, heightRatio_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (widthRatio_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, widthRatio_);
+      }
+      if (heightRatio_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, heightRatio_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio other = (yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio) obj;
+
+      if (getWidthRatio()
+          != other.getWidthRatio()) return false;
+      if (getHeightRatio()
+          != other.getHeightRatio()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WIDTH_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWidthRatio());
+      hash = (37 * hash) + HEIGHT_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeightRatio());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio)
+        yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.class, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        widthRatio_ = 0L;
+
+        heightRatio_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio build() {
+        yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio result = new yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio(this);
+        result.widthRatio_ = widthRatio_;
+        result.heightRatio_ = heightRatio_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.getDefaultInstance()) return this;
+        if (other.getWidthRatio() != 0L) {
+          setWidthRatio(other.getWidthRatio());
+        }
+        if (other.getHeightRatio() != 0L) {
+          setHeightRatio(other.getHeightRatio());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long widthRatio_ ;
+      /**
+       * <pre>
+       * Weight of width in image.
+       * </pre>
+       *
+       * <code>int64 width_ratio = 1;</code>
+       * @return The widthRatio.
+       */
+      @java.lang.Override
+      public long getWidthRatio() {
+        return widthRatio_;
+      }
+      /**
+       * <pre>
+       * Weight of width in image.
+       * </pre>
+       *
+       * <code>int64 width_ratio = 1;</code>
+       * @param value The widthRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWidthRatio(long value) {
+        
+        widthRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Weight of width in image.
+       * </pre>
+       *
+       * <code>int64 width_ratio = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWidthRatio() {
+        
+        widthRatio_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long heightRatio_ ;
+      /**
+       * <pre>
+       * Weight of height in image.
+       * </pre>
+       *
+       * <code>int64 height_ratio = 2;</code>
+       * @return The heightRatio.
+       */
+      @java.lang.Override
+      public long getHeightRatio() {
+        return heightRatio_;
+      }
+      /**
+       * <pre>
+       * Weight of height in image.
+       * </pre>
+       *
+       * <code>int64 height_ratio = 2;</code>
+       * @param value The heightRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeightRatio(long value) {
+        
+        heightRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Weight of height in image.
+       * </pre>
+       *
+       * <code>int64 height_ratio = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeightRatio() {
+        
+        heightRatio_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio)
+    private static final yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AspectRatio>
+        PARSER = new com.google.protobuf.AbstractParser<AspectRatio>() {
+      @java.lang.Override
+      public AspectRatio parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AspectRatio(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AspectRatio> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AspectRatio> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ImageGenerationOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -751,6 +1351,33 @@ public final class ImageGeneration {
      * @return The seed.
      */
     long getSeed();
+
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     * @return Whether the aspectRatio field is set.
+     */
+    boolean hasAspectRatio();
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     * @return The aspectRatio.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getAspectRatio();
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder getAspectRatioOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.image_generation.ImageGenerationOptions}
@@ -807,6 +1434,19 @@ public final class ImageGeneration {
             case 16: {
 
               seed_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder subBuilder = null;
+              if (aspectRatio_ != null) {
+                subBuilder = aspectRatio_.toBuilder();
+              }
+              aspectRatio_ = input.readMessage(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(aspectRatio_);
+                aspectRatio_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -902,6 +1542,44 @@ public final class ImageGeneration {
       return seed_;
     }
 
+    public static final int ASPECT_RATIO_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio aspectRatio_;
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     * @return Whether the aspectRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasAspectRatio() {
+      return aspectRatio_ != null;
+    }
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     * @return The aspectRatio.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getAspectRatio() {
+      return aspectRatio_ == null ? yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.getDefaultInstance() : aspectRatio_;
+    }
+    /**
+     * <pre>
+     * Aspect ratio of generated image.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder getAspectRatioOrBuilder() {
+      return getAspectRatio();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -922,6 +1600,9 @@ public final class ImageGeneration {
       if (seed_ != 0L) {
         output.writeInt64(2, seed_);
       }
+      if (aspectRatio_ != null) {
+        output.writeMessage(3, getAspectRatio());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -937,6 +1618,10 @@ public final class ImageGeneration {
       if (seed_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, seed_);
+      }
+      if (aspectRatio_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAspectRatio());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -957,6 +1642,11 @@ public final class ImageGeneration {
           .equals(other.getMimeType())) return false;
       if (getSeed()
           != other.getSeed()) return false;
+      if (hasAspectRatio() != other.hasAspectRatio()) return false;
+      if (hasAspectRatio()) {
+        if (!getAspectRatio()
+            .equals(other.getAspectRatio())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -973,6 +1663,10 @@ public final class ImageGeneration {
       hash = (37 * hash) + SEED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSeed());
+      if (hasAspectRatio()) {
+        hash = (37 * hash) + ASPECT_RATIO_FIELD_NUMBER;
+        hash = (53 * hash) + getAspectRatio().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1110,6 +1804,12 @@ public final class ImageGeneration {
 
         seed_ = 0L;
 
+        if (aspectRatioBuilder_ == null) {
+          aspectRatio_ = null;
+        } else {
+          aspectRatio_ = null;
+          aspectRatioBuilder_ = null;
+        }
         return this;
       }
 
@@ -1138,6 +1838,11 @@ public final class ImageGeneration {
         yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions result = new yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.ImageGenerationOptions(this);
         result.mimeType_ = mimeType_;
         result.seed_ = seed_;
+        if (aspectRatioBuilder_ == null) {
+          result.aspectRatio_ = aspectRatio_;
+        } else {
+          result.aspectRatio_ = aspectRatioBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1192,6 +1897,9 @@ public final class ImageGeneration {
         }
         if (other.getSeed() != 0L) {
           setSeed(other.getSeed());
+        }
+        if (other.hasAspectRatio()) {
+          mergeAspectRatio(other.getAspectRatio());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1360,6 +2068,161 @@ public final class ImageGeneration {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio aspectRatio_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder> aspectRatioBuilder_;
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       * @return Whether the aspectRatio field is set.
+       */
+      public boolean hasAspectRatio() {
+        return aspectRatioBuilder_ != null || aspectRatio_ != null;
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       * @return The aspectRatio.
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio getAspectRatio() {
+        if (aspectRatioBuilder_ == null) {
+          return aspectRatio_ == null ? yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.getDefaultInstance() : aspectRatio_;
+        } else {
+          return aspectRatioBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public Builder setAspectRatio(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio value) {
+        if (aspectRatioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          aspectRatio_ = value;
+          onChanged();
+        } else {
+          aspectRatioBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public Builder setAspectRatio(
+          yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder builderForValue) {
+        if (aspectRatioBuilder_ == null) {
+          aspectRatio_ = builderForValue.build();
+          onChanged();
+        } else {
+          aspectRatioBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public Builder mergeAspectRatio(yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio value) {
+        if (aspectRatioBuilder_ == null) {
+          if (aspectRatio_ != null) {
+            aspectRatio_ =
+              yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.newBuilder(aspectRatio_).mergeFrom(value).buildPartial();
+          } else {
+            aspectRatio_ = value;
+          }
+          onChanged();
+        } else {
+          aspectRatioBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public Builder clearAspectRatio() {
+        if (aspectRatioBuilder_ == null) {
+          aspectRatio_ = null;
+          onChanged();
+        } else {
+          aspectRatio_ = null;
+          aspectRatioBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder getAspectRatioBuilder() {
+        
+        onChanged();
+        return getAspectRatioFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder getAspectRatioOrBuilder() {
+        if (aspectRatioBuilder_ != null) {
+          return aspectRatioBuilder_.getMessageOrBuilder();
+        } else {
+          return aspectRatio_ == null ?
+              yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.getDefaultInstance() : aspectRatio_;
+        }
+      }
+      /**
+       * <pre>
+       * Aspect ratio of generated image.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.image_generation.AspectRatio aspect_ratio = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder> 
+          getAspectRatioFieldBuilder() {
+        if (aspectRatioBuilder_ == null) {
+          aspectRatioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatio.Builder, yandex.cloud.api.ai.foundation_models.v1.image_generation.ImageGeneration.AspectRatioOrBuilder>(
+                  getAspectRatio(),
+                  getParentForChildren(),
+                  isClean());
+          aspectRatio_ = null;
+        }
+        return aspectRatioBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1419,6 +2282,11 @@ public final class ImageGeneration {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_Message_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_ImageGenerationOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1436,13 +2304,16 @@ public final class ImageGeneration {
       "mage_generation/image_generation.proto\0225" +
       "yandex.cloud.ai.foundation_models.v1.ima" +
       "ge_generation\"\'\n\007Message\022\014\n\004text\030\001 \001(\t\022\016" +
-      "\n\006weight\030\002 \001(\001\"9\n\026ImageGenerationOptions" +
-      "\022\021\n\tmime_type\030\001 \001(\t\022\014\n\004seed\030\002 \001(\003B\247\001\n9ya" +
-      "ndex.cloud.api.ai.foundation_models.v1.i" +
-      "mage_generationZjgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/ai/foundation_" +
-      "models/v1/image_generation;image_generat" +
-      "ionb\006proto3"
+      "\n\006weight\030\002 \001(\001\"8\n\013AspectRatio\022\023\n\013width_r" +
+      "atio\030\001 \001(\003\022\024\n\014height_ratio\030\002 \001(\003\"\223\001\n\026Ima" +
+      "geGenerationOptions\022\021\n\tmime_type\030\001 \001(\t\022\014" +
+      "\n\004seed\030\002 \001(\003\022X\n\014aspect_ratio\030\003 \001(\0132B.yan" +
+      "dex.cloud.ai.foundation_models.v1.image_" +
+      "generation.AspectRatioB\247\001\n9yandex.cloud." +
+      "api.ai.foundation_models.v1.image_genera" +
+      "tionZjgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/ai/foundation_models/v1/i" +
+      "mage_generation;image_generationb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1454,12 +2325,18 @@ public final class ImageGeneration {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_Message_descriptor,
         new java.lang.String[] { "Text", "Weight", });
-    internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_ImageGenerationOptions_descriptor =
+    internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_AspectRatio_descriptor,
+        new java.lang.String[] { "WidthRatio", "HeightRatio", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_ImageGenerationOptions_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_ImageGenerationOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_image_generation_ImageGenerationOptions_descriptor,
-        new java.lang.String[] { "MimeType", "Seed", });
+        new java.lang.String[] { "MimeType", "Seed", "AspectRatio", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
