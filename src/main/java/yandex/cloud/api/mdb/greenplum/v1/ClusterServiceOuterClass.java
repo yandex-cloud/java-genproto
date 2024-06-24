@@ -15438,6 +15438,36 @@ public final class ClusterServiceOuterClass {
      * @return The duration.
      */
     long getDuration();
+
+    /**
+     * <pre>
+     * Redistribute process parallelilsm, 0 - for automatic detection
+     * </pre>
+     *
+     * <code>int64 parallel = 5;</code>
+     * @return The parallel.
+     */
+    long getParallel();
+
+    /**
+     * <pre>
+     * Deny all client connections during the expand operation
+     * </pre>
+     *
+     * <code>bool close_cluster = 6;</code>
+     * @return The closeCluster.
+     */
+    boolean getCloseCluster();
+
+    /**
+     * <pre>
+     * Perfrom redistribution process by small chunks as background activity
+     * </pre>
+     *
+     * <code>bool delay_redistribution = 7;</code>
+     * @return The delayRedistribution.
+     */
+    boolean getDelayRedistribution();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.ExpandRequest}
@@ -15504,6 +15534,21 @@ public final class ClusterServiceOuterClass {
             case 32: {
 
               duration_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              parallel_ = input.readInt64();
+              break;
+            }
+            case 48: {
+
+              closeCluster_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              delayRedistribution_ = input.readBool();
               break;
             }
             default: {
@@ -15631,6 +15676,51 @@ public final class ClusterServiceOuterClass {
       return duration_;
     }
 
+    public static final int PARALLEL_FIELD_NUMBER = 5;
+    private long parallel_;
+    /**
+     * <pre>
+     * Redistribute process parallelilsm, 0 - for automatic detection
+     * </pre>
+     *
+     * <code>int64 parallel = 5;</code>
+     * @return The parallel.
+     */
+    @java.lang.Override
+    public long getParallel() {
+      return parallel_;
+    }
+
+    public static final int CLOSE_CLUSTER_FIELD_NUMBER = 6;
+    private boolean closeCluster_;
+    /**
+     * <pre>
+     * Deny all client connections during the expand operation
+     * </pre>
+     *
+     * <code>bool close_cluster = 6;</code>
+     * @return The closeCluster.
+     */
+    @java.lang.Override
+    public boolean getCloseCluster() {
+      return closeCluster_;
+    }
+
+    public static final int DELAY_REDISTRIBUTION_FIELD_NUMBER = 7;
+    private boolean delayRedistribution_;
+    /**
+     * <pre>
+     * Perfrom redistribution process by small chunks as background activity
+     * </pre>
+     *
+     * <code>bool delay_redistribution = 7;</code>
+     * @return The delayRedistribution.
+     */
+    @java.lang.Override
+    public boolean getDelayRedistribution() {
+      return delayRedistribution_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15657,6 +15747,15 @@ public final class ClusterServiceOuterClass {
       if (duration_ != 0L) {
         output.writeInt64(4, duration_);
       }
+      if (parallel_ != 0L) {
+        output.writeInt64(5, parallel_);
+      }
+      if (closeCluster_ != false) {
+        output.writeBool(6, closeCluster_);
+      }
+      if (delayRedistribution_ != false) {
+        output.writeBool(7, delayRedistribution_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15681,6 +15780,18 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, duration_);
       }
+      if (parallel_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, parallel_);
+      }
+      if (closeCluster_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, closeCluster_);
+      }
+      if (delayRedistribution_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, delayRedistribution_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15704,6 +15815,12 @@ public final class ClusterServiceOuterClass {
           != other.getAddSegmentsPerHostCount()) return false;
       if (getDuration()
           != other.getDuration()) return false;
+      if (getParallel()
+          != other.getParallel()) return false;
+      if (getCloseCluster()
+          != other.getCloseCluster()) return false;
+      if (getDelayRedistribution()
+          != other.getDelayRedistribution()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15726,6 +15843,15 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDuration());
+      hash = (37 * hash) + PARALLEL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getParallel());
+      hash = (37 * hash) + CLOSE_CLUSTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCloseCluster());
+      hash = (37 * hash) + DELAY_REDISTRIBUTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDelayRedistribution());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15867,6 +15993,12 @@ public final class ClusterServiceOuterClass {
 
         duration_ = 0L;
 
+        parallel_ = 0L;
+
+        closeCluster_ = false;
+
+        delayRedistribution_ = false;
+
         return this;
       }
 
@@ -15897,6 +16029,9 @@ public final class ClusterServiceOuterClass {
         result.segmentHostCount_ = segmentHostCount_;
         result.addSegmentsPerHostCount_ = addSegmentsPerHostCount_;
         result.duration_ = duration_;
+        result.parallel_ = parallel_;
+        result.closeCluster_ = closeCluster_;
+        result.delayRedistribution_ = delayRedistribution_;
         onBuilt();
         return result;
       }
@@ -15957,6 +16092,15 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getDuration() != 0L) {
           setDuration(other.getDuration());
+        }
+        if (other.getParallel() != 0L) {
+          setParallel(other.getParallel());
+        }
+        if (other.getCloseCluster() != false) {
+          setCloseCluster(other.getCloseCluster());
+        }
+        if (other.getDelayRedistribution() != false) {
+          setDelayRedistribution(other.getDelayRedistribution());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16213,6 +16357,135 @@ public final class ClusterServiceOuterClass {
       public Builder clearDuration() {
         
         duration_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long parallel_ ;
+      /**
+       * <pre>
+       * Redistribute process parallelilsm, 0 - for automatic detection
+       * </pre>
+       *
+       * <code>int64 parallel = 5;</code>
+       * @return The parallel.
+       */
+      @java.lang.Override
+      public long getParallel() {
+        return parallel_;
+      }
+      /**
+       * <pre>
+       * Redistribute process parallelilsm, 0 - for automatic detection
+       * </pre>
+       *
+       * <code>int64 parallel = 5;</code>
+       * @param value The parallel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParallel(long value) {
+        
+        parallel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Redistribute process parallelilsm, 0 - for automatic detection
+       * </pre>
+       *
+       * <code>int64 parallel = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParallel() {
+        
+        parallel_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean closeCluster_ ;
+      /**
+       * <pre>
+       * Deny all client connections during the expand operation
+       * </pre>
+       *
+       * <code>bool close_cluster = 6;</code>
+       * @return The closeCluster.
+       */
+      @java.lang.Override
+      public boolean getCloseCluster() {
+        return closeCluster_;
+      }
+      /**
+       * <pre>
+       * Deny all client connections during the expand operation
+       * </pre>
+       *
+       * <code>bool close_cluster = 6;</code>
+       * @param value The closeCluster to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloseCluster(boolean value) {
+        
+        closeCluster_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deny all client connections during the expand operation
+       * </pre>
+       *
+       * <code>bool close_cluster = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCloseCluster() {
+        
+        closeCluster_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean delayRedistribution_ ;
+      /**
+       * <pre>
+       * Perfrom redistribution process by small chunks as background activity
+       * </pre>
+       *
+       * <code>bool delay_redistribution = 7;</code>
+       * @return The delayRedistribution.
+       */
+      @java.lang.Override
+      public boolean getDelayRedistribution() {
+        return delayRedistribution_;
+      }
+      /**
+       * <pre>
+       * Perfrom redistribution process by small chunks as background activity
+       * </pre>
+       *
+       * <code>bool delay_redistribution = 7;</code>
+       * @param value The delayRedistribution to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelayRedistribution(boolean value) {
+        
+        delayRedistribution_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Perfrom redistribution process by small chunks as background activity
+       * </pre>
+       *
+       * <code>bool delay_redistribution = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelayRedistribution() {
+        
+        delayRedistribution_ = false;
         onChanged();
         return this;
       }
@@ -41902,182 +42175,184 @@ public final class ClusterServiceOuterClass {
       "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010" +
       "\016\020\017J\004\010\020\020\021J\004\010\t\020\r\"+\n\025UpdateClusterMetadata" +
       "\022\022\n\ncluster_id\030\001 \001(\t\"-\n\027AddClusterHostsM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"\204\001\n\rExpandRe" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"\313\001\n\rExpandRe" +
       "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "\032\n\022segment_host_count\030\002 \001(\003\022#\n\033add_segme" +
       "nts_per_host_count\030\003 \001(\003\022\020\n\010duration\030\004 \001" +
-      "(\003\"8\n\024DeleteClusterRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartCluste" +
-      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"*\n\024StartClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034ListCluster" +
-      "OperationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035Lis" +
-      "tClusterOperationsResponse\0225\n\noperations" +
-      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListCluste" +
-      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClu" +
-      "sterHostsResponse\0222\n\005hosts\030\001 \003(\0132#.yande" +
-      "x.cloud.mdb.greenplum.v1.Host\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"Y\n\032MasterSubclusterConfig" +
-      "Spec\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.m" +
-      "db.greenplum.v1.Resources\"Z\n\033SegmentSubc" +
-      "lusterConfigSpec\022;\n\tresources\030\001 \001(\0132(.ya" +
-      "ndex.cloud.mdb.greenplum.v1.Resources\"j\n" +
-      "\027ListClusterLogsResponse\0226\n\004logs\030\001 \003(\0132(" +
-      ".yandex.cloud.mdb.greenplum.v1.LogRecord" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"\262\001\n\tLogRecord\022" +
-      "-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022F\n\007message\030\002 \003(\01325.yandex.cloud.m" +
-      "db.greenplum.v1.LogRecord.MessageEntry\032." +
-      "\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\345\003\n\026ListClusterLogsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fi" +
-      "lter\030\002 \003(\t\022W\n\014service_type\030\003 \001(\0162A.yande" +
-      "x.cloud.mdb.greenplum.v1.ListClusterLogs" +
-      "Request.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\007to_time\030\005 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_" +
-      "size\030\006 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\007 \001" +
-      "(\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030" +
-      "\010 \001(\010\022\032\n\006filter\030\t \001(\tB\n\212\3101\006<=1000\"c\n\013Ser" +
-      "viceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r" +
-      "\n\tGREENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021\n\rG" +
-      "REENPLUM_PXF\020\003\"{\n\031ListClusterBackupsRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"f\n\017StreamLogRecord\0228" +
-      "\n\006record\030\001 \001(\0132(.yandex.cloud.mdb.greenp" +
-      "lum.v1.LogRecord\022\031\n\021next_record_token\030\002 " +
-      "\001(\t\"\254\003\n\030StreamClusterLogsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
-      "ter\030\002 \003(\t\022Y\n\014service_type\030\003 \001(\0162C.yandex" +
-      ".cloud.mdb.greenplum.v1.StreamClusterLog" +
-      "sRequest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022+\n\007to_time\030\005" +
-      " \001(\0132\032.google.protobuf.Timestamp\022\037\n\014reco" +
-      "rd_token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(" +
-      "\tB\n\212\3101\006<=1000\"c\n\013ServiceType\022\034\n\030SERVICE_" +
-      "TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GRE" +
-      "ENPLUM_POOLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"m\n\032Li" +
-      "stClusterBackupsResponse\0226\n\007backups\030\001 \003(" +
-      "\0132%.yandex.cloud.mdb.greenplum.v1.Backup" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"8\n\024BackupClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\">\n\025BackupClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\221\010\n\025RestoreC" +
-      "lusterRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022(" +
-      "\n\004time\030\020 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004nam" +
-      "e\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
-      "\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labe" +
-      "ls\030\005 \003(\0132@.yandex.cloud.mdb.greenplum.v1" +
-      ".RestoreClusterRequest.LabelsEntryB?\202\3101\004" +
-      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101" +
-      "\022\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\006 \001(\016" +
-      "22.yandex.cloud.mdb.greenplum.v1.Cluster" +
-      ".EnvironmentB\004\350\3071\001\022E\n\006config\030\007 \001(\01325.yan" +
-      "dex.cloud.mdb.greenplum.v1.GreenplumRest" +
-      "oreConfig\022B\n\020master_resources\030\010 \001(\0132(.ya" +
-      "ndex.cloud.mdb.greenplum.v1.Resources\022C\n" +
-      "\021segment_resources\030\t \001(\0132(.yandex.cloud." +
-      "mdb.greenplum.v1.Resources\022 \n\nnetwork_id" +
-      "\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_i" +
-      "ds\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010\022\026\n" +
-      "\016host_group_ids\030\r \003(\t\022\032\n\022placement_group" +
-      "_id\030\016 \001(\t\022L\n\022maintenance_window\030\017 \001(\01320." +
-      "yandex.cloud.mdb.greenplum.v1.Maintenanc" +
-      "eWindow\022\032\n\022segment_host_count\030\021 \001(\003\022\027\n\017s" +
-      "egment_in_host\030\022 \001(\003\022R\n\014restore_only\030\023 \003" +
-      "(\tB<\202\3101\004<=50\212\3101\005<=256\362\3071\'[a-zA-Z0-9\\*_]*" +
-      "(\\/[a-zA-Z0-9\\*_]*){0,2}\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Resto" +
-      "reClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n" +
-      "\tbackup_id\030\002 \001(\t2\310\027\n\016ClusterService\022\224\001\n\003" +
-      "Get\0220.yandex.cloud.mdb.greenplum.v1.GetC" +
-      "lusterRequest\032&.yandex.cloud.mdb.greenpl" +
-      "um.v1.Cluster\"3\202\323\344\223\002-\022+/managed-greenplu" +
-      "m/v1/clusters/{cluster_id}\022\227\001\n\004List\0222.ya" +
-      "ndex.cloud.mdb.greenplum.v1.ListClusters" +
-      "Request\0323.yandex.cloud.mdb.greenplum.v1." +
-      "ListClustersResponse\"&\202\323\344\223\002 \022\036/managed-g" +
-      "reenplum/v1/clusters\022\257\001\n\006Create\0223.yandex" +
-      ".cloud.mdb.greenplum.v1.CreateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "M\202\323\344\223\002#\"\036/managed-greenplum/v1/clusters:" +
-      "\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022\274" +
-      "\001\n\006Update\0223.yandex.cloud.mdb.greenplum.v" +
-      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"Z\202\323\344\223\00202+/managed-gree" +
-      "nplum/v1/clusters/{cluster_id}:\001*\262\322* \n\025U" +
-      "pdateClusterMetadata\022\007Cluster\022\276\001\n\006Expand" +
-      "\022,.yandex.cloud.mdb.greenplum.v1.ExpandR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"c\202\323\344\223\0027\"2/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}/expand:\001*\262\322*\"\n\027AddCluster" +
-      "HostsMetadata\022\007Cluster\022\307\001\n\006Delete\0223.yand" +
-      "ex.cloud.mdb.greenplum.v1.DeleteClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"e\202\323\344\223\002-*+/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}\262\322*.\n\025DeleteClusterMetadat" +
-      "a\022\025google.protobuf.Empty\022\274\001\n\005Start\0222.yan" +
-      "dex.cloud.mdb.greenplum.v1.StartClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"\\\202\323\344\223\0023\"1/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}:start\262\322*\037\n\024StartClusterMe" +
-      "tadata\022\007Cluster\022\270\001\n\004Stop\0221.yandex.cloud." +
-      "mdb.greenplum.v1.StopClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"Z\202\323\344\223\0022\"0" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clust" +
-      "er\022\313\001\n\016ListOperations\022;.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterOperationsReque" +
-      "st\032<.yandex.cloud.mdb.greenplum.v1.ListC" +
-      "lusterOperationsResponse\">\202\323\344\223\0028\0226/manag" +
-      "ed-greenplum/v1/clusters/{cluster_id}/op" +
-      "erations\022\304\001\n\017ListMasterHosts\0226.yandex.cl" +
-      "oud.mdb.greenplum.v1.ListClusterHostsReq" +
-      "uest\0327.yandex.cloud.mdb.greenplum.v1.Lis" +
-      "tClusterHostsResponse\"@\202\323\344\223\002:\0228/managed-" +
-      "greenplum/v1/clusters/{cluster_id}/maste" +
-      "r-hosts\022\306\001\n\020ListSegmentHosts\0226.yandex.cl" +
-      "oud.mdb.greenplum.v1.ListClusterHostsReq" +
-      "uest\0327.yandex.cloud.mdb.greenplum.v1.Lis" +
-      "tClusterHostsResponse\"A\202\323\344\223\002;\0229/managed-" +
-      "greenplum/v1/clusters/{cluster_id}/segme" +
-      "nt-hosts\022\263\001\n\010ListLogs\0225.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterLogsRequest\0326.y" +
-      "andex.cloud.mdb.greenplum.v1.ListCluster" +
-      "LogsResponse\"8\202\323\344\223\0022\0220/managed-greenplum" +
-      "/v1/clusters/{cluster_id}:logs\022\270\001\n\nStrea" +
-      "mLogs\0227.yandex.cloud.mdb.greenplum.v1.St" +
-      "reamClusterLogsRequest\032..yandex.cloud.md" +
-      "b.greenplum.v1.StreamLogRecord\"?\202\323\344\223\0029\0227" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}:stream_logs0\001\022\277\001\n\013ListBackups\0228.yand" +
-      "ex.cloud.mdb.greenplum.v1.ListClusterBac" +
-      "kupsRequest\0329.yandex.cloud.mdb.greenplum" +
-      ".v1.ListClusterBackupsResponse\";\202\323\344\223\0025\0223" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}/backups\022\300\001\n\006Backup\0223.yandex.cloud.md" +
-      "b.greenplum.v1.BackupClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"^\202\323\344\223\0024\"2" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}:backup\262\322* \n\025BackupClusterMetadata\022\007C" +
-      "luster\022\272\001\n\007Restore\0224.yandex.cloud.mdb.gr" +
-      "eenplum.v1.RestoreClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"V\202\323\344\223\002+\"&/ma" +
-      "naged-greenplum/v1/clusters:restore:\001*\262\322" +
-      "*!\n\026RestoreClusterMetadata\022\007ClusterBp\n!y" +
-      "andex.cloud.api.mdb.greenplum.v1ZKgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/greenplum/v1;greenplumb\006proto3"
+      "(\003\022\020\n\010parallel\030\005 \001(\003\022\025\n\rclose_cluster\030\006 " +
+      "\001(\010\022\034\n\024delay_redistribution\030\007 \001(\010\"8\n\024Del" +
+      "eteClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"7\n\023StartClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024Sta" +
+      "rtClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n" +
+      "\022StopClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\"~\n\034ListClusterOperation" +
+      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterO" +
+      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
+      "yandex.cloud.operation.Operation\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"y\n\027ListClusterHostsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"g\n\030ListClusterHosts" +
+      "Response\0222\n\005hosts\030\001 \003(\0132#.yandex.cloud.m" +
+      "db.greenplum.v1.Host\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"Y\n\032MasterSubclusterConfigSpec\022;\n\tr" +
+      "esources\030\001 \001(\0132(.yandex.cloud.mdb.greenp" +
+      "lum.v1.Resources\"Z\n\033SegmentSubclusterCon" +
+      "figSpec\022;\n\tresources\030\001 \001(\0132(.yandex.clou" +
+      "d.mdb.greenplum.v1.Resources\"j\n\027ListClus" +
+      "terLogsResponse\0226\n\004logs\030\001 \003(\0132(.yandex.c" +
+      "loud.mdb.greenplum.v1.LogRecord\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimest" +
+      "amp\030\001 \001(\0132\032.google.protobuf.Timestamp\022F\n" +
+      "\007message\030\002 \003(\01325.yandex.cloud.mdb.greenp" +
+      "lum.v1.LogRecord.MessageEntry\032.\n\014Message" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\345\003" +
+      "\n\026ListClusterLogsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(" +
+      "\t\022W\n\014service_type\030\003 \001(\0162A.yandex.cloud.m" +
+      "db.greenplum.v1.ListClusterLogsRequest.S" +
+      "erviceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<" +
+      "=100\022\036\n\026always_next_page_token\030\010 \001(\010\022\032\n\006" +
+      "filter\030\t \001(\tB\n\212\3101\006<=1000\"c\n\013ServiceType\022" +
+      "\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPL" +
+      "UM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021\n\rGREENPLUM_" +
+      "PXF\020\003\"{\n\031ListClusterBackupsRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"f\n\017StreamLogRecord\0228\n\006record\030" +
+      "\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.Lo" +
+      "gRecord\022\031\n\021next_record_token\030\002 \001(\t\"\254\003\n\030S" +
+      "treamClusterLogsRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t" +
+      "\022Y\n\014service_type\030\003 \001(\0162C.yandex.cloud.md" +
+      "b.greenplum.v1.StreamClusterLogsRequest." +
+      "ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\037\n\014record_token\030" +
+      "\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=" +
+      "1000\"c\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GREENPLUM_PO" +
+      "OLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"m\n\032ListCluster" +
+      "BackupsResponse\0226\n\007backups\030\001 \003(\0132%.yande" +
+      "x.cloud.mdb.greenplum.v1.Backup\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"8\n\024BackupClusterRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\">\n\025Ba" +
+      "ckupClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
+      "\021\n\tbackup_id\030\002 \001(\t\"\221\010\n\025RestoreClusterReq" +
+      "uest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\022(\n\004time\030\020 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\037\n\tfolde" +
+      "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\003 \001(\tB\036" +
+      "\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descri" +
+      "ption\030\004 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132" +
+      "@.yandex.cloud.mdb.greenplum.v1.RestoreC" +
+      "lusterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][" +
+      "-_0-9a-z]*\022M\n\013environment\030\006 \001(\01622.yandex" +
+      ".cloud.mdb.greenplum.v1.Cluster.Environm" +
+      "entB\004\350\3071\001\022E\n\006config\030\007 \001(\01325.yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumRestoreConfig" +
+      "\022B\n\020master_resources\030\010 \001(\0132(.yandex.clou" +
+      "d.mdb.greenplum.v1.Resources\022C\n\021segment_" +
+      "resources\030\t \001(\0132(.yandex.cloud.mdb.green" +
+      "plum.v1.Resources\022 \n\nnetwork_id\030\n \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003(\t\022" +
+      "\033\n\023deletion_protection\030\014 \001(\010\022\026\n\016host_gro" +
+      "up_ids\030\r \003(\t\022\032\n\022placement_group_id\030\016 \001(\t" +
+      "\022L\n\022maintenance_window\030\017 \001(\01320.yandex.cl" +
+      "oud.mdb.greenplum.v1.MaintenanceWindow\022\032" +
+      "\n\022segment_host_count\030\021 \001(\003\022\027\n\017segment_in" +
+      "_host\030\022 \001(\003\022R\n\014restore_only\030\023 \003(\tB<\202\3101\004<" +
+      "=50\212\3101\005<=256\362\3071\'[a-zA-Z0-9\\*_]*(\\/[a-zA-" +
+      "Z0-9\\*_]*){0,2}\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026RestoreCluster" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_i" +
+      "d\030\002 \001(\t2\310\027\n\016ClusterService\022\224\001\n\003Get\0220.yan" +
+      "dex.cloud.mdb.greenplum.v1.GetClusterReq" +
+      "uest\032&.yandex.cloud.mdb.greenplum.v1.Clu" +
+      "ster\"3\202\323\344\223\002-\022+/managed-greenplum/v1/clus" +
+      "ters/{cluster_id}\022\227\001\n\004List\0222.yandex.clou" +
+      "d.mdb.greenplum.v1.ListClustersRequest\0323" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "ersResponse\"&\202\323\344\223\002 \022\036/managed-greenplum/" +
+      "v1/clusters\022\257\001\n\006Create\0223.yandex.cloud.md" +
+      "b.greenplum.v1.CreateClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"M\202\323\344\223\002#\"\036" +
+      "/managed-greenplum/v1/clusters:\001*\262\322* \n\025C" +
+      "reateClusterMetadata\022\007Cluster\022\274\001\n\006Update" +
+      "\0223.yandex.cloud.mdb.greenplum.v1.UpdateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"Z\202\323\344\223\00202+/managed-greenplum/v1/" +
+      "clusters/{cluster_id}:\001*\262\322* \n\025UpdateClus" +
+      "terMetadata\022\007Cluster\022\276\001\n\006Expand\022,.yandex" +
+      ".cloud.mdb.greenplum.v1.ExpandRequest\032!." +
+      "yandex.cloud.operation.Operation\"c\202\323\344\223\0027" +
+      "\"2/managed-greenplum/v1/clusters/{cluste" +
+      "r_id}/expand:\001*\262\322*\"\n\027AddClusterHostsMeta" +
+      "data\022\007Cluster\022\307\001\n\006Delete\0223.yandex.cloud." +
+      "mdb.greenplum.v1.DeleteClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"e\202\323\344\223\002-" +
+      "*+/managed-greenplum/v1/clusters/{cluste" +
+      "r_id}\262\322*.\n\025DeleteClusterMetadata\022\025google" +
+      ".protobuf.Empty\022\274\001\n\005Start\0222.yandex.cloud" +
+      ".mdb.greenplum.v1.StartClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"\\\202\323\344\223\0023" +
+      "\"1/managed-greenplum/v1/clusters/{cluste" +
+      "r_id}:start\262\322*\037\n\024StartClusterMetadata\022\007C" +
+      "luster\022\270\001\n\004Stop\0221.yandex.cloud.mdb.green" +
+      "plum.v1.StopClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"Z\202\323\344\223\0022\"0/managed-" +
+      "greenplum/v1/clusters/{cluster_id}:stop\262" +
+      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\313\001\n\016Li" +
+      "stOperations\022;.yandex.cloud.mdb.greenplu" +
+      "m.v1.ListClusterOperationsRequest\032<.yand" +
+      "ex.cloud.mdb.greenplum.v1.ListClusterOpe" +
+      "rationsResponse\">\202\323\344\223\0028\0226/managed-greenp" +
+      "lum/v1/clusters/{cluster_id}/operations\022" +
+      "\304\001\n\017ListMasterHosts\0226.yandex.cloud.mdb.g" +
+      "reenplum.v1.ListClusterHostsRequest\0327.ya" +
+      "ndex.cloud.mdb.greenplum.v1.ListClusterH" +
+      "ostsResponse\"@\202\323\344\223\002:\0228/managed-greenplum" +
+      "/v1/clusters/{cluster_id}/master-hosts\022\306" +
+      "\001\n\020ListSegmentHosts\0226.yandex.cloud.mdb.g" +
+      "reenplum.v1.ListClusterHostsRequest\0327.ya" +
+      "ndex.cloud.mdb.greenplum.v1.ListClusterH" +
+      "ostsResponse\"A\202\323\344\223\002;\0229/managed-greenplum" +
+      "/v1/clusters/{cluster_id}/segment-hosts\022" +
+      "\263\001\n\010ListLogs\0225.yandex.cloud.mdb.greenplu" +
+      "m.v1.ListClusterLogsRequest\0326.yandex.clo" +
+      "ud.mdb.greenplum.v1.ListClusterLogsRespo" +
+      "nse\"8\202\323\344\223\0022\0220/managed-greenplum/v1/clust" +
+      "ers/{cluster_id}:logs\022\270\001\n\nStreamLogs\0227.y" +
+      "andex.cloud.mdb.greenplum.v1.StreamClust" +
+      "erLogsRequest\032..yandex.cloud.mdb.greenpl" +
+      "um.v1.StreamLogRecord\"?\202\323\344\223\0029\0227/managed-" +
+      "greenplum/v1/clusters/{cluster_id}:strea" +
+      "m_logs0\001\022\277\001\n\013ListBackups\0228.yandex.cloud." +
+      "mdb.greenplum.v1.ListClusterBackupsReque" +
+      "st\0329.yandex.cloud.mdb.greenplum.v1.ListC" +
+      "lusterBackupsResponse\";\202\323\344\223\0025\0223/managed-" +
+      "greenplum/v1/clusters/{cluster_id}/backu" +
+      "ps\022\300\001\n\006Backup\0223.yandex.cloud.mdb.greenpl" +
+      "um.v1.BackupClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"^\202\323\344\223\0024\"2/managed-" +
+      "greenplum/v1/clusters/{cluster_id}:backu" +
+      "p\262\322* \n\025BackupClusterMetadata\022\007Cluster\022\272\001" +
+      "\n\007Restore\0224.yandex.cloud.mdb.greenplum.v" +
+      "1.RestoreClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"V\202\323\344\223\002+\"&/managed-gre" +
+      "enplum/v1/clusters:restore:\001*\262\322*!\n\026Resto" +
+      "reClusterMetadata\022\007ClusterBp\n!yandex.clo" +
+      "ud.api.mdb.greenplum.v1ZKgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
+      "eenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42166,7 +42441,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_ExpandRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ExpandRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "SegmentHostCount", "AddSegmentsPerHostCount", "Duration", });
+        new java.lang.String[] { "ClusterId", "SegmentHostCount", "AddSegmentsPerHostCount", "Duration", "Parallel", "CloseCluster", "DelayRedistribution", });
     internal_static_yandex_cloud_mdb_greenplum_v1_DeleteClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_greenplum_v1_DeleteClusterRequest_fieldAccessorTable = new

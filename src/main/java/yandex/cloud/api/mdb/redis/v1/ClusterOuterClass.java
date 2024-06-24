@@ -6375,6 +6375,33 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.redis.v1.config.Redis.RedisConfigSetOrBuilder getRedisOrBuilder();
 
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     */
+    yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
+
     public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.ClusterConfig.RedisConfigCase getRedisConfigCase();
   }
   /**
@@ -6533,6 +6560,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(redis_);
                 redis_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6984,6 +7024,44 @@ public final class ClusterOuterClass {
       return getRedis();
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 10;
+    private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7024,6 +7102,9 @@ public final class ClusterOuterClass {
       }
       if (redis_ != null) {
         output.writeMessage(9, getRedis());
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(10, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -7069,6 +7150,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRedis());
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7105,6 +7190,11 @@ public final class ClusterOuterClass {
       if (hasRedis()) {
         if (!getRedis()
             .equals(other.getRedis())) return false;
+      }
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
       }
       if (!getRedisConfigCase().equals(other.getRedisConfigCase())) return false;
       switch (redisConfigCase_) {
@@ -7155,6 +7245,10 @@ public final class ClusterOuterClass {
       if (hasRedis()) {
         hash = (37 * hash) + REDIS_FIELD_NUMBER;
         hash = (53 * hash) + getRedis().hashCode();
+      }
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
       }
       switch (redisConfigCase_) {
         case 2:
@@ -7335,6 +7429,12 @@ public final class ClusterOuterClass {
           redis_ = null;
           redisBuilder_ = null;
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         redisConfigCase_ = 0;
         redisConfig_ = null;
         return this;
@@ -7412,6 +7512,11 @@ public final class ClusterOuterClass {
         } else {
           result.redis_ = redisBuilder_.build();
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
         result.redisConfigCase_ = redisConfigCase_;
         onBuilt();
         return result;
@@ -7476,6 +7581,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasRedis()) {
           mergeRedis(other.getRedis());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         switch (other.getRedisConfigCase()) {
           case REDIS_CONFIG_5_0: {
@@ -8964,6 +9072,161 @@ public final class ClusterOuterClass {
           redis_ = null;
         }
         return redisBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling disk_size_autoscaling = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15295,6 +15558,1213 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface DiskSizeAutoscalingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the plannedUsageThreshold field is set.
+     */
+    boolean hasPlannedUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    com.google.protobuf.Int64Value getPlannedUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the emergencyUsageThreshold field is set.
+     */
+    boolean hasEmergencyUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    com.google.protobuf.Int64Value getEmergencyUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return Whether the diskSizeLimit field is set.
+     */
+    boolean hasDiskSizeLimit();
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    com.google.protobuf.Int64Value getDiskSizeLimit();
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling}
+   */
+  public static final class DiskSizeAutoscaling extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling)
+      DiskSizeAutoscalingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskSizeAutoscaling.newBuilder() to construct.
+    private DiskSizeAutoscaling(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskSizeAutoscaling() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskSizeAutoscaling();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskSizeAutoscaling(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (plannedUsageThreshold_ != null) {
+                subBuilder = plannedUsageThreshold_.toBuilder();
+              }
+              plannedUsageThreshold_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedUsageThreshold_);
+                plannedUsageThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (emergencyUsageThreshold_ != null) {
+                subBuilder = emergencyUsageThreshold_.toBuilder();
+              }
+              emergencyUsageThreshold_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(emergencyUsageThreshold_);
+                emergencyUsageThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (diskSizeLimit_ != null) {
+                subBuilder = diskSizeLimit_.toBuilder();
+              }
+              diskSizeLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeLimit_);
+                diskSizeLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+    }
+
+    public static final int PLANNED_USAGE_THRESHOLD_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value plannedUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the plannedUsageThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlannedUsageThreshold() {
+      return plannedUsageThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPlannedUsageThreshold() {
+      return plannedUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder() {
+      return getPlannedUsageThreshold();
+    }
+
+    public static final int EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value emergencyUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the emergencyUsageThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder() {
+      return getEmergencyUsageThreshold();
+    }
+
+    public static final int DISK_SIZE_LIMIT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value diskSizeLimit_;
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return Whether the diskSizeLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeLimit() {
+      return diskSizeLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDiskSizeLimit() {
+      return diskSizeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+    }
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder() {
+      return getDiskSizeLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plannedUsageThreshold_ != null) {
+        output.writeMessage(1, getPlannedUsageThreshold());
+      }
+      if (emergencyUsageThreshold_ != null) {
+        output.writeMessage(2, getEmergencyUsageThreshold());
+      }
+      if (diskSizeLimit_ != null) {
+        output.writeMessage(3, getDiskSizeLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plannedUsageThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPlannedUsageThreshold());
+      }
+      if (emergencyUsageThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEmergencyUsageThreshold());
+      }
+      if (diskSizeLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDiskSizeLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling other = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling) obj;
+
+      if (hasPlannedUsageThreshold() != other.hasPlannedUsageThreshold()) return false;
+      if (hasPlannedUsageThreshold()) {
+        if (!getPlannedUsageThreshold()
+            .equals(other.getPlannedUsageThreshold())) return false;
+      }
+      if (hasEmergencyUsageThreshold() != other.hasEmergencyUsageThreshold()) return false;
+      if (hasEmergencyUsageThreshold()) {
+        if (!getEmergencyUsageThreshold()
+            .equals(other.getEmergencyUsageThreshold())) return false;
+      }
+      if (hasDiskSizeLimit() != other.hasDiskSizeLimit()) return false;
+      if (hasDiskSizeLimit()) {
+        if (!getDiskSizeLimit()
+            .equals(other.getDiskSizeLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPlannedUsageThreshold()) {
+        hash = (37 * hash) + PLANNED_USAGE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedUsageThreshold().hashCode();
+      }
+      if (hasEmergencyUsageThreshold()) {
+        hash = (37 * hash) + EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getEmergencyUsageThreshold().hashCode();
+      }
+      if (hasDiskSizeLimit()) {
+        hash = (37 * hash) + DISK_SIZE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling)
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = null;
+        } else {
+          plannedUsageThreshold_ = null;
+          plannedUsageThresholdBuilder_ = null;
+        }
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = null;
+        } else {
+          emergencyUsageThreshold_ = null;
+          emergencyUsageThresholdBuilder_ = null;
+        }
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = null;
+        } else {
+          diskSizeLimit_ = null;
+          diskSizeLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling build() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling(this);
+        if (plannedUsageThresholdBuilder_ == null) {
+          result.plannedUsageThreshold_ = plannedUsageThreshold_;
+        } else {
+          result.plannedUsageThreshold_ = plannedUsageThresholdBuilder_.build();
+        }
+        if (emergencyUsageThresholdBuilder_ == null) {
+          result.emergencyUsageThreshold_ = emergencyUsageThreshold_;
+        } else {
+          result.emergencyUsageThreshold_ = emergencyUsageThresholdBuilder_.build();
+        }
+        if (diskSizeLimitBuilder_ == null) {
+          result.diskSizeLimit_ = diskSizeLimit_;
+        } else {
+          result.diskSizeLimit_ = diskSizeLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance()) return this;
+        if (other.hasPlannedUsageThreshold()) {
+          mergePlannedUsageThreshold(other.getPlannedUsageThreshold());
+        }
+        if (other.hasEmergencyUsageThreshold()) {
+          mergeEmergencyUsageThreshold(other.getEmergencyUsageThreshold());
+        }
+        if (other.hasDiskSizeLimit()) {
+          mergeDiskSizeLimit(other.getDiskSizeLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value plannedUsageThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> plannedUsageThresholdBuilder_;
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the plannedUsageThreshold field is set.
+       */
+      public boolean hasPlannedUsageThreshold() {
+        return plannedUsageThresholdBuilder_ != null || plannedUsageThreshold_ != null;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The plannedUsageThreshold.
+       */
+      public com.google.protobuf.Int64Value getPlannedUsageThreshold() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          return plannedUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+        } else {
+          return plannedUsageThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPlannedUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedUsageThreshold_ = value;
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPlannedUsageThreshold(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder mergePlannedUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          if (plannedUsageThreshold_ != null) {
+            plannedUsageThreshold_ =
+              com.google.protobuf.Int64Value.newBuilder(plannedUsageThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            plannedUsageThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearPlannedUsageThreshold() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = null;
+          onChanged();
+        } else {
+          plannedUsageThreshold_ = null;
+          plannedUsageThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPlannedUsageThresholdBuilder() {
+        
+        onChanged();
+        return getPlannedUsageThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder() {
+        if (plannedUsageThresholdBuilder_ != null) {
+          return plannedUsageThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedUsageThreshold_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPlannedUsageThresholdFieldBuilder() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPlannedUsageThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          plannedUsageThreshold_ = null;
+        }
+        return plannedUsageThresholdBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value emergencyUsageThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> emergencyUsageThresholdBuilder_;
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the emergencyUsageThreshold field is set.
+       */
+      public boolean hasEmergencyUsageThreshold() {
+        return emergencyUsageThresholdBuilder_ != null || emergencyUsageThreshold_ != null;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The emergencyUsageThreshold.
+       */
+      public com.google.protobuf.Int64Value getEmergencyUsageThreshold() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          return emergencyUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+        } else {
+          return emergencyUsageThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setEmergencyUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          emergencyUsageThreshold_ = value;
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setEmergencyUsageThreshold(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder mergeEmergencyUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          if (emergencyUsageThreshold_ != null) {
+            emergencyUsageThreshold_ =
+              com.google.protobuf.Int64Value.newBuilder(emergencyUsageThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            emergencyUsageThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearEmergencyUsageThreshold() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = null;
+          onChanged();
+        } else {
+          emergencyUsageThreshold_ = null;
+          emergencyUsageThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getEmergencyUsageThresholdBuilder() {
+        
+        onChanged();
+        return getEmergencyUsageThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder() {
+        if (emergencyUsageThresholdBuilder_ != null) {
+          return emergencyUsageThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return emergencyUsageThreshold_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getEmergencyUsageThresholdFieldBuilder() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getEmergencyUsageThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          emergencyUsageThreshold_ = null;
+        }
+        return emergencyUsageThresholdBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value diskSizeLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> diskSizeLimitBuilder_;
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       * @return Whether the diskSizeLimit field is set.
+       */
+      public boolean hasDiskSizeLimit() {
+        return diskSizeLimitBuilder_ != null || diskSizeLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       * @return The diskSizeLimit.
+       */
+      public com.google.protobuf.Int64Value getDiskSizeLimit() {
+        if (diskSizeLimitBuilder_ == null) {
+          return diskSizeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+        } else {
+          return diskSizeLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder setDiskSizeLimit(com.google.protobuf.Int64Value value) {
+        if (diskSizeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeLimit_ = value;
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder setDiskSizeLimit(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder mergeDiskSizeLimit(com.google.protobuf.Int64Value value) {
+        if (diskSizeLimitBuilder_ == null) {
+          if (diskSizeLimit_ != null) {
+            diskSizeLimit_ =
+              com.google.protobuf.Int64Value.newBuilder(diskSizeLimit_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeLimit_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder clearDiskSizeLimit() {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = null;
+          onChanged();
+        } else {
+          diskSizeLimit_ = null;
+          diskSizeLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDiskSizeLimitBuilder() {
+        
+        onChanged();
+        return getDiskSizeLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder() {
+        if (diskSizeLimitBuilder_ != null) {
+          return diskSizeLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeLimit_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDiskSizeLimitFieldBuilder() {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDiskSizeLimit(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeLimit_ = null;
+        }
+        return diskSizeLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.DiskSizeAutoscaling)
+    private static final yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskSizeAutoscaling>
+        PARSER = new com.google.protobuf.AbstractParser<DiskSizeAutoscaling>() {
+      @java.lang.Override
+      public DiskSizeAutoscaling parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskSizeAutoscaling(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskSizeAutoscaling> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskSizeAutoscaling> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor;
   private static final 
@@ -15340,6 +16810,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_Access_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15353,88 +16828,97 @@ public final class ClusterOuterClass {
       "o\022\031yandex.cloud.mdb.redis.v1\032\037google/pro" +
       "tobuf/timestamp.proto\032\036google/protobuf/w" +
       "rappers.proto\032\033google/type/timeofday.pro" +
-      "to\032,yandex/cloud/mdb/redis/v1/config/red" +
-      "is.proto\032/yandex/cloud/mdb/redis/v1/conf" +
-      "ig/redis5_0.proto\032/yandex/cloud/mdb/redi" +
-      "s/v1/config/redis6_0.proto\032/yandex/cloud" +
-      "/mdb/redis/v1/config/redis6_2.proto\032/yan" +
-      "dex/cloud/mdb/redis/v1/config/redis7_0.p" +
-      "roto\032+yandex/cloud/mdb/redis/v1/maintena" +
-      "nce.proto\"\270\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
-      "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013de" +
-      "scription\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex" +
-      ".cloud.mdb.redis.v1.Cluster.LabelsEntry\022" +
-      "C\n\013environment\030\007 \001(\0162..yandex.cloud.mdb." +
-      "redis.v1.Cluster.Environment\0229\n\nmonitori" +
-      "ng\030\010 \003(\0132%.yandex.cloud.mdb.redis.v1.Mon" +
-      "itoring\0228\n\006config\030\t \001(\0132(.yandex.cloud.m" +
-      "db.redis.v1.ClusterConfig\022\022\n\nnetwork_id\030" +
-      "\n \001(\t\0229\n\006health\030\013 \001(\0162).yandex.cloud.mdb" +
-      ".redis.v1.Cluster.Health\0229\n\006status\030\014 \001(\016" +
-      "2).yandex.cloud.mdb.redis.v1.Cluster.Sta" +
-      "tus\022\017\n\007sharded\030\r \001(\010\022H\n\022maintenance_wind" +
-      "ow\030\016 \001(\0132,.yandex.cloud.mdb.redis.v1.Mai" +
-      "ntenanceWindow\022J\n\021planned_operation\030\017 \001(" +
-      "\0132/.yandex.cloud.mdb.redis.v1.Maintenanc" +
-      "eOperation\022\032\n\022security_group_ids\030\020 \003(\t\022\023" +
-      "\n\013tls_enabled\030\021 \001(\010\022\033\n\023deletion_protecti" +
-      "on\030\022 \001(\010\022L\n\020persistence_mode\030\023 \001(\01622.yan" +
-      "dex.cloud.mdb.redis.v1.Cluster.Persisten" +
-      "ceMode\022\032\n\022announce_hostnames\030\024 \001(\010\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIF" +
-      "IED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006" +
-      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATU" +
-      "S_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t" +
-      "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
-      "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceM" +
-      "ode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004na" +
-      "me\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 " +
-      "\001(\t\"\232\005\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022`" +
-      "\n\020redis_config_5_0\030\002 \001(\01323.yandex.cloud." +
-      "mdb.redis.v1.config.RedisConfigSet5_0H\000R" +
-      "\017redisConfig_5_0\022`\n\020redis_config_6_0\030\006 \001" +
-      "(\01323.yandex.cloud.mdb.redis.v1.config.Re" +
-      "disConfigSet6_0H\000R\017redisConfig_6_0\022`\n\020re" +
-      "dis_config_6_2\030\007 \001(\01323.yandex.cloud.mdb." +
-      "redis.v1.config.RedisConfigSet6_2H\000R\017red" +
-      "isConfig_6_2\022`\n\020redis_config_7_0\030\010 \001(\01323" +
-      ".yandex.cloud.mdb.redis.v1.config.RedisC" +
-      "onfigSet7_0H\000R\017redisConfig_7_0\0227\n\tresour" +
-      "ces\030\003 \001(\0132$.yandex.cloud.mdb.redis.v1.Re" +
-      "sources\0223\n\023backup_window_start\030\004 \001(\0132\026.g" +
-      "oogle.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.y" +
-      "andex.cloud.mdb.redis.v1.Access\022?\n\005redis" +
-      "\030\t \001(\01320.yandex.cloud.mdb.redis.v1.confi" +
-      "g.RedisConfigSetB\016\n\014redis_config\")\n\005Shar" +
-      "d\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004" +
-      "Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017" +
-      "\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tre" +
-      "sources\030\005 \001(\0132$.yandex.cloud.mdb.redis.v" +
-      "1.Resources\0222\n\004role\030\006 \001(\0162$.yandex.cloud" +
-      ".mdb.redis.v1.Host.Role\0226\n\006health\030\007 \001(\0162" +
-      "&.yandex.cloud.mdb.redis.v1.Host.Health\022" +
-      "4\n\010services\030\010 \003(\0132\".yandex.cloud.mdb.red" +
-      "is.v1.Service\022\022\n\nshard_name\030\t \001(\t\0225\n\020rep" +
-      "lica_priority\030\n \001(\0132\033.google.protobuf.In" +
-      "t64Value\022\030\n\020assign_public_ip\030\013 \001(\010\"1\n\004Ro" +
-      "le\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPL" +
-      "ICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005A" +
-      "LIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Servi" +
-      "ce\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb.redi" +
-      "s.v1.Service.Type\0229\n\006health\030\002 \001(\0162).yand" +
-      "ex.cloud.mdb.redis.v1.Service.Health\"G\n\004" +
-      "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n" +
-      "\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022" +
-      "\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
-      "\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(" +
-      "\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001" +
-      "(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yande" +
-      "x.cloud.api.mdb.redis.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/mdb/r" +
-      "edis/v1;redisb\006proto3"
+      "to\032\035yandex/cloud/validation.proto\032,yande" +
+      "x/cloud/mdb/redis/v1/config/redis.proto\032" +
+      "/yandex/cloud/mdb/redis/v1/config/redis5" +
+      "_0.proto\032/yandex/cloud/mdb/redis/v1/conf" +
+      "ig/redis6_0.proto\032/yandex/cloud/mdb/redi" +
+      "s/v1/config/redis6_2.proto\032/yandex/cloud" +
+      "/mdb/redis/v1/config/redis7_0.proto\032+yan" +
+      "dex/cloud/mdb/redis/v1/maintenance.proto" +
+      "\"\270\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
+      "\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud.md" +
+      "b.redis.v1.Cluster.LabelsEntry\022C\n\013enviro" +
+      "nment\030\007 \001(\0162..yandex.cloud.mdb.redis.v1." +
+      "Cluster.Environment\0229\n\nmonitoring\030\010 \003(\0132" +
+      "%.yandex.cloud.mdb.redis.v1.Monitoring\0228" +
+      "\n\006config\030\t \001(\0132(.yandex.cloud.mdb.redis." +
+      "v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\0229\n\006" +
+      "health\030\013 \001(\0162).yandex.cloud.mdb.redis.v1" +
+      ".Cluster.Health\0229\n\006status\030\014 \001(\0162).yandex" +
+      ".cloud.mdb.redis.v1.Cluster.Status\022\017\n\007sh" +
+      "arded\030\r \001(\010\022H\n\022maintenance_window\030\016 \001(\0132" +
+      ",.yandex.cloud.mdb.redis.v1.MaintenanceW" +
+      "indow\022J\n\021planned_operation\030\017 \001(\0132/.yande" +
+      "x.cloud.mdb.redis.v1.MaintenanceOperatio" +
+      "n\022\032\n\022security_group_ids\030\020 \003(\t\022\023\n\013tls_ena" +
+      "bled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001(\010\022" +
+      "L\n\020persistence_mode\030\023 \001(\01622.yandex.cloud" +
+      ".mdb.redis.v1.Cluster.PersistenceMode\022\032\n" +
+      "\022announce_hostnames\030\024 \001(\010\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
+      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
+      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n" +
+      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
+      "\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN" +
+      "\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003" +
+      "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
+      "\006\022\014\n\010STARTING\020\007\"\"\n\017PersistenceMode\022\006\n\002ON" +
+      "\020\000\022\007\n\003OFF\020\001\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022" +
+      "\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\351\005\n\rC" +
+      "lusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_c" +
+      "onfig_5_0\030\002 \001(\01323.yandex.cloud.mdb.redis" +
+      ".v1.config.RedisConfigSet5_0H\000R\017redisCon" +
+      "fig_5_0\022`\n\020redis_config_6_0\030\006 \001(\01323.yand" +
+      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
+      "Set6_0H\000R\017redisConfig_6_0\022`\n\020redis_confi" +
+      "g_6_2\030\007 \001(\01323.yandex.cloud.mdb.redis.v1." +
+      "config.RedisConfigSet6_2H\000R\017redisConfig_" +
+      "6_2\022`\n\020redis_config_7_0\030\010 \001(\01323.yandex.c" +
+      "loud.mdb.redis.v1.config.RedisConfigSet7" +
+      "_0H\000R\017redisConfig_7_0\0227\n\tresources\030\003 \001(\013" +
+      "2$.yandex.cloud.mdb.redis.v1.Resources\0223" +
+      "\n\023backup_window_start\030\004 \001(\0132\026.google.typ" +
+      "e.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.clo" +
+      "ud.mdb.redis.v1.Access\022?\n\005redis\030\t \001(\01320." +
+      "yandex.cloud.mdb.redis.v1.config.RedisCo" +
+      "nfigSet\022M\n\025disk_size_autoscaling\030\n \001(\0132." +
+      ".yandex.cloud.mdb.redis.v1.DiskSizeAutos" +
+      "calingB\016\n\014redis_config\")\n\005Shard\022\014\n\004name\030" +
+      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004na" +
+      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030" +
+      "\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 " +
+      "\001(\0132$.yandex.cloud.mdb.redis.v1.Resource" +
+      "s\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis" +
+      ".v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.c" +
+      "loud.mdb.redis.v1.Host.Health\0224\n\010service" +
+      "s\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1.Serv" +
+      "ice\022\022\n\nshard_name\030\t \001(\t\0225\n\020replica_prior" +
+      "ity\030\n \001(\0132\033.google.protobuf.Int64Value\022\030" +
+      "\n\020assign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE" +
+      "_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006H" +
+      "ealth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004" +
+      "DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type" +
+      "\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.Servi" +
+      "ce.Type\0229\n\006health\030\002 \001(\0162).yandex.cloud.m" +
+      "db.redis.v1.Service.Health\"G\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002" +
+      "\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_" +
+      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResour" +
+      "ces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_" +
+      "size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Acce" +
+      "ss\022\021\n\tdata_lens\030\001 \001(\010\"\347\001\n\023DiskSizeAutosc" +
+      "aling\022K\n\027planned_usage_threshold\030\001 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-1" +
+      "00\022M\n\031emergency_usage_threshold\030\002 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-10" +
+      "0\0224\n\017disk_size_limit\030\003 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueBd\n\035yandex.cloud.api.mdb." +
+      "redis.v1ZCgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/redis/v1;redisb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15442,6 +16926,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor(),
@@ -15472,7 +16957,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "RedisConfig", });
+        new java.lang.String[] { "Version", "RedisConfig50", "RedisConfig60", "RedisConfig62", "RedisConfig70", "Resources", "BackupWindowStart", "Access", "Redis", "DiskSizeAutoscaling", "RedisConfig", });
     internal_static_yandex_cloud_mdb_redis_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_redis_v1_Shard_fieldAccessorTable = new
@@ -15503,9 +16988,22 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Access_descriptor,
         new java.lang.String[] { "DataLens", });
+    internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor,
+        new java.lang.String[] { "PlannedUsageThreshold", "EmergencyUsageThreshold", "DiskSizeLimit", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis50.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.config.Redis60.getDescriptor();

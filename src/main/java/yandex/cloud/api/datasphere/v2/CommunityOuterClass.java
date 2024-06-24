@@ -198,6 +198,26 @@ public final class CommunityOuterClass {
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * ID of the zone where this community was created
+     * </pre>
+     *
+     * <code>string zone_id = 11;</code>
+     * @return The zoneId.
+     */
+    java.lang.String getZoneId();
+    /**
+     * <pre>
+     * ID of the zone where this community was created
+     * </pre>
+     *
+     * <code>string zone_id = 11;</code>
+     * @return The bytes for zoneId.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.Community}
@@ -217,6 +237,7 @@ public final class CommunityOuterClass {
       description_ = "";
       createdById_ = "";
       organizationId_ = "";
+      zoneId_ = "";
     }
 
     @java.lang.Override
@@ -304,6 +325,12 @@ public final class CommunityOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               organizationId_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              zoneId_ = s;
               break;
             }
             default: {
@@ -715,6 +742,52 @@ public final class CommunityOuterClass {
       }
     }
 
+    public static final int ZONE_ID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object zoneId_;
+    /**
+     * <pre>
+     * ID of the zone where this community was created
+     * </pre>
+     *
+     * <code>string zone_id = 11;</code>
+     * @return The zoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getZoneId() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the zone where this community was created
+     * </pre>
+     *
+     * <code>string zone_id = 11;</code>
+     * @return The bytes for zoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZoneIdBytes() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -752,6 +825,9 @@ public final class CommunityOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, zoneId_);
       }
       unknownFields.writeTo(output);
     }
@@ -791,6 +867,9 @@ public final class CommunityOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, organizationId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, zoneId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -823,6 +902,8 @@ public final class CommunityOuterClass {
           .equals(other.getCreatedById())) return false;
       if (!getOrganizationId()
           .equals(other.getOrganizationId())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -852,6 +933,8 @@ public final class CommunityOuterClass {
       hash = (53 * hash) + getCreatedById().hashCode();
       hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getZoneId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1024,6 +1107,8 @@ public final class CommunityOuterClass {
 
         organizationId_ = "";
 
+        zoneId_ = "";
+
         return this;
       }
 
@@ -1063,6 +1148,7 @@ public final class CommunityOuterClass {
         result.labels_.makeImmutable();
         result.createdById_ = createdById_;
         result.organizationId_ = organizationId_;
+        result.zoneId_ = zoneId_;
         onBuilt();
         return result;
       }
@@ -1134,6 +1220,10 @@ public final class CommunityOuterClass {
         }
         if (!other.getOrganizationId().isEmpty()) {
           organizationId_ = other.organizationId_;
+          onChanged();
+        }
+        if (!other.getZoneId().isEmpty()) {
+          zoneId_ = other.zoneId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1959,6 +2049,102 @@ public final class CommunityOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object zoneId_ = "";
+      /**
+       * <pre>
+       * ID of the zone where this community was created
+       * </pre>
+       *
+       * <code>string zone_id = 11;</code>
+       * @return The zoneId.
+       */
+      public java.lang.String getZoneId() {
+        java.lang.Object ref = zoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the zone where this community was created
+       * </pre>
+       *
+       * <code>string zone_id = 11;</code>
+       * @return The bytes for zoneId.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdBytes() {
+        java.lang.Object ref = zoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the zone where this community was created
+       * </pre>
+       *
+       * <code>string zone_id = 11;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the zone where this community was created
+       * </pre>
+       *
+       * <code>string zone_id = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneId() {
+        
+        zoneId_ = getDefaultInstance().getZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the zone where this community was created
+       * </pre>
+       *
+       * <code>string zone_id = 11;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2033,17 +2219,17 @@ public final class CommunityOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/datasphere/v2/community.p" +
       "roto\022\032yandex.cloud.datasphere.v2\032\037google" +
-      "/protobuf/timestamp.proto\"\222\002\n\tCommunity\022" +
+      "/protobuf/timestamp.proto\"\243\002\n\tCommunity\022" +
       "\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.google" +
       ".protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013des" +
       "cription\030\004 \001(\t\022A\n\006labels\030\005 \003(\01321.yandex." +
       "cloud.datasphere.v2.Community.LabelsEntr" +
       "y\022\025\n\rcreated_by_id\030\006 \001(\t\022\027\n\017organization" +
-      "_id\030\n \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001J\004\010\007\020\nBk\n\036yandex.cloud.a" +
-      "pi.datasphere.v2ZIgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/datasphere/v2" +
-      ";datasphereb\006proto3"
+      "_id\030\n \001(\t\022\017\n\007zone_id\030\013 \001(\t\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\007\020\nB" +
+      "k\n\036yandex.cloud.api.datasphere.v2ZIgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/datasphere/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2055,7 +2241,7 @@ public final class CommunityOuterClass {
     internal_static_yandex_cloud_datasphere_v2_Community_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_Community_descriptor,
-        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", "Labels", "CreatedById", "OrganizationId", });
+        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", "Labels", "CreatedById", "OrganizationId", "ZoneId", });
     internal_static_yandex_cloud_datasphere_v2_Community_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datasphere_v2_Community_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datasphere_v2_Community_LabelsEntry_fieldAccessorTable = new

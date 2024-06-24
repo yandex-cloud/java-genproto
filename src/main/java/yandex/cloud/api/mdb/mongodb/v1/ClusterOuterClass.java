@@ -10587,6 +10587,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongod}
@@ -10655,6 +10682,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -10767,6 +10807,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -10787,6 +10865,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -10803,6 +10884,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -10829,6 +10914,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -10847,6 +10937,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -10993,6 +11087,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -11028,6 +11128,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -11082,6 +11187,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -11421,6 +11529,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11519,6 +11782,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoCfg}
@@ -11587,6 +11877,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -11687,6 +11990,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -11707,6 +12048,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -11723,6 +12067,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -11749,6 +12097,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -11767,6 +12120,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -11913,6 +12270,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -11948,6 +12311,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -12002,6 +12370,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -12305,6 +12676,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12403,6 +12929,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos}
@@ -12471,6 +13024,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -12571,6 +13137,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -12591,6 +13195,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -12607,6 +13214,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -12633,6 +13244,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -12651,6 +13267,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -12797,6 +13417,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -12832,6 +13458,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -12886,6 +13517,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -13189,6 +13823,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13302,6 +14091,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb3_6.MongoInfra}
@@ -13383,6 +14199,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -13509,6 +14338,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -13532,6 +14399,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -13552,6 +14422,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13583,6 +14457,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -13605,6 +14484,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -13757,6 +14640,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -13797,6 +14686,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -13854,6 +14748,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -14275,6 +15172,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -15856,6 +16908,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongod}
@@ -15924,6 +17003,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -16036,6 +17128,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -16056,6 +17186,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -16072,6 +17205,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -16098,6 +17235,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -16116,6 +17258,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -16262,6 +17408,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -16297,6 +17449,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -16351,6 +17508,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -16690,6 +17850,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16800,6 +18115,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg}
@@ -16868,6 +18210,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -16980,6 +18335,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -17000,6 +18393,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -17016,6 +18412,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -17042,6 +18442,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -17060,6 +18465,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -17206,6 +18615,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -17241,6 +18656,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -17295,6 +18715,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -17634,6 +19057,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17744,6 +19322,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.Mongos}
@@ -17812,6 +19417,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -17924,6 +19542,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -17944,6 +19600,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -17960,6 +19619,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -17986,6 +19649,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -18004,6 +19672,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -18150,6 +19822,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -18185,6 +19863,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -18239,6 +19922,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -18578,6 +20264,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18691,6 +20532,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_0.MongoInfra}
@@ -18772,6 +20640,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -18898,6 +20779,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -18921,6 +20840,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -18941,6 +20863,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -18972,6 +20898,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -18994,6 +20925,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -19146,6 +21081,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -19186,6 +21127,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -19243,6 +21189,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -19664,6 +21613,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -21245,6 +23349,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongod}
@@ -21313,6 +23444,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -21425,6 +23569,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -21445,6 +23627,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -21461,6 +23646,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -21487,6 +23676,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -21505,6 +23699,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -21651,6 +23849,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -21686,6 +23890,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -21740,6 +23949,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -22079,6 +24291,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22189,6 +24556,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoCfg}
@@ -22257,6 +24651,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -22369,6 +24776,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -22389,6 +24834,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -22405,6 +24853,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -22431,6 +24883,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -22449,6 +24906,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -22595,6 +25056,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -22630,6 +25097,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -22684,6 +25156,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -23023,6 +25498,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -23133,6 +25763,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.Mongos}
@@ -23201,6 +25858,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -23313,6 +25983,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -23333,6 +26041,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -23349,6 +26060,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -23375,6 +26090,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -23393,6 +26113,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -23539,6 +26263,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -23574,6 +26304,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -23628,6 +26363,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -23967,6 +26705,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24080,6 +26973,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_2.MongoInfra}
@@ -24161,6 +27081,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -24287,6 +27220,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -24310,6 +27281,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -24330,6 +27304,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -24361,6 +27339,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -24383,6 +27366,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -24535,6 +27522,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -24575,6 +27568,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -24632,6 +27630,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -25053,6 +28054,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -26634,6 +29790,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongod}
@@ -26702,6 +29885,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -26814,6 +30010,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -26834,6 +30068,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -26850,6 +30087,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -26876,6 +30117,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -26894,6 +30140,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -27040,6 +30290,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -27075,6 +30331,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -27129,6 +30390,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -27468,6 +30732,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -27578,6 +30997,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg}
@@ -27646,6 +31092,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -27758,6 +31217,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -27778,6 +31275,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -27794,6 +31294,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -27820,6 +31324,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -27838,6 +31347,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -27984,6 +31497,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -28019,6 +31538,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -28073,6 +31597,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -28412,6 +31939,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28522,6 +32204,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.Mongos}
@@ -28590,6 +32299,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -28702,6 +32424,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -28722,6 +32482,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -28738,6 +32501,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -28764,6 +32531,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -28782,6 +32554,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -28928,6 +32704,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -28963,6 +32745,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -29017,6 +32804,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -29356,6 +33146,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29469,6 +33414,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4.MongoInfra}
@@ -29550,6 +33522,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -29676,6 +33661,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -29699,6 +33722,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -29719,6 +33745,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -29750,6 +33780,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -29772,6 +33807,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -29924,6 +33963,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -29964,6 +34009,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -30021,6 +34071,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -30442,6 +34495,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -32023,6 +36231,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongod}
@@ -32091,6 +36326,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -32203,6 +36451,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -32223,6 +36509,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -32239,6 +36528,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -32265,6 +36558,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -32283,6 +36581,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -32429,6 +36731,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -32464,6 +36772,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -32518,6 +36831,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -32857,6 +37173,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -32967,6 +37438,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoCfg}
@@ -33035,6 +37533,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -33147,6 +37658,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -33167,6 +37716,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -33183,6 +37735,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -33209,6 +37765,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -33227,6 +37788,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -33373,6 +37938,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -33408,6 +37979,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -33462,6 +38038,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -33801,6 +38380,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33911,6 +38645,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.Mongos}
@@ -33979,6 +38740,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -34091,6 +38865,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -34111,6 +38923,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -34127,6 +38942,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -34153,6 +38972,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -34171,6 +38995,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -34317,6 +39145,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -34352,6 +39186,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -34406,6 +39245,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -34745,6 +39587,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -34858,6 +39855,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb4_4_enterprise.MongoInfra}
@@ -34939,6 +39963,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -35065,6 +40102,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -35088,6 +40163,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -35108,6 +40186,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -35139,6 +40221,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -35161,6 +40248,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -35313,6 +40404,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -35353,6 +40450,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -35410,6 +40512,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -35831,6 +40936,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -37412,6 +42672,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongod}
@@ -37480,6 +42767,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -37592,6 +42892,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -37612,6 +42950,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -37628,6 +42969,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -37654,6 +42999,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -37672,6 +43022,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -37818,6 +43172,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -37853,6 +43213,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -37907,6 +43272,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -38246,6 +43614,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -38356,6 +43879,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoCfg}
@@ -38424,6 +43974,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -38536,6 +44099,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -38556,6 +44157,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -38572,6 +44176,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -38598,6 +44206,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -38616,6 +44229,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -38762,6 +44379,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -38797,6 +44420,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -38851,6 +44479,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -39190,6 +44821,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -39300,6 +45086,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.Mongos}
@@ -39368,6 +45181,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -39480,6 +45306,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -39500,6 +45364,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -39516,6 +45383,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -39542,6 +45413,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -39560,6 +45436,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -39706,6 +45586,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -39741,6 +45627,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -39795,6 +45686,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -40134,6 +46028,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -40247,6 +46296,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0.MongoInfra}
@@ -40328,6 +46404,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -40454,6 +46543,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -40477,6 +46604,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -40497,6 +46627,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -40528,6 +46662,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -40550,6 +46689,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -40702,6 +46845,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -40742,6 +46891,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -40799,6 +46953,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -41220,6 +47377,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -42801,6 +49113,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongod}
@@ -42869,6 +49208,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -42981,6 +49333,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -43001,6 +49391,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -43017,6 +49410,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -43043,6 +49440,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -43061,6 +49463,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -43207,6 +49613,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -43242,6 +49654,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -43296,6 +49713,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -43635,6 +50055,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -43745,6 +50320,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoCfg}
@@ -43813,6 +50415,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -43925,6 +50540,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -43945,6 +50598,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -43961,6 +50617,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -43987,6 +50647,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -44005,6 +50670,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -44151,6 +50820,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -44186,6 +50861,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -44240,6 +50920,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -44579,6 +51262,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -44689,6 +51527,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.Mongos}
@@ -44757,6 +51622,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -44869,6 +51747,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -44889,6 +51805,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -44905,6 +51824,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -44931,6 +51854,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -44949,6 +51877,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -45095,6 +52027,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -45130,6 +52068,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -45184,6 +52127,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -45523,6 +52469,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -45636,6 +52737,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb5_0_enterprise.MongoInfra}
@@ -45717,6 +52845,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -45843,6 +52984,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -45866,6 +53045,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -45886,6 +53068,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -45917,6 +53103,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -45939,6 +53130,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -46091,6 +53286,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -46131,6 +53332,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -46188,6 +53394,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -46609,6 +53818,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -48190,6 +55554,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongod}
@@ -48258,6 +55649,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -48370,6 +55774,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -48390,6 +55832,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -48406,6 +55851,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -48432,6 +55881,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -48450,6 +55904,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -48596,6 +56054,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -48631,6 +56095,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -48685,6 +56154,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -49024,6 +56496,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -49134,6 +56761,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoCfg}
@@ -49202,6 +56856,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -49314,6 +56981,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -49334,6 +57039,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -49350,6 +57058,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -49376,6 +57088,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -49394,6 +57111,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -49540,6 +57261,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -49575,6 +57302,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -49629,6 +57361,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -49968,6 +57703,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -50078,6 +57968,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.Mongos}
@@ -50146,6 +58063,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -50258,6 +58188,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -50278,6 +58246,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -50294,6 +58265,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -50320,6 +58295,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -50338,6 +58318,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -50484,6 +58468,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -50519,6 +58509,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -50573,6 +58568,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -50912,6 +58910,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -51025,6 +59178,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0.MongoInfra}
@@ -51106,6 +59286,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -51232,6 +59425,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -51255,6 +59486,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -51275,6 +59509,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -51306,6 +59544,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -51328,6 +59571,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -51480,6 +59727,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -51520,6 +59773,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -51577,6 +59835,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -51998,6 +60259,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -53579,6 +61995,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongod}
@@ -53647,6 +62090,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -53759,6 +62215,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -53779,6 +62273,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -53795,6 +62292,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -53821,6 +62322,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -53839,6 +62345,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -53985,6 +62495,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -54020,6 +62536,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -54074,6 +62595,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -54413,6 +62937,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -54523,6 +63202,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoCfg}
@@ -54591,6 +63297,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -54703,6 +63422,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -54723,6 +63480,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -54739,6 +63499,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -54765,6 +63529,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -54783,6 +63552,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -54929,6 +63702,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -54964,6 +63743,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -55018,6 +63802,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -55357,6 +64144,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -55467,6 +64409,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 2;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.Mongos}
@@ -55535,6 +64504,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -55647,6 +64629,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 3;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -55667,6 +64687,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(2, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(3, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -55683,6 +64706,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -55709,6 +64736,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -55727,6 +64759,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -55873,6 +64909,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -55908,6 +64950,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -55962,6 +65009,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -56301,6 +65351,161 @@ public final class ClusterOuterClass {
           }
           return resourcesBuilder_;
         }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -56414,6 +65619,33 @@ public final class ClusterOuterClass {
        * <code>.yandex.cloud.mdb.mongodb.v1.Resources resources = 3;</code>
        */
       yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.Mongodb6_0_enterprise.MongoInfra}
@@ -56495,6 +65727,19 @@ public final class ClusterOuterClass {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resources_);
                   resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -56621,6 +65866,44 @@ public final class ClusterOuterClass {
         return getResources();
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 4;
+      private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -56644,6 +65927,9 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           output.writeMessage(3, getResources());
         }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(4, getDiskSizeAutoscaling());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -56664,6 +65950,10 @@ public final class ClusterOuterClass {
         if (resources_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getResources());
+        }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getDiskSizeAutoscaling());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -56695,6 +65985,11 @@ public final class ClusterOuterClass {
           if (!getResources()
               .equals(other.getResources())) return false;
         }
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -56717,6 +66012,10 @@ public final class ClusterOuterClass {
         if (hasResources()) {
           hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
           hash = (53 * hash) + getResources().hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -56869,6 +66168,12 @@ public final class ClusterOuterClass {
             resources_ = null;
             resourcesBuilder_ = null;
           }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -56909,6 +66214,11 @@ public final class ClusterOuterClass {
             result.resources_ = resources_;
           } else {
             result.resources_ = resourcesBuilder_.build();
+          }
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
           }
           onBuilt();
           return result;
@@ -56966,6 +66276,9 @@ public final class ClusterOuterClass {
           }
           if (other.hasResources()) {
             mergeResources(other.getResources());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -57387,6 +66700,161 @@ public final class ClusterOuterClass {
             resources_ = null;
           }
           return resourcesBuilder_;
+        }
+
+        private yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling disk_size_autoscaling = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -66806,6 +76274,1213 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface DiskSizeAutoscalingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the plannedUsageThreshold field is set.
+     */
+    boolean hasPlannedUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    com.google.protobuf.Int64Value getPlannedUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the emergencyUsageThreshold field is set.
+     */
+    boolean hasEmergencyUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    com.google.protobuf.Int64Value getEmergencyUsageThreshold();
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder();
+
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return Whether the diskSizeLimit field is set.
+     */
+    boolean hasDiskSizeLimit();
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    com.google.protobuf.Int64Value getDiskSizeLimit();
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling}
+   */
+  public static final class DiskSizeAutoscaling extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling)
+      DiskSizeAutoscalingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskSizeAutoscaling.newBuilder() to construct.
+    private DiskSizeAutoscaling(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskSizeAutoscaling() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskSizeAutoscaling();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskSizeAutoscaling(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (plannedUsageThreshold_ != null) {
+                subBuilder = plannedUsageThreshold_.toBuilder();
+              }
+              plannedUsageThreshold_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(plannedUsageThreshold_);
+                plannedUsageThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (emergencyUsageThreshold_ != null) {
+                subBuilder = emergencyUsageThreshold_.toBuilder();
+              }
+              emergencyUsageThreshold_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(emergencyUsageThreshold_);
+                emergencyUsageThreshold_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (diskSizeLimit_ != null) {
+                subBuilder = diskSizeLimit_.toBuilder();
+              }
+              diskSizeLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeLimit_);
+                diskSizeLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+    }
+
+    public static final int PLANNED_USAGE_THRESHOLD_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value plannedUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the plannedUsageThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlannedUsageThreshold() {
+      return plannedUsageThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPlannedUsageThreshold() {
+      return plannedUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder() {
+      return getPlannedUsageThreshold();
+    }
+
+    public static final int EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value emergencyUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return Whether the emergencyUsageThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_ != null;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+    }
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder() {
+      return getEmergencyUsageThreshold();
+    }
+
+    public static final int DISK_SIZE_LIMIT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value diskSizeLimit_;
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return Whether the diskSizeLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeLimit() {
+      return diskSizeLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDiskSizeLimit() {
+      return diskSizeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+    }
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder() {
+      return getDiskSizeLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plannedUsageThreshold_ != null) {
+        output.writeMessage(1, getPlannedUsageThreshold());
+      }
+      if (emergencyUsageThreshold_ != null) {
+        output.writeMessage(2, getEmergencyUsageThreshold());
+      }
+      if (diskSizeLimit_ != null) {
+        output.writeMessage(3, getDiskSizeLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plannedUsageThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPlannedUsageThreshold());
+      }
+      if (emergencyUsageThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEmergencyUsageThreshold());
+      }
+      if (diskSizeLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDiskSizeLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling other = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling) obj;
+
+      if (hasPlannedUsageThreshold() != other.hasPlannedUsageThreshold()) return false;
+      if (hasPlannedUsageThreshold()) {
+        if (!getPlannedUsageThreshold()
+            .equals(other.getPlannedUsageThreshold())) return false;
+      }
+      if (hasEmergencyUsageThreshold() != other.hasEmergencyUsageThreshold()) return false;
+      if (hasEmergencyUsageThreshold()) {
+        if (!getEmergencyUsageThreshold()
+            .equals(other.getEmergencyUsageThreshold())) return false;
+      }
+      if (hasDiskSizeLimit() != other.hasDiskSizeLimit()) return false;
+      if (hasDiskSizeLimit()) {
+        if (!getDiskSizeLimit()
+            .equals(other.getDiskSizeLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPlannedUsageThreshold()) {
+        hash = (37 * hash) + PLANNED_USAGE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getPlannedUsageThreshold().hashCode();
+      }
+      if (hasEmergencyUsageThreshold()) {
+        hash = (37 * hash) + EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getEmergencyUsageThreshold().hashCode();
+      }
+      if (hasDiskSizeLimit()) {
+        hash = (37 * hash) + DISK_SIZE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = null;
+        } else {
+          plannedUsageThreshold_ = null;
+          plannedUsageThresholdBuilder_ = null;
+        }
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = null;
+        } else {
+          emergencyUsageThreshold_ = null;
+          emergencyUsageThresholdBuilder_ = null;
+        }
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = null;
+        } else {
+          diskSizeLimit_ = null;
+          diskSizeLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling result = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling(this);
+        if (plannedUsageThresholdBuilder_ == null) {
+          result.plannedUsageThreshold_ = plannedUsageThreshold_;
+        } else {
+          result.plannedUsageThreshold_ = plannedUsageThresholdBuilder_.build();
+        }
+        if (emergencyUsageThresholdBuilder_ == null) {
+          result.emergencyUsageThreshold_ = emergencyUsageThreshold_;
+        } else {
+          result.emergencyUsageThreshold_ = emergencyUsageThresholdBuilder_.build();
+        }
+        if (diskSizeLimitBuilder_ == null) {
+          result.diskSizeLimit_ = diskSizeLimit_;
+        } else {
+          result.diskSizeLimit_ = diskSizeLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance()) return this;
+        if (other.hasPlannedUsageThreshold()) {
+          mergePlannedUsageThreshold(other.getPlannedUsageThreshold());
+        }
+        if (other.hasEmergencyUsageThreshold()) {
+          mergeEmergencyUsageThreshold(other.getEmergencyUsageThreshold());
+        }
+        if (other.hasDiskSizeLimit()) {
+          mergeDiskSizeLimit(other.getDiskSizeLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value plannedUsageThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> plannedUsageThresholdBuilder_;
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the plannedUsageThreshold field is set.
+       */
+      public boolean hasPlannedUsageThreshold() {
+        return plannedUsageThresholdBuilder_ != null || plannedUsageThreshold_ != null;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The plannedUsageThreshold.
+       */
+      public com.google.protobuf.Int64Value getPlannedUsageThreshold() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          return plannedUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+        } else {
+          return plannedUsageThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPlannedUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plannedUsageThreshold_ = value;
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setPlannedUsageThreshold(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder mergePlannedUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (plannedUsageThresholdBuilder_ == null) {
+          if (plannedUsageThreshold_ != null) {
+            plannedUsageThreshold_ =
+              com.google.protobuf.Int64Value.newBuilder(plannedUsageThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            plannedUsageThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          plannedUsageThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearPlannedUsageThreshold() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThreshold_ = null;
+          onChanged();
+        } else {
+          plannedUsageThreshold_ = null;
+          plannedUsageThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPlannedUsageThresholdBuilder() {
+        
+        onChanged();
+        return getPlannedUsageThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPlannedUsageThresholdOrBuilder() {
+        if (plannedUsageThresholdBuilder_ != null) {
+          return plannedUsageThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return plannedUsageThreshold_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : plannedUsageThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPlannedUsageThresholdFieldBuilder() {
+        if (plannedUsageThresholdBuilder_ == null) {
+          plannedUsageThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPlannedUsageThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          plannedUsageThreshold_ = null;
+        }
+        return plannedUsageThresholdBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value emergencyUsageThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> emergencyUsageThresholdBuilder_;
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return Whether the emergencyUsageThreshold field is set.
+       */
+      public boolean hasEmergencyUsageThreshold() {
+        return emergencyUsageThresholdBuilder_ != null || emergencyUsageThreshold_ != null;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The emergencyUsageThreshold.
+       */
+      public com.google.protobuf.Int64Value getEmergencyUsageThreshold() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          return emergencyUsageThreshold_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+        } else {
+          return emergencyUsageThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setEmergencyUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          emergencyUsageThreshold_ = value;
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder setEmergencyUsageThreshold(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = builderForValue.build();
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder mergeEmergencyUsageThreshold(com.google.protobuf.Int64Value value) {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          if (emergencyUsageThreshold_ != null) {
+            emergencyUsageThreshold_ =
+              com.google.protobuf.Int64Value.newBuilder(emergencyUsageThreshold_).mergeFrom(value).buildPartial();
+          } else {
+            emergencyUsageThreshold_ = value;
+          }
+          onChanged();
+        } else {
+          emergencyUsageThresholdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public Builder clearEmergencyUsageThreshold() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThreshold_ = null;
+          onChanged();
+        } else {
+          emergencyUsageThreshold_ = null;
+          emergencyUsageThresholdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getEmergencyUsageThresholdBuilder() {
+        
+        onChanged();
+        return getEmergencyUsageThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getEmergencyUsageThresholdOrBuilder() {
+        if (emergencyUsageThresholdBuilder_ != null) {
+          return emergencyUsageThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return emergencyUsageThreshold_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : emergencyUsageThreshold_;
+        }
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getEmergencyUsageThresholdFieldBuilder() {
+        if (emergencyUsageThresholdBuilder_ == null) {
+          emergencyUsageThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getEmergencyUsageThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          emergencyUsageThreshold_ = null;
+        }
+        return emergencyUsageThresholdBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value diskSizeLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> diskSizeLimitBuilder_;
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       * @return Whether the diskSizeLimit field is set.
+       */
+      public boolean hasDiskSizeLimit() {
+        return diskSizeLimitBuilder_ != null || diskSizeLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       * @return The diskSizeLimit.
+       */
+      public com.google.protobuf.Int64Value getDiskSizeLimit() {
+        if (diskSizeLimitBuilder_ == null) {
+          return diskSizeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+        } else {
+          return diskSizeLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder setDiskSizeLimit(com.google.protobuf.Int64Value value) {
+        if (diskSizeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeLimit_ = value;
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder setDiskSizeLimit(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder mergeDiskSizeLimit(com.google.protobuf.Int64Value value) {
+        if (diskSizeLimitBuilder_ == null) {
+          if (diskSizeLimit_ != null) {
+            diskSizeLimit_ =
+              com.google.protobuf.Int64Value.newBuilder(diskSizeLimit_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeLimit_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public Builder clearDiskSizeLimit() {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimit_ = null;
+          onChanged();
+        } else {
+          diskSizeLimit_ = null;
+          diskSizeLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDiskSizeLimitBuilder() {
+        
+        onChanged();
+        return getDiskSizeLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDiskSizeLimitOrBuilder() {
+        if (diskSizeLimitBuilder_ != null) {
+          return diskSizeLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeLimit_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : diskSizeLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value disk_size_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDiskSizeLimitFieldBuilder() {
+        if (diskSizeLimitBuilder_ == null) {
+          diskSizeLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDiskSizeLimit(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeLimit_ = null;
+        }
+        return diskSizeLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.DiskSizeAutoscaling)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskSizeAutoscaling>
+        PARSER = new com.google.protobuf.AbstractParser<DiskSizeAutoscaling>() {
+      @java.lang.Override
+      public DiskSizeAutoscaling parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskSizeAutoscaling(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskSizeAutoscaling> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskSizeAutoscaling> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor;
   private static final 
@@ -67091,6 +77766,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -67104,336 +77784,416 @@ public final class ClusterOuterClass {
       "oto\022\033yandex.cloud.mdb.mongodb.v1\032\037google" +
       "/protobuf/timestamp.proto\032\036google/protob" +
       "uf/wrappers.proto\032\033google/type/timeofday" +
-      ".proto\0323yandex/cloud/mdb/mongodb/v1/conf" +
-      "ig/mongodb3_6.proto\0323yandex/cloud/mdb/mo" +
-      "ngodb/v1/config/mongodb4_0.proto\0323yandex" +
-      "/cloud/mdb/mongodb/v1/config/mongodb4_2." +
-      "proto\0323yandex/cloud/mdb/mongodb/v1/confi" +
-      "g/mongodb4_4.proto\032>yandex/cloud/mdb/mon" +
-      "godb/v1/config/mongodb4_4_enterprise.pro" +
-      "to\0323yandex/cloud/mdb/mongodb/v1/config/m" +
-      "ongodb5_0.proto\032>yandex/cloud/mdb/mongod" +
-      "b/v1/config/mongodb5_0_enterprise.proto\032" +
-      "3yandex/cloud/mdb/mongodb/v1/config/mong" +
-      "odb6_0.proto\032>yandex/cloud/mdb/mongodb/v" +
-      "1/config/mongodb6_0_enterprise.proto\032-ya" +
-      "ndex/cloud/mdb/mongodb/v1/maintenance.pr" +
-      "oto\"\245\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
-      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
-      "ion\030\005 \001(\t\022@\n\006labels\030\006 \003(\01320.yandex.cloud" +
-      ".mdb.mongodb.v1.Cluster.LabelsEntry\022E\n\013e" +
-      "nvironment\030\007 \001(\01620.yandex.cloud.mdb.mong" +
-      "odb.v1.Cluster.Environment\022;\n\nmonitoring" +
-      "\030\010 \003(\0132\'.yandex.cloud.mdb.mongodb.v1.Mon" +
-      "itoring\022:\n\006config\030\t \001(\0132*.yandex.cloud.m" +
-      "db.mongodb.v1.ClusterConfig\022\022\n\nnetwork_i" +
-      "d\030\n \001(\t\022;\n\006health\030\013 \001(\0162+.yandex.cloud.m" +
-      "db.mongodb.v1.Cluster.Health\022;\n\006status\030\014" +
-      " \001(\0162+.yandex.cloud.mdb.mongodb.v1.Clust" +
-      "er.Status\022\017\n\007sharded\030\r \001(\010\022J\n\022maintenanc" +
-      "e_window\030\016 \001(\0132..yandex.cloud.mdb.mongod" +
-      "b.v1.MaintenanceWindow\022L\n\021planned_operat" +
-      "ion\030\017 \001(\01321.yandex.cloud.mdb.mongodb.v1." +
-      "MaintenanceOperation\022\032\n\022security_group_i" +
-      "ds\030\020 \003(\t\022\033\n\023deletion_protection\030\021 \001(\010\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPE" +
-      "CIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"" +
-      "?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
-      "\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016ST" +
-      "ATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020" +
-      "\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005" +
-      "\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitorin" +
-      "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
-      "link\030\003 \001(\t\"\360\010\n\rClusterConfig\022\017\n\007version\030" +
-      "\001 \001(\t\022%\n\035feature_compatibility_version\030\005" +
-      " \001(\t\022K\n\013mongodb_3_6\030\002 \001(\0132\'.yandex.cloud" +
-      ".mdb.mongodb.v1.Mongodb3_6H\000R\013mongodb_3_" +
-      "6\022K\n\013mongodb_4_0\030\004 \001(\0132\'.yandex.cloud.md" +
-      "b.mongodb.v1.Mongodb4_0H\000R\013mongodb_4_0\022K" +
-      "\n\013mongodb_4_2\030\007 \001(\0132\'.yandex.cloud.mdb.m" +
-      "ongodb.v1.Mongodb4_2H\000R\013mongodb_4_2\022K\n\013m" +
-      "ongodb_4_4\030\010 \001(\0132\'.yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb4_4H\000R\013mongodb_4_4\022K\n\013mong" +
-      "odb_5_0\030\n \001(\0132\'.yandex.cloud.mdb.mongodb" +
-      ".v1.Mongodb5_0H\000R\013mongodb_5_0\022K\n\013mongodb" +
-      "_6_0\030\016 \001(\0132\'.yandex.cloud.mdb.mongodb.v1" +
-      ".Mongodb6_0H\000R\013mongodb_6_0\022l\n\026mongodb_4_" +
-      "4_enterprise\030\013 \001(\01322.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Mongodb4_4_enterpriseH\000R\026mongod" +
-      "b_4_4_enterprise\022l\n\026mongodb_5_0_enterpri" +
-      "se\030\014 \001(\01322.yandex.cloud.mdb.mongodb.v1.M" +
-      "ongodb5_0_enterpriseH\000R\026mongodb_5_0_ente" +
-      "rprise\022l\n\026mongodb_6_0_enterprise\030\017 \001(\01322" +
-      ".yandex.cloud.mdb.mongodb.v1.Mongodb6_0_" +
-      "enterpriseH\000R\026mongodb_6_0_enterprise\0223\n\023" +
-      "backup_window_start\030\003 \001(\0132\026.google.type." +
-      "TimeOfDay\022>\n\031backup_retain_period_days\030\t" +
-      " \001(\0132\033.google.protobuf.Int64Value\022Z\n\027per" +
-      "formance_diagnostics\030\r \001(\01329.yandex.clou" +
-      "d.mdb.mongodb.v1.PerformanceDiagnosticsC" +
-      "onfig\0223\n\006access\030\006 \001(\0132#.yandex.cloud.mdb" +
-      ".mongodb.v1.AccessB\t\n\007mongodb\"\262\007\n\nMongod" +
-      "b3_6\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb3_6.Mongod\022B\n\010mongocfg" +
-      "\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.Mon" +
-      "godb3_6.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yande" +
-      "x.cloud.mdb.mongodb.v1.Mongodb3_6.Mongos" +
-      "\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb3_6.MongoInfra\032\213\001\n\006Mon" +
-      "god\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.m" +
-      "ongodb.v1.config.MongodConfigSet3_6\0229\n\tr" +
-      "esources\030\002 \001(\0132&.yandex.cloud.mdb.mongod" +
-      "b.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006config\030\001 " +
-      "\001(\01328.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongoCfgConfigSet3_6\0229\n\tresources\030\002 \001(\013" +
-      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
-      "3_6\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\032\351\001\n\nMongoInfra\022M\n" +
-      "\rconfig_mongos\030\001 \001(\01326.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongosConfigSet3_6\022Q\n\017" +
-      "config_mongocfg\030\002 \001(\01328.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongoCfgConfigSet3_6\022" +
-      "9\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\"\262\007\n\nMongodb4_0\022>\n\006mon" +
-      "god\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb4_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb4_0.Mon" +
-      "goCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb4_0.Mongos\022F\n\nmongoin" +
-      "fra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb4_0.MongoInfra\032\213\001\n\006Mongod\022F\n\006conf" +
-      "ig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongodConfigSet4_0\0229\n\tresources\030\002 " +
-      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
-      "ces\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfigSet4_0\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\032\213\001\n\006Mongos" +
-      "\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongosConfigSet4_0\0229\n\treso" +
-      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
-      "1.Resources\032\351\001\n\nMongoInfra\022M\n\rconfig_mon" +
-      "gos\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfigSet4_0\022Q\n\017config_mong" +
-      "ocfg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfigSet4_0\0229\n\tresource" +
-      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\"\262\007\n\nMongodb4_2\022>\n\006mongod\030\001 \001(\0132." +
-      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_2." +
-      "Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_2.MongoCfg\022>\n\006mo" +
-      "ngos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1" +
-      ".Mongodb4_2.Mongos\022F\n\nmongoinfra\030\004 \001(\01322" +
-      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_2." +
-      "MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326." +
-      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "dConfigSet4_2\0229\n\tresources\030\002 \001(\0132&.yande" +
-      "x.cloud.mdb.mongodb.v1.Resources\032\217\001\n\010Mon" +
+      ".proto\032\035yandex/cloud/validation.proto\0323y" +
+      "andex/cloud/mdb/mongodb/v1/config/mongod" +
+      "b3_6.proto\0323yandex/cloud/mdb/mongodb/v1/" +
+      "config/mongodb4_0.proto\0323yandex/cloud/md" +
+      "b/mongodb/v1/config/mongodb4_2.proto\0323ya" +
+      "ndex/cloud/mdb/mongodb/v1/config/mongodb" +
+      "4_4.proto\032>yandex/cloud/mdb/mongodb/v1/c" +
+      "onfig/mongodb4_4_enterprise.proto\0323yande" +
+      "x/cloud/mdb/mongodb/v1/config/mongodb5_0" +
+      ".proto\032>yandex/cloud/mdb/mongodb/v1/conf" +
+      "ig/mongodb5_0_enterprise.proto\0323yandex/c" +
+      "loud/mdb/mongodb/v1/config/mongodb6_0.pr" +
+      "oto\032>yandex/cloud/mdb/mongodb/v1/config/" +
+      "mongodb6_0_enterprise.proto\032-yandex/clou" +
+      "d/mdb/mongodb/v1/maintenance.proto\"\245\010\n\007C" +
+      "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
+      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
+      "\022@\n\006labels\030\006 \003(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.Cluster.LabelsEntry\022E\n\013environmen" +
+      "t\030\007 \001(\01620.yandex.cloud.mdb.mongodb.v1.Cl" +
+      "uster.Environment\022;\n\nmonitoring\030\010 \003(\0132\'." +
+      "yandex.cloud.mdb.mongodb.v1.Monitoring\022:" +
+      "\n\006config\030\t \001(\0132*.yandex.cloud.mdb.mongod" +
+      "b.v1.ClusterConfig\022\022\n\nnetwork_id\030\n \001(\t\022;" +
+      "\n\006health\030\013 \001(\0162+.yandex.cloud.mdb.mongod" +
+      "b.v1.Cluster.Health\022;\n\006status\030\014 \001(\0162+.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Cluster.Status" +
+      "\022\017\n\007sharded\030\r \001(\010\022J\n\022maintenance_window\030" +
+      "\016 \001(\0132..yandex.cloud.mdb.mongodb.v1.Main" +
+      "tenanceWindow\022L\n\021planned_operation\030\017 \001(\013" +
+      "21.yandex.cloud.mdb.mongodb.v1.Maintenan" +
+      "ceOperation\022\032\n\022security_group_ids\030\020 \003(\t\022" +
+      "\033\n\023deletion_protection\030\021 \001(\010\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013E" +
+      "nvironment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022" +
+      "\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health" +
+      "\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKN" +
+      "OWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERRO" +
+      "R\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPP" +
+      "ED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name" +
+      "\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(" +
+      "\t\"\360\010\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022%\n\035" +
+      "feature_compatibility_version\030\005 \001(\t\022K\n\013m" +
+      "ongodb_3_6\030\002 \001(\0132\'.yandex.cloud.mdb.mong" +
+      "odb.v1.Mongodb3_6H\000R\013mongodb_3_6\022K\n\013mong" +
+      "odb_4_0\030\004 \001(\0132\'.yandex.cloud.mdb.mongodb" +
+      ".v1.Mongodb4_0H\000R\013mongodb_4_0\022K\n\013mongodb" +
+      "_4_2\030\007 \001(\0132\'.yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb4_2H\000R\013mongodb_4_2\022K\n\013mongodb_4_" +
+      "4\030\010 \001(\0132\'.yandex.cloud.mdb.mongodb.v1.Mo" +
+      "ngodb4_4H\000R\013mongodb_4_4\022K\n\013mongodb_5_0\030\n" +
+      " \001(\0132\'.yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db5_0H\000R\013mongodb_5_0\022K\n\013mongodb_6_0\030\016 \001(" +
+      "\0132\'.yandex.cloud.mdb.mongodb.v1.Mongodb6" +
+      "_0H\000R\013mongodb_6_0\022l\n\026mongodb_4_4_enterpr" +
+      "ise\030\013 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb4_4_enterpriseH\000R\026mongodb_4_4_ent" +
+      "erprise\022l\n\026mongodb_5_0_enterprise\030\014 \001(\0132" +
+      "2.yandex.cloud.mdb.mongodb.v1.Mongodb5_0" +
+      "_enterpriseH\000R\026mongodb_5_0_enterprise\022l\n" +
+      "\026mongodb_6_0_enterprise\030\017 \001(\01322.yandex.c" +
+      "loud.mdb.mongodb.v1.Mongodb6_0_enterpris" +
+      "eH\000R\026mongodb_6_0_enterprise\0223\n\023backup_wi" +
+      "ndow_start\030\003 \001(\0132\026.google.type.TimeOfDay" +
+      "\022>\n\031backup_retain_period_days\030\t \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022Z\n\027performance_" +
+      "diagnostics\030\r \001(\01329.yandex.cloud.mdb.mon" +
+      "godb.v1.PerformanceDiagnosticsConfig\0223\n\006" +
+      "access\030\006 \001(\0132#.yandex.cloud.mdb.mongodb." +
+      "v1.AccessB\t\n\007mongodb\"\366\t\n\nMongodb3_6\022>\n\006m" +
+      "ongod\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v" +
+      "1.Mongodb3_6.Mongod\022B\n\010mongocfg\030\002 \001(\01320." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb3_6.M" +
+      "ongoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.m" +
+      "db.mongodb.v1.Mongodb3_6.Mongos\022F\n\nmongo" +
+      "infra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v" +
+      "1.Mongodb3_6.MongoInfra\032\334\001\n\006Mongod\022F\n\006co" +
+      "nfig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongodConfigSet3_6\0229\n\tresources\030" +
+      "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
+      "urces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.y" +
+      "andex.cloud.mdb.mongodb.v1.DiskSizeAutos" +
+      "caling\032\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.ya" +
+      "ndex.cloud.mdb.mongodb.v1.config.MongoCf" +
+      "gConfigSet3_6\0229\n\tresources\030\002 \001(\0132&.yande" +
+      "x.cloud.mdb.mongodb.v1.Resources\022O\n\025disk" +
+      "_size_autoscaling\030\003 \001(\01320.yandex.cloud.m" +
+      "db.mongodb.v1.DiskSizeAutoscaling\032\334\001\n\006Mo" +
+      "ngos\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongosConfigSet3_6\0229\n\t" +
+      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
+      "db.v1.Resources\022O\n\025disk_size_autoscaling" +
+      "\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Dis" +
+      "kSizeAutoscaling\032\272\002\n\nMongoInfra\022M\n\rconfi" +
+      "g_mongos\030\001 \001(\01326.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongosConfigSet3_6\022Q\n\017config" +
+      "_mongocfg\030\002 \001(\01328.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongoCfgConfigSet3_6\0229\n\tres" +
+      "ources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb." +
+      "v1.Resources\022O\n\025disk_size_autoscaling\030\004 " +
+      "\001(\01320.yandex.cloud.mdb.mongodb.v1.DiskSi" +
+      "zeAutoscaling\"\366\t\n\nMongodb4_0\022>\n\006mongod\030\001" +
+      " \001(\0132..yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db4_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex." +
+      "cloud.mdb.mongodb.v1.Mongodb4_0.MongoCfg" +
+      "\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mong" +
+      "odb.v1.Mongodb4_0.Mongos\022F\n\nmongoinfra\030\004" +
+      " \001(\01322.yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db4_0.MongoInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 " +
+      "\001(\01326.yandex.cloud.mdb.mongodb.v1.config" +
+      ".MongodConfigSet4_0\0229\n\tresources\030\002 \001(\0132&" +
+      ".yandex.cloud.mdb.mongodb.v1.Resources\022O" +
+      "\n\025disk_size_autoscaling\030\003 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.DiskSizeAutoscaling\032" +
+      "\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.cl" +
+      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
+      "Set4_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud" +
+      ".mdb.mongodb.v1.Resources\022O\n\025disk_size_a" +
+      "utoscaling\030\003 \001(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.DiskSizeAutoscaling\032\334\001\n\006Mongos\022F\n" +
+      "\006config\030\001 \001(\01326.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongosConfigSet4_0\0229\n\tresourc" +
+      "es\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.R" +
+      "esources\022O\n\025disk_size_autoscaling\030\003 \001(\0132" +
+      "0.yandex.cloud.mdb.mongodb.v1.DiskSizeAu" +
+      "toscaling\032\272\002\n\nMongoInfra\022M\n\rconfig_mongo" +
+      "s\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.co" +
+      "nfig.MongosConfigSet4_0\022Q\n\017config_mongoc" +
+      "fg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1.c" +
+      "onfig.MongoCfgConfigSet4_0\0229\n\tresources\030" +
+      "\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
+      "urces\022O\n\025disk_size_autoscaling\030\004 \001(\01320.y" +
+      "andex.cloud.mdb.mongodb.v1.DiskSizeAutos" +
+      "caling\"\366\t\n\nMongodb4_2\022>\n\006mongod\030\001 \001(\0132.." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb4_2.M" +
+      "ongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.m" +
+      "db.mongodb.v1.Mongodb4_2.MongoCfg\022>\n\006mon" +
+      "gos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb4_2.Mongos\022F\n\nmongoinfra\030\004 \001(\01322." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb4_2.M" +
+      "ongoInfra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.y" +
+      "andex.cloud.mdb.mongodb.v1.config.Mongod" +
+      "ConfigSet4_2\0229\n\tresources\030\002 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\022O\n\025disk_" +
+      "size_autoscaling\030\003 \001(\01320.yandex.cloud.md" +
+      "b.mongodb.v1.DiskSizeAutoscaling\032\340\001\n\010Mon" +
       "goCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb" +
       ".mongodb.v1.config.MongoCfgConfigSet4_2\022" +
       "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030" +
-      "\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.conf" +
-      "ig.MongosConfigSet4_2\0229\n\tresources\030\002 \001(\013" +
-      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326" +
-      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfigSet4_2\022Q\n\017config_mongocfg\030\002 \001(\0132" +
-      "8.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfigSet4_2\0229\n\tresources\030\003 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\"\262\007\n" +
-      "\nMongodb4_4\022>\n\006mongod\030\001 \001(\0132..yandex.clo" +
-      "ud.mdb.mongodb.v1.Mongodb4_4.Mongod\022B\n\010m" +
-      "ongocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb" +
-      ".v1.Mongodb4_4.MongoCfg\022>\n\006mongos\030\003 \001(\0132" +
-      "..yandex.cloud.mdb.mongodb.v1.Mongodb4_4" +
-      ".Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.clo" +
-      "ud.mdb.mongodb.v1.Mongodb4_4.MongoInfra\032" +
-      "\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongodConfigSet4" +
-      "_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
-      ".mongodb.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006co" +
-      "nfig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfigSet4_4\0229\n\tresource" +
-      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongosCo" +
-      "nfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\032\351\001\n\nMongoI" +
-      "nfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
-      "4_4\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "Set4_4\0229\n\tresources\030\003 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\"\240\010\n\025Mongodb4_4" +
-      "_enterprise\022I\n\006mongod\030\001 \001(\01329.yandex.clo" +
+      "ngodb.v1.Resources\022O\n\025disk_size_autoscal" +
+      "ing\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1." +
+      "DiskSizeAutoscaling\032\334\001\n\006Mongos\022F\n\006config" +
+      "\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongosConfigSet4_2\0229\n\tresources\030\002 \001(" +
+      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
+      "s\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yande" +
+      "x.cloud.mdb.mongodb.v1.DiskSizeAutoscali" +
+      "ng\032\272\002\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\013" +
+      "26.yandex.cloud.mdb.mongodb.v1.config.Mo" +
+      "ngosConfigSet4_2\022Q\n\017config_mongocfg\030\002 \001(" +
+      "\01328.yandex.cloud.mdb.mongodb.v1.config.M" +
+      "ongoCfgConfigSet4_2\0229\n\tresources\030\003 \001(\0132&" +
+      ".yandex.cloud.mdb.mongodb.v1.Resources\022O" +
+      "\n\025disk_size_autoscaling\030\004 \001(\01320.yandex.c" +
+      "loud.mdb.mongodb.v1.DiskSizeAutoscaling\"" +
+      "\366\t\n\nMongodb4_4\022>\n\006mongod\030\001 \001(\0132..yandex." +
+      "cloud.mdb.mongodb.v1.Mongodb4_4.Mongod\022B" +
+      "\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb.mong" +
+      "odb.v1.Mongodb4_4.MongoCfg\022>\n\006mongos\030\003 \001" +
+      "(\0132..yandex.cloud.mdb.mongodb.v1.Mongodb" +
+      "4_4.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex." +
+      "cloud.mdb.mongodb.v1.Mongodb4_4.MongoInf" +
+      "ra\032\334\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongodConfigS" +
+      "et4_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud." +
+      "mdb.mongodb.v1.Resources\022O\n\025disk_size_au" +
+      "toscaling\030\003 \001(\01320.yandex.cloud.mdb.mongo" +
+      "db.v1.DiskSizeAutoscaling\032\340\001\n\010MongoCfg\022H" +
+      "\n\006config\030\001 \001(\01328.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongoCfgConfigSet4_4\0229\n\treso" +
+      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
+      "1.Resources\022O\n\025disk_size_autoscaling\030\003 \001" +
+      "(\01320.yandex.cloud.mdb.mongodb.v1.DiskSiz" +
+      "eAutoscaling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\0132" +
+      "6.yandex.cloud.mdb.mongodb.v1.config.Mon" +
+      "gosConfigSet4_4\0229\n\tresources\030\002 \001(\0132&.yan" +
+      "dex.cloud.mdb.mongodb.v1.Resources\022O\n\025di" +
+      "sk_size_autoscaling\030\003 \001(\01320.yandex.cloud" +
+      ".mdb.mongodb.v1.DiskSizeAutoscaling\032\272\002\n\n" +
+      "MongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongosCon" +
+      "figSet4_4\022Q\n\017config_mongocfg\030\002 \001(\01328.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongoCfg" +
+      "ConfigSet4_4\0229\n\tresources\030\003 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\022O\n\025disk_" +
+      "size_autoscaling\030\004 \001(\01320.yandex.cloud.md" +
+      "b.mongodb.v1.DiskSizeAutoscaling\"\344\n\n\025Mon" +
+      "godb4_4_enterprise\022I\n\006mongod\030\001 \001(\01329.yan" +
+      "dex.cloud.mdb.mongodb.v1.Mongodb4_4_ente" +
+      "rprise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex" +
+      ".cloud.mdb.mongodb.v1.Mongodb4_4_enterpr" +
+      "ise.MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cl" +
+      "oud.mdb.mongodb.v1.Mongodb4_4_enterprise" +
+      ".Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.clo" +
       "ud.mdb.mongodb.v1.Mongodb4_4_enterprise." +
-      "Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_4_enterprise.Mon" +
-      "goCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb4_4_enterprise.Mongos" +
-      "\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud.mdb." +
-      "mongodb.v1.Mongodb4_4_enterprise.MongoIn" +
-      "fra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yandex." +
-      "cloud.mdb.mongodb.v1.config.MongodConfig" +
-      "Set4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\032\232\001\n" +
+      "MongoInfra\032\347\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A." +
+      "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
+      "dConfigSet4_4_enterprise\0229\n\tresources\030\002 " +
+      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
+      "ces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yan" +
+      "dex.cloud.mdb.mongodb.v1.DiskSizeAutosca" +
+      "ling\032\353\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
+      "onfigSet4_4_enterprise\0229\n\tresources\030\002 \001(" +
+      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
+      "s\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yande" +
+      "x.cloud.mdb.mongodb.v1.DiskSizeAutoscali" +
+      "ng\032\347\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongosConfigS" +
+      "et4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\022O\n\025d" +
+      "isk_size_autoscaling\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.mongodb.v1.DiskSizeAutoscaling\032\320\002\n" +
+      "\nMongoInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.yan" +
+      "dex.cloud.mdb.mongodb.v1.config.MongosCo" +
+      "nfigSet4_4_enterprise\022\\\n\017config_mongocfg" +
+      "\030\002 \001(\0132C.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongoCfgConfigSet4_4_enterprise\0229\n\tr" +
+      "esources\030\003 \001(\0132&.yandex.cloud.mdb.mongod" +
+      "b.v1.Resources\022O\n\025disk_size_autoscaling\030" +
+      "\004 \001(\01320.yandex.cloud.mdb.mongodb.v1.Disk" +
+      "SizeAutoscaling\"\366\t\n\nMongodb5_0\022>\n\006mongod" +
+      "\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godb5_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yande" +
+      "x.cloud.mdb.mongodb.v1.Mongodb5_0.MongoC" +
+      "fg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mo" +
+      "ngodb.v1.Mongodb5_0.Mongos\022F\n\nmongoinfra" +
+      "\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1.Mon" +
+      "godb5_0.MongoInfra\032\334\001\n\006Mongod\022F\n\006config\030" +
+      "\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongodConfigSet5_0\0229\n\tresources\030\002 \001(\013" +
+      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
+      "\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yandex" +
+      ".cloud.mdb.mongodb.v1.DiskSizeAutoscalin" +
+      "g\032\340\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex." +
+      "cloud.mdb.mongodb.v1.config.MongoCfgConf" +
+      "igSet5_0\0229\n\tresources\030\002 \001(\0132&.yandex.clo" +
+      "ud.mdb.mongodb.v1.Resources\022O\n\025disk_size" +
+      "_autoscaling\030\003 \001(\01320.yandex.cloud.mdb.mo" +
+      "ngodb.v1.DiskSizeAutoscaling\032\334\001\n\006Mongos\022" +
+      "F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongosConfigSet5_0\0229\n\tresou" +
+      "rces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
+      ".Resources\022O\n\025disk_size_autoscaling\030\003 \001(" +
+      "\01320.yandex.cloud.mdb.mongodb.v1.DiskSize" +
+      "Autoscaling\032\272\002\n\nMongoInfra\022M\n\rconfig_mon" +
+      "gos\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongosConfigSet5_0\022Q\n\017config_mong" +
+      "ocfg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongoCfgConfigSet5_0\0229\n\tresource" +
+      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
+      "sources\022O\n\025disk_size_autoscaling\030\004 \001(\01320" +
+      ".yandex.cloud.mdb.mongodb.v1.DiskSizeAut" +
+      "oscaling\"\344\n\n\025Mongodb5_0_enterprise\022I\n\006mo" +
+      "ngod\030\001 \001(\01329.yandex.cloud.mdb.mongodb.v1" +
+      ".Mongodb5_0_enterprise.Mongod\022M\n\010mongocf" +
+      "g\030\002 \001(\0132;.yandex.cloud.mdb.mongodb.v1.Mo" +
+      "ngodb5_0_enterprise.MongoCfg\022I\n\006mongos\030\003" +
+      " \001(\01329.yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db5_0_enterprise.Mongos\022Q\n\nmongoinfra\030\004 " +
+      "\001(\0132=.yandex.cloud.mdb.mongodb.v1.Mongod" +
+      "b5_0_enterprise.MongoInfra\032\347\001\n\006Mongod\022Q\n" +
+      "\006config\030\001 \001(\0132A.yandex.cloud.mdb.mongodb" +
+      ".v1.config.MongodConfigSet5_0_enterprise" +
+      "\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.m" +
+      "ongodb.v1.Resources\022O\n\025disk_size_autosca" +
+      "ling\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1" +
+      ".DiskSizeAutoscaling\032\353\001\n\010MongoCfg\022S\n\006con" +
+      "fig\030\001 \001(\0132C.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfigSet5_0_enterprise\0229" +
+      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
+      "godb.v1.Resources\022O\n\025disk_size_autoscali" +
+      "ng\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.D" +
+      "iskSizeAutoscaling\032\347\001\n\006Mongos\022Q\n\006config\030" +
+      "\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongosConfigSet5_0_enterprise\0229\n\treso" +
+      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
+      "1.Resources\022O\n\025disk_size_autoscaling\030\003 \001" +
+      "(\01320.yandex.cloud.mdb.mongodb.v1.DiskSiz" +
+      "eAutoscaling\032\320\002\n\nMongoInfra\022X\n\rconfig_mo" +
+      "ngos\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1" +
+      ".config.MongosConfigSet5_0_enterprise\022\\\n" +
+      "\017config_mongocfg\030\002 \001(\0132C.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongoCfgConfigSet5_0" +
+      "_enterprise\0229\n\tresources\030\003 \001(\0132&.yandex." +
+      "cloud.mdb.mongodb.v1.Resources\022O\n\025disk_s" +
+      "ize_autoscaling\030\004 \001(\01320.yandex.cloud.mdb" +
+      ".mongodb.v1.DiskSizeAutoscaling\"\366\t\n\nMong" +
+      "odb6_0\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.md" +
+      "b.mongodb.v1.Mongodb6_0.Mongod\022B\n\010mongoc" +
+      "fg\030\002 \001(\01320.yandex.cloud.mdb.mongodb.v1.M" +
+      "ongodb6_0.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yan" +
+      "dex.cloud.mdb.mongodb.v1.Mongodb6_0.Mong" +
+      "os\022F\n\nmongoinfra\030\004 \001(\01322.yandex.cloud.md" +
+      "b.mongodb.v1.Mongodb6_0.MongoInfra\032\334\001\n\006M" +
+      "ongod\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongodConfigSet6_0\0229\n" +
+      "\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mong" +
+      "odb.v1.Resources\022O\n\025disk_size_autoscalin" +
+      "g\030\003 \001(\01320.yandex.cloud.mdb.mongodb.v1.Di" +
+      "skSizeAutoscaling\032\340\001\n\010MongoCfg\022H\n\006config" +
+      "\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1.con" +
+      "fig.MongoCfgConfigSet6_0\0229\n\tresources\030\002 " +
+      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
+      "ces\022O\n\025disk_size_autoscaling\030\003 \001(\01320.yan" +
+      "dex.cloud.mdb.mongodb.v1.DiskSizeAutosca" +
+      "ling\032\334\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yandex" +
+      ".cloud.mdb.mongodb.v1.config.MongosConfi" +
+      "gSet6_0\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
+      "d.mdb.mongodb.v1.Resources\022O\n\025disk_size_" +
+      "autoscaling\030\003 \001(\01320.yandex.cloud.mdb.mon" +
+      "godb.v1.DiskSizeAutoscaling\032\272\002\n\nMongoInf" +
+      "ra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongosConfigSet6_" +
+      "0\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongoCfgConfigSe" +
+      "t6_0\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.m" +
+      "db.mongodb.v1.Resources\022O\n\025disk_size_aut" +
+      "oscaling\030\004 \001(\01320.yandex.cloud.mdb.mongod" +
+      "b.v1.DiskSizeAutoscaling\"\344\n\n\025Mongodb6_0_" +
+      "enterprise\022I\n\006mongod\030\001 \001(\01329.yandex.clou" +
+      "d.mdb.mongodb.v1.Mongodb6_0_enterprise.M" +
+      "ongod\022M\n\010mongocfg\030\002 \001(\0132;.yandex.cloud.m" +
+      "db.mongodb.v1.Mongodb6_0_enterprise.Mong" +
+      "oCfg\022I\n\006mongos\030\003 \001(\01329.yandex.cloud.mdb." +
+      "mongodb.v1.Mongodb6_0_enterprise.Mongos\022" +
+      "Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cloud.mdb.m" +
+      "ongodb.v1.Mongodb6_0_enterprise.MongoInf" +
+      "ra\032\347\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A.yandex.c" +
+      "loud.mdb.mongodb.v1.config.MongodConfigS" +
+      "et6_0_enterprise\0229\n\tresources\030\002 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\022O\n\025d" +
+      "isk_size_autoscaling\030\003 \001(\01320.yandex.clou" +
+      "d.mdb.mongodb.v1.DiskSizeAutoscaling\032\353\001\n" +
       "\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yandex.cloud" +
       ".mdb.mongodb.v1.config.MongoCfgConfigSet" +
-      "4_4_enterprise\0229\n\tresources\030\002 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\032\226\001\n\006Mo" +
-      "ngos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud.mdb." +
-      "mongodb.v1.config.MongosConfigSet4_4_ent" +
-      "erprise\0229\n\tresources\030\002 \001(\0132&.yandex.clou" +
-      "d.mdb.mongodb.v1.Resources\032\377\001\n\nMongoInfr" +
-      "a\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex.cloud." +
-      "mdb.mongodb.v1.config.MongosConfigSet4_4" +
-      "_enterprise\022\\\n\017config_mongocfg\030\002 \001(\0132C.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfigSet4_4_enterprise\0229\n\tresources\030\003" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\"\262\007\n\nMongodb5_0\022>\n\006mongod\030\001 \001(\0132..ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0.Mon" +
-      "god\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb5_0.MongoCfg\022>\n\006mongo" +
-      "s\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1.Mo" +
-      "ngodb5_0.Mongos\022F\n\nmongoinfra\030\004 \001(\01322.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0.Mon" +
-      "goInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongodCo" +
-      "nfigSet5_0\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\032\217\001\n\010MongoC" +
-      "fg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb.mo" +
-      "ngodb.v1.config.MongoCfgConfigSet5_0\0229\n\t" +
-      "resources\030\002 \001(\0132&.yandex.cloud.mdb.mongo" +
-      "db.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001" +
-      "(\01326.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongosConfigSet5_0\0229\n\tresources\030\002 \001(\0132&." +
-      "yandex.cloud.mdb.mongodb.v1.Resources\032\351\001" +
-      "\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326.ya" +
-      "ndex.cloud.mdb.mongodb.v1.config.MongosC" +
-      "onfigSet5_0\022Q\n\017config_mongocfg\030\002 \001(\01328.y" +
-      "andex.cloud.mdb.mongodb.v1.config.MongoC" +
-      "fgConfigSet5_0\0229\n\tresources\030\003 \001(\0132&.yand" +
-      "ex.cloud.mdb.mongodb.v1.Resources\"\240\010\n\025Mo" +
-      "ngodb5_0_enterprise\022I\n\006mongod\030\001 \001(\01329.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb5_0_ent" +
-      "erprise.Mongod\022M\n\010mongocfg\030\002 \001(\0132;.yande" +
-      "x.cloud.mdb.mongodb.v1.Mongodb5_0_enterp" +
-      "rise.MongoCfg\022I\n\006mongos\030\003 \001(\01329.yandex.c" +
-      "loud.mdb.mongodb.v1.Mongodb5_0_enterpris" +
-      "e.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb5_0_enterprise" +
-      ".MongoInfra\032\226\001\n\006Mongod\022Q\n\006config\030\001 \001(\0132A" +
+      "6_0_enterprise\0229\n\tresources\030\002 \001(\0132&.yand" +
+      "ex.cloud.mdb.mongodb.v1.Resources\022O\n\025dis" +
+      "k_size_autoscaling\030\003 \001(\01320.yandex.cloud." +
+      "mdb.mongodb.v1.DiskSizeAutoscaling\032\347\001\n\006M" +
+      "ongos\022Q\n\006config\030\001 \001(\0132A.yandex.cloud.mdb" +
+      ".mongodb.v1.config.MongosConfigSet6_0_en" +
+      "terprise\0229\n\tresources\030\002 \001(\0132&.yandex.clo" +
+      "ud.mdb.mongodb.v1.Resources\022O\n\025disk_size" +
+      "_autoscaling\030\003 \001(\01320.yandex.cloud.mdb.mo" +
+      "ngodb.v1.DiskSizeAutoscaling\032\320\002\n\nMongoIn" +
+      "fra\022X\n\rconfig_mongos\030\001 \001(\0132A.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongosConfigSet6" +
+      "_0_enterprise\022\\\n\017config_mongocfg\030\002 \001(\0132C" +
       ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "odConfigSet5_0_enterprise\0229\n\tresources\030\002" +
-      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
-      "rces\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(\0132C.yand" +
-      "ex.cloud.mdb.mongodb.v1.config.MongoCfgC" +
-      "onfigSet5_0_enterprise\0229\n\tresources\030\002 \001(" +
-      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\032\226\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongosConfigSe" +
-      "t5_0_enterprise\0229\n\tresources\030\002 \001(\0132&.yan" +
-      "dex.cloud.mdb.mongodb.v1.Resources\032\377\001\n\nM" +
-      "ongoInfra\022X\n\rconfig_mongos\030\001 \001(\0132A.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongosConf" +
-      "igSet5_0_enterprise\022\\\n\017config_mongocfg\030\002" +
-      " \001(\0132C.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongoCfgConfigSet5_0_enterprise\0229\n\tres" +
-      "ources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.Resources\"\262\007\n\nMongodb6_0\022>\n\006mongod\030\001 " +
-      "\001(\0132..yandex.cloud.mdb.mongodb.v1.Mongod" +
-      "b6_0.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.c" +
-      "loud.mdb.mongodb.v1.Mongodb6_0.MongoCfg\022" +
-      ">\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mongo" +
-      "db.v1.Mongodb6_0.Mongos\022F\n\nmongoinfra\030\004 " +
-      "\001(\01322.yandex.cloud.mdb.mongodb.v1.Mongod" +
-      "b6_0.MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001" +
-      "(\01326.yandex.cloud.mdb.mongodb.v1.config." +
-      "MongodConfigSet6_0\0229\n\tresources\030\002 \001(\0132&." +
-      "yandex.cloud.mdb.mongodb.v1.Resources\032\217\001" +
-      "\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongoCfgConfigSe" +
-      "t6_0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.m" +
-      "db.mongodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006co" +
-      "nfig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongosConfigSet6_0\0229\n\tresources\030" +
-      "\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Reso" +
-      "urces\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 " +
-      "\001(\01326.yandex.cloud.mdb.mongodb.v1.config" +
-      ".MongosConfigSet6_0\022Q\n\017config_mongocfg\030\002" +
-      " \001(\01328.yandex.cloud.mdb.mongodb.v1.confi" +
-      "g.MongoCfgConfigSet6_0\0229\n\tresources\030\003 \001(" +
-      "\0132&.yandex.cloud.mdb.mongodb.v1.Resource" +
-      "s\"\240\010\n\025Mongodb6_0_enterprise\022I\n\006mongod\030\001 " +
-      "\001(\01329.yandex.cloud.mdb.mongodb.v1.Mongod" +
-      "b6_0_enterprise.Mongod\022M\n\010mongocfg\030\002 \001(\013" +
-      "2;.yandex.cloud.mdb.mongodb.v1.Mongodb6_" +
-      "0_enterprise.MongoCfg\022I\n\006mongos\030\003 \001(\01329." +
-      "yandex.cloud.mdb.mongodb.v1.Mongodb6_0_e" +
-      "nterprise.Mongos\022Q\n\nmongoinfra\030\004 \001(\0132=.y" +
-      "andex.cloud.mdb.mongodb.v1.Mongodb6_0_en" +
-      "terprise.MongoInfra\032\226\001\n\006Mongod\022Q\n\006config" +
-      "\030\001 \001(\0132A.yandex.cloud.mdb.mongodb.v1.con" +
-      "fig.MongodConfigSet6_0_enterprise\0229\n\tres" +
-      "ources\030\002 \001(\0132&.yandex.cloud.mdb.mongodb." +
-      "v1.Resources\032\232\001\n\010MongoCfg\022S\n\006config\030\001 \001(" +
-      "\0132C.yandex.cloud.mdb.mongodb.v1.config.M" +
-      "ongoCfgConfigSet6_0_enterprise\0229\n\tresour" +
-      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
-      "Resources\032\226\001\n\006Mongos\022Q\n\006config\030\001 \001(\0132A.y" +
-      "andex.cloud.mdb.mongodb.v1.config.Mongos" +
-      "ConfigSet6_0_enterprise\0229\n\tresources\030\002 \001" +
-      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
-      "es\032\377\001\n\nMongoInfra\022X\n\rconfig_mongos\030\001 \001(\013" +
-      "2A.yandex.cloud.mdb.mongodb.v1.config.Mo" +
-      "ngosConfigSet6_0_enterprise\022\\\n\017config_mo" +
-      "ngocfg\030\002 \001(\0132C.yandex.cloud.mdb.mongodb." +
-      "v1.config.MongoCfgConfigSet6_0_enterpris" +
-      "e\0229\n\tresources\030\003 \001(\0132&.yandex.cloud.mdb." +
-      "mongodb.v1.Resources\")\n\005Shard\022\014\n\004name\030\001 " +
-      "\001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\363\006\n\004Host\022\014\n\004name" +
-      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
-      "\001(\t\0229\n\tresources\030\004 \001(\0132&.yandex.cloud.md" +
-      "b.mongodb.v1.Resources\0224\n\004role\030\005 \001(\0162&.y" +
-      "andex.cloud.mdb.mongodb.v1.Host.Role\0228\n\006" +
-      "health\030\006 \001(\0162(.yandex.cloud.mdb.mongodb." +
-      "v1.Host.Health\0226\n\010services\030\007 \003(\0132$.yande" +
-      "x.cloud.mdb.mongodb.v1.Service\022\021\n\tsubnet" +
-      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\ns" +
-      "hard_name\030\n \001(\t\0224\n\004type\030\013 \001(\0162&.yandex.c" +
-      "loud.mdb.mongodb.v1.Host.Type\022I\n\017host_pa" +
-      "rameters\030\014 \001(\01320.yandex.cloud.mdb.mongod" +
-      "b.v1.Host.HostParameters\032\307\001\n\016HostParamet" +
-      "ers\022\016\n\006hidden\030\001 \001(\010\022\034\n\024secondary_delay_s" +
-      "ecs\030\002 \001(\003\022\020\n\010priority\030\003 \001(\001\022H\n\004tags\030\004 \003(" +
-      "\0132:.yandex.cloud.mdb.mongodb.v1.Host.Hos" +
-      "tParameters.TagsEntry\032+\n\tTagsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\004Type\022\024\n\020TY" +
+      "oCfgConfigSet6_0_enterprise\0229\n\tresources" +
+      "\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Res" +
+      "ources\022O\n\025disk_size_autoscaling\030\004 \001(\01320." +
+      "yandex.cloud.mdb.mongodb.v1.DiskSizeAuto" +
+      "scaling\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
+      "r_id\030\002 \001(\t\"\363\006\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclu" +
+      "ster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0229\n\tresour" +
+      "ces\030\004 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
+      "Resources\0224\n\004role\030\005 \001(\0162&.yandex.cloud.m" +
+      "db.mongodb.v1.Host.Role\0228\n\006health\030\006 \001(\0162" +
+      "(.yandex.cloud.mdb.mongodb.v1.Host.Healt" +
+      "h\0226\n\010services\030\007 \003(\0132$.yandex.cloud.mdb.m" +
+      "ongodb.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020" +
+      "assign_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001" +
+      "(\t\0224\n\004type\030\013 \001(\0162&.yandex.cloud.mdb.mong" +
+      "odb.v1.Host.Type\022I\n\017host_parameters\030\014 \001(" +
+      "\01320.yandex.cloud.mdb.mongodb.v1.Host.Hos" +
+      "tParameters\032\307\001\n\016HostParameters\022\016\n\006hidden" +
+      "\030\001 \001(\010\022\034\n\024secondary_delay_secs\030\002 \001(\003\022\020\n\010" +
+      "priority\030\003 \001(\001\022H\n\004tags\030\004 \003(\0132:.yandex.cl" +
+      "oud.mdb.mongodb.v1.Host.HostParameters.T" +
+      "agsEntry\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"R\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020" +
+      "\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020\n\014ROLE_UNKNOW" +
+      "N\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDARY\020\002\"?\n\006Healt" +
+      "h\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Service\0227\n\004type\030\001 \001" +
+      "(\0162).yandex.cloud.mdb.mongodb.v1.Service" +
+      ".Type\022;\n\006health\030\002 \001(\0162+.yandex.cloud.mdb" +
+      ".mongodb.v1.Service.Health\"B\n\004Type\022\024\n\020TY" +
       "PE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002" +
-      "\022\014\n\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020" +
-      "\n\014ROLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDA" +
-      "RY\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Servic" +
-      "e\0227\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mongo" +
-      "db.v1.Service.Type\022;\n\006health\030\002 \001(\0162+.yan" +
-      "dex.cloud.mdb.mongodb.v1.Service.Health\"" +
-      "B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020" +
-      "\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n" +
-      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P" +
-      "\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022" +
-      "\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t" +
-      "\"8\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\025\n\rdata_tr" +
-      "ansfer\030\003 \001(\010J\004\010\002\020\003\"9\n\034PerformanceDiagnos" +
-      "ticsConfig\022\031\n\021profiling_enabled\030\001 \001(\010Bj\n" +
-      "\037yandex.cloud.api.mdb.mongodb.v1ZGgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/mongodb/v1;mongodbb\006proto3"
+      "\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032",
+      "\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030" +
+      "\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"8\n\006Access\022\021\n" +
+      "\tdata_lens\030\001 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010J" +
+      "\004\010\002\020\003\"9\n\034PerformanceDiagnosticsConfig\022\031\n" +
+      "\021profiling_enabled\030\001 \001(\010\"\347\001\n\023DiskSizeAut" +
+      "oscaling\022K\n\027planned_usage_threshold\030\001 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\r\350\3071\000\372\3071\005" +
+      "0-100\022M\n\031emergency_usage_threshold\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050" +
+      "-100\0224\n\017disk_size_limit\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueBj\n\037yandex.cloud.api.m" +
+      "db.mongodb.v1ZGgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/mdb/mongodb/v1;m" +
+      "ongodbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -67441,6 +78201,7 @@ public final class ClusterOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.getDescriptor(),
           yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.getDescriptor(),
@@ -67487,25 +78248,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb3_6_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_fieldAccessorTable = new
@@ -67517,25 +78278,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_0_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_fieldAccessorTable = new
@@ -67547,25 +78308,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_2_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_fieldAccessorTable = new
@@ -67577,25 +78338,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_fieldAccessorTable = new
@@ -67607,25 +78368,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb4_4_enterprise_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_fieldAccessorTable = new
@@ -67637,25 +78398,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_fieldAccessorTable = new
@@ -67667,25 +78428,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb5_0_enterprise_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_fieldAccessorTable = new
@@ -67697,25 +78458,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_fieldAccessorTable = new
@@ -67727,25 +78488,25 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongod_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoCfg_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_Mongos_descriptor,
-        new java.lang.String[] { "Config", "Resources", });
+        new java.lang.String[] { "Config", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Mongodb6_0_enterprise_MongoInfra_descriptor,
-        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
+        new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Shard_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_mongodb_v1_Shard_fieldAccessorTable = new
@@ -67794,9 +78555,22 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_PerformanceDiagnosticsConfig_descriptor,
         new java.lang.String[] { "ProfilingEnabled", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_DiskSizeAutoscaling_descriptor,
+        new java.lang.String[] { "PlannedUsageThreshold", "EmergencyUsageThreshold", "DiskSizeLimit", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb36.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb40.getDescriptor();
     yandex.cloud.api.mdb.mongodb.v1.config.Mongodb42.getDescriptor();

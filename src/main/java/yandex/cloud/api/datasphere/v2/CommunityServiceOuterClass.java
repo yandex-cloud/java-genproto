@@ -151,6 +151,26 @@ public final class CommunityServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * ID of the zone where community will be created (all projects and other resources will be in this zone)
+     * </pre>
+     *
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
+     */
+    java.lang.String getZoneId();
+    /**
+     * <pre>
+     * ID of the zone where community will be created (all projects and other resources will be in this zone)
+     * </pre>
+     *
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.CreateCommunityRequest}
@@ -169,6 +189,7 @@ public final class CommunityServiceOuterClass {
       description_ = "";
       organizationId_ = "";
       billingAccountId_ = "";
+      zoneId_ = "";
     }
 
     @java.lang.Override
@@ -237,6 +258,12 @@ public final class CommunityServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              zoneId_ = s;
               break;
             }
             default: {
@@ -564,6 +591,52 @@ public final class CommunityServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int ZONE_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object zoneId_;
+    /**
+     * <pre>
+     * ID of the zone where community will be created (all projects and other resources will be in this zone)
+     * </pre>
+     *
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getZoneId() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the zone where community will be created (all projects and other resources will be in this zone)
+     * </pre>
+     *
+     * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZoneIdBytes() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -596,6 +669,9 @@ public final class CommunityServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zoneId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -627,6 +703,9 @@ public final class CommunityServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, zoneId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -652,6 +731,8 @@ public final class CommunityServiceOuterClass {
           .equals(other.getBillingAccountId())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -675,6 +756,8 @@ public final class CommunityServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getZoneId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -839,6 +922,8 @@ public final class CommunityServiceOuterClass {
         billingAccountId_ = "";
 
         internalGetMutableLabels().clear();
+        zoneId_ = "";
+
         return this;
       }
 
@@ -872,6 +957,7 @@ public final class CommunityServiceOuterClass {
         result.billingAccountId_ = billingAccountId_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.zoneId_ = zoneId_;
         onBuilt();
         return result;
       }
@@ -938,6 +1024,10 @@ public final class CommunityServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (!other.getZoneId().isEmpty()) {
+          zoneId_ = other.zoneId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1508,6 +1598,102 @@ public final class CommunityServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object zoneId_ = "";
+      /**
+       * <pre>
+       * ID of the zone where community will be created (all projects and other resources will be in this zone)
+       * </pre>
+       *
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The zoneId.
+       */
+      public java.lang.String getZoneId() {
+        java.lang.Object ref = zoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the zone where community will be created (all projects and other resources will be in this zone)
+       * </pre>
+       *
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for zoneId.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdBytes() {
+        java.lang.Object ref = zoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the zone where community will be created (all projects and other resources will be in this zone)
+       * </pre>
+       *
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the zone where community will be created (all projects and other resources will be in this zone)
+       * </pre>
+       *
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneId() {
+        
+        zoneId_ = getDefaultInstance().getZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the zone where community will be created (all projects and other resources will be in this zone)
+       * </pre>
+       *
+       * <code>string zone_id = 6 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        zoneId_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -13380,117 +13566,118 @@ public final class CommunityServiceOuterClass {
       "/cloud/datasphere/v2/community.proto\032/ya" +
       "ndex/cloud/datasphere/v2/resource_types." +
       "proto\032-yandex/cloud/datasphere/v2/restri" +
-      "ctions.proto\"\263\002\n\026CreateCommunityRequest\022" +
+      "ctions.proto\"\312\002\n\026CreateCommunityRequest\022" +
       "J\n\004name\030\001 \001(\tB<\212\3101\004<=63\362\30710[a-zA-Z0-9\320\201\321" +
       "\221\320\220-\321\217]\\S{1,61}[a-zA-Z0-9\320\201\321\221\320\220-\321\217]\022\023\n\013d" +
       "escription\030\002 \001(\t\022\035\n\017organization_id\030\003 \001(" +
       "\tB\004\350\3071\001\022\032\n\022billing_account_id\030\004 \001(\t\022N\n\006l" +
       "abels\030\005 \003(\0132>.yandex.cloud.datasphere.v2" +
-      ".CreateCommunityRequest.LabelsEntry\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"/\n\027CreateCommunityMetadata\022\024\n\014communi" +
-      "ty_id\030\001 \001(\t\"1\n\023GetCommunityRequest\022\032\n\014co" +
-      "mmunity_id\030\001 \001(\tB\004\350\3071\001\"\207\002\n\026UpdateCommuni" +
-      "tyRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
-      "\t\022N\n\006labels\030\005 \003(\0132>.yandex.cloud.datasph" +
-      "ere.v2.UpdateCommunityRequest.LabelsEntr" +
-      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"/\n\027UpdateCommunityMetadata\022\024\n\014c" +
-      "ommunity_id\030\001 \001(\t\"4\n\026DeleteCommunityRequ" +
-      "est\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\"/\n\027Delet" +
+      ".CreateCommunityRequest.LabelsEntry\022\025\n\007z" +
+      "one_id\030\006 \001(\tB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"/\n\027CreateCommu" +
+      "nityMetadata\022\024\n\014community_id\030\001 \001(\t\"1\n\023Ge" +
+      "tCommunityRequest\022\032\n\014community_id\030\001 \001(\tB" +
+      "\004\350\3071\001\"\207\002\n\026UpdateCommunityRequest\022\032\n\014comm" +
+      "unity_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022\014\n\004name\030\003 " +
+      "\001(\t\022\023\n\013description\030\004 \001(\t\022N\n\006labels\030\005 \003(\013" +
+      "2>.yandex.cloud.datasphere.v2.UpdateComm" +
+      "unityRequest.LabelsEntry\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"/\n\027Updat" +
       "eCommunityMetadata\022\024\n\014community_id\030\001 \001(\t" +
-      "\"\263\001\n\026ListCommunitiesRequest\022\021\n\tpage_size" +
-      "\030\001 \001(\003\022\022\n\npage_token\030\002 \001(\t\022#\n\033name_or_de" +
-      "scription_pattern\030\003 \001(\t\022\023\n\013owned_by_id\030\005" +
-      " \001(\t\022\023\n\013list_public\030\006 \001(\010\022\035\n\017organizatio" +
-      "n_id\030\007 \001(\tB\004\350\3071\001J\004\010\004\020\005\"n\n\027ListCommunitie" +
-      "sResponse\022:\n\013communities\030\001 \003(\0132%.yandex." +
-      "cloud.datasphere.v2.Community\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\":\n\"SetCommunityAccessBind" +
-      "ingsMetadata\022\024\n\014community_id\030\001 \001(\t\"=\n%Up" +
-      "dateCommunityAccessBindingsMetadata\022\024\n\014c" +
-      "ommunity_id\030\001 \001(\t\"\243\001\n\033AddCommunityResour" +
-      "ceRequest\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022E\n\rresource_type\030\002 \001(\0162(.yandex.cl" +
-      "oud.datasphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013" +
-      "resource_id\030\003 \001(\tB\004\350\3071\001\"\246\001\n\036RemoveCommun" +
-      "ityResourceRequest\022\"\n\014community_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022E\n\rresource_type\030\002 \001(\0162(." +
-      "yandex.cloud.datasphere.v2.ResourceTypeB" +
-      "\004\350\3071\001\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"=\n\037GetC" +
-      "ommunityRestrictionsRequest\022\032\n\014community" +
-      "_id\030\001 \001(\tB\004\350\3071\001\"|\n\037SetCommunityRestricti" +
-      "onsRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\022=" +
-      "\n\014restrictions\030\002 \003(\0132\'.yandex.cloud.data" +
-      "sphere.v2.Restriction2\346\023\n\020CommunityServi" +
-      "ce\022\256\001\n\006Create\0222.yandex.cloud.datasphere." +
-      "v2.CreateCommunityRequest\032!.yandex.cloud" +
-      ".operation.Operation\"M\202\323\344\223\002\037\"\032/dataspher" +
-      "e/v2/communities:\001*\262\322*$\n\027CreateCommunity" +
-      "Metadata\022\tCommunity\022\220\001\n\003Get\022/.yandex.clo" +
-      "ud.datasphere.v2.GetCommunityRequest\032%.y" +
-      "andex.cloud.datasphere.v2.Community\"1\202\323\344" +
-      "\223\002+\022)/datasphere/v2/communities/{communi" +
-      "ty_id}\022\275\001\n\006Update\0222.yandex.cloud.datasph" +
-      "ere.v2.UpdateCommunityRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\\\202\323\344\223\002.2)/datas" +
-      "phere/v2/communities/{community_id}:\001*\262\322" +
-      "*$\n\027UpdateCommunityMetadata\022\tCommunity\022\306" +
-      "\001\n\006Delete\0222.yandex.cloud.datasphere.v2.D" +
-      "eleteCommunityRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"e\202\323\344\223\002+*)/datasphere/v2" +
-      "/communities/{community_id}\262\322*0\n\027DeleteC" +
-      "ommunityMetadata\022\025google.protobuf.Empty\022" +
-      "\223\001\n\004List\0222.yandex.cloud.datasphere.v2.Li" +
-      "stCommunitiesRequest\0323.yandex.cloud.data" +
-      "sphere.v2.ListCommunitiesResponse\"\"\202\323\344\223\002" +
-      "\034\022\032/datasphere/v2/communities\022\266\001\n\022ListAc" +
-      "cessBindings\022..yandex.cloud.access.ListA" +
-      "ccessBindingsRequest\032/.yandex.cloud.acce" +
-      "ss.ListAccessBindingsResponse\"?\202\323\344\223\0029\0227/" +
-      "datasphere/v2/communities/{resource_id}:" +
-      "accessBindings\022\354\001\n\021SetAccessBindings\022-.y" +
-      "andex.cloud.access.SetAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\204" +
-      "\001\202\323\344\223\002?\":/datasphere/v2/communities/{res" +
-      "ource_id}:setAccessBindings:\001*\262\322*;\n\"SetC" +
-      "ommunityAccessBindingsMetadata\022\025google.p" +
-      "rotobuf.Empty\022\370\001\n\024UpdateAccessBindings\0220" +
-      ".yandex.cloud.access.UpdateAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\212\001\202\323\344\223\002B2=/datasphere/v2/communities" +
-      "/{resource_id}:updateAccessBindings:\001*\262\322" +
-      "*>\n%UpdateCommunityAccessBindingsMetadat" +
-      "a\022\025google.protobuf.Empty\022\305\001\n\013AddResource" +
-      "\0227.yandex.cloud.datasphere.v2.AddCommuni" +
-      "tyResourceRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"Z\202\323\344\223\0029\"4/datasphere/v2/com" +
-      "munities/{resource_id}:addResource:\001*\262\322*" +
-      "\027\022\025google.protobuf.Empty\022\316\001\n\016RemoveResou" +
-      "rce\022:.yandex.cloud.datasphere.v2.RemoveC" +
-      "ommunityResourceRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"]\202\323\344\223\002<\"7/datasphere/" +
-      "v2/communities/{resource_id}:removeResou" +
-      "rce:\001*\262\322*\027\022\025google.protobuf.Empty\022\233\001\n\023Ge" +
-      "tRestrictionsMeta\022\026.google.protobuf.Empt" +
-      "y\0327.yandex.cloud.datasphere.v2.GetRestri" +
-      "ctionsMetaResponse\"3\202\323\344\223\002-\022+/datasphere/" +
-      "v2/communities/restrictionsMeta\022\300\001\n\017GetR" +
-      "estrictions\022;.yandex.cloud.datasphere.v2" +
-      ".GetCommunityRestrictionsRequest\0320.yande" +
-      "x.cloud.datasphere.v2.RestrictionsRespon" +
-      "se\">\202\323\344\223\0028\0226/datasphere/v2/communities/{" +
-      "community_id}:restrictions\022\321\001\n\017SetRestri" +
-      "ctions\022;.yandex.cloud.datasphere.v2.SetC" +
-      "ommunityRestrictionsRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"^\202\323\344\223\002>\"9/datasph" +
-      "ere/v2/communities/{community_id}:setRes" +
-      "trictions:\001*\262\322*\026\022\024RestrictionsResponseBk" +
-      "\n\036yandex.cloud.api.datasphere.v2ZIgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/datasphere/v2;datasphereb\006proto3"
+      "\"4\n\026DeleteCommunityRequest\022\032\n\014community_" +
+      "id\030\001 \001(\tB\004\350\3071\001\"/\n\027DeleteCommunityMetadat" +
+      "a\022\024\n\014community_id\030\001 \001(\t\"\263\001\n\026ListCommunit" +
+      "iesRequest\022\021\n\tpage_size\030\001 \001(\003\022\022\n\npage_to" +
+      "ken\030\002 \001(\t\022#\n\033name_or_description_pattern" +
+      "\030\003 \001(\t\022\023\n\013owned_by_id\030\005 \001(\t\022\023\n\013list_publ" +
+      "ic\030\006 \001(\010\022\035\n\017organization_id\030\007 \001(\tB\004\350\3071\001J" +
+      "\004\010\004\020\005\"n\n\027ListCommunitiesResponse\022:\n\013comm" +
+      "unities\030\001 \003(\0132%.yandex.cloud.datasphere." +
+      "v2.Community\022\027\n\017next_page_token\030\002 \001(\t\":\n" +
+      "\"SetCommunityAccessBindingsMetadata\022\024\n\014c" +
+      "ommunity_id\030\001 \001(\t\"=\n%UpdateCommunityAcce" +
+      "ssBindingsMetadata\022\024\n\014community_id\030\001 \001(\t" +
+      "\"\243\001\n\033AddCommunityResourceRequest\022\"\n\014comm" +
+      "unity_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022E\n\rresource" +
+      "_type\030\002 \001(\0162(.yandex.cloud.datasphere.v2" +
+      ".ResourceTypeB\004\350\3071\001\022\031\n\013resource_id\030\003 \001(\t" +
+      "B\004\350\3071\001\"\246\001\n\036RemoveCommunityResourceReques" +
+      "t\022\"\n\014community_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022E\n" +
+      "\rresource_type\030\002 \001(\0162(.yandex.cloud.data" +
+      "sphere.v2.ResourceTypeB\004\350\3071\001\022\031\n\013resource" +
+      "_id\030\003 \001(\tB\004\350\3071\001\"=\n\037GetCommunityRestricti" +
+      "onsRequest\022\032\n\014community_id\030\001 \001(\tB\004\350\3071\001\"|" +
+      "\n\037SetCommunityRestrictionsRequest\022\032\n\014com" +
+      "munity_id\030\001 \001(\tB\004\350\3071\001\022=\n\014restrictions\030\002 " +
+      "\003(\0132\'.yandex.cloud.datasphere.v2.Restric" +
+      "tion2\346\023\n\020CommunityService\022\256\001\n\006Create\0222.y" +
+      "andex.cloud.datasphere.v2.CreateCommunit" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"M\202\323\344\223\002\037\"\032/datasphere/v2/communities:" +
+      "\001*\262\322*$\n\027CreateCommunityMetadata\022\tCommuni" +
+      "ty\022\220\001\n\003Get\022/.yandex.cloud.datasphere.v2." +
+      "GetCommunityRequest\032%.yandex.cloud.datas" +
+      "phere.v2.Community\"1\202\323\344\223\002+\022)/datasphere/" +
+      "v2/communities/{community_id}\022\275\001\n\006Update" +
+      "\0222.yandex.cloud.datasphere.v2.UpdateComm" +
+      "unityRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\\\202\323\344\223\002.2)/datasphere/v2/communit" +
+      "ies/{community_id}:\001*\262\322*$\n\027UpdateCommuni" +
+      "tyMetadata\022\tCommunity\022\306\001\n\006Delete\0222.yande" +
+      "x.cloud.datasphere.v2.DeleteCommunityReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "e\202\323\344\223\002+*)/datasphere/v2/communities/{com" +
+      "munity_id}\262\322*0\n\027DeleteCommunityMetadata\022" +
+      "\025google.protobuf.Empty\022\223\001\n\004List\0222.yandex" +
+      ".cloud.datasphere.v2.ListCommunitiesRequ" +
+      "est\0323.yandex.cloud.datasphere.v2.ListCom" +
+      "munitiesResponse\"\"\202\323\344\223\002\034\022\032/datasphere/v2" +
+      "/communities\022\266\001\n\022ListAccessBindings\022..ya" +
+      "ndex.cloud.access.ListAccessBindingsRequ" +
+      "est\032/.yandex.cloud.access.ListAccessBind" +
+      "ingsResponse\"?\202\323\344\223\0029\0227/datasphere/v2/com" +
+      "munities/{resource_id}:accessBindings\022\354\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\204\001\202\323\344\223\002?\":/datasph" +
+      "ere/v2/communities/{resource_id}:setAcce" +
+      "ssBindings:\001*\262\322*;\n\"SetCommunityAccessBin" +
+      "dingsMetadata\022\025google.protobuf.Empty\022\370\001\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\212\001\202\323\344\223\002B2=/da" +
+      "tasphere/v2/communities/{resource_id}:up" +
+      "dateAccessBindings:\001*\262\322*>\n%UpdateCommuni" +
+      "tyAccessBindingsMetadata\022\025google.protobu" +
+      "f.Empty\022\305\001\n\013AddResource\0227.yandex.cloud.d" +
+      "atasphere.v2.AddCommunityResourceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"Z\202\323\344" +
+      "\223\0029\"4/datasphere/v2/communities/{resourc" +
+      "e_id}:addResource:\001*\262\322*\027\022\025google.protobu" +
+      "f.Empty\022\316\001\n\016RemoveResource\022:.yandex.clou" +
+      "d.datasphere.v2.RemoveCommunityResourceR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"]\202\323\344\223\002<\"7/datasphere/v2/communities/{r" +
+      "esource_id}:removeResource:\001*\262\322*\027\022\025googl" +
+      "e.protobuf.Empty\022\233\001\n\023GetRestrictionsMeta" +
+      "\022\026.google.protobuf.Empty\0327.yandex.cloud." +
+      "datasphere.v2.GetRestrictionsMetaRespons" +
+      "e\"3\202\323\344\223\002-\022+/datasphere/v2/communities/re" +
+      "strictionsMeta\022\300\001\n\017GetRestrictions\022;.yan" +
+      "dex.cloud.datasphere.v2.GetCommunityRest" +
+      "rictionsRequest\0320.yandex.cloud.dataspher" +
+      "e.v2.RestrictionsResponse\">\202\323\344\223\0028\0226/data" +
+      "sphere/v2/communities/{community_id}:res" +
+      "trictions\022\321\001\n\017SetRestrictions\022;.yandex.c" +
+      "loud.datasphere.v2.SetCommunityRestricti" +
+      "onsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"^\202\323\344\223\002>\"9/datasphere/v2/communitie" +
+      "s/{community_id}:setRestrictions:\001*\262\322*\026\022" +
+      "\024RestrictionsResponseBk\n\036yandex.cloud.ap" +
+      "i.datasphere.v2ZIgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/datasphere/v2;" +
+      "datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13511,7 +13698,7 @@ public final class CommunityServiceOuterClass {
     internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_descriptor,
-        new java.lang.String[] { "Name", "Description", "OrganizationId", "BillingAccountId", "Labels", });
+        new java.lang.String[] { "Name", "Description", "OrganizationId", "BillingAccountId", "Labels", "ZoneId", });
     internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datasphere_v2_CreateCommunityRequest_LabelsEntry_fieldAccessorTable = new
