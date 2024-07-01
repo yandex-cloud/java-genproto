@@ -88,7 +88,8 @@ public final class NetworkOuterClass {
     /**
      * <pre>
      * Name of the network.
-     * The name is unique within the folder. 3-63 characters long.
+     * The name is unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -98,7 +99,8 @@ public final class NetworkOuterClass {
     /**
      * <pre>
      * Name of the network.
-     * The name is unique within the folder. 3-63 characters long.
+     * The name is unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -129,7 +131,12 @@ public final class NetworkOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -137,7 +144,12 @@ public final class NetworkOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -152,7 +164,12 @@ public final class NetworkOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -161,7 +178,12 @@ public final class NetworkOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -172,7 +194,12 @@ public final class NetworkOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -491,7 +518,8 @@ public final class NetworkOuterClass {
     /**
      * <pre>
      * Name of the network.
-     * The name is unique within the folder. 3-63 characters long.
+     * The name is unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -513,7 +541,8 @@ public final class NetworkOuterClass {
     /**
      * <pre>
      * Name of the network.
-     * The name is unique within the folder. 3-63 characters long.
+     * The name is unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -608,7 +637,12 @@ public final class NetworkOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -630,7 +664,12 @@ public final class NetworkOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -642,7 +681,12 @@ public final class NetworkOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -659,7 +703,12 @@ public final class NetworkOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`.
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1529,7 +1578,8 @@ public final class NetworkOuterClass {
       /**
        * <pre>
        * Name of the network.
-       * The name is unique within the folder. 3-63 characters long.
+       * The name is unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1550,7 +1600,8 @@ public final class NetworkOuterClass {
       /**
        * <pre>
        * Name of the network.
-       * The name is unique within the folder. 3-63 characters long.
+       * The name is unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1572,7 +1623,8 @@ public final class NetworkOuterClass {
       /**
        * <pre>
        * Name of the network.
-       * The name is unique within the folder. 3-63 characters long.
+       * The name is unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1592,7 +1644,8 @@ public final class NetworkOuterClass {
       /**
        * <pre>
        * Name of the network.
-       * The name is unique within the folder. 3-63 characters long.
+       * The name is unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1607,7 +1660,8 @@ public final class NetworkOuterClass {
       /**
        * <pre>
        * Name of the network.
-       * The name is unique within the folder. 3-63 characters long.
+       * The name is unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1750,7 +1804,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1772,7 +1831,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1784,7 +1848,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1801,7 +1870,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1826,7 +1900,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1849,7 +1928,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1868,7 +1952,12 @@ public final class NetworkOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`.
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

@@ -14,6 +14,132 @@ public final class TalkServiceProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.speechsense.v1.UserRole}
+   */
+  public enum UserRole
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>USER_ROLE_UNSPECIFIED = 0;</code>
+     */
+    USER_ROLE_UNSPECIFIED(0),
+    /**
+     * <code>USER_ROLE_OPERATOR = 1;</code>
+     */
+    USER_ROLE_OPERATOR(1),
+    /**
+     * <code>USER_ROLE_CLIENT = 2;</code>
+     */
+    USER_ROLE_CLIENT(2),
+    /**
+     * <code>USER_ROLE_BOT = 3;</code>
+     */
+    USER_ROLE_BOT(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USER_ROLE_UNSPECIFIED = 0;</code>
+     */
+    public static final int USER_ROLE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USER_ROLE_OPERATOR = 1;</code>
+     */
+    public static final int USER_ROLE_OPERATOR_VALUE = 1;
+    /**
+     * <code>USER_ROLE_CLIENT = 2;</code>
+     */
+    public static final int USER_ROLE_CLIENT_VALUE = 2;
+    /**
+     * <code>USER_ROLE_BOT = 3;</code>
+     */
+    public static final int USER_ROLE_BOT_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UserRole valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UserRole forNumber(int value) {
+      switch (value) {
+        case 0: return USER_ROLE_UNSPECIFIED;
+        case 1: return USER_ROLE_OPERATOR;
+        case 2: return USER_ROLE_CLIENT;
+        case 3: return USER_ROLE_BOT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UserRole>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UserRole> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UserRole>() {
+            public UserRole findValueByNumber(int number) {
+              return UserRole.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final UserRole[] VALUES = values();
+
+    public static UserRole valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UserRole(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.speechsense.v1.UserRole)
+  }
+
   public interface StreamTalkRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.StreamTalkRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4098,6 +4224,50 @@ public final class TalkServiceProto {
 
     java.lang.String getFieldsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> 
+        getUsersList();
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getUsers(int index);
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    int getUsersCount();
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder> 
+        getUsersOrBuilderList();
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder getUsersOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.speechsense.v1.TalkMetadata}
@@ -4113,6 +4283,7 @@ public final class TalkServiceProto {
     }
     private TalkMetadata() {
       connectionId_ = "";
+      users_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4165,6 +4336,15 @@ public final class TalkServiceProto {
                   fields__.getKey(), fields__.getValue());
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                users_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              users_.add(
+                  input.readMessage(yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4180,6 +4360,9 @@ public final class TalkServiceProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          users_ = java.util.Collections.unmodifiableList(users_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -4352,6 +4535,66 @@ public final class TalkServiceProto {
       return map.get(key);
     }
 
+    public static final int USERS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> users_;
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> getUsersList() {
+      return users_;
+    }
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder> 
+        getUsersOrBuilderList() {
+      return users_;
+    }
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    @java.lang.Override
+    public int getUsersCount() {
+      return users_.size();
+    }
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getUsers(int index) {
+      return users_.get(index);
+    }
+    /**
+     * <pre>
+     * per user specific metadata
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder getUsersOrBuilder(
+        int index) {
+      return users_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4375,6 +4618,9 @@ public final class TalkServiceProto {
           internalGetFields(),
           FieldsDefaultEntryHolder.defaultEntry,
           2);
+      for (int i = 0; i < users_.size(); i++) {
+        output.writeMessage(3, users_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4397,6 +4643,10 @@ public final class TalkServiceProto {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, fields__);
       }
+      for (int i = 0; i < users_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, users_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4416,6 +4666,8 @@ public final class TalkServiceProto {
           .equals(other.getConnectionId())) return false;
       if (!internalGetFields().equals(
           other.internalGetFields())) return false;
+      if (!getUsersList()
+          .equals(other.getUsersList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4432,6 +4684,10 @@ public final class TalkServiceProto {
       if (!internalGetFields().getMap().isEmpty()) {
         hash = (37 * hash) + FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetFields().hashCode();
+      }
+      if (getUsersCount() > 0) {
+        hash = (37 * hash) + USERS_FIELD_NUMBER;
+        hash = (53 * hash) + getUsersList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4583,6 +4839,7 @@ public final class TalkServiceProto {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getUsersFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4591,6 +4848,12 @@ public final class TalkServiceProto {
         connectionId_ = "";
 
         internalGetMutableFields().clear();
+        if (usersBuilder_ == null) {
+          users_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          usersBuilder_.clear();
+        }
         return this;
       }
 
@@ -4621,6 +4884,15 @@ public final class TalkServiceProto {
         result.connectionId_ = connectionId_;
         result.fields_ = internalGetFields();
         result.fields_.makeImmutable();
+        if (usersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            users_ = java.util.Collections.unmodifiableList(users_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.users_ = users_;
+        } else {
+          result.users_ = usersBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4675,6 +4947,32 @@ public final class TalkServiceProto {
         }
         internalGetMutableFields().mergeFrom(
             other.internalGetFields());
+        if (usersBuilder_ == null) {
+          if (!other.users_.isEmpty()) {
+            if (users_.isEmpty()) {
+              users_ = other.users_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUsersIsMutable();
+              users_.addAll(other.users_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.users_.isEmpty()) {
+            if (usersBuilder_.isEmpty()) {
+              usersBuilder_.dispose();
+              usersBuilder_ = null;
+              users_ = other.users_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              usersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUsersFieldBuilder() : null;
+            } else {
+              usersBuilder_.addAllMessages(other.users_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4959,6 +5257,318 @@ public final class TalkServiceProto {
             .putAll(values);
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> users_ =
+        java.util.Collections.emptyList();
+      private void ensureUsersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          users_ = new java.util.ArrayList<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata>(users_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder> usersBuilder_;
+
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> getUsersList() {
+        if (usersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(users_);
+        } else {
+          return usersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public int getUsersCount() {
+        if (usersBuilder_ == null) {
+          return users_.size();
+        } else {
+          return usersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getUsers(int index) {
+        if (usersBuilder_ == null) {
+          return users_.get(index);
+        } else {
+          return usersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder setUsers(
+          int index, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata value) {
+        if (usersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUsersIsMutable();
+          users_.set(index, value);
+          onChanged();
+        } else {
+          usersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder setUsers(
+          int index, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder builderForValue) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          usersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder addUsers(yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata value) {
+        if (usersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUsersIsMutable();
+          users_.add(value);
+          onChanged();
+        } else {
+          usersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder addUsers(
+          int index, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata value) {
+        if (usersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUsersIsMutable();
+          users_.add(index, value);
+          onChanged();
+        } else {
+          usersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder addUsers(
+          yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder builderForValue) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.add(builderForValue.build());
+          onChanged();
+        } else {
+          usersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder addUsers(
+          int index, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder builderForValue) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          usersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder addAllUsers(
+          java.lang.Iterable<? extends yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata> values) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, users_);
+          onChanged();
+        } else {
+          usersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder clearUsers() {
+        if (usersBuilder_ == null) {
+          users_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          usersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public Builder removeUsers(int index) {
+        if (usersBuilder_ == null) {
+          ensureUsersIsMutable();
+          users_.remove(index);
+          onChanged();
+        } else {
+          usersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder getUsersBuilder(
+          int index) {
+        return getUsersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder getUsersOrBuilder(
+          int index) {
+        if (usersBuilder_ == null) {
+          return users_.get(index);  } else {
+          return usersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder> 
+           getUsersOrBuilderList() {
+        if (usersBuilder_ != null) {
+          return usersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(users_);
+        }
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder addUsersBuilder() {
+        return getUsersFieldBuilder().addBuilder(
+            yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder addUsersBuilder(
+          int index) {
+        return getUsersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * per user specific metadata
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.speechsense.v1.UserMetadata users = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder> 
+           getUsersBuilderList() {
+        return getUsersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder> 
+          getUsersFieldBuilder() {
+        if (usersBuilder_ == null) {
+          usersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder>(
+                  users_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          users_ = null;
+        }
+        return usersBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5007,6 +5617,1004 @@ public final class TalkServiceProto {
 
     @java.lang.Override
     public yandex.cloud.api.speechsense.v1.TalkServiceProto.TalkMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UserMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+     * @return The enum numeric value on the wire for role.
+     */
+    int getRoleValue();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+     * @return The role.
+     */
+    yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole getRole();
+
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    int getFieldsCount();
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    boolean containsFields(
+        java.lang.String key);
+    /**
+     * Use {@link #getFieldsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getFields();
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getFieldsMap();
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+
+    java.lang.String getFieldsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+
+    java.lang.String getFieldsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UserMetadata}
+   */
+  public static final class UserMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UserMetadata)
+      UserMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserMetadata.newBuilder() to construct.
+    private UserMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserMetadata() {
+      id_ = "";
+      role_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              role_ = rawValue;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fields_ = com.google.protobuf.MapField.newMapField(
+                    FieldsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              fields__ = input.readMessage(
+                  FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              fields_.getMutableMap().put(
+                  fields__.getKey(), fields__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetFields();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROLE_FIELD_NUMBER = 2;
+    private int role_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+     * @return The enum numeric value on the wire for role.
+     */
+    @java.lang.Override public int getRoleValue() {
+      return role_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+     * @return The role.
+     */
+    @java.lang.Override public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole getRole() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole result = yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.valueOf(role_);
+      return result == null ? yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.UNRECOGNIZED : result;
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 3;
+    private static final class FieldsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> fields_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetFields() {
+      if (fields_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            FieldsDefaultEntryHolder.defaultEntry);
+      }
+      return fields_;
+    }
+
+    public int getFieldsCount() {
+      return internalGetFields().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsFields(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetFields().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getFieldsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getFields() {
+      return getFieldsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+      return internalGetFields().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getFieldsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFields().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; fields = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getFieldsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFields().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (role_ != yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.USER_ROLE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, role_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetFields(),
+          FieldsDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (role_ != yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.USER_ROLE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, role_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetFields().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        fields__ = FieldsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, fields__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata other = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (role_ != other.role_) return false;
+      if (!internalGetFields().equals(
+          other.internalGetFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + role_;
+      if (!internalGetFields().getMap().isEmpty()) {
+        hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetFields().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UserMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UserMetadata)
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableFields();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        role_ = 0;
+
+        internalGetMutableFields().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata build() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata result = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.id_ = id_;
+        result.role_ = role_;
+        result.fields_ = internalGetFields();
+        result.fields_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.role_ != 0) {
+          setRoleValue(other.getRoleValue());
+        }
+        internalGetMutableFields().mergeFrom(
+            other.internalGetFields());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int role_ = 0;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+       * @return The enum numeric value on the wire for role.
+       */
+      @java.lang.Override public int getRoleValue() {
+        return role_;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+       * @param value The enum numeric value on the wire for role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleValue(int value) {
+        
+        role_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+       * @return The role.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole getRole() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole result = yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.valueOf(role_);
+        return result == null ? yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRole(yandex.cloud.api.speechsense.v1.TalkServiceProto.UserRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        role_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.UserRole role = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRole() {
+        
+        role_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> fields_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetFields() {
+        if (fields_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
+        }
+        return fields_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableFields() {
+        onChanged();;
+        if (fields_ == null) {
+          fields_ = com.google.protobuf.MapField.newMapField(
+              FieldsDefaultEntryHolder.defaultEntry);
+        }
+        if (!fields_.isMutable()) {
+          fields_ = fields_.copy();
+        }
+        return fields_;
+      }
+
+      public int getFieldsCount() {
+        return internalGetFields().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsFields(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetFields().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getFieldsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getFields() {
+        return getFieldsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getFieldsMap() {
+        return internalGetFields().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getFieldsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetFields().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getFieldsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetFields().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearFields() {
+        internalGetMutableFields().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+
+      public Builder removeFields(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableFields().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableFields() {
+        return internalGetMutableFields().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+      public Builder putFields(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableFields().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; fields = 3;</code>
+       */
+
+      public Builder putAllFields(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableFields().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UserMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UserMetadata)
+    private static final yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UserMetadata>() {
+      @java.lang.Override
+      public UserMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkServiceProto.UserMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11006,6 +12614,16 @@ public final class TalkServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UserMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_SearchTalkRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11054,47 +12672,56 @@ public final class TalkServiceProto {
       "a\030\001 \001(\0132).yandex.cloud.speechsense.v1.Ta" +
       "lkMetadata\022>\n\014text_content\030\002 \001(\0132(.yande" +
       "x.cloud.speechsense.v1.TextContent\"%\n\022Up" +
-      "loadTextResponse\022\017\n\007talk_id\030\001 \001(\t\"\233\001\n\014Ta" +
+      "loadTextResponse\022\017\n\007talk_id\030\001 \001(\t\"\325\001\n\014Ta" +
       "lkMetadata\022\025\n\rconnection_id\030\001 \001(\t\022E\n\006fie" +
       "lds\030\002 \003(\01325.yandex.cloud.speechsense.v1." +
-      "TalkMetadata.FieldsEntry\032-\n\013FieldsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\002\n\021Sear" +
-      "chTalkRequest\022\027\n\017organization_id\030\001 \001(\t\022\020" +
-      "\n\010space_id\030\002 \001(\t\022\025\n\rconnection_id\030\003 \001(\t\022" +
-      "\022\n\nproject_id\030\004 \001(\t\0224\n\007filters\030\005 \003(\0132#.y" +
-      "andex.cloud.speechsense.v1.Filter\0221\n\005que" +
-      "ry\030\006 \001(\0132\".yandex.cloud.speechsense.v1.Q" +
-      "uery\022\021\n\tpage_size\030\007 \001(\003\022\022\n\npage_token\030\010 " +
-      "\001(\t\0228\n\tsort_data\030\t \001(\0132%.yandex.cloud.sp" +
-      "eechsense.v1.SortData\"T\n\022SearchTalkRespo" +
-      "nse\022\020\n\010talk_ids\030\001 \003(\t\022\023\n\013talks_count\030\002 \001" +
-      "(\003\022\027\n\017next_page_token\030\003 \001(\t\"\252\001\n\016GetTalkR" +
-      "equest\022\027\n\017organization_id\030\001 \001(\t\022\020\n\010space" +
-      "_id\030\002 \001(\t\022\025\n\rconnection_id\030\003 \001(\t\022\022\n\nproj" +
-      "ect_id\030\004 \001(\t\022\020\n\010talk_ids\030\005 \003(\t\0220\n\014result" +
-      "s_mask\030\006 \001(\0132\032.google.protobuf.FieldMask" +
-      "\"B\n\017GetTalkResponse\022/\n\004talk\030\001 \003(\0132!.yand" +
-      "ex.cloud.speechsense.v1.Talk2\376\004\n\013TalkSer" +
-      "vice\022s\n\016UploadAsStream\022..yandex.cloud.sp" +
-      "eechsense.v1.StreamTalkRequest\032/.yandex." +
-      "cloud.speechsense.v1.UploadTalkResponse(" +
-      "\001\022i\n\006Upload\022..yandex.cloud.speechsense.v" +
-      "1.UploadTalkRequest\032/.yandex.cloud.speec" +
-      "hsense.v1.UploadTalkResponse\022m\n\nUploadTe" +
-      "xt\022..yandex.cloud.speechsense.v1.UploadT" +
-      "extRequest\032/.yandex.cloud.speechsense.v1" +
-      ".UploadTextResponse\022\222\001\n\006Search\022..yandex." +
-      "cloud.speechsense.v1.SearchTalkRequest\032/" +
-      ".yandex.cloud.speechsense.v1.SearchTalkR" +
-      "esponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talks/s" +
-      "earch:\001*\022\212\001\n\003Get\022+.yandex.cloud.speechse" +
-      "nse.v1.GetTalkRequest\032,.yandex.cloud.spe" +
-      "echsense.v1.GetTalkResponse\"(\202\323\344\223\002\"\"\035/sp" +
-      "eechsense/v1/talks/bulkGet:\001*B\200\001\n\037yandex" +
-      ".cloud.api.speechsense.v1B\020TalkServicePr" +
-      "otoZKgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/speechsense/v1;speechsense" +
-      "b\006proto3"
+      "TalkMetadata.FieldsEntry\0228\n\005users\030\003 \003(\0132" +
+      ").yandex.cloud.speechsense.v1.UserMetada" +
+      "ta\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"\305\001\n\014UserMetadata\022\n\n\002id\030\001 \001(\t\0223" +
+      "\n\004role\030\002 \001(\0162%.yandex.cloud.speechsense." +
+      "v1.UserRole\022E\n\006fields\030\003 \003(\01325.yandex.clo" +
+      "ud.speechsense.v1.UserMetadata.FieldsEnt" +
+      "ry\032-\n\013FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"\263\002\n\021SearchTalkRequest\022\027\n\017organ" +
+      "ization_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rco" +
+      "nnection_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\0224\n" +
+      "\007filters\030\005 \003(\0132#.yandex.cloud.speechsens" +
+      "e.v1.Filter\0221\n\005query\030\006 \001(\0132\".yandex.clou" +
+      "d.speechsense.v1.Query\022\021\n\tpage_size\030\007 \001(" +
+      "\003\022\022\n\npage_token\030\010 \001(\t\0228\n\tsort_data\030\t \001(\013" +
+      "2%.yandex.cloud.speechsense.v1.SortData\"" +
+      "T\n\022SearchTalkResponse\022\020\n\010talk_ids\030\001 \003(\t\022" +
+      "\023\n\013talks_count\030\002 \001(\003\022\027\n\017next_page_token\030" +
+      "\003 \001(\t\"\252\001\n\016GetTalkRequest\022\027\n\017organization" +
+      "_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnectio" +
+      "n_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\022\020\n\010talk_i" +
+      "ds\030\005 \003(\t\0220\n\014results_mask\030\006 \001(\0132\032.google." +
+      "protobuf.FieldMask\"B\n\017GetTalkResponse\022/\n" +
+      "\004talk\030\001 \003(\0132!.yandex.cloud.speechsense.v" +
+      "1.Talk*f\n\010UserRole\022\031\n\025USER_ROLE_UNSPECIF" +
+      "IED\020\000\022\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n\020USER_RO" +
+      "LE_CLIENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\376\004\n\013TalkS" +
+      "ervice\022s\n\016UploadAsStream\022..yandex.cloud." +
+      "speechsense.v1.StreamTalkRequest\032/.yande" +
+      "x.cloud.speechsense.v1.UploadTalkRespons" +
+      "e(\001\022i\n\006Upload\022..yandex.cloud.speechsense" +
+      ".v1.UploadTalkRequest\032/.yandex.cloud.spe" +
+      "echsense.v1.UploadTalkResponse\022m\n\nUpload" +
+      "Text\022..yandex.cloud.speechsense.v1.Uploa" +
+      "dTextRequest\032/.yandex.cloud.speechsense." +
+      "v1.UploadTextResponse\022\222\001\n\006Search\022..yande" +
+      "x.cloud.speechsense.v1.SearchTalkRequest" +
+      "\032/.yandex.cloud.speechsense.v1.SearchTal" +
+      "kResponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talks" +
+      "/search:\001*\022\212\001\n\003Get\022+.yandex.cloud.speech" +
+      "sense.v1.GetTalkRequest\032,.yandex.cloud.s" +
+      "peechsense.v1.GetTalkResponse\"(\202\323\344\223\002\"\"\035/" +
+      "speechsense/v1/talks/bulkGet:\001*B\200\001\n\037yand" +
+      "ex.cloud.api.speechsense.v1B\020TalkService" +
+      "ProtoZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/speechsense/v1;speechsen" +
+      "seb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11141,33 +12768,45 @@ public final class TalkServiceProto {
     internal_static_yandex_cloud_speechsense_v1_TalkMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor,
-        new java.lang.String[] { "ConnectionId", "Fields", });
+        new java.lang.String[] { "ConnectionId", "Fields", "Users", });
     internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_descriptor =
       internal_static_yandex_cloud_speechsense_v1_TalkMetadata_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_TalkMetadata_FieldsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_speechsense_v1_SearchTalkRequest_descriptor =
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor,
+        new java.lang.String[] { "Id", "Role", "Fields", });
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_descriptor =
+      internal_static_yandex_cloud_speechsense_v1_UserMetadata_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UserMetadata_FieldsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_speechsense_v1_SearchTalkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_speechsense_v1_SearchTalkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_SearchTalkRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "SpaceId", "ConnectionId", "ProjectId", "Filters", "Query", "PageSize", "PageToken", "SortData", });
     internal_static_yandex_cloud_speechsense_v1_SearchTalkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_speechsense_v1_SearchTalkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_SearchTalkResponse_descriptor,
         new java.lang.String[] { "TalkIds", "TalksCount", "NextPageToken", });
     internal_static_yandex_cloud_speechsense_v1_GetTalkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_speechsense_v1_GetTalkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_GetTalkRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "SpaceId", "ConnectionId", "ProjectId", "TalkIds", "ResultsMask", });
     internal_static_yandex_cloud_speechsense_v1_GetTalkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_speechsense_v1_GetTalkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_GetTalkResponse_descriptor,

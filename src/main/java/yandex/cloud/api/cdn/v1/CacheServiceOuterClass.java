@@ -43,7 +43,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -56,7 +56,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -68,7 +68,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -81,7 +81,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -242,7 +242,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -257,7 +257,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -271,7 +271,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -286,7 +286,7 @@ public final class CacheServiceOuterClass {
      * Set of paths:
      * Paths of the files to remove from the cache.
      * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-     * If an empty array of paths is specified, the cache is purged entirely.  
+     * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
      * </pre>
      *
      * <code>repeated string paths = 2;</code>
@@ -744,7 +744,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -759,7 +759,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -773,7 +773,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -788,7 +788,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -804,7 +804,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -827,7 +827,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -849,7 +849,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -869,7 +869,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>
@@ -886,7 +886,7 @@ public final class CacheServiceOuterClass {
        * Set of paths:
        * Paths of the files to remove from the cache.
        * You may use asterisk (`*`) as a wildcard character that substitutes any number of characters.
-       * If an empty array of paths is specified, the cache is purged entirely.  
+       * If an empty array of paths is specified (`"paths": []`), the cache is purged entirely.  
        * </pre>
        *
        * <code>repeated string paths = 2;</code>

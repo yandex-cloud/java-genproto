@@ -87,7 +87,9 @@ public final class RouteTableOuterClass {
 
     /**
      * <pre>
-     * Name of the route table. The name is unique within the project. 3-63 characters long.
+     * Name of the route table. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -96,7 +98,9 @@ public final class RouteTableOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the route table. The name is unique within the project. 3-63 characters long.
+     * Name of the route table. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -127,7 +131,11 @@ public final class RouteTableOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -135,7 +143,11 @@ public final class RouteTableOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -150,7 +162,11 @@ public final class RouteTableOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -159,7 +175,11 @@ public final class RouteTableOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -170,7 +190,11 @@ public final class RouteTableOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -545,7 +569,9 @@ public final class RouteTableOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the route table. The name is unique within the project. 3-63 characters long.
+     * Name of the route table. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -566,7 +592,9 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * Name of the route table. The name is unique within the project. 3-63 characters long.
+     * Name of the route table. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -661,7 +689,11 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -683,7 +715,11 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -695,7 +731,11 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -712,7 +752,11 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs.
+     * No more than 64 per resource. 
+     * The string length in characters for each key must be 1-63.
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1696,7 +1740,9 @@ public final class RouteTableOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the route table. The name is unique within the project. 3-63 characters long.
+       * Name of the route table. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1716,7 +1762,9 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Name of the route table. The name is unique within the project. 3-63 characters long.
+       * Name of the route table. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1737,7 +1785,9 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Name of the route table. The name is unique within the project. 3-63 characters long.
+       * Name of the route table. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1756,7 +1806,9 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Name of the route table. The name is unique within the project. 3-63 characters long.
+       * Name of the route table. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1770,7 +1822,9 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Name of the route table. The name is unique within the project. 3-63 characters long.
+       * Name of the route table. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression `|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1913,7 +1967,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1935,7 +1993,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1947,7 +2009,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1964,7 +2030,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1989,7 +2059,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2012,7 +2086,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2031,7 +2109,11 @@ public final class RouteTableOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs.
+       * No more than 64 per resource. 
+       * The string length in characters for each key must be 1-63.
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

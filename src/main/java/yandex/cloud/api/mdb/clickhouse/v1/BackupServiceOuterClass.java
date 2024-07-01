@@ -4084,36 +4084,45 @@ public final class BackupServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/mdb/clickhouse/v1/backup_" +
       "service.proto\022\036yandex.cloud.mdb.clickhou" +
-      "se.v1\032\034google/api/annotations.proto\032+yan" +
-      "dex/cloud/mdb/clickhouse/v1/backup.proto" +
-      "\032\035yandex/cloud/validation.proto\"+\n\020GetBa" +
-      "ckupRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022" +
-      "ListBackupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\023Lis" +
-      "tBackupsResponse\0227\n\007backups\030\001 \003(\0132&.yand" +
-      "ex.cloud.mdb.clickhouse.v1.Backup\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\".\n\023DeleteBackupReques" +
-      "t\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"=\n\024DeleteBack" +
-      "upMetadata\022\021\n\tbackup_id\030\001 \001(\t\022\022\n\ncluster" +
-      "_id\030\002 \001(\t2\277\002\n\rBackupService\022\223\001\n\003Get\0220.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.GetBackupRe" +
-      "quest\032&.yandex.cloud.mdb.clickhouse.v1.B" +
-      "ackup\"2\202\323\344\223\002,\022*/managed-clickhouse/v1/ba" +
-      "ckups/{backup_id}\022\227\001\n\004List\0222.yandex.clou" +
-      "d.mdb.clickhouse.v1.ListBackupsRequest\0323" +
-      ".yandex.cloud.mdb.clickhouse.v1.ListBack" +
-      "upsResponse\"&\202\323\344\223\002 \022\036/managed-clickhouse" +
-      "/v1/backupsBs\n\"yandex.cloud.api.mdb.clic" +
-      "khouse.v1ZMgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/clickhouse/v1;cl" +
-      "ickhouseb\006proto3"
+      "se.v1\032\034google/api/annotations.proto\032 yan" +
+      "dex/cloud/api/operation.proto\032+yandex/cl" +
+      "oud/mdb/clickhouse/v1/backup.proto\032&yand" +
+      "ex/cloud/operation/operation.proto\032\035yand" +
+      "ex/cloud/validation.proto\"+\n\020GetBackupRe" +
+      "quest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBa" +
+      "ckupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"g\n\023ListBacku" +
+      "psResponse\0227\n\007backups\030\001 \003(\0132&.yandex.clo" +
+      "ud.mdb.clickhouse.v1.Backup\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\".\n\023DeleteBackupRequest\022\027\n\tb" +
+      "ackup_id\030\001 \001(\tB\004\350\3071\001\"=\n\024DeleteBackupMeta" +
+      "data\022\021\n\tbackup_id\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
+      "\001(\t2\207\004\n\rBackupService\022\223\001\n\003Get\0220.yandex.c" +
+      "loud.mdb.clickhouse.v1.GetBackupRequest\032" +
+      "&.yandex.cloud.mdb.clickhouse.v1.Backup\"" +
+      "2\202\323\344\223\002,\022*/managed-clickhouse/v1/backups/" +
+      "{backup_id}\022\227\001\n\004List\0222.yandex.cloud.mdb." +
+      "clickhouse.v1.ListBackupsRequest\0323.yande" +
+      "x.cloud.mdb.clickhouse.v1.ListBackupsRes" +
+      "ponse\"&\202\323\344\223\002 \022\036/managed-clickhouse/v1/ba" +
+      "ckups\022\305\001\n\006Delete\0223.yandex.cloud.mdb.clic" +
+      "khouse.v1.DeleteBackupRequest\032!.yandex.c" +
+      "loud.operation.Operation\"c\202\323\344\223\002,**/manag" +
+      "ed-clickhouse/v1/backups/{backup_id}\262\322*-" +
+      "\n\024DeleteBackupMetadata\022\025google.protobuf." +
+      "EmptyBs\n\"yandex.cloud.api.mdb.clickhouse" +
+      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/mdb/clickhouse/v1;clickhou" +
+      "seb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_clickhouse_v1_GetBackupRequest_descriptor =
@@ -4149,13 +4158,16 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

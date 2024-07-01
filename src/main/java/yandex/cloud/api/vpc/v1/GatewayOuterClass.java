@@ -89,6 +89,7 @@ public final class GatewayOuterClass {
      * <pre>
      * Name of the gateway.
      * The name is unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -99,6 +100,7 @@ public final class GatewayOuterClass {
      * <pre>
      * Name of the gateway.
      * The name is unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -109,7 +111,7 @@ public final class GatewayOuterClass {
 
     /**
      * <pre>
-     * Description of the gateway.
+     * Description of the gateway. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -118,7 +120,7 @@ public final class GatewayOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the gateway.
+     * Description of the gateway. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -129,7 +131,12 @@ public final class GatewayOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -137,7 +144,12 @@ public final class GatewayOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -152,7 +164,12 @@ public final class GatewayOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -161,7 +178,12 @@ public final class GatewayOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -172,7 +194,12 @@ public final class GatewayOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -535,6 +562,7 @@ public final class GatewayOuterClass {
      * <pre>
      * Name of the gateway.
      * The name is unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -557,6 +585,7 @@ public final class GatewayOuterClass {
      * <pre>
      * Name of the gateway.
      * The name is unique within the folder.
+     * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -581,7 +610,7 @@ public final class GatewayOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the gateway.
+     * Description of the gateway. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -602,7 +631,7 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * Description of the gateway.
+     * Description of the gateway. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -651,7 +680,12 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -673,7 +707,12 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -685,7 +724,12 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -702,7 +746,12 @@ public final class GatewayOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Gateway labels as `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1599,6 +1648,7 @@ public final class GatewayOuterClass {
        * <pre>
        * Name of the gateway.
        * The name is unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1620,6 +1670,7 @@ public final class GatewayOuterClass {
        * <pre>
        * Name of the gateway.
        * The name is unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1642,6 +1693,7 @@ public final class GatewayOuterClass {
        * <pre>
        * Name of the gateway.
        * The name is unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1662,6 +1714,7 @@ public final class GatewayOuterClass {
        * <pre>
        * Name of the gateway.
        * The name is unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1677,6 +1730,7 @@ public final class GatewayOuterClass {
        * <pre>
        * Name of the gateway.
        * The name is unique within the folder.
+       * Value must match the regular expression ``&#92;|[a-z]([-a-z0-9]{0,61}[a-z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1698,7 +1752,7 @@ public final class GatewayOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the gateway.
+       * Description of the gateway. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1718,7 +1772,7 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Description of the gateway.
+       * Description of the gateway. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1739,7 +1793,7 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Description of the gateway.
+       * Description of the gateway. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1758,7 +1812,7 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Description of the gateway.
+       * Description of the gateway. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1772,7 +1826,7 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Description of the gateway.
+       * Description of the gateway. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1819,7 +1873,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1841,7 +1900,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1853,7 +1917,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1870,7 +1939,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1895,7 +1969,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1918,7 +1997,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1937,7 +2021,12 @@ public final class GatewayOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Gateway labels as `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

@@ -80,6 +80,37 @@ public final class BackupServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = BackupServiceGrpc.getDeleteMethod) == null) {
+      synchronized (BackupServiceGrpc.class) {
+        if ((getDeleteMethod = BackupServiceGrpc.getDeleteMethod) == null) {
+          BackupServiceGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new BackupServiceMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -152,6 +183,16 @@ public final class BackupServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Deletes the specified ClickHouse Backup.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -168,6 +209,13 @@ public final class BackupServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsRequest,
                 yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
           .build();
     }
   }
@@ -211,6 +259,17 @@ public final class BackupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Deletes the specified ClickHouse Backup.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -249,6 +308,16 @@ public final class BackupServiceGrpc {
     public yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsResponse list(yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified ClickHouse Backup.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
 
@@ -291,10 +360,22 @@ public final class BackupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Deletes the specified ClickHouse Backup.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
+  private static final int METHODID_DELETE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -320,6 +401,10 @@ public final class BackupServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.ListBackupsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.mdb.clickhouse.v1.BackupServiceOuterClass.DeleteBackupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -384,6 +469,7 @@ public final class BackupServiceGrpc {
               .setSchemaDescriptor(new BackupServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getDeleteMethod())
               .build();
         }
       }

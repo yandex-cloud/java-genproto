@@ -87,7 +87,9 @@ public final class SecurityGroupOuterClass {
 
     /**
      * <pre>
-     * Name of the security group. 1-63 characters long.
+     * Name of the security group. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -96,7 +98,9 @@ public final class SecurityGroupOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the security group. 1-63 characters long.
+     * Name of the security group. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -127,7 +131,12 @@ public final class SecurityGroupOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -135,7 +144,12 @@ public final class SecurityGroupOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -150,7 +164,12 @@ public final class SecurityGroupOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -159,7 +178,12 @@ public final class SecurityGroupOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -170,7 +194,12 @@ public final class SecurityGroupOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -749,7 +778,9 @@ public final class SecurityGroupOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the security group. 1-63 characters long.
+     * Name of the security group. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -770,7 +801,9 @@ public final class SecurityGroupOuterClass {
     }
     /**
      * <pre>
-     * Name of the security group. 1-63 characters long.
+     * Name of the security group. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -865,7 +898,12 @@ public final class SecurityGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -887,7 +925,12 @@ public final class SecurityGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -899,7 +942,12 @@ public final class SecurityGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -916,7 +964,12 @@ public final class SecurityGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels as `key:value` pairs. 
+     * No more than 64 per resource.
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1972,7 +2025,9 @@ public final class SecurityGroupOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the security group. 1-63 characters long.
+       * Name of the security group. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1992,7 +2047,9 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the security group. 1-63 characters long.
+       * Name of the security group. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2013,7 +2070,9 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the security group. 1-63 characters long.
+       * Name of the security group. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2032,7 +2091,9 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the security group. 1-63 characters long.
+       * Name of the security group. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2046,7 +2107,9 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Name of the security group. 1-63 characters long.
+       * Name of the security group. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2189,7 +2252,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2211,7 +2279,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2223,7 +2296,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2240,7 +2318,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2265,7 +2348,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2288,7 +2376,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2307,7 +2400,12 @@ public final class SecurityGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels as `key:value` pairs. 
+       * No more than 64 per resource.
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_./&#92;&#92;&#64;0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_./&#92;&#92;&#64;0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

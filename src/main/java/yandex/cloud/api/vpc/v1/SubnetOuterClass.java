@@ -204,7 +204,9 @@ public final class SubnetOuterClass {
 
     /**
      * <pre>
-     * Name of the subnet. The name is unique within the project. 3-63 characters long.
+     * Name of the subnet. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -213,7 +215,9 @@ public final class SubnetOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the subnet. The name is unique within the project. 3-63 characters long.
+     * Name of the subnet. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -244,7 +248,12 @@ public final class SubnetOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -252,7 +261,12 @@ public final class SubnetOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -267,7 +281,12 @@ public final class SubnetOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -276,7 +295,12 @@ public final class SubnetOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -287,7 +311,12 @@ public final class SubnetOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -455,16 +484,28 @@ public final class SubnetOuterClass {
         getRouteTableIdBytes();
 
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      * @return Whether the dhcpOptions field is set.
      */
     boolean hasDhcpOptions();
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      * @return The dhcpOptions.
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions getDhcpOptions();
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      */
     yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder();
@@ -811,7 +852,9 @@ public final class SubnetOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the subnet. The name is unique within the project. 3-63 characters long.
+     * Name of the subnet. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -832,7 +875,9 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * Name of the subnet. The name is unique within the project. 3-63 characters long.
+     * Name of the subnet. 
+     * The name must be unique within the folder. 
+     * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -927,7 +972,12 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -949,7 +999,12 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -961,7 +1016,12 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -978,7 +1038,12 @@ public final class SubnetOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+     * Resource labels, `key:value` pairs. 
+     * No more than 64 per resource. 
+     * The maximum string length in characters for each value is 63. 
+     * Each value must match the regular expression `[-_0-9a-z]*`. 
+     * The string length in characters for each key must be 1-63. 
+     * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1255,6 +1320,10 @@ public final class SubnetOuterClass {
     public static final int DHCP_OPTIONS_FIELD_NUMBER = 13;
     private yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions dhcpOptions_;
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      * @return Whether the dhcpOptions field is set.
      */
@@ -1263,6 +1332,10 @@ public final class SubnetOuterClass {
       return dhcpOptions_ != null;
     }
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      * @return The dhcpOptions.
      */
@@ -1271,6 +1344,10 @@ public final class SubnetOuterClass {
       return dhcpOptions_ == null ? yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.getDefaultInstance() : dhcpOptions_;
     }
     /**
+     * <pre>
+     * DHCP options for the subnet.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
      */
     @java.lang.Override
@@ -2215,7 +2292,9 @@ public final class SubnetOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the subnet. The name is unique within the project. 3-63 characters long.
+       * Name of the subnet. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2235,7 +2314,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Name of the subnet. The name is unique within the project. 3-63 characters long.
+       * Name of the subnet. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2256,7 +2337,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Name of the subnet. The name is unique within the project. 3-63 characters long.
+       * Name of the subnet. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2275,7 +2358,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Name of the subnet. The name is unique within the project. 3-63 characters long.
+       * Name of the subnet. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2289,7 +2374,9 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Name of the subnet. The name is unique within the project. 3-63 characters long.
+       * Name of the subnet. 
+       * The name must be unique within the folder. 
+       * Value must match the regular expression ``&#92;|[a-zA-Z]([-_a-zA-Z0-9]{0,61}[a-zA-Z0-9])?``.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2432,7 +2519,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2454,7 +2546,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2466,7 +2563,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2483,7 +2585,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2508,7 +2615,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2531,7 +2643,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2550,7 +2667,12 @@ public final class SubnetOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
+       * Resource labels, `key:value` pairs. 
+       * No more than 64 per resource. 
+       * The maximum string length in characters for each value is 63. 
+       * Each value must match the regular expression `[-_0-9a-z]*`. 
+       * The string length in characters for each key must be 1-63. 
+       * Each key must match the regular expression `[a-z][-_0-9a-z]*`.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -3183,6 +3305,10 @@ public final class SubnetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder, yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder> dhcpOptionsBuilder_;
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        * @return Whether the dhcpOptions field is set.
        */
@@ -3190,6 +3316,10 @@ public final class SubnetOuterClass {
         return dhcpOptionsBuilder_ != null || dhcpOptions_ != null;
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        * @return The dhcpOptions.
        */
@@ -3201,6 +3331,10 @@ public final class SubnetOuterClass {
         }
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public Builder setDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
@@ -3217,6 +3351,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public Builder setDhcpOptions(
@@ -3231,6 +3369,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public Builder mergeDhcpOptions(yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions value) {
@@ -3249,6 +3391,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public Builder clearDhcpOptions() {
@@ -3263,6 +3409,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptions.Builder getDhcpOptionsBuilder() {
@@ -3271,6 +3421,10 @@ public final class SubnetOuterClass {
         return getDhcpOptionsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       public yandex.cloud.api.vpc.v1.SubnetOuterClass.DhcpOptionsOrBuilder getDhcpOptionsOrBuilder() {
@@ -3282,6 +3436,10 @@ public final class SubnetOuterClass {
         }
       }
       /**
+       * <pre>
+       * DHCP options for the subnet.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.DhcpOptions dhcp_options = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3355,23 +3513,39 @@ public final class SubnetOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @return A list containing the domainNameServers.
      */
     java.util.List<java.lang.String>
         getDomainNameServersList();
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @return The count of domainNameServers.
      */
     int getDomainNameServersCount();
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @param index The index of the element to return.
      * @return The domainNameServers at the given index.
      */
     java.lang.String getDomainNameServers(int index);
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the domainNameServers at the given index.
@@ -3380,11 +3554,19 @@ public final class SubnetOuterClass {
         getDomainNameServersBytes(int index);
 
     /**
+     * <pre>
+     * A domain name to us as a suffix when resolving host names in this subnet.
+     * </pre>
+     *
      * <code>string domain_name = 2;</code>
      * @return The domainName.
      */
     java.lang.String getDomainName();
     /**
+     * <pre>
+     * A domain name to us as a suffix when resolving host names in this subnet.
+     * </pre>
+     *
      * <code>string domain_name = 2;</code>
      * @return The bytes for domainName.
      */
@@ -3392,23 +3574,39 @@ public final class SubnetOuterClass {
         getDomainNameBytes();
 
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @return A list containing the ntpServers.
      */
     java.util.List<java.lang.String>
         getNtpServersList();
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @return The count of ntpServers.
      */
     int getNtpServersCount();
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @param index The index of the element to return.
      * @return The ntpServers at the given index.
      */
     java.lang.String getNtpServers(int index);
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the ntpServers at the given index.
@@ -3530,6 +3728,10 @@ public final class SubnetOuterClass {
     public static final int DOMAIN_NAME_SERVERS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList domainNameServers_;
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @return A list containing the domainNameServers.
      */
@@ -3538,6 +3740,10 @@ public final class SubnetOuterClass {
       return domainNameServers_;
     }
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @return The count of domainNameServers.
      */
@@ -3545,6 +3751,10 @@ public final class SubnetOuterClass {
       return domainNameServers_.size();
     }
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @param index The index of the element to return.
      * @return The domainNameServers at the given index.
@@ -3553,6 +3763,10 @@ public final class SubnetOuterClass {
       return domainNameServers_.get(index);
     }
     /**
+     * <pre>
+     * A list of DHCP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string domain_name_servers = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the domainNameServers at the given index.
@@ -3565,6 +3779,10 @@ public final class SubnetOuterClass {
     public static final int DOMAIN_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object domainName_;
     /**
+     * <pre>
+     * A domain name to us as a suffix when resolving host names in this subnet.
+     * </pre>
+     *
      * <code>string domain_name = 2;</code>
      * @return The domainName.
      */
@@ -3582,6 +3800,10 @@ public final class SubnetOuterClass {
       }
     }
     /**
+     * <pre>
+     * A domain name to us as a suffix when resolving host names in this subnet.
+     * </pre>
+     *
      * <code>string domain_name = 2;</code>
      * @return The bytes for domainName.
      */
@@ -3603,6 +3825,10 @@ public final class SubnetOuterClass {
     public static final int NTP_SERVERS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList ntpServers_;
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @return A list containing the ntpServers.
      */
@@ -3611,6 +3837,10 @@ public final class SubnetOuterClass {
       return ntpServers_;
     }
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @return The count of ntpServers.
      */
@@ -3618,6 +3848,10 @@ public final class SubnetOuterClass {
       return ntpServers_.size();
     }
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @param index The index of the element to return.
      * @return The ntpServers at the given index.
@@ -3626,6 +3860,10 @@ public final class SubnetOuterClass {
       return ntpServers_.get(index);
     }
     /**
+     * <pre>
+     * List of NTP servers for this subnet.
+     * </pre>
+     *
      * <code>repeated string ntp_servers = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the ntpServers at the given index.
@@ -4015,6 +4253,10 @@ public final class SubnetOuterClass {
          }
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @return A list containing the domainNameServers.
        */
@@ -4023,6 +4265,10 @@ public final class SubnetOuterClass {
         return domainNameServers_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @return The count of domainNameServers.
        */
@@ -4030,6 +4276,10 @@ public final class SubnetOuterClass {
         return domainNameServers_.size();
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param index The index of the element to return.
        * @return The domainNameServers at the given index.
@@ -4038,6 +4288,10 @@ public final class SubnetOuterClass {
         return domainNameServers_.get(index);
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the domainNameServers at the given index.
@@ -4047,6 +4301,10 @@ public final class SubnetOuterClass {
         return domainNameServers_.getByteString(index);
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param index The index to set the value at.
        * @param value The domainNameServers to set.
@@ -4063,6 +4321,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param value The domainNameServers to add.
        * @return This builder for chaining.
@@ -4078,6 +4340,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param values The domainNameServers to add.
        * @return This builder for chaining.
@@ -4091,6 +4357,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @return This builder for chaining.
        */
@@ -4101,6 +4371,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A list of DHCP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string domain_name_servers = 1;</code>
        * @param value The bytes of the domainNameServers to add.
        * @return This builder for chaining.
@@ -4119,6 +4393,10 @@ public final class SubnetOuterClass {
 
       private java.lang.Object domainName_ = "";
       /**
+       * <pre>
+       * A domain name to us as a suffix when resolving host names in this subnet.
+       * </pre>
+       *
        * <code>string domain_name = 2;</code>
        * @return The domainName.
        */
@@ -4135,6 +4413,10 @@ public final class SubnetOuterClass {
         }
       }
       /**
+       * <pre>
+       * A domain name to us as a suffix when resolving host names in this subnet.
+       * </pre>
+       *
        * <code>string domain_name = 2;</code>
        * @return The bytes for domainName.
        */
@@ -4152,6 +4434,10 @@ public final class SubnetOuterClass {
         }
       }
       /**
+       * <pre>
+       * A domain name to us as a suffix when resolving host names in this subnet.
+       * </pre>
+       *
        * <code>string domain_name = 2;</code>
        * @param value The domainName to set.
        * @return This builder for chaining.
@@ -4167,6 +4453,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A domain name to us as a suffix when resolving host names in this subnet.
+       * </pre>
+       *
        * <code>string domain_name = 2;</code>
        * @return This builder for chaining.
        */
@@ -4177,6 +4467,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A domain name to us as a suffix when resolving host names in this subnet.
+       * </pre>
+       *
        * <code>string domain_name = 2;</code>
        * @param value The bytes for domainName to set.
        * @return This builder for chaining.
@@ -4201,6 +4495,10 @@ public final class SubnetOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @return A list containing the ntpServers.
        */
@@ -4209,6 +4507,10 @@ public final class SubnetOuterClass {
         return ntpServers_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @return The count of ntpServers.
        */
@@ -4216,6 +4518,10 @@ public final class SubnetOuterClass {
         return ntpServers_.size();
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param index The index of the element to return.
        * @return The ntpServers at the given index.
@@ -4224,6 +4530,10 @@ public final class SubnetOuterClass {
         return ntpServers_.get(index);
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param index The index of the value to return.
        * @return The bytes of the ntpServers at the given index.
@@ -4233,6 +4543,10 @@ public final class SubnetOuterClass {
         return ntpServers_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param index The index to set the value at.
        * @param value The ntpServers to set.
@@ -4249,6 +4563,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param value The ntpServers to add.
        * @return This builder for chaining.
@@ -4264,6 +4582,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param values The ntpServers to add.
        * @return This builder for chaining.
@@ -4277,6 +4599,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @return This builder for chaining.
        */
@@ -4287,6 +4613,10 @@ public final class SubnetOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of NTP servers for this subnet.
+       * </pre>
+       *
        * <code>repeated string ntp_servers = 3;</code>
        * @param value The bytes of the ntpServers to add.
        * @return This builder for chaining.
