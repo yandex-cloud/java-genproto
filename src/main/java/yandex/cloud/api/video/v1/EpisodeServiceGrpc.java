@@ -235,6 +235,37 @@ public final class EpisodeServiceGrpc {
     return getGetPlayerURLMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest,
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getGetManifestsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetManifests",
+      requestType = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest.class,
+      responseType = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest,
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getGetManifestsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getGetManifestsMethod;
+    if ((getGetManifestsMethod = EpisodeServiceGrpc.getGetManifestsMethod) == null) {
+      synchronized (EpisodeServiceGrpc.class) {
+        if ((getGetManifestsMethod = EpisodeServiceGrpc.getGetManifestsMethod) == null) {
+          EpisodeServiceGrpc.getGetManifestsMethod = getGetManifestsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetManifests"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EpisodeServiceMethodDescriptorSupplier("GetManifests"))
+              .build();
+        }
+      }
+    }
+    return getGetManifestsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -356,6 +387,16 @@ public final class EpisodeServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPlayerURLMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns manifest urls.
+     * </pre>
+     */
+    public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetManifestsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -407,6 +448,13 @@ public final class EpisodeServiceGrpc {
                 yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest,
                 yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse>(
                   this, METHODID_GET_PLAYER_URL)))
+          .addMethod(
+            getGetManifestsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest,
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse>(
+                  this, METHODID_GET_MANIFESTS)))
           .build();
     }
   }
@@ -504,6 +552,17 @@ public final class EpisodeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPlayerURLMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns manifest urls.
+     * </pre>
+     */
+    public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetManifestsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -591,6 +650,16 @@ public final class EpisodeServiceGrpc {
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPlayerURLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns manifest urls.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetManifestsMethod(), getCallOptions(), request);
     }
   }
 
@@ -687,6 +756,17 @@ public final class EpisodeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPlayerURLMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns manifest urls.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getManifests(
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetManifestsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -696,6 +776,7 @@ public final class EpisodeServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_PERFORM_ACTION = 5;
   private static final int METHODID_GET_PLAYER_URL = 6;
+  private static final int METHODID_GET_MANIFESTS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -741,6 +822,10 @@ public final class EpisodeServiceGrpc {
         case METHODID_GET_PLAYER_URL:
           serviceImpl.getPlayerURL((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse>) responseObserver);
+          break;
+        case METHODID_GET_MANIFESTS:
+          serviceImpl.getManifests((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -810,6 +895,7 @@ public final class EpisodeServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getPerformActionMethod())
               .addMethod(getGetPlayerURLMethod())
+              .addMethod(getGetManifestsMethod())
               .build();
         }
       }

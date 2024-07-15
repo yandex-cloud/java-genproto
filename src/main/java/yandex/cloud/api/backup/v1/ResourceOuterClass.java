@@ -14,6 +14,139 @@ public final class ResourceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.backup.v1.ResourceType}
+   */
+  public enum ResourceType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RESOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    RESOURCE_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Resource is Compute Cloud VM
+     * </pre>
+     *
+     * <code>COMPUTE = 1;</code>
+     */
+    COMPUTE(1),
+    /**
+     * <pre>
+     * Resource is baremetal server
+     * </pre>
+     *
+     * <code>BMS = 2;</code>
+     */
+    BMS(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>RESOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int RESOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Resource is Compute Cloud VM
+     * </pre>
+     *
+     * <code>COMPUTE = 1;</code>
+     */
+    public static final int COMPUTE_VALUE = 1;
+    /**
+     * <pre>
+     * Resource is baremetal server
+     * </pre>
+     *
+     * <code>BMS = 2;</code>
+     */
+    public static final int BMS_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResourceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ResourceType forNumber(int value) {
+      switch (value) {
+        case 0: return RESOURCE_TYPE_UNSPECIFIED;
+        case 1: return COMPUTE;
+        case 2: return BMS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResourceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ResourceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResourceType>() {
+            public ResourceType findValueByNumber(int number) {
+              return ResourceType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ResourceType[] VALUES = values();
+
+    public static ResourceType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ResourceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.ResourceType)
+  }
+
   public interface ResourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.Resource)
       com.google.protobuf.MessageOrBuilder {
@@ -234,6 +367,25 @@ public final class ResourceOuterClass {
      */
     com.google.protobuf.ByteString
         getMetadataBytes();
+
+    /**
+     * <pre>
+     * Type of resource -- could be compute VM or baremetal server
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of resource -- could be compute VM or baremetal server
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Resource}
@@ -254,6 +406,7 @@ public final class ResourceOuterClass {
       resourceId_ = "";
       initStatus_ = 0;
       metadata_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -392,6 +545,12 @@ public final class ResourceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               metadata_ = s;
+              break;
+            }
+            case 120: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             default: {
@@ -1182,6 +1341,33 @@ public final class ResourceOuterClass {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 15;
+    private int type_;
+    /**
+     * <pre>
+     * Type of resource -- could be compute VM or baremetal server
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of resource -- could be compute VM or baremetal server
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1237,6 +1423,9 @@ public final class ResourceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, metadata_);
+      }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(15, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -1299,6 +1488,10 @@ public final class ResourceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metadata_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, metadata_);
       }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1352,6 +1545,7 @@ public final class ResourceOuterClass {
       if (initStatus_ != other.initStatus_) return false;
       if (!getMetadata()
           .equals(other.getMetadata())) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1403,6 +1597,8 @@ public final class ResourceOuterClass {
       hash = (53 * hash) + initStatus_;
       hash = (37 * hash) + METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getMetadata().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1580,6 +1776,8 @@ public final class ResourceOuterClass {
 
         metadata_ = "";
 
+        type_ = 0;
+
         return this;
       }
 
@@ -1636,6 +1834,7 @@ public final class ResourceOuterClass {
         result.isActive_ = isActive_;
         result.initStatus_ = initStatus_;
         result.metadata_ = metadata_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -1729,6 +1928,9 @@ public final class ResourceOuterClass {
         if (!other.getMetadata().isEmpty()) {
           metadata_ = other.metadata_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2934,6 +3136,80 @@ public final class ResourceOuterClass {
   checkByteStringIsUtf8(value);
         
         metadata_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of resource -- could be compute VM or baremetal server
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of resource -- could be compute VM or baremetal server
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource -- could be compute VM or baremetal server
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of resource -- could be compute VM or baremetal server
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource -- could be compute VM or baremetal server
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -6488,7 +6764,7 @@ public final class ResourceOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/backup/v1/resource.proto\022" +
       "\026yandex.cloud.backup.v1\032\037google/protobuf" +
-      "/timestamp.proto\"\315\005\n\010Resource\022\033\n\023compute" +
+      "/timestamp.proto\"\201\006\n\010Resource\022\033\n\023compute" +
       "_instance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032" +
       ".google.protobuf.Timestamp\022.\n\nupdated_at" +
       "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\016\n\006on" +
@@ -6501,35 +6777,38 @@ public final class ResourceOuterClass {
       "p\022\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(" +
       "\010\022@\n\013init_status\030\r \001(\0162+.yandex.cloud.ba" +
       "ckup.v1.Resource.InitStatus\022\020\n\010metadata\030" +
-      "\016 \001(\t\"`\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\010\n\004IDLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\nRECOVERING\020\003" +
-      "\022\n\n\006FAILED\020\004\022\t\n\005OTHER\020\005\"o\n\nInitStatus\022\033\n" +
-      "\027INIT_STATUS_UNSPECIFIED\020\000\022\017\n\013REGISTERIN" +
-      "G\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED_REGISTRATIO" +
-      "N\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress\022\017\n\007current\030" +
-      "\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Task\022\n\n\002id\030\001 \001(" +
-      "\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpolicy_id\030\003 \001(" +
-      "\t\022/\n\004type\030\004 \001(\0162!.yandex.cloud.backup.v1" +
-      ".Task.Type\0222\n\010progress\030\005 \001(\0132 .yandex.cl" +
-      "oud.backup.v1.Progress\0223\n\006status\030\006 \001(\0162#" +
-      ".yandex.cloud.backup.v1.Task.Status\022/\n\013e" +
-      "nqueued_at\030\007 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022.\n\nstarted_at\030\010 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\0220\n\014completed_at\030\n \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\033\n\023comput" +
-      "e_instance_id\030\013 \001(\t\0226\n\013result_code\030\014 \001(\016" +
-      "2!.yandex.cloud.backup.v1.Task.Code\"E\n\004T" +
-      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n" +
-      "\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010AS" +
-      "SIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOM" +
-      "PLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020\000\022\006" +
-      "\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCANCEL" +
-      "LED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006B_\n\032ya" +
-      "ndex.cloud.api.backup.v1ZAgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/backu" +
-      "p/v1;backupb\006proto3"
+      "\016 \001(\t\0222\n\004type\030\017 \001(\0162$.yandex.cloud.backu" +
+      "p.v1.ResourceType\"`\n\006Status\022\026\n\022STATUS_UN" +
+      "SPECIFIED\020\000\022\010\n\004IDLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\n" +
+      "RECOVERING\020\003\022\n\n\006FAILED\020\004\022\t\n\005OTHER\020\005\"o\n\nI" +
+      "nitStatus\022\033\n\027INIT_STATUS_UNSPECIFIED\020\000\022\017" +
+      "\n\013REGISTERING\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED" +
+      "_REGISTRATION\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress" +
+      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Tas" +
+      "k\022\n\n\002id\030\001 \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpo" +
+      "licy_id\030\003 \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.clo" +
+      "ud.backup.v1.Task.Type\0222\n\010progress\030\005 \001(\013" +
+      "2 .yandex.cloud.backup.v1.Progress\0223\n\006st" +
+      "atus\030\006 \001(\0162#.yandex.cloud.backup.v1.Task" +
+      ".Status\022/\n\013enqueued_at\030\007 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022.\n\nstarted_at\030\010 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022.\n\nupdated_at\030\t" +
+      " \001(\0132\032.google.protobuf.Timestamp\0220\n\014comp" +
+      "leted_at\030\n \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\033\n\023compute_instance_id\030\013 \001(\t\0226\n\013resul" +
+      "t_code\030\014 \001(\0162!.yandex.cloud.backup.v1.Ta" +
+      "sk.Code\"E\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n" +
+      "\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d" +
+      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQU" +
+      "EUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAU" +
+      "SED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNS" +
+      "PECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING" +
+      "\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIME" +
+      "DOUT\020\006*C\n\014ResourceType\022\035\n\031RESOURCE_TYPE_" +
+      "UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032y" +
+      "andex.cloud.api.backup.v1ZAgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/back" +
+      "up/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6541,7 +6820,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_backup_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Resource_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", });
+        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", "Type", });
     internal_static_yandex_cloud_backup_v1_Progress_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_Progress_fieldAccessorTable = new

@@ -14199,9 +14199,10 @@ public final class TransferOuterClass {
   }
   /**
    * <pre>
-   * Convert column values to strings.
-   * The values will be converted depending on the source type.
-   * Conversion rules are described in [documentation](/docs/data-transfer/concepts/data-transformation#convert-to-string).
+   * Convert column values to strings
+   * The values will be converted depending on the source type
+   * Conversion rules are described here:
+   * https://cloud.yandex.com/en/docs/data-transfer/concepts/data-transformation#convert-to-string
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.datatransfer.v1.ToStringTransformer}
@@ -14560,9 +14561,10 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * Convert column values to strings.
-     * The values will be converted depending on the source type.
-     * Conversion rules are described in [documentation](/docs/data-transfer/concepts/data-transformation#convert-to-string).
+     * Convert column values to strings
+     * The values will be converted depending on the source type
+     * Conversion rules are described here:
+     * https://cloud.yandex.com/en/docs/data-transfer/concepts/data-transformation#convert-to-string
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.datatransfer.v1.ToStringTransformer}
@@ -17359,7 +17361,8 @@ public final class TransferOuterClass {
      * Filtering criterion. This can be comparison operators for numeric, string, and
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
-     * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+     * Details here:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
      * </pre>
      *
      * <code>string filter = 2;</code>
@@ -17371,7 +17374,8 @@ public final class TransferOuterClass {
      * Filtering criterion. This can be comparison operators for numeric, string, and
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
-     * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+     * Details here:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
      * </pre>
      *
      * <code>string filter = 2;</code>
@@ -17529,7 +17533,8 @@ public final class TransferOuterClass {
      * Filtering criterion. This can be comparison operators for numeric, string, and
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
-     * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+     * Details here:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
      * </pre>
      *
      * <code>string filter = 2;</code>
@@ -17553,7 +17558,8 @@ public final class TransferOuterClass {
      * Filtering criterion. This can be comparison operators for numeric, string, and
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
-     * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+     * Details here:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
      * </pre>
      *
      * <code>string filter = 2;</code>
@@ -18074,7 +18080,8 @@ public final class TransferOuterClass {
        * Filtering criterion. This can be comparison operators for numeric, string, and
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
-       * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+       * Details here:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
        * </pre>
        *
        * <code>string filter = 2;</code>
@@ -18097,7 +18104,8 @@ public final class TransferOuterClass {
        * Filtering criterion. This can be comparison operators for numeric, string, and
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
-       * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+       * Details here:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
        * </pre>
        *
        * <code>string filter = 2;</code>
@@ -18121,7 +18129,8 @@ public final class TransferOuterClass {
        * Filtering criterion. This can be comparison operators for numeric, string, and
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
-       * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+       * Details here:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
        * </pre>
        *
        * <code>string filter = 2;</code>
@@ -18143,7 +18152,8 @@ public final class TransferOuterClass {
        * Filtering criterion. This can be comparison operators for numeric, string, and
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
-       * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+       * Details here:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
        * </pre>
        *
        * <code>string filter = 2;</code>
@@ -18160,7 +18170,8 @@ public final class TransferOuterClass {
        * Filtering criterion. This can be comparison operators for numeric, string, and
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
-       * For more details see [documentation](/docs/data-transfer/concepts/data-transformation#append-only-sources).
+       * Details here:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
        * </pre>
        *
        * <code>string filter = 2;</code>

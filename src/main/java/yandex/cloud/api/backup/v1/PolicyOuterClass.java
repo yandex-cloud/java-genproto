@@ -19399,6 +19399,16 @@ public final class PolicyOuterClass {
      * <code>.google.protobuf.Timestamp created_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * If true, then the policy is in in the process of binding to the instance.
+     * </pre>
+     *
+     * <code>bool is_processing = 6;</code>
+     * @return The isProcessing.
+     */
+    boolean getIsProcessing();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.PolicyApplication}
@@ -19482,6 +19492,11 @@ public final class PolicyOuterClass {
                 createdAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 48: {
+
+              isProcessing_ = input.readBool();
               break;
             }
             default: {
@@ -19814,6 +19829,21 @@ public final class PolicyOuterClass {
       return getCreatedAt();
     }
 
+    public static final int IS_PROCESSING_FIELD_NUMBER = 6;
+    private boolean isProcessing_;
+    /**
+     * <pre>
+     * If true, then the policy is in in the process of binding to the instance.
+     * </pre>
+     *
+     * <code>bool is_processing = 6;</code>
+     * @return The isProcessing.
+     */
+    @java.lang.Override
+    public boolean getIsProcessing() {
+      return isProcessing_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19843,6 +19873,9 @@ public final class PolicyOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(5, getCreatedAt());
       }
+      if (isProcessing_ != false) {
+        output.writeBool(6, isProcessing_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19869,6 +19902,10 @@ public final class PolicyOuterClass {
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getCreatedAt());
+      }
+      if (isProcessing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, isProcessing_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19897,6 +19934,8 @@ public final class PolicyOuterClass {
         if (!getCreatedAt()
             .equals(other.getCreatedAt())) return false;
       }
+      if (getIsProcessing()
+          != other.getIsProcessing()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19921,6 +19960,9 @@ public final class PolicyOuterClass {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
       }
+      hash = (37 * hash) + IS_PROCESSING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsProcessing());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20068,6 +20110,8 @@ public final class PolicyOuterClass {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        isProcessing_ = false;
+
         return this;
       }
 
@@ -20103,6 +20147,7 @@ public final class PolicyOuterClass {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
+        result.isProcessing_ = isProcessing_;
         onBuilt();
         return result;
       }
@@ -20167,6 +20212,9 @@ public final class PolicyOuterClass {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.getIsProcessing() != false) {
+          setIsProcessing(other.getIsProcessing());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20592,6 +20640,49 @@ public final class PolicyOuterClass {
         }
         return createdAtBuilder_;
       }
+
+      private boolean isProcessing_ ;
+      /**
+       * <pre>
+       * If true, then the policy is in in the process of binding to the instance.
+       * </pre>
+       *
+       * <code>bool is_processing = 6;</code>
+       * @return The isProcessing.
+       */
+      @java.lang.Override
+      public boolean getIsProcessing() {
+        return isProcessing_;
+      }
+      /**
+       * <pre>
+       * If true, then the policy is in in the process of binding to the instance.
+       * </pre>
+       *
+       * <code>bool is_processing = 6;</code>
+       * @param value The isProcessing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsProcessing(boolean value) {
+        
+        isProcessing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, then the policy is in in the process of binding to the instance.
+       * </pre>
+       *
+       * <code>bool is_processing = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsProcessing() {
+        
+        isProcessing_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20847,18 +20938,18 @@ public final class PolicyOuterClass {
       "angedBlockTracking\022&\n\"CHANGED_BLOCK_TRAC" +
       "KING_UNSPECIFIED\020\000\022\022\n\016USE_IF_ENABLED\020\001\022\022" +
       "\n\016ENABLE_AND_USE\020\002\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016" +
-      "J\004\010\016\020\017\"\213\002\n\021PolicyApplication\022\021\n\tpolicy_i" +
+      "J\004\010\016\020\017\"\242\002\n\021PolicyApplication\022\021\n\tpolicy_i" +
       "d\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\022\017\n\007" +
       "enabled\030\003 \001(\010\022@\n\006status\030\004 \001(\01620.yandex.c" +
       "loud.backup.v1.PolicyApplication.Status\022" +
       ".\n\ncreated_at\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"C\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006" +
-      "Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSIO" +
-      "N_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yand" +
-      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/backup/" +
-      "v1;backupb\006proto3"
+      "mestamp\022\025\n\ris_processing\030\006 \001(\010\"C\n\006Status" +
+      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNN" +
+      "ING\020\002\022\014\n\010DISABLED\020\003*J\n\006Format\022\026\n\022FORMAT_" +
+      "UNSPECIFIED\020\000\022\016\n\nVERSION_11\020\001\022\016\n\nVERSION" +
+      "_12\020\002\022\010\n\004AUTO\020\003B_\n\032yandex.cloud.api.back" +
+      "up.v1ZAgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20961,7 +21052,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicyApplication_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicyApplication_descriptor,
-        new java.lang.String[] { "PolicyId", "ComputeInstanceId", "Enabled", "Status", "CreatedAt", });
+        new java.lang.String[] { "PolicyId", "ComputeInstanceId", "Enabled", "Status", "CreatedAt", "IsProcessing", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

@@ -4384,7 +4384,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -4392,7 +4392,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -4407,7 +4407,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -4416,7 +4416,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -4427,7 +4427,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -4730,7 +4730,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -4752,7 +4752,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4764,7 +4764,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4781,7 +4781,7 @@ public final class FunctionServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5512,7 +5512,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -5534,7 +5534,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5546,7 +5546,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5563,7 +5563,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -5588,7 +5588,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -5611,7 +5611,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -5630,7 +5630,7 @@ public final class FunctionServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -6398,7 +6398,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -6408,7 +6408,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -6425,7 +6425,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -6436,7 +6436,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -6449,7 +6449,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -6805,7 +6805,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -6829,7 +6829,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6843,7 +6843,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6862,7 +6862,7 @@ public final class FunctionServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -7780,7 +7780,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -7804,7 +7804,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7818,7 +7818,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7837,7 +7837,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7864,7 +7864,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -7889,7 +7889,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -7910,7 +7910,7 @@ public final class FunctionServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [FunctionService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -35492,235 +35492,235 @@ public final class FunctionServiceOuterClass {
       "n\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"s\n\025ListFunctions" +
       "Response\022A\n\tfunctions\030\001 \003(\0132..yandex.clo" +
       "ud.serverless.functions.v1.Function\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\313\002\n\025CreateFunctionR" +
+      "ext_page_token\030\002 \001(\t\"\323\002\n\025CreateFunctionR" +
       "equest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030" +
       "\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]" +
-      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\230\001\n\006lab" +
+      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\240\001\n\006lab" +
       "els\030\004 \003(\0132G.yandex.cloud.serverless.func" +
       "tions.v1.CreateFunctionRequest.LabelsEnt" +
-      "ryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032" +
-      "\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Cr" +
-      "eateFunctionMetadata\022\023\n\013function_id\030\001 \001(" +
-      "\t\"\376\002\n\025UpdateFunctionRequest\022\031\n\013function_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362" +
-      "\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013desc" +
-      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\230\001\n\006labels\030\005 \003(" +
-      "\0132G.yandex.cloud.serverless.functions.v1" +
-      ".UpdateFunctionRequest.LabelsEntryB?\202\3101\004" +
-      "<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101" +
-      "\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateFunc" +
-      "tionMetadata\022\023\n\013function_id\030\001 \001(\t\"2\n\025Del" +
-      "eteFunctionRequest\022\031\n\013function_id\030\001 \001(\tB" +
-      "\004\350\3071\001\"-\n\026DeleteFunctionMetadata\022\023\n\013funct" +
-      "ion_id\030\001 \001(\t\"V\n\034DeleteFunctionVersionReq" +
-      "uest\022!\n\023function_version_id\030\002 \001(\tB\004\350\3071\001\022" +
-      "\r\n\005force\030\003 \001(\010J\004\010\001\020\002\"B\n\035DeleteFunctionVe" +
-      "rsionMetadata\022\033\n\023function_version_id\030\002 \001" +
-      "(\tJ\004\010\001\020\002\"\025\n\023ListRuntimesRequest\"(\n\024ListR" +
-      "untimesResponse\022\020\n\010runtimes\030\001 \003(\t\"\260\001\n\034Li" +
-      "stFunctionsVersionsRequest\022\023\n\tfolder_id\030" +
-      "\001 \001(\tH\000\022\025\n\013function_id\030\002 \001(\tH\000\022\035\n\tpage_s" +
-      "ize\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(" +
-      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000" +
-      "B\n\n\002id\022\004\300\3011\001\"y\n\035ListFunctionsVersionsRes" +
-      "ponse\022?\n\010versions\030\001 \003(\0132-.yandex.cloud.s" +
-      "erverless.functions.v1.Version\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"\224\001\n\035ListFunctionOperatio" +
-      "nsRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006" +
-      "<=1000\"p\n\036ListFunctionOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\250\n\n\034CreateFunctionVersionRequest\022\031\n\013fun" +
-      "ction_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(\tB\004\350" +
-      "\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022\030\n\ne" +
-      "ntrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005 \001(\013" +
-      "2/.yandex.cloud.serverless.functions.v1." +
-      "ResourcesB\004\350\3071\001\022:\n\021execution_timeout\030\006 \001" +
-      "(\0132\031.google.protobuf.DurationB\004\350\3071\001\022\032\n\022s" +
-      "ervice_account_id\030\007 \001(\t\022@\n\007package\030\t \001(\013" +
-      "2-.yandex.cloud.serverless.functions.v1." +
-      "PackageH\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=524288" +
-      "00H\000\022\024\n\nversion_id\030\013 \001(\tH\000\022\217\001\n\013environme" +
-      "nt\030\014 \003(\0132S.yandex.cloud.serverless.funct" +
-      "ions.v1.CreateFunctionVersionRequest.Env" +
-      "ironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][" +
-      "a-zA-Z0-9_]*\022!\n\003tag\030\r \003(\tB\024\362\3071\020[a-z][-_0" +
-      "-9a-z]*\022H\n\014connectivity\030\021 \001(\01322.yandex.c" +
-      "loud.serverless.functions.v1.Connectivit" +
-      "y\022|\n\026named_service_accounts\030\017 \003(\0132\\.yand" +
-      "ex.cloud.serverless.functions.v1.CreateF" +
-      "unctionVersionRequest.NamedServiceAccoun" +
-      "tsEntry\022=\n\007secrets\030\022 \003(\0132,.yandex.cloud." +
-      "serverless.functions.v1.Secret\022E\n\013log_op" +
-      "tions\030\023 \001(\01320.yandex.cloud.serverless.fu" +
-      "nctions.v1.LogOptions\022J\n\016storage_mounts\030" +
-      "\024 \003(\01322.yandex.cloud.serverless.function" +
-      "s.v1.StorageMount\022\\\n\027async_invocation_co" +
-      "nfig\030\026 \001(\0132;.yandex.cloud.serverless.fun" +
-      "ctions.v1.AsyncInvocationConfig\022\022\n\ntmpfs" +
-      "_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(\003B\010\372\3071\0040-" +
-      "16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\032;\n\031NamedServiceAccountsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\026\n\016p" +
-      "ackage_source\022\004\300\3011\001J\004\010\016\020\017J\004\010\020\020\021J\004\010\025\020\026J\004\010" +
-      "\010\020\t\"<\n\035CreateFunctionVersionMetadata\022\033\n\023" +
-      "function_version_id\030\001 \001(\t\"]\n\025SetFunction" +
-      "TagRequest\022!\n\023function_version_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*" +
-      "\"`\n\030RemoveFunctionTagRequest\022!\n\023function" +
-      "_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\307" +
-      "1\020[a-z][-_0-9a-z]*\"5\n\026SetFunctionTagMeta" +
-      "data\022\033\n\023function_version_id\030\001 \001(\t\"8\n\031Rem" +
-      "oveFunctionTagMetadata\022\033\n\023function_versi" +
-      "on_id\030\001 \001(\t\"\301\001\n\035ListFunctionTagHistoryRe" +
-      "quest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030" +
-      "\002 \001(\tB\036\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n" +
-      "\tpage_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_tok" +
-      "en\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101" +
-      "\006<=1000\"\200\003\n\036ListFunctionTagHistoryRespon" +
-      "se\022\202\001\n\033function_tag_history_record\030\001 \003(\013" +
-      "2].yandex.cloud.serverless.functions.v1." +
-      "ListFunctionTagHistoryResponse.FunctionT" +
-      "agHistoryRecord\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\032\277\001\n\030FunctionTagHistoryRecord\022\023\n\013functio" +
-      "n_id\030\001 \001(\t\022\033\n\023function_version_id\030\003 \001(\t\022" +
-      "\013\n\003tag\030\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\0220\n\014effective_to" +
-      "\030\005 \001(\0132\032.google.protobuf.Timestamp\"u\n\032Li" +
-      "stScalingPoliciesRequest\022\031\n\013function_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n\033Li" +
-      "stScalingPoliciesResponse\022M\n\020scaling_pol" +
-      "icies\030\001 \003(\01323.yandex.cloud.serverless.fu" +
-      "nctions.v1.ScalingPolicy\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"\357\001\n\027SetScalingPolicyRequest\022\031\n" +
-      "\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350" +
-      "\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022/\n\033pro" +
-      "visioned_instances_count\030\004 \001(\003B\n\372\3071\0060-10" +
-      "00\022(\n\024zone_instances_limit\030\005 \001(\003B\n\372\3071\0060-" +
-      "1000\022\'\n\023zone_requests_limit\030\006 \001(\003B\n\372\3071\0060" +
-      "-1000J\004\010\003\020\004\"/\n\030SetScalingPolicyMetadata\022" +
-      "\023\n\013function_id\030\001 \001(\t\"h\n\032RemoveScalingPol" +
-      "icyRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
-      "\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]" +
-      "latest\"2\n\033RemoveScalingPolicyMetadata\022\023\n" +
-      "\013function_id\030\001 \001(\t2\304!\n\017FunctionService\022\236" +
-      "\001\n\003Get\0228.yandex.cloud.serverless.functio" +
-      "ns.v1.GetFunctionRequest\032..yandex.cloud." +
-      "serverless.functions.v1.Function\"-\202\323\344\223\002\'" +
-      "\022%/functions/v1/functions/{function_id}\022" +
-      "\240\001\n\004List\022:.yandex.cloud.serverless.funct" +
-      "ions.v1.ListFunctionsRequest\032;.yandex.cl" +
-      "oud.serverless.functions.v1.ListFunction" +
-      "sResponse\"\037\202\323\344\223\002\031\022\027/functions/v1/functio" +
-      "ns\022\262\001\n\006Create\022;.yandex.cloud.serverless." +
-      "functions.v1.CreateFunctionRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"H\202\323\344\223\002\034\"\027/" +
-      "functions/v1/functions:\001*\262\322*\"\n\026CreateFun" +
-      "ctionMetadata\022\010Function\022\300\001\n\006Update\022;.yan" +
-      "dex.cloud.serverless.functions.v1.Update" +
-      "FunctionRequest\032!.yandex.cloud.operation" +
-      ".Operation\"V\202\323\344\223\002*2%/functions/v1/functi" +
-      "ons/{function_id}:\001*\262\322*\"\n\026UpdateFunction" +
-      "Metadata\022\010Function\022\312\001\n\006Delete\022;.yandex.c" +
-      "loud.serverless.functions.v1.DeleteFunct" +
+      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"-\n\026CreateFunctionMetadata\022\023\n\013function" +
+      "_id\030\001 \001(\t\"\206\003\n\025UpdateFunctionRequest\022\031\n\013f" +
+      "unction_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022/\n\004name\030" +
+      "\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]" +
+      "\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\240\001\n\006lab" +
+      "els\030\005 \003(\0132G.yandex.cloud.serverless.func" +
+      "tions.v1.UpdateFunctionRequest.LabelsEnt" +
+      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\"-\n\026UpdateFunctionMetadata\022\023\n\013function" +
+      "_id\030\001 \001(\t\"2\n\025DeleteFunctionRequest\022\031\n\013fu" +
+      "nction_id\030\001 \001(\tB\004\350\3071\001\"-\n\026DeleteFunctionM" +
+      "etadata\022\023\n\013function_id\030\001 \001(\t\"V\n\034DeleteFu" +
+      "nctionVersionRequest\022!\n\023function_version" +
+      "_id\030\002 \001(\tB\004\350\3071\001\022\r\n\005force\030\003 \001(\010J\004\010\001\020\002\"B\n\035" +
+      "DeleteFunctionVersionMetadata\022\033\n\023functio" +
+      "n_version_id\030\002 \001(\tJ\004\010\001\020\002\"\025\n\023ListRuntimes" +
+      "Request\"(\n\024ListRuntimesResponse\022\020\n\010runti" +
+      "mes\030\001 \003(\t\"\260\001\n\034ListFunctionsVersionsReque" +
+      "st\022\023\n\tfolder_id\030\001 \001(\tH\000\022\025\n\013function_id\030\002" +
+      " \001(\tH\000\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n" +
+      "\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005" +
+      " \001(\tB\n\212\3101\006<=1000B\n\n\002id\022\004\300\3011\001\"y\n\035ListFunc" +
+      "tionsVersionsResponse\022?\n\010versions\030\001 \003(\0132" +
+      "-.yandex.cloud.serverless.functions.v1.V" +
+      "ersion\022\027\n\017next_page_token\030\002 \001(\t\"\224\001\n\035List" +
+      "FunctionOperationsRequest\022\031\n\013function_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
+      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"p\n\036ListFunctionOp" +
+      "erationsResponse\0225\n\noperations\030\001 \003(\0132!.y" +
+      "andex.cloud.operation.Operation\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\250\n\n\034CreateFunctionVersi" +
+      "onRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007" +
+      "runtime\030\002 \001(\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\t" +
+      "B\t\212\3101\0050-256\022\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n" +
+      "\tresources\030\005 \001(\0132/.yandex.cloud.serverle" +
+      "ss.functions.v1.ResourcesB\004\350\3071\001\022:\n\021execu" +
+      "tion_timeout\030\006 \001(\0132\031.google.protobuf.Dur" +
+      "ationB\004\350\3071\001\022\032\n\022service_account_id\030\007 \001(\t\022" +
+      "@\n\007package\030\t \001(\0132-.yandex.cloud.serverle" +
+      "ss.functions.v1.PackageH\000\022!\n\007content\030\n \001" +
+      "(\014B\016\212\3101\n<=52428800H\000\022\024\n\nversion_id\030\013 \001(\t" +
+      "H\000\022\217\001\n\013environment\030\014 \003(\0132S.yandex.cloud." +
+      "serverless.functions.v1.CreateFunctionVe" +
+      "rsionRequest.EnvironmentEntryB%\212\3101\006<=409" +
+      "6\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022!\n\003tag\030\r \003(" +
+      "\tB\024\362\3071\020[a-z][-_0-9a-z]*\022H\n\014connectivity\030" +
+      "\021 \001(\01322.yandex.cloud.serverless.function" +
+      "s.v1.Connectivity\022|\n\026named_service_accou" +
+      "nts\030\017 \003(\0132\\.yandex.cloud.serverless.func" +
+      "tions.v1.CreateFunctionVersionRequest.Na" +
+      "medServiceAccountsEntry\022=\n\007secrets\030\022 \003(\013" +
+      "2,.yandex.cloud.serverless.functions.v1." +
+      "Secret\022E\n\013log_options\030\023 \001(\01320.yandex.clo" +
+      "ud.serverless.functions.v1.LogOptions\022J\n" +
+      "\016storage_mounts\030\024 \003(\01322.yandex.cloud.ser" +
+      "verless.functions.v1.StorageMount\022\\\n\027asy" +
+      "nc_invocation_config\030\026 \001(\0132;.yandex.clou" +
+      "d.serverless.functions.v1.AsyncInvocatio" +
+      "nConfig\022\022\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurren" +
+      "cy\030\030 \001(\003B\010\372\3071\0040-16\0322\n\020EnvironmentEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedS" +
+      "erviceAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001B\026\n\016package_source\022\004\300\3011\001J\004\010\016\020" +
+      "\017J\004\010\020\020\021J\004\010\025\020\026J\004\010\010\020\t\"<\n\035CreateFunctionVer" +
+      "sionMetadata\022\033\n\023function_version_id\030\001 \001(" +
+      "\t\"]\n\025SetFunctionTagRequest\022!\n\023function_v" +
+      "ersion_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020" +
+      "[a-z][-_0-9a-z]*\"`\n\030RemoveFunctionTagReq" +
+      "uest\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"5\n\026Se" +
+      "tFunctionTagMetadata\022\033\n\023function_version" +
+      "_id\030\001 \001(\t\"8\n\031RemoveFunctionTagMetadata\022\033" +
+      "\n\023function_version_id\030\001 \001(\t\"\301\001\n\035ListFunc" +
+      "tionTagHistoryRequest\022\031\n\013function_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[a-z][-_0-9a-" +
+      "z]*|[$]latest\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-" +
+      "1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
+      "ilter\030\005 \001(\tB\n\212\3101\006<=1000\"\200\003\n\036ListFunction" +
+      "TagHistoryResponse\022\202\001\n\033function_tag_hist" +
+      "ory_record\030\001 \003(\0132].yandex.cloud.serverle" +
+      "ss.functions.v1.ListFunctionTagHistoryRe" +
+      "sponse.FunctionTagHistoryRecord\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\032\277\001\n\030FunctionTagHistoryR" +
+      "ecord\022\023\n\013function_id\030\001 \001(\t\022\033\n\023function_v" +
+      "ersion_id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t\0222\n\016effectiv" +
+      "e_from\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\0220\n\014effective_to\030\005 \001(\0132\032.google.protobuf" +
+      ".Timestamp\"u\n\032ListScalingPoliciesRequest" +
+      "\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"\205\001\n\033ListScalingPoliciesRespons" +
+      "e\022M\n\020scaling_policies\030\001 \003(\01323.yandex.clo" +
+      "ud.serverless.functions.v1.ScalingPolicy" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\357\001\n\027SetScaling" +
+      "PolicyRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-9a-z]*|" +
+      "[$]latest\022/\n\033provisioned_instances_count" +
+      "\030\004 \001(\003B\n\372\3071\0060-1000\022(\n\024zone_instances_lim" +
+      "it\030\005 \001(\003B\n\372\3071\0060-1000\022\'\n\023zone_requests_li" +
+      "mit\030\006 \001(\003B\n\372\3071\0060-1000J\004\010\003\020\004\"/\n\030SetScalin" +
+      "gPolicyMetadata\022\023\n\013function_id\030\001 \001(\t\"h\n\032" +
+      "RemoveScalingPolicyRequest\022\031\n\013function_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z" +
+      "][-_0-9a-z]*|[$]latest\"2\n\033RemoveScalingP" +
+      "olicyMetadata\022\023\n\013function_id\030\001 \001(\t2\304!\n\017F" +
+      "unctionService\022\236\001\n\003Get\0228.yandex.cloud.se" +
+      "rverless.functions.v1.GetFunctionRequest" +
+      "\032..yandex.cloud.serverless.functions.v1." +
+      "Function\"-\202\323\344\223\002\'\022%/functions/v1/function" +
+      "s/{function_id}\022\240\001\n\004List\022:.yandex.cloud." +
+      "serverless.functions.v1.ListFunctionsReq" +
+      "uest\032;.yandex.cloud.serverless.functions" +
+      ".v1.ListFunctionsResponse\"\037\202\323\344\223\002\031\022\027/func" +
+      "tions/v1/functions\022\262\001\n\006Create\022;.yandex.c" +
+      "loud.serverless.functions.v1.CreateFunct" +
       "ionRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"`\202\323\344\223\002\'*%/functions/v1/functions/{" +
-      "function_id}\262\322*/\n\026DeleteFunctionMetadata" +
-      "\022\025google.protobuf.Empty\022\262\001\n\nGetVersion\022?" +
-      ".yandex.cloud.serverless.functions.v1.Ge" +
-      "tFunctionVersionRequest\032-.yandex.cloud.s" +
-      "erverless.functions.v1.Version\"4\202\323\344\223\002.\022," +
-      "/functions/v1/versions/{function_version" +
-      "_id}\022\254\001\n\017GetVersionByTag\022D.yandex.cloud." +
-      "serverless.functions.v1.GetFunctionVersi" +
-      "onByTagRequest\032-.yandex.cloud.serverless" +
-      ".functions.v1.Version\"$\202\323\344\223\002\036\022\034/function" +
-      "s/v1/versions:byTag\022\267\001\n\014ListVersions\022B.y" +
-      "andex.cloud.serverless.functions.v1.List" +
-      "FunctionsVersionsRequest\032C.yandex.cloud." +
-      "serverless.functions.v1.ListFunctionsVer" +
-      "sionsResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/ver" +
-      "sions\022\346\001\n\rDeleteVersion\022B.yandex.cloud.s" +
-      "erverless.functions.v1.DeleteFunctionVer" +
-      "sionRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"n\202\323\344\223\002.*,/functions/v1/versions/{" +
-      "function_version_id}\262\322*6\n\035DeleteFunction" +
-      "VersionMetadata\022\025google.protobuf.Empty\022\315" +
-      "\001\n\006SetTag\022;.yandex.cloud.serverless.func" +
-      "tions.v1.SetFunctionTagRequest\032!.yandex." +
-      "cloud.operation.Operation\"c\202\323\344\223\0028\"3/func" +
-      "tions/v1/versions/{function_version_id}:" +
-      "setTag:\001*\262\322*!\n\026SetFunctionTagMetadata\022\007V" +
-      "ersion\022\331\001\n\tRemoveTag\022>.yandex.cloud.serv" +
-      "erless.functions.v1.RemoveFunctionTagReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "i\202\323\344\223\002;\"6/functions/v1/versions/{functio" +
-      "n_version_id}:removeTag:\001*\262\322*$\n\031RemoveFu" +
-      "nctionTagMetadata\022\007Version\022\325\001\n\016ListTagHi" +
-      "story\022C.yandex.cloud.serverless.function" +
-      "s.v1.ListFunctionTagHistoryRequest\032D.yan" +
+      "ation\"H\202\323\344\223\002\034\"\027/functions/v1/functions:\001" +
+      "*\262\322*\"\n\026CreateFunctionMetadata\022\010Function\022" +
+      "\300\001\n\006Update\022;.yandex.cloud.serverless.fun" +
+      "ctions.v1.UpdateFunctionRequest\032!.yandex" +
+      ".cloud.operation.Operation\"V\202\323\344\223\002*2%/fun" +
+      "ctions/v1/functions/{function_id}:\001*\262\322*\"" +
+      "\n\026UpdateFunctionMetadata\022\010Function\022\312\001\n\006D" +
+      "elete\022;.yandex.cloud.serverless.function" +
+      "s.v1.DeleteFunctionRequest\032!.yandex.clou" +
+      "d.operation.Operation\"`\202\323\344\223\002\'*%/function" +
+      "s/v1/functions/{function_id}\262\322*/\n\026Delete" +
+      "FunctionMetadata\022\025google.protobuf.Empty\022" +
+      "\262\001\n\nGetVersion\022?.yandex.cloud.serverless" +
+      ".functions.v1.GetFunctionVersionRequest\032" +
+      "-.yandex.cloud.serverless.functions.v1.V" +
+      "ersion\"4\202\323\344\223\002.\022,/functions/v1/versions/{" +
+      "function_version_id}\022\254\001\n\017GetVersionByTag" +
+      "\022D.yandex.cloud.serverless.functions.v1." +
+      "GetFunctionVersionByTagRequest\032-.yandex." +
+      "cloud.serverless.functions.v1.Version\"$\202" +
+      "\323\344\223\002\036\022\034/functions/v1/versions:byTag\022\267\001\n\014" +
+      "ListVersions\022B.yandex.cloud.serverless.f" +
+      "unctions.v1.ListFunctionsVersionsRequest" +
+      "\032C.yandex.cloud.serverless.functions.v1." +
+      "ListFunctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/" +
+      "functions/v1/versions\022\346\001\n\rDeleteVersion\022" +
+      "B.yandex.cloud.serverless.functions.v1.D" +
+      "eleteFunctionVersionRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"n\202\323\344\223\002.*,/functio" +
+      "ns/v1/versions/{function_version_id}\262\322*6" +
+      "\n\035DeleteFunctionVersionMetadata\022\025google." +
+      "protobuf.Empty\022\315\001\n\006SetTag\022;.yandex.cloud" +
+      ".serverless.functions.v1.SetFunctionTagR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"c\202\323\344\223\0028\"3/functions/v1/versions/{funct" +
+      "ion_version_id}:setTag:\001*\262\322*!\n\026SetFuncti" +
+      "onTagMetadata\022\007Version\022\331\001\n\tRemoveTag\022>.y" +
+      "andex.cloud.serverless.functions.v1.Remo" +
+      "veFunctionTagRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"i\202\323\344\223\002;\"6/functions/v1/v" +
+      "ersions/{function_version_id}:removeTag:" +
+      "\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007Versi" +
+      "on\022\325\001\n\016ListTagHistory\022C.yandex.cloud.ser" +
+      "verless.functions.v1.ListFunctionTagHist" +
+      "oryRequest\032D.yandex.cloud.serverless.fun" +
+      "ctions.v1.ListFunctionTagHistoryResponse" +
+      "\"8\202\323\344\223\0022\0220/functions/v1/functions/{funct" +
+      "ion_id}:tagHistory\022\305\001\n\rCreateVersion\022B.y" +
+      "andex.cloud.serverless.functions.v1.Crea" +
+      "teFunctionVersionRequest\032!.yandex.cloud." +
+      "operation.Operation\"M\202\323\344\223\002\033\"\026/functions/" +
+      "v1/versions:\001*\262\322*(\n\035CreateFunctionVersio" +
+      "nMetadata\022\007Version\022\245\001\n\014ListRuntimes\0229.ya" +
+      "ndex.cloud.serverless.functions.v1.ListR" +
+      "untimesRequest\032:.yandex.cloud.serverless" +
+      ".functions.v1.ListRuntimesResponse\"\036\202\323\344\223" +
+      "\002\030\022\026/functions/v1/runtimes\022\325\001\n\016ListOpera" +
+      "tions\022C.yandex.cloud.serverless.function" +
+      "s.v1.ListFunctionOperationsRequest\032D.yan" +
       "dex.cloud.serverless.functions.v1.ListFu" +
-      "nctionTagHistoryResponse\"8\202\323\344\223\0022\0220/funct" +
-      "ions/v1/functions/{function_id}:tagHisto" +
-      "ry\022\305\001\n\rCreateVersion\022B.yandex.cloud.serv" +
-      "erless.functions.v1.CreateFunctionVersio" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"M\202\323\344\223\002\033\"\026/functions/v1/versions:\001*\262\322" +
-      "*(\n\035CreateFunctionVersionMetadata\022\007Versi" +
-      "on\022\245\001\n\014ListRuntimes\0229.yandex.cloud.serve" +
-      "rless.functions.v1.ListRuntimesRequest\032:" +
-      ".yandex.cloud.serverless.functions.v1.Li" +
-      "stRuntimesResponse\"\036\202\323\344\223\002\030\022\026/functions/v" +
-      "1/runtimes\022\325\001\n\016ListOperations\022C.yandex.c" +
-      "loud.serverless.functions.v1.ListFunctio" +
-      "nOperationsRequest\032D.yandex.cloud.server" +
-      "less.functions.v1.ListFunctionOperations" +
-      "Response\"8\202\323\344\223\0022\0220/functions/v1/function" +
-      "s/{function_id}/operations\022\267\001\n\022ListAcces" +
-      "sBindings\022..yandex.cloud.access.ListAcce" +
-      "ssBindingsRequest\032/.yandex.cloud.access." +
-      "ListAccessBindingsResponse\"@\202\323\344\223\002:\0228/fun" +
-      "ctions/v1/functions/{resource_id}:listAc" +
-      "cessBindings\022\346\001\n\021SetAccessBindings\022-.yan" +
-      "dex.cloud.access.SetAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\177\202\323" +
-      "\344\223\002<\"7/functions/v1/functions/{resource_" +
-      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "Empty\022\363\001\n\024UpdateAccessBindings\0220.yandex." +
-      "cloud.access.UpdateAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\205\001\202\323" +
-      "\344\223\002?\":/functions/v1/functions/{resource_" +
-      "id}:updateAccessBindings:\001*\262\322*<\n#access." +
-      "UpdateAccessBindingsMetadata\022\025google.pro" +
-      "tobuf.Empty\022\331\001\n\023ListScalingPolicies\022@.ya" +
-      "ndex.cloud.serverless.functions.v1.ListS" +
-      "calingPoliciesRequest\032A.yandex.cloud.ser" +
-      "verless.functions.v1.ListScalingPolicies" +
-      "Response\"=\202\323\344\223\0027\0225/functions/v1/function" +
-      "s/{function_id}/scalingPolicies\022\344\001\n\020SetS" +
-      "calingPolicy\022=.yandex.cloud.serverless.f" +
-      "unctions.v1.SetScalingPolicyRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"n\202\323\344\223\002;\"6" +
-      "/functions/v1/functions/{function_id}:se" +
-      "tScalingPolicy:\001*\262\322*)\n\030SetScalingPolicyM" +
-      "etadata\022\rScalingPolicy\022\370\001\n\023RemoveScaling" +
-      "Policy\022@.yandex.cloud.serverless.functio" +
-      "ns.v1.RemoveScalingPolicyRequest\032!.yande" +
-      "x.cloud.operation.Operation\"|\202\323\344\223\002>\"9/fu" +
-      "nctions/v1/functions/{function_id}:remov" +
-      "eScalingPolicy:\001*\262\322*4\n\033RemoveScalingPoli" +
-      "cyMetadata\022\025google.protobuf.EmptyB~\n(yan" +
-      "dex.cloud.api.serverless.functions.v1ZRg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/serverless/functions/v1;function" +
-      "sb\006proto3"
+      "nctionOperationsResponse\"8\202\323\344\223\0022\0220/funct" +
+      "ions/v1/functions/{function_id}/operatio" +
+      "ns\022\267\001\n\022ListAccessBindings\022..yandex.cloud" +
+      ".access.ListAccessBindingsRequest\032/.yand" +
+      "ex.cloud.access.ListAccessBindingsRespon" +
+      "se\"@\202\323\344\223\002:\0228/functions/v1/functions/{res" +
+      "ource_id}:listAccessBindings\022\346\001\n\021SetAcce" +
+      "ssBindings\022-.yandex.cloud.access.SetAcce" +
+      "ssBindingsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\177\202\323\344\223\002<\"7/functions/v1/func" +
+      "tions/{resource_id}:setAccessBindings:\001*" +
+      "\262\322*9\n access.SetAccessBindingsMetadata\022\025" +
+      "google.protobuf.Empty\022\363\001\n\024UpdateAccessBi" +
+      "ndings\0220.yandex.cloud.access.UpdateAcces" +
+      "sBindingsRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\205\001\202\323\344\223\002?\":/functions/v1/func" +
+      "tions/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
+      "data\022\025google.protobuf.Empty\022\331\001\n\023ListScal" +
+      "ingPolicies\022@.yandex.cloud.serverless.fu" +
+      "nctions.v1.ListScalingPoliciesRequest\032A." +
+      "yandex.cloud.serverless.functions.v1.Lis" +
+      "tScalingPoliciesResponse\"=\202\323\344\223\0027\0225/funct" +
+      "ions/v1/functions/{function_id}/scalingP" +
+      "olicies\022\344\001\n\020SetScalingPolicy\022=.yandex.cl" +
+      "oud.serverless.functions.v1.SetScalingPo" +
+      "licyRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"n\202\323\344\223\002;\"6/functions/v1/functions/" +
+      "{function_id}:setScalingPolicy:\001*\262\322*)\n\030S" +
+      "etScalingPolicyMetadata\022\rScalingPolicy\022\370" +
+      "\001\n\023RemoveScalingPolicy\022@.yandex.cloud.se" +
+      "rverless.functions.v1.RemoveScalingPolic" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"|\202\323\344\223\002>\"9/functions/v1/functions/{fu" +
+      "nction_id}:removeScalingPolicy:\001*\262\322*4\n\033R" +
+      "emoveScalingPolicyMetadata\022\025google.proto" +
+      "buf.EmptyB~\n(yandex.cloud.api.serverless" +
+      ".functions.v1ZRgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/serverless/funct" +
+      "ions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

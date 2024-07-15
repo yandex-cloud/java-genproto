@@ -2963,7 +2963,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -2971,7 +2971,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -2986,7 +2986,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -2995,7 +2995,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3006,7 +3006,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3349,7 +3349,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3371,7 +3371,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3383,7 +3383,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3400,7 +3400,7 @@ public final class TriggerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4199,7 +4199,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -4221,7 +4221,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4233,7 +4233,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4250,7 +4250,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4275,7 +4275,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4298,7 +4298,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4317,7 +4317,7 @@ public final class TriggerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -5240,7 +5240,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5250,7 +5250,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5267,7 +5267,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5278,7 +5278,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5291,7 +5291,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -5687,7 +5687,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -5711,7 +5711,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5725,7 +5725,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5744,7 +5744,7 @@ public final class TriggerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6730,7 +6730,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -6754,7 +6754,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6768,7 +6768,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6787,7 +6787,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6814,7 +6814,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -6839,7 +6839,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -6860,7 +6860,7 @@ public final class TriggerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [TriggerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -13694,85 +13694,86 @@ public final class TriggerServiceOuterClass {
       "oken\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"o\n\024ListTrigge" +
       "rsResponse\022>\n\010triggers\030\001 \003(\0132,.yandex.cl" +
       "oud.serverless.triggers.v1.Trigger\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\217\003\n\024CreateTriggerReq" +
+      "xt_page_token\030\002 \001(\t\"\227\003\n\024CreateTriggerReq" +
       "uest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\022/\n\004name\030\002 " +
       "\001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036" +
-      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\226\001\n\006label" +
+      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\236\001\n\006label" +
       "s\030\004 \003(\0132E.yandex.cloud.serverless.trigge" +
-      "rs.v1.CreateTriggerRequest.LabelsEntryB?" +
-      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022E\n\004rule\030\005 \001(\01321." +
-      "yandex.cloud.serverless.triggers.v1.Trig" +
-      "ger.RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateTriggerMe" +
-      "tadata\022\022\n\ntrigger_id\030\001 \001(\t\"\273\003\n\024UpdateTri" +
-      "ggerRequest\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9" +
-      "]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\310" +
-      "1\005<=256\022\226\001\n\006labels\030\005 \003(\0132E.yandex.cloud." +
-      "serverless.triggers.v1.UpdateTriggerRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\022?\n\004rule\030\006 \001(\01321.yandex.cloud.serverless" +
-      ".triggers.v1.Trigger.Rule\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\025Upda" +
-      "teTriggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
-      "\3071\001\"0\n\024DeleteTriggerRequest\022\030\n\ntrigger_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\"1\n\025DeleteTriggerMetadata\022\030" +
-      "\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"/\n\023PauseTrigger" +
-      "Request\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024Pau" +
-      "seTriggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
-      "\3071\001\"0\n\024ResumeTriggerRequest\022\030\n\ntrigger_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\"1\n\025ResumeTriggerMetadata\022\030" +
-      "\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"\222\001\n\034ListTrigger" +
-      "OperationsRequest\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
-      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
-      "\tB\n\212\3101\006<=1000\"o\n\035ListTriggerOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t2\314\013\n\016TriggerService\022\227\001\n\003Get\0226.yand" +
-      "ex.cloud.serverless.triggers.v1.GetTrigg" +
-      "erRequest\032,.yandex.cloud.serverless.trig" +
-      "gers.v1.Trigger\"*\202\323\344\223\002$\022\"/triggers/v1/tr" +
-      "iggers/{trigger_id}\022\232\001\n\004List\0228.yandex.cl" +
-      "oud.serverless.triggers.v1.ListTriggersR" +
-      "equest\0329.yandex.cloud.serverless.trigger" +
-      "s.v1.ListTriggersResponse\"\035\202\323\344\223\002\027\022\025/trig" +
-      "gers/v1/triggers\022\254\001\n\006Create\0229.yandex.clo" +
-      "ud.serverless.triggers.v1.CreateTriggerR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"D\202\323\344\223\002\032\"\025/triggers/v1/triggers:\001*\262\322* \n" +
-      "\025CreateTriggerMetadata\022\007Trigger\022\271\001\n\006Upda" +
-      "te\0229.yandex.cloud.serverless.triggers.v1" +
-      ".UpdateTriggerRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"Q\202\323\344\223\002\'2\"/triggers/v1/t" +
-      "riggers/{trigger_id}:\001*\262\322* \n\025UpdateTrigg" +
-      "erMetadata\022\007Trigger\022\304\001\n\006Delete\0229.yandex." +
-      "cloud.serverless.triggers.v1.DeleteTrigg" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\\\202\323\344\223\002$*\"/triggers/v1/triggers/{tri" +
-      "gger_id}\262\322*.\n\025DeleteTriggerMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\274\001\n\005Pause\0228.yandex.cl" +
-      "oud.serverless.triggers.v1.PauseTriggerR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"V\202\323\344\223\002-\"(/triggers/v1/triggers/{trigge" +
-      "r_id}:pause:\001*\262\322*\037\n\024PauseTriggerMetadata" +
-      "\022\007Trigger\022\300\001\n\006Resume\0229.yandex.cloud.serv" +
-      "erless.triggers.v1.ResumeTriggerRequest\032" +
-      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
-      "\002.\")/triggers/v1/triggers/{trigger_id}:r" +
-      "esume:\001*\262\322* \n\025ResumeTriggerMetadata\022\007Tri" +
-      "gger\022\316\001\n\016ListOperations\022A.yandex.cloud.s" +
-      "erverless.triggers.v1.ListTriggerOperati" +
-      "onsRequest\032B.yandex.cloud.serverless.tri" +
-      "ggers.v1.ListTriggerOperationsResponse\"5" +
-      "\202\323\344\223\002/\022-/triggers/v1/triggers/{trigger_i" +
-      "d}/operationsB{\n\'yandex.cloud.api.server" +
-      "less.triggers.v1ZPgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/serverless/tr" +
-      "iggers/v1;triggersb\006proto3"
+      "rs.v1.CreateTriggerRequest.LabelsEntryBG" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
+      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022E\n\004rule\030" +
+      "\005 \001(\01321.yandex.cloud.serverless.triggers" +
+      ".v1.Trigger.RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateT" +
+      "riggerMetadata\022\022\n\ntrigger_id\030\001 \001(\t\"\303\003\n\024U" +
+      "pdateTriggerRequest\022\030\n\ntrigger_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z]" +
+      "[-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004" +
+      " \001(\tB\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\0132E.yande" +
+      "x.cloud.serverless.triggers.v1.UpdateTri" +
+      "ggerRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z" +
+      "][-_./\\@0-9a-z]*\022?\n\004rule\030\006 \001(\01321.yandex." +
+      "cloud.serverless.triggers.v1.Trigger.Rul" +
+      "e\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"1\n\025UpdateTriggerMetadata\022\030\n\ntri" +
+      "gger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024DeleteTriggerRequ" +
+      "est\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025DeleteT" +
+      "riggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001" +
+      "\"/\n\023PauseTriggerRequest\022\030\n\ntrigger_id\030\001 " +
+      "\001(\tB\004\350\3071\001\"0\n\024PauseTriggerMetadata\022\030\n\ntri" +
+      "gger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024ResumeTriggerRequ" +
+      "est\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025ResumeT" +
+      "riggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001" +
+      "\"\222\001\n\034ListTriggerOperationsRequest\022\030\n\ntri" +
+      "gger_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n" +
+      "\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
+      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListTri" +
+      "ggerOperationsResponse\0225\n\noperations\030\001 \003" +
+      "(\0132!.yandex.cloud.operation.Operation\022\027\n" +
+      "\017next_page_token\030\002 \001(\t2\314\013\n\016TriggerServic" +
+      "e\022\227\001\n\003Get\0226.yandex.cloud.serverless.trig" +
+      "gers.v1.GetTriggerRequest\032,.yandex.cloud" +
+      ".serverless.triggers.v1.Trigger\"*\202\323\344\223\002$\022" +
+      "\"/triggers/v1/triggers/{trigger_id}\022\232\001\n\004" +
+      "List\0228.yandex.cloud.serverless.triggers." +
+      "v1.ListTriggersRequest\0329.yandex.cloud.se" +
+      "rverless.triggers.v1.ListTriggersRespons" +
+      "e\"\035\202\323\344\223\002\027\022\025/triggers/v1/triggers\022\254\001\n\006Cre" +
+      "ate\0229.yandex.cloud.serverless.triggers.v" +
+      "1.CreateTriggerRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"D\202\323\344\223\002\032\"\025/triggers/v1/" +
+      "triggers:\001*\262\322* \n\025CreateTriggerMetadata\022\007" +
+      "Trigger\022\271\001\n\006Update\0229.yandex.cloud.server" +
+      "less.triggers.v1.UpdateTriggerRequest\032!." +
+      "yandex.cloud.operation.Operation\"Q\202\323\344\223\002\'" +
+      "2\"/triggers/v1/triggers/{trigger_id}:\001*\262" +
+      "\322* \n\025UpdateTriggerMetadata\022\007Trigger\022\304\001\n\006" +
+      "Delete\0229.yandex.cloud.serverless.trigger" +
+      "s.v1.DeleteTriggerRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\\\202\323\344\223\002$*\"/triggers/" +
+      "v1/triggers/{trigger_id}\262\322*.\n\025DeleteTrig" +
+      "gerMetadata\022\025google.protobuf.Empty\022\274\001\n\005P" +
+      "ause\0228.yandex.cloud.serverless.triggers." +
+      "v1.PauseTriggerRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"V\202\323\344\223\002-\"(/triggers/v1/" +
+      "triggers/{trigger_id}:pause:\001*\262\322*\037\n\024Paus" +
+      "eTriggerMetadata\022\007Trigger\022\300\001\n\006Resume\0229.y" +
+      "andex.cloud.serverless.triggers.v1.Resum" +
+      "eTriggerRequest\032!.yandex.cloud.operation" +
+      ".Operation\"X\202\323\344\223\002.\")/triggers/v1/trigger" +
+      "s/{trigger_id}:resume:\001*\262\322* \n\025ResumeTrig" +
+      "gerMetadata\022\007Trigger\022\316\001\n\016ListOperations\022" +
+      "A.yandex.cloud.serverless.triggers.v1.Li" +
+      "stTriggerOperationsRequest\032B.yandex.clou" +
+      "d.serverless.triggers.v1.ListTriggerOper" +
+      "ationsResponse\"5\202\323\344\223\002/\022-/triggers/v1/tri" +
+      "ggers/{trigger_id}/operationsB{\n\'yandex." +
+      "cloud.api.serverless.triggers.v1ZPgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/serverless/triggers/v1;triggersb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -6036,6 +6036,33 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue embedded_keeper = 9;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getEmbeddedKeeperOrBuilder();
+
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.ClusterConfig}
@@ -6189,6 +6216,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(embeddedKeeper_);
                 embeddedKeeper_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8188,6 +8228,44 @@ public final class ClusterOuterClass {
       return getEmbeddedKeeper();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retain period of automatically created backup in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8228,6 +8306,9 @@ public final class ClusterOuterClass {
       }
       if (embeddedKeeper_ != null) {
         output.writeMessage(9, getEmbeddedKeeper());
+      }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(10, getBackupRetainPeriodDays());
       }
       unknownFields.writeTo(output);
     }
@@ -8272,6 +8353,10 @@ public final class ClusterOuterClass {
       if (embeddedKeeper_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getEmbeddedKeeper());
+      }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getBackupRetainPeriodDays());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8330,6 +8415,11 @@ public final class ClusterOuterClass {
         if (!getEmbeddedKeeper()
             .equals(other.getEmbeddedKeeper())) return false;
       }
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
+      if (hasBackupRetainPeriodDays()) {
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8374,6 +8464,10 @@ public final class ClusterOuterClass {
       if (hasEmbeddedKeeper()) {
         hash = (37 * hash) + EMBEDDED_KEEPER_FIELD_NUMBER;
         hash = (53 * hash) + getEmbeddedKeeper().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8558,6 +8652,12 @@ public final class ClusterOuterClass {
           embeddedKeeper_ = null;
           embeddedKeeperBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         return this;
       }
 
@@ -8624,6 +8724,11 @@ public final class ClusterOuterClass {
           result.embeddedKeeper_ = embeddedKeeper_;
         } else {
           result.embeddedKeeper_ = embeddedKeeperBuilder_.build();
+        }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8700,6 +8805,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasEmbeddedKeeper()) {
           mergeEmbeddedKeeper(other.getEmbeddedKeeper());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10028,6 +10136,161 @@ public final class ClusterOuterClass {
           embeddedKeeper_ = null;
         }
         return embeddedKeeperBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       * @return Whether the backupRetainPeriodDays field is set.
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       * @return The backupRetainPeriodDays.
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retain period of automatically created backup in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21385,7 +21648,7 @@ public final class ClusterOuterClass {
       "REATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPD" +
       "ATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010ST" +
       "ARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013" +
-      "description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\373\005\n\rClus" +
+      "description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\273\006\n\rClus" +
       "terConfig\022\017\n\007version\030\001 \001(\t\022L\n\nclickhouse" +
       "\030\002 \001(\01328.yandex.cloud.mdb.clickhouse.v1." +
       "ClusterConfig.Clickhouse\022J\n\tzookeeper\030\003 " +
@@ -21399,58 +21662,59 @@ public final class ClusterOuterClass {
       ".protobuf.BoolValue\0227\n\023sql_user_manageme" +
       "nt\030\010 \001(\0132\032.google.protobuf.BoolValue\0223\n\017" +
       "embedded_keeper\030\t \001(\0132\032.google.protobuf." +
-      "BoolValue\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\013" +
-      "2:.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfigSet\022<\n\tresources\030\002 \001(\0132" +
-      ").yandex.cloud.mdb.clickhouse.v1.Resourc" +
-      "es\032I\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yan" +
-      "dex.cloud.mdb.clickhouse.v1.Resources\"f\n" +
-      "\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "\022;\n\006config\030\003 \001(\0132+.yandex.cloud.mdb.clic" +
-      "khouse.v1.ShardConfig\"X\n\nShardGroup\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013descrip" +
-      "tion\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t\"\237\002\n\013Shar" +
-      "dConfig\022J\n\nclickhouse\030\001 \001(\01326.yandex.clo" +
-      "ud.mdb.clickhouse.v1.ShardConfig.Clickho" +
-      "use\032\303\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yan" +
-      "dex.cloud.mdb.clickhouse.v1.config.Click" +
-      "houseConfigSet\022<\n\tresources\030\002 \001(\0132).yand" +
-      "ex.cloud.mdb.clickhouse.v1.Resources\022+\n\006" +
-      "weight\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\"\340\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
-      " \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).ya" +
-      "ndex.cloud.mdb.clickhouse.v1.Host.Type\022<" +
-      "\n\tresources\030\005 \001(\0132).yandex.cloud.mdb.cli" +
-      "ckhouse.v1.Resources\022;\n\006health\030\006 \001(\0162+.y" +
-      "andex.cloud.mdb.clickhouse.v1.Host.Healt" +
-      "h\0229\n\010services\030\007 \003(\0132\'.yandex.cloud.mdb.c" +
-      "lickhouse.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022" +
-      "\030\n\020assign_public_ip\030\t \001(\010\022\022\n\nshard_name\030" +
-      "\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nC" +
-      "LICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007" +
-      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
-      "ED\020\003\"\356\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex." +
-      "cloud.mdb.clickhouse.v1.Service.Type\022>\n\006" +
-      "health\030\002 \001(\0162..yandex.cloud.mdb.clickhou" +
-      "se.v1.Service.Health\";\n\004Type\022\024\n\020TYPE_UNS" +
-      "PECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020" +
-      "\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\"P\n\tResources\022\032\n\022resource_preset_id" +
-      "\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_i" +
-      "d\030\003 \001(\t\"~\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007" +
-      "web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserver" +
-      "less\030\004 \001(\010\022\025\n\rdata_transfer\030\005 \001(\010\022\024\n\014yan" +
-      "dex_query\030\006 \001(\010\"\206\002\n\014CloudStorage\022\017\n\007enab" +
-      "led\030\001 \001(\010\022:\n\013move_factor\030\002 \001(\0132\034.google." +
-      "protobuf.DoubleValueB\007\372\3071\0030-1\0226\n\022data_ca" +
-      "che_enabled\030\003 \001(\0132\032.google.protobuf.Bool" +
-      "Value\0228\n\023data_cache_max_size\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0227\n\023prefer_not_to" +
-      "_merge\030\005 \001(\0132\032.google.protobuf.BoolValue" +
-      "Bs\n\"yandex.cloud.api.mdb.clickhouse.v1ZM" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/clickhouse/v1;clickhouseb\006p" +
-      "roto3"
+      "BoolValue\022>\n\031backup_retain_period_days\030\n" +
+      " \001(\0132\033.google.protobuf.Int64Value\032\226\001\n\nCl" +
+      "ickhouse\022J\n\006config\030\001 \001(\0132:.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "gSet\022<\n\tresources\030\002 \001(\0132).yandex.cloud.m" +
+      "db.clickhouse.v1.Resources\032I\n\tZookeeper\022" +
+      "<\n\tresources\030\001 \001(\0132).yandex.cloud.mdb.cl" +
+      "ickhouse.v1.Resources\"f\n\005Shard\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006config\030\003 \001(\013" +
+      "2+.yandex.cloud.mdb.clickhouse.v1.ShardC" +
+      "onfig\"X\n\nShardGroup\022\014\n\004name\030\001 \001(\t\022\022\n\nclu" +
+      "ster_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\023\n\013sh" +
+      "ard_names\030\004 \003(\t\"\237\002\n\013ShardConfig\022J\n\nclick" +
+      "house\030\001 \001(\01326.yandex.cloud.mdb.clickhous" +
+      "e.v1.ShardConfig.Clickhouse\032\303\001\n\nClickhou" +
+      "se\022J\n\006config\030\001 \001(\0132:.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfigSet\022<" +
+      "\n\tresources\030\002 \001(\0132).yandex.cloud.mdb.cli" +
+      "ckhouse.v1.Resources\022+\n\006weight\030\003 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\"\340\003\n\004Host\022\014\n\004na" +
+      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030" +
+      "\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex.cloud.mdb.c" +
+      "lickhouse.v1.Host.Type\022<\n\tresources\030\005 \001(" +
+      "\0132).yandex.cloud.mdb.clickhouse.v1.Resou" +
+      "rces\022;\n\006health\030\006 \001(\0162+.yandex.cloud.mdb." +
+      "clickhouse.v1.Host.Health\0229\n\010services\030\007 " +
+      "\003(\0132\'.yandex.cloud.mdb.clickhouse.v1.Ser" +
+      "vice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public" +
+      "_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\";\n\004Type\022\024\n" +
+      "\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZ" +
+      "OOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALI" +
+      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\356\001\n\007Service" +
+      "\022:\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.clickh" +
+      "ouse.v1.Service.Type\022>\n\006health\030\002 \001(\0162..y" +
+      "andex.cloud.mdb.clickhouse.v1.Service.He" +
+      "alth\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCL" +
+      "ICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n\006Health\022\013\n\007U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResourc" +
+      "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
+      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"~\n\006Acces" +
+      "s\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n" +
+      "\007metrika\030\003 \001(\010\022\022\n\nserverless\030\004 \001(\010\022\025\n\rda" +
+      "ta_transfer\030\005 \001(\010\022\024\n\014yandex_query\030\006 \001(\010\"" +
+      "\206\002\n\014CloudStorage\022\017\n\007enabled\030\001 \001(\010\022:\n\013mov" +
+      "e_factor\030\002 \001(\0132\034.google.protobuf.DoubleV" +
+      "alueB\007\372\3071\0030-1\0226\n\022data_cache_enabled\030\003 \001(" +
+      "\0132\032.google.protobuf.BoolValue\0228\n\023data_ca" +
+      "che_max_size\030\004 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0227\n\023prefer_not_to_merge\030\005 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValueBs\n\"yandex.cloud" +
+      ".api.mdb.clickhouse.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/cli" +
+      "ckhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21485,7 +21749,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "EmbeddedKeeper", });
+        new java.lang.String[] { "Version", "Clickhouse", "Zookeeper", "BackupWindowStart", "Access", "CloudStorage", "SqlDatabaseManagement", "SqlUserManagement", "EmbeddedKeeper", "BackupRetainPeriodDays", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_ClusterConfig_Clickhouse_fieldAccessorTable = new

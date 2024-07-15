@@ -7652,21 +7652,6 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     * @return Whether the fields field is set.
-     */
-    boolean hasFields();
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     * @return The fields.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields();
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder();
-
-    /**
      * <code>string json_fields = 1;</code>
      * @return Whether the jsonFields field is set.
      */
@@ -7682,6 +7667,21 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getJsonFieldsBytes();
+
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return Whether the fields field is set.
+     */
+    boolean hasFields();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return The fields.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder();
 
     public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.SchemaCase getSchemaCase();
   }
@@ -7787,8 +7787,8 @@ public final class Common {
     public enum SchemaCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      FIELDS(2),
       JSON_FIELDS(1),
+      FIELDS(2),
       SCHEMA_NOT_SET(0);
       private final int value;
       private SchemaCase(int value) {
@@ -7806,8 +7806,8 @@ public final class Common {
 
       public static SchemaCase forNumber(int value) {
         switch (value) {
-          case 2: return FIELDS;
           case 1: return JSON_FIELDS;
+          case 2: return FIELDS;
           case 0: return SCHEMA_NOT_SET;
           default: return null;
         }
@@ -7821,37 +7821,6 @@ public final class Common {
     getSchemaCase() {
       return SchemaCase.forNumber(
           schemaCase_);
-    }
-
-    public static final int FIELDS_FIELD_NUMBER = 2;
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     * @return Whether the fields field is set.
-     */
-    @java.lang.Override
-    public boolean hasFields() {
-      return schemaCase_ == 2;
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     * @return The fields.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields() {
-      if (schemaCase_ == 2) {
-         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
-      }
-      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder() {
-      if (schemaCase_ == 2) {
-         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
-      }
-      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
     }
 
     public static final int JSON_FIELDS_FIELD_NUMBER = 1;
@@ -7904,6 +7873,37 @@ public final class Common {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return Whether the fields field is set.
+     */
+    @java.lang.Override
+    public boolean hasFields() {
+      return schemaCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     * @return The fields.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList getFields() {
+      if (schemaCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.FieldList fields = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder getFieldsOrBuilder() {
+      if (schemaCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList) schema_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7959,13 +7959,13 @@ public final class Common {
 
       if (!getSchemaCase().equals(other.getSchemaCase())) return false;
       switch (schemaCase_) {
-        case 2:
-          if (!getFields()
-              .equals(other.getFields())) return false;
-          break;
         case 1:
           if (!getJsonFields()
               .equals(other.getJsonFields())) return false;
+          break;
+        case 2:
+          if (!getFields()
+              .equals(other.getFields())) return false;
           break;
         case 0:
         default:
@@ -7982,13 +7982,13 @@ public final class Common {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (schemaCase_) {
-        case 2:
-          hash = (37 * hash) + FIELDS_FIELD_NUMBER;
-          hash = (53 * hash) + getFields().hashCode();
-          break;
         case 1:
           hash = (37 * hash) + JSON_FIELDS_FIELD_NUMBER;
           hash = (53 * hash) + getJsonFields().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+          hash = (53 * hash) + getFields().hashCode();
           break;
         case 0:
         default:
@@ -8154,15 +8154,15 @@ public final class Common {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema result = new yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema(this);
+        if (schemaCase_ == 1) {
+          result.schema_ = schema_;
+        }
         if (schemaCase_ == 2) {
           if (fieldsBuilder_ == null) {
             result.schema_ = schema_;
           } else {
             result.schema_ = fieldsBuilder_.build();
           }
-        }
-        if (schemaCase_ == 1) {
-          result.schema_ = schema_;
         }
         result.schemaCase_ = schemaCase_;
         onBuilt();
@@ -8214,14 +8214,14 @@ public final class Common {
       public Builder mergeFrom(yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema other) {
         if (other == yandex.cloud.api.datatransfer.v1.endpoint.Common.DataSchema.getDefaultInstance()) return this;
         switch (other.getSchemaCase()) {
-          case FIELDS: {
-            mergeFields(other.getFields());
-            break;
-          }
           case JSON_FIELDS: {
             schemaCase_ = 1;
             schema_ = other.schema_;
             onChanged();
+            break;
+          }
+          case FIELDS: {
+            mergeFields(other.getFields());
             break;
           }
           case SCHEMA_NOT_SET: {
@@ -8271,6 +8271,103 @@ public final class Common {
         return this;
       }
 
+
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return Whether the jsonFields field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonFields() {
+        return schemaCase_ == 1;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return The jsonFields.
+       */
+      @java.lang.Override
+      public java.lang.String getJsonFields() {
+        java.lang.Object ref = "";
+        if (schemaCase_ == 1) {
+          ref = schema_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (schemaCase_ == 1) {
+            schema_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return The bytes for jsonFields.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJsonFieldsBytes() {
+        java.lang.Object ref = "";
+        if (schemaCase_ == 1) {
+          ref = schema_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (schemaCase_ == 1) {
+            schema_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @param value The jsonFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonFields(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  schemaCase_ = 1;
+        schema_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonFields() {
+        if (schemaCase_ == 1) {
+          schemaCase_ = 0;
+          schema_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string json_fields = 1;</code>
+       * @param value The bytes for jsonFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonFieldsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        schemaCase_ = 1;
+        schema_ = value;
+        onChanged();
+        return this;
+      }
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldList.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Common.FieldListOrBuilder> fieldsBuilder_;
@@ -8411,103 +8508,6 @@ public final class Common {
         schemaCase_ = 2;
         onChanged();;
         return fieldsBuilder_;
-      }
-
-      /**
-       * <code>string json_fields = 1;</code>
-       * @return Whether the jsonFields field is set.
-       */
-      @java.lang.Override
-      public boolean hasJsonFields() {
-        return schemaCase_ == 1;
-      }
-      /**
-       * <code>string json_fields = 1;</code>
-       * @return The jsonFields.
-       */
-      @java.lang.Override
-      public java.lang.String getJsonFields() {
-        java.lang.Object ref = "";
-        if (schemaCase_ == 1) {
-          ref = schema_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (schemaCase_ == 1) {
-            schema_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string json_fields = 1;</code>
-       * @return The bytes for jsonFields.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getJsonFieldsBytes() {
-        java.lang.Object ref = "";
-        if (schemaCase_ == 1) {
-          ref = schema_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (schemaCase_ == 1) {
-            schema_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string json_fields = 1;</code>
-       * @param value The jsonFields to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonFields(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  schemaCase_ = 1;
-        schema_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json_fields = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJsonFields() {
-        if (schemaCase_ == 1) {
-          schemaCase_ = 0;
-          schema_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>string json_fields = 1;</code>
-       * @param value The bytes for jsonFields to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonFieldsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        schemaCase_ = 1;
-        schema_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9068,9 +9068,9 @@ public final class Common {
       "(\t\022\032\n\022service_account_id\030\010 \001(\tJ\004\010\006\020\010\"S\n\t" +
       "FieldList\022@\n\006fields\030\002 \003(\01320.yandex.cloud" +
       ".datatransfer.v1.endpoint.ColSchemaJ\004\010\001\020" +
-      "\002\"q\n\nDataSchema\022B\n\006fields\030\002 \001(\01320.yandex" +
-      ".cloud.datatransfer.v1.endpoint.FieldLis" +
-      "tH\000\022\025\n\013json_fields\030\001 \001(\tH\000B\010\n\006schema\"\010\n\006" +
+      "\002\"q\n\nDataSchema\022\025\n\013json_fields\030\001 \001(\tH\000\022B" +
+      "\n\006fields\030\002 \001(\01320.yandex.cloud.datatransf" +
+      "er.v1.endpoint.FieldListH\000B\010\n\006schema\"\010\n\006" +
       "NoAuth*h\n\023ObjectTransferStage\022%\n!OBJECT_" +
       "TRANSFER_STAGE_UNSPECIFIED\020\000\022\017\n\013BEFORE_D" +
       "ATA\020\001\022\016\n\nAFTER_DATA\020\002\022\t\n\005NEVER\020\003*U\n\rClea" +
@@ -9145,7 +9145,7 @@ public final class Common {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_DataSchema_descriptor,
-        new java.lang.String[] { "Fields", "JsonFields", "Schema", });
+        new java.lang.String[] { "JsonFields", "Fields", "Schema", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_NoAuth_fieldAccessorTable = new

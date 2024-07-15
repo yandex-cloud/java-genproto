@@ -49,6 +49,37 @@ public final class ReportServiceGrpc {
     return getGetTableMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest,
+      yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> getCalculateKpiValuesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CalculateKpiValues",
+      requestType = yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.class,
+      responseType = yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest,
+      yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> getCalculateKpiValuesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> getCalculateKpiValuesMethod;
+    if ((getCalculateKpiValuesMethod = ReportServiceGrpc.getCalculateKpiValuesMethod) == null) {
+      synchronized (ReportServiceGrpc.class) {
+        if ((getCalculateKpiValuesMethod = ReportServiceGrpc.getCalculateKpiValuesMethod) == null) {
+          ReportServiceGrpc.getCalculateKpiValuesMethod = getCalculateKpiValuesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateKpiValues"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ReportServiceMethodDescriptorSupplier("CalculateKpiValues"))
+              .build();
+        }
+      }
+    }
+    return getCalculateKpiValuesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -110,6 +141,16 @@ public final class ReportServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTableMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns a list of KPI values for tests matching the specified filter.
+     * </pre>
+     */
+    public void calculateKpiValues(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateKpiValuesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -119,6 +160,13 @@ public final class ReportServiceGrpc {
                 yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest,
                 yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse>(
                   this, METHODID_GET_TABLE)))
+          .addMethod(
+            getCalculateKpiValuesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest,
+                yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse>(
+                  this, METHODID_CALCULATE_KPI_VALUES)))
           .build();
     }
   }
@@ -150,6 +198,17 @@ public final class ReportServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTableMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of KPI values for tests matching the specified filter.
+     * </pre>
+     */
+    public void calculateKpiValues(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCalculateKpiValuesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -177,6 +236,16 @@ public final class ReportServiceGrpc {
     public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse getTable(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTableMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of KPI values for tests matching the specified filter.
+     * </pre>
+     */
+    public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse calculateKpiValues(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCalculateKpiValuesMethod(), getCallOptions(), request);
     }
   }
 
@@ -207,9 +276,21 @@ public final class ReportServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTableMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of KPI values for tests matching the specified filter.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse> calculateKpiValues(
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCalculateKpiValuesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_TABLE = 0;
+  private static final int METHODID_CALCULATE_KPI_VALUES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -231,6 +312,10 @@ public final class ReportServiceGrpc {
         case METHODID_GET_TABLE:
           serviceImpl.getTable((yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse>) responseObserver);
+          break;
+        case METHODID_CALCULATE_KPI_VALUES:
+          serviceImpl.calculateKpiValues((yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -294,6 +379,7 @@ public final class ReportServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ReportServiceFileDescriptorSupplier())
               .addMethod(getGetTableMethod())
+              .addMethod(getCalculateKpiValuesMethod())
               .build();
         }
       }

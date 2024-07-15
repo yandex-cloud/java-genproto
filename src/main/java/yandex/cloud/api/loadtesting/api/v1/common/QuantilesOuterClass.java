@@ -14,6 +14,270 @@ public final class QuantilesOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   * Quantiles (percentiles).
+   * </pre>
+   *
+   * Protobuf enum {@code yandex.cloud.loadtesting.api.v1.common.QuantileType}
+   */
+  public enum QuantileType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Unspecified percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    QUANTILE_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * 50 percentile (median).
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_50 = 1;</code>
+     */
+    QUANTILE_TYPE_50(1),
+    /**
+     * <pre>
+     * 75 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_75 = 2;</code>
+     */
+    QUANTILE_TYPE_75(2),
+    /**
+     * <pre>
+     * 80 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_80 = 3;</code>
+     */
+    QUANTILE_TYPE_80(3),
+    /**
+     * <pre>
+     * 85 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_85 = 4;</code>
+     */
+    QUANTILE_TYPE_85(4),
+    /**
+     * <pre>
+     * 90 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_90 = 5;</code>
+     */
+    QUANTILE_TYPE_90(5),
+    /**
+     * <pre>
+     * 95 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_95 = 6;</code>
+     */
+    QUANTILE_TYPE_95(6),
+    /**
+     * <pre>
+     * 98 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_98 = 7;</code>
+     */
+    QUANTILE_TYPE_98(7),
+    /**
+     * <pre>
+     * 99 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_99 = 8;</code>
+     */
+    QUANTILE_TYPE_99(8),
+    /**
+     * <pre>
+     * 100 percentile (maximum or minimum).
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_100 = 9;</code>
+     */
+    QUANTILE_TYPE_100(9),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Unspecified percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int QUANTILE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * 50 percentile (median).
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_50 = 1;</code>
+     */
+    public static final int QUANTILE_TYPE_50_VALUE = 1;
+    /**
+     * <pre>
+     * 75 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_75 = 2;</code>
+     */
+    public static final int QUANTILE_TYPE_75_VALUE = 2;
+    /**
+     * <pre>
+     * 80 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_80 = 3;</code>
+     */
+    public static final int QUANTILE_TYPE_80_VALUE = 3;
+    /**
+     * <pre>
+     * 85 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_85 = 4;</code>
+     */
+    public static final int QUANTILE_TYPE_85_VALUE = 4;
+    /**
+     * <pre>
+     * 90 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_90 = 5;</code>
+     */
+    public static final int QUANTILE_TYPE_90_VALUE = 5;
+    /**
+     * <pre>
+     * 95 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_95 = 6;</code>
+     */
+    public static final int QUANTILE_TYPE_95_VALUE = 6;
+    /**
+     * <pre>
+     * 98 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_98 = 7;</code>
+     */
+    public static final int QUANTILE_TYPE_98_VALUE = 7;
+    /**
+     * <pre>
+     * 99 percentile.
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_99 = 8;</code>
+     */
+    public static final int QUANTILE_TYPE_99_VALUE = 8;
+    /**
+     * <pre>
+     * 100 percentile (maximum or minimum).
+     * </pre>
+     *
+     * <code>QUANTILE_TYPE_100 = 9;</code>
+     */
+    public static final int QUANTILE_TYPE_100_VALUE = 9;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static QuantileType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static QuantileType forNumber(int value) {
+      switch (value) {
+        case 0: return QUANTILE_TYPE_UNSPECIFIED;
+        case 1: return QUANTILE_TYPE_50;
+        case 2: return QUANTILE_TYPE_75;
+        case 3: return QUANTILE_TYPE_80;
+        case 4: return QUANTILE_TYPE_85;
+        case 5: return QUANTILE_TYPE_90;
+        case 6: return QUANTILE_TYPE_95;
+        case 7: return QUANTILE_TYPE_98;
+        case 8: return QUANTILE_TYPE_99;
+        case 9: return QUANTILE_TYPE_100;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<QuantileType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        QuantileType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<QuantileType>() {
+            public QuantileType findValueByNumber(int number) {
+              return QuantileType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final QuantileType[] VALUES = values();
+
+    public static QuantileType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private QuantileType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.loadtesting.api.v1.common.QuantileType)
+  }
+
   public interface QuantilesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.common.Quantiles)
       com.google.protobuf.MessageOrBuilder {
@@ -1287,11 +1551,17 @@ public final class QuantilesOuterClass {
       "ng.api.v1.common\"\201\001\n\tQuantiles\022\013\n\003q50\030\001 " +
       "\001(\001\022\013\n\003q75\030\002 \001(\001\022\013\n\003q80\030\003 \001(\001\022\013\n\003q85\030\004 \001" +
       "(\001\022\013\n\003q90\030\005 \001(\001\022\013\n\003q95\030\006 \001(\001\022\013\n\003q98\030\007 \001(" +
-      "\001\022\013\n\003q99\030\010 \001(\001\022\014\n\004q100\030\t \001(\001B\177\n*yandex.c" +
-      "loud.api.loadtesting.api.v1.commonZQgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/loadtesting/api/v1/common;commonb\006p" +
-      "roto3"
+      "\001\022\013\n\003q99\030\010 \001(\001\022\014\n\004q100\030\t \001(\001*\364\001\n\014Quantil" +
+      "eType\022\035\n\031QUANTILE_TYPE_UNSPECIFIED\020\000\022\024\n\020" +
+      "QUANTILE_TYPE_50\020\001\022\024\n\020QUANTILE_TYPE_75\020\002" +
+      "\022\024\n\020QUANTILE_TYPE_80\020\003\022\024\n\020QUANTILE_TYPE_" +
+      "85\020\004\022\024\n\020QUANTILE_TYPE_90\020\005\022\024\n\020QUANTILE_T" +
+      "YPE_95\020\006\022\024\n\020QUANTILE_TYPE_98\020\007\022\024\n\020QUANTI" +
+      "LE_TYPE_99\020\010\022\025\n\021QUANTILE_TYPE_100\020\tB\177\n*y" +
+      "andex.cloud.api.loadtesting.api.v1.commo" +
+      "nZQgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/loadtesting/api/v1/common;co" +
+      "mmonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

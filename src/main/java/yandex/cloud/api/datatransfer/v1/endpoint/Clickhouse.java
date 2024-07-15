@@ -2071,6 +2071,21 @@ public final class Clickhouse {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     * @return Whether the onPremise field is set.
+     */
+    boolean hasOnPremise();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     * @return The onPremise.
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse getOnPremise();
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     */
+    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
+
+    /**
      * <code>string mdb_cluster_id = 5;</code>
      * @return Whether the mdbClusterId field is set.
      */
@@ -2086,21 +2101,6 @@ public final class Clickhouse {
      */
     com.google.protobuf.ByteString
         getMdbClusterIdBytes();
-
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     * @return Whether the onPremise field is set.
-     */
-    boolean hasOnPremise();
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     * @return The onPremise.
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse getOnPremise();
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     */
-    yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder();
 
     /**
      * <code>string user = 6;</code>
@@ -2280,8 +2280,8 @@ public final class Clickhouse {
     public enum AddressCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      MDB_CLUSTER_ID(5),
       ON_PREMISE(2),
+      MDB_CLUSTER_ID(5),
       ADDRESS_NOT_SET(0);
       private final int value;
       private AddressCase(int value) {
@@ -2299,8 +2299,8 @@ public final class Clickhouse {
 
       public static AddressCase forNumber(int value) {
         switch (value) {
-          case 5: return MDB_CLUSTER_ID;
           case 2: return ON_PREMISE;
+          case 5: return MDB_CLUSTER_ID;
           case 0: return ADDRESS_NOT_SET;
           default: return null;
         }
@@ -2314,6 +2314,37 @@ public final class Clickhouse {
     getAddressCase() {
       return AddressCase.forNumber(
           addressCase_);
+    }
+
+    public static final int ON_PREMISE_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     * @return Whether the onPremise field is set.
+     */
+    @java.lang.Override
+    public boolean hasOnPremise() {
+      return addressCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     * @return The onPremise.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse getOnPremise() {
+      if (addressCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder() {
+      if (addressCase_ == 2) {
+         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_;
+      }
+      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
     }
 
     public static final int MDB_CLUSTER_ID_FIELD_NUMBER = 5;
@@ -2366,37 +2397,6 @@ public final class Clickhouse {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int ON_PREMISE_FIELD_NUMBER = 2;
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     * @return Whether the onPremise field is set.
-     */
-    @java.lang.Override
-    public boolean hasOnPremise() {
-      return addressCase_ == 2;
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     * @return The onPremise.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse getOnPremise() {
-      if (addressCase_ == 2) {
-         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_;
-      }
-      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.datatransfer.v1.endpoint.OnPremiseClickhouse on_premise = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder getOnPremiseOrBuilder() {
-      if (addressCase_ == 2) {
-         return (yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse) address_;
-      }
-      return yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.getDefaultInstance();
     }
 
     public static final int USER_FIELD_NUMBER = 6;
@@ -2590,13 +2590,13 @@ public final class Clickhouse {
           .equals(other.getDatabase())) return false;
       if (!getAddressCase().equals(other.getAddressCase())) return false;
       switch (addressCase_) {
-        case 5:
-          if (!getMdbClusterId()
-              .equals(other.getMdbClusterId())) return false;
-          break;
         case 2:
           if (!getOnPremise()
               .equals(other.getOnPremise())) return false;
+          break;
+        case 5:
+          if (!getMdbClusterId()
+              .equals(other.getMdbClusterId())) return false;
           break;
         case 0:
         default:
@@ -2621,13 +2621,13 @@ public final class Clickhouse {
       hash = (37 * hash) + DATABASE_FIELD_NUMBER;
       hash = (53 * hash) + getDatabase().hashCode();
       switch (addressCase_) {
-        case 5:
-          hash = (37 * hash) + MDB_CLUSTER_ID_FIELD_NUMBER;
-          hash = (53 * hash) + getMdbClusterId().hashCode();
-          break;
         case 2:
           hash = (37 * hash) + ON_PREMISE_FIELD_NUMBER;
           hash = (53 * hash) + getOnPremise().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + MDB_CLUSTER_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getMdbClusterId().hashCode();
           break;
         case 0:
         default:
@@ -2803,15 +2803,15 @@ public final class Clickhouse {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions buildPartial() {
         yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions result = new yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseConnectionOptions(this);
-        if (addressCase_ == 5) {
-          result.address_ = address_;
-        }
         if (addressCase_ == 2) {
           if (onPremiseBuilder_ == null) {
             result.address_ = address_;
           } else {
             result.address_ = onPremiseBuilder_.build();
           }
+        }
+        if (addressCase_ == 5) {
+          result.address_ = address_;
         }
         result.user_ = user_;
         if (passwordBuilder_ == null) {
@@ -2881,14 +2881,14 @@ public final class Clickhouse {
           onChanged();
         }
         switch (other.getAddressCase()) {
+          case ON_PREMISE: {
+            mergeOnPremise(other.getOnPremise());
+            break;
+          }
           case MDB_CLUSTER_ID: {
             addressCase_ = 5;
             address_ = other.address_;
             onChanged();
-            break;
-          }
-          case ON_PREMISE: {
-            mergeOnPremise(other.getOnPremise());
             break;
           }
           case ADDRESS_NOT_SET: {
@@ -2938,103 +2938,6 @@ public final class Clickhouse {
         return this;
       }
 
-
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @return Whether the mdbClusterId field is set.
-       */
-      @java.lang.Override
-      public boolean hasMdbClusterId() {
-        return addressCase_ == 5;
-      }
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @return The mdbClusterId.
-       */
-      @java.lang.Override
-      public java.lang.String getMdbClusterId() {
-        java.lang.Object ref = "";
-        if (addressCase_ == 5) {
-          ref = address_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (addressCase_ == 5) {
-            address_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @return The bytes for mdbClusterId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getMdbClusterIdBytes() {
-        java.lang.Object ref = "";
-        if (addressCase_ == 5) {
-          ref = address_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (addressCase_ == 5) {
-            address_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @param value The mdbClusterId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMdbClusterId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  addressCase_ = 5;
-        address_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMdbClusterId() {
-        if (addressCase_ == 5) {
-          addressCase_ = 0;
-          address_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>string mdb_cluster_id = 5;</code>
-       * @param value The bytes for mdbClusterId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMdbClusterIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        addressCase_ = 5;
-        address_ = value;
-        onChanged();
-        return this;
-      }
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouse.Builder, yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.OnPremiseClickhouseOrBuilder> onPremiseBuilder_;
@@ -3175,6 +3078,103 @@ public final class Clickhouse {
         addressCase_ = 2;
         onChanged();;
         return onPremiseBuilder_;
+      }
+
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @return Whether the mdbClusterId field is set.
+       */
+      @java.lang.Override
+      public boolean hasMdbClusterId() {
+        return addressCase_ == 5;
+      }
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @return The mdbClusterId.
+       */
+      @java.lang.Override
+      public java.lang.String getMdbClusterId() {
+        java.lang.Object ref = "";
+        if (addressCase_ == 5) {
+          ref = address_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (addressCase_ == 5) {
+            address_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @return The bytes for mdbClusterId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMdbClusterIdBytes() {
+        java.lang.Object ref = "";
+        if (addressCase_ == 5) {
+          ref = address_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (addressCase_ == 5) {
+            address_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @param value The mdbClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMdbClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  addressCase_ = 5;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMdbClusterId() {
+        if (addressCase_ == 5) {
+          addressCase_ = 0;
+          address_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string mdb_cluster_id = 5;</code>
+       * @param value The bytes for mdbClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMdbClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        addressCase_ = 5;
+        address_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object user_ = "";
@@ -11525,10 +11525,10 @@ public final class Clickhouse {
       "\022\021\n\thttp_port\030\003 \001(\003\022\023\n\013native_port\030\004 \001(\003" +
       "\022@\n\010tls_mode\030\010 \001(\0132..yandex.cloud.datatr" +
       "ansfer.v1.endpoint.TLSModeJ\004\010\002\020\003J\004\010\005\020\010\"\201" +
-      "\002\n\033ClickhouseConnectionOptions\022\030\n\016mdb_cl" +
-      "uster_id\030\005 \001(\tH\000\022P\n\non_premise\030\002 \001(\0132:.y" +
-      "andex.cloud.datatransfer.v1.endpoint.OnP" +
-      "remiseClickhouseH\000\022\014\n\004user\030\006 \001(\t\022?\n\010pass" +
+      "\002\n\033ClickhouseConnectionOptions\022P\n\non_pre" +
+      "mise\030\002 \001(\0132:.yandex.cloud.datatransfer.v" +
+      "1.endpoint.OnPremiseClickhouseH\000\022\030\n\016mdb_" +
+      "cluster_id\030\005 \001(\tH\000\022\014\n\004user\030\006 \001(\t\022?\n\010pass" +
       "word\030\007 \001(\0132-.yandex.cloud.datatransfer.v" +
       "1.endpoint.Secret\022\020\n\010database\030\010 \001(\tB\t\n\007a" +
       "ddressJ\004\010\001\020\002J\004\010\003\020\005\"\206\001\n\024ClickhouseConnect" +
@@ -11600,7 +11600,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnectionOptions_descriptor,
-        new java.lang.String[] { "MdbClusterId", "OnPremise", "User", "Password", "Database", "Address", });
+        new java.lang.String[] { "OnPremise", "MdbClusterId", "User", "Password", "Database", "Address", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseConnection_fieldAccessorTable = new

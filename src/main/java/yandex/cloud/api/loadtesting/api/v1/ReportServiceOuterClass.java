@@ -1829,6 +1829,2345 @@ public final class ReportServiceOuterClass {
 
   }
 
+  public interface CalculateReportKpiValuesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder containing tests.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder containing tests.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Test filter selector to calculate KPI values for.
+     * </pre>
+     *
+     * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The testFilter.
+     */
+    java.lang.String getTestFilter();
+    /**
+     * <pre>
+     * Test filter selector to calculate KPI values for.
+     * </pre>
+     *
+     * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for testFilter.
+     */
+    com.google.protobuf.ByteString
+        getTestFilterBytes();
+
+    /**
+     * <pre>
+     * Test case to calculate KPI values for.
+     * If not specified, KPI values will be calculated for 'overall' case.
+     * </pre>
+     *
+     * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The testCase.
+     */
+    java.lang.String getTestCase();
+    /**
+     * <pre>
+     * Test case to calculate KPI values for.
+     * If not specified, KPI values will be calculated for 'overall' case.
+     * </pre>
+     *
+     * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for testCase.
+     */
+    com.google.protobuf.ByteString
+        getTestCaseBytes();
+
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the kpi field is set.
+     */
+    boolean hasKpi();
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The kpi.
+     */
+    yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi getKpi();
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder getKpiOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest}
+   */
+  public static final class CalculateReportKpiValuesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest)
+      CalculateReportKpiValuesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalculateReportKpiValuesRequest.newBuilder() to construct.
+    private CalculateReportKpiValuesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalculateReportKpiValuesRequest() {
+      folderId_ = "";
+      testFilter_ = "";
+      testCase_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateReportKpiValuesRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CalculateReportKpiValuesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testFilter_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testCase_ = s;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder subBuilder = null;
+              if (kpi_ != null) {
+                subBuilder = kpi_.toBuilder();
+              }
+              kpi_ = input.readMessage(yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kpi_);
+                kpi_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.class, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder containing tests.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder containing tests.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEST_FILTER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object testFilter_;
+    /**
+     * <pre>
+     * Test filter selector to calculate KPI values for.
+     * </pre>
+     *
+     * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The testFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getTestFilter() {
+      java.lang.Object ref = testFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Test filter selector to calculate KPI values for.
+     * </pre>
+     *
+     * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for testFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestFilterBytes() {
+      java.lang.Object ref = testFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEST_CASE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object testCase_;
+    /**
+     * <pre>
+     * Test case to calculate KPI values for.
+     * If not specified, KPI values will be calculated for 'overall' case.
+     * </pre>
+     *
+     * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The testCase.
+     */
+    @java.lang.Override
+    public java.lang.String getTestCase() {
+      java.lang.Object ref = testCase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testCase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Test case to calculate KPI values for.
+     * If not specified, KPI values will be calculated for 'overall' case.
+     * </pre>
+     *
+     * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for testCase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestCaseBytes() {
+      java.lang.Object ref = testCase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testCase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KPI_FIELD_NUMBER = 4;
+    private yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi kpi_;
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the kpi field is set.
+     */
+    @java.lang.Override
+    public boolean hasKpi() {
+      return kpi_ != null;
+    }
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     * @return The kpi.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi getKpi() {
+      return kpi_ == null ? yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.getDefaultInstance() : kpi_;
+    }
+    /**
+     * <pre>
+     * KPI to be calculated.
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder getKpiOrBuilder() {
+      return getKpi();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testFilter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, testFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testCase_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, testCase_);
+      }
+      if (kpi_ != null) {
+        output.writeMessage(4, getKpi());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testFilter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, testFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testCase_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, testCase_);
+      }
+      if (kpi_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getKpi());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest other = (yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getTestFilter()
+          .equals(other.getTestFilter())) return false;
+      if (!getTestCase()
+          .equals(other.getTestCase())) return false;
+      if (hasKpi() != other.hasKpi()) return false;
+      if (hasKpi()) {
+        if (!getKpi()
+            .equals(other.getKpi())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + TEST_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getTestFilter().hashCode();
+      hash = (37 * hash) + TEST_CASE_FIELD_NUMBER;
+      hash = (53 * hash) + getTestCase().hashCode();
+      if (hasKpi()) {
+        hash = (37 * hash) + KPI_FIELD_NUMBER;
+        hash = (53 * hash) + getKpi().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest)
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.class, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        testFilter_ = "";
+
+        testCase_ = "";
+
+        if (kpiBuilder_ == null) {
+          kpi_ = null;
+        } else {
+          kpi_ = null;
+          kpiBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest result = new yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest(this);
+        result.folderId_ = folderId_;
+        result.testFilter_ = testFilter_;
+        result.testCase_ = testCase_;
+        if (kpiBuilder_ == null) {
+          result.kpi_ = kpi_;
+        } else {
+          result.kpi_ = kpiBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getTestFilter().isEmpty()) {
+          testFilter_ = other.testFilter_;
+          onChanged();
+        }
+        if (!other.getTestCase().isEmpty()) {
+          testCase_ = other.testCase_;
+          onChanged();
+        }
+        if (other.hasKpi()) {
+          mergeKpi(other.getKpi());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder containing tests.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder containing tests.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder containing tests.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder containing tests.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder containing tests.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object testFilter_ = "";
+      /**
+       * <pre>
+       * Test filter selector to calculate KPI values for.
+       * </pre>
+       *
+       * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The testFilter.
+       */
+      public java.lang.String getTestFilter() {
+        java.lang.Object ref = testFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Test filter selector to calculate KPI values for.
+       * </pre>
+       *
+       * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for testFilter.
+       */
+      public com.google.protobuf.ByteString
+          getTestFilterBytes() {
+        java.lang.Object ref = testFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Test filter selector to calculate KPI values for.
+       * </pre>
+       *
+       * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The testFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testFilter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Test filter selector to calculate KPI values for.
+       * </pre>
+       *
+       * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestFilter() {
+        
+        testFilter_ = getDefaultInstance().getTestFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Test filter selector to calculate KPI values for.
+       * </pre>
+       *
+       * <code>string test_filter = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for testFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testFilter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object testCase_ = "";
+      /**
+       * <pre>
+       * Test case to calculate KPI values for.
+       * If not specified, KPI values will be calculated for 'overall' case.
+       * </pre>
+       *
+       * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The testCase.
+       */
+      public java.lang.String getTestCase() {
+        java.lang.Object ref = testCase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testCase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Test case to calculate KPI values for.
+       * If not specified, KPI values will be calculated for 'overall' case.
+       * </pre>
+       *
+       * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for testCase.
+       */
+      public com.google.protobuf.ByteString
+          getTestCaseBytes() {
+        java.lang.Object ref = testCase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testCase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Test case to calculate KPI values for.
+       * If not specified, KPI values will be calculated for 'overall' case.
+       * </pre>
+       *
+       * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The testCase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestCase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testCase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Test case to calculate KPI values for.
+       * If not specified, KPI values will be calculated for 'overall' case.
+       * </pre>
+       *
+       * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestCase() {
+        
+        testCase_ = getDefaultInstance().getTestCase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Test case to calculate KPI values for.
+       * If not specified, KPI values will be calculated for 'overall' case.
+       * </pre>
+       *
+       * <code>string test_case = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for testCase to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestCaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testCase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi kpi_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder> kpiBuilder_;
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the kpi field is set.
+       */
+      public boolean hasKpi() {
+        return kpiBuilder_ != null || kpi_ != null;
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       * @return The kpi.
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi getKpi() {
+        if (kpiBuilder_ == null) {
+          return kpi_ == null ? yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.getDefaultInstance() : kpi_;
+        } else {
+          return kpiBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setKpi(yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi value) {
+        if (kpiBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kpi_ = value;
+          onChanged();
+        } else {
+          kpiBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setKpi(
+          yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder builderForValue) {
+        if (kpiBuilder_ == null) {
+          kpi_ = builderForValue.build();
+          onChanged();
+        } else {
+          kpiBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeKpi(yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi value) {
+        if (kpiBuilder_ == null) {
+          if (kpi_ != null) {
+            kpi_ =
+              yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.newBuilder(kpi_).mergeFrom(value).buildPartial();
+          } else {
+            kpi_ = value;
+          }
+          onChanged();
+        } else {
+          kpiBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearKpi() {
+        if (kpiBuilder_ == null) {
+          kpi_ = null;
+          onChanged();
+        } else {
+          kpi_ = null;
+          kpiBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder getKpiBuilder() {
+        
+        onChanged();
+        return getKpiFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder getKpiOrBuilder() {
+        if (kpiBuilder_ != null) {
+          return kpiBuilder_.getMessageOrBuilder();
+        } else {
+          return kpi_ == null ?
+              yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.getDefaultInstance() : kpi_;
+        }
+      }
+      /**
+       * <pre>
+       * KPI to be calculated.
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.report.Kpi kpi = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder> 
+          getKpiFieldBuilder() {
+        if (kpiBuilder_ == null) {
+          kpiBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.Kpi.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.KpiOrBuilder>(
+                  getKpi(),
+                  getParentForChildren(),
+                  isClean());
+          kpi_ = null;
+        }
+        return kpiBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalculateReportKpiValuesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CalculateReportKpiValuesRequest>() {
+      @java.lang.Override
+      public CalculateReportKpiValuesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CalculateReportKpiValuesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalculateReportKpiValuesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalculateReportKpiValuesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CalculateReportKpiValuesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> 
+        getValuesList();
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue getValues(int index);
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    int getValuesCount();
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder> 
+        getValuesOrBuilderList();
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder getValuesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse}
+   */
+  public static final class CalculateReportKpiValuesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse)
+      CalculateReportKpiValuesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalculateReportKpiValuesResponse.newBuilder() to construct.
+    private CalculateReportKpiValuesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalculateReportKpiValuesResponse() {
+      folderId_ = "";
+      values_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateReportKpiValuesResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CalculateReportKpiValuesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                values_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              values_.add(
+                  input.readMessage(yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          values_ = java.util.Collections.unmodifiableList(values_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.class, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> values_;
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> getValuesList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder> 
+        getValuesOrBuilderList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    @java.lang.Override
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <pre>
+     * Actual KPI values.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder getValuesOrBuilder(
+        int index) {
+      return values_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeMessage(2, values_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, values_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse other = (yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse)
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.class, yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValuesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse build() {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse result = new yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.folderId_ = folderId_;
+        if (valuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            values_ = java.util.Collections.unmodifiableList(values_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+        } else {
+          result.values_ = valuesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (valuesBuilder_ == null) {
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.values_.isEmpty()) {
+            if (valuesBuilder_.isEmpty()) {
+              valuesBuilder_.dispose();
+              valuesBuilder_ = null;
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              valuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValuesFieldBuilder() : null;
+            } else {
+              valuesBuilder_.addAllMessages(other.values_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> values_ =
+        java.util.Collections.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          values_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue>(values_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder> valuesBuilder_;
+
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> getValuesList() {
+        if (valuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(values_);
+        } else {
+          return valuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public int getValuesCount() {
+        if (valuesBuilder_ == null) {
+          return values_.size();
+        } else {
+          return valuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue getValues(int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);
+        } else {
+          return valuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder setValues(
+          int index, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder setValues(
+          int index, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder addValues(yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder addValues(
+          int index, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder addValues(
+          yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder addValues(
+          int index, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue> values) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+        } else {
+          valuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder clearValues() {
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public Builder removeValues(int index) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.remove(index);
+          onChanged();
+        } else {
+          valuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder getValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder getValuesOrBuilder(
+          int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);  } else {
+          return valuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder> 
+           getValuesOrBuilderList() {
+        if (valuesBuilder_ != null) {
+          return valuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(values_);
+        }
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder addValuesBuilder() {
+        return getValuesFieldBuilder().addBuilder(
+            yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder addValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Actual KPI values.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.report.KpiValue values = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder> 
+           getValuesBuilderList() {
+        return getValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder> 
+          getValuesFieldBuilder() {
+        if (valuesBuilder_ == null) {
+          valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValue.Builder, yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.KpiValueOrBuilder>(
+                  values_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          values_ = null;
+        }
+        return valuesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.CalculateReportKpiValuesResponse)
+    private static final yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalculateReportKpiValuesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CalculateReportKpiValuesResponse>() {
+      @java.lang.Override
+      public CalculateReportKpiValuesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CalculateReportKpiValuesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalculateReportKpiValuesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalculateReportKpiValuesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.CalculateReportKpiValuesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_api_v1_GetTableReportRequest_descriptor;
   private static final 
@@ -1844,6 +4183,16 @@ public final class ReportServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_api_v1_GetTableReportResponse_CasesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1855,34 +4204,52 @@ public final class ReportServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n4yandex/cloud/loadtesting/api/v1/report" +
       "_service.proto\022\037yandex.cloud.loadtesting" +
-      ".api.v1\032\034google/api/annotations.proto\0329y" +
-      "andex/cloud/loadtesting/api/v1/report/ta" +
-      "ble/report.proto\0323yandex/cloud/loadtesti" +
-      "ng/api/v1/report/status.proto\032\035yandex/cl" +
-      "oud/validation.proto\".\n\025GetTableReportRe" +
-      "quest\022\025\n\007test_id\030\001 \001(\tB\004\350\3071\001\"\326\002\n\026GetTabl" +
-      "eReportResponse\022>\n\006status\030\001 \001(\0162..yandex" +
-      ".cloud.loadtesting.api.v1.report.Status\022" +
-      "E\n\007overall\030\002 \001(\01324.yandex.cloud.loadtest" +
-      "ing.api.v1.report.table.Report\022Q\n\005cases\030" +
-      "\003 \003(\0132B.yandex.cloud.loadtesting.api.v1." +
-      "GetTableReportResponse.CasesEntry\032b\n\nCas" +
-      "esEntry\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.ya" +
-      "ndex.cloud.loadtesting.api.v1.report.tab" +
-      "le.Report:\0028\0012\302\001\n\rReportService\022\260\001\n\010GetT" +
-      "able\0226.yandex.cloud.loadtesting.api.v1.G" +
-      "etTableReportRequest\0327.yandex.cloud.load" +
-      "testing.api.v1.GetTableReportResponse\"3\202" +
-      "\323\344\223\002-\022+/loadtesting/api/v1/reports/{test" +
-      "_id}/tableBv\n#yandex.cloud.api.loadtesti" +
-      "ng.api.v1ZOgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/loadtesting/api/v1;l" +
-      "oadtestingb\006proto3"
+      ".api.v1\032\034google/api/annotations.proto\0320y" +
+      "andex/cloud/loadtesting/api/v1/report/kp" +
+      "i.proto\0326yandex/cloud/loadtesting/api/v1" +
+      "/report/kpi_value.proto\0329yandex/cloud/lo" +
+      "adtesting/api/v1/report/table/report.pro" +
+      "to\0323yandex/cloud/loadtesting/api/v1/repo" +
+      "rt/status.proto\032\035yandex/cloud/validation" +
+      ".proto\".\n\025GetTableReportRequest\022\025\n\007test_" +
+      "id\030\001 \001(\tB\004\350\3071\001\"\326\002\n\026GetTableReportRespons" +
+      "e\022>\n\006status\030\001 \001(\0162..yandex.cloud.loadtes" +
+      "ting.api.v1.report.Status\022E\n\007overall\030\002 \001" +
+      "(\01324.yandex.cloud.loadtesting.api.v1.rep" +
+      "ort.table.Report\022Q\n\005cases\030\003 \003(\0132B.yandex" +
+      ".cloud.loadtesting.api.v1.GetTableReport" +
+      "Response.CasesEntry\032b\n\nCasesEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.loa" +
+      "dtesting.api.v1.report.table.Report:\0028\001\"" +
+      "\305\001\n\037CalculateReportKpiValuesRequest\022\037\n\tf" +
+      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\013test_fil" +
+      "ter\030\002 \001(\tB\016\350\3071\001\212\3101\006<=1000\022\034\n\ttest_case\030\003" +
+      " \001(\tB\t\212\3101\005<=100\022>\n\003kpi\030\004 \001(\0132+.yandex.cl" +
+      "oud.loadtesting.api.v1.report.KpiB\004\350\3071\001\"" +
+      "w\n CalculateReportKpiValuesResponse\022\021\n\tf" +
+      "older_id\030\001 \001(\t\022@\n\006values\030\002 \003(\01320.yandex." +
+      "cloud.loadtesting.api.v1.report.KpiValue" +
+      "2\231\003\n\rReportService\022\260\001\n\010GetTable\0226.yandex" +
+      ".cloud.loadtesting.api.v1.GetTableReport" +
+      "Request\0327.yandex.cloud.loadtesting.api.v" +
+      "1.GetTableReportResponse\"3\202\323\344\223\002-\022+/loadt" +
+      "esting/api/v1/reports/{test_id}/table\022\324\001" +
+      "\n\022CalculateKpiValues\022@.yandex.cloud.load" +
+      "testing.api.v1.CalculateReportKpiValuesR" +
+      "equest\032A.yandex.cloud.loadtesting.api.v1" +
+      ".CalculateReportKpiValuesResponse\"9\202\323\344\223\002" +
+      "3\"./loadtesting/api/v1/reports/calculate" +
+      "KpiValues:\001*Bv\n#yandex.cloud.api.loadtes" +
+      "ting.api.v1ZOgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/loadtesting/api/v1" +
+      ";loadtestingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.getDescriptor(),
+          yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.getDescriptor(),
           yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.getDescriptor(),
           yandex.cloud.api.loadtesting.api.v1.report.StatusOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -1905,13 +4272,28 @@ public final class ReportServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_GetTableReportResponse_CasesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesRequest_descriptor,
+        new java.lang.String[] { "FolderId", "TestFilter", "TestCase", "Kpi", });
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_CalculateReportKpiValuesResponse_descriptor,
+        new java.lang.String[] { "FolderId", "Values", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.loadtesting.api.v1.report.KpiOuterClass.getDescriptor();
+    yandex.cloud.api.loadtesting.api.v1.report.KpiValueOuterClass.getDescriptor();
     yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.getDescriptor();
     yandex.cloud.api.loadtesting.api.v1.report.StatusOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

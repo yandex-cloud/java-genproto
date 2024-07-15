@@ -8088,6 +8088,16 @@ public final class PolicyServiceOuterClass {
     com.google.protobuf.ByteString
         getComputeInstanceIdBytes();
 
+    /**
+     * <pre>
+     * If true, also returns applications that in the process of binding.
+     * </pre>
+     *
+     * <code>bool show_processing = 4;</code>
+     * @return The showProcessing.
+     */
+    boolean getShowProcessing();
+
     public yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ListApplicationsRequest.IdCase getIdCase();
   }
   /**
@@ -8151,6 +8161,11 @@ public final class PolicyServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
               idCase_ = 3;
               id_ = s;
+              break;
+            }
+            case 32: {
+
+              showProcessing_ = input.readBool();
               break;
             }
             default: {
@@ -8420,6 +8435,21 @@ public final class PolicyServiceOuterClass {
       }
     }
 
+    public static final int SHOW_PROCESSING_FIELD_NUMBER = 4;
+    private boolean showProcessing_;
+    /**
+     * <pre>
+     * If true, also returns applications that in the process of binding.
+     * </pre>
+     *
+     * <code>bool show_processing = 4;</code>
+     * @return The showProcessing.
+     */
+    @java.lang.Override
+    public boolean getShowProcessing() {
+      return showProcessing_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8443,6 +8473,9 @@ public final class PolicyServiceOuterClass {
       if (idCase_ == 3) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
+      if (showProcessing_ != false) {
+        output.writeBool(4, showProcessing_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8461,6 +8494,10 @@ public final class PolicyServiceOuterClass {
       if (idCase_ == 3) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
+      if (showProcessing_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, showProcessing_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8476,6 +8513,8 @@ public final class PolicyServiceOuterClass {
       }
       yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ListApplicationsRequest other = (yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ListApplicationsRequest) obj;
 
+      if (getShowProcessing()
+          != other.getShowProcessing()) return false;
       if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
@@ -8504,6 +8543,9 @@ public final class PolicyServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SHOW_PROCESSING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getShowProcessing());
       switch (idCase_) {
         case 1:
           hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
@@ -8653,6 +8695,8 @@ public final class PolicyServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        showProcessing_ = false;
+
         idCase_ = 0;
         id_ = null;
         return this;
@@ -8690,6 +8734,7 @@ public final class PolicyServiceOuterClass {
         if (idCase_ == 3) {
           result.id_ = id_;
         }
+        result.showProcessing_ = showProcessing_;
         result.idCase_ = idCase_;
         onBuilt();
         return result;
@@ -8739,6 +8784,9 @@ public final class PolicyServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ListApplicationsRequest other) {
         if (other == yandex.cloud.api.backup.v1.PolicyServiceOuterClass.ListApplicationsRequest.getDefaultInstance()) return this;
+        if (other.getShowProcessing() != false) {
+          setShowProcessing(other.getShowProcessing());
+        }
         switch (other.getIdCase()) {
           case FOLDER_ID: {
             idCase_ = 1;
@@ -9165,6 +9213,49 @@ public final class PolicyServiceOuterClass {
   checkByteStringIsUtf8(value);
         idCase_ = 3;
         id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean showProcessing_ ;
+      /**
+       * <pre>
+       * If true, also returns applications that in the process of binding.
+       * </pre>
+       *
+       * <code>bool show_processing = 4;</code>
+       * @return The showProcessing.
+       */
+      @java.lang.Override
+      public boolean getShowProcessing() {
+        return showProcessing_;
+      }
+      /**
+       * <pre>
+       * If true, also returns applications that in the process of binding.
+       * </pre>
+       *
+       * <code>bool show_processing = 4;</code>
+       * @param value The showProcessing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShowProcessing(boolean value) {
+        
+        showProcessing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, also returns applications that in the process of binding.
+       * </pre>
+       *
+       * <code>bool show_processing = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShowProcessing() {
+        
+        showProcessing_ = false;
         onChanged();
         return this;
       }
@@ -13387,61 +13478,62 @@ public final class PolicyServiceOuterClass {
       "Request\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
       "\022)\n\023compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\"E\n\023ApplyPolicyMetadata\022\021\n\tpolicy_id\030" +
-      "\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\"n\n\027Li" +
-      "stApplicationsRequest\022\023\n\tfolder_id\030\001 \001(\t" +
-      "H\000\022\023\n\tpolicy_id\030\002 \001(\tH\000\022\035\n\023compute_insta" +
-      "nce_id\030\003 \001(\tH\000B\n\n\002id\022\004\300\3011\001\"[\n\030ListApplic" +
-      "ationsResponse\022?\n\014applications\030\001 \003(\0132).y" +
-      "andex.cloud.backup.v1.PolicyApplication\"" +
-      "\\\n\016ExecuteRequest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022)\n\023compute_instance_id\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"^\n\017ExecuteMetadata\022\021\n\tpoli" +
-      "cy_id\030\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t" +
-      "\022\033\n\023progress_percentage\030\003 \001(\001\"[\n\rRevokeR" +
-      "equest\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      ")\n\023compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\"@\n\016RevokeMetadata\022\021\n\tpolicy_id\030\001 \001(\t\022" +
-      "\033\n\023compute_instance_id\030\002 \001(\t2\327\013\n\rPolicyS" +
-      "ervice\022~\n\004List\022+.yandex.cloud.backup.v1." +
-      "ListPoliciesRequest\032,.yandex.cloud.backu" +
-      "p.v1.ListPoliciesResponse\"\033\202\323\344\223\002\025\022\023/back" +
-      "up/v1/policies\022\232\001\n\006Create\022+.yandex.cloud" +
-      ".backup.v1.CreatePolicyRequest\032!.yandex." +
-      "cloud.operation.Operation\"@\202\323\344\223\002\030\"\023/back" +
-      "up/v1/policies:\001*\262\322*\036\n\024CreatePolicyMetad" +
-      "ata\022\006Policy\022x\n\003Get\022(.yandex.cloud.backup" +
-      ".v1.GetPolicyRequest\032\036.yandex.cloud.back" +
-      "up.v1.Policy\"\'\202\323\344\223\002!\022\037/backup/v1/policie" +
-      "s/{policy_id}\022\246\001\n\006Update\022+.yandex.cloud." +
-      "backup.v1.UpdatePolicyRequest\032!.yandex.c" +
-      "loud.operation.Operation\"L\202\323\344\223\002$2\037/backu" +
-      "p/v1/policies/{policy_id}:\001*\262\322*\036\n\024Update" +
-      "PolicyMetadata\022\006Policy\022\262\001\n\006Delete\022+.yand" +
-      "ex.cloud.backup.v1.DeletePolicyRequest\032!" +
-      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
-      "!*\037/backup/v1/policies/{policy_id}\262\322*-\n\024" +
-      "DeletePolicyMetadata\022\025google.protobuf.Em" +
-      "pty\022\270\001\n\005Apply\022*.yandex.cloud.backup.v1.A" +
-      "pplyPolicyRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"`\202\323\344\223\002*\"%/backup/v1/policie" +
-      "s/{policy_id}:apply:\001*\262\322*,\n\023ApplyPolicyM" +
-      "etadata\022\025google.protobuf.Empty\022\253\001\n\020ListA" +
-      "pplications\022/.yandex.cloud.backup.v1.Lis" +
-      "tApplicationsRequest\0320.yandex.cloud.back" +
-      "up.v1.ListApplicationsResponse\"4\202\323\344\223\002.\022," +
-      "/backup/v1/policies/{policy_id}/applicat" +
-      "ions\022\264\001\n\007Execute\022&.yandex.cloud.backup.v" +
-      "1.ExecuteRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"^\202\323\344\223\002,\"\'/backup/v1/policies" +
-      "/{policy_id}:execute:\001*\262\322*(\n\017ExecuteMeta" +
-      "data\022\025google.protobuf.Empty\022\260\001\n\006Revoke\022%" +
-      ".yandex.cloud.backup.v1.RevokeRequest\032!." +
-      "yandex.cloud.operation.Operation\"\\\202\323\344\223\002+" +
-      "\"&/backup/v1/policies/{policy_id}:revoke" +
-      ":\001*\262\322*\'\n\016RevokeMetadata\022\025google.protobuf" +
-      ".EmptyB_\n\032yandex.cloud.api.backup.v1ZAgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/backup/v1;backupb\006proto3"
+      "\001 \001(\t\022\033\n\023compute_instance_id\030\002 \001(\t\"\207\001\n\027L" +
+      "istApplicationsRequest\022\023\n\tfolder_id\030\001 \001(" +
+      "\tH\000\022\023\n\tpolicy_id\030\002 \001(\tH\000\022\035\n\023compute_inst" +
+      "ance_id\030\003 \001(\tH\000\022\027\n\017show_processing\030\004 \001(\010" +
+      "B\n\n\002id\022\004\300\3011\001\"[\n\030ListApplicationsResponse" +
+      "\022?\n\014applications\030\001 \003(\0132).yandex.cloud.ba" +
+      "ckup.v1.PolicyApplication\"\\\n\016ExecuteRequ" +
+      "est\022\037\n\tpolicy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023" +
+      "compute_instance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "^\n\017ExecuteMetadata\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n" +
+      "\023compute_instance_id\030\002 \001(\t\022\033\n\023progress_p" +
+      "ercentage\030\003 \001(\001\"[\n\rRevokeRequest\022\037\n\tpoli" +
+      "cy_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\023compute_ins" +
+      "tance_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\016RevokeMe" +
+      "tadata\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute_ins" +
+      "tance_id\030\002 \001(\t2\327\013\n\rPolicyService\022~\n\004List" +
+      "\022+.yandex.cloud.backup.v1.ListPoliciesRe" +
+      "quest\032,.yandex.cloud.backup.v1.ListPolic" +
+      "iesResponse\"\033\202\323\344\223\002\025\022\023/backup/v1/policies" +
+      "\022\232\001\n\006Create\022+.yandex.cloud.backup.v1.Cre" +
+      "atePolicyRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"@\202\323\344\223\002\030\"\023/backup/v1/policies" +
+      ":\001*\262\322*\036\n\024CreatePolicyMetadata\022\006Policy\022x\n" +
+      "\003Get\022(.yandex.cloud.backup.v1.GetPolicyR" +
+      "equest\032\036.yandex.cloud.backup.v1.Policy\"\'" +
+      "\202\323\344\223\002!\022\037/backup/v1/policies/{policy_id}\022" +
+      "\246\001\n\006Update\022+.yandex.cloud.backup.v1.Upda" +
+      "tePolicyRequest\032!.yandex.cloud.operation" +
+      ".Operation\"L\202\323\344\223\002$2\037/backup/v1/policies/" +
+      "{policy_id}:\001*\262\322*\036\n\024UpdatePolicyMetadata" +
+      "\022\006Policy\022\262\001\n\006Delete\022+.yandex.cloud.backu" +
+      "p.v1.DeletePolicyRequest\032!.yandex.cloud." +
+      "operation.Operation\"X\202\323\344\223\002!*\037/backup/v1/" +
+      "policies/{policy_id}\262\322*-\n\024DeletePolicyMe" +
+      "tadata\022\025google.protobuf.Empty\022\270\001\n\005Apply\022" +
+      "*.yandex.cloud.backup.v1.ApplyPolicyRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"`" +
+      "\202\323\344\223\002*\"%/backup/v1/policies/{policy_id}:" +
+      "apply:\001*\262\322*,\n\023ApplyPolicyMetadata\022\025googl" +
+      "e.protobuf.Empty\022\253\001\n\020ListApplications\022/." +
+      "yandex.cloud.backup.v1.ListApplicationsR" +
+      "equest\0320.yandex.cloud.backup.v1.ListAppl" +
+      "icationsResponse\"4\202\323\344\223\002.\022,/backup/v1/pol" +
+      "icies/{policy_id}/applications\022\264\001\n\007Execu" +
+      "te\022&.yandex.cloud.backup.v1.ExecuteReque" +
+      "st\032!.yandex.cloud.operation.Operation\"^\202" +
+      "\323\344\223\002,\"\'/backup/v1/policies/{policy_id}:e" +
+      "xecute:\001*\262\322*(\n\017ExecuteMetadata\022\025google.p" +
+      "rotobuf.Empty\022\260\001\n\006Revoke\022%.yandex.cloud." +
+      "backup.v1.RevokeRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\\\202\323\344\223\002+\"&/backup/v1/p" +
+      "olicies/{policy_id}:revoke:\001*\262\322*\'\n\016Revok" +
+      "eMetadata\022\025google.protobuf.EmptyB_\n\032yand" +
+      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/backup/" +
+      "v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13523,7 +13615,7 @@ public final class PolicyServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListApplicationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListApplicationsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PolicyId", "ComputeInstanceId", "Id", });
+        new java.lang.String[] { "FolderId", "PolicyId", "ComputeInstanceId", "ShowProcessing", "Id", });
     internal_static_yandex_cloud_backup_v1_ListApplicationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_backup_v1_ListApplicationsResponse_fieldAccessorTable = new

@@ -2963,7 +2963,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -2971,7 +2971,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -2986,7 +2986,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -2995,7 +2995,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3006,7 +3006,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3309,7 +3309,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3331,7 +3331,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3343,7 +3343,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3360,7 +3360,7 @@ public final class ContainerServiceOuterClass {
      * Resource labels as `key:value` pairs.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -4091,7 +4091,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -4113,7 +4113,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4125,7 +4125,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4142,7 +4142,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4167,7 +4167,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4190,7 +4190,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4209,7 +4209,7 @@ public final class ContainerServiceOuterClass {
        * Resource labels as `key:value` pairs.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -4977,7 +4977,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -4987,7 +4987,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5004,7 +5004,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5015,7 +5015,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5028,7 +5028,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -5384,7 +5384,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -5408,7 +5408,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5422,7 +5422,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5441,7 +5441,7 @@ public final class ContainerServiceOuterClass {
      * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -6359,7 +6359,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -6383,7 +6383,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6397,7 +6397,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6416,7 +6416,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6443,7 +6443,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -6468,7 +6468,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -6489,7 +6489,7 @@ public final class ContainerServiceOuterClass {
        * to add or remove a label, request the current set of labels with a [ContainerService.Get] request.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -21863,152 +21863,152 @@ public final class ContainerServiceOuterClass {
       "_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"w\n\026ListCont" +
       "ainersResponse\022D\n\ncontainers\030\001 \003(\01320.yan" +
       "dex.cloud.serverless.containers.v1.Conta" +
-      "iner\022\027\n\017next_page_token\030\002 \001(\t\"\316\002\n\026Create" +
+      "iner\022\027\n\017next_page_token\030\002 \001(\t\"\326\002\n\026Create" +
       "ContainerRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
       "\001\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,6" +
       "1}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
-      "56\022\232\001\n\006labels\030\004 \003(\0132I.yandex.cloud.serve" +
+      "56\022\242\001\n\006labels\030\004 \003(\0132I.yandex.cloud.serve" +
       "rless.containers.v1.CreateContainerReque" +
-      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"/\n\027CreateContainerMetadata\022\024\n\014con" +
-      "tainer_id\030\001 \001(\t\"\202\003\n\026UpdateContainerReque" +
-      "st\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update" +
-      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
-      "/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}" +
-      "[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
-      "\022\232\001\n\006labels\030\005 \003(\0132I.yandex.cloud.serverl" +
-      "ess.containers.v1.UpdateContainerRequest" +
-      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
-      "a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"/\n\027UpdateContainerMetadata\022\024\n\014conta" +
-      "iner_id\030\001 \001(\t\"4\n\026DeleteContainerRequest\022" +
-      "\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\"/\n\027DeleteCon" +
-      "tainerMetadata\022\024\n\014container_id\030\001 \001(\t\"B\n\033" +
-      "GetContainerRevisionRequest\022#\n\025container" +
-      "_revision_id\030\001 \001(\tB\004\350\3071\001\"\263\001\n\036ListContain" +
-      "ersRevisionsRequest\022\023\n\tfolder_id\030\001 \001(\tH\000" +
-      "\022\026\n\014container_id\030\002 \001(\tH\000\022\035\n\tpage_size\030\003 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101" +
-      "\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000B\n\n\002id" +
-      "\022\004\300\3011\001\"~\n\037ListContainersRevisionsRespons" +
-      "e\022B\n\trevisions\030\001 \003(\0132/.yandex.cloud.serv" +
-      "erless.containers.v1.Revision\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\247\006\n\036DeployContainerRevisi" +
-      "onRequest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\023\n" +
-      "\013description\030\003 \001(\t\022I\n\tresources\030\005 \001(\01320." +
-      "yandex.cloud.serverless.containers.v1.Re" +
-      "sourcesB\004\350\3071\001\022@\n\021execution_timeout\030\006 \001(\013" +
-      "2\031.google.protobuf.DurationB\n\372\3071\006<=600s\022" +
-      "\032\n\022service_account_id\030\007 \001(\t\022J\n\nimage_spe" +
-      "c\030\010 \001(\01320.yandex.cloud.serverless.contai" +
-      "ners.v1.ImageSpecB\004\350\3071\001\022\023\n\013concurrency\030\t" +
-      " \001(\003\022>\n\007secrets\030\n \003(\0132-.yandex.cloud.ser" +
-      "verless.containers.v1.Secret\022I\n\014connecti" +
-      "vity\030\013 \001(\01323.yandex.cloud.serverless.con" +
-      "tainers.v1.Connectivity\022P\n\020provision_pol" +
-      "icy\030\014 \001(\01326.yandex.cloud.serverless.cont" +
-      "ainers.v1.ProvisionPolicy\022L\n\016scaling_pol" +
-      "icy\030\r \001(\01324.yandex.cloud.serverless.cont" +
-      "ainers.v1.ScalingPolicy\022F\n\013log_options\030\016" +
-      " \001(\01321.yandex.cloud.serverless.container" +
-      "s.v1.LogOptions\022K\n\016storage_mounts\030\017 \003(\0132" +
-      "3.yandex.cloud.serverless.containers.v1." +
-      "StorageMountJ\004\010\004\020\005J\004\010\002\020\003\"\350\002\n\tImageSpec\022\027" +
-      "\n\timage_url\030\001 \001(\tB\004\350\3071\001\022?\n\007command\030\002 \001(\013" +
-      "2..yandex.cloud.serverless.containers.v1" +
-      ".Command\0229\n\004args\030\003 \001(\0132+.yandex.cloud.se" +
-      "rverless.containers.v1.Args\022}\n\013environme" +
-      "nt\030\004 \003(\0132A.yandex.cloud.serverless.conta" +
-      "iners.v1.ImageSpec.EnvironmentEntryB%\212\3101" +
-      "\006<=4096\262\3101\027\022\025[a-zA-Z][a-zA-Z0-9_]*\022\023\n\013wo" +
-      "rking_dir\030\005 \001(\t\0322\n\020EnvironmentEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"@\n\037DeployCon" +
-      "tainerRevisionMetadata\022\035\n\025container_revi" +
-      "sion_id\030\001 \001(\t\"Q\n\030RollbackContainerReques" +
-      "t\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013revisio" +
-      "n_id\030\002 \001(\tB\004\350\3071\001\"F\n\031RollbackContainerMet" +
-      "adata\022\024\n\014container_id\030\001 \001(\t\022\023\n\013revision_" +
-      "id\030\002 \001(\t\"\226\001\n\036ListContainerOperationsRequ" +
-      "est\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\"q\n\037ListContainerOperationsResponse\0225\n\n" +
-      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
-      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\355\024\n" +
-      "\020ContainerService\022\245\001\n\003Get\022:.yandex.cloud" +
-      ".serverless.containers.v1.GetContainerRe" +
-      "quest\0320.yandex.cloud.serverless.containe" +
-      "rs.v1.Container\"0\202\323\344\223\002*\022(/containers/v1/" +
-      "containers/{container_id}\022\246\001\n\004List\022<.yan" +
-      "dex.cloud.serverless.containers.v1.ListC" +
-      "ontainersRequest\032=.yandex.cloud.serverle" +
-      "ss.containers.v1.ListContainersResponse\"" +
-      "!\202\323\344\223\002\033\022\031/containers/v1/containers\022\270\001\n\006C" +
-      "reate\022=.yandex.cloud.serverless.containe" +
-      "rs.v1.CreateContainerRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"L\202\323\344\223\002\036\"\031/contai" +
-      "ners/v1/containers:\001*\262\322*$\n\027CreateContain" +
-      "erMetadata\022\tContainer\022\307\001\n\006Update\022=.yande" +
-      "x.cloud.serverless.containers.v1.UpdateC" +
-      "ontainerRequest\032!.yandex.cloud.operation" +
-      ".Operation\"[\202\323\344\223\002-2(/containers/v1/conta" +
-      "iners/{container_id}:\001*\262\322*$\n\027UpdateConta" +
-      "inerMetadata\022\tContainer\022\320\001\n\006Delete\022=.yan" +
-      "dex.cloud.serverless.containers.v1.Delet" +
-      "eContainerRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"d\202\323\344\223\002**(/containers/v1/con" +
-      "tainers/{container_id}\262\322*0\n\027DeleteContai" +
-      "nerMetadata\022\025google.protobuf.Empty\022\325\001\n\016D" +
-      "eployRevision\022E.yandex.cloud.serverless." +
-      "containers.v1.DeployContainerRevisionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Y\202\323\344\223\002$\"\037/containers/v1/revisions:deploy" +
-      ":\001*\262\322*+\n\037DeployContainerRevisionMetadata" +
-      "\022\010Revision\022\326\001\n\010Rollback\022?.yandex.cloud.s" +
-      "erverless.containers.v1.RollbackContaine" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"f\202\323\344\223\0026\"1/containers/v1/containers/{" +
-      "container_id}:rollback:\001*\262\322*&\n\031RollbackC" +
-      "ontainerMetadata\022\tContainer\022\274\001\n\013GetRevis" +
-      "ion\022B.yandex.cloud.serverless.containers" +
-      ".v1.GetContainerRevisionRequest\032/.yandex" +
-      ".cloud.serverless.containers.v1.Revision" +
-      "\"8\202\323\344\223\0022\0220/containers/v1/revisions/{cont" +
-      "ainer_revision_id}\022\300\001\n\rListRevisions\022E.y" +
-      "andex.cloud.serverless.containers.v1.Lis" +
-      "tContainersRevisionsRequest\032F.yandex.clo" +
-      "ud.serverless.containers.v1.ListContaine" +
-      "rsRevisionsResponse\" \202\323\344\223\002\032\022\030/containers" +
-      "/v1/revisions\022\334\001\n\016ListOperations\022E.yande" +
+      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
+      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
+      "-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"/\n\027CreateContainerMetadat" +
+      "a\022\024\n\014container_id\030\001 \001(\t\"\212\003\n\026UpdateContai" +
+      "nerRequest\022\032\n\014container_id\030\001 \001(\tB\004\350\3071\001\022/" +
+      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-" +
+      "9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212" +
+      "\3101\005<=256\022\242\001\n\006labels\030\005 \003(\0132I.yandex.cloud" +
+      ".serverless.containers.v1.UpdateContaine" +
+      "rRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-" +
+      "_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"/\n\027UpdateContainerM" +
+      "etadata\022\024\n\014container_id\030\001 \001(\t\"4\n\026DeleteC" +
+      "ontainerRequest\022\032\n\014container_id\030\001 \001(\tB\004\350" +
+      "\3071\001\"/\n\027DeleteContainerMetadata\022\024\n\014contai" +
+      "ner_id\030\001 \001(\t\"B\n\033GetContainerRevisionRequ" +
+      "est\022#\n\025container_revision_id\030\001 \001(\tB\004\350\3071\001" +
+      "\"\263\001\n\036ListContainersRevisionsRequest\022\023\n\tf" +
+      "older_id\030\001 \001(\tH\000\022\026\n\014container_id\030\002 \001(\tH\000" +
+      "\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
+      "token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n" +
+      "\212\3101\006<=1000B\n\n\002id\022\004\300\3011\001\"~\n\037ListContainers" +
+      "RevisionsResponse\022B\n\trevisions\030\001 \003(\0132/.y" +
+      "andex.cloud.serverless.containers.v1.Rev" +
+      "ision\022\027\n\017next_page_token\030\002 \001(\t\"\247\006\n\036Deplo" +
+      "yContainerRevisionRequest\022\032\n\014container_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022I\n\tre" +
+      "sources\030\005 \001(\01320.yandex.cloud.serverless." +
+      "containers.v1.ResourcesB\004\350\3071\001\022@\n\021executi" +
+      "on_timeout\030\006 \001(\0132\031.google.protobuf.Durat" +
+      "ionB\n\372\3071\006<=600s\022\032\n\022service_account_id\030\007 " +
+      "\001(\t\022J\n\nimage_spec\030\010 \001(\01320.yandex.cloud.s" +
+      "erverless.containers.v1.ImageSpecB\004\350\3071\001\022" +
+      "\023\n\013concurrency\030\t \001(\003\022>\n\007secrets\030\n \003(\0132-." +
+      "yandex.cloud.serverless.containers.v1.Se" +
+      "cret\022I\n\014connectivity\030\013 \001(\01323.yandex.clou" +
+      "d.serverless.containers.v1.Connectivity\022" +
+      "P\n\020provision_policy\030\014 \001(\01326.yandex.cloud" +
+      ".serverless.containers.v1.ProvisionPolic" +
+      "y\022L\n\016scaling_policy\030\r \001(\01324.yandex.cloud" +
+      ".serverless.containers.v1.ScalingPolicy\022" +
+      "F\n\013log_options\030\016 \001(\01321.yandex.cloud.serv" +
+      "erless.containers.v1.LogOptions\022K\n\016stora" +
+      "ge_mounts\030\017 \003(\01323.yandex.cloud.serverles" +
+      "s.containers.v1.StorageMountJ\004\010\004\020\005J\004\010\002\020\003" +
+      "\"\350\002\n\tImageSpec\022\027\n\timage_url\030\001 \001(\tB\004\350\3071\001\022" +
+      "?\n\007command\030\002 \001(\0132..yandex.cloud.serverle" +
+      "ss.containers.v1.Command\0229\n\004args\030\003 \001(\0132+" +
+      ".yandex.cloud.serverless.containers.v1.A" +
+      "rgs\022}\n\013environment\030\004 \003(\0132A.yandex.cloud." +
+      "serverless.containers.v1.ImageSpec.Envir" +
+      "onmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][a-" +
+      "zA-Z0-9_]*\022\023\n\013working_dir\030\005 \001(\t\0322\n\020Envir" +
+      "onmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"@\n\037DeployContainerRevisionMetadata\022\035" +
+      "\n\025container_revision_id\030\001 \001(\t\"Q\n\030Rollbac" +
+      "kContainerRequest\022\032\n\014container_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\031\n\013revision_id\030\002 \001(\tB\004\350\3071\001\"F\n\031Roll" +
+      "backContainerMetadata\022\024\n\014container_id\030\001 " +
+      "\001(\t\022\023\n\013revision_id\030\002 \001(\t\"\226\001\n\036ListContain" +
+      "erOperationsRequest\022\032\n\014container_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035" +
+      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030" +
+      "\004 \001(\tB\n\212\3101\006<=1000\"q\n\037ListContainerOperat" +
+      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
+      "x.cloud.operation.Operation\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\355\024\n\020ContainerService\022\245\001\n\003Ge" +
+      "t\022:.yandex.cloud.serverless.containers.v" +
+      "1.GetContainerRequest\0320.yandex.cloud.ser" +
+      "verless.containers.v1.Container\"0\202\323\344\223\002*\022" +
+      "(/containers/v1/containers/{container_id" +
+      "}\022\246\001\n\004List\022<.yandex.cloud.serverless.con" +
+      "tainers.v1.ListContainersRequest\032=.yande" +
       "x.cloud.serverless.containers.v1.ListCon" +
-      "tainerOperationsRequest\032F.yandex.cloud.s" +
-      "erverless.containers.v1.ListContainerOpe" +
-      "rationsResponse\";\202\323\344\223\0025\0223/containers/v1/" +
-      "containers/{container_id}/operations\022\271\001\n" +
-      "\022ListAccessBindings\022..yandex.cloud.acces" +
-      "s.ListAccessBindingsRequest\032/.yandex.clo" +
-      "ud.access.ListAccessBindingsResponse\"B\202\323" +
-      "\344\223\002<\022:/containers/v1/containers/{resourc" +
-      "e_id}:listAccessBindings\022\351\001\n\021SetAccessBi" +
-      "ndings\022-.yandex.cloud.access.SetAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\201\001\202\323\344\223\002>\"9/containers/v1/contai" +
-      "ners/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*9\n access.SetAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\365\001\n\024UpdateAccessBin" +
-      "dings\0220.yandex.cloud.access.UpdateAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\207\001\202\323\344\223\002A\"</containers/v1/cont" +
-      "ainers/{resource_id}:updateAccessBinding" +
-      "s:\001*\262\322*<\n#access.UpdateAccessBindingsMet" +
-      "adata\022\025google.protobuf.EmptyB\201\001\n)yandex." +
-      "cloud.api.serverless.containers.v1ZTgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/serverless/containers/v1;containers" +
-      "b\006proto3"
+      "tainersResponse\"!\202\323\344\223\002\033\022\031/containers/v1/" +
+      "containers\022\270\001\n\006Create\022=.yandex.cloud.ser" +
+      "verless.containers.v1.CreateContainerReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "L\202\323\344\223\002\036\"\031/containers/v1/containers:\001*\262\322*" +
+      "$\n\027CreateContainerMetadata\022\tContainer\022\307\001" +
+      "\n\006Update\022=.yandex.cloud.serverless.conta" +
+      "iners.v1.UpdateContainerRequest\032!.yandex" +
+      ".cloud.operation.Operation\"[\202\323\344\223\002-2(/con" +
+      "tainers/v1/containers/{container_id}:\001*\262" +
+      "\322*$\n\027UpdateContainerMetadata\022\tContainer\022" +
+      "\320\001\n\006Delete\022=.yandex.cloud.serverless.con" +
+      "tainers.v1.DeleteContainerRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"d\202\323\344\223\002**(/c" +
+      "ontainers/v1/containers/{container_id}\262\322" +
+      "*0\n\027DeleteContainerMetadata\022\025google.prot" +
+      "obuf.Empty\022\325\001\n\016DeployRevision\022E.yandex.c" +
+      "loud.serverless.containers.v1.DeployCont" +
+      "ainerRevisionRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"Y\202\323\344\223\002$\"\037/containers/v1/" +
+      "revisions:deploy:\001*\262\322*+\n\037DeployContainer" +
+      "RevisionMetadata\022\010Revision\022\326\001\n\010Rollback\022" +
+      "?.yandex.cloud.serverless.containers.v1." +
+      "RollbackContainerRequest\032!.yandex.cloud." +
+      "operation.Operation\"f\202\323\344\223\0026\"1/containers" +
+      "/v1/containers/{container_id}:rollback:\001" +
+      "*\262\322*&\n\031RollbackContainerMetadata\022\tContai" +
+      "ner\022\274\001\n\013GetRevision\022B.yandex.cloud.serve" +
+      "rless.containers.v1.GetContainerRevision" +
+      "Request\032/.yandex.cloud.serverless.contai" +
+      "ners.v1.Revision\"8\202\323\344\223\0022\0220/containers/v1" +
+      "/revisions/{container_revision_id}\022\300\001\n\rL" +
+      "istRevisions\022E.yandex.cloud.serverless.c" +
+      "ontainers.v1.ListContainersRevisionsRequ" +
+      "est\032F.yandex.cloud.serverless.containers" +
+      ".v1.ListContainersRevisionsResponse\" \202\323\344" +
+      "\223\002\032\022\030/containers/v1/revisions\022\334\001\n\016ListOp" +
+      "erations\022E.yandex.cloud.serverless.conta" +
+      "iners.v1.ListContainerOperationsRequest\032" +
+      "F.yandex.cloud.serverless.containers.v1." +
+      "ListContainerOperationsResponse\";\202\323\344\223\0025\022" +
+      "3/containers/v1/containers/{container_id" +
+      "}/operations\022\271\001\n\022ListAccessBindings\022..ya" +
+      "ndex.cloud.access.ListAccessBindingsRequ" +
+      "est\032/.yandex.cloud.access.ListAccessBind" +
+      "ingsResponse\"B\202\323\344\223\002<\022:/containers/v1/con" +
+      "tainers/{resource_id}:listAccessBindings" +
+      "\022\351\001\n\021SetAccessBindings\022-.yandex.cloud.ac" +
+      "cess.SetAccessBindingsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\201\001\202\323\344\223\002>\"9/cont" +
+      "ainers/v1/containers/{resource_id}:setAc" +
+      "cessBindings:\001*\262\322*9\n access.SetAccessBin" +
+      "dingsMetadata\022\025google.protobuf.Empty\022\365\001\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\207\001\202\323\344\223\002A\"</co" +
+      "ntainers/v1/containers/{resource_id}:upd" +
+      "ateAccessBindings:\001*\262\322*<\n#access.UpdateA" +
+      "ccessBindingsMetadata\022\025google.protobuf.E" +
+      "mptyB\201\001\n)yandex.cloud.api.serverless.con" +
+      "tainers.v1ZTgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/serverless/containe" +
+      "rs/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
