@@ -181,26 +181,6 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * ID of the log group for the function.
-     * </pre>
-     *
-     * <code>string log_group_id = 7;</code>
-     * @return The logGroupId.
-     */
-    java.lang.String getLogGroupId();
-    /**
-     * <pre>
-     * ID of the log group for the function.
-     * </pre>
-     *
-     * <code>string log_group_id = 7;</code>
-     * @return The bytes for logGroupId.
-     */
-    com.google.protobuf.ByteString
-        getLogGroupIdBytes();
-
-    /**
-     * <pre>
      * URL that needs to be requested to invoke the function.
      * </pre>
      *
@@ -259,7 +239,6 @@ public final class FunctionOuterClass {
       folderId_ = "";
       name_ = "";
       description_ = "";
-      logGroupId_ = "";
       httpInvokeUrl_ = "";
       status_ = 0;
     }
@@ -343,12 +322,6 @@ public final class FunctionOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              logGroupId_ = s;
               break;
             }
             case 66: {
@@ -893,52 +866,6 @@ public final class FunctionOuterClass {
       return map.get(key);
     }
 
-    public static final int LOG_GROUP_ID_FIELD_NUMBER = 7;
-    private volatile java.lang.Object logGroupId_;
-    /**
-     * <pre>
-     * ID of the log group for the function.
-     * </pre>
-     *
-     * <code>string log_group_id = 7;</code>
-     * @return The logGroupId.
-     */
-    @java.lang.Override
-    public java.lang.String getLogGroupId() {
-      java.lang.Object ref = logGroupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        logGroupId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the log group for the function.
-     * </pre>
-     *
-     * <code>string log_group_id = 7;</code>
-     * @return The bytes for logGroupId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogGroupIdBytes() {
-      java.lang.Object ref = logGroupId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logGroupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int HTTP_INVOKE_URL_FIELD_NUMBER = 8;
     private volatile java.lang.Object httpInvokeUrl_;
     /**
@@ -1047,9 +974,6 @@ public final class FunctionOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, logGroupId_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpInvokeUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, httpInvokeUrl_);
       }
@@ -1091,9 +1015,6 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, logGroupId_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpInvokeUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, httpInvokeUrl_);
       }
@@ -1131,8 +1052,6 @@ public final class FunctionOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
-      if (!getLogGroupId()
-          .equals(other.getLogGroupId())) return false;
       if (!getHttpInvokeUrl()
           .equals(other.getHttpInvokeUrl())) return false;
       if (status_ != other.status_) return false;
@@ -1163,8 +1082,6 @@ public final class FunctionOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
-      hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLogGroupId().hashCode();
       hash = (37 * hash) + HTTP_INVOKE_URL_FIELD_NUMBER;
       hash = (53 * hash) + getHttpInvokeUrl().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
@@ -1343,8 +1260,6 @@ public final class FunctionOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
-        logGroupId_ = "";
-
         httpInvokeUrl_ = "";
 
         status_ = 0;
@@ -1387,7 +1302,6 @@ public final class FunctionOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
-        result.logGroupId_ = logGroupId_;
         result.httpInvokeUrl_ = httpInvokeUrl_;
         result.status_ = status_;
         onBuilt();
@@ -1459,10 +1373,6 @@ public final class FunctionOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
-        if (!other.getLogGroupId().isEmpty()) {
-          logGroupId_ = other.logGroupId_;
-          onChanged();
-        }
         if (!other.getHttpInvokeUrl().isEmpty()) {
           httpInvokeUrl_ = other.httpInvokeUrl_;
           onChanged();
@@ -2198,102 +2108,6 @@ public final class FunctionOuterClass {
         return this;
       }
 
-      private java.lang.Object logGroupId_ = "";
-      /**
-       * <pre>
-       * ID of the log group for the function.
-       * </pre>
-       *
-       * <code>string log_group_id = 7;</code>
-       * @return The logGroupId.
-       */
-      public java.lang.String getLogGroupId() {
-        java.lang.Object ref = logGroupId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          logGroupId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the log group for the function.
-       * </pre>
-       *
-       * <code>string log_group_id = 7;</code>
-       * @return The bytes for logGroupId.
-       */
-      public com.google.protobuf.ByteString
-          getLogGroupIdBytes() {
-        java.lang.Object ref = logGroupId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logGroupId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the log group for the function.
-       * </pre>
-       *
-       * <code>string log_group_id = 7;</code>
-       * @param value The logGroupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogGroupId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        logGroupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the log group for the function.
-       * </pre>
-       *
-       * <code>string log_group_id = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogGroupId() {
-        
-        logGroupId_ = getDefaultInstance().getLogGroupId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the log group for the function.
-       * </pre>
-       *
-       * <code>string log_group_id = 7;</code>
-       * @param value The bytes for logGroupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogGroupIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        logGroupId_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object httpInvokeUrl_ = "";
       /**
        * <pre>
@@ -2800,26 +2614,6 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * ID of the log group for the version.
-     * </pre>
-     *
-     * <code>string log_group_id = 15;</code>
-     * @return The logGroupId.
-     */
-    java.lang.String getLogGroupId();
-    /**
-     * <pre>
-     * ID of the log group for the version.
-     * </pre>
-     *
-     * <code>string log_group_id = 15;</code>
-     * @return The bytes for logGroupId.
-     */
-    com.google.protobuf.ByteString
-        getLogGroupIdBytes();
-
-    /**
-     * <pre>
      * Environment settings for the version.
      * </pre>
      *
@@ -3140,7 +2934,6 @@ public final class FunctionOuterClass {
       serviceAccountId_ = "";
       status_ = 0;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      logGroupId_ = "";
       secrets_ = java.util.Collections.emptyList();
       storageMounts_ = java.util.Collections.emptyList();
     }
@@ -3269,12 +3062,6 @@ public final class FunctionOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              logGroupId_ = s;
               break;
             }
             case 130: {
@@ -4048,52 +3835,6 @@ public final class FunctionOuterClass {
       return tags_.getByteString(index);
     }
 
-    public static final int LOG_GROUP_ID_FIELD_NUMBER = 15;
-    private volatile java.lang.Object logGroupId_;
-    /**
-     * <pre>
-     * ID of the log group for the version.
-     * </pre>
-     *
-     * <code>string log_group_id = 15;</code>
-     * @return The logGroupId.
-     */
-    @java.lang.Override
-    public java.lang.String getLogGroupId() {
-      java.lang.Object ref = logGroupId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        logGroupId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the log group for the version.
-     * </pre>
-     *
-     * <code>string log_group_id = 15;</code>
-     * @return The bytes for logGroupId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLogGroupIdBytes() {
-      java.lang.Object ref = logGroupId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logGroupId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int ENVIRONMENT_FIELD_NUMBER = 16;
     private static final class EnvironmentDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -4602,9 +4343,6 @@ public final class FunctionOuterClass {
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, tags_.getRaw(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, logGroupId_);
-      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -4692,9 +4430,6 @@ public final class FunctionOuterClass {
         }
         size += dataSize;
         size += 1 * getTagsList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logGroupId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, logGroupId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetEnvironment().getMap().entrySet()) {
@@ -4791,8 +4526,6 @@ public final class FunctionOuterClass {
       if (status_ != other.status_) return false;
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
-      if (!getLogGroupId()
-          .equals(other.getLogGroupId())) return false;
       if (!internalGetEnvironment().equals(
           other.internalGetEnvironment())) return false;
       if (hasConnectivity() != other.hasConnectivity()) return false;
@@ -4864,8 +4597,6 @@ public final class FunctionOuterClass {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
-      hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLogGroupId().hashCode();
       if (!internalGetEnvironment().getMap().isEmpty()) {
         hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
         hash = (53 * hash) + internalGetEnvironment().hashCode();
@@ -5101,8 +4832,6 @@ public final class FunctionOuterClass {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        logGroupId_ = "";
-
         internalGetMutableEnvironment().clear();
         if (connectivityBuilder_ == null) {
           connectivity_ = null;
@@ -5194,7 +4923,6 @@ public final class FunctionOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        result.logGroupId_ = logGroupId_;
         result.environment_ = internalGetEnvironment();
         result.environment_.makeImmutable();
         if (connectivityBuilder_ == null) {
@@ -5329,10 +5057,6 @@ public final class FunctionOuterClass {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
           }
-          onChanged();
-        }
-        if (!other.getLogGroupId().isEmpty()) {
-          logGroupId_ = other.logGroupId_;
           onChanged();
         }
         internalGetMutableEnvironment().mergeFrom(
@@ -6755,102 +6479,6 @@ public final class FunctionOuterClass {
   checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object logGroupId_ = "";
-      /**
-       * <pre>
-       * ID of the log group for the version.
-       * </pre>
-       *
-       * <code>string log_group_id = 15;</code>
-       * @return The logGroupId.
-       */
-      public java.lang.String getLogGroupId() {
-        java.lang.Object ref = logGroupId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          logGroupId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the log group for the version.
-       * </pre>
-       *
-       * <code>string log_group_id = 15;</code>
-       * @return The bytes for logGroupId.
-       */
-      public com.google.protobuf.ByteString
-          getLogGroupIdBytes() {
-        java.lang.Object ref = logGroupId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logGroupId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the log group for the version.
-       * </pre>
-       *
-       * <code>string log_group_id = 15;</code>
-       * @param value The logGroupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogGroupId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        logGroupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the log group for the version.
-       * </pre>
-       *
-       * <code>string log_group_id = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLogGroupId() {
-        
-        logGroupId_ = getDefaultInstance().getLogGroupId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the log group for the version.
-       * </pre>
-       *
-       * <code>string log_group_id = 15;</code>
-       * @param value The bytes for logGroupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLogGroupIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        logGroupId_ = value;
         onChanged();
         return this;
       }
@@ -19618,92 +19246,91 @@ public final class FunctionOuterClass {
       "unctions.v1\032\036google/protobuf/duration.pr" +
       "oto\032\037google/protobuf/timestamp.proto\032\'ya" +
       "ndex/cloud/logging/v1/log_entry.proto\032\035y" +
-      "andex/cloud/validation.proto\"\341\003\n\010Functio" +
+      "andex/cloud/validation.proto\"\321\003\n\010Functio" +
       "n\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013description\030" +
       "\005 \001(\tB\t\212\3101\0050-256\022T\n\006labels\030\006 \003(\0132:.yande" +
       "x.cloud.serverless.functions.v1.Function" +
-      ".LabelsEntryB\010\202\3101\004<=64\022\024\n\014log_group_id\030\007" +
-      " \001(\t\022\027\n\017http_invoke_url\030\010 \001(\t\022E\n\006status\030" +
-      "\t \001(\01625.yandex.cloud.serverless.function" +
-      "s.v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n" +
-      "\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006A" +
-      "CTIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\327\t\n\007Ver" +
-      "sion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n" +
-      "\013description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated" +
-      "_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n" +
-      "\007runtime\030\006 \001(\t\022\022\n\nentrypoint\030\007 \001(\t\022B\n\tre" +
-      "sources\030\010 \001(\0132/.yandex.cloud.serverless." +
-      "functions.v1.Resources\0224\n\021execution_time" +
-      "out\030\t \001(\0132\031.google.protobuf.Duration\022\032\n\022" +
-      "service_account_id\030\n \001(\t\022\022\n\nimage_size\030\014" +
-      " \001(\003\022D\n\006status\030\r \001(\01624.yandex.cloud.serv" +
-      "erless.functions.v1.Version.Status\022\014\n\004ta" +
-      "gs\030\016 \003(\t\022\024\n\014log_group_id\030\017 \001(\t\022S\n\013enviro" +
-      "nment\030\020 \003(\0132>.yandex.cloud.serverless.fu" +
-      "nctions.v1.Version.EnvironmentEntry\022H\n\014c" +
-      "onnectivity\030\021 \001(\01322.yandex.cloud.serverl" +
-      "ess.functions.v1.Connectivity\022g\n\026named_s" +
-      "ervice_accounts\030\022 \003(\0132G.yandex.cloud.ser" +
-      "verless.functions.v1.Version.NamedServic" +
-      "eAccountsEntry\022=\n\007secrets\030\023 \003(\0132,.yandex" +
-      ".cloud.serverless.functions.v1.Secret\022E\n" +
-      "\013log_options\030\024 \001(\01320.yandex.cloud.server" +
-      "less.functions.v1.LogOptions\022J\n\016storage_" +
-      "mounts\030\025 \003(\01322.yandex.cloud.serverless.f" +
-      "unctions.v1.StorageMount\022\\\n\027async_invoca" +
-      "tion_config\030\026 \001(\0132;.yandex.cloud.serverl" +
-      "ess.functions.v1.AsyncInvocationConfig\022\022" +
-      "\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(\003B" +
-      "\010\372\3071\0040-16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceAcc" +
-      "ountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010" +
-      "CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\013\020\014J\004\010\004\020\005\"5\n\tRe" +
-      "sources\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-4" +
-      "294967296\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(" +
-      "\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sh" +
-      "a256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nnetwork_id" +
-      "\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\370\001" +
-      "\n\rScalingPolicy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003" +
-      "tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022/\n\013modified_at\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022#\n\033provisione" +
-      "d_instances_count\030\006 \001(\003\022\034\n\024zone_instance" +
-      "s_limit\030\007 \001(\003\022\033\n\023zone_requests_limit\030\010 \001" +
-      "(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversio" +
-      "n_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_v" +
-      "ariable\030\004 \001(\tH\000B\013\n\treference\"\340\001\n\nLogOpti" +
-      "ons\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_group_id\030\002 " +
-      "\001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?" +
-      "H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-" +
-      "zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162" +
-      "\'.yandex.cloud.logging.v1.LogLevel.Level" +
-      "B\r\n\013destination\"\237\001\n\014StorageMount\0221\n\tbuck" +
-      "et_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-" +
-      "Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_point_name\030" +
-      "\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021" +
-      "\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncInvocationCon" +
-      "fig\022 \n\rretries_count\030\001 \001(\003B\t\372\3071\0050-100\022h\n" +
-      "\016success_target\030\002 \001(\0132J.yandex.cloud.ser" +
-      "verless.functions.v1.AsyncInvocationConf" +
-      "ig.ResponseTargetB\004\350\3071\001\022h\n\016failure_targe" +
-      "t\030\003 \001(\0132J.yandex.cloud.serverless.functi" +
-      "ons.v1.AsyncInvocationConfig.ResponseTar" +
-      "getB\004\350\3071\001\022\032\n\022service_account_id\030\004 \001(\t\032\262\001" +
-      "\n\016ResponseTarget\022I\n\014empty_target\030\001 \001(\01321" +
-      ".yandex.cloud.serverless.functions.v1.Em" +
-      "ptyTargetH\000\022E\n\nymq_target\030\002 \001(\0132/.yandex" +
-      ".cloud.serverless.functions.v1.YMQTarget" +
-      "H\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarget\022\027\n\tqueue" +
-      "_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTargetB~\n(yan" +
-      "dex.cloud.api.serverless.functions.v1ZRg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/serverless/functions/v1;function" +
-      "sb\006proto3"
+      ".LabelsEntryB\010\202\3101\004<=64\022\027\n\017http_invoke_ur" +
+      "l\030\010 \001(\t\022E\n\006status\030\t \001(\01625.yandex.cloud.s" +
+      "erverless.functions.v1.Function.Status\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
+      "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022" +
+      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\307\t\n\007Version\022\n\n\002id\030\001 \001(\t" +
+      "\022\023\n\013function_id\030\002 \001(\t\022\036\n\013description\030\003 \001" +
+      "(\tB\t\212\3101\0050-256\022.\n\ncreated_at\030\005 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\017\n\007runtime\030\006 \001(\t\022\022" +
+      "\n\nentrypoint\030\007 \001(\t\022B\n\tresources\030\010 \001(\0132/." +
+      "yandex.cloud.serverless.functions.v1.Res" +
+      "ources\0224\n\021execution_timeout\030\t \001(\0132\031.goog" +
+      "le.protobuf.Duration\022\032\n\022service_account_" +
+      "id\030\n \001(\t\022\022\n\nimage_size\030\014 \001(\003\022D\n\006status\030\r" +
+      " \001(\01624.yandex.cloud.serverless.functions" +
+      ".v1.Version.Status\022\014\n\004tags\030\016 \003(\t\022S\n\013envi" +
+      "ronment\030\020 \003(\0132>.yandex.cloud.serverless." +
+      "functions.v1.Version.EnvironmentEntry\022H\n" +
+      "\014connectivity\030\021 \001(\01322.yandex.cloud.serve" +
+      "rless.functions.v1.Connectivity\022g\n\026named" +
+      "_service_accounts\030\022 \003(\0132G.yandex.cloud.s" +
+      "erverless.functions.v1.Version.NamedServ" +
+      "iceAccountsEntry\022=\n\007secrets\030\023 \003(\0132,.yand" +
+      "ex.cloud.serverless.functions.v1.Secret\022" +
+      "E\n\013log_options\030\024 \001(\01320.yandex.cloud.serv" +
+      "erless.functions.v1.LogOptions\022J\n\016storag" +
+      "e_mounts\030\025 \003(\01322.yandex.cloud.serverless" +
+      ".functions.v1.StorageMount\022\\\n\027async_invo" +
+      "cation_config\030\026 \001(\0132;.yandex.cloud.serve" +
+      "rless.functions.v1.AsyncInvocationConfig" +
+      "\022\022\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(" +
+      "\003B\010\372\3071\0040-16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceA" +
+      "ccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\004\020\005J\004\010\013\020\014J\004\010\017" +
+      "\020\020\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134" +
+      "217728-4294967296\"O\n\007Package\022\031\n\013bucket_n" +
+      "ame\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\307" +
+      "1\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nne" +
+      "twork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>" +
+      "0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013function_id\030\001" +
+      " \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
+      "google.protobuf.Timestamp\022/\n\013modified_at" +
+      "\030\004 \001(\0132\032.google.protobuf.Timestamp\022#\n\033pr" +
+      "ovisioned_instances_count\030\006 \001(\003\022\034\n\024zone_" +
+      "instances_limit\030\007 \001(\003\022\033\n\023zone_requests_l" +
+      "imit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022" +
+      "\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024envir" +
+      "onment_variable\030\004 \001(\tH\000B\013\n\treference\"\340\001\n" +
+      "\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_gro" +
+      "up_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]" +
+      "{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-z" +
+      "A-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_leve" +
+      "l\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLev" +
+      "el.LevelB\r\n\013destination\"\237\001\n\014StorageMount" +
+      "\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-." +
+      "0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_poi" +
+      "nt_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-9a-" +
+      "zA-Z]*\022\021\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncInvoc" +
+      "ationConfig\022 \n\rretries_count\030\001 \001(\003B\t\372\3071\005" +
+      "0-100\022h\n\016success_target\030\002 \001(\0132J.yandex.c" +
+      "loud.serverless.functions.v1.AsyncInvoca" +
+      "tionConfig.ResponseTargetB\004\350\3071\001\022h\n\016failu" +
+      "re_target\030\003 \001(\0132J.yandex.cloud.serverles" +
+      "s.functions.v1.AsyncInvocationConfig.Res" +
+      "ponseTargetB\004\350\3071\001\022\032\n\022service_account_id\030" +
+      "\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014empty_target" +
+      "\030\001 \001(\01321.yandex.cloud.serverless.functio" +
+      "ns.v1.EmptyTargetH\000\022E\n\nymq_target\030\002 \001(\0132" +
+      "/.yandex.cloud.serverless.functions.v1.Y" +
+      "MQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarget\022" +
+      "\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_acco" +
+      "unt_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTarge" +
+      "tB~\n(yandex.cloud.api.serverless.functio" +
+      "ns.v1ZRgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/serverless/functions/v1;" +
+      "functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19718,7 +19345,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Function_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Function_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "LogGroupId", "HttpInvokeUrl", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "HttpInvokeUrl", "Status", });
     internal_static_yandex_cloud_serverless_functions_v1_Function_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Function_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Function_LabelsEntry_fieldAccessorTable = new
@@ -19730,7 +19357,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new

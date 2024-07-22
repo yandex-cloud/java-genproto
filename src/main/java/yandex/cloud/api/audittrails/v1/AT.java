@@ -15845,7 +15845,7 @@ public final class AT {
       "\n\'yandex/cloud/audittrails/v1/trail.prot" +
       "o\022\033yandex.cloud.audittrails.v1\032\037google/p" +
       "rotobuf/timestamp.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"\232\025\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
+      "lidation.proto\"\224\025\n\005Trail\022\n\n\002id\030\001 \001(\t\022\037\n\t" +
       "folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0224\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350" +
       "\3071\001\0224\n\nupdated_at\030\004 \001(\0132\032.google.protobu" +
@@ -15913,10 +15913,10 @@ public final class AT {
       "\020\000\022\021\n\rCONTROL_PLANE\020\001\022\016\n\nDATA_PLANE\020\002\"V\n" +
       "\025EventAccessTypeFilter\022(\n$EVENT_ACCESS_T" +
       "YPE_FILTER_UNSPECIFIED\020\000\022\t\n\005WRITE\020\001\022\010\n\004R" +
-      "EAD\020\002J\004\010\r\020\016Br\n\037yandex.cloud.api.audittra" +
-      "ils.v1B\002ATZKgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/audittrails/v1;audi" +
-      "ttrailsb\006proto3"
+      "EAD\020\002Br\n\037yandex.cloud.api.audittrails.v1" +
+      "B\002ATZKgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/audittrails/v1;audittrail" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

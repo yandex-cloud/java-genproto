@@ -673,6 +673,21 @@ public final class Jobs {
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDescOrBuilder getOutputDatasetsOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     * @return Whether the gracefulShutdownParameters field is set.
+     */
+    boolean hasGracefulShutdownParameters();
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     * @return The gracefulShutdownParameters.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getGracefulShutdownParameters();
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder getGracefulShutdownParametersOrBuilder();
   }
   /**
    * <pre>
@@ -830,6 +845,19 @@ public final class Jobs {
               }
               outputDatasets_.add(
                   input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.OutputDatasetDesc.parser(), extensionRegistry));
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder subBuilder = null;
+              if (gracefulShutdownParameters_ != null) {
+                subBuilder = gracefulShutdownParameters_.toBuilder();
+              }
+              gracefulShutdownParameters_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gracefulShutdownParameters_);
+                gracefulShutdownParameters_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1424,6 +1452,32 @@ public final class Jobs {
       return outputDatasets_.get(index);
     }
 
+    public static final int GRACEFUL_SHUTDOWN_PARAMETERS_FIELD_NUMBER = 12;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters gracefulShutdownParameters_;
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     * @return Whether the gracefulShutdownParameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasGracefulShutdownParameters() {
+      return gracefulShutdownParameters_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     * @return The gracefulShutdownParameters.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getGracefulShutdownParameters() {
+      return gracefulShutdownParameters_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.getDefaultInstance() : gracefulShutdownParameters_;
+    }
+    /**
+     * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder getGracefulShutdownParametersOrBuilder() {
+      return getGracefulShutdownParameters();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1470,6 +1524,9 @@ public final class Jobs {
       }
       for (int i = 0; i < outputDatasets_.size(); i++) {
         output.writeMessage(11, outputDatasets_.get(i));
+      }
+      if (gracefulShutdownParameters_ != null) {
+        output.writeMessage(12, getGracefulShutdownParameters());
       }
       unknownFields.writeTo(output);
     }
@@ -1531,6 +1588,10 @@ public final class Jobs {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, outputDatasets_.get(i));
       }
+      if (gracefulShutdownParameters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getGracefulShutdownParameters());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1574,6 +1635,11 @@ public final class Jobs {
           .equals(other.getArgumentsList())) return false;
       if (!getOutputDatasetsList()
           .equals(other.getOutputDatasetsList())) return false;
+      if (hasGracefulShutdownParameters() != other.hasGracefulShutdownParameters()) return false;
+      if (hasGracefulShutdownParameters()) {
+        if (!getGracefulShutdownParameters()
+            .equals(other.getGracefulShutdownParameters())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1625,6 +1691,10 @@ public final class Jobs {
       if (getOutputDatasetsCount() > 0) {
         hash = (37 * hash) + OUTPUT_DATASETS_FIELD_NUMBER;
         hash = (53 * hash) + getOutputDatasetsList().hashCode();
+      }
+      if (hasGracefulShutdownParameters()) {
+        hash = (37 * hash) + GRACEFUL_SHUTDOWN_PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getGracefulShutdownParameters().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1818,6 +1888,12 @@ public final class Jobs {
         } else {
           outputDatasetsBuilder_.clear();
         }
+        if (gracefulShutdownParametersBuilder_ == null) {
+          gracefulShutdownParameters_ = null;
+        } else {
+          gracefulShutdownParameters_ = null;
+          gracefulShutdownParametersBuilder_ = null;
+        }
         return this;
       }
 
@@ -1911,6 +1987,11 @@ public final class Jobs {
           result.outputDatasets_ = outputDatasets_;
         } else {
           result.outputDatasets_ = outputDatasetsBuilder_.build();
+        }
+        if (gracefulShutdownParametersBuilder_ == null) {
+          result.gracefulShutdownParameters_ = gracefulShutdownParameters_;
+        } else {
+          result.gracefulShutdownParameters_ = gracefulShutdownParametersBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2122,6 +2203,9 @@ public final class Jobs {
               outputDatasetsBuilder_.addAllMessages(other.outputDatasets_);
             }
           }
+        }
+        if (other.hasGracefulShutdownParameters()) {
+          mergeGracefulShutdownParameters(other.getGracefulShutdownParameters());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4452,6 +4536,125 @@ public final class Jobs {
           outputDatasets_ = null;
         }
         return outputDatasetsBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters gracefulShutdownParameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder> gracefulShutdownParametersBuilder_;
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       * @return Whether the gracefulShutdownParameters field is set.
+       */
+      public boolean hasGracefulShutdownParameters() {
+        return gracefulShutdownParametersBuilder_ != null || gracefulShutdownParameters_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       * @return The gracefulShutdownParameters.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getGracefulShutdownParameters() {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          return gracefulShutdownParameters_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.getDefaultInstance() : gracefulShutdownParameters_;
+        } else {
+          return gracefulShutdownParametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public Builder setGracefulShutdownParameters(yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters value) {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gracefulShutdownParameters_ = value;
+          onChanged();
+        } else {
+          gracefulShutdownParametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public Builder setGracefulShutdownParameters(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder builderForValue) {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          gracefulShutdownParameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          gracefulShutdownParametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public Builder mergeGracefulShutdownParameters(yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters value) {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          if (gracefulShutdownParameters_ != null) {
+            gracefulShutdownParameters_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.newBuilder(gracefulShutdownParameters_).mergeFrom(value).buildPartial();
+          } else {
+            gracefulShutdownParameters_ = value;
+          }
+          onChanged();
+        } else {
+          gracefulShutdownParametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public Builder clearGracefulShutdownParameters() {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          gracefulShutdownParameters_ = null;
+          onChanged();
+        } else {
+          gracefulShutdownParameters_ = null;
+          gracefulShutdownParametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder getGracefulShutdownParametersBuilder() {
+        
+        onChanged();
+        return getGracefulShutdownParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder getGracefulShutdownParametersOrBuilder() {
+        if (gracefulShutdownParametersBuilder_ != null) {
+          return gracefulShutdownParametersBuilder_.getMessageOrBuilder();
+        } else {
+          return gracefulShutdownParameters_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.getDefaultInstance() : gracefulShutdownParameters_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters graceful_shutdown_parameters = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder> 
+          getGracefulShutdownParametersFieldBuilder() {
+        if (gracefulShutdownParametersBuilder_ == null) {
+          gracefulShutdownParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder>(
+                  getGracefulShutdownParameters(),
+                  getParentForChildren(),
+                  isClean());
+          gracefulShutdownParameters_ = null;
+        }
+        return gracefulShutdownParametersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -20516,6 +20719,718 @@ public final class Jobs {
 
   }
 
+  public interface GracefulShutdownParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     * @return Whether the timeout field is set.
+     */
+    boolean hasTimeout();
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     * @return The timeout.
+     */
+    com.google.protobuf.Duration getTimeout();
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * default 15 (SIGTERM)
+     * </pre>
+     *
+     * <code>int64 signal = 2;</code>
+     * @return The signal.
+     */
+    long getSignal();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters}
+   */
+  public static final class GracefulShutdownParameters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters)
+      GracefulShutdownParametersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GracefulShutdownParameters.newBuilder() to construct.
+    private GracefulShutdownParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GracefulShutdownParameters() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GracefulShutdownParameters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GracefulShutdownParameters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (timeout_ != null) {
+                subBuilder = timeout_.toBuilder();
+              }
+              timeout_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeout_);
+                timeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              signal_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder.class);
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration timeout_;
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     * @return Whether the timeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeout() {
+      return timeout_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getTimeout() {
+      return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+    }
+    /**
+     * <code>.google.protobuf.Duration timeout = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
+      return getTimeout();
+    }
+
+    public static final int SIGNAL_FIELD_NUMBER = 2;
+    private long signal_;
+    /**
+     * <pre>
+     * default 15 (SIGTERM)
+     * </pre>
+     *
+     * <code>int64 signal = 2;</code>
+     * @return The signal.
+     */
+    @java.lang.Override
+    public long getSignal() {
+      return signal_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (timeout_ != null) {
+        output.writeMessage(1, getTimeout());
+      }
+      if (signal_ != 0L) {
+        output.writeInt64(2, signal_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (timeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTimeout());
+      }
+      if (signal_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, signal_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters) obj;
+
+      if (hasTimeout() != other.hasTimeout()) return false;
+      if (hasTimeout()) {
+        if (!getTimeout()
+            .equals(other.getTimeout())) return false;
+      }
+      if (getSignal()
+          != other.getSignal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTimeout()) {
+        hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeout().hashCode();
+      }
+      hash = (37 * hash) + SIGNAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignal());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParametersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (timeoutBuilder_ == null) {
+          timeout_ = null;
+        } else {
+          timeout_ = null;
+          timeoutBuilder_ = null;
+        }
+        signal_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters(this);
+        if (timeoutBuilder_ == null) {
+          result.timeout_ = timeout_;
+        } else {
+          result.timeout_ = timeoutBuilder_.build();
+        }
+        result.signal_ = signal_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters.getDefaultInstance()) return this;
+        if (other.hasTimeout()) {
+          mergeTimeout(other.getTimeout());
+        }
+        if (other.getSignal() != 0L) {
+          setSignal(other.getSignal());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Duration timeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       * @return Whether the timeout field is set.
+       */
+      public boolean hasTimeout() {
+        return timeoutBuilder_ != null || timeout_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       * @return The timeout.
+       */
+      public com.google.protobuf.Duration getTimeout() {
+        if (timeoutBuilder_ == null) {
+          return timeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+        } else {
+          return timeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public Builder setTimeout(com.google.protobuf.Duration value) {
+        if (timeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeout_ = value;
+          onChanged();
+        } else {
+          timeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public Builder setTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (timeoutBuilder_ == null) {
+          timeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public Builder mergeTimeout(com.google.protobuf.Duration value) {
+        if (timeoutBuilder_ == null) {
+          if (timeout_ != null) {
+            timeout_ =
+              com.google.protobuf.Duration.newBuilder(timeout_).mergeFrom(value).buildPartial();
+          } else {
+            timeout_ = value;
+          }
+          onChanged();
+        } else {
+          timeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public Builder clearTimeout() {
+        if (timeoutBuilder_ == null) {
+          timeout_ = null;
+          onChanged();
+        } else {
+          timeout_ = null;
+          timeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public com.google.protobuf.Duration.Builder getTimeoutBuilder() {
+        
+        onChanged();
+        return getTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getTimeoutOrBuilder() {
+        if (timeoutBuilder_ != null) {
+          return timeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return timeout_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : timeout_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration timeout = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getTimeoutFieldBuilder() {
+        if (timeoutBuilder_ == null) {
+          timeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          timeout_ = null;
+        }
+        return timeoutBuilder_;
+      }
+
+      private long signal_ ;
+      /**
+       * <pre>
+       * default 15 (SIGTERM)
+       * </pre>
+       *
+       * <code>int64 signal = 2;</code>
+       * @return The signal.
+       */
+      @java.lang.Override
+      public long getSignal() {
+        return signal_;
+      }
+      /**
+       * <pre>
+       * default 15 (SIGTERM)
+       * </pre>
+       *
+       * <code>int64 signal = 2;</code>
+       * @param value The signal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignal(long value) {
+        
+        signal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * default 15 (SIGTERM)
+       * </pre>
+       *
+       * <code>int64 signal = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignal() {
+        
+        signal_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.GracefulShutdownParameters)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GracefulShutdownParameters>
+        PARSER = new com.google.protobuf.AbstractParser<GracefulShutdownParameters>() {
+      @java.lang.Override
+      public GracefulShutdownParameters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GracefulShutdownParameters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GracefulShutdownParameters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GracefulShutdownParameters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.GracefulShutdownParameters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor;
   private static final 
@@ -20596,6 +21511,11 @@ public final class Jobs {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -20608,97 +21528,104 @@ public final class Jobs {
       "\n*yandex/cloud/datasphere/v2/jobs/jobs.p" +
       "roto\022\037yandex.cloud.datasphere.v2.jobs\032\037g" +
       "oogle/protobuf/timestamp.proto\032\035yandex/c" +
-      "loud/validation.proto\"\335\004\n\rJobParameters\022" +
-      ":\n\013input_files\030\001 \003(\0132%.yandex.cloud.data" +
-      "sphere.v2.jobs.File\022?\n\014output_files\030\002 \003(" +
-      "\0132).yandex.cloud.datasphere.v2.jobs.File" +
-      "Desc\022\024\n\014s3_mount_ids\030\003 \003(\t\022\023\n\013dataset_id" +
-      "s\030\004 \003(\t\022\013\n\003cmd\030\005 \001(\t\0229\n\003env\030\006 \001(\0132,.yand" +
-      "ex.cloud.datasphere.v2.jobs.Environment\022" +
-      "\033\n\023attach_project_disk\030\007 \001(\010\022Y\n\024cloud_in" +
-      "stance_types\030\010 \003(\01322.yandex.cloud.datasp" +
-      "here.v2.jobs.CloudInstanceTypeB\007\202\3101\003>=1\022" +
-      "Y\n\030extended_working_storage\030\t \001(\01327.yand" +
-      "ex.cloud.datasphere.v2.jobs.ExtendedWork" +
-      "ingStorage\022<\n\targuments\030\n \003(\0132).yandex.c" +
-      "loud.datasphere.v2.jobs.Argument\022K\n\017outp" +
-      "ut_datasets\030\013 \003(\01322.yandex.cloud.datasph" +
-      "ere.v2.jobs.OutputDatasetDesc\"!\n\021CloudIn" +
-      "stanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026ExtendedWor" +
-      "kingStorage\022Q\n\004type\030\001 \001(\0162C.yandex.cloud" +
+      "loud/validation.proto\032\036google/protobuf/d" +
+      "uration.proto\"\300\005\n\rJobParameters\022:\n\013input" +
+      "_files\030\001 \003(\0132%.yandex.cloud.datasphere.v" +
+      "2.jobs.File\022?\n\014output_files\030\002 \003(\0132).yand" +
+      "ex.cloud.datasphere.v2.jobs.FileDesc\022\024\n\014" +
+      "s3_mount_ids\030\003 \003(\t\022\023\n\013dataset_ids\030\004 \003(\t\022" +
+      "\013\n\003cmd\030\005 \001(\t\0229\n\003env\030\006 \001(\0132,.yandex.cloud" +
+      ".datasphere.v2.jobs.Environment\022\033\n\023attac" +
+      "h_project_disk\030\007 \001(\010\022Y\n\024cloud_instance_t" +
+      "ypes\030\010 \003(\01322.yandex.cloud.datasphere.v2." +
+      "jobs.CloudInstanceTypeB\007\202\3101\003>=1\022Y\n\030exten" +
+      "ded_working_storage\030\t \001(\01327.yandex.cloud" +
       ".datasphere.v2.jobs.ExtendedWorkingStora" +
-      "ge.StorageType\022\017\n\007size_gb\030\002 \001(\003\"4\n\013Stora" +
-      "geType\022\034\n\030STORAGE_TYPE_UNSPECIFIED\020\000\022\007\n\003" +
-      "SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\0132).yandex.c" +
-      "loud.datasphere.v2.jobs.FileDesc\022\016\n\006sha2" +
-      "56\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022N\n\020compress" +
-      "ion_type\030\004 \001(\01624.yandex.cloud.datasphere" +
-      ".v2.jobs.FileCompressionType\"O\n\013StorageF" +
-      "ile\0223\n\004file\030\001 \001(\0132%.yandex.cloud.datasph" +
-      "ere.v2.jobs.File\022\013\n\003url\030\002 \001(\t\"%\n\010FileDes" +
-      "c\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"\303\002\n\013Environ" +
-      "ment\022D\n\004vars\030\001 \003(\01326.yandex.cloud.datasp" +
-      "here.v2.jobs.Environment.VarsEntry\022\"\n\030do" +
-      "cker_image_resource_id\030\002 \001(\tH\000\022M\n\021docker" +
-      "_image_spec\030\003 \001(\01320.yandex.cloud.datasph" +
-      "ere.v2.jobs.DockerImageSpecH\000\022>\n\npython_" +
-      "env\030\004 \001(\0132*.yandex.cloud.datasphere.v2.j" +
-      "obs.PythonEnv\032+\n\tVarsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_image\"\204\001\n\017D" +
-      "ockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010use" +
-      "rname\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001(\t" +
-      "H\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B\n\n" +
-      "\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030\001 \001" +
-      "(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.cloud" +
-      ".datasphere.v2.jobs.File\"\323\001\n\021OutputDatas" +
-      "etDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(" +
-      "\t\022N\n\006labels\030\003 \003(\0132>.yandex.cloud.datasph" +
-      "ere.v2.jobs.OutputDatasetDesc.LabelsEntr" +
-      "y\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"]" +
-      "\n\rOutputDataset\022@\n\004desc\030\001 \001(\01322.yandex.c" +
-      "loud.datasphere.v2.jobs.OutputDatasetDes" +
-      "c\022\n\n\002id\030\002 \001(\t\"\231\005\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022.\n\nstarted" +
-      "_at\030\021 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
-      "\013finished_at\030\005 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022:\n\006status\030\006 \001(\0162*.yandex.cloud.da" +
-      "tasphere.v2.jobs.JobStatus\022\016\n\006config\030\007 \001" +
-      "(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022\n\nproject_id\030" +
-      "\t \001(\t\022F\n\016job_parameters\030\n \001(\0132..yandex.c" +
-      "loud.datasphere.v2.jobs.JobParameters\0223\n" +
-      "\017data_expires_at\030\013 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014outp" +
-      "ut_files\030\r \003(\0132%.yandex.cloud.datasphere" +
-      ".v2.jobs.File\0228\n\tlog_files\030\016 \003(\0132%.yande" +
-      "x.cloud.datasphere.v2.jobs.File\022?\n\020diagn" +
-      "ostic_files\030\017 \003(\0132%.yandex.cloud.datasph" +
-      "ere.v2.jobs.File\022\027\n\017data_size_bytes\030\020 \001(" +
-      "\003\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003*O\n\023F" +
-      "ileCompressionType\022%\n!FILE_COMPRESSION_T" +
-      "YPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n" +
-      "\tJobStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING" +
-      "_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCAN" +
-      "CELLED\020\006B{\n#yandex.cloud.api.datasphere." +
-      "v2.jobsB\004JobsZNgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/datasphere/v2/jo" +
-      "bs;datasphereb\006proto3"
+      "ge\022<\n\targuments\030\n \003(\0132).yandex.cloud.dat" +
+      "asphere.v2.jobs.Argument\022K\n\017output_datas" +
+      "ets\030\013 \003(\01322.yandex.cloud.datasphere.v2.j" +
+      "obs.OutputDatasetDesc\022a\n\034graceful_shutdo" +
+      "wn_parameters\030\014 \001(\0132;.yandex.cloud.datas" +
+      "phere.v2.jobs.GracefulShutdownParameters" +
+      "\"!\n\021CloudInstanceType\022\014\n\004name\030\001 \001(\t\"\262\001\n\026" +
+      "ExtendedWorkingStorage\022Q\n\004type\030\001 \001(\0162C.y" +
+      "andex.cloud.datasphere.v2.jobs.ExtendedW" +
+      "orkingStorage.StorageType\022\017\n\007size_gb\030\002 \001" +
+      "(\003\"4\n\013StorageType\022\034\n\030STORAGE_TYPE_UNSPEC" +
+      "IFIED\020\000\022\007\n\003SSD\020\001\"\'\n\010Argument\022\014\n\004name\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t\"\263\001\n\004File\0227\n\004desc\030\001 \001(\013" +
+      "2).yandex.cloud.datasphere.v2.jobs.FileD" +
+      "esc\022\016\n\006sha256\030\002 \001(\t\022\022\n\nsize_bytes\030\003 \001(\003\022" +
+      "N\n\020compression_type\030\004 \001(\01624.yandex.cloud" +
+      ".datasphere.v2.jobs.FileCompressionType\"" +
+      "O\n\013StorageFile\0223\n\004file\030\001 \001(\0132%.yandex.cl" +
+      "oud.datasphere.v2.jobs.File\022\013\n\003url\030\002 \001(\t" +
+      "\"%\n\010FileDesc\022\014\n\004path\030\001 \001(\t\022\013\n\003var\030\002 \001(\t\"" +
+      "\303\002\n\013Environment\022D\n\004vars\030\001 \003(\01326.yandex.c" +
+      "loud.datasphere.v2.jobs.Environment.Vars" +
+      "Entry\022\"\n\030docker_image_resource_id\030\002 \001(\tH" +
+      "\000\022M\n\021docker_image_spec\030\003 \001(\01320.yandex.cl" +
+      "oud.datasphere.v2.jobs.DockerImageSpecH\000" +
+      "\022>\n\npython_env\030\004 \001(\0132*.yandex.cloud.data" +
+      "sphere.v2.jobs.PythonEnv\032+\n\tVarsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014docker_" +
+      "image\"\204\001\n\017DockerImageSpec\022\021\n\timage_url\030\001" +
+      " \001(\t\022\020\n\010username\030\002 \001(\t\022\035\n\023password_plain" +
+      "_text\030\003 \001(\tH\000\022!\n\027password_ds_secret_name" +
+      "\030\004 \001(\tH\000B\n\n\010password\"]\n\tPythonEnv\022\022\n\ncon" +
+      "da_yaml\030\001 \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.y" +
+      "andex.cloud.datasphere.v2.jobs.File\"\323\001\n\021" +
+      "OutputDatasetDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013descr" +
+      "iption\030\002 \001(\t\022N\n\006labels\030\003 \003(\0132>.yandex.cl" +
+      "oud.datasphere.v2.jobs.OutputDatasetDesc" +
+      ".LabelsEntry\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001" +
+      "(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"]\n\rOutputDataset\022@\n\004desc\030\001 \001(\013" +
+      "22.yandex.cloud.datasphere.v2.jobs.Outpu" +
+      "tDatasetDesc\022\n\n\002id\030\002 \001(\t\"\231\005\n\003Job\022\n\n\002id\030\001" +
+      " \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncrea" +
+      "ted_at\030\004 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022.\n\nstarted_at\030\021 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022/\n\013finished_at\030\005 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022:\n\006status\030\006 \001(\0162*.yand" +
+      "ex.cloud.datasphere.v2.jobs.JobStatus\022\016\n" +
+      "\006config\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022\n\n" +
+      "project_id\030\t \001(\t\022F\n\016job_parameters\030\n \001(\013" +
+      "2..yandex.cloud.datasphere.v2.jobs.JobPa" +
+      "rameters\0223\n\017data_expires_at\030\013 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\024\n\014data_cleared\030\014 " +
+      "\001(\010\022;\n\014output_files\030\r \003(\0132%.yandex.cloud" +
+      ".datasphere.v2.jobs.File\0228\n\tlog_files\030\016 " +
+      "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
+      "le\022?\n\020diagnostic_files\030\017 \003(\0132%.yandex.cl" +
+      "oud.datasphere.v2.jobs.File\022\027\n\017data_size" +
+      "_bytes\030\020 \001(\003\" \n\tJobResult\022\023\n\013return_code" +
+      "\030\001 \001(\003\"X\n\032GracefulShutdownParameters\022*\n\007" +
+      "timeout\030\001 \001(\0132\031.google.protobuf.Duration" +
+      "\022\016\n\006signal\030\002 \001(\003*O\n\023FileCompressionType\022" +
+      "%\n!FILE_COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010" +
+      "\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_S" +
+      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXE" +
+      "CUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCES" +
+      "S\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex." +
+      "cloud.api.datasphere.v2.jobsB\004JobsZNgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/datasphere/v2/jobs;datasphereb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobParameters_descriptor,
-        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", "OutputDatasets", });
+        new java.lang.String[] { "InputFiles", "OutputFiles", "S3MountIds", "DatasetIds", "Cmd", "Env", "AttachProjectDisk", "CloudInstanceTypes", "ExtendedWorkingStorage", "Arguments", "OutputDatasets", "GracefulShutdownParameters", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CloudInstanceType_fieldAccessorTable = new
@@ -20789,6 +21716,12 @@ public final class Jobs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor,
         new java.lang.String[] { "ReturnCode", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor,
+        new java.lang.String[] { "Timeout", "Signal", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.size);
@@ -20796,6 +21729,7 @@ public final class Jobs {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

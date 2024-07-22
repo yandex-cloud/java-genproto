@@ -9827,7 +9827,15 @@ public final class HostGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Filter support is not currently implemented. Any filters are ignored.
+     * A filter expression that filters resources listed in the response.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * Currently you can use filtering only on the [Host.id] field.
+     * To get the host ID, use [HostGroupService.ListHosts] request.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -9836,7 +9844,15 @@ public final class HostGroupServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * Filter support is not currently implemented. Any filters are ignored.
+     * A filter expression that filters resources listed in the response.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * Currently you can use filtering only on the [Host.id] field.
+     * To get the host ID, use [HostGroupService.ListHosts] request.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10068,7 +10084,15 @@ public final class HostGroupServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * Filter support is not currently implemented. Any filters are ignored.
+     * A filter expression that filters resources listed in the response.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * Currently you can use filtering only on the [Host.id] field.
+     * To get the host ID, use [HostGroupService.ListHosts] request.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10089,7 +10113,15 @@ public final class HostGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * Filter support is not currently implemented. Any filters are ignored.
+     * A filter expression that filters resources listed in the response.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+     * Currently you can use filtering only on the [Host.id] field.
+     * To get the host ID, use [HostGroupService.ListHosts] request.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10726,7 +10758,15 @@ public final class HostGroupServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * Filter support is not currently implemented. Any filters are ignored.
+       * A filter expression that filters resources listed in the response.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * Currently you can use filtering only on the [Host.id] field.
+       * To get the host ID, use [HostGroupService.ListHosts] request.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10746,7 +10786,15 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter support is not currently implemented. Any filters are ignored.
+       * A filter expression that filters resources listed in the response.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * Currently you can use filtering only on the [Host.id] field.
+       * To get the host ID, use [HostGroupService.ListHosts] request.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10767,7 +10815,15 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter support is not currently implemented. Any filters are ignored.
+       * A filter expression that filters resources listed in the response.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * Currently you can use filtering only on the [Host.id] field.
+       * To get the host ID, use [HostGroupService.ListHosts] request.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10786,7 +10842,15 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter support is not currently implemented. Any filters are ignored.
+       * A filter expression that filters resources listed in the response.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * Currently you can use filtering only on the [Host.id] field.
+       * To get the host ID, use [HostGroupService.ListHosts] request.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10800,7 +10864,15 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter support is not currently implemented. Any filters are ignored.
+       * A filter expression that filters resources listed in the response.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
+       * Currently you can use filtering only on the [Host.id] field.
+       * To get the host ID, use [HostGroupService.ListHosts] request.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>

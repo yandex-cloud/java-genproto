@@ -3005,6 +3005,16 @@ public final class RegistryServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * If true, registry will be created with pre-setup scanning policy (on push and on schedule every 7 days)
+     * </pre>
+     *
+     * <code>bool secure = 4;</code>
+     * @return The secure.
+     */
+    boolean getSecure();
   }
   /**
    * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRegistryRequest}
@@ -3077,6 +3087,11 @@ public final class RegistryServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 32: {
+
+              secure_ = input.readBool();
               break;
             }
             default: {
@@ -3316,6 +3331,21 @@ public final class RegistryServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int SECURE_FIELD_NUMBER = 4;
+    private boolean secure_;
+    /**
+     * <pre>
+     * If true, registry will be created with pre-setup scanning policy (on push and on schedule every 7 days)
+     * </pre>
+     *
+     * <code>bool secure = 4;</code>
+     * @return The secure.
+     */
+    @java.lang.Override
+    public boolean getSecure() {
+      return secure_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3342,6 +3372,9 @@ public final class RegistryServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           3);
+      if (secure_ != false) {
+        output.writeBool(4, secure_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3367,6 +3400,10 @@ public final class RegistryServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, labels__);
       }
+      if (secure_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, secure_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3388,6 +3425,8 @@ public final class RegistryServiceOuterClass {
           .equals(other.getName())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (getSecure()
+          != other.getSecure()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3407,6 +3446,9 @@ public final class RegistryServiceOuterClass {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
       }
+      hash = (37 * hash) + SECURE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSecure());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3567,6 +3609,8 @@ public final class RegistryServiceOuterClass {
         name_ = "";
 
         internalGetMutableLabels().clear();
+        secure_ = false;
+
         return this;
       }
 
@@ -3598,6 +3642,7 @@ public final class RegistryServiceOuterClass {
         result.name_ = name_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        result.secure_ = secure_;
         onBuilt();
         return result;
       }
@@ -3656,6 +3701,9 @@ public final class RegistryServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.getSecure() != false) {
+          setSecure(other.getSecure());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4044,6 +4092,49 @@ public final class RegistryServiceOuterClass {
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private boolean secure_ ;
+      /**
+       * <pre>
+       * If true, registry will be created with pre-setup scanning policy (on push and on schedule every 7 days)
+       * </pre>
+       *
+       * <code>bool secure = 4;</code>
+       * @return The secure.
+       */
+      @java.lang.Override
+      public boolean getSecure() {
+        return secure_;
+      }
+      /**
+       * <pre>
+       * If true, registry will be created with pre-setup scanning policy (on push and on schedule every 7 days)
+       * </pre>
+       *
+       * <code>bool secure = 4;</code>
+       * @param value The secure to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecure(boolean value) {
+        
+        secure_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, registry will be created with pre-setup scanning policy (on push and on schedule every 7 days)
+       * </pre>
+       *
+       * <code>bool secure = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecure() {
+        
+        secure_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -13000,104 +13091,105 @@ public final class RegistryServiceOuterClass {
       "\006<=1000\"r\n\026ListRegistriesResponse\022?\n\nreg" +
       "istries\030\001 \003(\0132+.yandex.cloud.containerre" +
       "gistry.v1.Registry\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\260\002\n\025CreateRegistryRequest\022\037\n\tfolder_" +
+      "\001(\t\"\300\002\n\025CreateRegistryRequest\022\037\n\tfolder_" +
       "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\307" +
       "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\225\001\n\006labe" +
       "ls\030\003 \003(\0132D.yandex.cloud.containerregistr" +
       "y.v1.CreateRegistryRequest.LabelsEntryB?" +
       "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
-      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Create" +
-      "RegistryMetadata\022\023\n\013registry_id\030\001 \001(\t\"\343\002" +
-      "\n\025UpdateRegistryRequest\022!\n\013registry_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022/\n\004name\030\003 \001(" +
-      "\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\225\001\n" +
-      "\006labels\030\004 \003(\0132D.yandex.cloud.containerre" +
-      "gistry.v1.UpdateRegistryRequest.LabelsEn" +
-      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026U" +
-      "pdateRegistryMetadata\022\023\n\013registry_id\030\001 \001" +
-      "(\t\":\n\025DeleteRegistryRequest\022!\n\013registry_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistry" +
-      "Metadata\022\023\n\013registry_id\030\001 \001(\t\"\203\001\n\026SetIpP" +
-      "ermissionRequest\022!\n\013registry_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022F\n\rip_permission\030\002 \003(\0132/.yan" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022\016\n\006secure\030\004 \001(\010\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"-\n\026CreateRegistryMetadata\022\023\n\013regi" +
+      "stry_id\030\001 \001(\t\"\343\002\n\025UpdateRegistryRequest\022" +
+      "!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013up" +
+      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1" +
+      ",61}[a-z0-9]\022\225\001\n\006labels\030\004 \003(\0132D.yandex.c" +
+      "loud.containerregistry.v1.UpdateRegistry" +
+      "Request.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071" +
+      "\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a" +
+      "-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"-\n\026UpdateRegistryMetadata\022\023\n" +
+      "\013registry_id\030\001 \001(\t\":\n\025DeleteRegistryRequ" +
+      "est\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-" +
+      "\n\026DeleteRegistryMetadata\022\023\n\013registry_id\030" +
+      "\001 \001(\t\"\203\001\n\026SetIpPermissionRequest\022!\n\013regi" +
+      "stry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\rip_permis" +
+      "sion\030\002 \003(\0132/.yandex.cloud.containerregis" +
+      "try.v1.IpPermission\"\222\001\n\031UpdateIpPermissi" +
+      "onRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022R\n\024ip_permission_deltas\030\002 \003(\01324.yan" +
       "dex.cloud.containerregistry.v1.IpPermiss" +
-      "ion\"\222\001\n\031UpdateIpPermissionRequest\022!\n\013reg" +
-      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022R\n\024ip_permi" +
-      "ssion_deltas\030\002 \003(\01324.yandex.cloud.contai" +
-      "nerregistry.v1.IpPermissionDelta\"<\n\027List" +
-      "IpPermissionRequest\022!\n\013registry_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"a\n\031ListIpPermissionsRespo" +
-      "nse\022D\n\013permissions\030\001 \003(\0132/.yandex.cloud." +
-      "containerregistry.v1.IpPermission\".\n\027Set" +
-      "IpPermissionMetadata\022\023\n\013registry_id\030\001 \001(" +
-      "\t\"1\n\032UpdateIpPermissionMetadata\022\023\n\013regis" +
-      "try_id\030\001 \001(\t2\273\022\n\017RegistryService\022\242\001\n\003Get" +
-      "\0225.yandex.cloud.containerregistry.v1.Get" +
-      "RegistryRequest\032+.yandex.cloud.container" +
-      "registry.v1.Registry\"7\202\323\344\223\0021\022//container" +
-      "-registry/v1/registries/{registry_id}\022\246\001" +
-      "\n\004List\0228.yandex.cloud.containerregistry." +
-      "v1.ListRegistriesRequest\0329.yandex.cloud." +
-      "containerregistry.v1.ListRegistriesRespo" +
-      "nse\")\202\323\344\223\002#\022!/container-registry/v1/regi" +
-      "stries\022\271\001\n\006Create\0228.yandex.cloud.contain" +
-      "erregistry.v1.CreateRegistryRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"R\202\323\344\223\002&\"!" +
-      "/container-registry/v1/registries:\001*\262\322*\"" +
-      "\n\026CreateRegistryMetadata\022\010Registry\022\307\001\n\006U" +
-      "pdate\0228.yandex.cloud.containerregistry.v" +
-      "1.UpdateRegistryRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"`\202\323\344\223\00242//container-r" +
-      "egistry/v1/registries/{registry_id}:\001*\262\322" +
-      "*\"\n\026UpdateRegistryMetadata\022\010Registry\022\321\001\n" +
-      "\006Delete\0228.yandex.cloud.containerregistry" +
-      ".v1.DeleteRegistryRequest\032!.yandex.cloud" +
-      ".operation.Operation\"j\202\323\344\223\0021*//container" +
-      "-registry/v1/registries/{registry_id}\262\322*" +
-      "/\n\026DeleteRegistryMetadata\022\025google.protob" +
-      "uf.Empty\022\301\001\n\022ListAccessBindings\022..yandex" +
-      ".cloud.access.ListAccessBindingsRequest\032" +
-      "/.yandex.cloud.access.ListAccessBindings" +
-      "Response\"J\202\323\344\223\002D\022B/container-registry/v1" +
-      "/registries/{resource_id}:listAccessBind" +
-      "ings\022\361\001\n\021SetAccessBindings\022-.yandex.clou" +
-      "d.access.SetAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\211\001\202\323\344\223\002F\"A/" +
-      "container-registry/v1/registries/{resour" +
-      "ce_id}:setAccessBindings:\001*\262\322*9\n access." +
-      "SetAccessBindingsMetadata\022\025google.protob" +
-      "uf.Empty\022\375\001\n\024UpdateAccessBindings\0220.yand" +
-      "ex.cloud.access.UpdateAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\217" +
-      "\001\202\323\344\223\002I\"D/container-registry/v1/registri" +
-      "es/{resource_id}:updateAccessBindings:\001*" +
-      "\262\322*<\n#access.UpdateAccessBindingsMetadat" +
-      "a\022\025google.protobuf.Empty\022\326\001\n\020ListIpPermi" +
-      "ssion\022:.yandex.cloud.containerregistry.v" +
-      "1.ListIpPermissionRequest\032<.yandex.cloud" +
-      ".containerregistry.v1.ListIpPermissionsR" +
-      "esponse\"H\202\323\344\223\002B\022@/container-registry/v1/" +
-      "registries/{registry_id}:listIpPermissio" +
-      "n\022\357\001\n\017SetIpPermission\0229.yandex.cloud.con" +
-      "tainerregistry.v1.SetIpPermissionRequest" +
-      "\032!.yandex.cloud.operation.Operation\"~\202\323\344" +
-      "\223\002D\"?/container-registry/v1/registries/{" +
-      "registry_id}:setIpPermission:\001*\262\322*0\n\027Set" +
-      "IpPermissionMetadata\022\025google.protobuf.Em" +
-      "pty\022\374\001\n\022UpdateIpPermission\022<.yandex.clou" +
-      "d.containerregistry.v1.UpdateIpPermissio" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\204\001\202\323\344\223\002G\"B/container-registry/v1/reg" +
-      "istries/{registry_id}:updateIpPermission" +
-      ":\001*\262\322*3\n\032UpdateIpPermissionMetadata\022\025goo" +
-      "gle.protobuf.EmptyB\200\001\n%yandex.cloud.api." +
-      "containerregistry.v1ZWgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/container" +
-      "registry/v1;containerregistryb\006proto3"
+      "ionDelta\"<\n\027ListIpPermissionRequest\022!\n\013r" +
+      "egistry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n\031ListIp" +
+      "PermissionsResponse\022D\n\013permissions\030\001 \003(\013" +
+      "2/.yandex.cloud.containerregistry.v1.IpP" +
+      "ermission\".\n\027SetIpPermissionMetadata\022\023\n\013" +
+      "registry_id\030\001 \001(\t\"1\n\032UpdateIpPermissionM" +
+      "etadata\022\023\n\013registry_id\030\001 \001(\t2\273\022\n\017Registr" +
+      "yService\022\242\001\n\003Get\0225.yandex.cloud.containe" +
+      "rregistry.v1.GetRegistryRequest\032+.yandex" +
+      ".cloud.containerregistry.v1.Registry\"7\202\323" +
+      "\344\223\0021\022//container-registry/v1/registries/" +
+      "{registry_id}\022\246\001\n\004List\0228.yandex.cloud.co" +
+      "ntainerregistry.v1.ListRegistriesRequest" +
+      "\0329.yandex.cloud.containerregistry.v1.Lis" +
+      "tRegistriesResponse\")\202\323\344\223\002#\022!/container-" +
+      "registry/v1/registries\022\271\001\n\006Create\0228.yand" +
+      "ex.cloud.containerregistry.v1.CreateRegi" +
+      "stryRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"R\202\323\344\223\002&\"!/container-registry/v1/r" +
+      "egistries:\001*\262\322*\"\n\026CreateRegistryMetadata" +
+      "\022\010Registry\022\307\001\n\006Update\0228.yandex.cloud.con" +
+      "tainerregistry.v1.UpdateRegistryRequest\032" +
+      "!.yandex.cloud.operation.Operation\"`\202\323\344\223" +
+      "\00242//container-registry/v1/registries/{r" +
+      "egistry_id}:\001*\262\322*\"\n\026UpdateRegistryMetada" +
+      "ta\022\010Registry\022\321\001\n\006Delete\0228.yandex.cloud.c" +
+      "ontainerregistry.v1.DeleteRegistryReques" +
+      "t\032!.yandex.cloud.operation.Operation\"j\202\323" +
+      "\344\223\0021*//container-registry/v1/registries/" +
+      "{registry_id}\262\322*/\n\026DeleteRegistryMetadat" +
+      "a\022\025google.protobuf.Empty\022\301\001\n\022ListAccessB" +
+      "indings\022..yandex.cloud.access.ListAccess" +
+      "BindingsRequest\032/.yandex.cloud.access.Li" +
+      "stAccessBindingsResponse\"J\202\323\344\223\002D\022B/conta" +
+      "iner-registry/v1/registries/{resource_id" +
+      "}:listAccessBindings\022\361\001\n\021SetAccessBindin" +
+      "gs\022-.yandex.cloud.access.SetAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\211\001\202\323\344\223\002F\"A/container-registry/v1/re" +
+      "gistries/{resource_id}:setAccessBindings" +
+      ":\001*\262\322*9\n access.SetAccessBindingsMetadat" +
+      "a\022\025google.protobuf.Empty\022\375\001\n\024UpdateAcces" +
+      "sBindings\0220.yandex.cloud.access.UpdateAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\217\001\202\323\344\223\002I\"D/container-regi" +
+      "stry/v1/registries/{resource_id}:updateA" +
+      "ccessBindings:\001*\262\322*<\n#access.UpdateAcces" +
+      "sBindingsMetadata\022\025google.protobuf.Empty" +
+      "\022\326\001\n\020ListIpPermission\022:.yandex.cloud.con" +
+      "tainerregistry.v1.ListIpPermissionReques" +
+      "t\032<.yandex.cloud.containerregistry.v1.Li" +
+      "stIpPermissionsResponse\"H\202\323\344\223\002B\022@/contai" +
+      "ner-registry/v1/registries/{registry_id}" +
+      ":listIpPermission\022\357\001\n\017SetIpPermission\0229." +
+      "yandex.cloud.containerregistry.v1.SetIpP" +
+      "ermissionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"~\202\323\344\223\002D\"?/container-registry" +
+      "/v1/registries/{registry_id}:setIpPermis" +
+      "sion:\001*\262\322*0\n\027SetIpPermissionMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\374\001\n\022UpdateIpPermissi" +
+      "on\022<.yandex.cloud.containerregistry.v1.U" +
+      "pdateIpPermissionRequest\032!.yandex.cloud." +
+      "operation.Operation\"\204\001\202\323\344\223\002G\"B/container" +
+      "-registry/v1/registries/{registry_id}:up" +
+      "dateIpPermission:\001*\262\322*3\n\032UpdateIpPermiss" +
+      "ionMetadata\022\025google.protobuf.EmptyB\200\001\n%y" +
+      "andex.cloud.api.containerregistry.v1ZWgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/containerregistry/v1;containerreg" +
+      "istryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13134,7 +13226,7 @@ public final class RegistryServiceOuterClass {
     internal_static_yandex_cloud_containerregistry_v1_CreateRegistryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_CreateRegistryRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Labels", });
+        new java.lang.String[] { "FolderId", "Name", "Labels", "Secure", });
     internal_static_yandex_cloud_containerregistry_v1_CreateRegistryRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_containerregistry_v1_CreateRegistryRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_containerregistry_v1_CreateRegistryRequest_LabelsEntry_fieldAccessorTable = new
