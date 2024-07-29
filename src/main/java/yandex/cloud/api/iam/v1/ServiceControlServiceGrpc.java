@@ -204,6 +204,37 @@ public final class ServiceControlServiceGrpc {
     return getDisableMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest,
+      yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> getResolveAgentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResolveAgent",
+      requestType = yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest.class,
+      responseType = yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest,
+      yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> getResolveAgentMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest, yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> getResolveAgentMethod;
+    if ((getResolveAgentMethod = ServiceControlServiceGrpc.getResolveAgentMethod) == null) {
+      synchronized (ServiceControlServiceGrpc.class) {
+        if ((getResolveAgentMethod = ServiceControlServiceGrpc.getResolveAgentMethod) == null) {
+          ServiceControlServiceGrpc.getResolveAgentMethod = getResolveAgentMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest, yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResolveAgent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceControlServiceMethodDescriptorSupplier("ResolveAgent"))
+              .build();
+        }
+      }
+    }
+    return getResolveAgentMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -316,6 +347,16 @@ public final class ServiceControlServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Resolve agent service account for the service in the specified resource container.
+     * </pre>
+     */
+    public void resolveAgent(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResolveAgentMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -360,6 +401,13 @@ public final class ServiceControlServiceGrpc {
                 yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.DisableServiceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DISABLE)))
+          .addMethod(
+            getResolveAgentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest,
+                yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent>(
+                  this, METHODID_RESOLVE_AGENT)))
           .build();
     }
   }
@@ -447,6 +495,17 @@ public final class ServiceControlServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisableMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Resolve agent service account for the service in the specified resource container.
+     * </pre>
+     */
+    public void resolveAgent(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResolveAgentMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -525,6 +584,16 @@ public final class ServiceControlServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation disable(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.DisableServiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resolve agent service account for the service in the specified resource container.
+     * </pre>
+     */
+    public yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent resolveAgent(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResolveAgentMethod(), getCallOptions(), request);
     }
   }
 
@@ -611,6 +680,17 @@ public final class ServiceControlServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisableMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Resolve agent service account for the service in the specified resource container.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent> resolveAgent(
+        yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResolveAgentMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -619,6 +699,7 @@ public final class ServiceControlServiceGrpc {
   private static final int METHODID_RESUME = 3;
   private static final int METHODID_PAUSE = 4;
   private static final int METHODID_DISABLE = 5;
+  private static final int METHODID_RESOLVE_AGENT = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -660,6 +741,10 @@ public final class ServiceControlServiceGrpc {
         case METHODID_DISABLE:
           serviceImpl.disable((yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.DisableServiceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESOLVE_AGENT:
+          serviceImpl.resolveAgent((yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResolveServiceAgentRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -728,6 +813,7 @@ public final class ServiceControlServiceGrpc {
               .addMethod(getResumeMethod())
               .addMethod(getPauseMethod())
               .addMethod(getDisableMethod())
+              .addMethod(getResolveAgentMethod())
               .build();
         }
       }

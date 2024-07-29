@@ -266,6 +266,37 @@ public final class ClusterServiceGrpc {
     return getStopMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Move",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getMoveMethod;
+    if ((getMoveMethod = ClusterServiceGrpc.getMoveMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getMoveMethod = ClusterServiceGrpc.getMoveMethod) == null) {
+          ClusterServiceGrpc.getMoveMethod = getMoveMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Move"))
+              .build();
+        }
+      }
+    }
+    return getMoveMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsRequest,
       yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterOperationsResponse> getListOperationsMethod;
 
@@ -648,6 +679,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified Greenplum® cluster to the specified folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
@@ -784,6 +825,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
+          .addMethod(
+            getMoveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_MOVE)))
           .addMethod(
             getListOperationsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -948,6 +996,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified Greenplum® cluster to the specified folder.
+     * </pre>
+     */
+    public void move(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1135,6 +1194,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Moves the specified Greenplum® cluster to the specified folder.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1327,6 +1396,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Moves the specified Greenplum® cluster to the specified folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> move(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieves the list of Operation resources for the specified cluster.
      * </pre>
      */
@@ -1411,14 +1491,15 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_DELETE = 5;
   private static final int METHODID_START = 6;
   private static final int METHODID_STOP = 7;
-  private static final int METHODID_LIST_OPERATIONS = 8;
-  private static final int METHODID_LIST_MASTER_HOSTS = 9;
-  private static final int METHODID_LIST_SEGMENT_HOSTS = 10;
-  private static final int METHODID_LIST_LOGS = 11;
-  private static final int METHODID_STREAM_LOGS = 12;
-  private static final int METHODID_LIST_BACKUPS = 13;
-  private static final int METHODID_BACKUP = 14;
-  private static final int METHODID_RESTORE = 15;
+  private static final int METHODID_MOVE = 8;
+  private static final int METHODID_LIST_OPERATIONS = 9;
+  private static final int METHODID_LIST_MASTER_HOSTS = 10;
+  private static final int METHODID_LIST_SEGMENT_HOSTS = 11;
+  private static final int METHODID_LIST_LOGS = 12;
+  private static final int METHODID_STREAM_LOGS = 13;
+  private static final int METHODID_LIST_BACKUPS = 14;
+  private static final int METHODID_BACKUP = 15;
+  private static final int METHODID_RESTORE = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1467,6 +1548,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_STOP:
           serviceImpl.stop((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.StopClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_MOVE:
+          serviceImpl.move((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.MoveClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -1570,6 +1655,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())
+              .addMethod(getMoveMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListMasterHostsMethod())
               .addMethod(getListSegmentHostsMethod())

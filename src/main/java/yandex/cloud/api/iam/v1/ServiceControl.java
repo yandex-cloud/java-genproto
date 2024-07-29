@@ -1530,11 +1530,992 @@ public final class ServiceControl {
 
   }
 
+  public interface ServiceAgentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.ServiceAgent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the agent service account.
+     * </pre>
+     *
+     * <code>string service_account_id = 1;</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the agent service account.
+     * </pre>
+     *
+     * <code>string service_account_id = 1;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * ID of the service.
+     * </pre>
+     *
+     * <code>string service_id = 2;</code>
+     * @return The serviceId.
+     */
+    java.lang.String getServiceId();
+    /**
+     * <pre>
+     * ID of the service.
+     * </pre>
+     *
+     * <code>string service_id = 2;</code>
+     * @return The bytes for serviceId.
+     */
+    com.google.protobuf.ByteString
+        getServiceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the microservice.
+     * </pre>
+     *
+     * <code>string microservice_id = 3;</code>
+     * @return The microserviceId.
+     */
+    java.lang.String getMicroserviceId();
+    /**
+     * <pre>
+     * ID of the microservice.
+     * </pre>
+     *
+     * <code>string microservice_id = 3;</code>
+     * @return The bytes for microserviceId.
+     */
+    com.google.protobuf.ByteString
+        getMicroserviceIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.ServiceAgent}
+   */
+  public static final class ServiceAgent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.ServiceAgent)
+      ServiceAgentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceAgent.newBuilder() to construct.
+    private ServiceAgent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceAgent() {
+      serviceAccountId_ = "";
+      serviceId_ = "";
+      microserviceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceAgent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceAgent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              microserviceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.ServiceControl.internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.ServiceControl.internal_static_yandex_cloud_iam_v1_ServiceAgent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.class, yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.Builder.class);
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the agent service account.
+     * </pre>
+     *
+     * <code>string service_account_id = 1;</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the agent service account.
+     * </pre>
+     *
+     * <code>string service_account_id = 1;</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceId_;
+    /**
+     * <pre>
+     * ID of the service.
+     * </pre>
+     *
+     * <code>string service_id = 2;</code>
+     * @return The serviceId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceId() {
+      java.lang.Object ref = serviceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service.
+     * </pre>
+     *
+     * <code>string service_id = 2;</code>
+     * @return The bytes for serviceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceIdBytes() {
+      java.lang.Object ref = serviceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MICROSERVICE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object microserviceId_;
+    /**
+     * <pre>
+     * ID of the microservice.
+     * </pre>
+     *
+     * <code>string microservice_id = 3;</code>
+     * @return The microserviceId.
+     */
+    @java.lang.Override
+    public java.lang.String getMicroserviceId() {
+      java.lang.Object ref = microserviceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        microserviceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the microservice.
+     * </pre>
+     *
+     * <code>string microservice_id = 3;</code>
+     * @return The bytes for microserviceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMicroserviceIdBytes() {
+      java.lang.Object ref = microserviceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        microserviceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(microserviceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, microserviceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceAccountId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(microserviceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, microserviceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent other = (yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent) obj;
+
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!getServiceId()
+          .equals(other.getServiceId())) return false;
+      if (!getMicroserviceId()
+          .equals(other.getMicroserviceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (37 * hash) + SERVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceId().hashCode();
+      hash = (37 * hash) + MICROSERVICE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMicroserviceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.ServiceAgent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.ServiceAgent)
+        yandex.cloud.api.iam.v1.ServiceControl.ServiceAgentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.ServiceControl.internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.ServiceControl.internal_static_yandex_cloud_iam_v1_ServiceAgent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.class, yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        serviceAccountId_ = "";
+
+        serviceId_ = "";
+
+        microserviceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.ServiceControl.internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent build() {
+        yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent buildPartial() {
+        yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent result = new yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent(this);
+        result.serviceAccountId_ = serviceAccountId_;
+        result.serviceId_ = serviceId_;
+        result.microserviceId_ = microserviceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent) {
+          return mergeFrom((yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent other) {
+        if (other == yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent.getDefaultInstance()) return this;
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (!other.getServiceId().isEmpty()) {
+          serviceId_ = other.serviceId_;
+          onChanged();
+        }
+        if (!other.getMicroserviceId().isEmpty()) {
+          microserviceId_ = other.microserviceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the agent service account.
+       * </pre>
+       *
+       * <code>string service_account_id = 1;</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the agent service account.
+       * </pre>
+       *
+       * <code>string service_account_id = 1;</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the agent service account.
+       * </pre>
+       *
+       * <code>string service_account_id = 1;</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the agent service account.
+       * </pre>
+       *
+       * <code>string service_account_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the agent service account.
+       * </pre>
+       *
+       * <code>string service_account_id = 1;</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceId_ = "";
+      /**
+       * <pre>
+       * ID of the service.
+       * </pre>
+       *
+       * <code>string service_id = 2;</code>
+       * @return The serviceId.
+       */
+      public java.lang.String getServiceId() {
+        java.lang.Object ref = serviceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service.
+       * </pre>
+       *
+       * <code>string service_id = 2;</code>
+       * @return The bytes for serviceId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceIdBytes() {
+        java.lang.Object ref = serviceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service.
+       * </pre>
+       *
+       * <code>string service_id = 2;</code>
+       * @param value The serviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service.
+       * </pre>
+       *
+       * <code>string service_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceId() {
+        
+        serviceId_ = getDefaultInstance().getServiceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service.
+       * </pre>
+       *
+       * <code>string service_id = 2;</code>
+       * @param value The bytes for serviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object microserviceId_ = "";
+      /**
+       * <pre>
+       * ID of the microservice.
+       * </pre>
+       *
+       * <code>string microservice_id = 3;</code>
+       * @return The microserviceId.
+       */
+      public java.lang.String getMicroserviceId() {
+        java.lang.Object ref = microserviceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          microserviceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the microservice.
+       * </pre>
+       *
+       * <code>string microservice_id = 3;</code>
+       * @return The bytes for microserviceId.
+       */
+      public com.google.protobuf.ByteString
+          getMicroserviceIdBytes() {
+        java.lang.Object ref = microserviceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          microserviceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the microservice.
+       * </pre>
+       *
+       * <code>string microservice_id = 3;</code>
+       * @param value The microserviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMicroserviceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        microserviceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the microservice.
+       * </pre>
+       *
+       * <code>string microservice_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMicroserviceId() {
+        
+        microserviceId_ = getDefaultInstance().getMicroserviceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the microservice.
+       * </pre>
+       *
+       * <code>string microservice_id = 3;</code>
+       * @param value The bytes for microserviceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMicroserviceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        microserviceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.ServiceAgent)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.ServiceAgent)
+    private static final yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent();
+    }
+
+    public static yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceAgent>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceAgent>() {
+      @java.lang.Override
+      public ServiceAgent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceAgent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceAgent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceAgent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.ServiceControl.ServiceAgent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_Service_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_Service_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_ServiceAgent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1555,9 +2536,12 @@ public final class ServiceControl {
       "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007ENABLE" +
       "D\020\001\022\n\n\006PAUSED\020\002\022\014\n\010DISABLED\020\003\022\014\n\010ENABLIN" +
       "G\020\004\022\014\n\010RESUMING\020\005\022\013\n\007PAUSING\020\006\022\r\n\tDISABL" +
-      "ING\020\007\022\t\n\005ERROR\020\010BV\n\027yandex.cloud.api.iam" +
-      ".v1Z;github.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/iam/v1;iamb\006proto3"
+      "ING\020\007\022\t\n\005ERROR\020\010\"W\n\014ServiceAgent\022\032\n\022serv" +
+      "ice_account_id\030\001 \001(\t\022\022\n\nservice_id\030\002 \001(\t" +
+      "\022\027\n\017microservice_id\030\003 \001(\tBV\n\027yandex.clou" +
+      "d.api.iam.v1Z;github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/iam/v1;iamb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1571,6 +2555,12 @@ public final class ServiceControl {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_Service_descriptor,
         new java.lang.String[] { "ServiceId", "Resource", "UpdatedAt", "Status", });
+    internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_iam_v1_ServiceAgent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_ServiceAgent_descriptor,
+        new java.lang.String[] { "ServiceAccountId", "ServiceId", "MicroserviceId", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.iam.v1.ResourceOuterClass.getDescriptor();
   }
