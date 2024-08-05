@@ -10091,6 +10091,16 @@ public final class DSPJS {
      */
     com.google.protobuf.ByteString
         getReasonBytes();
+
+    /**
+     * <pre>
+     * If the job is launched with graceful shutdown support, the shutdown will be performed gracefully
+     * </pre>
+     *
+     * <code>bool graceful = 3;</code>
+     * @return The graceful.
+     */
+    boolean getGraceful();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.CancelProjectJobRequest}
@@ -10149,6 +10159,11 @@ public final class DSPJS {
               java.lang.String s = input.readStringRequireUtf8();
 
               reason_ = s;
+              break;
+            }
+            case 24: {
+
+              graceful_ = input.readBool();
               break;
             }
             default: {
@@ -10275,6 +10290,21 @@ public final class DSPJS {
       }
     }
 
+    public static final int GRACEFUL_FIELD_NUMBER = 3;
+    private boolean graceful_;
+    /**
+     * <pre>
+     * If the job is launched with graceful shutdown support, the shutdown will be performed gracefully
+     * </pre>
+     *
+     * <code>bool graceful = 3;</code>
+     * @return The graceful.
+     */
+    @java.lang.Override
+    public boolean getGraceful() {
+      return graceful_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10295,6 +10325,9 @@ public final class DSPJS {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
       }
+      if (graceful_ != false) {
+        output.writeBool(3, graceful_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10309,6 +10342,10 @@ public final class DSPJS {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      }
+      if (graceful_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, graceful_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10329,6 +10366,8 @@ public final class DSPJS {
           .equals(other.getJobId())) return false;
       if (!getReason()
           .equals(other.getReason())) return false;
+      if (getGraceful()
+          != other.getGraceful()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10344,6 +10383,9 @@ public final class DSPJS {
       hash = (53 * hash) + getJobId().hashCode();
       hash = (37 * hash) + REASON_FIELD_NUMBER;
       hash = (53 * hash) + getReason().hashCode();
+      hash = (37 * hash) + GRACEFUL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getGraceful());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10481,6 +10523,8 @@ public final class DSPJS {
 
         reason_ = "";
 
+        graceful_ = false;
+
         return this;
       }
 
@@ -10509,6 +10553,7 @@ public final class DSPJS {
         yandex.cloud.api.datasphere.v2.jobs.DSPJS.CancelProjectJobRequest result = new yandex.cloud.api.datasphere.v2.jobs.DSPJS.CancelProjectJobRequest(this);
         result.jobId_ = jobId_;
         result.reason_ = reason_;
+        result.graceful_ = graceful_;
         onBuilt();
         return result;
       }
@@ -10564,6 +10609,9 @@ public final class DSPJS {
         if (!other.getReason().isEmpty()) {
           reason_ = other.reason_;
           onChanged();
+        }
+        if (other.getGraceful() != false) {
+          setGraceful(other.getGraceful());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10782,6 +10830,49 @@ public final class DSPJS {
   checkByteStringIsUtf8(value);
         
         reason_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean graceful_ ;
+      /**
+       * <pre>
+       * If the job is launched with graceful shutdown support, the shutdown will be performed gracefully
+       * </pre>
+       *
+       * <code>bool graceful = 3;</code>
+       * @return The graceful.
+       */
+      @java.lang.Override
+      public boolean getGraceful() {
+        return graceful_;
+      }
+      /**
+       * <pre>
+       * If the job is launched with graceful shutdown support, the shutdown will be performed gracefully
+       * </pre>
+       *
+       * <code>bool graceful = 3;</code>
+       * @param value The graceful to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGraceful(boolean value) {
+        
+        graceful_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the job is launched with graceful shutdown support, the shutdown will be performed gracefully
+       * </pre>
+       *
+       * <code>bool graceful = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGraceful() {
+        
+        graceful_ = false;
         onChanged();
         return this;
       }
@@ -26452,102 +26543,102 @@ public final class DSPJS {
       "sult\030\002 \001(\0132*.yandex.cloud.datasphere.v2." +
       "jobs.JobResult\"N\n\031ExecuteProjectJobMetad" +
       "ata\0221\n\003job\030\001 \001(\0132$.yandex.cloud.datasphe" +
-      "re.v2.jobs.Job\"9\n\027CancelProjectJobReques" +
-      "t\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reason\030\002 \001(\t\">\n\034Rea" +
-      "dProjectJobStdLogsRequest\022\016\n\006job_id\030\001 \001(" +
-      "\t\022\016\n\006offset\030\002 \001(\003\"f\n\035ReadProjectJobStdLo" +
-      "gsResponse\0225\n\004logs\030\001 \003(\0132\'.yandex.cloud." +
-      "datasphere.v2.jobs.StdLog\022\016\n\006offset\030\002 \001(" +
-      "\003\";\n\031ReadProjectJobLogsRequest\022\016\n\006job_id" +
-      "\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003\"g\n\032ReadProjectJob" +
-      "LogsResponse\0229\n\004logs\030\001 \003(\0132+.yandex.clou" +
-      "d.datasphere.v2.jobs.LogMessage\022\016\n\006offse" +
-      "t\030\002 \001(\003\"u\n\036DownloadProjectJobFilesReques" +
-      "t\022\024\n\006job_id\030\001 \001(\tB\004\350\3071\001\022=\n\005files\030\002 \003(\0132%" +
-      ".yandex.cloud.datasphere.v2.jobs.FileB\007\202" +
-      "\3101\003>=1\"g\n\037DownloadProjectJobFilesRespons" +
-      "e\022D\n\016download_files\030\001 \003(\0132,.yandex.cloud" +
-      ".datasphere.v2.jobs.StorageFile\"n\n\025ListP" +
-      "rojectJobRequest\022\022\n\nproject_id\030\001 \001(\t\022\021\n\t" +
-      "page_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\032\n\006f" +
-      "ilter\030\004 \001(\tB\n\212\3101\006<=1000\"e\n\026ListProjectJo" +
-      "bResponse\0222\n\004jobs\030\001 \003(\0132$.yandex.cloud.d" +
-      "atasphere.v2.jobs.Job\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"&\n\024GetProjectJobRequest\022\016\n\006job_id" +
-      "\030\001 \001(\t\")\n\027DeleteProjectJobRequest\022\016\n\006job" +
-      "_id\030\001 \001(\t\"*\n\030DeleteProjectJobMetadata\022\016\n" +
-      "\006job_id\030\001 \001(\t\"-\n\033DeleteProjectJobDataReq" +
-      "uest\022\016\n\006job_id\030\001 \001(\t\".\n\034DeleteProjectJob" +
-      "DataMetadata\022\016\n\006job_id\030\001 \001(\t\"\036\n\034DeletePr" +
-      "ojectJobDataResponse\"4\n\036DeleteAllProject" +
-      "JobDataRequest\022\022\n\nproject_id\030\001 \001(\t\"5\n\037De" +
-      "leteAllProjectJobDataMetadata\022\022\n\nproject" +
-      "_id\030\001 \001(\t\"!\n\037DeleteAllProjectJobDataResp" +
-      "onse\"U\n\033SetProjectJobDataTtlRequest\022\016\n\006j" +
-      "ob_id\030\001 \001(\t\022&\n\003ttl\030\002 \001(\0132\031.google.protob" +
-      "uf.Duration\"\036\n\034SetProjectJobDataTtlRespo" +
-      "nse\"\205\001\n\006StdLog\022\017\n\007content\030\001 \001(\014\022:\n\004type\030" +
-      "\002 \001(\0162,.yandex.cloud.datasphere.v2.jobs." +
-      "StdLog.Type\".\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
-      "\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\002\"\270\001\n\nLogMessage\022\017\n\007co" +
-      "ntent\030\001 \001(\014\022.\n\ncreated_at\030\002 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022J\n\017standard_stream\030\003" +
-      " \001(\0162/.yandex.cloud.datasphere.v2.jobs.S" +
-      "tandardStreamH\000\022\023\n\tfile_path\030\004 \001(\tH\000B\010\n\006" +
-      "source*C\n\016StandardStream\022\037\n\033STANDARD_STR" +
-      "EAM_UNSPECIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\0022\203\017\n\021" +
-      "ProjectJobService\022\237\001\n\006Create\0228.yandex.cl" +
-      "oud.datasphere.v2.jobs.CreateProjectJobR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"8\262\322*4\n\030CreateProjectJobMetadata\022\030Creat" +
-      "eProjectJobResponse\022\233\001\n\005Clone\0227.yandex.c" +
-      "loud.datasphere.v2.jobs.CloneProjectJobR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"6\262\322*2\n\027CloneProjectJobMetadata\022\027CloneP" +
-      "rojectJobResponse\022\243\001\n\007Execute\0229.yandex.c" +
-      "loud.datasphere.v2.jobs.ExecuteProjectJo" +
-      "bRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\":\262\322*6\n\031ExecuteProjectJobMetadata\022\031Ex" +
-      "ecuteProjectJobResponse\022Z\n\006Cancel\0228.yand" +
-      "ex.cloud.datasphere.v2.jobs.CancelProjec" +
-      "tJobRequest\032\026.google.protobuf.Empty\022\223\001\n\013" +
-      "ReadStdLogs\022=.yandex.cloud.datasphere.v2" +
-      ".jobs.ReadProjectJobStdLogsRequest\032>.yan" +
-      "dex.cloud.datasphere.v2.jobs.ReadProject" +
-      "JobStdLogsResponse\"\003\210\002\0010\001\022\205\001\n\010ReadLogs\022:" +
-      ".yandex.cloud.datasphere.v2.jobs.ReadPro" +
-      "jectJobLogsRequest\032;.yandex.cloud.datasp" +
-      "here.v2.jobs.ReadProjectJobLogsResponse0" +
-      "\001\022\225\001\n\020DownloadJobFiles\022?.yandex.cloud.da" +
-      "tasphere.v2.jobs.DownloadProjectJobFiles" +
-      "Request\032@.yandex.cloud.datasphere.v2.job" +
-      "s.DownloadProjectJobFilesResponse\022w\n\004Lis" +
-      "t\0226.yandex.cloud.datasphere.v2.jobs.List" +
-      "ProjectJobRequest\0327.yandex.cloud.datasph" +
-      "ere.v2.jobs.ListProjectJobResponse\022b\n\003Ge" +
-      "t\0225.yandex.cloud.datasphere.v2.jobs.GetP" +
-      "rojectJobRequest\032$.yandex.cloud.datasphe" +
-      "re.v2.jobs.Job\022\234\001\n\006Delete\0228.yandex.cloud" +
-      ".datasphere.v2.jobs.DeleteProjectJobRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"5" +
-      "\262\322*1\n\030DeleteProjectJobMetadata\022\025google.p" +
-      "rotobuf.Empty\022\257\001\n\nDeleteData\022<.yandex.cl" +
-      "oud.datasphere.v2.jobs.DeleteProjectJobD" +
-      "ataRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"@\262\322*<\n\034DeleteProjectJobDataMetadat" +
-      "a\022\034DeleteProjectJobDataResponse\022\273\001\n\rDele" +
-      "teAllData\022?.yandex.cloud.datasphere.v2.j" +
-      "obs.DeleteAllProjectJobDataRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"F\262\322*B\n\037Del" +
-      "eteAllProjectJobDataMetadata\022\037DeleteAllP" +
-      "rojectJobDataResponse\022\211\001\n\nSetDataTtl\022<.y" +
+      "re.v2.jobs.Job\"K\n\027CancelProjectJobReques" +
+      "t\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reason\030\002 \001(\t\022\020\n\010gra" +
+      "ceful\030\003 \001(\010\">\n\034ReadProjectJobStdLogsRequ" +
+      "est\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003\"f\n\035R" +
+      "eadProjectJobStdLogsResponse\0225\n\004logs\030\001 \003" +
+      "(\0132\'.yandex.cloud.datasphere.v2.jobs.Std" +
+      "Log\022\016\n\006offset\030\002 \001(\003\";\n\031ReadProjectJobLog" +
+      "sRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003" +
+      "\"g\n\032ReadProjectJobLogsResponse\0229\n\004logs\030\001" +
+      " \003(\0132+.yandex.cloud.datasphere.v2.jobs.L" +
+      "ogMessage\022\016\n\006offset\030\002 \001(\003\"u\n\036DownloadPro" +
+      "jectJobFilesRequest\022\024\n\006job_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022=\n\005files\030\002 \003(\0132%.yandex.cloud.datasphe" +
+      "re.v2.jobs.FileB\007\202\3101\003>=1\"g\n\037DownloadProj" +
+      "ectJobFilesResponse\022D\n\016download_files\030\001 " +
+      "\003(\0132,.yandex.cloud.datasphere.v2.jobs.St" +
+      "orageFile\"n\n\025ListProjectJobRequest\022\022\n\npr" +
+      "oject_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npag" +
+      "e_token\030\003 \001(\t\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
+      "0\"e\n\026ListProjectJobResponse\0222\n\004jobs\030\001 \003(" +
+      "\0132$.yandex.cloud.datasphere.v2.jobs.Job\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"&\n\024GetProjectJo" +
+      "bRequest\022\016\n\006job_id\030\001 \001(\t\")\n\027DeleteProjec" +
+      "tJobRequest\022\016\n\006job_id\030\001 \001(\t\"*\n\030DeletePro" +
+      "jectJobMetadata\022\016\n\006job_id\030\001 \001(\t\"-\n\033Delet" +
+      "eProjectJobDataRequest\022\016\n\006job_id\030\001 \001(\t\"." +
+      "\n\034DeleteProjectJobDataMetadata\022\016\n\006job_id" +
+      "\030\001 \001(\t\"\036\n\034DeleteProjectJobDataResponse\"4" +
+      "\n\036DeleteAllProjectJobDataRequest\022\022\n\nproj" +
+      "ect_id\030\001 \001(\t\"5\n\037DeleteAllProjectJobDataM" +
+      "etadata\022\022\n\nproject_id\030\001 \001(\t\"!\n\037DeleteAll" +
+      "ProjectJobDataResponse\"U\n\033SetProjectJobD" +
+      "ataTtlRequest\022\016\n\006job_id\030\001 \001(\t\022&\n\003ttl\030\002 \001" +
+      "(\0132\031.google.protobuf.Duration\"\036\n\034SetProj" +
+      "ectJobDataTtlResponse\"\205\001\n\006StdLog\022\017\n\007cont" +
+      "ent\030\001 \001(\014\022:\n\004type\030\002 \001(\0162,.yandex.cloud.d" +
+      "atasphere.v2.jobs.StdLog.Type\".\n\004Type\022\024\n" +
+      "\020TYPE_UNSPECIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\002\"\270\001" +
+      "\n\nLogMessage\022\017\n\007content\030\001 \001(\014\022.\n\ncreated" +
+      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022J\n" +
+      "\017standard_stream\030\003 \001(\0162/.yandex.cloud.da" +
+      "tasphere.v2.jobs.StandardStreamH\000\022\023\n\tfil" +
+      "e_path\030\004 \001(\tH\000B\010\n\006source*C\n\016StandardStre" +
+      "am\022\037\n\033STANDARD_STREAM_UNSPECIFIED\020\000\022\007\n\003O" +
+      "UT\020\001\022\007\n\003ERR\020\0022\203\017\n\021ProjectJobService\022\237\001\n\006" +
+      "Create\0228.yandex.cloud.datasphere.v2.jobs" +
+      ".CreateProjectJobRequest\032!.yandex.cloud." +
+      "operation.Operation\"8\262\322*4\n\030CreateProject" +
+      "JobMetadata\022\030CreateProjectJobResponse\022\233\001" +
+      "\n\005Clone\0227.yandex.cloud.datasphere.v2.job" +
+      "s.CloneProjectJobRequest\032!.yandex.cloud." +
+      "operation.Operation\"6\262\322*2\n\027CloneProjectJ" +
+      "obMetadata\022\027CloneProjectJobResponse\022\243\001\n\007" +
+      "Execute\0229.yandex.cloud.datasphere.v2.job" +
+      "s.ExecuteProjectJobRequest\032!.yandex.clou" +
+      "d.operation.Operation\":\262\322*6\n\031ExecuteProj" +
+      "ectJobMetadata\022\031ExecuteProjectJobRespons" +
+      "e\022Z\n\006Cancel\0228.yandex.cloud.datasphere.v2" +
+      ".jobs.CancelProjectJobRequest\032\026.google.p" +
+      "rotobuf.Empty\022\223\001\n\013ReadStdLogs\022=.yandex.c" +
+      "loud.datasphere.v2.jobs.ReadProjectJobSt" +
+      "dLogsRequest\032>.yandex.cloud.datasphere.v" +
+      "2.jobs.ReadProjectJobStdLogsResponse\"\003\210\002" +
+      "\0010\001\022\205\001\n\010ReadLogs\022:.yandex.cloud.datasphe" +
+      "re.v2.jobs.ReadProjectJobLogsRequest\032;.y" +
+      "andex.cloud.datasphere.v2.jobs.ReadProje" +
+      "ctJobLogsResponse0\001\022\225\001\n\020DownloadJobFiles" +
+      "\022?.yandex.cloud.datasphere.v2.jobs.Downl" +
+      "oadProjectJobFilesRequest\032@.yandex.cloud" +
+      ".datasphere.v2.jobs.DownloadProjectJobFi" +
+      "lesResponse\022w\n\004List\0226.yandex.cloud.datas" +
+      "phere.v2.jobs.ListProjectJobRequest\0327.ya" +
+      "ndex.cloud.datasphere.v2.jobs.ListProjec" +
+      "tJobResponse\022b\n\003Get\0225.yandex.cloud.datas" +
+      "phere.v2.jobs.GetProjectJobRequest\032$.yan" +
+      "dex.cloud.datasphere.v2.jobs.Job\022\234\001\n\006Del" +
+      "ete\0228.yandex.cloud.datasphere.v2.jobs.De" +
+      "leteProjectJobRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"5\262\322*1\n\030DeleteProjectJob" +
+      "Metadata\022\025google.protobuf.Empty\022\257\001\n\nDele" +
+      "teData\022<.yandex.cloud.datasphere.v2.jobs" +
+      ".DeleteProjectJobDataRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"@\262\322*<\n\034DeletePro" +
+      "jectJobDataMetadata\022\034DeleteProjectJobDat" +
+      "aResponse\022\273\001\n\rDeleteAllData\022?.yandex.clo" +
+      "ud.datasphere.v2.jobs.DeleteAllProjectJo" +
+      "bDataRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"F\262\322*B\n\037DeleteAllProjectJobDataMe" +
+      "tadata\022\037DeleteAllProjectJobDataResponse\022" +
+      "\211\001\n\nSetDataTtl\022<.yandex.cloud.datasphere" +
+      ".v2.jobs.SetProjectJobDataTtlRequest\032=.y" +
       "andex.cloud.datasphere.v2.jobs.SetProjec" +
-      "tJobDataTtlRequest\032=.yandex.cloud.datasp" +
-      "here.v2.jobs.SetProjectJobDataTtlRespons" +
-      "eB|\n#yandex.cloud.api.datasphere.v2.jobs" +
-      "B\005DSPJSZNgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/datasphere/v2/jobs;dat" +
-      "asphereb\006proto3"
+      "tJobDataTtlResponseB|\n#yandex.cloud.api." +
+      "datasphere.v2.jobsB\005DSPJSZNgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/data" +
+      "sphere/v2/jobs;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26619,7 +26710,7 @@ public final class DSPJS {
     internal_static_yandex_cloud_datasphere_v2_jobs_CancelProjectJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_CancelProjectJobRequest_descriptor,
-        new java.lang.String[] { "JobId", "Reason", });
+        new java.lang.String[] { "JobId", "Reason", "Graceful", });
     internal_static_yandex_cloud_datasphere_v2_jobs_ReadProjectJobStdLogsRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_datasphere_v2_jobs_ReadProjectJobStdLogsRequest_fieldAccessorTable = new

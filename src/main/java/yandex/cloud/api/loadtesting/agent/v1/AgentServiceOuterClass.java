@@ -1490,6 +1490,2862 @@ public final class AgentServiceOuterClass {
 
   }
 
+  public interface ReportEventLogsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The agentInstanceId.
+     */
+    java.lang.String getAgentInstanceId();
+    /**
+     * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for agentInstanceId.
+     */
+    com.google.protobuf.ByteString
+        getAgentInstanceIdBytes();
+
+    /**
+     * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The idempotencyKey.
+     */
+    java.lang.String getIdempotencyKey();
+    /**
+     * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The bytes for idempotencyKey.
+     */
+    com.google.protobuf.ByteString
+        getIdempotencyKeyBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> 
+        getEventsList();
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getEvents(int index);
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    int getEventsCount();
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder> 
+        getEventsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder getEventsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest}
+   */
+  public static final class ReportEventLogsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest)
+      ReportEventLogsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReportEventLogsRequest.newBuilder() to construct.
+    private ReportEventLogsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReportEventLogsRequest() {
+      agentInstanceId_ = "";
+      idempotencyKey_ = "";
+      events_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReportEventLogsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReportEventLogsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentInstanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              idempotencyKey_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                events_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              events_.add(
+                  input.readMessage(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          events_ = java.util.Collections.unmodifiableList(events_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.Builder.class);
+    }
+
+    public static final int AGENT_INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object agentInstanceId_;
+    /**
+     * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The agentInstanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentInstanceId() {
+      java.lang.Object ref = agentInstanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentInstanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for agentInstanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentInstanceIdBytes() {
+      java.lang.Object ref = agentInstanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentInstanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDEMPOTENCY_KEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object idempotencyKey_;
+    /**
+     * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The idempotencyKey.
+     */
+    @java.lang.Override
+    public java.lang.String getIdempotencyKey() {
+      java.lang.Object ref = idempotencyKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idempotencyKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+     * @return The bytes for idempotencyKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdempotencyKeyBytes() {
+      java.lang.Object ref = idempotencyKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idempotencyKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENTS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> events_;
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> getEventsList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder> 
+        getEventsOrBuilderList() {
+      return events_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    @java.lang.Override
+    public int getEventsCount() {
+      return events_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getEvents(int index) {
+      return events_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder getEventsOrBuilder(
+        int index) {
+      return events_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentInstanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idempotencyKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idempotencyKey_);
+      }
+      for (int i = 0; i < events_.size(); i++) {
+        output.writeMessage(3, events_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentInstanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentInstanceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idempotencyKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idempotencyKey_);
+      }
+      for (int i = 0; i < events_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, events_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest other = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest) obj;
+
+      if (!getAgentInstanceId()
+          .equals(other.getAgentInstanceId())) return false;
+      if (!getIdempotencyKey()
+          .equals(other.getIdempotencyKey())) return false;
+      if (!getEventsList()
+          .equals(other.getEventsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AGENT_INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentInstanceId().hashCode();
+      hash = (37 * hash) + IDEMPOTENCY_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdempotencyKey().hashCode();
+      if (getEventsCount() > 0) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest)
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEventsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        agentInstanceId_ = "";
+
+        idempotencyKey_ = "";
+
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest build() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest buildPartial() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest result = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.agentInstanceId_ = agentInstanceId_;
+        result.idempotencyKey_ = idempotencyKey_;
+        if (eventsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            events_ = java.util.Collections.unmodifiableList(events_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest other) {
+        if (other == yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.getDefaultInstance()) return this;
+        if (!other.getAgentInstanceId().isEmpty()) {
+          agentInstanceId_ = other.agentInstanceId_;
+          onChanged();
+        }
+        if (!other.getIdempotencyKey().isEmpty()) {
+          idempotencyKey_ = other.idempotencyKey_;
+          onChanged();
+        }
+        if (eventsBuilder_ == null) {
+          if (!other.events_.isEmpty()) {
+            if (events_.isEmpty()) {
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEventsIsMutable();
+              events_.addAll(other.events_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.events_.isEmpty()) {
+            if (eventsBuilder_.isEmpty()) {
+              eventsBuilder_.dispose();
+              eventsBuilder_ = null;
+              events_ = other.events_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eventsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEventsFieldBuilder() : null;
+            } else {
+              eventsBuilder_.addAllMessages(other.events_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object agentInstanceId_ = "";
+      /**
+       * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The agentInstanceId.
+       */
+      public java.lang.String getAgentInstanceId() {
+        java.lang.Object ref = agentInstanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agentInstanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for agentInstanceId.
+       */
+      public com.google.protobuf.ByteString
+          getAgentInstanceIdBytes() {
+        java.lang.Object ref = agentInstanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agentInstanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The agentInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agentInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentInstanceId() {
+        
+        agentInstanceId_ = getDefaultInstance().getAgentInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for agentInstanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agentInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idempotencyKey_ = "";
+      /**
+       * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return The idempotencyKey.
+       */
+      public java.lang.String getIdempotencyKey() {
+        java.lang.Object ref = idempotencyKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idempotencyKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return The bytes for idempotencyKey.
+       */
+      public com.google.protobuf.ByteString
+          getIdempotencyKeyBytes() {
+        java.lang.Object ref = idempotencyKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idempotencyKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @param value The idempotencyKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdempotencyKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idempotencyKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdempotencyKey() {
+        
+        idempotencyKey_ = getDefaultInstance().getIdempotencyKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string idempotency_key = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=36"];</code>
+       * @param value The bytes for idempotencyKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdempotencyKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        idempotencyKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> events_ =
+        java.util.Collections.emptyList();
+      private void ensureEventsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          events_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog>(events_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder> eventsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> getEventsList() {
+        if (eventsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(events_);
+        } else {
+          return eventsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public int getEventsCount() {
+        if (eventsBuilder_ == null) {
+          return events_.size();
+        } else {
+          return eventsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getEvents(int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);
+        } else {
+          return eventsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder setEvents(
+          int index, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.set(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder setEvents(
+          int index, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder addEvents(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder addEvents(
+          int index, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventsIsMutable();
+          events_.add(index, value);
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder addEvents(
+          yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder addEvents(
+          int index, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder addAllEvents(
+          java.lang.Iterable<? extends yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog> values) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, events_);
+          onChanged();
+        } else {
+          eventsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          eventsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public Builder removeEvents(int index) {
+        if (eventsBuilder_ == null) {
+          ensureEventsIsMutable();
+          events_.remove(index);
+          onChanged();
+        } else {
+          eventsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder getEventsBuilder(
+          int index) {
+        return getEventsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder getEventsOrBuilder(
+          int index) {
+        if (eventsBuilder_ == null) {
+          return events_.get(index);  } else {
+          return eventsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder> 
+           getEventsOrBuilderList() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(events_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder addEventsBuilder() {
+        return getEventsFieldBuilder().addBuilder(
+            yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder addEventsBuilder(
+          int index) {
+        return getEventsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.loadtesting.agent.v1.EventLog events = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder> 
+           getEventsBuilderList() {
+        return getEventsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder> 
+          getEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder>(
+                  events_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.agent.v1.ReportEventLogsRequest)
+    private static final yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReportEventLogsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ReportEventLogsRequest>() {
+      @java.lang.Override
+      public ReportEventLogsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReportEventLogsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReportEventLogsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReportEventLogsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReportEventLogsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse}
+   */
+  public static final class ReportEventLogsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse)
+      ReportEventLogsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReportEventLogsResponse.newBuilder() to construct.
+    private ReportEventLogsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReportEventLogsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReportEventLogsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReportEventLogsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse other = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse)
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse build() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse buildPartial() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse result = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse) {
+          return mergeFrom((yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse other) {
+        if (other == yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.agent.v1.ReportEventLogsResponse)
+    private static final yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse();
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReportEventLogsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ReportEventLogsResponse>() {
+      @java.lang.Override
+      public ReportEventLogsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReportEventLogsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReportEventLogsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReportEventLogsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventLogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.agent.v1.EventLog)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+     * @return The enum numeric value on the wire for severity.
+     */
+    int getSeverityValue();
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+     * @return The severity.
+     */
+    yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity getSeverity();
+
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    int getMetadataCount();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    boolean containsMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadata();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getMetadataMap();
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+
+    java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+
+    java.lang.String getMetadataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.EventLog}
+   */
+  public static final class EventLog extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.agent.v1.EventLog)
+      EventLogOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventLog.newBuilder() to construct.
+    private EventLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventLog() {
+      message_ = "";
+      severity_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventLog();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EventLog(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              severity_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (timestamp_ != null) {
+                subBuilder = timestamp_.toBuilder();
+              }
+              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                metadata_ = com.google.protobuf.MapField.newMapField(
+                    MetadataDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              metadata__ = input.readMessage(
+                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              metadata_.getMutableMap().put(
+                  metadata__.getKey(), metadata__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetMetadata();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.loadtesting.agent.v1.EventLog.Severity}
+     */
+    public enum Severity
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SEVERITY_UNSPECIFIED = 0;</code>
+       */
+      SEVERITY_UNSPECIFIED(0),
+      /**
+       * <code>DEBUG = 1;</code>
+       */
+      DEBUG(1),
+      /**
+       * <code>INFO = 2;</code>
+       */
+      INFO(2),
+      /**
+       * <code>WARNING = 3;</code>
+       */
+      WARNING(3),
+      /**
+       * <code>ERROR = 4;</code>
+       */
+      ERROR(4),
+      /**
+       * <code>FATAL = 5;</code>
+       */
+      FATAL(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SEVERITY_UNSPECIFIED = 0;</code>
+       */
+      public static final int SEVERITY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>DEBUG = 1;</code>
+       */
+      public static final int DEBUG_VALUE = 1;
+      /**
+       * <code>INFO = 2;</code>
+       */
+      public static final int INFO_VALUE = 2;
+      /**
+       * <code>WARNING = 3;</code>
+       */
+      public static final int WARNING_VALUE = 3;
+      /**
+       * <code>ERROR = 4;</code>
+       */
+      public static final int ERROR_VALUE = 4;
+      /**
+       * <code>FATAL = 5;</code>
+       */
+      public static final int FATAL_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Severity valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Severity forNumber(int value) {
+        switch (value) {
+          case 0: return SEVERITY_UNSPECIFIED;
+          case 1: return DEBUG;
+          case 2: return INFO;
+          case 3: return WARNING;
+          case 4: return ERROR;
+          case 5: return FATAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Severity>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Severity> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Severity>() {
+              public Severity findValueByNumber(int number) {
+                return Severity.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Severity[] VALUES = values();
+
+      public static Severity valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Severity(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.loadtesting.agent.v1.EventLog.Severity)
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEVERITY_FIELD_NUMBER = 2;
+    private int severity_;
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+     * @return The enum numeric value on the wire for severity.
+     */
+    @java.lang.Override public int getSeverityValue() {
+      return severity_;
+    }
+    /**
+     * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+     * @return The severity.
+     */
+    @java.lang.Override public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity getSeverity() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity result = yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.valueOf(severity_);
+      return result == null ? yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.UNRECOGNIZED : result;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return getTimestamp();
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 4;
+    private static final class MetadataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> metadata_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMetadata() {
+      if (metadata_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetadataDefaultEntryHolder.defaultEntry);
+      }
+      return metadata_;
+    }
+
+    public int getMetadataCount() {
+      return internalGetMetadata().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsMetadata(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetMetadata().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+      return getMetadataMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+      return internalGetMetadata().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getMetadataOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; metadata = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getMetadataOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetMetadata().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
+      }
+      if (severity_ != yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.SEVERITY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, severity_);
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(3, getTimestamp());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMetadata(),
+          MetadataDefaultEntryHolder.defaultEntry,
+          4);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      }
+      if (severity_ != yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.SEVERITY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, severity_);
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTimestamp());
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetMetadata().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, metadata__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog other = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog) obj;
+
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (severity_ != other.severity_) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!internalGetMetadata().equals(
+          other.internalGetMetadata())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + SEVERITY_FIELD_NUMBER;
+      hash = (53 * hash) + severity_;
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      if (!internalGetMetadata().getMap().isEmpty()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMetadata().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.agent.v1.EventLog}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.agent.v1.EventLog)
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLogOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableMetadata();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.class, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        message_ = "";
+
+        severity_ = 0;
+
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+        internalGetMutableMetadata().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog build() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog buildPartial() {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog result = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog(this);
+        int from_bitField0_ = bitField0_;
+        result.message_ = message_;
+        result.severity_ = severity_;
+        if (timestampBuilder_ == null) {
+          result.timestamp_ = timestamp_;
+        } else {
+          result.timestamp_ = timestampBuilder_.build();
+        }
+        result.metadata_ = internalGetMetadata();
+        result.metadata_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog) {
+          return mergeFrom((yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog other) {
+        if (other == yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.getDefaultInstance()) return this;
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
+        }
+        if (other.severity_ != 0) {
+          setSeverityValue(other.getSeverityValue());
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        internalGetMutableMetadata().mergeFrom(
+            other.internalGetMetadata());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2000"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int severity_ = 0;
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+       * @return The enum numeric value on the wire for severity.
+       */
+      @java.lang.Override public int getSeverityValue() {
+        return severity_;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+       * @param value The enum numeric value on the wire for severity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeverityValue(int value) {
+        
+        severity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+       * @return The severity.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity getSeverity() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity result = yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.valueOf(severity_);
+        return result == null ? yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+       * @param value The severity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeverity(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog.Severity value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        severity_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.loadtesting.agent.v1.EventLog.Severity severity = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeverity() {
+        
+        severity_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return timestampBuilder_ != null || timestamp_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (timestamp_ != null) {
+            timestamp_ =
+              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+          } else {
+            timestamp_ = value;
+          }
+          onChanged();
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTimestamp() {
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+          onChanged();
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp timestamp = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> metadata_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMetadata() {
+        if (metadata_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        return metadata_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableMetadata() {
+        onChanged();;
+        if (metadata_ == null) {
+          metadata_ = com.google.protobuf.MapField.newMapField(
+              MetadataDefaultEntryHolder.defaultEntry);
+        }
+        if (!metadata_.isMutable()) {
+          metadata_ = metadata_.copy();
+        }
+        return metadata_;
+      }
+
+      public int getMetadataCount() {
+        return internalGetMetadata().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetMetadata().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetadataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
+        return getMetadataMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
+        return internalGetMetadata().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getMetadataOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getMetadataOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetMetadata().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMetadata() {
+        internalGetMutableMetadata().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public Builder removeMetadata(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableMetadata().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableMetadata() {
+        return internalGetMutableMetadata().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+      public Builder putMetadata(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableMetadata().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; metadata = 4;</code>
+       */
+
+      public Builder putAllMetadata(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableMetadata().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.agent.v1.EventLog)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.agent.v1.EventLog)
+    private static final yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog();
+    }
+
+    public static yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventLog>
+        PARSER = new com.google.protobuf.AbstractParser<EventLog>() {
+      @java.lang.Override
+      public EventLog parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EventLog(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventLog> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventLog> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.EventLog getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusRequest_descriptor;
   private static final 
@@ -1500,6 +4356,26 @@ public final class AgentServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1512,29 +4388,53 @@ public final class AgentServiceOuterClass {
       "\n5yandex/cloud/loadtesting/agent/v1/agen" +
       "t_service.proto\022!yandex.cloud.loadtestin" +
       "g.agent.v1\032\034google/api/annotations.proto" +
-      "\"\271\002\n\027ClaimAgentStatusRequest\022\031\n\021agent_in" +
-      "stance_id\030\001 \001(\t\022Q\n\006status\030\002 \001(\0162A.yandex" +
-      ".cloud.loadtesting.agent.v1.ClaimAgentSt" +
-      "atusRequest.Status\022\026\n\016status_message\030\003 \001" +
-      "(\t\"\227\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\022\n" +
-      "\016READY_FOR_TEST\020\001\022\022\n\016PREPARING_TEST\020\002\022\013\n" +
-      "\007TESTING\020\003\022\017\n\013TANK_FAILED\020\004\022\013\n\007STOPPED\020\005" +
-      "\022\027\n\023UPLOADING_ARTIFACTS\020\006\022\t\n\005ERROR\020\007\"(\n\030" +
-      "ClaimAgentStatusResponse\022\014\n\004code\030\001 \001(\0032\340" +
-      "\001\n\014AgentService\022\317\001\n\013ClaimStatus\022:.yandex" +
-      ".cloud.loadtesting.agent.v1.ClaimAgentSt" +
-      "atusRequest\032;.yandex.cloud.loadtesting.a" +
-      "gent.v1.ClaimAgentStatusResponse\"G\202\323\344\223\002A" +
-      "\"</loadtesting/agent/v1/agents/{agent_in" +
-      "stance_id}/claimStatus:\001*Bt\n%yandex.clou" +
-      "d.api.loadtesting.agent.v1ZKgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/loa" +
-      "dtesting/agent/v1;agentb\006proto3"
+      "\032\037google/protobuf/timestamp.proto\032\035yande" +
+      "x/cloud/validation.proto\"\271\002\n\027ClaimAgentS" +
+      "tatusRequest\022\031\n\021agent_instance_id\030\001 \001(\t\022" +
+      "Q\n\006status\030\002 \001(\0162A.yandex.cloud.loadtesti" +
+      "ng.agent.v1.ClaimAgentStatusRequest.Stat" +
+      "us\022\026\n\016status_message\030\003 \001(\t\"\227\001\n\006Status\022\026\n" +
+      "\022STATUS_UNSPECIFIED\020\000\022\022\n\016READY_FOR_TEST\020" +
+      "\001\022\022\n\016PREPARING_TEST\020\002\022\013\n\007TESTING\020\003\022\017\n\013TA" +
+      "NK_FAILED\020\004\022\013\n\007STOPPED\020\005\022\027\n\023UPLOADING_AR" +
+      "TIFACTS\020\006\022\t\n\005ERROR\020\007\"(\n\030ClaimAgentStatus" +
+      "Response\022\014\n\004code\030\001 \001(\003\"\261\001\n\026ReportEventLo" +
+      "gsRequest\022\'\n\021agent_instance_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022%\n\017idempotency_key\030\002 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=36\022G\n\006events\030\003 \003(\0132+.yandex.cloud" +
+      ".loadtesting.agent.v1.EventLogB\n\202\3101\006<=10" +
+      "00\"\031\n\027ReportEventLogsResponse\"\204\003\n\010EventL" +
+      "og\022\037\n\007message\030\001 \001(\tB\016\350\3071\001\212\3101\006<=2000\022F\n\010s" +
+      "everity\030\002 \001(\01624.yandex.cloud.loadtesting" +
+      ".agent.v1.EventLog.Severity\0223\n\ttimestamp" +
+      "\030\003 \001(\0132\032.google.protobuf.TimestampB\004\350\3071\001" +
+      "\022K\n\010metadata\030\004 \003(\01329.yandex.cloud.loadte" +
+      "sting.agent.v1.EventLog.MetadataEntry\032/\n" +
+      "\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"\\\n\010Severity\022\030\n\024SEVERITY_UNSPECIFI" +
+      "ED\020\000\022\t\n\005DEBUG\020\001\022\010\n\004INFO\020\002\022\013\n\007WARNING\020\003\022\t" +
+      "\n\005ERROR\020\004\022\t\n\005FATAL\020\0052\270\003\n\014AgentService\022\317\001" +
+      "\n\013ClaimStatus\022:.yandex.cloud.loadtesting" +
+      ".agent.v1.ClaimAgentStatusRequest\032;.yand" +
+      "ex.cloud.loadtesting.agent.v1.ClaimAgent" +
+      "StatusResponse\"G\202\323\344\223\002A\"</loadtesting/age" +
+      "nt/v1/agents/{agent_instance_id}/claimSt" +
+      "atus:\001*\022\325\001\n\017ReportEventLogs\0229.yandex.clo" +
+      "ud.loadtesting.agent.v1.ReportEventLogsR" +
+      "equest\032:.yandex.cloud.loadtesting.agent." +
+      "v1.ReportEventLogsResponse\"K\202\323\344\223\002E\"@/loa" +
+      "dtesting/agent/v1/agents/{agent_instance" +
+      "_id}/reportEventLogs:\001*Bt\n%yandex.cloud." +
+      "api.loadtesting.agent.v1ZKgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/loadt" +
+      "esting/agent/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1548,12 +4448,41 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_agent_v1_ClaimAgentStatusResponse_descriptor,
         new java.lang.String[] { "Code", });
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsRequest_descriptor,
+        new java.lang.String[] { "AgentInstanceId", "IdempotencyKey", "Events", });
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_agent_v1_ReportEventLogsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor,
+        new java.lang.String[] { "Message", "Severity", "Timestamp", "Metadata", });
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_descriptor =
+      internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_agent_v1_EventLog_MetadataEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

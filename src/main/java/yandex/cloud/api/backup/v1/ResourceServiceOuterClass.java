@@ -67,6 +67,25 @@ public final class ResourceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ListResourcesRequest}
@@ -83,6 +102,7 @@ public final class ResourceServiceOuterClass {
     private ListResourcesRequest() {
       folderId_ = "";
       pageToken_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -130,6 +150,12 @@ public final class ResourceServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageToken_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
               break;
             }
             default: {
@@ -271,6 +297,33 @@ public final class ResourceServiceOuterClass {
       }
     }
 
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_;
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of resource. Could be compute VM or baremetal server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+      return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -294,6 +347,9 @@ public final class ResourceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
       }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, type_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -312,6 +368,10 @@ public final class ResourceServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -334,6 +394,7 @@ public final class ResourceServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -352,6 +413,8 @@ public final class ResourceServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -491,6 +554,8 @@ public final class ResourceServiceOuterClass {
 
         pageToken_ = "";
 
+        type_ = 0;
+
         return this;
       }
 
@@ -520,6 +585,7 @@ public final class ResourceServiceOuterClass {
         result.folderId_ = folderId_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -578,6 +644,9 @@ public final class ResourceServiceOuterClass {
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
           onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -839,6 +908,80 @@ public final class ResourceServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType result = yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.valueOf(type_);
+        return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of resource. Could be compute VM or baremetal server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.ResourceType type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
         onChanged();
         return this;
       }
@@ -13321,77 +13464,78 @@ public final class ResourceServiceOuterClass {
       "operation.proto\032%yandex/cloud/backup/v1/" +
       "resource.proto\032&yandex/cloud/operation/o" +
       "peration.proto\032\035yandex/cloud/validation." +
-      "proto\"u\n\024ListResourcesRequest\022\037\n\tfolder_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\"e\n\025ListResourcesResponse\0223\n\tresourc" +
-      "es\030\001 \003(\0132 .yandex.cloud.backup.v1.Resour" +
-      "ce\022\027\n\017next_page_token\030\002 \001(\t\"?\n\022GetResour" +
-      "ceRequest\022)\n\023compute_instance_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"I\n\023GetResourceResponse\0222\n\010r" +
-      "esource\030\001 \001(\0132 .yandex.cloud.backup.v1.R" +
-      "esource\"]\n\025DeleteResourceRequest\022)\n\023comp" +
-      "ute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013r" +
-      "esource_id\030\002 \001(\tB\004\350\3071\001\"5\n\026DeleteResource" +
-      "Metadata\022\033\n\023compute_instance_id\030\001 \001(\t\"{\n" +
-      "\020ListTasksRequest\022)\n\023compute_instance_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"Y\n\021ListTasksResponse\022+\n\005tasks\030\001 \003(\0132\034" +
-      ".yandex.cloud.backup.v1.Task\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"n\n\024ListDirectoryRequest\022\037\n" +
-      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023comput" +
-      "e_instance_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(\tB" +
-      "\004\350\3071\000\"\375\002\n\025ListDirectoryResponse\022K\n\005items" +
-      "\030\001 \003(\0132<.yandex.cloud.backup.v1.ListDire" +
-      "ctoryResponse.FilesystemItem\032\226\002\n\016Filesys" +
-      "temItem\022\014\n\004name\030\001 \001(\t\022O\n\004type\030\002 \001(\0162A.ya" +
-      "ndex.cloud.backup.v1.ListDirectoryRespon" +
-      "se.FilesystemItem.Type\022T\n\tfile_type\030\003 \001(" +
-      "\0162A.yandex.cloud.backup.v1.ListDirectory" +
-      "Response.FilesystemItem.Type\022\014\n\004size\030\004 \001" +
-      "(\003\"A\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006VOLU" +
-      "ME\020\001\022\r\n\tDIRECTORY\020\002\022\010\n\004FILE\020\003\"p\n\026CreateD" +
-      "irectoryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022!\n\023compute_instance_id\030\002 \001(\tB\004\350" +
-      "\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027CreateDirecto" +
-      "ryMetadata\022\033\n\023compute_instance_id\030\001 \001(\t\022" +
-      "\014\n\004path\030\002 \001(\t\"\210\001\n\035ListResourceOperations" +
-      "Request\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036List" +
-      "ResourceOperationsResponse\0225\n\noperations" +
-      "\030\001 \003(\0132!.yandex.cloud.operation.Operatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t2\227\010\n\017ResourceS" +
-      "ervice\022\201\001\n\004List\022,.yandex.cloud.backup.v1" +
-      ".ListResourcesRequest\032-.yandex.cloud.bac" +
-      "kup.v1.ListResourcesResponse\"\034\202\323\344\223\002\026\022\024/b" +
-      "ackup/v1/resources\022\222\001\n\003Get\022*.yandex.clou" +
-      "d.backup.v1.GetResourceRequest\032+.yandex." +
-      "cloud.backup.v1.GetResourceResponse\"2\202\323\344" +
-      "\223\002,\022*/backup/v1/resources/{compute_insta" +
-      "nce_id}\022\301\001\n\006Delete\022-.yandex.cloud.backup" +
-      ".v1.DeleteResourceRequest\032!.yandex.cloud" +
-      ".operation.Operation\"e\202\323\344\223\002,**/backup/v1" +
-      "/resources/{compute_instance_id}\262\322*/\n\026De" +
-      "leteResourceMetadata\022\025google.protobuf.Em" +
-      "pty\022\232\001\n\tListTasks\022(.yandex.cloud.backup." +
-      "v1.ListTasksRequest\032).yandex.cloud.backu" +
-      "p.v1.ListTasksResponse\"8\202\323\344\223\0022\0220/backup/" +
-      "v1/resources/{compute_instance_id}/tasks" +
-      "\022l\n\rListDirectory\022,.yandex.cloud.backup." +
-      "v1.ListDirectoryRequest\032-.yandex.cloud.b" +
-      "ackup.v1.ListDirectoryResponse\022\232\001\n\017Creat" +
-      "eDirectory\022..yandex.cloud.backup.v1.Crea" +
-      "teDirectoryRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"4\262\322*0\n\027CreateDirectoryMeta" +
-      "data\022\025google.protobuf.Empty\022\177\n\016ListOpera" +
-      "tions\0225.yandex.cloud.backup.v1.ListResou" +
-      "rceOperationsRequest\0326.yandex.cloud.back" +
-      "up.v1.ListResourceOperationsResponseB_\n\032" +
-      "yandex.cloud.api.backup.v1ZAgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/bac" +
-      "kup/v1;backupb\006proto3"
+      "proto\"\251\001\n\024ListResourcesRequest\022\037\n\tfolder" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\0222\n\004type\030\004 \001(\0162$.yandex.cloud.backu" +
+      "p.v1.ResourceType\"e\n\025ListResourcesRespon" +
+      "se\0223\n\tresources\030\001 \003(\0132 .yandex.cloud.bac" +
+      "kup.v1.Resource\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"?\n\022GetResourceRequest\022)\n\023compute_instan" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"I\n\023GetResource" +
+      "Response\0222\n\010resource\030\001 \001(\0132 .yandex.clou" +
+      "d.backup.v1.Resource\"]\n\025DeleteResourceRe" +
+      "quest\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\031\n\013resource_id\030\002 \001(\tB\004\350\3071\001\"5\n\026D" +
+      "eleteResourceMetadata\022\033\n\023compute_instanc" +
+      "e_id\030\001 \001(\t\"{\n\020ListTasksRequest\022)\n\023comput" +
+      "e_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\"Y\n\021ListTasksResponse\022+\n\005" +
+      "tasks\030\001 \003(\0132\034.yandex.cloud.backup.v1.Tas" +
+      "k\022\027\n\017next_page_token\030\002 \001(\t\"n\n\024ListDirect" +
+      "oryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022" +
+      "\n\004path\030\003 \001(\tB\004\350\3071\000\"\375\002\n\025ListDirectoryResp" +
+      "onse\022K\n\005items\030\001 \003(\0132<.yandex.cloud.backu" +
+      "p.v1.ListDirectoryResponse.FilesystemIte" +
+      "m\032\226\002\n\016FilesystemItem\022\014\n\004name\030\001 \001(\t\022O\n\004ty" +
+      "pe\030\002 \001(\0162A.yandex.cloud.backup.v1.ListDi" +
+      "rectoryResponse.FilesystemItem.Type\022T\n\tf" +
+      "ile_type\030\003 \001(\0162A.yandex.cloud.backup.v1." +
+      "ListDirectoryResponse.FilesystemItem.Typ" +
+      "e\022\014\n\004size\030\004 \001(\003\"A\n\004Type\022\024\n\020TYPE_UNSPECIF" +
+      "IED\020\000\022\n\n\006VOLUME\020\001\022\r\n\tDIRECTORY\020\002\022\010\n\004FILE" +
+      "\020\003\"p\n\026CreateDirectoryRequest\022\037\n\tfolder_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023compute_instanc" +
+      "e_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027" +
+      "CreateDirectoryMetadata\022\033\n\023compute_insta" +
+      "nce_id\030\001 \001(\t\022\014\n\004path\030\002 \001(\t\"\210\001\n\035ListResou" +
+      "rceOperationsRequest\022)\n\023compute_instance" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"p\n\036ListResourceOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
+      "\227\010\n\017ResourceService\022\201\001\n\004List\022,.yandex.cl" +
+      "oud.backup.v1.ListResourcesRequest\032-.yan" +
+      "dex.cloud.backup.v1.ListResourcesRespons" +
+      "e\"\034\202\323\344\223\002\026\022\024/backup/v1/resources\022\222\001\n\003Get\022" +
+      "*.yandex.cloud.backup.v1.GetResourceRequ" +
+      "est\032+.yandex.cloud.backup.v1.GetResource" +
+      "Response\"2\202\323\344\223\002,\022*/backup/v1/resources/{" +
+      "compute_instance_id}\022\301\001\n\006Delete\022-.yandex" +
+      ".cloud.backup.v1.DeleteResourceRequest\032!" +
+      ".yandex.cloud.operation.Operation\"e\202\323\344\223\002" +
+      ",**/backup/v1/resources/{compute_instanc" +
+      "e_id}\262\322*/\n\026DeleteResourceMetadata\022\025googl" +
+      "e.protobuf.Empty\022\232\001\n\tListTasks\022(.yandex." +
+      "cloud.backup.v1.ListTasksRequest\032).yande" +
+      "x.cloud.backup.v1.ListTasksResponse\"8\202\323\344" +
+      "\223\0022\0220/backup/v1/resources/{compute_insta" +
+      "nce_id}/tasks\022l\n\rListDirectory\022,.yandex." +
+      "cloud.backup.v1.ListDirectoryRequest\032-.y" +
+      "andex.cloud.backup.v1.ListDirectoryRespo" +
+      "nse\022\232\001\n\017CreateDirectory\022..yandex.cloud.b" +
+      "ackup.v1.CreateDirectoryRequest\032!.yandex" +
+      ".cloud.operation.Operation\"4\262\322*0\n\027Create" +
+      "DirectoryMetadata\022\025google.protobuf.Empty" +
+      "\022\177\n\016ListOperations\0225.yandex.cloud.backup" +
+      ".v1.ListResourceOperationsRequest\0326.yand" +
+      "ex.cloud.backup.v1.ListResourceOperation" +
+      "sResponseB_\n\032yandex.cloud.api.backup.v1Z" +
+      "Agithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13407,7 +13551,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListResourcesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListResourcesRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Type", });
     internal_static_yandex_cloud_backup_v1_ListResourcesResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_ListResourcesResponse_fieldAccessorTable = new

@@ -370,7 +370,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Type of resource -- could be compute VM or baremetal server
+     * Type of resource. Could be compute VM or baremetal server.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -379,7 +379,7 @@ public final class ResourceOuterClass {
     int getTypeValue();
     /**
      * <pre>
-     * Type of resource -- could be compute VM or baremetal server
+     * Type of resource. Could be compute VM or baremetal server.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -1345,7 +1345,7 @@ public final class ResourceOuterClass {
     private int type_;
     /**
      * <pre>
-     * Type of resource -- could be compute VM or baremetal server
+     * Type of resource. Could be compute VM or baremetal server.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -1356,7 +1356,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Type of resource -- could be compute VM or baremetal server
+     * Type of resource. Could be compute VM or baremetal server.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -3143,7 +3143,7 @@ public final class ResourceOuterClass {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of resource -- could be compute VM or baremetal server
+       * Type of resource. Could be compute VM or baremetal server.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -3154,7 +3154,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of resource -- could be compute VM or baremetal server
+       * Type of resource. Could be compute VM or baremetal server.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -3169,7 +3169,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of resource -- could be compute VM or baremetal server
+       * Type of resource. Could be compute VM or baremetal server.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -3183,7 +3183,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of resource -- could be compute VM or baremetal server
+       * Type of resource. Could be compute VM or baremetal server.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>
@@ -3201,7 +3201,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Type of resource -- could be compute VM or baremetal server
+       * Type of resource. Could be compute VM or baremetal server.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.ResourceType type = 15;</code>

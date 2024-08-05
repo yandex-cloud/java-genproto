@@ -8070,6 +8070,26 @@ public final class Clickhouse {
      */
     com.google.protobuf.ByteString
         getSecurityGroupsBytes(int index);
+
+    /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
+     * <code>string clickhouse_cluster_name = 11;</code>
+     * @return The clickhouseClusterName.
+     */
+    java.lang.String getClickhouseClusterName();
+    /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
+     * <code>string clickhouse_cluster_name = 11;</code>
+     * @return The bytes for clickhouseClusterName.
+     */
+    com.google.protobuf.ByteString
+        getClickhouseClusterNameBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.ClickhouseSource}
@@ -8088,6 +8108,7 @@ public final class Clickhouse {
       excludeTables_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       subnetId_ = "";
       securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      clickhouseClusterName_ = "";
     }
 
     @java.lang.Override
@@ -8165,6 +8186,12 @@ public final class Clickhouse {
                 mutable_bitField0_ |= 0x00000004;
               }
               securityGroups_.add(s);
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clickhouseClusterName_ = s;
               break;
             }
             default: {
@@ -8417,6 +8444,52 @@ public final class Clickhouse {
       return securityGroups_.getByteString(index);
     }
 
+    public static final int CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER = 11;
+    private volatile java.lang.Object clickhouseClusterName_;
+    /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
+     * <code>string clickhouse_cluster_name = 11;</code>
+     * @return The clickhouseClusterName.
+     */
+    @java.lang.Override
+    public java.lang.String getClickhouseClusterName() {
+      java.lang.Object ref = clickhouseClusterName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clickhouseClusterName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
+     * <code>string clickhouse_cluster_name = 11;</code>
+     * @return The bytes for clickhouseClusterName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClickhouseClusterNameBytes() {
+      java.lang.Object ref = clickhouseClusterName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clickhouseClusterName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8445,6 +8518,9 @@ public final class Clickhouse {
       }
       for (int i = 0; i < securityGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, securityGroups_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clickhouseClusterName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, clickhouseClusterName_);
       }
       unknownFields.writeTo(output);
     }
@@ -8486,6 +8562,9 @@ public final class Clickhouse {
         size += dataSize;
         size += 1 * getSecurityGroupsList().size();
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clickhouseClusterName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, clickhouseClusterName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8514,6 +8593,8 @@ public final class Clickhouse {
           .equals(other.getSubnetId())) return false;
       if (!getSecurityGroupsList()
           .equals(other.getSecurityGroupsList())) return false;
+      if (!getClickhouseClusterName()
+          .equals(other.getClickhouseClusterName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8543,6 +8624,8 @@ public final class Clickhouse {
         hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupsList().hashCode();
       }
+      hash = (37 * hash) + CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClickhouseClusterName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8690,6 +8773,8 @@ public final class Clickhouse {
 
         securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        clickhouseClusterName_ = "";
+
         return this;
       }
 
@@ -8738,6 +8823,7 @@ public final class Clickhouse {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.securityGroups_ = securityGroups_;
+        result.clickhouseClusterName_ = clickhouseClusterName_;
         onBuilt();
         return result;
       }
@@ -8821,6 +8907,10 @@ public final class Clickhouse {
             ensureSecurityGroupsIsMutable();
             securityGroups_.addAll(other.securityGroups_);
           }
+          onChanged();
+        }
+        if (!other.getClickhouseClusterName().isEmpty()) {
+          clickhouseClusterName_ = other.clickhouseClusterName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -9467,6 +9557,102 @@ public final class Clickhouse {
         onChanged();
         return this;
       }
+
+      private java.lang.Object clickhouseClusterName_ = "";
+      /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
+       * <code>string clickhouse_cluster_name = 11;</code>
+       * @return The clickhouseClusterName.
+       */
+      public java.lang.String getClickhouseClusterName() {
+        java.lang.Object ref = clickhouseClusterName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clickhouseClusterName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
+       * <code>string clickhouse_cluster_name = 11;</code>
+       * @return The bytes for clickhouseClusterName.
+       */
+      public com.google.protobuf.ByteString
+          getClickhouseClusterNameBytes() {
+        java.lang.Object ref = clickhouseClusterName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clickhouseClusterName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
+       * <code>string clickhouse_cluster_name = 11;</code>
+       * @param value The clickhouseClusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClickhouseClusterName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clickhouseClusterName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
+       * <code>string clickhouse_cluster_name = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClickhouseClusterName() {
+        
+        clickhouseClusterName_ = getDefaultInstance().getClickhouseClusterName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
+       * <code>string clickhouse_cluster_name = 11;</code>
+       * @param value The bytes for clickhouseClusterName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClickhouseClusterNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clickhouseClusterName_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9622,11 +9808,19 @@ public final class Clickhouse {
     yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseShardingOrBuilder getShardingOrBuilder();
 
     /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
      * <code>string clickhouse_cluster_name = 50;</code>
      * @return The clickhouseClusterName.
      */
     java.lang.String getClickhouseClusterName();
     /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
      * <code>string clickhouse_cluster_name = 50;</code>
      * @return The bytes for clickhouseClusterName.
      */
@@ -9981,6 +10175,10 @@ public final class Clickhouse {
     public static final int CLICKHOUSE_CLUSTER_NAME_FIELD_NUMBER = 50;
     private volatile java.lang.Object clickhouseClusterName_;
     /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
      * <code>string clickhouse_cluster_name = 50;</code>
      * @return The clickhouseClusterName.
      */
@@ -9998,6 +10196,10 @@ public final class Clickhouse {
       }
     }
     /**
+     * <pre>
+     * Also could be name of MDB's shard group.
+     * </pre>
+     *
      * <code>string clickhouse_cluster_name = 50;</code>
      * @return The bytes for clickhouseClusterName.
      */
@@ -11219,6 +11421,10 @@ public final class Clickhouse {
 
       private java.lang.Object clickhouseClusterName_ = "";
       /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
        * <code>string clickhouse_cluster_name = 50;</code>
        * @return The clickhouseClusterName.
        */
@@ -11235,6 +11441,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
        * <code>string clickhouse_cluster_name = 50;</code>
        * @return The bytes for clickhouseClusterName.
        */
@@ -11252,6 +11462,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
        * <code>string clickhouse_cluster_name = 50;</code>
        * @param value The clickhouseClusterName to set.
        * @return This builder for chaining.
@@ -11267,6 +11481,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
        * <code>string clickhouse_cluster_name = 50;</code>
        * @return This builder for chaining.
        */
@@ -11277,6 +11495,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Also could be name of MDB's shard group.
+       * </pre>
+       *
        * <code>string clickhouse_cluster_name = 50;</code>
        * @param value The bytes for clickhouseClusterName to set.
        * @return This builder for chaining.
@@ -11550,32 +11772,33 @@ public final class Clickhouse {
       ".ColumnValueMapping.ValueToShard\032l\n\014Valu" +
       "eToShard\022H\n\014column_value\030\001 \001(\01322.yandex." +
       "cloud.datatransfer.v1.endpoint.ColumnVal" +
-      "ue\022\022\n\nshard_name\030\002 \001(\tB\n\n\010sharding\"\305\001\n\020C" +
+      "ue\022\022\n\nshard_name\030\002 \001(\tB\n\n\010sharding\"\346\001\n\020C" +
       "lickhouseSource\022O\n\nconnection\030\001 \001(\0132;.ya" +
       "ndex.cloud.datatransfer.v1.endpoint.Clic" +
       "khouseConnection\022\026\n\016include_tables\030\007 \003(\t" +
       "\022\026\n\016exclude_tables\030\010 \003(\t\022\021\n\tsubnet_id\030\t " +
-      "\001(\t\022\027\n\017security_groups\030\n \003(\tJ\004\010\002\020\007\"\266\003\n\020C" +
-      "lickhouseTarget\022O\n\nconnection\030\002 \001(\0132;.ya" +
-      "ndex.cloud.datatransfer.v1.endpoint.Clic" +
-      "khouseConnection\022\021\n\tsubnet_id\030\014 \001(\t\022A\n\ta" +
-      "lt_names\030\021 \003(\0132..yandex.cloud.datatransf" +
-      "er.v1.endpoint.AltName\022V\n\016cleanup_policy" +
-      "\030\025 \001(\0162>.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.ClickhouseCleanupPolicy\022K\n\010shardi" +
-      "ng\030\026 \001(\01329.yandex.cloud.datatransfer.v1." +
-      "endpoint.ClickhouseSharding\022\037\n\027clickhous" +
-      "e_cluster_name\0302 \001(\t\022\027\n\017security_groups\030" +
-      "3 \003(\tJ\004\010\001\020\002J\004\010\003\020\014J\004\010\r\020\021J\004\010\022\020\025J\004\010\027\0202*\270\001\n\027" +
-      "ClickhouseCleanupPolicy\022)\n%CLICKHOUSE_CL" +
-      "EANUP_POLICY_UNSPECIFIED\020\000\022&\n\"CLICKHOUSE" +
-      "_CLEANUP_POLICY_DISABLED\020\001\022\"\n\036CLICKHOUSE" +
-      "_CLEANUP_POLICY_DROP\020\002\022&\n\"CLICKHOUSE_CLE" +
-      "ANUP_POLICY_TRUNCATE\020\003B\247\001\n)yandex.cloud." +
-      "api.datatransfer.v1.endpointZRgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/d" +
-      "atatransfer/v1/endpoint;endpoint\252\002%Yande" +
-      "x.Cloud.Datatransfer.V1.EndPointb\006proto3"
+      "\001(\t\022\027\n\017security_groups\030\n \003(\t\022\037\n\027clickhou" +
+      "se_cluster_name\030\013 \001(\tJ\004\010\002\020\007\"\266\003\n\020Clickhou" +
+      "seTarget\022O\n\nconnection\030\002 \001(\0132;.yandex.cl" +
+      "oud.datatransfer.v1.endpoint.ClickhouseC" +
+      "onnection\022\021\n\tsubnet_id\030\014 \001(\t\022A\n\talt_name" +
+      "s\030\021 \003(\0132..yandex.cloud.datatransfer.v1.e" +
+      "ndpoint.AltName\022V\n\016cleanup_policy\030\025 \001(\0162" +
+      ">.yandex.cloud.datatransfer.v1.endpoint." +
+      "ClickhouseCleanupPolicy\022K\n\010sharding\030\026 \001(" +
+      "\01329.yandex.cloud.datatransfer.v1.endpoin" +
+      "t.ClickhouseSharding\022\037\n\027clickhouse_clust" +
+      "er_name\0302 \001(\t\022\027\n\017security_groups\0303 \003(\tJ\004" +
+      "\010\001\020\002J\004\010\003\020\014J\004\010\r\020\021J\004\010\022\020\025J\004\010\027\0202*\270\001\n\027Clickho" +
+      "useCleanupPolicy\022)\n%CLICKHOUSE_CLEANUP_P" +
+      "OLICY_UNSPECIFIED\020\000\022&\n\"CLICKHOUSE_CLEANU" +
+      "P_POLICY_DISABLED\020\001\022\"\n\036CLICKHOUSE_CLEANU" +
+      "P_POLICY_DROP\020\002\022&\n\"CLICKHOUSE_CLEANUP_PO" +
+      "LICY_TRUNCATE\020\003B\247\001\n)yandex.cloud.api.dat" +
+      "atransfer.v1.endpointZRgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/datatran" +
+      "sfer/v1/endpoint;endpoint\252\002%Yandex.Cloud" +
+      ".Datatransfer.V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11636,7 +11859,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSource_descriptor,
-        new java.lang.String[] { "Connection", "IncludeTables", "ExcludeTables", "SubnetId", "SecurityGroups", });
+        new java.lang.String[] { "Connection", "IncludeTables", "ExcludeTables", "SubnetId", "SecurityGroups", "ClickhouseClusterName", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseTarget_fieldAccessorTable = new

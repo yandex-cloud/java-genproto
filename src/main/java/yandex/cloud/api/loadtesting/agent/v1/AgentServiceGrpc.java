@@ -46,6 +46,37 @@ public final class AgentServiceGrpc {
     return getClaimStatusMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest,
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> getReportEventLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReportEventLogs",
+      requestType = yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.class,
+      responseType = yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest,
+      yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> getReportEventLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> getReportEventLogsMethod;
+    if ((getReportEventLogsMethod = AgentServiceGrpc.getReportEventLogsMethod) == null) {
+      synchronized (AgentServiceGrpc.class) {
+        if ((getReportEventLogsMethod = AgentServiceGrpc.getReportEventLogsMethod) == null) {
+          AgentServiceGrpc.getReportEventLogsMethod = getReportEventLogsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest, yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReportEventLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentServiceMethodDescriptorSupplier("ReportEventLogs"))
+              .build();
+        }
+      }
+    }
+    return getReportEventLogsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -104,6 +135,13 @@ public final class AgentServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClaimStatusMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void reportEventLogs(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReportEventLogsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -113,6 +151,13 @@ public final class AgentServiceGrpc {
                 yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest,
                 yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusResponse>(
                   this, METHODID_CLAIM_STATUS)))
+          .addMethod(
+            getReportEventLogsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest,
+                yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse>(
+                  this, METHODID_REPORT_EVENT_LOGS)))
           .build();
     }
   }
@@ -141,6 +186,14 @@ public final class AgentServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getClaimStatusMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void reportEventLogs(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReportEventLogsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -165,6 +218,13 @@ public final class AgentServiceGrpc {
     public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusResponse claimStatus(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getClaimStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse reportEventLogs(yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReportEventLogsMethod(), getCallOptions(), request);
     }
   }
 
@@ -192,9 +252,18 @@ public final class AgentServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getClaimStatusMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse> reportEventLogs(
+        yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReportEventLogsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CLAIM_STATUS = 0;
+  private static final int METHODID_REPORT_EVENT_LOGS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -216,6 +285,10 @@ public final class AgentServiceGrpc {
         case METHODID_CLAIM_STATUS:
           serviceImpl.claimStatus((yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ClaimAgentStatusResponse>) responseObserver);
+          break;
+        case METHODID_REPORT_EVENT_LOGS:
+          serviceImpl.reportEventLogs((yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.AgentServiceOuterClass.ReportEventLogsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class AgentServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AgentServiceFileDescriptorSupplier())
               .addMethod(getClaimStatusMethod())
+              .addMethod(getReportEventLogsMethod())
               .build();
         }
       }

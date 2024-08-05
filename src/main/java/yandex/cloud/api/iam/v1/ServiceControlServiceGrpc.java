@@ -111,68 +111,6 @@ public final class ServiceControlServiceGrpc {
     return getEnableMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Resume",
-      requestType = yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest.class,
-      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeMethod;
-    if ((getResumeMethod = ServiceControlServiceGrpc.getResumeMethod) == null) {
-      synchronized (ServiceControlServiceGrpc.class) {
-        if ((getResumeMethod = ServiceControlServiceGrpc.getResumeMethod) == null) {
-          ServiceControlServiceGrpc.getResumeMethod = getResumeMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Resume"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-              .setSchemaDescriptor(new ServiceControlServiceMethodDescriptorSupplier("Resume"))
-              .build();
-        }
-      }
-    }
-    return getResumeMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Pause",
-      requestType = yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest.class,
-      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseMethod;
-    if ((getPauseMethod = ServiceControlServiceGrpc.getPauseMethod) == null) {
-      synchronized (ServiceControlServiceGrpc.class) {
-        if ((getPauseMethod = ServiceControlServiceGrpc.getPauseMethod) == null) {
-          ServiceControlServiceGrpc.getPauseMethod = getPauseMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Pause"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-              .setSchemaDescriptor(new ServiceControlServiceMethodDescriptorSupplier("Pause"))
-              .build();
-        }
-      }
-    }
-    return getPauseMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.DisableServiceRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDisableMethod;
 
@@ -319,26 +257,6 @@ public final class ServiceControlServiceGrpc {
 
     /**
      * <pre>
-     * Resume a service in the specified resource container.
-     * </pre>
-     */
-    public void resume(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResumeMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Pause a service in the specified resource container.
-     * </pre>
-     */
-    public void pause(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPauseMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Disable a service in the specified resource container.
      * </pre>
      */
@@ -380,20 +298,6 @@ public final class ServiceControlServiceGrpc {
                 yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.EnableServiceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ENABLE)))
-          .addMethod(
-            getResumeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest,
-                yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_RESUME)))
-          .addMethod(
-            getPauseMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest,
-                yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_PAUSE)))
           .addMethod(
             getDisableMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -465,28 +369,6 @@ public final class ServiceControlServiceGrpc {
 
     /**
      * <pre>
-     * Resume a service in the specified resource container.
-     * </pre>
-     */
-    public void resume(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getResumeMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Pause a service in the specified resource container.
-     * </pre>
-     */
-    public void pause(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getPauseMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Disable a service in the specified resource container.
      * </pre>
      */
@@ -554,26 +436,6 @@ public final class ServiceControlServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation enable(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.EnableServiceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnableMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Resume a service in the specified resource container.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation resume(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getResumeMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Pause a service in the specified resource container.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation pause(yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getPauseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -650,28 +512,6 @@ public final class ServiceControlServiceGrpc {
 
     /**
      * <pre>
-     * Resume a service in the specified resource container.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resume(
-        yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getResumeMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Pause a service in the specified resource container.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pause(
-        yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getPauseMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Disable a service in the specified resource container.
      * </pre>
      */
@@ -696,10 +536,8 @@ public final class ServiceControlServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_ENABLE = 2;
-  private static final int METHODID_RESUME = 3;
-  private static final int METHODID_PAUSE = 4;
-  private static final int METHODID_DISABLE = 5;
-  private static final int METHODID_RESOLVE_AGENT = 6;
+  private static final int METHODID_DISABLE = 3;
+  private static final int METHODID_RESOLVE_AGENT = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -728,14 +566,6 @@ public final class ServiceControlServiceGrpc {
           break;
         case METHODID_ENABLE:
           serviceImpl.enable((yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.EnableServiceRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
-          break;
-        case METHODID_RESUME:
-          serviceImpl.resume((yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.ResumeServiceRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
-          break;
-        case METHODID_PAUSE:
-          serviceImpl.pause((yandex.cloud.api.iam.v1.ServiceControlServiceOuterClass.PauseServiceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DISABLE:
@@ -810,8 +640,6 @@ public final class ServiceControlServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getEnableMethod())
-              .addMethod(getResumeMethod())
-              .addMethod(getPauseMethod())
               .addMethod(getDisableMethod())
               .addMethod(getResolveAgentMethod())
               .build();
