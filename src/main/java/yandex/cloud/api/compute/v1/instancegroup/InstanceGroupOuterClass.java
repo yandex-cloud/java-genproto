@@ -21449,7 +21449,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec> 
         getNetworkInterfaceSpecsList();
@@ -21458,7 +21458,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index);
     /**
@@ -21466,7 +21466,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     int getNetworkInterfaceSpecsCount();
     /**
@@ -21474,7 +21474,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder> 
         getNetworkInterfaceSpecsOrBuilderList();
@@ -21483,7 +21483,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
         int index);
@@ -22512,7 +22512,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec> getNetworkInterfaceSpecsList() {
@@ -22523,7 +22523,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder> 
@@ -22535,7 +22535,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public int getNetworkInterfaceSpecsCount() {
@@ -22546,7 +22546,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index) {
@@ -22557,7 +22557,7 @@ public final class InstanceGroupOuterClass {
      * Array of network interfaces that will be attached to the instance.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
@@ -25025,7 +25025,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec> getNetworkInterfaceSpecsList() {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25039,7 +25039,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public int getNetworkInterfaceSpecsCount() {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25053,7 +25053,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec getNetworkInterfaceSpecs(int index) {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25067,7 +25067,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNetworkInterfaceSpecs(
           int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec value) {
@@ -25088,7 +25088,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNetworkInterfaceSpecs(
           int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
@@ -25106,7 +25106,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addNetworkInterfaceSpecs(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec value) {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25126,7 +25126,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addNetworkInterfaceSpecs(
           int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec value) {
@@ -25147,7 +25147,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addNetworkInterfaceSpecs(
           yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
@@ -25165,7 +25165,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addNetworkInterfaceSpecs(
           int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder builderForValue) {
@@ -25183,7 +25183,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder addAllNetworkInterfaceSpecs(
           java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec> values) {
@@ -25202,7 +25202,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearNetworkInterfaceSpecs() {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25219,7 +25219,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public Builder removeNetworkInterfaceSpecs(int index) {
         if (networkInterfaceSpecsBuilder_ == null) {
@@ -25236,7 +25236,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder getNetworkInterfaceSpecsBuilder(
           int index) {
@@ -25247,7 +25247,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
           int index) {
@@ -25261,7 +25261,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpecOrBuilder> 
            getNetworkInterfaceSpecsOrBuilderList() {
@@ -25276,7 +25276,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder addNetworkInterfaceSpecsBuilder() {
         return getNetworkInterfaceSpecsFieldBuilder().addBuilder(
@@ -25287,7 +25287,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder addNetworkInterfaceSpecsBuilder(
           int index) {
@@ -25299,7 +25299,7 @@ public final class InstanceGroupOuterClass {
        * Array of network interfaces that will be attached to the instance.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.size) = "1"];</code>
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.NetworkInterfaceSpec network_interface_specs = 8 [(.yandex.cloud.required) = true];</code>
        */
       public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.NetworkInterfaceSpec.Builder> 
            getNetworkInterfaceSpecsBuilderList() {
@@ -52037,7 +52037,6 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The index of the network interface, generated by the server, 0,1,2... etc.
-     * Currently only one network interface is supported per instance.
      * </pre>
      *
      * <code>string index = 1;</code>
@@ -52047,7 +52046,6 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The index of the network interface, generated by the server, 0,1,2... etc.
-     * Currently only one network interface is supported per instance.
      * </pre>
      *
      * <code>string index = 1;</code>
@@ -52279,7 +52277,6 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The index of the network interface, generated by the server, 0,1,2... etc.
-     * Currently only one network interface is supported per instance.
      * </pre>
      *
      * <code>string index = 1;</code>
@@ -52301,7 +52298,6 @@ public final class InstanceGroupOuterClass {
     /**
      * <pre>
      * The index of the network interface, generated by the server, 0,1,2... etc.
-     * Currently only one network interface is supported per instance.
      * </pre>
      *
      * <code>string index = 1;</code>
@@ -52890,7 +52886,6 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The index of the network interface, generated by the server, 0,1,2... etc.
-       * Currently only one network interface is supported per instance.
        * </pre>
        *
        * <code>string index = 1;</code>
@@ -52911,7 +52906,6 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The index of the network interface, generated by the server, 0,1,2... etc.
-       * Currently only one network interface is supported per instance.
        * </pre>
        *
        * <code>string index = 1;</code>
@@ -52933,7 +52927,6 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The index of the network interface, generated by the server, 0,1,2... etc.
-       * Currently only one network interface is supported per instance.
        * </pre>
        *
        * <code>string index = 1;</code>
@@ -52953,7 +52946,6 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The index of the network interface, generated by the server, 0,1,2... etc.
-       * Currently only one network interface is supported per instance.
        * </pre>
        *
        * <code>string index = 1;</code>
@@ -52968,7 +52960,6 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * The index of the network interface, generated by the server, 0,1,2... etc.
-       * Currently only one network interface is supported per instance.
        * </pre>
        *
        * <code>string index = 1;</code>
@@ -60062,7 +60053,7 @@ public final class InstanceGroupOuterClass {
       "ones\030\001 \003(\0132<.yandex.cloud.compute.v1.ins" +
       "tancegroup.AllocationPolicy.ZoneB\007\202\3101\003>=" +
       "1\032G\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022(\n\022inst" +
-      "ance_tags_pool\030\002 \003(\tB\014\220\3101\001\212\3101\0043-50\"\260\n\n\020I" +
+      "ance_tags_pool\030\002 \003(\tB\014\220\3101\001\212\3101\0043-50\"\257\n\n\020I" +
       "nstanceTemplate\022\036\n\013description\030\001 \001(\tB\t\212\310" +
       "1\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.yandex.cloud." +
       "compute.v1.instancegroup.InstanceTemplat" +
@@ -60078,188 +60069,188 @@ public final class InstanceGroupOuterClass {
       "oud.compute.v1.instancegroup.AttachedDis" +
       "kSpecB\004\350\3071\001\022^\n\024secondary_disk_specs\030\007 \003(" +
       "\01327.yandex.cloud.compute.v1.instancegrou" +
-      "p.AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027network_i" +
+      "p.AttachedDiskSpecB\007\202\3101\003<=3\022b\n\027network_i" +
       "nterface_specs\030\010 \003(\0132;.yandex.cloud.comp" +
       "ute.v1.instancegroup.NetworkInterfaceSpe" +
-      "cB\005\202\3101\0011\022R\n\021scheduling_policy\030\t \001(\01327.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Sche" +
-      "dulingPolicy\022\032\n\022service_account_id\030\n \001(\t" +
-      "\022P\n\020network_settings\030\013 \001(\01326.yandex.clou" +
-      "d.compute.v1.instancegroup.NetworkSettin" +
-      "gs\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010hostname\030" +
-      "\r \001(\tB\t\212\3101\005<=128\022P\n\020placement_policy\030\016 \001" +
-      "(\01326.yandex.cloud.compute.v1.instancegro" +
-      "up.PlacementPolicy\022W\n\020filesystem_specs\030\017" +
-      " \003(\0132=.yandex.cloud.compute.v1.instanceg" +
-      "roup.AttachedFilesystemSpec\022P\n\020metadata_" +
-      "options\030\020 \001(\01326.yandex.cloud.compute.v1." +
-      "instancegroup.MetadataOptions\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\r" +
-      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\217\002\n\026AttachedFilesystemSpec\022P\n\004mode" +
-      "\030\001 \001(\0162B.yandex.cloud.compute.v1.instanc" +
-      "egroup.AttachedFilesystemSpec.Mode\022/\n\013de" +
-      "vice_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9a-z]{0," +
-      "19}\0225\n\rfilesystem_id\030\003 \001(\tB\036\212\3101\005<=128\362\3071" +
-      "\021[-a-zA-Z0-9._{}]*\";\n\004Mode\022\024\n\020MODE_UNSPE" +
-      "CIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"" +
-      "\335\002\n\017PlacementPolicy\022\032\n\022placement_group_i" +
-      "d\030\001 \001(\t\022d\n\023host_affinity_rules\030\002 \003(\0132G.y" +
-      "andex.cloud.compute.v1.instancegroup.Pla" +
-      "cementPolicy.HostAffinityRule\032\307\001\n\020HostAf" +
-      "finityRule\022\013\n\003key\030\001 \001(\t\022\\\n\002op\030\002 \001(\0162P.ya" +
+      "cB\004\350\3071\001\022R\n\021scheduling_policy\030\t \001(\01327.yan" +
+      "dex.cloud.compute.v1.instancegroup.Sched" +
+      "ulingPolicy\022\032\n\022service_account_id\030\n \001(\t\022" +
+      "P\n\020network_settings\030\013 \001(\01326.yandex.cloud" +
+      ".compute.v1.instancegroup.NetworkSetting" +
+      "s\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010hostname\030\r" +
+      " \001(\tB\t\212\3101\005<=128\022P\n\020placement_policy\030\016 \001(" +
+      "\01326.yandex.cloud.compute.v1.instancegrou" +
+      "p.PlacementPolicy\022W\n\020filesystem_specs\030\017 " +
+      "\003(\0132=.yandex.cloud.compute.v1.instancegr" +
+      "oup.AttachedFilesystemSpec\022P\n\020metadata_o" +
+      "ptions\030\020 \001(\01326.yandex.cloud.compute.v1.i" +
+      "nstancegroup.MetadataOptions\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rM" +
+      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"\217\002\n\026AttachedFilesystemSpec\022P\n\004mode\030" +
+      "\001 \001(\0162B.yandex.cloud.compute.v1.instance" +
+      "group.AttachedFilesystemSpec.Mode\022/\n\013dev" +
+      "ice_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9a-z]{0,1" +
+      "9}\0225\n\rfilesystem_id\030\003 \001(\tB\036\212\3101\005<=128\362\3071\021" +
+      "[-a-zA-Z0-9._{}]*\";\n\004Mode\022\024\n\020MODE_UNSPEC" +
+      "IFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\335" +
+      "\002\n\017PlacementPolicy\022\032\n\022placement_group_id" +
+      "\030\001 \001(\t\022d\n\023host_affinity_rules\030\002 \003(\0132G.ya" +
       "ndex.cloud.compute.v1.instancegroup.Plac" +
-      "ementPolicy.HostAffinityRule.Operator\022\016\n" +
-      "\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR_UN" +
-      "SPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\337\001\n\rReso" +
-      "urcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016<=8246337" +
-      "20832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6,8,10,12," +
-      "14,16,18,20,22,24,26,28,30,32,34,36,40,4" +
-      "4,48,52,56,60,64,68,72,76,80\022(\n\rcore_fra" +
-      "ction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004" +
-      " \001(\003B\013\372\3071\0070,1,2,4\"\342\004\n\020AttachedDiskSpec\022P" +
-      "\n\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1.i" +
-      "nstancegroup.AttachedDiskSpec.ModeB\004\350\3071\001" +
-      "\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9a" +
-      "-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex.cl" +
-      "oud.compute.v1.instancegroup.AttachedDis" +
-      "kSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004 \001(\tB\036\212" +
-      "\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\022\027\n\004name\030\007 " +
-      "\001(\tB\t\212\3101\005<=128\032\342\001\n\010DiskSpec\022\036\n\013descripti" +
-      "on\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 \001(\tB\004\350\307" +
-      "1\001\022(\n\004size\030\003 \001(\003B\032\372\3071\0264194304-2858730232" +
-      "2176\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013sn" +
-      "apshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036preserve_" +
-      "after_instance_delete\030\006 \001(\010B\016\n\014source_on" +
-      "eof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREA" +
-      "D_ONLY\020\001\022\016\n\nREAD_WRITE\020\002J\004\010\005\020\007\"\222\002\n\024Netwo" +
-      "rkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\ns" +
-      "ubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_sp" +
-      "ec\030\003 \001(\01329.yandex.cloud.compute.v1.insta" +
-      "ncegroup.PrimaryAddressSpec\022Z\n\027primary_v" +
-      "6_address_spec\030\004 \001(\01329.yandex.cloud.comp" +
-      "ute.v1.instancegroup.PrimaryAddressSpec\022" +
-      "\032\n\022security_group_ids\030\005 \003(\t\"\312\001\n\022PrimaryA" +
-      "ddressSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\0132" +
-      "6.yandex.cloud.compute.v1.instancegroup." +
-      "OneToOneNatSpec\022N\n\020dns_record_specs\030\002 \003(" +
-      "\01324.yandex.cloud.compute.v1.instancegrou" +
-      "p.DnsRecordSpec\022\017\n\007address\030\003 \001(\t\"\270\001\n\017One" +
-      "ToOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yande" +
-      "x.cloud.compute.v1.instancegroup.IpVersi" +
-      "on\022\017\n\007address\030\002 \001(\t\022N\n\020dns_record_specs\030" +
-      "\003 \003(\01324.yandex.cloud.compute.v1.instance" +
-      "group.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004" +
-      "fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n" +
-      "\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020" +
-      "SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001" +
-      "\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yandex" +
-      ".cloud.compute.v1.instancegroup.NetworkS" +
-      "ettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
-      "\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED" +
-      "\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\324\001\n\020LoadBal" +
-      "ancerSpec\022Q\n\021target_group_spec\030\001 \001(\01326.y" +
-      "andex.cloud.compute.v1.instancegroup.Tar" +
-      "getGroupSpec\022I\n\034max_opening_traffic_dura" +
-      "tion\030\002 \001(\0132\031.google.protobuf.DurationB\010\372" +
-      "\3071\004>=1s\022\034\n\024ignore_health_checks\030\004 \001(\010J\004\010" +
-      "\003\020\004\"\262\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003" +
-      " \003(\0132B.yandex.cloud.compute.v1.instanceg" +
-      "roup.TargetGroupSpec.LabelsEntryBG\202\3101\004<=" +
-      "64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\352\001\n\033App" +
-      "licationLoadBalancerSpec\022b\n\021target_group" +
-      "_spec\030\001 \001(\0132A.yandex.cloud.compute.v1.in" +
-      "stancegroup.ApplicationTargetGroupSpecB\004" +
-      "\350\3071\001\022I\n\034max_opening_traffic_duration\030\002 \001" +
-      "(\0132\031.google.protobuf.DurationB\010\372\3071\004>=1s\022" +
-      "\034\n\024ignore_health_checks\030\003 \001(\010\"\315\001\n\032Applic" +
-      "ationTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013de" +
-      "scription\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yandex" +
-      ".cloud.compute.v1.instancegroup.Applicat" +
-      "ionTargetGroupSpec.LabelsEntry\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001" +
-      "\n\020HealthChecksSpec\022[\n\022health_check_specs" +
-      "\030\001 \003(\01326.yandex.cloud.compute.v1.instanc" +
-      "egroup.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max_c" +
-      "hecking_health_duration\030\002 \001(\0132\031.google.p" +
-      "rotobuf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthChe" +
-      "ckSpec\0228\n\010interval\030\001 \001(\0132\031.google.protob" +
-      "uf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(" +
-      "\0132\031.google.protobuf.DurationB\n\372\3071\0061s-60s" +
-      "\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3" +
-      ",4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001" +
-      "(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_opti" +
-      "ons\030\005 \001(\0132A.yandex.cloud.compute.v1.inst" +
-      "ancegroup.HealthCheckSpec.TcpOptionsH\000\022Z" +
-      "\n\014http_options\030\006 \001(\0132B.yandex.cloud.comp" +
-      "ute.v1.instancegroup.HealthCheckSpec.Htt" +
-      "pOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013" +
-      "\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003" +
-      "B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_ch" +
-      "eck_options\022\004\300\3011\001\"\335\005\n\017ManagedInstance\022\n\n" +
-      "\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud" +
-      ".compute.v1.instancegroup.ManagedInstanc" +
-      "e.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 " +
-      "\001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(" +
-      "\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces" +
-      "\030\010 \003(\01327.yandex.cloud.compute.v1.instanc" +
-      "egroup.NetworkInterface\0225\n\021status_change" +
-      "d_at\030\t \001(\0132\032.google.protobuf.Timestamp\022\024" +
-      "\n\014instance_tag\030\016 \001(\t\"\354\002\n\006Status\022\026\n\022STATU" +
-      "S_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025" +
-      "\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_INSTAN" +
-      "CE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPING_" +
-      "INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURATION\020" +
-      "\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAFFI" +
-      "C\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017CLO" +
-      "SING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RU" +
-      "NNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED" +
-      "\020\030\022\027\n\023PREPARING_RESOURCES\020\031J\004\010\n\020\016\"\357\001\n\020Ne" +
-      "tworkInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_add" +
-      "ress\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary" +
-      "_v4_address\030\004 \001(\01325.yandex.cloud.compute" +
-      ".v1.instancegroup.PrimaryAddress\022Q\n\022prim" +
-      "ary_v6_address\030\005 \001(\01325.yandex.cloud.comp" +
-      "ute.v1.instancegroup.PrimaryAddress\"\264\001\n\016" +
-      "PrimaryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_t" +
-      "o_one_nat\030\002 \001(\01322.yandex.cloud.compute.v" +
-      "1.instancegroup.OneToOneNat\022E\n\013dns_recor" +
-      "ds\030\003 \003(\01320.yandex.cloud.compute.v1.insta" +
-      "ncegroup.DnsRecord\"\253\001\n\013OneToOneNat\022\017\n\007ad" +
-      "dress\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex" +
+      "ementPolicy.HostAffinityRule\032\307\001\n\020HostAff" +
+      "inityRule\022\013\n\003key\030\001 \001(\t\022\\\n\002op\030\002 \001(\0162P.yan" +
+      "dex.cloud.compute.v1.instancegroup.Place" +
+      "mentPolicy.HostAffinityRule.Operator\022\016\n\006" +
+      "values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR_UNS" +
+      "PECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\337\001\n\rResou" +
+      "rcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016<=82463372" +
+      "0832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6,8,10,12,1" +
+      "4,16,18,20,22,24,26,28,30,32,34,36,40,44" +
+      ",48,52,56,60,64,68,72,76,80\022(\n\rcore_frac" +
+      "tion\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n\004gpus\030\004 " +
+      "\001(\003B\013\372\3071\0070,1,2,4\"\342\004\n\020AttachedDiskSpec\022P\n" +
+      "\004mode\030\001 \001(\0162<.yandex.cloud.compute.v1.in" +
+      "stancegroup.AttachedDiskSpec.ModeB\004\350\3071\001\022" +
+      "/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9a-" +
+      "z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.yandex.clo" +
+      "ud.compute.v1.instancegroup.AttachedDisk" +
+      "Spec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004 \001(\tB\036\212\310" +
+      "1\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\022\027\n\004name\030\007 \001" +
+      "(\tB\t\212\3101\005<=128\032\342\001\n\010DiskSpec\022\036\n\013descriptio" +
+      "n\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 \001(\tB\004\350\3071" +
+      "\001\022(\n\004size\030\003 \001(\003B\032\372\3071\0264194304-28587302322" +
+      "176\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013sna" +
+      "pshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036preserve_a" +
+      "fter_instance_delete\030\006 \001(\010B\016\n\014source_one" +
+      "of\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD" +
+      "_ONLY\020\001\022\016\n\nREAD_WRITE\020\002J\004\010\005\020\007\"\222\002\n\024Networ" +
+      "kInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\nsu" +
+      "bnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_spe" +
+      "c\030\003 \001(\01329.yandex.cloud.compute.v1.instan" +
+      "cegroup.PrimaryAddressSpec\022Z\n\027primary_v6" +
+      "_address_spec\030\004 \001(\01329.yandex.cloud.compu" +
+      "te.v1.instancegroup.PrimaryAddressSpec\022\032" +
+      "\n\022security_group_ids\030\005 \003(\t\"\312\001\n\022PrimaryAd" +
+      "dressSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\01326" +
+      ".yandex.cloud.compute.v1.instancegroup.O" +
+      "neToOneNatSpec\022N\n\020dns_record_specs\030\002 \003(\013" +
+      "24.yandex.cloud.compute.v1.instancegroup" +
+      ".DnsRecordSpec\022\017\n\007address\030\003 \001(\t\"\270\001\n\017OneT" +
+      "oOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yandex" +
       ".cloud.compute.v1.instancegroup.IpVersio" +
-      "n\022E\n\013dns_records\030\003 \003(\01320.yandex.cloud.co" +
-      "mpute.v1.instancegroup.DnsRecord\"[\n\tDnsR" +
-      "ecord\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id" +
-      "\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030" +
-      "\004 \001(\010\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\017\n\007message\030\002 \001" +
-      "(\t\"\333\001\n\021AutoHealingPolicy\022g\n\023auto_healing" +
-      "_action\030\001 \001(\0162J.yandex.cloud.compute.v1." +
-      "instancegroup.AutoHealingPolicy.AutoHeal" +
-      "ingAction\"]\n\021AutoHealingAction\022#\n\037AUTO_H" +
-      "EALING_ACTION_UNSPECIFIED\020\000\022\013\n\007RESTART\020\001" +
-      "\022\014\n\010RECREATE\020\002\022\010\n\004NONE\020\003\"\331\002\n\017MetadataOpt" +
-      "ions\022P\n\021gce_http_endpoint\030\001 \001(\01625.yandex" +
-      ".cloud.compute.v1.instancegroup.Metadata" +
-      "Option\022S\n\024aws_v1_http_endpoint\030\002 \001(\01625.y" +
-      "andex.cloud.compute.v1.instancegroup.Met" +
-      "adataOption\022M\n\016gce_http_token\030\003 \001(\01625.ya" +
+      "n\022\017\n\007address\030\002 \001(\t\022N\n\020dns_record_specs\030\003" +
+      " \003(\01324.yandex.cloud.compute.v1.instanceg" +
+      "roup.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004f" +
+      "qdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003" +
+      "ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020S" +
+      "chedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001\n" +
+      "\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yandex." +
+      "cloud.compute.v1.instancegroup.NetworkSe" +
+      "ttings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
+      "\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020" +
+      "\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\324\001\n\020LoadBala" +
+      "ncerSpec\022Q\n\021target_group_spec\030\001 \001(\01326.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Targ" +
+      "etGroupSpec\022I\n\034max_opening_traffic_durat" +
+      "ion\030\002 \001(\0132\031.google.protobuf.DurationB\010\372\307" +
+      "1\004>=1s\022\034\n\024ignore_health_checks\030\004 \001(\010J\004\010\003" +
+      "\020\004\"\262\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362\307" +
+      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013de" +
+      "scription\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 " +
+      "\003(\0132B.yandex.cloud.compute.v1.instancegr" +
+      "oup.TargetGroupSpec.LabelsEntryBG\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\352\001\n\033Appl" +
+      "icationLoadBalancerSpec\022b\n\021target_group_" +
+      "spec\030\001 \001(\0132A.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ApplicationTargetGroupSpecB\004\350" +
+      "\3071\001\022I\n\034max_opening_traffic_duration\030\002 \001(" +
+      "\0132\031.google.protobuf.DurationB\010\372\3071\004>=1s\022\034" +
+      "\n\024ignore_health_checks\030\003 \001(\010\"\315\001\n\032Applica" +
+      "tionTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013des" +
+      "cription\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yandex." +
+      "cloud.compute.v1.instancegroup.Applicati" +
+      "onTargetGroupSpec.LabelsEntry\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n" +
+      "\020HealthChecksSpec\022[\n\022health_check_specs\030" +
+      "\001 \003(\01326.yandex.cloud.compute.v1.instance" +
+      "group.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max_ch" +
+      "ecking_health_duration\030\002 \001(\0132\031.google.pr" +
+      "otobuf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthChec" +
+      "kSpec\0228\n\010interval\030\001 \001(\0132\031.google.protobu" +
+      "f.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\013" +
+      "2\031.google.protobuf.DurationB\n\372\3071\0061s-60s\022" +
+      "5\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3," +
+      "4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(" +
+      "\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_optio" +
+      "ns\030\005 \001(\0132A.yandex.cloud.compute.v1.insta" +
+      "ncegroup.HealthCheckSpec.TcpOptionsH\000\022Z\n" +
+      "\014http_options\030\006 \001(\0132B.yandex.cloud.compu" +
+      "te.v1.instancegroup.HealthCheckSpec.Http" +
+      "OptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372" +
+      "\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B" +
+      "\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_che" +
+      "ck_options\022\004\300\3011\001\"\335\005\n\017ManagedInstance\022\n\n\002" +
+      "id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud." +
+      "compute.v1.instancegroup.ManagedInstance" +
+      ".Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001" +
+      "(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t" +
+      "\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfaces\030" +
+      "\010 \003(\01327.yandex.cloud.compute.v1.instance" +
+      "group.NetworkInterface\0225\n\021status_changed" +
+      "_at\030\t \001(\0132\032.google.protobuf.Timestamp\022\024\n" +
+      "\014instance_tag\030\016 \001(\t\"\354\002\n\006Status\022\026\n\022STATUS" +
+      "_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n" +
+      "\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_INSTANC" +
+      "E\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPING_I" +
+      "NSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURATION\020\020" +
+      "\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC" +
+      "\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017CLOS" +
+      "ING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUN" +
+      "NING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020" +
+      "\030\022\027\n\023PREPARING_RESOURCES\020\031J\004\010\n\020\016\"\357\001\n\020Net" +
+      "workInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_addr" +
+      "ess\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_" +
+      "v4_address\030\004 \001(\01325.yandex.cloud.compute." +
+      "v1.instancegroup.PrimaryAddress\022Q\n\022prima" +
+      "ry_v6_address\030\005 \001(\01325.yandex.cloud.compu" +
+      "te.v1.instancegroup.PrimaryAddress\"\264\001\n\016P" +
+      "rimaryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to" +
+      "_one_nat\030\002 \001(\01322.yandex.cloud.compute.v1" +
+      ".instancegroup.OneToOneNat\022E\n\013dns_record" +
+      "s\030\003 \003(\01320.yandex.cloud.compute.v1.instan" +
+      "cegroup.DnsRecord\"\253\001\n\013OneToOneNat\022\017\n\007add" +
+      "ress\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex." +
+      "cloud.compute.v1.instancegroup.IpVersion" +
+      "\022E\n\013dns_records\030\003 \003(\01320.yandex.cloud.com" +
+      "pute.v1.instancegroup.DnsRecord\"[\n\tDnsRe" +
+      "cord\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030" +
+      "\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004" +
+      " \001(\010\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\017\n\007message\030\002 \001(" +
+      "\t\"\333\001\n\021AutoHealingPolicy\022g\n\023auto_healing_" +
+      "action\030\001 \001(\0162J.yandex.cloud.compute.v1.i" +
+      "nstancegroup.AutoHealingPolicy.AutoHeali" +
+      "ngAction\"]\n\021AutoHealingAction\022#\n\037AUTO_HE" +
+      "ALING_ACTION_UNSPECIFIED\020\000\022\013\n\007RESTART\020\001\022" +
+      "\014\n\010RECREATE\020\002\022\010\n\004NONE\020\003\"\331\002\n\017MetadataOpti" +
+      "ons\022P\n\021gce_http_endpoint\030\001 \001(\01625.yandex." +
+      "cloud.compute.v1.instancegroup.MetadataO" +
+      "ption\022S\n\024aws_v1_http_endpoint\030\002 \001(\01625.ya" +
       "ndex.cloud.compute.v1.instancegroup.Meta" +
-      "dataOption\022P\n\021aws_v1_http_token\030\004 \001(\01625." +
-      "yandex.cloud.compute.v1.instancegroup.Me" +
-      "tadataOption*;\n\tIpVersion\022\032\n\026IP_VERSION_" +
-      "UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016Met" +
-      "adataOption\022\037\n\033METADATA_OPTION_UNSPECIFI" +
-      "ED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002B\204\001\n)yand" +
-      "ex.cloud.api.compute.v1.instancegroupZWg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/compute/v1/instancegroup;instanc" +
-      "egroupb\006proto3"
+      "dataOption\022M\n\016gce_http_token\030\003 \001(\01625.yan" +
+      "dex.cloud.compute.v1.instancegroup.Metad" +
+      "ataOption\022P\n\021aws_v1_http_token\030\004 \001(\01625.y" +
+      "andex.cloud.compute.v1.instancegroup.Met" +
+      "adataOption*;\n\tIpVersion\022\032\n\026IP_VERSION_U" +
+      "NSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016Meta" +
+      "dataOption\022\037\n\033METADATA_OPTION_UNSPECIFIE" +
+      "D\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002B\204\001\n)yande" +
+      "x.cloud.api.compute.v1.instancegroupZWgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/compute/v1/instancegroup;instance" +
+      "groupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

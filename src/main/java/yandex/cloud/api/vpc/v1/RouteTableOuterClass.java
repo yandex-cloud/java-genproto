@@ -269,7 +269,7 @@ public final class RouteTableOuterClass {
   }
   /**
    * <pre>
-   * A RouteTable resource. For more information, see [Static Routes](/docs/vpc/concepts/static-routes).
+   * A RouteTable resource. For more information, see [Static Routes](/docs/vpc/concepts/routing).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.RouteTable}
@@ -1127,7 +1127,7 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * A RouteTable resource. For more information, see [Static Routes](/docs/vpc/concepts/static-routes).
+     * A RouteTable resource. For more information, see [Static Routes](/docs/vpc/concepts/routing).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.vpc.v1.RouteTable}
@@ -2737,7 +2737,7 @@ public final class RouteTableOuterClass {
   }
   /**
    * <pre>
-   * A StaticRoute resource. For more information, see [Static Routes](/docs/vpc/concepts/static-routes).
+   * A StaticRoute resource. For more information, see [Static Routes](/docs/vpc/concepts/routing).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.vpc.v1.StaticRoute}
@@ -3457,7 +3457,7 @@ public final class RouteTableOuterClass {
     }
     /**
      * <pre>
-     * A StaticRoute resource. For more information, see [Static Routes](/docs/vpc/concepts/static-routes).
+     * A StaticRoute resource. For more information, see [Static Routes](/docs/vpc/concepts/routing).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.vpc.v1.StaticRoute}
