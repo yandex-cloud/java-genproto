@@ -8788,6 +8788,227 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     * @return Whether the logQueryThreads field is set.
+     */
+    boolean hasLogQueryThreads();
+    /**
+     * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     * @return The logQueryThreads.
+     */
+    com.google.protobuf.BoolValue getLogQueryThreads();
+    /**
+     * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogQueryThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxInsertThreads field is set.
+     */
+    boolean hasMaxInsertThreads();
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxInsertThreads.
+     */
+    com.google.protobuf.Int64Value getMaxInsertThreads();
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxInsertThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     * @return Whether the useHedgedRequests field is set.
+     */
+    boolean hasUseHedgedRequests();
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     * @return The useHedgedRequests.
+     */
+    com.google.protobuf.BoolValue getUseHedgedRequests();
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseHedgedRequestsOrBuilder();
+
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the idleConnectionTimeout field is set.
+     */
+    boolean hasIdleConnectionTimeout();
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The idleConnectionTimeout.
+     */
+    com.google.protobuf.Int64Value getIdleConnectionTimeout();
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getIdleConnectionTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the hedgedConnectionTimeoutMs field is set.
+     */
+    boolean hasHedgedConnectionTimeoutMs();
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The hedgedConnectionTimeoutMs.
+     */
+    com.google.protobuf.Int64Value getHedgedConnectionTimeoutMs();
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getHedgedConnectionTimeoutMsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+     * Default: random
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+     * @return The enum numeric value on the wire for loadBalancing.
+     */
+    int getLoadBalancingValue();
+    /**
+     * <pre>
+     * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+     * Default: random
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+     * @return The loadBalancing.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing getLoadBalancing();
+
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     * @return Whether the preferLocalhostReplica field is set.
+     */
+    boolean hasPreferLocalhostReplica();
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     * @return The preferLocalhostReplica.
+     */
+    com.google.protobuf.BoolValue getPreferLocalhostReplica();
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreferLocalhostReplicaOrBuilder();
+
+    /**
+     * <pre>
      * The setting is deprecated and has no effect.
      * </pre>
      *
@@ -8881,6 +9102,7 @@ public final class UserOuterClass {
       formatRegexpEscapingRule_ = 0;
       localFilesystemReadMethod_ = 0;
       remoteFilesystemReadMethod_ = 0;
+      loadBalancing_ = 0;
     }
 
     @java.lang.Override
@@ -10566,6 +10788,90 @@ public final class UserOuterClass {
 
               break;
             }
+            case 1114: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logQueryThreads_ != null) {
+                subBuilder = logQueryThreads_.toBuilder();
+              }
+              logQueryThreads_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logQueryThreads_);
+                logQueryThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1122: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxInsertThreads_ != null) {
+                subBuilder = maxInsertThreads_.toBuilder();
+              }
+              maxInsertThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxInsertThreads_);
+                maxInsertThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1130: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useHedgedRequests_ != null) {
+                subBuilder = useHedgedRequests_.toBuilder();
+              }
+              useHedgedRequests_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useHedgedRequests_);
+                useHedgedRequests_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (idleConnectionTimeout_ != null) {
+                subBuilder = idleConnectionTimeout_.toBuilder();
+              }
+              idleConnectionTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(idleConnectionTimeout_);
+                idleConnectionTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1146: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (hedgedConnectionTimeoutMs_ != null) {
+                subBuilder = hedgedConnectionTimeoutMs_.toBuilder();
+              }
+              hedgedConnectionTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hedgedConnectionTimeoutMs_);
+                hedgedConnectionTimeoutMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1152: {
+              int rawValue = input.readEnum();
+
+              loadBalancing_ = rawValue;
+              break;
+            }
+            case 1162: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preferLocalhostReplica_ != null) {
+                subBuilder = preferLocalhostReplica_.toBuilder();
+              }
+              preferLocalhostReplica_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preferLocalhostReplica_);
+                preferLocalhostReplica_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -12098,6 +12404,150 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing}
+     */
+    public enum LoadBalancing
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOAD_BALANCING_UNSPECIFIED = 0;</code>
+       */
+      LOAD_BALANCING_UNSPECIFIED(0),
+      /**
+       * <code>LOAD_BALANCING_RANDOM = 1;</code>
+       */
+      LOAD_BALANCING_RANDOM(1),
+      /**
+       * <code>LOAD_BALANCING_NEAREST_HOSTNAME = 2;</code>
+       */
+      LOAD_BALANCING_NEAREST_HOSTNAME(2),
+      /**
+       * <code>LOAD_BALANCING_IN_ORDER = 3;</code>
+       */
+      LOAD_BALANCING_IN_ORDER(3),
+      /**
+       * <code>LOAD_BALANCING_FIRST_OR_RANDOM = 4;</code>
+       */
+      LOAD_BALANCING_FIRST_OR_RANDOM(4),
+      /**
+       * <code>LOAD_BALANCING_ROUND_ROBIN = 5;</code>
+       */
+      LOAD_BALANCING_ROUND_ROBIN(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOAD_BALANCING_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOAD_BALANCING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>LOAD_BALANCING_RANDOM = 1;</code>
+       */
+      public static final int LOAD_BALANCING_RANDOM_VALUE = 1;
+      /**
+       * <code>LOAD_BALANCING_NEAREST_HOSTNAME = 2;</code>
+       */
+      public static final int LOAD_BALANCING_NEAREST_HOSTNAME_VALUE = 2;
+      /**
+       * <code>LOAD_BALANCING_IN_ORDER = 3;</code>
+       */
+      public static final int LOAD_BALANCING_IN_ORDER_VALUE = 3;
+      /**
+       * <code>LOAD_BALANCING_FIRST_OR_RANDOM = 4;</code>
+       */
+      public static final int LOAD_BALANCING_FIRST_OR_RANDOM_VALUE = 4;
+      /**
+       * <code>LOAD_BALANCING_ROUND_ROBIN = 5;</code>
+       */
+      public static final int LOAD_BALANCING_ROUND_ROBIN_VALUE = 5;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LoadBalancing valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static LoadBalancing forNumber(int value) {
+        switch (value) {
+          case 0: return LOAD_BALANCING_UNSPECIFIED;
+          case 1: return LOAD_BALANCING_RANDOM;
+          case 2: return LOAD_BALANCING_NEAREST_HOSTNAME;
+          case 3: return LOAD_BALANCING_IN_ORDER;
+          case 4: return LOAD_BALANCING_FIRST_OR_RANDOM;
+          case 5: return LOAD_BALANCING_ROUND_ROBIN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LoadBalancing>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LoadBalancing> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LoadBalancing>() {
+              public LoadBalancing findValueByNumber(int number) {
+                return LoadBalancing.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(11);
+      }
+
+      private static final LoadBalancing[] VALUES = values();
+
+      public static LoadBalancing valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LoadBalancing(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -17782,6 +18232,301 @@ public final class UserOuterClass {
       return getMemoryUsageOvercommitMaxWaitMicroseconds();
     }
 
+    public static final int LOG_QUERY_THREADS_FIELD_NUMBER = 139;
+    private com.google.protobuf.BoolValue logQueryThreads_;
+    /**
+     * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     * @return Whether the logQueryThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogQueryThreads() {
+      return logQueryThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     * @return The logQueryThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getLogQueryThreads() {
+      return logQueryThreads_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logQueryThreads_;
+    }
+    /**
+     * <pre>
+     * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getLogQueryThreadsOrBuilder() {
+      return getLogQueryThreads();
+    }
+
+    public static final int MAX_INSERT_THREADS_FIELD_NUMBER = 140;
+    private com.google.protobuf.Int64Value maxInsertThreads_;
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxInsertThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxInsertThreads() {
+      return maxInsertThreads_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxInsertThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxInsertThreads() {
+      return maxInsertThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxInsertThreads_;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads to execute the INSERT SELECT query.
+     * Default: 0
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxInsertThreadsOrBuilder() {
+      return getMaxInsertThreads();
+    }
+
+    public static final int USE_HEDGED_REQUESTS_FIELD_NUMBER = 141;
+    private com.google.protobuf.BoolValue useHedgedRequests_;
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     * @return Whether the useHedgedRequests field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseHedgedRequests() {
+      return useHedgedRequests_ != null;
+    }
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     * @return The useHedgedRequests.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUseHedgedRequests() {
+      return useHedgedRequests_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useHedgedRequests_;
+    }
+    /**
+     * <pre>
+     * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUseHedgedRequestsOrBuilder() {
+      return getUseHedgedRequests();
+    }
+
+    public static final int IDLE_CONNECTION_TIMEOUT_FIELD_NUMBER = 142;
+    private com.google.protobuf.Int64Value idleConnectionTimeout_;
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the idleConnectionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdleConnectionTimeout() {
+      return idleConnectionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The idleConnectionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getIdleConnectionTimeout() {
+      return idleConnectionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleConnectionTimeout_;
+    }
+    /**
+     * <pre>
+     * Timeout to close idle TCP connections after specified number of milliseconds.
+     * Default: 360000 (3600 seconds)
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getIdleConnectionTimeoutOrBuilder() {
+      return getIdleConnectionTimeout();
+    }
+
+    public static final int HEDGED_CONNECTION_TIMEOUT_MS_FIELD_NUMBER = 143;
+    private com.google.protobuf.Int64Value hedgedConnectionTimeoutMs_;
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the hedgedConnectionTimeoutMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasHedgedConnectionTimeoutMs() {
+      return hedgedConnectionTimeoutMs_ != null;
+    }
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The hedgedConnectionTimeoutMs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getHedgedConnectionTimeoutMs() {
+      return hedgedConnectionTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hedgedConnectionTimeoutMs_;
+    }
+    /**
+     * <pre>
+     * Connection timeout for establishing connection with replica for Hedged requests.
+     * Default: 50
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getHedgedConnectionTimeoutMsOrBuilder() {
+      return getHedgedConnectionTimeoutMs();
+    }
+
+    public static final int LOAD_BALANCING_FIELD_NUMBER = 144;
+    private int loadBalancing_;
+    /**
+     * <pre>
+     * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+     * Default: random
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+     * @return The enum numeric value on the wire for loadBalancing.
+     */
+    @java.lang.Override public int getLoadBalancingValue() {
+      return loadBalancing_;
+    }
+    /**
+     * <pre>
+     * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+     * Default: random
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+     * @return The loadBalancing.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing getLoadBalancing() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.valueOf(loadBalancing_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.UNRECOGNIZED : result;
+    }
+
+    public static final int PREFER_LOCALHOST_REPLICA_FIELD_NUMBER = 145;
+    private com.google.protobuf.BoolValue preferLocalhostReplica_;
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     * @return Whether the preferLocalhostReplica field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreferLocalhostReplica() {
+      return preferLocalhostReplica_ != null;
+    }
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     * @return The preferLocalhostReplica.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPreferLocalhostReplica() {
+      return preferLocalhostReplica_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preferLocalhostReplica_;
+    }
+    /**
+     * <pre>
+     * Enables/disables preferable using the localhost replica when processing distributed queries.
+     * Default: true
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPreferLocalhostReplicaOrBuilder() {
+      return getPreferLocalhostReplica();
+    }
+
     public static final int COMPILE_FIELD_NUMBER = 44;
     private com.google.protobuf.BoolValue compile_;
     /**
@@ -18288,6 +19033,27 @@ public final class UserOuterClass {
       }
       if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
         output.writeMessage(138, getMemoryUsageOvercommitMaxWaitMicroseconds());
+      }
+      if (logQueryThreads_ != null) {
+        output.writeMessage(139, getLogQueryThreads());
+      }
+      if (maxInsertThreads_ != null) {
+        output.writeMessage(140, getMaxInsertThreads());
+      }
+      if (useHedgedRequests_ != null) {
+        output.writeMessage(141, getUseHedgedRequests());
+      }
+      if (idleConnectionTimeout_ != null) {
+        output.writeMessage(142, getIdleConnectionTimeout());
+      }
+      if (hedgedConnectionTimeoutMs_ != null) {
+        output.writeMessage(143, getHedgedConnectionTimeoutMs());
+      }
+      if (loadBalancing_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.LOAD_BALANCING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(144, loadBalancing_);
+      }
+      if (preferLocalhostReplica_ != null) {
+        output.writeMessage(145, getPreferLocalhostReplica());
       }
       unknownFields.writeTo(output);
     }
@@ -18848,6 +19614,34 @@ public final class UserOuterClass {
       if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(138, getMemoryUsageOvercommitMaxWaitMicroseconds());
+      }
+      if (logQueryThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(139, getLogQueryThreads());
+      }
+      if (maxInsertThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(140, getMaxInsertThreads());
+      }
+      if (useHedgedRequests_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(141, getUseHedgedRequests());
+      }
+      if (idleConnectionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(142, getIdleConnectionTimeout());
+      }
+      if (hedgedConnectionTimeoutMs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(143, getHedgedConnectionTimeoutMs());
+      }
+      if (loadBalancing_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.LOAD_BALANCING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(144, loadBalancing_);
+      }
+      if (preferLocalhostReplica_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(145, getPreferLocalhostReplica());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19459,6 +20253,37 @@ public final class UserOuterClass {
         if (!getMemoryUsageOvercommitMaxWaitMicroseconds()
             .equals(other.getMemoryUsageOvercommitMaxWaitMicroseconds())) return false;
       }
+      if (hasLogQueryThreads() != other.hasLogQueryThreads()) return false;
+      if (hasLogQueryThreads()) {
+        if (!getLogQueryThreads()
+            .equals(other.getLogQueryThreads())) return false;
+      }
+      if (hasMaxInsertThreads() != other.hasMaxInsertThreads()) return false;
+      if (hasMaxInsertThreads()) {
+        if (!getMaxInsertThreads()
+            .equals(other.getMaxInsertThreads())) return false;
+      }
+      if (hasUseHedgedRequests() != other.hasUseHedgedRequests()) return false;
+      if (hasUseHedgedRequests()) {
+        if (!getUseHedgedRequests()
+            .equals(other.getUseHedgedRequests())) return false;
+      }
+      if (hasIdleConnectionTimeout() != other.hasIdleConnectionTimeout()) return false;
+      if (hasIdleConnectionTimeout()) {
+        if (!getIdleConnectionTimeout()
+            .equals(other.getIdleConnectionTimeout())) return false;
+      }
+      if (hasHedgedConnectionTimeoutMs() != other.hasHedgedConnectionTimeoutMs()) return false;
+      if (hasHedgedConnectionTimeoutMs()) {
+        if (!getHedgedConnectionTimeoutMs()
+            .equals(other.getHedgedConnectionTimeoutMs())) return false;
+      }
+      if (loadBalancing_ != other.loadBalancing_) return false;
+      if (hasPreferLocalhostReplica() != other.hasPreferLocalhostReplica()) return false;
+      if (hasPreferLocalhostReplica()) {
+        if (!getPreferLocalhostReplica()
+            .equals(other.getPreferLocalhostReplica())) return false;
+      }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
         if (!getCompile()
@@ -19979,6 +20804,32 @@ public final class UserOuterClass {
       if (hasMemoryUsageOvercommitMaxWaitMicroseconds()) {
         hash = (37 * hash) + MEMORY_USAGE_OVERCOMMIT_MAX_WAIT_MICROSECONDS_FIELD_NUMBER;
         hash = (53 * hash) + getMemoryUsageOvercommitMaxWaitMicroseconds().hashCode();
+      }
+      if (hasLogQueryThreads()) {
+        hash = (37 * hash) + LOG_QUERY_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogQueryThreads().hashCode();
+      }
+      if (hasMaxInsertThreads()) {
+        hash = (37 * hash) + MAX_INSERT_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxInsertThreads().hashCode();
+      }
+      if (hasUseHedgedRequests()) {
+        hash = (37 * hash) + USE_HEDGED_REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getUseHedgedRequests().hashCode();
+      }
+      if (hasIdleConnectionTimeout()) {
+        hash = (37 * hash) + IDLE_CONNECTION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getIdleConnectionTimeout().hashCode();
+      }
+      if (hasHedgedConnectionTimeoutMs()) {
+        hash = (37 * hash) + HEDGED_CONNECTION_TIMEOUT_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getHedgedConnectionTimeoutMs().hashCode();
+      }
+      hash = (37 * hash) + LOAD_BALANCING_FIELD_NUMBER;
+      hash = (53 * hash) + loadBalancing_;
+      if (hasPreferLocalhostReplica()) {
+        hash = (37 * hash) + PREFER_LOCALHOST_REPLICA_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferLocalhostReplica().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -20854,6 +21705,44 @@ public final class UserOuterClass {
           memoryUsageOvercommitMaxWaitMicroseconds_ = null;
           memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ = null;
         }
+        if (logQueryThreadsBuilder_ == null) {
+          logQueryThreads_ = null;
+        } else {
+          logQueryThreads_ = null;
+          logQueryThreadsBuilder_ = null;
+        }
+        if (maxInsertThreadsBuilder_ == null) {
+          maxInsertThreads_ = null;
+        } else {
+          maxInsertThreads_ = null;
+          maxInsertThreadsBuilder_ = null;
+        }
+        if (useHedgedRequestsBuilder_ == null) {
+          useHedgedRequests_ = null;
+        } else {
+          useHedgedRequests_ = null;
+          useHedgedRequestsBuilder_ = null;
+        }
+        if (idleConnectionTimeoutBuilder_ == null) {
+          idleConnectionTimeout_ = null;
+        } else {
+          idleConnectionTimeout_ = null;
+          idleConnectionTimeoutBuilder_ = null;
+        }
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          hedgedConnectionTimeoutMs_ = null;
+        } else {
+          hedgedConnectionTimeoutMs_ = null;
+          hedgedConnectionTimeoutMsBuilder_ = null;
+        }
+        loadBalancing_ = 0;
+
+        if (preferLocalhostReplicaBuilder_ == null) {
+          preferLocalhostReplica_ = null;
+        } else {
+          preferLocalhostReplica_ = null;
+          preferLocalhostReplicaBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -21491,6 +22380,37 @@ public final class UserOuterClass {
         } else {
           result.memoryUsageOvercommitMaxWaitMicroseconds_ = memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.build();
         }
+        if (logQueryThreadsBuilder_ == null) {
+          result.logQueryThreads_ = logQueryThreads_;
+        } else {
+          result.logQueryThreads_ = logQueryThreadsBuilder_.build();
+        }
+        if (maxInsertThreadsBuilder_ == null) {
+          result.maxInsertThreads_ = maxInsertThreads_;
+        } else {
+          result.maxInsertThreads_ = maxInsertThreadsBuilder_.build();
+        }
+        if (useHedgedRequestsBuilder_ == null) {
+          result.useHedgedRequests_ = useHedgedRequests_;
+        } else {
+          result.useHedgedRequests_ = useHedgedRequestsBuilder_.build();
+        }
+        if (idleConnectionTimeoutBuilder_ == null) {
+          result.idleConnectionTimeout_ = idleConnectionTimeout_;
+        } else {
+          result.idleConnectionTimeout_ = idleConnectionTimeoutBuilder_.build();
+        }
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          result.hedgedConnectionTimeoutMs_ = hedgedConnectionTimeoutMs_;
+        } else {
+          result.hedgedConnectionTimeoutMs_ = hedgedConnectionTimeoutMsBuilder_.build();
+        }
+        result.loadBalancing_ = loadBalancing_;
+        if (preferLocalhostReplicaBuilder_ == null) {
+          result.preferLocalhostReplica_ = preferLocalhostReplica_;
+        } else {
+          result.preferLocalhostReplica_ = preferLocalhostReplicaBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -21958,6 +22878,27 @@ public final class UserOuterClass {
         }
         if (other.hasMemoryUsageOvercommitMaxWaitMicroseconds()) {
           mergeMemoryUsageOvercommitMaxWaitMicroseconds(other.getMemoryUsageOvercommitMaxWaitMicroseconds());
+        }
+        if (other.hasLogQueryThreads()) {
+          mergeLogQueryThreads(other.getLogQueryThreads());
+        }
+        if (other.hasMaxInsertThreads()) {
+          mergeMaxInsertThreads(other.getMaxInsertThreads());
+        }
+        if (other.hasUseHedgedRequests()) {
+          mergeUseHedgedRequests(other.getUseHedgedRequests());
+        }
+        if (other.hasIdleConnectionTimeout()) {
+          mergeIdleConnectionTimeout(other.getIdleConnectionTimeout());
+        }
+        if (other.hasHedgedConnectionTimeoutMs()) {
+          mergeHedgedConnectionTimeoutMs(other.getHedgedConnectionTimeoutMs());
+        }
+        if (other.loadBalancing_ != 0) {
+          setLoadBalancingValue(other.getLoadBalancingValue());
+        }
+        if (other.hasPreferLocalhostReplica()) {
+          mergePreferLocalhostReplica(other.getPreferLocalhostReplica());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -43528,6 +44469,1128 @@ public final class UserOuterClass {
         return memoryUsageOvercommitMaxWaitMicrosecondsBuilder_;
       }
 
+      private com.google.protobuf.BoolValue logQueryThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logQueryThreadsBuilder_;
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       * @return Whether the logQueryThreads field is set.
+       */
+      public boolean hasLogQueryThreads() {
+        return logQueryThreadsBuilder_ != null || logQueryThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       * @return The logQueryThreads.
+       */
+      public com.google.protobuf.BoolValue getLogQueryThreads() {
+        if (logQueryThreadsBuilder_ == null) {
+          return logQueryThreads_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logQueryThreads_;
+        } else {
+          return logQueryThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public Builder setLogQueryThreads(com.google.protobuf.BoolValue value) {
+        if (logQueryThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logQueryThreads_ = value;
+          onChanged();
+        } else {
+          logQueryThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public Builder setLogQueryThreads(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logQueryThreadsBuilder_ == null) {
+          logQueryThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          logQueryThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public Builder mergeLogQueryThreads(com.google.protobuf.BoolValue value) {
+        if (logQueryThreadsBuilder_ == null) {
+          if (logQueryThreads_ != null) {
+            logQueryThreads_ =
+              com.google.protobuf.BoolValue.newBuilder(logQueryThreads_).mergeFrom(value).buildPartial();
+          } else {
+            logQueryThreads_ = value;
+          }
+          onChanged();
+        } else {
+          logQueryThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public Builder clearLogQueryThreads() {
+        if (logQueryThreadsBuilder_ == null) {
+          logQueryThreads_ = null;
+          onChanged();
+        } else {
+          logQueryThreads_ = null;
+          logQueryThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogQueryThreadsBuilder() {
+        
+        onChanged();
+        return getLogQueryThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogQueryThreadsOrBuilder() {
+        if (logQueryThreadsBuilder_ != null) {
+          return logQueryThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return logQueryThreads_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logQueryThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Setting up query threads logging. Query threads log into the [system.query_thread_log](https://clickhouse.com/docs/en/operations/system-tables/query_thread_log) table. This setting has effect only when [log_queries](https://clickhouse.com/docs/en/operations/settings/settings#log-queries) is true. Queries threads run by ClickHouse with this setup are logged according to the rules in the [query_thread_log](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#server_configuration_parameters-query_thread_log) server configuration parameter.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#log_query_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_query_threads = 139;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogQueryThreadsFieldBuilder() {
+        if (logQueryThreadsBuilder_ == null) {
+          logQueryThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogQueryThreads(),
+                  getParentForChildren(),
+                  isClean());
+          logQueryThreads_ = null;
+        }
+        return logQueryThreadsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxInsertThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxInsertThreadsBuilder_;
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxInsertThreads field is set.
+       */
+      public boolean hasMaxInsertThreads() {
+        return maxInsertThreadsBuilder_ != null || maxInsertThreads_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxInsertThreads.
+       */
+      public com.google.protobuf.Int64Value getMaxInsertThreads() {
+        if (maxInsertThreadsBuilder_ == null) {
+          return maxInsertThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxInsertThreads_;
+        } else {
+          return maxInsertThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxInsertThreads(com.google.protobuf.Int64Value value) {
+        if (maxInsertThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxInsertThreads_ = value;
+          onChanged();
+        } else {
+          maxInsertThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxInsertThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxInsertThreadsBuilder_ == null) {
+          maxInsertThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxInsertThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxInsertThreads(com.google.protobuf.Int64Value value) {
+        if (maxInsertThreadsBuilder_ == null) {
+          if (maxInsertThreads_ != null) {
+            maxInsertThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(maxInsertThreads_).mergeFrom(value).buildPartial();
+          } else {
+            maxInsertThreads_ = value;
+          }
+          onChanged();
+        } else {
+          maxInsertThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxInsertThreads() {
+        if (maxInsertThreadsBuilder_ == null) {
+          maxInsertThreads_ = null;
+          onChanged();
+        } else {
+          maxInsertThreads_ = null;
+          maxInsertThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxInsertThreadsBuilder() {
+        
+        onChanged();
+        return getMaxInsertThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxInsertThreadsOrBuilder() {
+        if (maxInsertThreadsBuilder_ != null) {
+          return maxInsertThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxInsertThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxInsertThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads to execute the INSERT SELECT query.
+       * Default: 0
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_insert_threads)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_insert_threads = 140 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxInsertThreadsFieldBuilder() {
+        if (maxInsertThreadsBuilder_ == null) {
+          maxInsertThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxInsertThreads(),
+                  getParentForChildren(),
+                  isClean());
+          maxInsertThreads_ = null;
+        }
+        return maxInsertThreadsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue useHedgedRequests_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useHedgedRequestsBuilder_;
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       * @return Whether the useHedgedRequests field is set.
+       */
+      public boolean hasUseHedgedRequests() {
+        return useHedgedRequestsBuilder_ != null || useHedgedRequests_ != null;
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       * @return The useHedgedRequests.
+       */
+      public com.google.protobuf.BoolValue getUseHedgedRequests() {
+        if (useHedgedRequestsBuilder_ == null) {
+          return useHedgedRequests_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useHedgedRequests_;
+        } else {
+          return useHedgedRequestsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public Builder setUseHedgedRequests(com.google.protobuf.BoolValue value) {
+        if (useHedgedRequestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useHedgedRequests_ = value;
+          onChanged();
+        } else {
+          useHedgedRequestsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public Builder setUseHedgedRequests(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useHedgedRequestsBuilder_ == null) {
+          useHedgedRequests_ = builderForValue.build();
+          onChanged();
+        } else {
+          useHedgedRequestsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public Builder mergeUseHedgedRequests(com.google.protobuf.BoolValue value) {
+        if (useHedgedRequestsBuilder_ == null) {
+          if (useHedgedRequests_ != null) {
+            useHedgedRequests_ =
+              com.google.protobuf.BoolValue.newBuilder(useHedgedRequests_).mergeFrom(value).buildPartial();
+          } else {
+            useHedgedRequests_ = value;
+          }
+          onChanged();
+        } else {
+          useHedgedRequestsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public Builder clearUseHedgedRequests() {
+        if (useHedgedRequestsBuilder_ == null) {
+          useHedgedRequests_ = null;
+          onChanged();
+        } else {
+          useHedgedRequests_ = null;
+          useHedgedRequestsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseHedgedRequestsBuilder() {
+        
+        onChanged();
+        return getUseHedgedRequestsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseHedgedRequestsOrBuilder() {
+        if (useHedgedRequestsBuilder_ != null) {
+          return useHedgedRequestsBuilder_.getMessageOrBuilder();
+        } else {
+          return useHedgedRequests_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useHedgedRequests_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables hedged requests logic for remote queries. It allows to establish many connections with different replicas for query. New connection is enabled in case existent connection(s) with replica(s) were not established within hedged_connection_timeout or no data was received within receive_data_timeout. Query uses the first connection which send non empty progress packet (or data packet, if allow_changing_replica_until_first_data_packet); other connections are cancelled. Queries with max_parallel_replicas &gt; 1 are supported.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#use_hedged_requests)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue use_hedged_requests = 141;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseHedgedRequestsFieldBuilder() {
+        if (useHedgedRequestsBuilder_ == null) {
+          useHedgedRequestsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseHedgedRequests(),
+                  getParentForChildren(),
+                  isClean());
+          useHedgedRequests_ = null;
+        }
+        return useHedgedRequestsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value idleConnectionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idleConnectionTimeoutBuilder_;
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the idleConnectionTimeout field is set.
+       */
+      public boolean hasIdleConnectionTimeout() {
+        return idleConnectionTimeoutBuilder_ != null || idleConnectionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The idleConnectionTimeout.
+       */
+      public com.google.protobuf.Int64Value getIdleConnectionTimeout() {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          return idleConnectionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : idleConnectionTimeout_;
+        } else {
+          return idleConnectionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setIdleConnectionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          idleConnectionTimeout_ = value;
+          onChanged();
+        } else {
+          idleConnectionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setIdleConnectionTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          idleConnectionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          idleConnectionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeIdleConnectionTimeout(com.google.protobuf.Int64Value value) {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          if (idleConnectionTimeout_ != null) {
+            idleConnectionTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(idleConnectionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            idleConnectionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          idleConnectionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearIdleConnectionTimeout() {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          idleConnectionTimeout_ = null;
+          onChanged();
+        } else {
+          idleConnectionTimeout_ = null;
+          idleConnectionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getIdleConnectionTimeoutBuilder() {
+        
+        onChanged();
+        return getIdleConnectionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getIdleConnectionTimeoutOrBuilder() {
+        if (idleConnectionTimeoutBuilder_ != null) {
+          return idleConnectionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return idleConnectionTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : idleConnectionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Timeout to close idle TCP connections after specified number of milliseconds.
+       * Default: 360000 (3600 seconds)
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#idle_connection_timeout)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value idle_connection_timeout = 142 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getIdleConnectionTimeoutFieldBuilder() {
+        if (idleConnectionTimeoutBuilder_ == null) {
+          idleConnectionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getIdleConnectionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          idleConnectionTimeout_ = null;
+        }
+        return idleConnectionTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value hedgedConnectionTimeoutMs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hedgedConnectionTimeoutMsBuilder_;
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the hedgedConnectionTimeoutMs field is set.
+       */
+      public boolean hasHedgedConnectionTimeoutMs() {
+        return hedgedConnectionTimeoutMsBuilder_ != null || hedgedConnectionTimeoutMs_ != null;
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The hedgedConnectionTimeoutMs.
+       */
+      public com.google.protobuf.Int64Value getHedgedConnectionTimeoutMs() {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          return hedgedConnectionTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hedgedConnectionTimeoutMs_;
+        } else {
+          return hedgedConnectionTimeoutMsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setHedgedConnectionTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hedgedConnectionTimeoutMs_ = value;
+          onChanged();
+        } else {
+          hedgedConnectionTimeoutMsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setHedgedConnectionTimeoutMs(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          hedgedConnectionTimeoutMs_ = builderForValue.build();
+          onChanged();
+        } else {
+          hedgedConnectionTimeoutMsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeHedgedConnectionTimeoutMs(com.google.protobuf.Int64Value value) {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          if (hedgedConnectionTimeoutMs_ != null) {
+            hedgedConnectionTimeoutMs_ =
+              com.google.protobuf.Int64Value.newBuilder(hedgedConnectionTimeoutMs_).mergeFrom(value).buildPartial();
+          } else {
+            hedgedConnectionTimeoutMs_ = value;
+          }
+          onChanged();
+        } else {
+          hedgedConnectionTimeoutMsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearHedgedConnectionTimeoutMs() {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          hedgedConnectionTimeoutMs_ = null;
+          onChanged();
+        } else {
+          hedgedConnectionTimeoutMs_ = null;
+          hedgedConnectionTimeoutMsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getHedgedConnectionTimeoutMsBuilder() {
+        
+        onChanged();
+        return getHedgedConnectionTimeoutMsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getHedgedConnectionTimeoutMsOrBuilder() {
+        if (hedgedConnectionTimeoutMsBuilder_ != null) {
+          return hedgedConnectionTimeoutMsBuilder_.getMessageOrBuilder();
+        } else {
+          return hedgedConnectionTimeoutMs_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : hedgedConnectionTimeoutMs_;
+        }
+      }
+      /**
+       * <pre>
+       * Connection timeout for establishing connection with replica for Hedged requests.
+       * Default: 50
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L64)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value hedged_connection_timeout_ms = 143 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getHedgedConnectionTimeoutMsFieldBuilder() {
+        if (hedgedConnectionTimeoutMsBuilder_ == null) {
+          hedgedConnectionTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getHedgedConnectionTimeoutMs(),
+                  getParentForChildren(),
+                  isClean());
+          hedgedConnectionTimeoutMs_ = null;
+        }
+        return hedgedConnectionTimeoutMsBuilder_;
+      }
+
+      private int loadBalancing_ = 0;
+      /**
+       * <pre>
+       * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+       * Default: random
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+       * @return The enum numeric value on the wire for loadBalancing.
+       */
+      @java.lang.Override public int getLoadBalancingValue() {
+        return loadBalancing_;
+      }
+      /**
+       * <pre>
+       * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+       * Default: random
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+       * @param value The enum numeric value on the wire for loadBalancing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancingValue(int value) {
+        
+        loadBalancing_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+       * Default: random
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+       * @return The loadBalancing.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing getLoadBalancing() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.valueOf(loadBalancing_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+       * Default: random
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+       * @param value The loadBalancing to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancing(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LoadBalancing value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        loadBalancing_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the algorithm of replicas selection that is used for distributed query processing, one of: random, nearest_hostname, in_order, first_or_random, round_robin.
+       * Default: random
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#load_balancing)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LoadBalancing load_balancing = 144;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancing() {
+        
+        loadBalancing_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue preferLocalhostReplica_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preferLocalhostReplicaBuilder_;
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       * @return Whether the preferLocalhostReplica field is set.
+       */
+      public boolean hasPreferLocalhostReplica() {
+        return preferLocalhostReplicaBuilder_ != null || preferLocalhostReplica_ != null;
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       * @return The preferLocalhostReplica.
+       */
+      public com.google.protobuf.BoolValue getPreferLocalhostReplica() {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          return preferLocalhostReplica_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preferLocalhostReplica_;
+        } else {
+          return preferLocalhostReplicaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public Builder setPreferLocalhostReplica(com.google.protobuf.BoolValue value) {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preferLocalhostReplica_ = value;
+          onChanged();
+        } else {
+          preferLocalhostReplicaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public Builder setPreferLocalhostReplica(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          preferLocalhostReplica_ = builderForValue.build();
+          onChanged();
+        } else {
+          preferLocalhostReplicaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public Builder mergePreferLocalhostReplica(com.google.protobuf.BoolValue value) {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          if (preferLocalhostReplica_ != null) {
+            preferLocalhostReplica_ =
+              com.google.protobuf.BoolValue.newBuilder(preferLocalhostReplica_).mergeFrom(value).buildPartial();
+          } else {
+            preferLocalhostReplica_ = value;
+          }
+          onChanged();
+        } else {
+          preferLocalhostReplicaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public Builder clearPreferLocalhostReplica() {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          preferLocalhostReplica_ = null;
+          onChanged();
+        } else {
+          preferLocalhostReplica_ = null;
+          preferLocalhostReplicaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreferLocalhostReplicaBuilder() {
+        
+        onChanged();
+        return getPreferLocalhostReplicaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreferLocalhostReplicaOrBuilder() {
+        if (preferLocalhostReplicaBuilder_ != null) {
+          return preferLocalhostReplicaBuilder_.getMessageOrBuilder();
+        } else {
+          return preferLocalhostReplica_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preferLocalhostReplica_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables/disables preferable using the localhost replica when processing distributed queries.
+       * Default: true
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#prefer_localhost_replica)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue prefer_localhost_replica = 145;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreferLocalhostReplicaFieldBuilder() {
+        if (preferLocalhostReplicaBuilder_ == null) {
+          preferLocalhostReplicaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreferLocalhostReplica(),
+                  getParentForChildren(),
+                  isClean());
+          preferLocalhostReplica_ = null;
+        }
+        return preferLocalhostReplicaBuilder_;
+      }
+
       private com.google.protobuf.BoolValue compile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
@@ -46041,7 +48104,7 @@ public final class UserOuterClass {
       "ckhouse.v1.Permission\022>\n\010settings\030\004 \001(\0132" +
       ",.yandex.cloud.mdb.clickhouse.v1.UserSet" +
       "tings\0229\n\006quotas\030\005 \003(\0132).yandex.cloud.mdb" +
-      ".clickhouse.v1.UserQuota\"\373]\n\014UserSetting" +
+      ".clickhouse.v1.UserQuota\"\254c\n\014UserSetting" +
       "s\0226\n\010readonly\030\001 \001(\0132\033.google.protobuf.In" +
       "t64ValueB\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.g" +
       "oogle.protobuf.BoolValue\022A\n\035allow_intros" +
@@ -46283,78 +48346,95 @@ public final class UserOuterClass {
       "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022\\\n-memo" +
       "ry_usage_overcommit_max_wait_microsecond" +
       "s\030\212\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022/\n\007compile\030, \001(\0132\032.google.protobu" +
-      "f.BoolValueB\002\030\001\022=\n\024min_count_to_compile\030" +
-      "- \001(\0132\033.google.protobuf.Int64ValueB\002\030\001\"_" +
-      "\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIF" +
-      "IED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFL" +
-      "OW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022" +
-      "&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022" +
-      " \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GRO" +
-      "UP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_" +
-      "OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProdu" +
-      "ctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPE" +
-      "CIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DEN" +
-      "Y\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022" +
-      "#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036" +
-      "DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuot" +
-      "aMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUO" +
-      "TA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022" +
-      "\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDis" +
-      "tinctImplementation\022-\n)COUNT_DISTINCT_IM" +
-      "PLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIST" +
-      "INCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIST" +
-      "INCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.C" +
-      "OUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBIN" +
-      "ED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION" +
-      "_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEME" +
-      "NTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036" +
-      "\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_A" +
-      "LGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALL" +
-      "EL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERG" +
-      "E\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_A" +
-      "LGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_S" +
-      "ORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_" +
-      "PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEscaping" +
-      "Rule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_UNSP" +
-      "ECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_RULE" +
-      "_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_RUL" +
-      "E_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
-      "E_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RULE_J" +
-      "SON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_XML" +
-      "\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW\020\006\"" +
-      "\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INP" +
-      "UT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INP" +
-      "UT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FOR" +
-      "MAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputF" +
-      "ormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECI" +
-      "FIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE" +
-      "\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&D" +
-      "ATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"" +
-      "\362\001\n\031LocalFilesystemReadMethod\022,\n(LOCAL_F" +
-      "ILESYSTEM_READ_METHOD_UNSPECIFIED\020\000\022%\n!L" +
-      "OCAL_FILESYSTEM_READ_METHOD_READ\020\001\0221\n-LO" +
-      "CAL_FILESYSTEM_READ_METHOD_PREAD_THREADP" +
-      "OOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METHOD_PR" +
-      "EAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METHOD_NM" +
-      "AP\020\004\"\241\001\n\032RemoteFilesystemReadMethod\022-\n)R" +
-      "EMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
-      "\020\000\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ" +
-      "\020\001\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THRE" +
-      "ADPOOL\020\002J\004\010R\020T\"\356\002\n\tUserQuota\022B\n\021interval" +
-      "_duration\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006error" +
-      "s\030\003 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022<\n\016execution_time\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud." +
-      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
-      "khouse/v1;clickhouseb\006proto3"
+      "\3071\003>=0\0226\n\021log_query_threads\030\213\001 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\022A\n\022max_insert_thr" +
+      "eads\030\214\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\0228\n\023use_hedged_requests\030\215\001 \001(\0132" +
+      "\032.google.protobuf.BoolValue\022F\n\027idle_conn" +
+      "ection_timeout\030\216\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022K\n\034hedged_connection" +
+      "_timeout_ms\030\217\001 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022S\n\016load_balancing\030\220\001 \001(" +
+      "\0162:.yandex.cloud.mdb.clickhouse.v1.UserS" +
+      "ettings.LoadBalancing\022=\n\030prefer_localhos" +
+      "t_replica\030\221\001 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022/\n\007compile\030, \001(\0132\032.google.protobuf." +
+      "BoolValueB\002\030\001\022=\n\024min_count_to_compile\030- " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\002\030\001\"_\n\014" +
+      "OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIFIE" +
+      "D\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFLOW" +
+      "_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022&\n" +
+      "\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022 \n" +
+      "\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GROUP" +
+      "_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_OV" +
+      "ERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProduct" +
+      "Mode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPECI" +
+      "FIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DENY\020" +
+      "\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022#\n" +
+      "\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036DI" +
+      "STRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuotaM" +
+      "ode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUOTA" +
+      "_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n" +
+      "\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDisti" +
+      "nctImplementation\022-\n)COUNT_DISTINCT_IMPL" +
+      "EMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DISTIN" +
+      "CT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DISTIN" +
+      "CT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.COU" +
+      "NT_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED" +
+      "_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION_U" +
+      "NIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEMENT" +
+      "ATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032" +
+      "JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_ALG" +
+      "ORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALLEL" +
+      "_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERGE\020" +
+      "\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_ALG" +
+      "ORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_SOR" +
+      "TING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_PA" +
+      "RTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEscapingRu" +
+      "le\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_UNSPEC" +
+      "IFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_RULE_E" +
+      "SCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_RULE_" +
+      "QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_" +
+      "CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RULE_JSO" +
+      "N\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_XML\020\005" +
+      "\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW\020\006\"\262\001" +
+      "\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INPUT" +
+      "_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INPUT" +
+      "_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INPUT" +
+      "_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FORMA" +
+      "T_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputFor" +
+      "mat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECIFI" +
+      "ED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE\020\001" +
+      "\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&DAT" +
+      "E_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"\362\001" +
+      "\n\031LocalFilesystemReadMethod\022,\n(LOCAL_FIL" +
+      "ESYSTEM_READ_METHOD_UNSPECIFIED\020\000\022%\n!LOC" +
+      "AL_FILESYSTEM_READ_METHOD_READ\020\001\0221\n-LOCA" +
+      "L_FILESYSTEM_READ_METHOD_PREAD_THREADPOO" +
+      "L\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METHOD_PREA" +
+      "D\020\003\022%\n!LOCAL_FILESYSTEM_READ_METHOD_NMAP" +
+      "\020\004\"\241\001\n\032RemoteFilesystemReadMethod\022-\n)REM" +
+      "OTE_FILESYSTEM_READ_METHOD_UNSPECIFIED\020\000" +
+      "\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ\020\001" +
+      "\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THREAD" +
+      "POOL\020\002\"\320\001\n\rLoadBalancing\022\036\n\032LOAD_BALANCI" +
+      "NG_UNSPECIFIED\020\000\022\031\n\025LOAD_BALANCING_RANDO" +
+      "M\020\001\022#\n\037LOAD_BALANCING_NEAREST_HOSTNAME\020\002" +
+      "\022\033\n\027LOAD_BALANCING_IN_ORDER\020\003\022\"\n\036LOAD_BA" +
+      "LANCING_FIRST_OR_RANDOM\020\004\022\036\n\032LOAD_BALANC" +
+      "ING_ROUND_ROBIN\020\005J\004\010R\020T\"\356\002\n\tUserQuota\022B\n" +
+      "\021interval_duration\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\trea" +
+      "d_rows\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yand" +
+      "ex.cloud.api.mdb.clickhouse.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/clickhouse/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -46385,7 +48465,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "Compile", "MinCountToCompile", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "LogQueryThreads", "MaxInsertThreads", "UseHedgedRequests", "IdleConnectionTimeout", "HedgedConnectionTimeoutMs", "LoadBalancing", "PreferLocalhostReplica", "Compile", "MinCountToCompile", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

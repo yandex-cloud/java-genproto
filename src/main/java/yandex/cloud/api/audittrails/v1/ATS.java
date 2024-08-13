@@ -3258,29 +3258,61 @@ public final class ATS {
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the filter field is set.
      */
-    boolean hasFilter();
+    @java.lang.Deprecated boolean hasFilter();
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
-    yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter();
+    @java.lang.Deprecated yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter();
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
      */
-    yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     * @return Whether the filteringPolicy field is set.
+     */
+    boolean hasFilteringPolicy();
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     * @return The filteringPolicy.
+     */
+    yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy();
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     */
+    yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.audittrails.v1.CreateTrailRequest}
@@ -3391,6 +3423,19 @@ public final class ATS {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(filter_);
                 filter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder subBuilder = null;
+              if (filteringPolicy_ != null) {
+                subBuilder = filteringPolicy_.toBuilder();
+              }
+              filteringPolicy_ = input.readMessage(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filteringPolicy_);
+                filteringPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3767,37 +3812,80 @@ public final class ATS {
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the filter field is set.
      */
     @java.lang.Override
-    public boolean hasFilter() {
+    @java.lang.Deprecated public boolean hasFilter() {
       return filter_ != null;
     }
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
     @java.lang.Override
-    public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
+    @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
       return filter_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Filter.getDefaultInstance() : filter_;
     }
     /**
      * <pre>
      * Event filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
       return getFilter();
+    }
+
+    public static final int FILTERING_POLICY_FIELD_NUMBER = 8;
+    private yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy filteringPolicy_;
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     * @return Whether the filteringPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilteringPolicy() {
+      return filteringPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     * @return The filteringPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy() {
+      return filteringPolicy_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+    }
+    /**
+     * <pre>
+     * Event filtering policy of the trail
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder() {
+      return getFilteringPolicy();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3838,6 +3926,9 @@ public final class ATS {
       if (filter_ != null) {
         output.writeMessage(7, getFilter());
       }
+      if (filteringPolicy_ != null) {
+        output.writeMessage(8, getFilteringPolicy());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3877,6 +3968,10 @@ public final class ATS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getFilter());
       }
+      if (filteringPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getFilteringPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3912,6 +4007,11 @@ public final class ATS {
         if (!getFilter()
             .equals(other.getFilter())) return false;
       }
+      if (hasFilteringPolicy() != other.hasFilteringPolicy()) return false;
+      if (hasFilteringPolicy()) {
+        if (!getFilteringPolicy()
+            .equals(other.getFilteringPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3942,6 +4042,10 @@ public final class ATS {
       if (hasFilter()) {
         hash = (37 * hash) + FILTER_FIELD_NUMBER;
         hash = (53 * hash) + getFilter().hashCode();
+      }
+      if (hasFilteringPolicy()) {
+        hash = (37 * hash) + FILTERING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getFilteringPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4119,6 +4223,12 @@ public final class ATS {
           filter_ = null;
           filterBuilder_ = null;
         }
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = null;
+        } else {
+          filteringPolicy_ = null;
+          filteringPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -4161,6 +4271,11 @@ public final class ATS {
           result.filter_ = filter_;
         } else {
           result.filter_ = filterBuilder_.build();
+        }
+        if (filteringPolicyBuilder_ == null) {
+          result.filteringPolicy_ = filteringPolicy_;
+        } else {
+          result.filteringPolicy_ = filteringPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4233,6 +4348,9 @@ public final class ATS {
         }
         if (other.hasFilter()) {
           mergeFilter(other.getFilter());
+        }
+        if (other.hasFilteringPolicy()) {
+          mergeFilteringPolicy(other.getFilteringPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4975,23 +5093,27 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the filter field is set.
        */
-      public boolean hasFilter() {
+      @java.lang.Deprecated public boolean hasFilter() {
         return filterBuilder_ != null || filter_ != null;
       }
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
+       * @deprecated
        * @return The filter.
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
         if (filterBuilder_ == null) {
           return filter_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Filter.getDefaultInstance() : filter_;
         } else {
@@ -5001,11 +5123,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public Builder setFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
+      @java.lang.Deprecated public Builder setFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
         if (filterBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5021,11 +5144,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public Builder setFilter(
+      @java.lang.Deprecated public Builder setFilter(
           yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder builderForValue) {
         if (filterBuilder_ == null) {
           filter_ = builderForValue.build();
@@ -5039,11 +5163,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public Builder mergeFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
+      @java.lang.Deprecated public Builder mergeFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
         if (filterBuilder_ == null) {
           if (filter_ != null) {
             filter_ =
@@ -5061,11 +5186,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public Builder clearFilter() {
+      @java.lang.Deprecated public Builder clearFilter() {
         if (filterBuilder_ == null) {
           filter_ = null;
           onChanged();
@@ -5079,11 +5205,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder getFilterBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder getFilterBuilder() {
         
         onChanged();
         return getFilterFieldBuilder().getBuilder();
@@ -5091,11 +5218,12 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
         if (filterBuilder_ != null) {
           return filterBuilder_.getMessageOrBuilder();
         } else {
@@ -5106,9 +5234,10 @@ public final class ATS {
       /**
        * <pre>
        * Event filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [(.yandex.cloud.required) = true];</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 7 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.audittrails.v1.AT.Trail.Filter, yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder> 
@@ -5122,6 +5251,161 @@ public final class ATS {
           filter_ = null;
         }
         return filterBuilder_;
+      }
+
+      private yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy filteringPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder> filteringPolicyBuilder_;
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       * @return Whether the filteringPolicy field is set.
+       */
+      public boolean hasFilteringPolicy() {
+        return filteringPolicyBuilder_ != null || filteringPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       * @return The filteringPolicy.
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy() {
+        if (filteringPolicyBuilder_ == null) {
+          return filteringPolicy_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+        } else {
+          return filteringPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public Builder setFilteringPolicy(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy value) {
+        if (filteringPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filteringPolicy_ = value;
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public Builder setFilteringPolicy(
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder builderForValue) {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public Builder mergeFilteringPolicy(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy value) {
+        if (filteringPolicyBuilder_ == null) {
+          if (filteringPolicy_ != null) {
+            filteringPolicy_ =
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.newBuilder(filteringPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            filteringPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public Builder clearFilteringPolicy() {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = null;
+          onChanged();
+        } else {
+          filteringPolicy_ = null;
+          filteringPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder getFilteringPolicyBuilder() {
+        
+        onChanged();
+        return getFilteringPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder() {
+        if (filteringPolicyBuilder_ != null) {
+          return filteringPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return filteringPolicy_ == null ?
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Event filtering policy of the trail
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder> 
+          getFilteringPolicyFieldBuilder() {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder>(
+                  getFilteringPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          filteringPolicy_ = null;
+        }
+        return filteringPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5370,30 +5654,62 @@ public final class ATS {
 
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the filter field is set.
      */
-    boolean hasFilter();
+    @java.lang.Deprecated boolean hasFilter();
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
-    yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter();
+    @java.lang.Deprecated yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter();
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
      */
-    yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     * @return Whether the filteringPolicy field is set.
+     */
+    boolean hasFilteringPolicy();
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     * @return The filteringPolicy.
+     */
+    yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy();
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     */
+    yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.audittrails.v1.UpdateTrailRequest}
@@ -5517,6 +5833,19 @@ public final class ATS {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(filter_);
                 filter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder subBuilder = null;
+              if (filteringPolicy_ != null) {
+                subBuilder = filteringPolicy_.toBuilder();
+              }
+              filteringPolicy_ = input.readMessage(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(filteringPolicy_);
+                filteringPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5926,38 +6255,81 @@ public final class ATS {
     private yandex.cloud.api.audittrails.v1.AT.Trail.Filter filter_;
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the filter field is set.
      */
     @java.lang.Override
-    public boolean hasFilter() {
+    @java.lang.Deprecated public boolean hasFilter() {
       return filter_ != null;
     }
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
     @java.lang.Override
-    public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
+    @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
       return filter_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Filter.getDefaultInstance() : filter_;
     }
     /**
      * <pre>
-     * New filtering configuration of the trail
+     * Updated filtering configuration of the trail
+     * deprecated: use filtering_policy instead
      * </pre>
      *
-     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+     * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
       return getFilter();
+    }
+
+    public static final int FILTERING_POLICY_FIELD_NUMBER = 9;
+    private yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy filteringPolicy_;
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     * @return Whether the filteringPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilteringPolicy() {
+      return filteringPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     * @return The filteringPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy() {
+      return filteringPolicy_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+    }
+    /**
+     * <pre>
+     * Updated event filtering policy
+     * </pre>
+     *
+     * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder() {
+      return getFilteringPolicy();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6000,6 +6372,9 @@ public final class ATS {
       }
       if (filter_ != null) {
         output.writeMessage(8, getFilter());
+      }
+      if (filteringPolicy_ != null) {
+        output.writeMessage(9, getFilteringPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -6044,6 +6419,10 @@ public final class ATS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getFilter());
       }
+      if (filteringPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getFilteringPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6084,6 +6463,11 @@ public final class ATS {
         if (!getFilter()
             .equals(other.getFilter())) return false;
       }
+      if (hasFilteringPolicy() != other.hasFilteringPolicy()) return false;
+      if (hasFilteringPolicy()) {
+        if (!getFilteringPolicy()
+            .equals(other.getFilteringPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6118,6 +6502,10 @@ public final class ATS {
       if (hasFilter()) {
         hash = (37 * hash) + FILTER_FIELD_NUMBER;
         hash = (53 * hash) + getFilter().hashCode();
+      }
+      if (hasFilteringPolicy()) {
+        hash = (37 * hash) + FILTERING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getFilteringPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6301,6 +6689,12 @@ public final class ATS {
           filter_ = null;
           filterBuilder_ = null;
         }
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = null;
+        } else {
+          filteringPolicy_ = null;
+          filteringPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -6348,6 +6742,11 @@ public final class ATS {
           result.filter_ = filter_;
         } else {
           result.filter_ = filterBuilder_.build();
+        }
+        if (filteringPolicyBuilder_ == null) {
+          result.filteringPolicy_ = filteringPolicy_;
+        } else {
+          result.filteringPolicy_ = filteringPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6423,6 +6822,9 @@ public final class ATS {
         }
         if (other.hasFilter()) {
           mergeFilter(other.getFilter());
+        }
+        if (other.hasFilteringPolicy()) {
+          mergeFilteringPolicy(other.getFilteringPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7312,24 +7714,28 @@ public final class ATS {
           yandex.cloud.api.audittrails.v1.AT.Trail.Filter, yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder> filterBuilder_;
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the filter field is set.
        */
-      public boolean hasFilter() {
+      @java.lang.Deprecated public boolean hasFilter() {
         return filterBuilder_ != null || filter_ != null;
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
+       * @deprecated
        * @return The filter.
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter getFilter() {
         if (filterBuilder_ == null) {
           return filter_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.Filter.getDefaultInstance() : filter_;
         } else {
@@ -7338,12 +7744,13 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public Builder setFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
+      @java.lang.Deprecated public Builder setFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
         if (filterBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7358,12 +7765,13 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public Builder setFilter(
+      @java.lang.Deprecated public Builder setFilter(
           yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder builderForValue) {
         if (filterBuilder_ == null) {
           filter_ = builderForValue.build();
@@ -7376,12 +7784,13 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public Builder mergeFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
+      @java.lang.Deprecated public Builder mergeFilter(yandex.cloud.api.audittrails.v1.AT.Trail.Filter value) {
         if (filterBuilder_ == null) {
           if (filter_ != null) {
             filter_ =
@@ -7398,12 +7807,13 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public Builder clearFilter() {
+      @java.lang.Deprecated public Builder clearFilter() {
         if (filterBuilder_ == null) {
           filter_ = null;
           onChanged();
@@ -7416,24 +7826,26 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder getFilterBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder getFilterBuilder() {
         
         onChanged();
         return getFilterFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
-      public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder getFilterOrBuilder() {
         if (filterBuilder_ != null) {
           return filterBuilder_.getMessageOrBuilder();
         } else {
@@ -7443,10 +7855,11 @@ public final class ATS {
       }
       /**
        * <pre>
-       * New filtering configuration of the trail
+       * Updated filtering configuration of the trail
+       * deprecated: use filtering_policy instead
        * </pre>
        *
-       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8;</code>
+       * <code>.yandex.cloud.audittrails.v1.Trail.Filter filter = 8 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.audittrails.v1.AT.Trail.Filter, yandex.cloud.api.audittrails.v1.AT.Trail.Filter.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilterOrBuilder> 
@@ -7460,6 +7873,161 @@ public final class ATS {
           filter_ = null;
         }
         return filterBuilder_;
+      }
+
+      private yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy filteringPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder> filteringPolicyBuilder_;
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       * @return Whether the filteringPolicy field is set.
+       */
+      public boolean hasFilteringPolicy() {
+        return filteringPolicyBuilder_ != null || filteringPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       * @return The filteringPolicy.
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy getFilteringPolicy() {
+        if (filteringPolicyBuilder_ == null) {
+          return filteringPolicy_ == null ? yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+        } else {
+          return filteringPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public Builder setFilteringPolicy(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy value) {
+        if (filteringPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filteringPolicy_ = value;
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public Builder setFilteringPolicy(
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder builderForValue) {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public Builder mergeFilteringPolicy(yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy value) {
+        if (filteringPolicyBuilder_ == null) {
+          if (filteringPolicy_ != null) {
+            filteringPolicy_ =
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.newBuilder(filteringPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            filteringPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          filteringPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public Builder clearFilteringPolicy() {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicy_ = null;
+          onChanged();
+        } else {
+          filteringPolicy_ = null;
+          filteringPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder getFilteringPolicyBuilder() {
+        
+        onChanged();
+        return getFilteringPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      public yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder getFilteringPolicyOrBuilder() {
+        if (filteringPolicyBuilder_ != null) {
+          return filteringPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return filteringPolicy_ == null ?
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.getDefaultInstance() : filteringPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Updated event filtering policy
+       * </pre>
+       *
+       * <code>.yandex.cloud.audittrails.v1.Trail.FilteringPolicy filtering_policy = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder> 
+          getFilteringPolicyFieldBuilder() {
+        if (filteringPolicyBuilder_ == null) {
+          filteringPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicy.Builder, yandex.cloud.api.audittrails.v1.AT.Trail.FilteringPolicyOrBuilder>(
+                  getFilteringPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          filteringPolicy_ = null;
+        }
+        return filteringPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12042,7 +12610,7 @@ public final class ATS {
       "\003 \001(\tB\t\212\3101\005<=100\022\016\n\006filter\030\004 \001(\t\022\020\n\010orde" +
       "r_by\030\005 \001(\t\"a\n\022ListTrailsResponse\0222\n\006trai" +
       "ls\030\001 \003(\0132\".yandex.cloud.audittrails.v1.T" +
-      "rail\022\027\n\017next_page_token\030\002 \001(\t\"\376\003\n\022Create" +
+      "rail\022\027\n\017next_page_token\030\002 \001(\t\"\312\004\n\022Create" +
       "TrailRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
       "]{0,61}[a-z0-9])?\022\037\n\013description\030\003 \001(\tB\n" +
@@ -12052,79 +12620,83 @@ public final class ATS {
       "*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022I\n\013des" +
       "tination\030\005 \001(\0132..yandex.cloud.audittrail" +
       "s.v1.Trail.DestinationB\004\350\3071\001\022(\n\022service_" +
-      "account_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\006filter" +
+      "account_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\006filter" +
       "\030\007 \001(\0132).yandex.cloud.audittrails.v1.Tra" +
-      "il.FilterB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236\004\n\022UpdateTrailRe" +
-      "quest\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n" +
-      "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB" +
-      "\n\212\3101\006<=1024\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cl" +
-      "oud.audittrails.v1.UpdateTrailRequest.La" +
-      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
-      "]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013de" +
-      "stination\030\006 \001(\0132..yandex.cloud.audittrai" +
-      "ls.v1.Trail.Destination\022$\n\022service_accou" +
-      "nt_id\030\007 \001(\tB\010\212\3101\004<=50\0229\n\006filter\030\010 \001(\0132)." +
-      "yandex.cloud.audittrails.v1.Trail.Filter" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"4\n\022DeleteTrailRequest\022\036\n\010trail_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023CreateTrailMeta" +
-      "data\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023UpdateTrailMet" +
-      "adata\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023DeleteTrailMe" +
-      "tadata\022\020\n\010trail_id\030\001 \001(\t\"z\n\032ListTrailOpe" +
-      "rationsRequest\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListTrai" +
-      "lOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t2\201\r\n\014TrailService\022\203\001\n" +
-      "\003Get\022,.yandex.cloud.audittrails.v1.GetTr" +
-      "ailRequest\032\".yandex.cloud.audittrails.v1" +
-      ".Trail\"*\202\323\344\223\002$\022\"/audit-trails/v1/trails/" +
-      "{trail_id}\022\210\001\n\004List\022..yandex.cloud.audit" +
-      "trails.v1.ListTrailsRequest\032/.yandex.clo" +
-      "ud.audittrails.v1.ListTrailsResponse\"\037\202\323" +
-      "\344\223\002\031\022\027/audit-trails/v1/trails\022\240\001\n\006Create" +
-      "\022/.yandex.cloud.audittrails.v1.CreateTra" +
-      "ilRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"B\202\323\344\223\002\034\"\027/audit-trails/v1/trails:\001*" +
-      "\262\322*\034\n\023CreateTrailMetadata\022\005Trail\022\253\001\n\006Upd" +
-      "ate\022/.yandex.cloud.audittrails.v1.Update" +
-      "TrailRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"M\202\323\344\223\002\'2\"/audit-trails/v1/trails" +
-      "/{trail_id}:\001*\262\322*\034\n\023UpdateTrailMetadata\022" +
-      "\005Trail\022\270\001\n\006Delete\022/.yandex.cloud.audittr" +
-      "ails.v1.DeleteTrailRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Z\202\323\344\223\002$*\"/audit-tr" +
-      "ails/v1/trails/{trail_id}\262\322*,\n\023DeleteTra" +
-      "ilMetadata\022\025google.protobuf.Empty\022\272\001\n\016Li" +
-      "stOperations\0227.yandex.cloud.audittrails." +
-      "v1.ListTrailOperationsRequest\0328.yandex.c" +
-      "loud.audittrails.v1.ListTrailOperationsR" +
-      "esponse\"5\202\323\344\223\002/\022-/audit-trails/v1/trails" +
-      "/{trail_id}/operations\022\267\001\n\022ListAccessBin" +
-      "dings\022..yandex.cloud.access.ListAccessBi" +
-      "ndingsRequest\032/.yandex.cloud.access.List" +
-      "AccessBindingsResponse\"@\202\323\344\223\002:\0228/audit-t" +
-      "rails/v1/trails/{resource_id}:listAccess" +
-      "Bindings\022\346\001\n\021SetAccessBindings\022-.yandex." +
-      "cloud.access.SetAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\177\202\323\344\223\002<" +
-      "\"7/audit-trails/v1/trails/{resource_id}:" +
-      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\363\001\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\205\001\202\323\344\223\002?" +
-      "\":/audit-trails/v1/trails/{resource_id}:" +
-      "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
-      "teAccessBindingsMetadata\022\025google.protobu" +
-      "f.EmptyBs\n\037yandex.cloud.api.audittrails." +
-      "v1B\003ATSZKgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/audittrails/v1;audittr" +
-      "ailsb\006proto3"
+      "il.FilterB\002\030\001\022L\n\020filtering_policy\030\010 \001(\0132" +
+      "2.yandex.cloud.audittrails.v1.Trail.Filt" +
+      "eringPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"\360\004\n\022UpdateTrailReques" +
+      "t\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
+      ",61}[a-z0-9])?\022\037\n\013description\030\004 \001(\tB\n\212\3101" +
+      "\006<=1024\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud." +
+      "audittrails.v1.UpdateTrailRequest.Labels" +
+      "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
+      "1\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022C\n\013destin" +
+      "ation\030\006 \001(\0132..yandex.cloud.audittrails.v" +
+      "1.Trail.Destination\022$\n\022service_account_i" +
+      "d\030\007 \001(\tB\010\212\3101\004<=50\022=\n\006filter\030\010 \001(\0132).yand" +
+      "ex.cloud.audittrails.v1.Trail.FilterB\002\030\001" +
+      "\022L\n\020filtering_policy\030\t \001(\01322.yandex.clou" +
+      "d.audittrails.v1.Trail.FilteringPolicy\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"4\n\022DeleteTrailRequest\022\036\n\010trail_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\'\n\023CreateTrailMetada" +
+      "ta\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023UpdateTrailMetad" +
+      "ata\022\020\n\010trail_id\030\001 \001(\t\"\'\n\023DeleteTrailMeta" +
+      "data\022\020\n\010trail_id\030\001 \001(\t\"z\n\032ListTrailOpera" +
+      "tionsRequest\022\036\n\010trail_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033ListTrailO" +
+      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
+      "yandex.cloud.operation.Operation\022\027\n\017next" +
+      "_page_token\030\002 \001(\t2\201\r\n\014TrailService\022\203\001\n\003G" +
+      "et\022,.yandex.cloud.audittrails.v1.GetTrai" +
+      "lRequest\032\".yandex.cloud.audittrails.v1.T" +
+      "rail\"*\202\323\344\223\002$\022\"/audit-trails/v1/trails/{t" +
+      "rail_id}\022\210\001\n\004List\022..yandex.cloud.audittr" +
+      "ails.v1.ListTrailsRequest\032/.yandex.cloud" +
+      ".audittrails.v1.ListTrailsResponse\"\037\202\323\344\223" +
+      "\002\031\022\027/audit-trails/v1/trails\022\240\001\n\006Create\022/" +
+      ".yandex.cloud.audittrails.v1.CreateTrail" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"B\202\323\344\223\002\034\"\027/audit-trails/v1/trails:\001*\262\322" +
+      "*\034\n\023CreateTrailMetadata\022\005Trail\022\253\001\n\006Updat" +
+      "e\022/.yandex.cloud.audittrails.v1.UpdateTr" +
+      "ailRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"M\202\323\344\223\002\'2\"/audit-trails/v1/trails/{" +
+      "trail_id}:\001*\262\322*\034\n\023UpdateTrailMetadata\022\005T" +
+      "rail\022\270\001\n\006Delete\022/.yandex.cloud.audittrai" +
+      "ls.v1.DeleteTrailRequest\032!.yandex.cloud." +
+      "operation.Operation\"Z\202\323\344\223\002$*\"/audit-trai" +
+      "ls/v1/trails/{trail_id}\262\322*,\n\023DeleteTrail" +
+      "Metadata\022\025google.protobuf.Empty\022\272\001\n\016List" +
+      "Operations\0227.yandex.cloud.audittrails.v1" +
+      ".ListTrailOperationsRequest\0328.yandex.clo" +
+      "ud.audittrails.v1.ListTrailOperationsRes" +
+      "ponse\"5\202\323\344\223\002/\022-/audit-trails/v1/trails/{" +
+      "trail_id}/operations\022\267\001\n\022ListAccessBindi" +
+      "ngs\022..yandex.cloud.access.ListAccessBind" +
+      "ingsRequest\032/.yandex.cloud.access.ListAc" +
+      "cessBindingsResponse\"@\202\323\344\223\002:\0228/audit-tra" +
+      "ils/v1/trails/{resource_id}:listAccessBi" +
+      "ndings\022\346\001\n\021SetAccessBindings\022-.yandex.cl" +
+      "oud.access.SetAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\177\202\323\344\223\002<\"7" +
+      "/audit-trails/v1/trails/{resource_id}:se" +
+      "tAccessBindings:\001*\262\322*9\n access.SetAccess" +
+      "BindingsMetadata\022\025google.protobuf.Empty\022" +
+      "\363\001\n\024UpdateAccessBindings\0220.yandex.cloud." +
+      "access.UpdateAccessBindingsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\205\001\202\323\344\223\002?\":" +
+      "/audit-trails/v1/trails/{resource_id}:up" +
+      "dateAccessBindings:\001*\262\322*<\n#access.Update" +
+      "AccessBindingsMetadata\022\025google.protobuf." +
+      "EmptyBs\n\037yandex.cloud.api.audittrails.v1" +
+      "B\003ATSZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/audittrails/v1;audittrai" +
+      "lsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12160,7 +12732,7 @@ public final class ATS {
     internal_static_yandex_cloud_audittrails_v1_CreateTrailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_CreateTrailRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Destination", "ServiceAccountId", "Filter", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Destination", "ServiceAccountId", "Filter", "FilteringPolicy", });
     internal_static_yandex_cloud_audittrails_v1_CreateTrailRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_audittrails_v1_CreateTrailRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_audittrails_v1_CreateTrailRequest_LabelsEntry_fieldAccessorTable = new
@@ -12172,7 +12744,7 @@ public final class ATS {
     internal_static_yandex_cloud_audittrails_v1_UpdateTrailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_audittrails_v1_UpdateTrailRequest_descriptor,
-        new java.lang.String[] { "TrailId", "UpdateMask", "Name", "Description", "Labels", "Destination", "ServiceAccountId", "Filter", });
+        new java.lang.String[] { "TrailId", "UpdateMask", "Name", "Description", "Labels", "Destination", "ServiceAccountId", "Filter", "FilteringPolicy", });
     internal_static_yandex_cloud_audittrails_v1_UpdateTrailRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_audittrails_v1_UpdateTrailRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_audittrails_v1_UpdateTrailRequest_LabelsEntry_fieldAccessorTable = new
