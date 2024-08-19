@@ -180,6 +180,33 @@ public final class ServiceAccountOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    boolean hasLastAuthenticatedAt();
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    com.google.protobuf.Timestamp getLastAuthenticatedAt();
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -283,6 +310,19 @@ public final class ServiceAccountOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastAuthenticatedAt_ != null) {
+                subBuilder = lastAuthenticatedAt_.toBuilder();
+              }
+              lastAuthenticatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastAuthenticatedAt_);
+                lastAuthenticatedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -650,6 +690,44 @@ public final class ServiceAccountOuterClass {
       return map.get(key);
     }
 
+    public static final int LAST_AUTHENTICATED_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last authentication of this service account.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+      return getLastAuthenticatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -685,6 +763,9 @@ public final class ServiceAccountOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
+      if (lastAuthenticatedAt_ != null) {
+        output.writeMessage(7, getLastAuthenticatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -720,6 +801,10 @@ public final class ServiceAccountOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
+      if (lastAuthenticatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLastAuthenticatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -750,6 +835,11 @@ public final class ServiceAccountOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasLastAuthenticatedAt() != other.hasLastAuthenticatedAt()) return false;
+      if (hasLastAuthenticatedAt()) {
+        if (!getLastAuthenticatedAt()
+            .equals(other.getLastAuthenticatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -776,6 +866,10 @@ public final class ServiceAccountOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasLastAuthenticatedAt()) {
+        hash = (37 * hash) + LAST_AUTHENTICATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastAuthenticatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -951,6 +1045,12 @@ public final class ServiceAccountOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -989,6 +1089,11 @@ public final class ServiceAccountOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (lastAuthenticatedAtBuilder_ == null) {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAt_;
+        } else {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1058,6 +1163,9 @@ public final class ServiceAccountOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasLastAuthenticatedAt()) {
+          mergeLastAuthenticatedAt(other.getLastAuthenticatedAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1790,6 +1898,161 @@ public final class ServiceAccountOuterClass {
             .putAll(values);
         return this;
       }
+
+      private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastAuthenticatedAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       * @return Whether the lastAuthenticatedAt field is set.
+       */
+      public boolean hasLastAuthenticatedAt() {
+        return lastAuthenticatedAtBuilder_ != null || lastAuthenticatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       * @return The lastAuthenticatedAt.
+       */
+      public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        } else {
+          return lastAuthenticatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public Builder setLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastAuthenticatedAt_ = value;
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public Builder setLastAuthenticatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public Builder mergeLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (lastAuthenticatedAt_ != null) {
+            lastAuthenticatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(lastAuthenticatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            lastAuthenticatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public Builder clearLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+          onChanged();
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastAuthenticatedAtBuilder() {
+        
+        onChanged();
+        return getLastAuthenticatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+        if (lastAuthenticatedAtBuilder_ != null) {
+          return lastAuthenticatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return lastAuthenticatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last authentication of this service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastAuthenticatedAtFieldBuilder() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastAuthenticatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          lastAuthenticatedAt_ = null;
+        }
+        return lastAuthenticatedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1864,15 +2127,17 @@ public final class ServiceAccountOuterClass {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/iam/v1/service_account.pr" +
       "oto\022\023yandex.cloud.iam.v1\032\037google/protobu" +
-      "f/timestamp.proto\"\362\001\n\016ServiceAccount\022\n\n\002" +
+      "f/timestamp.proto\"\255\002\n\016ServiceAccount\022\n\n\002" +
       "id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_a" +
       "t\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004n" +
       "ame\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022?\n\006labels" +
       "\030\006 \003(\0132/.yandex.cloud.iam.v1.ServiceAcco" +
-      "unt.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BV\n\027yandex.cloud.a" +
-      "pi.iam.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/iam/v1;iamb\006proto3"
+      "unt.LabelsEntry\0229\n\025last_authenticated_at" +
+      "\030\007 \001(\0132\032.google.protobuf.Timestamp\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001BV\n\027yandex.cloud.api.iam.v1Z;github.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/i" +
+      "am/v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1884,7 +2149,7 @@ public final class ServiceAccountOuterClass {
     internal_static_yandex_cloud_iam_v1_ServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_ServiceAccount_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "LastAuthenticatedAt", });
     internal_static_yandex_cloud_iam_v1_ServiceAccount_LabelsEntry_descriptor =
       internal_static_yandex_cloud_iam_v1_ServiceAccount_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iam_v1_ServiceAccount_LabelsEntry_fieldAccessorTable = new

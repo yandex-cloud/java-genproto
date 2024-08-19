@@ -3433,6 +3433,36 @@ public final class DiskServiceOuterClass {
     com.google.protobuf.ByteString
         getSnapshotScheduleIdsBytes(int index);
 
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    boolean hasHardwareGeneration();
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     * @return The hardwareGeneration.
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration();
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
+
     public yandex.cloud.api.compute.v1.DiskServiceOuterClass.CreateDiskRequest.SourceCase getSourceCase();
   }
   /**
@@ -3572,6 +3602,19 @@ public final class DiskServiceOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               snapshotScheduleIds_.add(s);
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder subBuilder = null;
+              if (hardwareGeneration_ != null) {
+                subBuilder = hardwareGeneration_.toBuilder();
+              }
+              hardwareGeneration_ = input.readMessage(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareGeneration_);
+                hardwareGeneration_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4244,6 +4287,47 @@ public final class DiskServiceOuterClass {
       return snapshotScheduleIds_.getByteString(index);
     }
 
+    public static final int HARDWARE_GENERATION_FIELD_NUMBER = 13;
+    private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareGeneration() {
+      return hardwareGeneration_ != null;
+    }
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     * @return The hardwareGeneration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+      return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+    }
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+      return getHardwareGeneration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4296,6 +4380,9 @@ public final class DiskServiceOuterClass {
       }
       for (int i = 0; i < snapshotScheduleIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, snapshotScheduleIds_.getRaw(i));
+      }
+      if (hardwareGeneration_ != null) {
+        output.writeMessage(13, getHardwareGeneration());
       }
       unknownFields.writeTo(output);
     }
@@ -4357,6 +4444,10 @@ public final class DiskServiceOuterClass {
         size += dataSize;
         size += 1 * getSnapshotScheduleIdsList().size();
       }
+      if (hardwareGeneration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getHardwareGeneration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4395,6 +4486,11 @@ public final class DiskServiceOuterClass {
       }
       if (!getSnapshotScheduleIdsList()
           .equals(other.getSnapshotScheduleIdsList())) return false;
+      if (hasHardwareGeneration() != other.hasHardwareGeneration()) return false;
+      if (hasHardwareGeneration()) {
+        if (!getHardwareGeneration()
+            .equals(other.getHardwareGeneration())) return false;
+      }
       if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
         case 8:
@@ -4446,6 +4542,10 @@ public final class DiskServiceOuterClass {
       if (getSnapshotScheduleIdsCount() > 0) {
         hash = (37 * hash) + SNAPSHOT_SCHEDULE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSnapshotScheduleIdsList().hashCode();
+      }
+      if (hasHardwareGeneration()) {
+        hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareGeneration().hashCode();
       }
       switch (sourceCase_) {
         case 8:
@@ -4637,6 +4737,12 @@ public final class DiskServiceOuterClass {
         }
         snapshotScheduleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
         sourceCase_ = 0;
         source_ = null;
         return this;
@@ -4691,6 +4797,11 @@ public final class DiskServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.snapshotScheduleIds_ = snapshotScheduleIds_;
+        if (hardwareGenerationBuilder_ == null) {
+          result.hardwareGeneration_ = hardwareGeneration_;
+        } else {
+          result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
+        }
         result.sourceCase_ = sourceCase_;
         onBuilt();
         return result;
@@ -4780,6 +4891,9 @@ public final class DiskServiceOuterClass {
             snapshotScheduleIds_.addAll(other.snapshotScheduleIds_);
           }
           onChanged();
+        }
+        if (other.hasHardwareGeneration()) {
+          mergeHardwareGeneration(other.getHardwareGeneration());
         }
         switch (other.getSourceCase()) {
           case IMAGE_ID: {
@@ -6130,6 +6244,170 @@ public final class DiskServiceOuterClass {
         snapshotScheduleIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> hardwareGenerationBuilder_;
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       * @return Whether the hardwareGeneration field is set.
+       */
+      public boolean hasHardwareGeneration() {
+        return hardwareGenerationBuilder_ != null || hardwareGeneration_ != null;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       * @return The hardwareGeneration.
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        } else {
+          return hardwareGenerationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public Builder setHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareGeneration_ = value;
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public Builder setHardwareGeneration(
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder builderForValue) {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public Builder mergeHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (hardwareGeneration_ != null) {
+            hardwareGeneration_ =
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.newBuilder(hardwareGeneration_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareGeneration_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public Builder clearHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+          onChanged();
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder getHardwareGenerationBuilder() {
+        
+        onChanged();
+        return getHardwareGenerationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+        if (hardwareGenerationBuilder_ != null) {
+          return hardwareGenerationBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareGeneration_ == null ?
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        }
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> 
+          getHardwareGenerationFieldBuilder() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder>(
+                  getHardwareGeneration(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareGeneration_ = null;
+        }
+        return hardwareGenerationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18595,128 +18873,131 @@ public final class DiskServiceOuterClass {
       "i/annotations.proto\032 google/protobuf/fie" +
       "ld_mask.proto\032 yandex/cloud/access/acces" +
       "s.proto\032 yandex/cloud/api/operation.prot" +
-      "o\032\"yandex/cloud/compute/v1/disk.proto\032/y" +
-      "andex/cloud/compute/v1/snapshot_schedule" +
-      ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032\035yandex/cloud/validation.proto\"/\n" +
-      "\016GetDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"\252\001\n\020ListDisksRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_" +
-      "by\030\005 \001(\tB\t\212\3101\005<=100\"Z\n\021ListDisksResponse" +
-      "\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.compute.v" +
-      "1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"\372\004\n\021Crea" +
-      "teDiskRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
-      "\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.yandex.clo" +
-      "ud.compute.v1.CreateDiskRequest.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n\007" +
-      "type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_id\030\006 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B\036\350\3071\001\372\3071\02641" +
-      "94304-28587302322176\022\034\n\010image_id\030\010 \001(\tB\010" +
-      "\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010\212\3101\004<=5" +
-      "0H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025disk_placemen" +
-      "t_policy\030\013 \001(\0132,.yandex.cloud.compute.v1" +
-      ".DiskPlacementPolicy\022\035\n\025snapshot_schedul" +
-      "e_ids\030\014 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDi" +
-      "skMetadata\022\017\n\007disk_id\030\001 \001(\t\"\356\003\n\021UpdateDi" +
-      "skRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
-      "FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-" +
-      "z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001" +
-      "(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex." +
-      "cloud.compute.v1.UpdateDiskRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\'\n\004size\030\006 \001(\003B\031\372\3071\0254194304-4398046511104" +
-      "\022K\n\025disk_placement_policy\030\007 \001(\0132,.yandex" +
-      ".cloud.compute.v1.DiskPlacementPolicy\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030\001 " +
-      "\001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022\017\n" +
-      "\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperationsRequ" +
-      "est\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperationsRe" +
-      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
-      "d.operation.Operation\022\027\n\017next_page_token" +
-      "\030\002 \001(\t\"]\n\017MoveDiskRequest\022\035\n\007disk_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
-      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskMetadat" +
-      "a\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002" +
-      " \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"\254\001\n\023" +
-      "RelocateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022K\n\025disk_placement_policy\030\003" +
-      " \001(\0132,.yandex.cloud.compute.v1.DiskPlace" +
-      "mentPolicy\"\\\n\024RelocateDiskMetadata\022\017\n\007di" +
-      "sk_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n\023d" +
-      "estination_zone_id\030\003 \001(\t\"Z\n ListDiskSnap" +
-      "shotSchedulesRequest\022\017\n\007disk_id\030\001 \001(\t\022\021\n" +
-      "\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\203\001\n" +
-      "!ListDiskSnapshotSchedulesResponse\022E\n\022sn" +
-      "apshot_schedules\030\001 \003(\0132).yandex.cloud.co" +
-      "mpute.v1.SnapshotSchedule\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t2\220\020\n\013DiskService\022r\n\003Get\022\'.yand" +
-      "ex.cloud.compute.v1.GetDiskRequest\032\035.yan" +
-      "dex.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/comp" +
-      "ute/v1/disks/{disk_id}\022x\n\004List\022).yandex." +
-      "cloud.compute.v1.ListDisksRequest\032*.yand" +
-      "ex.cloud.compute.v1.ListDisksResponse\"\031\202" +
-      "\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*.ya" +
-      "ndex.cloud.compute.v1.CreateDiskRequest\032" +
-      "!.yandex.cloud.operation.Operation\":\202\323\344\223" +
-      "\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDisk" +
-      "Metadata\022\004Disk\022\235\001\n\006Update\022*.yandex.cloud" +
-      ".compute.v1.UpdateDiskRequest\032!.yandex.c" +
-      "loud.operation.Operation\"D\202\323\344\223\002 2\033/compu" +
-      "te/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDisk" +
-      "Metadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.cloud" +
-      ".compute.v1.DeleteDiskRequest\032!.yandex.c" +
-      "loud.operation.Operation\"R\202\323\344\223\002\035*\033/compu" +
-      "te/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskMet" +
-      "adata\022\025google.protobuf.Empty\022\251\001\n\016ListOpe" +
-      "rations\0222.yandex.cloud.compute.v1.ListDi" +
-      "skOperationsRequest\0323.yandex.cloud.compu" +
-      "te.v1.ListDiskOperationsResponse\".\202\323\344\223\002(" +
-      "\022&/compute/v1/disks/{disk_id}/operations" +
-      "\022\234\001\n\004Move\022(.yandex.cloud.compute.v1.Move" +
-      "DiskRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"G\202\323\344\223\002%\" /compute/v1/disks/{disk_" +
-      "id}:move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Disk\022" +
-      "\254\001\n\010Relocate\022,.yandex.cloud.compute.v1.R" +
-      "elocateDiskRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"O\202\323\344\223\002)\"$/compute/v1/disks" +
-      "/{disk_id}:relocate:\001*\262\322*\034\n\024RelocateDisk" +
-      "Metadata\022\004Disk\022\216\001\n\025ListSnapshotSchedules" +
-      "\0229.yandex.cloud.compute.v1.ListDiskSnaps" +
-      "hotSchedulesRequest\032:.yandex.cloud.compu" +
-      "te.v1.ListDiskSnapshotSchedulesResponse\022" +
-      "\261\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
-      "cess.ListAccessBindingsRequest\032/.yandex." +
-      "cloud.access.ListAccessBindingsResponse\"" +
-      ":\202\323\344\223\0024\0222/compute/v1/disks/{resource_id}" +
-      ":listAccessBindings\022\360\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\210\001\202\323\344\223\0026\"1/compute/v1/disks/{resourc" +
-      "e_id}:setAccessBindings:\001*\262\322*H\n access.S" +
-      "etAccessBindingsMetadata\022$access.AccessB" +
-      "indingsOperationResult\022\374\001\n\024UpdateAccessB" +
-      "indings\0220.yandex.cloud.access.UpdateAcce" +
-      "ssBindingsRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\216\001\202\323\344\223\0029\"4/compute/v1/disks" +
-      "/{resource_id}:updateAccessBindings:\001*\262\322" +
-      "*K\n#access.UpdateAccessBindingsMetadata\022" +
-      "$access.AccessBindingsOperationResultBb\n" +
-      "\033yandex.cloud.api.compute.v1ZCgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "ompute/v1;computeb\006proto3"
+      "o\032\"yandex/cloud/compute/v1/disk.proto\0321y" +
+      "andex/cloud/compute/v1/hardware_generati" +
+      "on.proto\032/yandex/cloud/compute/v1/snapsh" +
+      "ot_schedule.proto\032&yandex/cloud/operatio" +
+      "n/operation.proto\032\035yandex/cloud/validati" +
+      "on.proto\"/\n\016GetDiskRequest\022\035\n\007disk_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"\252\001\n\020ListDisksRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
+      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
+      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
+      "0\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"Z\n\021ListDi" +
+      "sksResponse\022,\n\005disks\030\001 \003(\0132\035.yandex.clou" +
+      "d.compute.v1.Disk\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"\304\005\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
+      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descrip" +
+      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326" +
+      ".yandex.cloud.compute.v1.CreateDiskReque" +
+      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
+      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
+      "-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zo" +
+      "ne_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B" +
+      "\036\350\3071\001\372\3071\0264194304-28587302322176\022\034\n\010image" +
+      "_id\030\010 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001" +
+      "(\tB\010\212\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025di" +
+      "sk_placement_policy\030\013 \001(\0132,.yandex.cloud" +
+      ".compute.v1.DiskPlacementPolicy\022\035\n\025snaps" +
+      "hot_schedule_ids\030\014 \003(\t\022H\n\023hardware_gener" +
+      "ation\030\r \001(\0132+.yandex.cloud.compute.v1.Ha" +
+      "rdwareGeneration\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022Cre" +
+      "ateDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\"\356\003\n\021Upd" +
+      "ateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\004 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.ya" +
+      "ndex.cloud.compute.v1.UpdateDiskRequest." +
+      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\022\'\n\004size\030\006 \001(\003B\031\372\3071\0254194304-43980465" +
+      "11104\022K\n\025disk_placement_policy\030\007 \001(\0132,.y" +
+      "andex.cloud.compute.v1.DiskPlacementPoli" +
+      "cy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_" +
+      "id\030\001 \001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetada" +
+      "ta\022\017\n\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperation" +
+      "sRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
+      "oken\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"]\n\017MoveDiskRequest\022\035\n\007disk_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fol" +
+      "der_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskMe" +
+      "tadata\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020source_folder" +
+      "_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t" +
+      "\"\254\001\n\023RelocateDiskRequest\022\035\n\007disk_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zone_id\030\002" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\025disk_placement_pol" +
+      "icy\030\003 \001(\0132,.yandex.cloud.compute.v1.Disk" +
+      "PlacementPolicy\"\\\n\024RelocateDiskMetadata\022" +
+      "\017\n\007disk_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t" +
+      "\022\033\n\023destination_zone_id\030\003 \001(\t\"Z\n ListDis" +
+      "kSnapshotSchedulesRequest\022\017\n\007disk_id\030\001 \001" +
+      "(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(" +
+      "\t\"\203\001\n!ListDiskSnapshotSchedulesResponse\022" +
+      "E\n\022snapshot_schedules\030\001 \003(\0132).yandex.clo" +
+      "ud.compute.v1.SnapshotSchedule\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t2\220\020\n\013DiskService\022r\n\003Get\022\'" +
+      ".yandex.cloud.compute.v1.GetDiskRequest\032" +
+      "\035.yandex.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033" +
+      "/compute/v1/disks/{disk_id}\022x\n\004List\022).ya" +
+      "ndex.cloud.compute.v1.ListDisksRequest\032*" +
+      ".yandex.cloud.compute.v1.ListDisksRespon" +
+      "se\"\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create" +
+      "\022*.yandex.cloud.compute.v1.CreateDiskReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      ":\202\323\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022Creat" +
+      "eDiskMetadata\022\004Disk\022\235\001\n\006Update\022*.yandex." +
+      "cloud.compute.v1.UpdateDiskRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"D\202\323\344\223\002 2\033/" +
+      "compute/v1/disks/{disk_id}:\001*\262\322*\032\n\022Updat" +
+      "eDiskMetadata\022\004Disk\022\253\001\n\006Delete\022*.yandex." +
+      "cloud.compute.v1.DeleteDiskRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"R\202\323\344\223\002\035*\033/" +
+      "compute/v1/disks/{disk_id}\262\322*+\n\022DeleteDi" +
+      "skMetadata\022\025google.protobuf.Empty\022\251\001\n\016Li" +
+      "stOperations\0222.yandex.cloud.compute.v1.L" +
+      "istDiskOperationsRequest\0323.yandex.cloud." +
+      "compute.v1.ListDiskOperationsResponse\".\202" +
+      "\323\344\223\002(\022&/compute/v1/disks/{disk_id}/opera" +
+      "tions\022\234\001\n\004Move\022(.yandex.cloud.compute.v1" +
+      ".MoveDiskRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"G\202\323\344\223\002%\" /compute/v1/disks/{" +
+      "disk_id}:move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004" +
+      "Disk\022\254\001\n\010Relocate\022,.yandex.cloud.compute" +
+      ".v1.RelocateDiskRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"O\202\323\344\223\002)\"$/compute/v1/" +
+      "disks/{disk_id}:relocate:\001*\262\322*\034\n\024Relocat" +
+      "eDiskMetadata\022\004Disk\022\216\001\n\025ListSnapshotSche" +
+      "dules\0229.yandex.cloud.compute.v1.ListDisk" +
+      "SnapshotSchedulesRequest\032:.yandex.cloud." +
+      "compute.v1.ListDiskSnapshotSchedulesResp" +
+      "onse\022\261\001\n\022ListAccessBindings\022..yandex.clo" +
+      "ud.access.ListAccessBindingsRequest\032/.ya" +
+      "ndex.cloud.access.ListAccessBindingsResp" +
+      "onse\":\202\323\344\223\0024\0222/compute/v1/disks/{resourc" +
+      "e_id}:listAccessBindings\022\360\001\n\021SetAccessBi" +
+      "ndings\022-.yandex.cloud.access.SetAccessBi" +
+      "ndingsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\210\001\202\323\344\223\0026\"1/compute/v1/disks/{re" +
+      "source_id}:setAccessBindings:\001*\262\322*H\n acc" +
+      "ess.SetAccessBindingsMetadata\022$access.Ac" +
+      "cessBindingsOperationResult\022\374\001\n\024UpdateAc" +
+      "cessBindings\0220.yandex.cloud.access.Updat" +
+      "eAccessBindingsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"\216\001\202\323\344\223\0029\"4/compute/v1/" +
+      "disks/{resource_id}:updateAccessBindings" +
+      ":\001*\262\322*K\n#access.UpdateAccessBindingsMeta" +
+      "data\022$access.AccessBindingsOperationResu" +
+      "ltBb\n\033yandex.cloud.api.compute.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18726,6 +19007,7 @@ public final class DiskServiceOuterClass {
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor(),
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -18753,7 +19035,7 @@ public final class DiskServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "BlockSize", "DiskPlacementPolicy", "SnapshotScheduleIds", "Source", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "ImageId", "SnapshotId", "BlockSize", "DiskPlacementPolicy", "SnapshotScheduleIds", "HardwareGeneration", "Source", });
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateDiskRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateDiskRequest_LabelsEntry_fieldAccessorTable = new
@@ -18861,6 +19143,7 @@ public final class DiskServiceOuterClass {
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor();
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

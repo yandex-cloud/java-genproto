@@ -286,6 +286,36 @@ public final class SnapshotOuterClass {
      */
     com.google.protobuf.ByteString
         getSourceDiskIdBytes();
+
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    boolean hasHardwareGeneration();
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     * @return The hardwareGeneration.
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration();
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
   }
   /**
    * <pre>
@@ -423,6 +453,19 @@ public final class SnapshotOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               sourceDiskId_ = s;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder subBuilder = null;
+              if (hardwareGeneration_ != null) {
+                subBuilder = hardwareGeneration_.toBuilder();
+              }
+              hardwareGeneration_ = input.readMessage(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareGeneration_);
+                hardwareGeneration_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1120,6 +1163,47 @@ public final class SnapshotOuterClass {
       }
     }
 
+    public static final int HARDWARE_GENERATION_FIELD_NUMBER = 12;
+    private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareGeneration() {
+      return hardwareGeneration_ != null;
+    }
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     * @return The hardwareGeneration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+      return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+    }
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+      return getHardwareGeneration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1169,6 +1253,9 @@ public final class SnapshotOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceDiskId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, sourceDiskId_);
+      }
+      if (hardwareGeneration_ != null) {
+        output.writeMessage(12, getHardwareGeneration());
       }
       unknownFields.writeTo(output);
     }
@@ -1228,6 +1315,10 @@ public final class SnapshotOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceDiskId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, sourceDiskId_);
       }
+      if (hardwareGeneration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getHardwareGeneration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1267,6 +1358,11 @@ public final class SnapshotOuterClass {
       if (status_ != other.status_) return false;
       if (!getSourceDiskId()
           .equals(other.getSourceDiskId())) return false;
+      if (hasHardwareGeneration() != other.hasHardwareGeneration()) return false;
+      if (hasHardwareGeneration()) {
+        if (!getHardwareGeneration()
+            .equals(other.getHardwareGeneration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1308,6 +1404,10 @@ public final class SnapshotOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + SOURCE_DISK_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSourceDiskId().hashCode();
+      if (hasHardwareGeneration()) {
+        hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareGeneration().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1492,6 +1592,12 @@ public final class SnapshotOuterClass {
 
         sourceDiskId_ = "";
 
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1539,6 +1645,11 @@ public final class SnapshotOuterClass {
         result.productIds_ = productIds_;
         result.status_ = status_;
         result.sourceDiskId_ = sourceDiskId_;
+        if (hardwareGenerationBuilder_ == null) {
+          result.hardwareGeneration_ = hardwareGeneration_;
+        } else {
+          result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1630,6 +1741,9 @@ public final class SnapshotOuterClass {
         if (!other.getSourceDiskId().isEmpty()) {
           sourceDiskId_ = other.sourceDiskId_;
           onChanged();
+        }
+        if (other.hasHardwareGeneration()) {
+          mergeHardwareGeneration(other.getHardwareGeneration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2769,6 +2883,170 @@ public final class SnapshotOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> hardwareGenerationBuilder_;
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       * @return Whether the hardwareGeneration field is set.
+       */
+      public boolean hasHardwareGeneration() {
+        return hardwareGenerationBuilder_ != null || hardwareGeneration_ != null;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       * @return The hardwareGeneration.
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        } else {
+          return hardwareGenerationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public Builder setHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareGeneration_ = value;
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public Builder setHardwareGeneration(
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder builderForValue) {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public Builder mergeHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (hardwareGeneration_ != null) {
+            hardwareGeneration_ =
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.newBuilder(hardwareGeneration_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareGeneration_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public Builder clearHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+          onChanged();
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder getHardwareGenerationBuilder() {
+        
+        onChanged();
+        return getHardwareGenerationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+        if (hardwareGenerationBuilder_ != null) {
+          return hardwareGenerationBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareGeneration_ == null ?
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this snapshot as source for the boot disk. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> 
+          getHardwareGenerationFieldBuilder() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder>(
+                  getHardwareGeneration(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareGeneration_ = null;
+        }
+        return hardwareGenerationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2843,33 +3121,37 @@ public final class SnapshotOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/compute/v1/snapshot.proto" +
       "\022\027yandex.cloud.compute.v1\032\037google/protob" +
-      "uf/timestamp.proto\"\316\003\n\010Snapshot\022\n\n\002id\030\001 " +
-      "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
-      " \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(" +
-      "\0132-.yandex.cloud.compute.v1.Snapshot.Lab" +
-      "elsEntry\022\024\n\014storage_size\030\007 \001(\003\022\021\n\tdisk_s" +
-      "ize\030\010 \001(\003\022\023\n\013product_ids\030\t \003(\t\0228\n\006status" +
-      "\030\n \001(\0162(.yandex.cloud.compute.v1.Snapsho" +
-      "t.Status\022\026\n\016source_disk_id\030\013 \001(\t\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "R\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CRE" +
-      "ATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\014\n\010DELETIN" +
-      "G\020\004Bb\n\033yandex.cloud.api.compute.v1ZCgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/compute/v1;computeb\006proto3"
+      "uf/timestamp.proto\0321yandex/cloud/compute" +
+      "/v1/hardware_generation.proto\"\230\004\n\010Snapsh" +
+      "ot\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncre" +
+      "ated_at\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006" +
+      "labels\030\006 \003(\0132-.yandex.cloud.compute.v1.S" +
+      "napshot.LabelsEntry\022\024\n\014storage_size\030\007 \001(" +
+      "\003\022\021\n\tdisk_size\030\010 \001(\003\022\023\n\013product_ids\030\t \003(" +
+      "\t\0228\n\006status\030\n \001(\0162(.yandex.cloud.compute" +
+      ".v1.Snapshot.Status\022\026\n\016source_disk_id\030\013 " +
+      "\001(\t\022H\n\023hardware_generation\030\014 \001(\0132+.yande" +
+      "x.cloud.compute.v1.HardwareGeneration\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"R\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\014\n\010DE" +
+      "LETING\020\004Bb\n\033yandex.cloud.api.compute.v1Z" +
+      "Cgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_Snapshot_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Snapshot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Snapshot_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "StorageSize", "DiskSize", "ProductIds", "Status", "SourceDiskId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "StorageSize", "DiskSize", "ProductIds", "Status", "SourceDiskId", "HardwareGeneration", });
     internal_static_yandex_cloud_compute_v1_Snapshot_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Snapshot_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Snapshot_LabelsEntry_fieldAccessorTable = new
@@ -2877,6 +3159,7 @@ public final class SnapshotOuterClass {
         internal_static_yandex_cloud_compute_v1_Snapshot_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

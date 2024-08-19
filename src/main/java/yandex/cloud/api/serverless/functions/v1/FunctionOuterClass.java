@@ -2908,6 +2908,50 @@ public final class FunctionOuterClass {
      * @return The concurrency.
      */
     long getConcurrency();
+
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> 
+        getMountsList();
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getMounts(int index);
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    int getMountsCount();
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder> 
+        getMountsOrBuilderList();
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder getMountsOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -2936,6 +2980,7 @@ public final class FunctionOuterClass {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       secrets_ = java.util.Collections.emptyList();
       storageMounts_ = java.util.Collections.emptyList();
+      mounts_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3157,6 +3202,15 @@ public final class FunctionOuterClass {
               concurrency_ = input.readInt64();
               break;
             }
+            case 202: {
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                mounts_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              mounts_.add(
+                  input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3180,6 +3234,9 @@ public final class FunctionOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000010) != 0)) {
           storageMounts_ = java.util.Collections.unmodifiableList(storageMounts_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          mounts_ = java.util.Collections.unmodifiableList(mounts_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4293,6 +4350,66 @@ public final class FunctionOuterClass {
       return concurrency_;
     }
 
+    public static final int MOUNTS_FIELD_NUMBER = 25;
+    private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> mounts_;
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> getMountsList() {
+      return mounts_;
+    }
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder> 
+        getMountsOrBuilderList() {
+      return mounts_;
+    }
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    @java.lang.Override
+    public int getMountsCount() {
+      return mounts_.size();
+    }
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getMounts(int index) {
+      return mounts_.get(index);
+    }
+    /**
+     * <pre>
+     * Mounts to be used by the version.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder getMountsOrBuilder(
+        int index) {
+      return mounts_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4375,6 +4492,9 @@ public final class FunctionOuterClass {
       }
       if (concurrency_ != 0L) {
         output.writeInt64(24, concurrency_);
+      }
+      for (int i = 0; i < mounts_.size(); i++) {
+        output.writeMessage(25, mounts_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -4479,6 +4599,10 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(24, concurrency_);
       }
+      for (int i = 0; i < mounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, mounts_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4553,6 +4677,8 @@ public final class FunctionOuterClass {
           != other.getTmpfsSize()) return false;
       if (getConcurrency()
           != other.getConcurrency()) return false;
+      if (!getMountsList()
+          .equals(other.getMountsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4631,6 +4757,10 @@ public final class FunctionOuterClass {
       hash = (37 * hash) + CONCURRENCY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConcurrency());
+      if (getMountsCount() > 0) {
+        hash = (37 * hash) + MOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getMountsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4791,6 +4921,7 @@ public final class FunctionOuterClass {
                 .alwaysUseFieldBuilders) {
           getSecretsFieldBuilder();
           getStorageMountsFieldBuilder();
+          getMountsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4868,6 +4999,12 @@ public final class FunctionOuterClass {
 
         concurrency_ = 0L;
 
+        if (mountsBuilder_ == null) {
+          mounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          mountsBuilder_.clear();
+        }
         return this;
       }
 
@@ -4962,6 +5099,15 @@ public final class FunctionOuterClass {
         }
         result.tmpfsSize_ = tmpfsSize_;
         result.concurrency_ = concurrency_;
+        if (mountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            mounts_ = java.util.Collections.unmodifiableList(mounts_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.mounts_ = mounts_;
+        } else {
+          result.mounts_ = mountsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5129,6 +5275,32 @@ public final class FunctionOuterClass {
         }
         if (other.getConcurrency() != 0L) {
           setConcurrency(other.getConcurrency());
+        }
+        if (mountsBuilder_ == null) {
+          if (!other.mounts_.isEmpty()) {
+            if (mounts_.isEmpty()) {
+              mounts_ = other.mounts_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureMountsIsMutable();
+              mounts_.addAll(other.mounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mounts_.isEmpty()) {
+            if (mountsBuilder_.isEmpty()) {
+              mountsBuilder_.dispose();
+              mountsBuilder_ = null;
+              mounts_ = other.mounts_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              mountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMountsFieldBuilder() : null;
+            } else {
+              mountsBuilder_.addAllMessages(other.mounts_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7974,6 +8146,318 @@ public final class FunctionOuterClass {
         concurrency_ = 0L;
         onChanged();
         return this;
+      }
+
+      private java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> mounts_ =
+        java.util.Collections.emptyList();
+      private void ensureMountsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          mounts_ = new java.util.ArrayList<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount>(mounts_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder> mountsBuilder_;
+
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> getMountsList() {
+        if (mountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mounts_);
+        } else {
+          return mountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public int getMountsCount() {
+        if (mountsBuilder_ == null) {
+          return mounts_.size();
+        } else {
+          return mountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getMounts(int index) {
+        if (mountsBuilder_ == null) {
+          return mounts_.get(index);
+        } else {
+          return mountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder setMounts(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount value) {
+        if (mountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMountsIsMutable();
+          mounts_.set(index, value);
+          onChanged();
+        } else {
+          mountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder setMounts(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder builderForValue) {
+        if (mountsBuilder_ == null) {
+          ensureMountsIsMutable();
+          mounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder addMounts(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount value) {
+        if (mountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMountsIsMutable();
+          mounts_.add(value);
+          onChanged();
+        } else {
+          mountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder addMounts(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount value) {
+        if (mountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMountsIsMutable();
+          mounts_.add(index, value);
+          onChanged();
+        } else {
+          mountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder addMounts(
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder builderForValue) {
+        if (mountsBuilder_ == null) {
+          ensureMountsIsMutable();
+          mounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder addMounts(
+          int index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder builderForValue) {
+        if (mountsBuilder_ == null) {
+          ensureMountsIsMutable();
+          mounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder addAllMounts(
+          java.lang.Iterable<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount> values) {
+        if (mountsBuilder_ == null) {
+          ensureMountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mounts_);
+          onChanged();
+        } else {
+          mountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder clearMounts() {
+        if (mountsBuilder_ == null) {
+          mounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          mountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public Builder removeMounts(int index) {
+        if (mountsBuilder_ == null) {
+          ensureMountsIsMutable();
+          mounts_.remove(index);
+          onChanged();
+        } else {
+          mountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder getMountsBuilder(
+          int index) {
+        return getMountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder getMountsOrBuilder(
+          int index) {
+        if (mountsBuilder_ == null) {
+          return mounts_.get(index);  } else {
+          return mountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder> 
+           getMountsOrBuilderList() {
+        if (mountsBuilder_ != null) {
+          return mountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mounts_);
+        }
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder addMountsBuilder() {
+        return getMountsFieldBuilder().addBuilder(
+            yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder addMountsBuilder(
+          int index) {
+        return getMountsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Mounts to be used by the version.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.functions.v1.Mount mounts = 25;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder> 
+           getMountsBuilderList() {
+        return getMountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder> 
+          getMountsFieldBuilder() {
+        if (mountsBuilder_ == null) {
+          mountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder>(
+                  mounts_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mounts_ = null;
+        }
+        return mountsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14581,7 +15065,7 @@ public final class FunctionOuterClass {
 
   }
 
-  public interface StorageMountOrBuilder extends
+  @java.lang.Deprecated public interface StorageMountOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.StorageMount)
       com.google.protobuf.MessageOrBuilder {
 
@@ -14658,7 +15142,7 @@ public final class FunctionOuterClass {
   /**
    * Protobuf type {@code yandex.cloud.serverless.functions.v1.StorageMount}
    */
-  public static final class StorageMount extends
+  @java.lang.Deprecated public static final class StorageMount extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.StorageMount)
       StorageMountOrBuilder {
@@ -15643,6 +16127,2933 @@ public final class FunctionOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.StorageMount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.Mount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Mount's mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    int getModeValue();
+    /**
+     * <pre>
+     * Mount's mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+     * @return The mode.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode getMode();
+
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     * @return Whether the objectStorage field is set.
+     */
+    boolean hasObjectStorage();
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     * @return The objectStorage.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getObjectStorage();
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder getObjectStorageOrBuilder();
+
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     * @return Whether the ephemeralDiskSpec field is set.
+     */
+    boolean hasEphemeralDiskSpec();
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     * @return The ephemeralDiskSpec.
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getEphemeralDiskSpec();
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     */
+    yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder getEphemeralDiskSpecOrBuilder();
+
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.TargetCase getTargetCase();
+  }
+  /**
+   * <pre>
+   * Mount contains an information about version's external storage mount
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount}
+   */
+  public static final class Mount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.Mount)
+      MountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Mount.newBuilder() to construct.
+    private Mount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Mount() {
+      name_ = "";
+      mode_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mount();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Mount(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder subBuilder = null;
+              if (targetCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_).toBuilder();
+              }
+              target_ =
+                  input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_);
+                target_ = subBuilder.buildPartial();
+              }
+              targetCase_ = 10;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder subBuilder = null;
+              if (targetCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_).toBuilder();
+              }
+              target_ =
+                  input.readMessage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_);
+                target_ = subBuilder.buildPartial();
+              }
+              targetCase_ = 11;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.serverless.functions.v1.Mount.Mode}
+     */
+    public enum Mode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MODE_UNSPECIFIED = 0;</code>
+       */
+      MODE_UNSPECIFIED(0),
+      /**
+       * <code>READ_ONLY = 1;</code>
+       */
+      READ_ONLY(1),
+      /**
+       * <code>READ_WRITE = 2;</code>
+       */
+      READ_WRITE(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>READ_ONLY = 1;</code>
+       */
+      public static final int READ_ONLY_VALUE = 1;
+      /**
+       * <code>READ_WRITE = 2;</code>
+       */
+      public static final int READ_WRITE_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Mode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Mode forNumber(int value) {
+        switch (value) {
+          case 0: return MODE_UNSPECIFIED;
+          case 1: return READ_ONLY;
+          case 2: return READ_WRITE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Mode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Mode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+              public Mode findValueByNumber(int number) {
+                return Mode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Mode[] VALUES = values();
+
+      public static Mode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Mode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.functions.v1.Mount.Mode)
+    }
+
+    public interface ObjectStorageOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.Mount.ObjectStorage)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * ObjectStorage bucket name for mounting.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bucketId.
+       */
+      java.lang.String getBucketId();
+      /**
+       * <pre>
+       * ObjectStorage bucket name for mounting.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bytes for bucketId.
+       */
+      com.google.protobuf.ByteString
+          getBucketIdBytes();
+
+      /**
+       * <pre>
+       * ObjectStorage bucket prefix for mounting.
+       * </pre>
+       *
+       * <code>string prefix = 2;</code>
+       * @return The prefix.
+       */
+      java.lang.String getPrefix();
+      /**
+       * <pre>
+       * ObjectStorage bucket prefix for mounting.
+       * </pre>
+       *
+       * <code>string prefix = 2;</code>
+       * @return The bytes for prefix.
+       */
+      com.google.protobuf.ByteString
+          getPrefixBytes();
+    }
+    /**
+     * <pre>
+     * ObjectStorage as a mount
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount.ObjectStorage}
+     */
+    public static final class ObjectStorage extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.Mount.ObjectStorage)
+        ObjectStorageOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ObjectStorage.newBuilder() to construct.
+      private ObjectStorage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ObjectStorage() {
+        bucketId_ = "";
+        prefix_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ObjectStorage();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ObjectStorage(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                bucketId_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                prefix_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder.class);
+      }
+
+      public static final int BUCKET_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object bucketId_;
+      /**
+       * <pre>
+       * ObjectStorage bucket name for mounting.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bucketId.
+       */
+      @java.lang.Override
+      public java.lang.String getBucketId() {
+        java.lang.Object ref = bucketId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucketId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ObjectStorage bucket name for mounting.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bytes for bucketId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBucketIdBytes() {
+        java.lang.Object ref = bucketId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucketId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PREFIX_FIELD_NUMBER = 2;
+      private volatile java.lang.Object prefix_;
+      /**
+       * <pre>
+       * ObjectStorage bucket prefix for mounting.
+       * </pre>
+       *
+       * <code>string prefix = 2;</code>
+       * @return The prefix.
+       */
+      @java.lang.Override
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * ObjectStorage bucket prefix for mounting.
+       * </pre>
+       *
+       * <code>string prefix = 2;</code>
+       * @return The bytes for prefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucketId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, prefix_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucketId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, prefix_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) obj;
+
+        if (!getBucketId()
+            .equals(other.getBucketId())) return false;
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + BUCKET_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getBucketId().hashCode();
+        hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefix().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * ObjectStorage as a mount
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount.ObjectStorage}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.Mount.ObjectStorage)
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bucketId_ = "";
+
+          prefix_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage build() {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage buildPartial() {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage(this);
+          result.bucketId_ = bucketId_;
+          result.prefix_ = prefix_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) {
+            return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage other) {
+          if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance()) return this;
+          if (!other.getBucketId().isEmpty()) {
+            bucketId_ = other.bucketId_;
+            onChanged();
+          }
+          if (!other.getPrefix().isEmpty()) {
+            prefix_ = other.prefix_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object bucketId_ = "";
+        /**
+         * <pre>
+         * ObjectStorage bucket name for mounting.
+         * </pre>
+         *
+         * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+         * @return The bucketId.
+         */
+        public java.lang.String getBucketId() {
+          java.lang.Object ref = bucketId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            bucketId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket name for mounting.
+         * </pre>
+         *
+         * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+         * @return The bytes for bucketId.
+         */
+        public com.google.protobuf.ByteString
+            getBucketIdBytes() {
+          java.lang.Object ref = bucketId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            bucketId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket name for mounting.
+         * </pre>
+         *
+         * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+         * @param value The bucketId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucketId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          bucketId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket name for mounting.
+         * </pre>
+         *
+         * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBucketId() {
+          
+          bucketId_ = getDefaultInstance().getBucketId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket name for mounting.
+         * </pre>
+         *
+         * <code>string bucket_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+         * @param value The bytes for bucketId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBucketIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          bucketId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object prefix_ = "";
+        /**
+         * <pre>
+         * ObjectStorage bucket prefix for mounting.
+         * </pre>
+         *
+         * <code>string prefix = 2;</code>
+         * @return The prefix.
+         */
+        public java.lang.String getPrefix() {
+          java.lang.Object ref = prefix_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            prefix_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket prefix for mounting.
+         * </pre>
+         *
+         * <code>string prefix = 2;</code>
+         * @return The bytes for prefix.
+         */
+        public com.google.protobuf.ByteString
+            getPrefixBytes() {
+          java.lang.Object ref = prefix_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            prefix_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket prefix for mounting.
+         * </pre>
+         *
+         * <code>string prefix = 2;</code>
+         * @param value The prefix to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefix(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          prefix_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket prefix for mounting.
+         * </pre>
+         *
+         * <code>string prefix = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrefix() {
+          
+          prefix_ = getDefaultInstance().getPrefix();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * ObjectStorage bucket prefix for mounting.
+         * </pre>
+         *
+         * <code>string prefix = 2;</code>
+         * @param value The bytes for prefix to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrefixBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          prefix_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.Mount.ObjectStorage)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.Mount.ObjectStorage)
+      private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage();
+      }
+
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ObjectStorage>
+          PARSER = new com.google.protobuf.AbstractParser<ObjectStorage>() {
+        @java.lang.Override
+        public ObjectStorage parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ObjectStorage(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ObjectStorage> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ObjectStorage> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DiskSpecOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.Mount.DiskSpec)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The size of disk for mount in bytes
+       * </pre>
+       *
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The size.
+       */
+      long getSize();
+
+      /**
+       * <pre>
+       * Optional block size of disk for mount in bytes
+       * </pre>
+       *
+       * <code>int64 block_size = 2;</code>
+       * @return The blockSize.
+       */
+      long getBlockSize();
+    }
+    /**
+     * <pre>
+     * Disk as a mount
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount.DiskSpec}
+     */
+    public static final class DiskSpec extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.Mount.DiskSpec)
+        DiskSpecOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DiskSpec.newBuilder() to construct.
+      private DiskSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DiskSpec() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DiskSpec();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DiskSpec(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                size_ = input.readInt64();
+                break;
+              }
+              case 16: {
+
+                blockSize_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder.class);
+      }
+
+      public static final int SIZE_FIELD_NUMBER = 1;
+      private long size_;
+      /**
+       * <pre>
+       * The size of disk for mount in bytes
+       * </pre>
+       *
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The size.
+       */
+      @java.lang.Override
+      public long getSize() {
+        return size_;
+      }
+
+      public static final int BLOCK_SIZE_FIELD_NUMBER = 2;
+      private long blockSize_;
+      /**
+       * <pre>
+       * Optional block size of disk for mount in bytes
+       * </pre>
+       *
+       * <code>int64 block_size = 2;</code>
+       * @return The blockSize.
+       */
+      @java.lang.Override
+      public long getBlockSize() {
+        return blockSize_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (size_ != 0L) {
+          output.writeInt64(1, size_);
+        }
+        if (blockSize_ != 0L) {
+          output.writeInt64(2, blockSize_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (size_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, size_);
+        }
+        if (blockSize_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, blockSize_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) obj;
+
+        if (getSize()
+            != other.getSize()) return false;
+        if (getBlockSize()
+            != other.getBlockSize()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getSize());
+        hash = (37 * hash) + BLOCK_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getBlockSize());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Disk as a mount
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount.DiskSpec}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.Mount.DiskSpec)
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          size_ = 0L;
+
+          blockSize_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec build() {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec buildPartial() {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec(this);
+          result.size_ = size_;
+          result.blockSize_ = blockSize_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) {
+            return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec other) {
+          if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance()) return this;
+          if (other.getSize() != 0L) {
+            setSize(other.getSize());
+          }
+          if (other.getBlockSize() != 0L) {
+            setBlockSize(other.getBlockSize());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long size_ ;
+        /**
+         * <pre>
+         * The size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The size.
+         */
+        @java.lang.Override
+        public long getSize() {
+          return size_;
+        }
+        /**
+         * <pre>
+         * The size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @param value The size to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSize(long value) {
+          
+          size_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 size = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSize() {
+          
+          size_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long blockSize_ ;
+        /**
+         * <pre>
+         * Optional block size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 block_size = 2;</code>
+         * @return The blockSize.
+         */
+        @java.lang.Override
+        public long getBlockSize() {
+          return blockSize_;
+        }
+        /**
+         * <pre>
+         * Optional block size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 block_size = 2;</code>
+         * @param value The blockSize to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBlockSize(long value) {
+          
+          blockSize_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Optional block size of disk for mount in bytes
+         * </pre>
+         *
+         * <code>int64 block_size = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBlockSize() {
+          
+          blockSize_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.Mount.DiskSpec)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.Mount.DiskSpec)
+      private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec();
+      }
+
+      public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DiskSpec>
+          PARSER = new com.google.protobuf.AbstractParser<DiskSpec>() {
+        @java.lang.Override
+        public DiskSpec parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DiskSpec(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DiskSpec> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DiskSpec> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int targetCase_ = 0;
+    private java.lang.Object target_;
+    public enum TargetCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      OBJECT_STORAGE(10),
+      EPHEMERAL_DISK_SPEC(11),
+      TARGET_NOT_SET(0);
+      private final int value;
+      private TargetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TargetCase forNumber(int value) {
+        switch (value) {
+          case 10: return OBJECT_STORAGE;
+          case 11: return EPHEMERAL_DISK_SPEC;
+          case 0: return TARGET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TargetCase
+    getTargetCase() {
+      return TargetCase.forNumber(
+          targetCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODE_FIELD_NUMBER = 3;
+    private int mode_;
+    /**
+     * <pre>
+     * Mount's mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+     * @return The enum numeric value on the wire for mode.
+     */
+    @java.lang.Override public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <pre>
+     * Mount's mode
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+     * @return The mode.
+     */
+    @java.lang.Override public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode getMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.valueOf(mode_);
+      return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.UNRECOGNIZED : result;
+    }
+
+    public static final int OBJECT_STORAGE_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     * @return Whether the objectStorage field is set.
+     */
+    @java.lang.Override
+    public boolean hasObjectStorage() {
+      return targetCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     * @return The objectStorage.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getObjectStorage() {
+      if (targetCase_ == 10) {
+         return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_;
+      }
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Object storage mounts
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder getObjectStorageOrBuilder() {
+      if (targetCase_ == 10) {
+         return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_;
+      }
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+    }
+
+    public static final int EPHEMERAL_DISK_SPEC_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     * @return Whether the ephemeralDiskSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasEphemeralDiskSpec() {
+      return targetCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     * @return The ephemeralDiskSpec.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getEphemeralDiskSpec() {
+      if (targetCase_ == 11) {
+         return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_;
+      }
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Working disk (worker-local non-shared read-write NBS disk templates)
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder getEphemeralDiskSpecOrBuilder() {
+      if (targetCase_ == 11) {
+         return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_;
+      }
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (mode_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, mode_);
+      }
+      if (targetCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_);
+      }
+      if (targetCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (mode_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, mode_);
+      }
+      if (targetCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_);
+      }
+      if (targetCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (mode_ != other.mode_) return false;
+      if (!getTargetCase().equals(other.getTargetCase())) return false;
+      switch (targetCase_) {
+        case 10:
+          if (!getObjectStorage()
+              .equals(other.getObjectStorage())) return false;
+          break;
+        case 11:
+          if (!getEphemeralDiskSpec()
+              .equals(other.getEphemeralDiskSpec())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      switch (targetCase_) {
+        case 10:
+          hash = (37 * hash) + OBJECT_STORAGE_FIELD_NUMBER;
+          hash = (53 * hash) + getObjectStorage().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + EPHEMERAL_DISK_SPEC_FIELD_NUMBER;
+          hash = (53 * hash) + getEphemeralDiskSpec().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Mount contains an information about version's external storage mount
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.Mount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.Mount)
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.MountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        mode_ = 0;
+
+        targetCase_ = 0;
+        target_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount(this);
+        result.name_ = name_;
+        result.mode_ = mode_;
+        if (targetCase_ == 10) {
+          if (objectStorageBuilder_ == null) {
+            result.target_ = target_;
+          } else {
+            result.target_ = objectStorageBuilder_.build();
+          }
+        }
+        if (targetCase_ == 11) {
+          if (ephemeralDiskSpecBuilder_ == null) {
+            result.target_ = target_;
+          } else {
+            result.target_ = ephemeralDiskSpecBuilder_.build();
+          }
+        }
+        result.targetCase_ = targetCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        switch (other.getTargetCase()) {
+          case OBJECT_STORAGE: {
+            mergeObjectStorage(other.getObjectStorage());
+            break;
+          }
+          case EPHEMERAL_DISK_SPEC: {
+            mergeEphemeralDiskSpec(other.getEphemeralDiskSpec());
+            break;
+          }
+          case TARGET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int targetCase_ = 0;
+      private java.lang.Object target_;
+      public TargetCase
+          getTargetCase() {
+        return TargetCase.forNumber(
+            targetCase_);
+      }
+
+      public Builder clearTarget() {
+        targetCase_ = 0;
+        target_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique mount point name. Device will be mounted into /function/storage/&lt;name&gt;
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <pre>
+       * Mount's mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+       * @return The enum numeric value on the wire for mode.
+       */
+      @java.lang.Override public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Mount's mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModeValue(int value) {
+        
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mount's mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+       * @return The mode.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode result = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Mount's mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMode(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.Mode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mount's mode
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.Mode mode = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder> objectStorageBuilder_;
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       * @return Whether the objectStorage field is set.
+       */
+      @java.lang.Override
+      public boolean hasObjectStorage() {
+        return targetCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       * @return The objectStorage.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage getObjectStorage() {
+        if (objectStorageBuilder_ == null) {
+          if (targetCase_ == 10) {
+            return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_;
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+        } else {
+          if (targetCase_ == 10) {
+            return objectStorageBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      public Builder setObjectStorage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage value) {
+        if (objectStorageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          objectStorageBuilder_.setMessage(value);
+        }
+        targetCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      public Builder setObjectStorage(
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder builderForValue) {
+        if (objectStorageBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          objectStorageBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      public Builder mergeObjectStorage(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage value) {
+        if (objectStorageBuilder_ == null) {
+          if (targetCase_ == 10 &&
+              target_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance()) {
+            target_ = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.newBuilder((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 10) {
+            objectStorageBuilder_.mergeFrom(value);
+          }
+          objectStorageBuilder_.setMessage(value);
+        }
+        targetCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      public Builder clearObjectStorage() {
+        if (objectStorageBuilder_ == null) {
+          if (targetCase_ == 10) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 10) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          objectStorageBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder getObjectStorageBuilder() {
+        return getObjectStorageFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder getObjectStorageOrBuilder() {
+        if ((targetCase_ == 10) && (objectStorageBuilder_ != null)) {
+          return objectStorageBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 10) {
+            return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_;
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Object storage mounts
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.ObjectStorage object_storage = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder> 
+          getObjectStorageFieldBuilder() {
+        if (objectStorageBuilder_ == null) {
+          if (!(targetCase_ == 10)) {
+            target_ = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.getDefaultInstance();
+          }
+          objectStorageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorageOrBuilder>(
+                  (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.ObjectStorage) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 10;
+        onChanged();;
+        return objectStorageBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder> ephemeralDiskSpecBuilder_;
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       * @return Whether the ephemeralDiskSpec field is set.
+       */
+      @java.lang.Override
+      public boolean hasEphemeralDiskSpec() {
+        return targetCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       * @return The ephemeralDiskSpec.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec getEphemeralDiskSpec() {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          if (targetCase_ == 11) {
+            return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_;
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+        } else {
+          if (targetCase_ == 11) {
+            return ephemeralDiskSpecBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      public Builder setEphemeralDiskSpec(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec value) {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          ephemeralDiskSpecBuilder_.setMessage(value);
+        }
+        targetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      public Builder setEphemeralDiskSpec(
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder builderForValue) {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          ephemeralDiskSpecBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      public Builder mergeEphemeralDiskSpec(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec value) {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          if (targetCase_ == 11 &&
+              target_ != yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance()) {
+            target_ = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.newBuilder((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 11) {
+            ephemeralDiskSpecBuilder_.mergeFrom(value);
+          }
+          ephemeralDiskSpecBuilder_.setMessage(value);
+        }
+        targetCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      public Builder clearEphemeralDiskSpec() {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          if (targetCase_ == 11) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 11) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          ephemeralDiskSpecBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder getEphemeralDiskSpecBuilder() {
+        return getEphemeralDiskSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder getEphemeralDiskSpecOrBuilder() {
+        if ((targetCase_ == 11) && (ephemeralDiskSpecBuilder_ != null)) {
+          return ephemeralDiskSpecBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 11) {
+            return (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_;
+          }
+          return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Working disk (worker-local non-shared read-write NBS disk templates)
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.functions.v1.Mount.DiskSpec ephemeral_disk_spec = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder> 
+          getEphemeralDiskSpecFieldBuilder() {
+        if (ephemeralDiskSpecBuilder_ == null) {
+          if (!(targetCase_ == 11)) {
+            target_ = yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.getDefaultInstance();
+          }
+          ephemeralDiskSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec.Builder, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpecOrBuilder>(
+                  (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount.DiskSpec) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 11;
+        onChanged();;
+        return ephemeralDiskSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.Mount)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.Mount)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Mount>
+        PARSER = new com.google.protobuf.AbstractParser<Mount>() {
+      @java.lang.Override
+      public Mount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Mount(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Mount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Mount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Mount getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19213,6 +22624,21 @@ public final class FunctionOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_StorageMount_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_Mount_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19258,7 +22684,7 @@ public final class FunctionOuterClass {
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
       "\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
       "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022" +
-      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\307\t\n\007Version\022\n\n\002id\030\001 \001(\t" +
+      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\204\n\n\007Version\022\n\n\002id\030\001 \001(\t" +
       "\022\023\n\013function_id\030\002 \001(\t\022\036\n\013description\030\003 \001" +
       "(\tB\t\212\3101\0050-256\022.\n\ncreated_at\030\005 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022\017\n\007runtime\030\006 \001(\t\022\022" +
@@ -19284,53 +22710,67 @@ public final class FunctionOuterClass {
       "cation_config\030\026 \001(\0132;.yandex.cloud.serve" +
       "rless.functions.v1.AsyncInvocationConfig" +
       "\022\022\n\ntmpfs_size\030\027 \001(\003\022\035\n\013concurrency\030\030 \001(" +
-      "\003B\010\372\3071\0040-16\0322\n\020EnvironmentEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceA" +
-      "ccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002J\004\010\004\020\005J\004\010\013\020\014J\004\010\017" +
-      "\020\020\"5\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\3071\024134" +
-      "217728-4294967296\"O\n\007Package\022\031\n\013bucket_n" +
-      "ame\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030\002 \001(\tB\004\350\307" +
-      "1\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectivity\022\022\n\nne" +
-      "twork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003(\tB\n\212\3101\002>" +
-      "0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013function_id\030\001" +
-      " \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
-      "google.protobuf.Timestamp\022/\n\013modified_at" +
-      "\030\004 \001(\0132\032.google.protobuf.Timestamp\022#\n\033pr" +
-      "ovisioned_instances_count\030\006 \001(\003\022\034\n\024zone_" +
-      "instances_limit\030\007 \001(\003\022\033\n\023zone_requests_l" +
-      "imit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022" +
-      "\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024envir" +
-      "onment_variable\030\004 \001(\tH\000B\013\n\treference\"\340\001\n" +
-      "\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;\n\014log_gro" +
-      "up_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]" +
-      "{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#\362\3071\037([a-z" +
-      "A-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n\tmin_leve" +
-      "l\030\004 \001(\0162\'.yandex.cloud.logging.v1.LogLev" +
-      "el.LevelB\r\n\013destination\"\237\001\n\014StorageMount" +
-      "\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-." +
-      "0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020mount_poi" +
-      "nt_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071\016[-_0-9a-" +
-      "zA-Z]*\022\021\n\tread_only\030\004 \001(\010\"\336\003\n\025AsyncInvoc" +
-      "ationConfig\022 \n\rretries_count\030\001 \001(\003B\t\372\3071\005" +
-      "0-100\022h\n\016success_target\030\002 \001(\0132J.yandex.c" +
-      "loud.serverless.functions.v1.AsyncInvoca" +
-      "tionConfig.ResponseTargetB\004\350\3071\001\022h\n\016failu" +
-      "re_target\030\003 \001(\0132J.yandex.cloud.serverles" +
-      "s.functions.v1.AsyncInvocationConfig.Res" +
-      "ponseTargetB\004\350\3071\001\022\032\n\022service_account_id\030" +
-      "\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014empty_target" +
-      "\030\001 \001(\01321.yandex.cloud.serverless.functio" +
-      "ns.v1.EmptyTargetH\000\022E\n\nymq_target\030\002 \001(\0132" +
-      "/.yandex.cloud.serverless.functions.v1.Y" +
-      "MQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n\tYMQTarget\022" +
-      "\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022service_acco" +
-      "unt_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n\013EmptyTarge" +
-      "tB~\n(yandex.cloud.api.serverless.functio" +
-      "ns.v1ZRgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/serverless/functions/v1;" +
-      "functionsb\006proto3"
+      "\003B\010\372\3071\0040-16\022;\n\006mounts\030\031 \003(\0132+.yandex.clo" +
+      "ud.serverless.functions.v1.Mount\0322\n\020Envi" +
+      "ronmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\032;\n\031NamedServiceAccountsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022S" +
+      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
+      "IVE\020\002J\004\010\004\020\005J\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006" +
+      "memory\030\001 \001(\003B\030\372\3071\024134217728-4294967296\"O" +
+      "\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013" +
+      "object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"" +
+      "A\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\ts" +
+      "ubnet_id\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\370\001\n\rScalingPo" +
+      "licy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022." +
+      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022/\n\013modified_at\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022#\n\033provisioned_instances" +
+      "_count\030\006 \001(\003\022\034\n\024zone_instances_limit\030\007 \001" +
+      "(\003\022\033\n\023zone_requests_limit\030\010 \001(\003J\004\010\005\020\006\"b\n" +
+      "\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022" +
+      "\013\n\003key\030\003 \001(\t\022\036\n\024environment_variable\030\004 \001" +
+      "(\tH\000B\013\n\treference\"\340\001\n\nLogOptions\022\020\n\010disa" +
+      "bled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([" +
+      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolde" +
+      "r_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{" +
+      "0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cl" +
+      "oud.logging.v1.LogLevel.LevelB\r\n\013destina" +
+      "tion\"\243\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001(\t" +
+      "B\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pref" +
+      "ix\030\002 \001(\t\0229\n\020mount_point_name\030\003 \001(\tB\037\350\3071\001" +
+      "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021\n\tread_only" +
+      "\030\004 \001(\010:\002\030\001\"\367\003\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001" +
+      "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(" +
+      "\01620.yandex.cloud.serverless.functions.v1" +
+      ".Mount.Mode\022S\n\016object_storage\030\n \001(\01329.ya" +
+      "ndex.cloud.serverless.functions.v1.Mount" +
+      ".ObjectStorageH\000\022S\n\023ephemeral_disk_spec\030" +
+      "\013 \001(\01324.yandex.cloud.serverless.function" +
+      "s.v1.Mount.DiskSpecH\000\032R\n\rObjectStorage\0221" +
+      "\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-" +
+      "9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n" +
+      "\004size\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\"" +
+      ";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ON" +
+      "LY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006target\022\004\300\3011\001\"\336\003\n" +
+      "\025AsyncInvocationConfig\022 \n\rretries_count\030" +
+      "\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_target\030\002 \001(\013" +
+      "2J.yandex.cloud.serverless.functions.v1." +
+      "AsyncInvocationConfig.ResponseTargetB\004\350\307" +
+      "1\001\022h\n\016failure_target\030\003 \001(\0132J.yandex.clou" +
+      "d.serverless.functions.v1.AsyncInvocatio" +
+      "nConfig.ResponseTargetB\004\350\3071\001\022\032\n\022service_" +
+      "account_id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014e" +
+      "mpty_target\030\001 \001(\01321.yandex.cloud.serverl" +
+      "ess.functions.v1.EmptyTargetH\000\022E\n\nymq_ta" +
+      "rget\030\002 \001(\0132/.yandex.cloud.serverless.fun" +
+      "ctions.v1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n" +
+      "\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022s" +
+      "ervice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n" +
+      "\013EmptyTargetB~\n(yandex.cloud.api.serverl" +
+      "ess.functions.v1ZRgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/serverless/fu" +
+      "nctions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19357,7 +22797,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "Environment", "Connectivity", "NamedServiceAccounts", "Secrets", "LogOptions", "StorageMounts", "AsyncInvocationConfig", "TmpfsSize", "Concurrency", "Mounts", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new
@@ -19412,8 +22852,26 @@ public final class FunctionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_StorageMount_descriptor,
         new java.lang.String[] { "BucketId", "Prefix", "MountPointName", "ReadOnly", });
-    internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_descriptor =
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor,
+        new java.lang.String[] { "Name", "Mode", "ObjectStorage", "EphemeralDiskSpec", "Target", });
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor =
+      internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_Mount_ObjectStorage_descriptor,
+        new java.lang.String[] { "BucketId", "Prefix", });
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor =
+      internal_static_yandex_cloud_serverless_functions_v1_Mount_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_Mount_DiskSpec_descriptor,
+        new java.lang.String[] { "Size", "BlockSize", });
+    internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_descriptor,
@@ -19425,13 +22883,13 @@ public final class FunctionOuterClass {
         internal_static_yandex_cloud_serverless_functions_v1_AsyncInvocationConfig_ResponseTarget_descriptor,
         new java.lang.String[] { "EmptyTarget", "YmqTarget", "Target", });
     internal_static_yandex_cloud_serverless_functions_v1_YMQTarget_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_serverless_functions_v1_YMQTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_YMQTarget_descriptor,
         new java.lang.String[] { "QueueArn", "ServiceAccountId", });
     internal_static_yandex_cloud_serverless_functions_v1_EmptyTarget_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_serverless_functions_v1_EmptyTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_EmptyTarget_descriptor,

@@ -433,6 +433,36 @@ public final class DiskOuterClass {
      */
     yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getDiskPlacementPolicyOrBuilder();
 
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    boolean hasHardwareGeneration();
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     * @return The hardwareGeneration.
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration();
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
+
     public yandex.cloud.api.compute.v1.DiskOuterClass.Disk.SourceCase getSourceCase();
   }
   /**
@@ -611,6 +641,19 @@ public final class DiskOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(diskPlacementPolicy_);
                 diskPlacementPolicy_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 138: {
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder subBuilder = null;
+              if (hardwareGeneration_ != null) {
+                subBuilder = hardwareGeneration_.toBuilder();
+              }
+              hardwareGeneration_ = input.readMessage(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareGeneration_);
+                hardwareGeneration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1617,6 +1660,47 @@ public final class DiskOuterClass {
       return getDiskPlacementPolicy();
     }
 
+    public static final int HARDWARE_GENERATION_FIELD_NUMBER = 17;
+    private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareGeneration() {
+      return hardwareGeneration_ != null;
+    }
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     * @return The hardwareGeneration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+      return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+    }
+    /**
+     * <pre>
+     * If specified, forces the same HardwareGeneration features to be applied to the instance
+     * created using this disk as a boot one. Otherwise the current default will be used.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+      return getHardwareGeneration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1681,6 +1765,9 @@ public final class DiskOuterClass {
       }
       if (diskPlacementPolicy_ != null) {
         output.writeMessage(16, getDiskPlacementPolicy());
+      }
+      if (hardwareGeneration_ != null) {
+        output.writeMessage(17, getHardwareGeneration());
       }
       unknownFields.writeTo(output);
     }
@@ -1761,6 +1848,10 @@ public final class DiskOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getDiskPlacementPolicy());
       }
+      if (hardwareGeneration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getHardwareGeneration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1808,6 +1899,11 @@ public final class DiskOuterClass {
       if (hasDiskPlacementPolicy()) {
         if (!getDiskPlacementPolicy()
             .equals(other.getDiskPlacementPolicy())) return false;
+      }
+      if (hasHardwareGeneration() != other.hasHardwareGeneration()) return false;
+      if (hasHardwareGeneration()) {
+        if (!getHardwareGeneration()
+            .equals(other.getHardwareGeneration())) return false;
       }
       if (!getSourceCase().equals(other.getSourceCase())) return false;
       switch (sourceCase_) {
@@ -1872,6 +1968,10 @@ public final class DiskOuterClass {
       if (hasDiskPlacementPolicy()) {
         hash = (37 * hash) + DISK_PLACEMENT_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getDiskPlacementPolicy().hashCode();
+      }
+      if (hasHardwareGeneration()) {
+        hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareGeneration().hashCode();
       }
       switch (sourceCase_) {
         case 12:
@@ -2079,6 +2179,12 @@ public final class DiskOuterClass {
           diskPlacementPolicy_ = null;
           diskPlacementPolicyBuilder_ = null;
         }
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
         sourceCase_ = 0;
         source_ = null;
         return this;
@@ -2144,6 +2250,11 @@ public final class DiskOuterClass {
           result.diskPlacementPolicy_ = diskPlacementPolicy_;
         } else {
           result.diskPlacementPolicy_ = diskPlacementPolicyBuilder_.build();
+        }
+        if (hardwareGenerationBuilder_ == null) {
+          result.hardwareGeneration_ = hardwareGeneration_;
+        } else {
+          result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
         }
         result.sourceCase_ = sourceCase_;
         onBuilt();
@@ -2254,6 +2365,9 @@ public final class DiskOuterClass {
         }
         if (other.hasDiskPlacementPolicy()) {
           mergeDiskPlacementPolicy(other.getDiskPlacementPolicy());
+        }
+        if (other.hasHardwareGeneration()) {
+          mergeHardwareGeneration(other.getHardwareGeneration());
         }
         switch (other.getSourceCase()) {
           case SOURCE_IMAGE_ID: {
@@ -4064,6 +4178,170 @@ public final class DiskOuterClass {
         }
         return diskPlacementPolicyBuilder_;
       }
+
+      private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> hardwareGenerationBuilder_;
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       * @return Whether the hardwareGeneration field is set.
+       */
+      public boolean hasHardwareGeneration() {
+        return hardwareGenerationBuilder_ != null || hardwareGeneration_ != null;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       * @return The hardwareGeneration.
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        } else {
+          return hardwareGenerationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public Builder setHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareGeneration_ = value;
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public Builder setHardwareGeneration(
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder builderForValue) {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public Builder mergeHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (hardwareGeneration_ != null) {
+            hardwareGeneration_ =
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.newBuilder(hardwareGeneration_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareGeneration_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public Builder clearHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+          onChanged();
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder getHardwareGenerationBuilder() {
+        
+        onChanged();
+        return getHardwareGenerationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+        if (hardwareGenerationBuilder_ != null) {
+          return hardwareGenerationBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareGeneration_ == null ?
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        }
+      }
+      /**
+       * <pre>
+       * If specified, forces the same HardwareGeneration features to be applied to the instance
+       * created using this disk as a boot one. Otherwise the current default will be used.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 17;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> 
+          getHardwareGenerationFieldBuilder() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder>(
+                  getHardwareGeneration(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareGeneration_ = null;
+        }
+        return hardwareGenerationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5690,42 +5968,46 @@ public final class DiskOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"yandex/cloud/compute/v1/disk.proto\022\027ya" +
       "ndex.cloud.compute.v1\032\037google/protobuf/t" +
-      "imestamp.proto\"\353\004\n\004Disk\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
-      "older_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013" +
-      "description\030\005 \001(\t\0229\n\006labels\030\006 \003(\0132).yand" +
-      "ex.cloud.compute.v1.Disk.LabelsEntry\022\017\n\007" +
-      "type_id\030\007 \001(\t\022\017\n\007zone_id\030\010 \001(\t\022\014\n\004size\030\t" +
-      " \001(\003\022\022\n\nblock_size\030\017 \001(\003\022\023\n\013product_ids\030" +
-      "\n \003(\t\0224\n\006status\030\013 \001(\0162$.yandex.cloud.com" +
-      "pute.v1.Disk.Status\022\031\n\017source_image_id\030\014" +
-      " \001(\tH\000\022\034\n\022source_snapshot_id\030\r \001(\tH\000\022\024\n\014" +
-      "instance_ids\030\016 \003(\t\022K\n\025disk_placement_pol" +
-      "icy\030\020 \001(\0132,.yandex.cloud.compute.v1.Disk" +
-      "PlacementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022STAT" +
-      "US_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020" +
-      "\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006source\"T\n\023" +
-      "DiskPlacementPolicy\022\032\n\022placement_group_i" +
-      "d\030\001 \001(\t\022!\n\031placement_group_partition\030\002 \001" +
-      "(\003\"y\n\031DiskPlacementPolicyChange\022\017\n\007disk_" +
-      "id\030\001 \001(\t\022K\n\025disk_placement_policy\030\002 \001(\0132" +
-      ",.yandex.cloud.compute.v1.DiskPlacementP" +
-      "olicyBb\n\033yandex.cloud.api.compute.v1ZCgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/compute/v1;computeb\006proto3"
+      "imestamp.proto\0321yandex/cloud/compute/v1/" +
+      "hardware_generation.proto\"\265\005\n\004Disk\022\n\n\002id" +
+      "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030" +
+      "\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004nam" +
+      "e\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\0229\n\006labels\030\006" +
+      " \003(\0132).yandex.cloud.compute.v1.Disk.Labe" +
+      "lsEntry\022\017\n\007type_id\030\007 \001(\t\022\017\n\007zone_id\030\010 \001(" +
+      "\t\022\014\n\004size\030\t \001(\003\022\022\n\nblock_size\030\017 \001(\003\022\023\n\013p" +
+      "roduct_ids\030\n \003(\t\0224\n\006status\030\013 \001(\0162$.yande" +
+      "x.cloud.compute.v1.Disk.Status\022\031\n\017source" +
+      "_image_id\030\014 \001(\tH\000\022\034\n\022source_snapshot_id\030" +
+      "\r \001(\tH\000\022\024\n\014instance_ids\030\016 \003(\t\022K\n\025disk_pl" +
+      "acement_policy\030\020 \001(\0132,.yandex.cloud.comp" +
+      "ute.v1.DiskPlacementPolicy\022H\n\023hardware_g" +
+      "eneration\030\021 \001(\0132+.yandex.cloud.compute.v" +
+      "1.HardwareGeneration\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n" +
+      "\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005R" +
+      "EADY\020\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004B\010\n\006sourc" +
+      "e\"T\n\023DiskPlacementPolicy\022\032\n\022placement_gr" +
+      "oup_id\030\001 \001(\t\022!\n\031placement_group_partitio" +
+      "n\030\002 \001(\003\"y\n\031DiskPlacementPolicyChange\022\017\n\007" +
+      "disk_id\030\001 \001(\t\022K\n\025disk_placement_policy\030\002" +
+      " \001(\0132,.yandex.cloud.compute.v1.DiskPlace" +
+      "mentPolicyBb\n\033yandex.cloud.api.compute.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_Disk_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Disk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Disk_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "BlockSize", "ProductIds", "Status", "SourceImageId", "SourceSnapshotId", "InstanceIds", "DiskPlacementPolicy", "Source", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "TypeId", "ZoneId", "Size", "BlockSize", "ProductIds", "Status", "SourceImageId", "SourceSnapshotId", "InstanceIds", "DiskPlacementPolicy", "HardwareGeneration", "Source", });
     internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Disk_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Disk_LabelsEntry_fieldAccessorTable = new
@@ -5745,6 +6027,7 @@ public final class DiskOuterClass {
         internal_static_yandex_cloud_compute_v1_DiskPlacementPolicyChange_descriptor,
         new java.lang.String[] { "DiskId", "DiskPlacementPolicy", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

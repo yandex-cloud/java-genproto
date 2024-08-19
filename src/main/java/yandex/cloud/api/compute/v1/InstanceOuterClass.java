@@ -1079,6 +1079,33 @@ public final class InstanceOuterClass {
      * <code>.google.protobuf.Duration maintenance_grace_period = 30;</code>
      */
     com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    boolean hasHardwareGeneration();
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     * @return The hardwareGeneration.
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration();
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
   }
   /**
    * <pre>
@@ -1406,6 +1433,19 @@ public final class InstanceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maintenanceGracePeriod_);
                 maintenanceGracePeriod_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 250: {
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder subBuilder = null;
+              if (hardwareGeneration_ != null) {
+                subBuilder = hardwareGeneration_.toBuilder();
+              }
+              hardwareGeneration_ = input.readMessage(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareGeneration_);
+                hardwareGeneration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3067,6 +3107,44 @@ public final class InstanceOuterClass {
       return getMaintenanceGracePeriod();
     }
 
+    public static final int HARDWARE_GENERATION_FIELD_NUMBER = 31;
+    private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareGeneration() {
+      return hardwareGeneration_ != null;
+    }
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     * @return The hardwareGeneration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+      return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+    }
+    /**
+     * <pre>
+     * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+      return getHardwareGeneration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3170,6 +3248,9 @@ public final class InstanceOuterClass {
       }
       if (maintenanceGracePeriod_ != null) {
         output.writeMessage(30, getMaintenanceGracePeriod());
+      }
+      if (hardwareGeneration_ != null) {
+        output.writeMessage(31, getHardwareGeneration());
       }
       unknownFields.writeTo(output);
     }
@@ -3294,6 +3375,10 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(30, getMaintenanceGracePeriod());
       }
+      if (hardwareGeneration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, getHardwareGeneration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3393,6 +3478,11 @@ public final class InstanceOuterClass {
         if (!getMaintenanceGracePeriod()
             .equals(other.getMaintenanceGracePeriod())) return false;
       }
+      if (hasHardwareGeneration() != other.hasHardwareGeneration()) return false;
+      if (hasHardwareGeneration()) {
+        if (!getHardwareGeneration()
+            .equals(other.getHardwareGeneration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3491,6 +3581,10 @@ public final class InstanceOuterClass {
       if (hasMaintenanceGracePeriod()) {
         hash = (37 * hash) + MAINTENANCE_GRACE_PERIOD_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceGracePeriod().hashCode();
+      }
+      if (hasHardwareGeneration()) {
+        hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareGeneration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3769,6 +3863,12 @@ public final class InstanceOuterClass {
           maintenanceGracePeriod_ = null;
           maintenanceGracePeriodBuilder_ = null;
         }
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
         return this;
       }
 
@@ -3897,6 +3997,11 @@ public final class InstanceOuterClass {
           result.maintenanceGracePeriod_ = maintenanceGracePeriod_;
         } else {
           result.maintenanceGracePeriod_ = maintenanceGracePeriodBuilder_.build();
+        }
+        if (hardwareGenerationBuilder_ == null) {
+          result.hardwareGeneration_ = hardwareGeneration_;
+        } else {
+          result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4129,6 +4234,9 @@ public final class InstanceOuterClass {
         }
         if (other.hasMaintenanceGracePeriod()) {
           mergeMaintenanceGracePeriod(other.getMaintenanceGracePeriod());
+        }
+        if (other.hasHardwareGeneration()) {
+          mergeHardwareGeneration(other.getHardwareGeneration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8375,6 +8483,161 @@ public final class InstanceOuterClass {
           maintenanceGracePeriod_ = null;
         }
         return maintenanceGracePeriodBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> hardwareGenerationBuilder_;
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       * @return Whether the hardwareGeneration field is set.
+       */
+      public boolean hasHardwareGeneration() {
+        return hardwareGenerationBuilder_ != null || hardwareGeneration_ != null;
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       * @return The hardwareGeneration.
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        } else {
+          return hardwareGenerationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public Builder setHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareGeneration_ = value;
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public Builder setHardwareGeneration(
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder builderForValue) {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public Builder mergeHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (hardwareGeneration_ != null) {
+            hardwareGeneration_ =
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.newBuilder(hardwareGeneration_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareGeneration_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public Builder clearHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+          onChanged();
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder getHardwareGenerationBuilder() {
+        
+        onChanged();
+        return getHardwareGenerationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+        if (hardwareGenerationBuilder_ != null) {
+          return hardwareGenerationBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareGeneration_ == null ?
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        }
+      }
+      /**
+       * <pre>
+       * This feature set is inherited from the image/disk used as a boot one at the creation of the instance.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 31;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> 
+          getHardwareGenerationFieldBuilder() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder>(
+                  getHardwareGeneration(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareGeneration_ = null;
+        }
+        return hardwareGenerationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23499,117 +23762,121 @@ public final class InstanceOuterClass {
       "\n&yandex/cloud/compute/v1/instance.proto" +
       "\022\027yandex.cloud.compute.v1\032\036google/protob" +
       "uf/duration.proto\032\037google/protobuf/times" +
-      "tamp.proto\032)yandex/cloud/compute/v1/main" +
-      "tenance.proto\"\344\014\n\010Instance\022\n\n\002id\030\001 \001(\t\022\021" +
-      "\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032." +
-      "google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022" +
-      "\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(\0132-.y" +
-      "andex.cloud.compute.v1.Instance.LabelsEn" +
-      "try\022\017\n\007zone_id\030\007 \001(\t\022\023\n\013platform_id\030\010 \001(" +
-      "\t\0225\n\tresources\030\t \001(\0132\".yandex.cloud.comp" +
-      "ute.v1.Resources\0228\n\006status\030\n \001(\0162(.yande" +
-      "x.cloud.compute.v1.Instance.Status\022A\n\010me" +
-      "tadata\030\013 \003(\0132/.yandex.cloud.compute.v1.I" +
-      "nstance.MetadataEntry\022B\n\020metadata_option" +
-      "s\030\027 \001(\0132(.yandex.cloud.compute.v1.Metada" +
-      "taOptions\0228\n\tboot_disk\030\014 \001(\0132%.yandex.cl" +
-      "oud.compute.v1.AttachedDisk\022>\n\017secondary" +
-      "_disks\030\r \003(\0132%.yandex.cloud.compute.v1.A" +
-      "ttachedDisk\022?\n\013local_disks\030\026 \003(\0132*.yande" +
-      "x.cloud.compute.v1.AttachedLocalDisk\022@\n\013" +
-      "filesystems\030\025 \003(\0132+.yandex.cloud.compute" +
-      ".v1.AttachedFilesystem\022E\n\022network_interf" +
-      "aces\030\016 \003(\0132).yandex.cloud.compute.v1.Net" +
-      "workInterface\022I\n\024serial_port_settings\030\030 " +
-      "\001(\0132+.yandex.cloud.compute.v1.SerialPort" +
-      "Settings\022:\n\014gpu_settings\030\032 \001(\0132$.yandex." +
-      "cloud.compute.v1.GpuSettings\022\014\n\004fqdn\030\020 \001" +
-      "(\t\022D\n\021scheduling_policy\030\021 \001(\0132).yandex.c" +
-      "loud.compute.v1.SchedulingPolicy\022\032\n\022serv" +
-      "ice_account_id\030\022 \001(\t\022B\n\020network_settings" +
-      "\030\023 \001(\0132(.yandex.cloud.compute.v1.Network" +
-      "Settings\022B\n\020placement_policy\030\024 \001(\0132(.yan" +
-      "dex.cloud.compute.v1.PlacementPolicy\022\025\n\r" +
-      "host_group_id\030\033 \001(\t\022\017\n\007host_id\030\034 \001(\t\022F\n\022" +
-      "maintenance_policy\030\035 \001(\0162*.yandex.cloud." +
-      "compute.v1.MaintenancePolicy\022;\n\030maintena" +
-      "nce_grace_period\030\036 \001(\0132\031.google.protobuf" +
-      ".Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013" +
-      "\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014" +
-      "\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPDATING" +
-      "\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELETING\020\n" +
-      "J\004\010\017\020\020J\004\010\031\020\032\"O\n\tResources\022\016\n\006memory\030\001 \001(" +
-      "\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003 \001(\003\022" +
-      "\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004mode\030\001" +
-      " \001(\0162*.yandex.cloud.compute.v1.AttachedD" +
-      "isk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013auto_de" +
-      "lete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode\022\024\n\020M" +
-      "ODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD" +
-      "_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004size\030\001 " +
-      "\001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022AttachedFil" +
-      "esystem\022>\n\004mode\030\001 \001(\01620.yandex.cloud.com" +
-      "pute.v1.AttachedFilesystem.Mode\022\023\n\013devic" +
-      "e_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t\";\n\004M" +
-      "ode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001" +
-      "\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterface\022\r\n" +
-      "\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsub" +
-      "net_id\030\003 \001(\t\022C\n\022primary_v4_address\030\004 \001(\013" +
-      "2\'.yandex.cloud.compute.v1.PrimaryAddres" +
-      "s\022C\n\022primary_v6_address\030\005 \001(\0132\'.yandex.c" +
-      "loud.compute.v1.PrimaryAddress\022\032\n\022securi" +
-      "ty_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddress\022\017\n" +
-      "\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$" +
-      ".yandex.cloud.compute.v1.OneToOneNat\0227\n\013" +
-      "dns_records\030\003 \003(\0132\".yandex.cloud.compute" +
-      ".v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007address" +
-      "\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex.clou" +
-      "d.compute.v1.IpVersion\0227\n\013dns_records\030\003 " +
-      "\003(\0132\".yandex.cloud.compute.v1.DnsRecord\"" +
-      "H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_i" +
-      "d\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020Sch" +
-      "edulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017N" +
-      "etworkSettings\022;\n\004type\030\001 \001(\0162-.yandex.cl" +
-      "oud.compute.v1.NetworkSettings.Type\"^\n\004T" +
-      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022" +
-      "\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_AC" +
-      "CELERATED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_cluste" +
-      "r_id\030\001 \001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022placem" +
-      "ent_group_id\030\001 \001(\t\022V\n\023host_affinity_rule" +
-      "s\030\002 \003(\01329.yandex.cloud.compute.v1.Placem" +
-      "entPolicy.HostAffinityRule\022!\n\031placement_" +
-      "group_partition\030\003 \001(\003\032\271\001\n\020HostAffinityRu" +
-      "le\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.clo" +
-      "ud.compute.v1.PlacementPolicy.HostAffini" +
-      "tyRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Opera" +
-      "tor\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n" +
-      "\006NOT_IN\020\002\"\241\002\n\017MetadataOptions\022B\n\021gce_htt" +
-      "p_endpoint\030\001 \001(\0162\'.yandex.cloud.compute." +
-      "v1.MetadataOption\022E\n\024aws_v1_http_endpoin" +
-      "t\030\002 \001(\0162\'.yandex.cloud.compute.v1.Metada" +
-      "taOption\022?\n\016gce_http_token\030\003 \001(\0162\'.yande" +
-      "x.cloud.compute.v1.MetadataOption\022B\n\021aws" +
-      "_v1_http_token\030\004 \001(\0162\'.yandex.cloud.comp" +
-      "ute.v1.MetadataOption\"\311\001\n\022SerialPortSett" +
-      "ings\022W\n\021ssh_authorization\030\001 \001(\0162<.yandex" +
-      ".cloud.compute.v1.SerialPortSettings.SSH" +
-      "Authorization\"Z\n\020SSHAuthorization\022!\n\035SSH" +
-      "_AUTHORIZATION_UNSPECIFIED\020\000\022\025\n\021INSTANCE" +
-      "_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVersion\022\032" +
-      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
-      "IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADATA_OPT" +
-      "ION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABL" +
-      "ED\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/compute/v1;computeb\006proto3"
+      "tamp.proto\0321yandex/cloud/compute/v1/hard" +
+      "ware_generation.proto\032)yandex/cloud/comp" +
+      "ute/v1/maintenance.proto\"\256\r\n\010Instance\022\n\n" +
+      "\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
+      "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006label" +
+      "s\030\006 \003(\0132-.yandex.cloud.compute.v1.Instan" +
+      "ce.LabelsEntry\022\017\n\007zone_id\030\007 \001(\t\022\023\n\013platf" +
+      "orm_id\030\010 \001(\t\0225\n\tresources\030\t \001(\0132\".yandex" +
+      ".cloud.compute.v1.Resources\0228\n\006status\030\n " +
+      "\001(\0162(.yandex.cloud.compute.v1.Instance.S" +
+      "tatus\022A\n\010metadata\030\013 \003(\0132/.yandex.cloud.c" +
+      "ompute.v1.Instance.MetadataEntry\022B\n\020meta" +
+      "data_options\030\027 \001(\0132(.yandex.cloud.comput" +
+      "e.v1.MetadataOptions\0228\n\tboot_disk\030\014 \001(\0132" +
+      "%.yandex.cloud.compute.v1.AttachedDisk\022>" +
+      "\n\017secondary_disks\030\r \003(\0132%.yandex.cloud.c" +
+      "ompute.v1.AttachedDisk\022?\n\013local_disks\030\026 " +
+      "\003(\0132*.yandex.cloud.compute.v1.AttachedLo" +
+      "calDisk\022@\n\013filesystems\030\025 \003(\0132+.yandex.cl" +
+      "oud.compute.v1.AttachedFilesystem\022E\n\022net" +
+      "work_interfaces\030\016 \003(\0132).yandex.cloud.com" +
+      "pute.v1.NetworkInterface\022I\n\024serial_port_" +
+      "settings\030\030 \001(\0132+.yandex.cloud.compute.v1" +
+      ".SerialPortSettings\022:\n\014gpu_settings\030\032 \001(" +
+      "\0132$.yandex.cloud.compute.v1.GpuSettings\022" +
+      "\014\n\004fqdn\030\020 \001(\t\022D\n\021scheduling_policy\030\021 \001(\013" +
+      "2).yandex.cloud.compute.v1.SchedulingPol" +
+      "icy\022\032\n\022service_account_id\030\022 \001(\t\022B\n\020netwo" +
+      "rk_settings\030\023 \001(\0132(.yandex.cloud.compute" +
+      ".v1.NetworkSettings\022B\n\020placement_policy\030" +
+      "\024 \001(\0132(.yandex.cloud.compute.v1.Placemen" +
+      "tPolicy\022\025\n\rhost_group_id\030\033 \001(\t\022\017\n\007host_i" +
+      "d\030\034 \001(\t\022F\n\022maintenance_policy\030\035 \001(\0162*.ya" +
+      "ndex.cloud.compute.v1.MaintenancePolicy\022" +
+      ";\n\030maintenance_grace_period\030\036 \001(\0132\031.goog" +
+      "le.protobuf.Duration\022H\n\023hardware_generat" +
+      "ion\030\037 \001(\0132+.yandex.cloud.compute.v1.Hard" +
+      "wareGeneration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Statu" +
+      "s\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONIN" +
+      "G\020\001\022\013\n\007RUNNING\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPE" +
+      "D\020\004\022\014\n\010STARTING\020\005\022\016\n\nRESTARTING\020\006\022\014\n\010UPD" +
+      "ATING\020\007\022\t\n\005ERROR\020\010\022\013\n\007CRASHED\020\t\022\014\n\010DELET" +
+      "ING\020\nJ\004\010\017\020\020J\004\010\031\020\032\"O\n\tResources\022\016\n\006memory" +
+      "\030\001 \001(\003\022\r\n\005cores\030\002 \001(\003\022\025\n\rcore_fraction\030\003" +
+      " \001(\003\022\014\n\004gpus\030\004 \001(\003\"\300\001\n\014AttachedDisk\0228\n\004m" +
+      "ode\030\001 \001(\0162*.yandex.cloud.compute.v1.Atta" +
+      "chedDisk.Mode\022\023\n\013device_name\030\002 \001(\t\022\023\n\013au" +
+      "to_delete\030\003 \001(\010\022\017\n\007disk_id\030\004 \001(\t\";\n\004Mode" +
+      "\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n" +
+      "\nREAD_WRITE\020\002\"6\n\021AttachedLocalDisk\022\014\n\004si" +
+      "ze\030\001 \001(\003\022\023\n\013device_name\030\002 \001(\t\"\275\001\n\022Attach" +
+      "edFilesystem\022>\n\004mode\030\001 \001(\01620.yandex.clou" +
+      "d.compute.v1.AttachedFilesystem.Mode\022\023\n\013" +
+      "device_name\030\002 \001(\t\022\025\n\rfilesystem_id\030\003 \001(\t" +
+      "\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_O" +
+      "NLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\020NetworkInterfa" +
+      "ce\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021" +
+      "\n\tsubnet_id\030\003 \001(\t\022C\n\022primary_v4_address\030" +
+      "\004 \001(\0132\'.yandex.cloud.compute.v1.PrimaryA" +
+      "ddress\022C\n\022primary_v6_address\030\005 \001(\0132\'.yan" +
+      "dex.cloud.compute.v1.PrimaryAddress\022\032\n\022s" +
+      "ecurity_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddre" +
+      "ss\022\017\n\007address\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 " +
+      "\001(\0132$.yandex.cloud.compute.v1.OneToOneNa" +
+      "t\0227\n\013dns_records\030\003 \003(\0132\".yandex.cloud.co" +
+      "mpute.v1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007ad" +
+      "dress\030\001 \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex" +
+      ".cloud.compute.v1.IpVersion\0227\n\013dns_recor" +
+      "ds\030\003 \003(\0132\".yandex.cloud.compute.v1.DnsRe" +
+      "cord\"H\n\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_z" +
+      "one_id\030\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'" +
+      "\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"" +
+      "\256\001\n\017NetworkSettings\022;\n\004type\030\001 \001(\0162-.yand" +
+      "ex.cloud.compute.v1.NetworkSettings.Type" +
+      "\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDA" +
+      "RD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWA" +
+      "RE_ACCELERATED\020\003\"%\n\013GpuSettings\022\026\n\016gpu_c" +
+      "luster_id\030\001 \001(\t\"\344\002\n\017PlacementPolicy\022\032\n\022p" +
+      "lacement_group_id\030\001 \001(\t\022V\n\023host_affinity" +
+      "_rules\030\002 \003(\01329.yandex.cloud.compute.v1.P" +
+      "lacementPolicy.HostAffinityRule\022!\n\031place" +
+      "ment_group_partition\030\003 \001(\003\032\271\001\n\020HostAffin" +
+      "ityRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yande" +
+      "x.cloud.compute.v1.PlacementPolicy.HostA" +
+      "ffinityRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010" +
+      "Operator\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN" +
+      "\020\001\022\n\n\006NOT_IN\020\002\"\241\002\n\017MetadataOptions\022B\n\021gc" +
+      "e_http_endpoint\030\001 \001(\0162\'.yandex.cloud.com" +
+      "pute.v1.MetadataOption\022E\n\024aws_v1_http_en" +
+      "dpoint\030\002 \001(\0162\'.yandex.cloud.compute.v1.M" +
+      "etadataOption\022?\n\016gce_http_token\030\003 \001(\0162\'." +
+      "yandex.cloud.compute.v1.MetadataOption\022B" +
+      "\n\021aws_v1_http_token\030\004 \001(\0162\'.yandex.cloud" +
+      ".compute.v1.MetadataOption\"\311\001\n\022SerialPor" +
+      "tSettings\022W\n\021ssh_authorization\030\001 \001(\0162<.y" +
+      "andex.cloud.compute.v1.SerialPortSetting" +
+      "s.SSHAuthorization\"Z\n\020SSHAuthorization\022!" +
+      "\n\035SSH_AUTHORIZATION_UNSPECIFIED\020\000\022\025\n\021INS" +
+      "TANCE_METADATA\020\001\022\014\n\010OS_LOGIN\020\002*;\n\tIpVers" +
+      "ion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020" +
+      "\001\022\010\n\004IPV6\020\002*L\n\016MetadataOption\022\037\n\033METADAT" +
+      "A_OPTION_UNSPECIFIED\020\000\022\013\n\007ENABLED\020\001\022\014\n\010D" +
+      "ISABLED\020\002Bb\n\033yandex.cloud.api.compute.v1" +
+      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_Instance_descriptor =
@@ -23617,7 +23884,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "SerialPortSettings", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "SerialPortSettings", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", "MaintenancePolicy", "MaintenanceGracePeriod", "HardwareGeneration", });
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_fieldAccessorTable = new
@@ -23722,6 +23989,7 @@ public final class InstanceOuterClass {
         new java.lang.String[] { "SshAuthorization", });
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.Maintenance.getDescriptor();
   }
 

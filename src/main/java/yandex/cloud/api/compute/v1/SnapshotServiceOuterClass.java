@@ -3262,6 +3262,36 @@ public final class SnapshotServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    boolean hasHardwareGeneration();
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     * @return The hardwareGeneration.
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration();
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     */
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateSnapshotRequest}
@@ -3348,6 +3378,19 @@ public final class SnapshotServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder subBuilder = null;
+              if (hardwareGeneration_ != null) {
+                subBuilder = hardwareGeneration_.toBuilder();
+              }
+              hardwareGeneration_ = input.readMessage(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardwareGeneration_);
+                hardwareGeneration_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3679,6 +3722,47 @@ public final class SnapshotServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int HARDWARE_GENERATION_FIELD_NUMBER = 7;
+    private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     * @return Whether the hardwareGeneration field is set.
+     */
+    @java.lang.Override
+    public boolean hasHardwareGeneration() {
+      return hardwareGeneration_ != null;
+    }
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     * @return The hardwareGeneration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+      return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+    }
+    /**
+     * <pre>
+     * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+     * or to the default values if the source does not define it.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+      return getHardwareGeneration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3711,6 +3795,9 @@ public final class SnapshotServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           6);
+      if (hardwareGeneration_ != null) {
+        output.writeMessage(7, getHardwareGeneration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3742,6 +3829,10 @@ public final class SnapshotServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, labels__);
       }
+      if (hardwareGeneration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getHardwareGeneration());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3767,6 +3858,11 @@ public final class SnapshotServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasHardwareGeneration() != other.hasHardwareGeneration()) return false;
+      if (hasHardwareGeneration()) {
+        if (!getHardwareGeneration()
+            .equals(other.getHardwareGeneration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3789,6 +3885,10 @@ public final class SnapshotServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasHardwareGeneration()) {
+        hash = (37 * hash) + HARDWARE_GENERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getHardwareGeneration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3954,6 +4054,12 @@ public final class SnapshotServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
         return this;
       }
 
@@ -3987,6 +4093,11 @@ public final class SnapshotServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (hardwareGenerationBuilder_ == null) {
+          result.hardwareGeneration_ = hardwareGeneration_;
+        } else {
+          result.hardwareGeneration_ = hardwareGenerationBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4053,6 +4164,9 @@ public final class SnapshotServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasHardwareGeneration()) {
+          mergeHardwareGeneration(other.getHardwareGeneration());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4634,6 +4748,170 @@ public final class SnapshotServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration hardwareGeneration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> hardwareGenerationBuilder_;
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       * @return Whether the hardwareGeneration field is set.
+       */
+      public boolean hasHardwareGeneration() {
+        return hardwareGenerationBuilder_ != null || hardwareGeneration_ != null;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       * @return The hardwareGeneration.
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration getHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          return hardwareGeneration_ == null ? yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        } else {
+          return hardwareGenerationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public Builder setHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardwareGeneration_ = value;
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public Builder setHardwareGeneration(
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder builderForValue) {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public Builder mergeHardwareGeneration(yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration value) {
+        if (hardwareGenerationBuilder_ == null) {
+          if (hardwareGeneration_ != null) {
+            hardwareGeneration_ =
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.newBuilder(hardwareGeneration_).mergeFrom(value).buildPartial();
+          } else {
+            hardwareGeneration_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareGenerationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public Builder clearHardwareGeneration() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGeneration_ = null;
+          onChanged();
+        } else {
+          hardwareGeneration_ = null;
+          hardwareGenerationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder getHardwareGenerationBuilder() {
+        
+        onChanged();
+        return getHardwareGenerationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      public yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder getHardwareGenerationOrBuilder() {
+        if (hardwareGenerationBuilder_ != null) {
+          return hardwareGenerationBuilder_.getMessageOrBuilder();
+        } else {
+          return hardwareGeneration_ == null ?
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.getDefaultInstance() : hardwareGeneration_;
+        }
+      }
+      /**
+       * <pre>
+       * Specify the overrides to hardware_generation of a source disk, image or snapshot,
+       * or to the default values if the source does not define it.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.HardwareGeneration hardware_generation = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder> 
+          getHardwareGenerationFieldBuilder() {
+        if (hardwareGenerationBuilder_ == null) {
+          hardwareGenerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGeneration.Builder, yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.HardwareGenerationOrBuilder>(
+                  getHardwareGeneration(),
+                  getParentForChildren(),
+                  isClean());
+          hardwareGeneration_ = null;
+        }
+        return hardwareGenerationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11047,94 +11325,97 @@ public final class SnapshotServiceOuterClass {
       "e/api/annotations.proto\032 google/protobuf" +
       "/field_mask.proto\032 yandex/cloud/access/a" +
       "ccess.proto\032 yandex/cloud/api/operation." +
-      "proto\032&yandex/cloud/compute/v1/snapshot." +
-      "proto\032&yandex/cloud/operation/operation." +
-      "proto\032\035yandex/cloud/validation.proto\"7\n\022" +
-      "GetSnapshotRequest\022!\n\013snapshot_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\256\001\n\024ListSnapshotsRequest\022\037" +
-      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=100" +
-      "0\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"f\n\025ListSn" +
-      "apshotsResponse\0224\n\tsnapshots\030\001 \003(\0132!.yan" +
-      "dex.cloud.compute.v1.Snapshot\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\366\002\n\025CreateSnapshotRequest" +
-      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007dis" +
-      "k_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\003 \001(\tB$" +
-      "\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
-      "description\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030" +
-      "\006 \003(\0132:.yandex.cloud.compute.v1.CreateSn" +
-      "apshotRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
-      "-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\">\n\026Creat" +
-      "eSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t\022\017" +
-      "\n\007disk_id\030\002 \001(\t\"\204\003\n\025UpdateSnapshotReques" +
-      "t\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex.clou" +
-      "d.compute.v1.UpdateSnapshotRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"-\n\026UpdateSnapshotMetadata\022\023\n\013snap" +
-      "shot_id\030\001 \001(\t\":\n\025DeleteSnapshotRequest\022!" +
-      "\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026Del" +
-      "eteSnapshotMetadata\022\023\n\013snapshot_id\030\001 \001(\t" +
-      "\"\200\001\n\035ListSnapshotOperationsRequest\022!\n\013sn" +
-      "apshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\"p\n\036ListSnapshotOperationsRes" +
-      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
-      ".operation.Operation\022\027\n\017next_page_token\030" +
-      "\002 \001(\t2\243\r\n\017SnapshotService\022\202\001\n\003Get\022+.yand" +
-      "ex.cloud.compute.v1.GetSnapshotRequest\032!" +
-      ".yandex.cloud.compute.v1.Snapshot\"+\202\323\344\223\002" +
-      "%\022#/compute/v1/snapshots/{snapshot_id}\022\204" +
-      "\001\n\004List\022-.yandex.cloud.compute.v1.ListSn" +
-      "apshotsRequest\032..yandex.cloud.compute.v1" +
-      ".ListSnapshotsResponse\"\035\202\323\344\223\002\027\022\025/compute" +
-      "/v1/snapshots\022\243\001\n\006Create\022..yandex.cloud." +
-      "compute.v1.CreateSnapshotRequest\032!.yande" +
-      "x.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/co" +
-      "mpute/v1/snapshots:\001*\262\322*\"\n\026CreateSnapsho" +
-      "tMetadata\022\010Snapshot\022\261\001\n\006Update\022..yandex." +
-      "cloud.compute.v1.UpdateSnapshotRequest\032!" +
-      ".yandex.cloud.operation.Operation\"T\202\323\344\223\002" +
-      "(2#/compute/v1/snapshots/{snapshot_id}:\001" +
-      "*\262\322*\"\n\026UpdateSnapshotMetadata\022\010Snapshot\022" +
-      "\273\001\n\006Delete\022..yandex.cloud.compute.v1.Del" +
-      "eteSnapshotRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"^\202\323\344\223\002%*#/compute/v1/snaps" +
-      "hots/{snapshot_id}\262\322*/\n\026DeleteSnapshotMe" +
-      "tadata\022\025google.protobuf.Empty\022\271\001\n\016ListOp" +
-      "erations\0226.yandex.cloud.compute.v1.ListS" +
-      "napshotOperationsRequest\0327.yandex.cloud." +
-      "compute.v1.ListSnapshotOperationsRespons" +
-      "e\"6\202\323\344\223\0020\022./compute/v1/snapshots/{snapsh" +
-      "ot_id}/operations\022\265\001\n\022ListAccessBindings" +
-      "\022..yandex.cloud.access.ListAccessBinding" +
-      "sRequest\032/.yandex.cloud.access.ListAcces" +
-      "sBindingsResponse\">\202\323\344\223\0028\0226/compute/v1/s" +
-      "napshots/{resource_id}:listAccessBinding" +
-      "s\022\364\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
-      "ccess.SetAccessBindingsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\214\001\202\323\344\223\002:\"5/com" +
-      "pute/v1/snapshots/{resource_id}:setAcces" +
-      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
-      "gsMetadata\022$access.AccessBindingsOperati" +
-      "onResult\022\200\002\n\024UpdateAccessBindings\0220.yand" +
-      "ex.cloud.access.UpdateAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\222" +
-      "\001\202\323\344\223\002=\"8/compute/v1/snapshots/{resource" +
-      "_id}:updateAccessBindings:\001*\262\322*K\n#access" +
-      ".UpdateAccessBindingsMetadata\022$access.Ac" +
-      "cessBindingsOperationResultBb\n\033yandex.cl" +
-      "oud.api.compute.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/compute/v1;" +
-      "computeb\006proto3"
+      "proto\0321yandex/cloud/compute/v1/hardware_" +
+      "generation.proto\032&yandex/cloud/compute/v" +
+      "1/snapshot.proto\032&yandex/cloud/operation" +
+      "/operation.proto\032\035yandex/cloud/validatio" +
+      "n.proto\"7\n\022GetSnapshotRequest\022!\n\013snapsho" +
+      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\256\001\n\024ListSnapsho" +
+      "tsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\t" +
+      "B\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=10" +
+      "0\"f\n\025ListSnapshotsResponse\0224\n\tsnapshots\030" +
+      "\001 \003(\0132!.yandex.cloud.compute.v1.Snapshot" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\300\003\n\025CreateSnap" +
+      "shotRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022\035\n\007disk_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004n" +
+      "ame\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
+      "z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
+      "\223\001\n\006labels\030\006 \003(\0132:.yandex.cloud.compute." +
+      "v1.CreateSnapshotRequest.LabelsEntryBG\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022H\n\023hardwar" +
+      "e_generation\030\007 \001(\0132+.yandex.cloud.comput" +
+      "e.v1.HardwareGeneration\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020\006\">\n\026" +
+      "CreateSnapshotMetadata\022\023\n\013snapshot_id\030\001 " +
+      "\001(\t\022\017\n\007disk_id\030\002 \001(\t\"\204\003\n\025UpdateSnapshotR" +
+      "equest\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a" +
+      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
+      "\001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yandex" +
+      ".cloud.compute.v1.UpdateSnapshotRequest." +
+      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"-\n\026UpdateSnapshotMetadata\022\023\n" +
+      "\013snapshot_id\030\001 \001(\t\":\n\025DeleteSnapshotRequ" +
+      "est\022!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-" +
+      "\n\026DeleteSnapshotMetadata\022\023\n\013snapshot_id\030" +
+      "\001 \001(\t\"\200\001\n\035ListSnapshotOperationsRequest\022" +
+      "!\n\013snapshot_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListSnapshotOperatio" +
+      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
+      "cloud.operation.Operation\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t2\243\r\n\017SnapshotService\022\202\001\n\003Get\022+" +
+      ".yandex.cloud.compute.v1.GetSnapshotRequ" +
+      "est\032!.yandex.cloud.compute.v1.Snapshot\"+" +
+      "\202\323\344\223\002%\022#/compute/v1/snapshots/{snapshot_" +
+      "id}\022\204\001\n\004List\022-.yandex.cloud.compute.v1.L" +
+      "istSnapshotsRequest\032..yandex.cloud.compu" +
+      "te.v1.ListSnapshotsResponse\"\035\202\323\344\223\002\027\022\025/co" +
+      "mpute/v1/snapshots\022\243\001\n\006Create\022..yandex.c" +
+      "loud.compute.v1.CreateSnapshotRequest\032!." +
+      "yandex.cloud.operation.Operation\"F\202\323\344\223\002\032" +
+      "\"\025/compute/v1/snapshots:\001*\262\322*\"\n\026CreateSn" +
+      "apshotMetadata\022\010Snapshot\022\261\001\n\006Update\022..ya" +
+      "ndex.cloud.compute.v1.UpdateSnapshotRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"T" +
+      "\202\323\344\223\002(2#/compute/v1/snapshots/{snapshot_" +
+      "id}:\001*\262\322*\"\n\026UpdateSnapshotMetadata\022\010Snap" +
+      "shot\022\273\001\n\006Delete\022..yandex.cloud.compute.v" +
+      "1.DeleteSnapshotRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"^\202\323\344\223\002%*#/compute/v1/" +
+      "snapshots/{snapshot_id}\262\322*/\n\026DeleteSnaps" +
+      "hotMetadata\022\025google.protobuf.Empty\022\271\001\n\016L" +
+      "istOperations\0226.yandex.cloud.compute.v1." +
+      "ListSnapshotOperationsRequest\0327.yandex.c" +
+      "loud.compute.v1.ListSnapshotOperationsRe" +
+      "sponse\"6\202\323\344\223\0020\022./compute/v1/snapshots/{s" +
+      "napshot_id}/operations\022\265\001\n\022ListAccessBin" +
+      "dings\022..yandex.cloud.access.ListAccessBi" +
+      "ndingsRequest\032/.yandex.cloud.access.List" +
+      "AccessBindingsResponse\">\202\323\344\223\0028\0226/compute" +
+      "/v1/snapshots/{resource_id}:listAccessBi" +
+      "ndings\022\364\001\n\021SetAccessBindings\022-.yandex.cl" +
+      "oud.access.SetAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\214\001\202\323\344\223\002:\"" +
+      "5/compute/v1/snapshots/{resource_id}:set" +
+      "AccessBindings:\001*\262\322*H\n access.SetAccessB" +
+      "indingsMetadata\022$access.AccessBindingsOp" +
+      "erationResult\022\200\002\n\024UpdateAccessBindings\0220" +
+      ".yandex.cloud.access.UpdateAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\222\001\202\323\344\223\002=\"8/compute/v1/snapshots/{res" +
+      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
+      "ccess.UpdateAccessBindingsMetadata\022$acce" +
+      "ss.AccessBindingsOperationResultBb\n\033yand" +
+      "ex.cloud.api.compute.v1ZCgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/comput" +
+      "e/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11143,6 +11424,7 @@ public final class SnapshotServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -11170,7 +11452,7 @@ public final class SnapshotServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateSnapshotRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateSnapshotRequest_descriptor,
-        new java.lang.String[] { "FolderId", "DiskId", "Name", "Description", "Labels", });
+        new java.lang.String[] { "FolderId", "DiskId", "Name", "Description", "Labels", "HardwareGeneration", });
     internal_static_yandex_cloud_compute_v1_CreateSnapshotRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateSnapshotRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateSnapshotRequest_LabelsEntry_fieldAccessorTable = new
@@ -11241,6 +11523,7 @@ public final class SnapshotServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.compute.v1.HardwareGenerationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

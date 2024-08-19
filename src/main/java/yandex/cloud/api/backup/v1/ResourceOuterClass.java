@@ -4243,6 +4243,14 @@ public final class ResourceOuterClass {
        * <code>RECOVERY = 3;</code>
        */
       RECOVERY(3),
+      /**
+       * <code>APPLY_POLICY = 4;</code>
+       */
+      APPLY_POLICY(4),
+      /**
+       * <code>REVOKE_POLICY = 5;</code>
+       */
+      REVOKE_POLICY(5),
       UNRECOGNIZED(-1),
       ;
 
@@ -4262,6 +4270,14 @@ public final class ResourceOuterClass {
        * <code>RECOVERY = 3;</code>
        */
       public static final int RECOVERY_VALUE = 3;
+      /**
+       * <code>APPLY_POLICY = 4;</code>
+       */
+      public static final int APPLY_POLICY_VALUE = 4;
+      /**
+       * <code>REVOKE_POLICY = 5;</code>
+       */
+      public static final int REVOKE_POLICY_VALUE = 5;
 
 
       public final int getNumber() {
@@ -4292,6 +4308,8 @@ public final class ResourceOuterClass {
           case 1: return BACKUP;
           case 2: return RETENTION;
           case 3: return RECOVERY;
+          case 4: return APPLY_POLICY;
+          case 5: return REVOKE_POLICY;
           default: return null;
         }
       }
@@ -6784,7 +6802,7 @@ public final class ResourceOuterClass {
       "nitStatus\022\033\n\027INIT_STATUS_UNSPECIFIED\020\000\022\017" +
       "\n\013REGISTERING\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED" +
       "_REGISTRATION\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress" +
-      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\203\006\n\004Tas" +
+      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\250\006\n\004Tas" +
       "k\022\n\n\002id\030\001 \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpo" +
       "licy_id\030\003 \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.clo" +
       "ud.backup.v1.Task.Type\0222\n\010progress\030\005 \001(\013" +
@@ -6797,18 +6815,19 @@ public final class ResourceOuterClass {
       "leted_at\030\n \001(\0132\032.google.protobuf.Timesta" +
       "mp\022\033\n\023compute_instance_id\030\013 \001(\t\0226\n\013resul" +
       "t_code\030\014 \001(\0162!.yandex.cloud.backup.v1.Ta" +
-      "sk.Code\"E\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n" +
-      "\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\"d" +
-      "\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQU" +
-      "EUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAU" +
-      "SED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNS" +
-      "PECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING" +
-      "\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIME" +
-      "DOUT\020\006*C\n\014ResourceType\022\035\n\031RESOURCE_TYPE_" +
-      "UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032y" +
-      "andex.cloud.api.backup.v1ZAgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/back" +
-      "up/v1;backupb\006proto3"
+      "sk.Code\"j\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n" +
+      "\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\022\020" +
+      "\n\014APPLY_POLICY\020\004\022\021\n\rREVOKE_POLICY\020\005\"d\n\006S" +
+      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUE" +
+      "D\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED" +
+      "\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPEC" +
+      "IFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022" +
+      "\r\n\tCANCELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOU" +
+      "T\020\006*C\n\014ResourceType\022\035\n\031RESOURCE_TYPE_UNS" +
+      "PECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032yand" +
+      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/backup/" +
+      "v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
