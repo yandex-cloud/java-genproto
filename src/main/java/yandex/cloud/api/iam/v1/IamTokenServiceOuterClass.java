@@ -2470,6 +2470,1142 @@ public final class IamTokenServiceOuterClass {
 
   }
 
+  public interface RevokeIamTokenRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.RevokeIamTokenRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The iamToken.
+     */
+    java.lang.String getIamToken();
+    /**
+     * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for iamToken.
+     */
+    com.google.protobuf.ByteString
+        getIamTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.RevokeIamTokenRequest}
+   */
+  public static final class RevokeIamTokenRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.RevokeIamTokenRequest)
+      RevokeIamTokenRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RevokeIamTokenRequest.newBuilder() to construct.
+    private RevokeIamTokenRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RevokeIamTokenRequest() {
+      iamToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RevokeIamTokenRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RevokeIamTokenRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              iamToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.class, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.Builder.class);
+    }
+
+    public static final int IAM_TOKEN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object iamToken_;
+    /**
+     * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The iamToken.
+     */
+    @java.lang.Override
+    public java.lang.String getIamToken() {
+      java.lang.Object ref = iamToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iamToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for iamToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIamTokenBytes() {
+      java.lang.Object ref = iamToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iamToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iamToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iamToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iamToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iamToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest other = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest) obj;
+
+      if (!getIamToken()
+          .equals(other.getIamToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IAM_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getIamToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.RevokeIamTokenRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.RevokeIamTokenRequest)
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.class, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        iamToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest build() {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest buildPartial() {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest result = new yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest(this);
+        result.iamToken_ = iamToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest) {
+          return mergeFrom((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest other) {
+        if (other == yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.getDefaultInstance()) return this;
+        if (!other.getIamToken().isEmpty()) {
+          iamToken_ = other.iamToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object iamToken_ = "";
+      /**
+       * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The iamToken.
+       */
+      public java.lang.String getIamToken() {
+        java.lang.Object ref = iamToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iamToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for iamToken.
+       */
+      public com.google.protobuf.ByteString
+          getIamTokenBytes() {
+        java.lang.Object ref = iamToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iamToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The iamToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIamToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        iamToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIamToken() {
+        
+        iamToken_ = getDefaultInstance().getIamToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string iam_token = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for iamToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIamTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        iamToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.RevokeIamTokenRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.RevokeIamTokenRequest)
+    private static final yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest();
+    }
+
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RevokeIamTokenRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RevokeIamTokenRequest>() {
+      @java.lang.Override
+      public RevokeIamTokenRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RevokeIamTokenRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RevokeIamTokenRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RevokeIamTokenRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RevokeIamTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iam.v1.RevokeIamTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subject_id = 1;</code>
+     * @return The subjectId.
+     */
+    java.lang.String getSubjectId();
+    /**
+     * <code>string subject_id = 1;</code>
+     * @return The bytes for subjectId.
+     */
+    com.google.protobuf.ByteString
+        getSubjectIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iam.v1.RevokeIamTokenResponse}
+   */
+  public static final class RevokeIamTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iam.v1.RevokeIamTokenResponse)
+      RevokeIamTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RevokeIamTokenResponse.newBuilder() to construct.
+    private RevokeIamTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RevokeIamTokenResponse() {
+      subjectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RevokeIamTokenResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RevokeIamTokenResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subjectId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.class, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.Builder.class);
+    }
+
+    public static final int SUBJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subjectId_;
+    /**
+     * <code>string subject_id = 1;</code>
+     * @return The subjectId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubjectId() {
+      java.lang.Object ref = subjectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subjectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subject_id = 1;</code>
+     * @return The bytes for subjectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubjectIdBytes() {
+      java.lang.Object ref = subjectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subjectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subjectId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subjectId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse other = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse) obj;
+
+      if (!getSubjectId()
+          .equals(other.getSubjectId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjectId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iam.v1.RevokeIamTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iam.v1.RevokeIamTokenResponse)
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.class, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subjectId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse build() {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse buildPartial() {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse result = new yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse(this);
+        result.subjectId_ = subjectId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse) {
+          return mergeFrom((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse other) {
+        if (other == yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.getDefaultInstance()) return this;
+        if (!other.getSubjectId().isEmpty()) {
+          subjectId_ = other.subjectId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subjectId_ = "";
+      /**
+       * <code>string subject_id = 1;</code>
+       * @return The subjectId.
+       */
+      public java.lang.String getSubjectId() {
+        java.lang.Object ref = subjectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subjectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subject_id = 1;</code>
+       * @return The bytes for subjectId.
+       */
+      public com.google.protobuf.ByteString
+          getSubjectIdBytes() {
+        java.lang.Object ref = subjectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subjectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subject_id = 1;</code>
+       * @param value The subjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subjectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubjectId() {
+        
+        subjectId_ = getDefaultInstance().getSubjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subject_id = 1;</code>
+       * @param value The bytes for subjectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subjectId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iam.v1.RevokeIamTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iam.v1.RevokeIamTokenResponse)
+    private static final yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse();
+    }
+
+    public static yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RevokeIamTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RevokeIamTokenResponse>() {
+      @java.lang.Override
+      public RevokeIamTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RevokeIamTokenResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RevokeIamTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RevokeIamTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iam_v1_CreateIamTokenRequest_descriptor;
   private static final 
@@ -2485,6 +3621,16 @@ public final class IamTokenServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iam_v1_CreateIamTokenForServiceAccountRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2504,18 +3650,24 @@ public final class IamTokenServiceOuterClass {
       "nse\022\021\n\tiam_token\030\001 \001(\t\022.\n\nexpires_at\030\002 \001" +
       "(\0132\032.google.protobuf.Timestamp\"R\n&Create" +
       "IamTokenForServiceAccountRequest\022(\n\022serv" +
-      "ice_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=502\310\002\n\017I" +
-      "amTokenService\022|\n\006Create\022*.yandex.cloud." +
-      "iam.v1.CreateIamTokenRequest\032+.yandex.cl" +
-      "oud.iam.v1.CreateIamTokenResponse\"\031\202\323\344\223\002" +
-      "\023\"\016/iam/v1/tokens:\001*\022\266\001\n\027CreateForServic" +
-      "eAccount\022;.yandex.cloud.iam.v1.CreateIam" +
-      "TokenForServiceAccountRequest\032+.yandex.c" +
-      "loud.iam.v1.CreateIamTokenResponse\"1\202\323\344\223" +
-      "\002+\"&/iam/v1/tokens:createForServiceAccou" +
-      "nt:\001*BV\n\027yandex.cloud.api.iam.v1Z;github" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/iam/v1;iamb\006proto3"
+      "ice_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\025Re" +
+      "vokeIamTokenRequest\022\027\n\tiam_token\030\001 \001(\tB\004" +
+      "\350\3071\001\",\n\026RevokeIamTokenResponse\022\022\n\nsubjec" +
+      "t_id\030\001 \001(\t2\316\003\n\017IamTokenService\022|\n\006Create" +
+      "\022*.yandex.cloud.iam.v1.CreateIamTokenReq" +
+      "uest\032+.yandex.cloud.iam.v1.CreateIamToke" +
+      "nResponse\"\031\202\323\344\223\002\023\"\016/iam/v1/tokens:\001*\022\266\001\n" +
+      "\027CreateForServiceAccount\022;.yandex.cloud." +
+      "iam.v1.CreateIamTokenForServiceAccountRe" +
+      "quest\032+.yandex.cloud.iam.v1.CreateIamTok" +
+      "enResponse\"1\202\323\344\223\002+\"&/iam/v1/tokens:creat" +
+      "eForServiceAccount:\001*\022\203\001\n\006Revoke\022*.yande" +
+      "x.cloud.iam.v1.RevokeIamTokenRequest\032+.y" +
+      "andex.cloud.iam.v1.RevokeIamTokenRespons" +
+      "e\" \202\323\344\223\002\032\"\025/iam/v1/tokens:revoke:\001*BV\n\027y" +
+      "andex.cloud.api.iam.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/iam/v1;" +
+      "iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2542,6 +3694,18 @@ public final class IamTokenServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iam_v1_CreateIamTokenForServiceAccountRequest_descriptor,
         new java.lang.String[] { "ServiceAccountId", });
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_RevokeIamTokenRequest_descriptor,
+        new java.lang.String[] { "IamToken", });
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iam_v1_RevokeIamTokenResponse_descriptor,
+        new java.lang.String[] { "SubjectId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

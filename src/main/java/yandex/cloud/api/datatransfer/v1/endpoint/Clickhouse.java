@@ -8073,7 +8073,8 @@ public final class Clickhouse {
 
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8082,7 +8083,8 @@ public final class Clickhouse {
     java.lang.String getClickhouseClusterName();
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8448,7 +8450,8 @@ public final class Clickhouse {
     private volatile java.lang.Object clickhouseClusterName_;
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -8469,7 +8472,8 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 11;</code>
@@ -9561,7 +9565,8 @@ public final class Clickhouse {
       private java.lang.Object clickhouseClusterName_ = "";
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9581,7 +9586,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9602,7 +9608,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9621,7 +9628,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9635,7 +9643,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 11;</code>
@@ -9809,7 +9818,8 @@ public final class Clickhouse {
 
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -9818,7 +9828,8 @@ public final class Clickhouse {
     java.lang.String getClickhouseClusterName();
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10176,7 +10187,8 @@ public final class Clickhouse {
     private volatile java.lang.Object clickhouseClusterName_;
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -10197,7 +10209,8 @@ public final class Clickhouse {
     }
     /**
      * <pre>
-     * Also could be name of MDB's shard group.
+     * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+     * ShardGroup.
      * </pre>
      *
      * <code>string clickhouse_cluster_name = 50;</code>
@@ -11422,7 +11435,8 @@ public final class Clickhouse {
       private java.lang.Object clickhouseClusterName_ = "";
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11442,7 +11456,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11463,7 +11478,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11482,7 +11498,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>
@@ -11496,7 +11513,8 @@ public final class Clickhouse {
       }
       /**
        * <pre>
-       * Also could be name of MDB's shard group.
+       * Name of the ClickHouse cluster. For Managed ClickHouse that is name of
+       * ShardGroup.
        * </pre>
        *
        * <code>string clickhouse_cluster_name = 50;</code>

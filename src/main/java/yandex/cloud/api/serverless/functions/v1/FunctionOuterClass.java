@@ -8521,7 +8521,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes, multiple of 128MB.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
     long getMemory();
@@ -8619,7 +8619,7 @@ public final class FunctionOuterClass {
      * Amount of memory available to the version, specified in bytes, multiple of 128MB.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
     @java.lang.Override
@@ -8940,7 +8940,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return The memory.
        */
       @java.lang.Override
@@ -8952,7 +8952,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @param value The memory to set.
        * @return This builder for chaining.
        */
@@ -8967,7 +8967,7 @@ public final class FunctionOuterClass {
        * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMemory() {
@@ -22717,7 +22717,7 @@ public final class FunctionOuterClass {
       "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022S" +
       "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
       "IVE\020\002J\004\010\004\020\005J\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006" +
-      "memory\030\001 \001(\003B\030\372\3071\024134217728-4294967296\"O" +
+      "memory\030\001 \001(\003B\030\372\3071\024134217728-8589934592\"O" +
       "\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013" +
       "object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"" +
       "A\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\ts" +
@@ -22740,7 +22740,7 @@ public final class FunctionOuterClass {
       "B\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pref" +
       "ix\030\002 \001(\t\0229\n\020mount_point_name\030\003 \001(\tB\037\350\3071\001" +
       "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021\n\tread_only" +
-      "\030\004 \001(\010:\002\030\001\"\367\003\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001" +
+      "\030\004 \001(\010:\002\030\001\"\203\004\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001" +
       "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(" +
       "\01620.yandex.cloud.serverless.functions.v1" +
       ".Mount.Mode\022S\n\016object_storage\030\n \001(\01329.ya" +
@@ -22752,25 +22752,25 @@ public final class FunctionOuterClass {
       "9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n" +
       "\004size\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\"" +
       ";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ON" +
-      "LY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006target\022\004\300\3011\001\"\336\003\n" +
-      "\025AsyncInvocationConfig\022 \n\rretries_count\030" +
-      "\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_target\030\002 \001(\013" +
-      "2J.yandex.cloud.serverless.functions.v1." +
-      "AsyncInvocationConfig.ResponseTargetB\004\350\307" +
-      "1\001\022h\n\016failure_target\030\003 \001(\0132J.yandex.clou" +
-      "d.serverless.functions.v1.AsyncInvocatio" +
-      "nConfig.ResponseTargetB\004\350\3071\001\022\032\n\022service_" +
-      "account_id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014e" +
-      "mpty_target\030\001 \001(\01321.yandex.cloud.serverl" +
-      "ess.functions.v1.EmptyTargetH\000\022E\n\nymq_ta" +
-      "rget\030\002 \001(\0132/.yandex.cloud.serverless.fun" +
-      "ctions.v1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n" +
-      "\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022s" +
-      "ervice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n" +
-      "\013EmptyTargetB~\n(yandex.cloud.api.serverl" +
-      "ess.functions.v1ZRgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/serverless/fu" +
-      "nctions/v1;functionsb\006proto3"
+      "LY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\002" +
+      "\020\003J\004\010\004\020\n\"\336\003\n\025AsyncInvocationConfig\022 \n\rre" +
+      "tries_count\030\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_" +
+      "target\030\002 \001(\0132J.yandex.cloud.serverless.f" +
+      "unctions.v1.AsyncInvocationConfig.Respon" +
+      "seTargetB\004\350\3071\001\022h\n\016failure_target\030\003 \001(\0132J" +
+      ".yandex.cloud.serverless.functions.v1.As" +
+      "yncInvocationConfig.ResponseTargetB\004\350\3071\001" +
+      "\022\032\n\022service_account_id\030\004 \001(\t\032\262\001\n\016Respons" +
+      "eTarget\022I\n\014empty_target\030\001 \001(\01321.yandex.c" +
+      "loud.serverless.functions.v1.EmptyTarget" +
+      "H\000\022E\n\nymq_target\030\002 \001(\0132/.yandex.cloud.se" +
+      "rverless.functions.v1.YMQTargetH\000B\016\n\006tar" +
+      "get\022\004\300\3011\001\"N\n\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(" +
+      "\tB\004\350\3071\001\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"\r\n\013EmptyTargetB~\n(yandex.cloud" +
+      ".api.serverless.functions.v1ZRgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/s" +
+      "erverless/functions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

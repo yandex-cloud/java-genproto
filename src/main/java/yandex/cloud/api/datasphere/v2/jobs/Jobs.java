@@ -164,6 +164,10 @@ public final class Jobs {
      * <code>CANCELLED = 6;</code>
      */
     CANCELLED(6),
+    /**
+     * <code>CANCELLING = 7;</code>
+     */
+    CANCELLING(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -195,6 +199,10 @@ public final class Jobs {
      * <code>CANCELLED = 6;</code>
      */
     public static final int CANCELLED_VALUE = 6;
+    /**
+     * <code>CANCELLING = 7;</code>
+     */
+    public static final int CANCELLING_VALUE = 7;
 
 
     public final int getNumber() {
@@ -228,6 +236,7 @@ public final class Jobs {
         case 4: return SUCCESS;
         case 5: return ERROR;
         case 6: return CANCELLED;
+        case 7: return CANCELLING;
         default: return null;
       }
     }
@@ -21604,14 +21613,14 @@ public final class Jobs {
       "timeout\030\001 \001(\0132\031.google.protobuf.Duration" +
       "\022\016\n\006signal\030\002 \001(\003*O\n\023FileCompressionType\022" +
       "%\n!FILE_COMPRESSION_TYPE_UNSPECIFIED\020\000\022\010" +
-      "\n\004NONE\020\001\022\007\n\003ZIP\020\002*\201\001\n\tJobStatus\022\032\n\026JOB_S" +
+      "\n\004NONE\020\001\022\007\n\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_S" +
       "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXE" +
       "CUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCES" +
-      "S\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yandex." +
-      "cloud.api.datasphere.v2.jobsB\004JobsZNgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/datasphere/v2/jobs;datasphereb\006prot" +
-      "o3"
+      "S\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCELL" +
+      "ING\020\007B{\n#yandex.cloud.api.datasphere.v2." +
+      "jobsB\004JobsZNgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/datasphere/v2/jobs;" +
+      "datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

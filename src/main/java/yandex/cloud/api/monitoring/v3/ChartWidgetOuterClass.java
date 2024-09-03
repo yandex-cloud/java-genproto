@@ -3890,6 +3890,33 @@ public final class ChartWidgetOuterClass {
          */
         yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.GradientColorSchemeOrBuilder getGradientOrBuilder();
 
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         * @return Whether the hash field is set.
+         */
+        boolean hasHash();
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         * @return The hash.
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getHash();
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         */
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder getHashOrBuilder();
+
         public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.SchemeCase getSchemeCase();
       }
       /**
@@ -3977,6 +4004,20 @@ public final class ChartWidgetOuterClass {
                     scheme_ = subBuilder.buildPartial();
                   }
                   schemeCase_ = 3;
+                  break;
+                }
+                case 34: {
+                  yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder subBuilder = null;
+                  if (schemeCase_ == 4) {
+                    subBuilder = ((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_).toBuilder();
+                  }
+                  scheme_ =
+                      input.readMessage(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_);
+                    scheme_ = subBuilder.buildPartial();
+                  }
+                  schemeCase_ = 4;
                   break;
                 }
                 default: {
@@ -6009,6 +6050,424 @@ public final class ChartWidgetOuterClass {
 
         }
 
+        public interface HashColorSchemeOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)
+            com.google.protobuf.MessageOrBuilder {
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme}
+         */
+        public static final class HashColorScheme extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)
+            HashColorSchemeOrBuilder {
+        private static final long serialVersionUID = 0L;
+          // Use HashColorScheme.newBuilder() to construct.
+          private HashColorScheme(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+          }
+          private HashColorScheme() {
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new HashColorScheme();
+          }
+
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+            return this.unknownFields;
+          }
+          private HashColorScheme(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  default: {
+                    if (!parseUnknownField(
+                        input, unknownFields, extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder.class);
+          }
+
+          private byte memoizedIsInitialized = -1;
+          @java.lang.Override
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          @java.lang.Override
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            unknownFields.writeTo(output);
+          }
+
+          @java.lang.Override
+          public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+          }
+
+          @java.lang.Override
+          public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+             return true;
+            }
+            if (!(obj instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)) {
+              return super.equals(obj);
+            }
+            yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme other = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) obj;
+
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+          }
+
+          @java.lang.Override
+          public int hashCode() {
+            if (memoizedHashCode != 0) {
+              return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+          }
+
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              java.nio.ByteBuffer data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              java.nio.ByteBuffer data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+
+          @java.lang.Override
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+          }
+          public static Builder newBuilder(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+          }
+          @java.lang.Override
+          public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                ? new Builder() : new Builder().mergeFrom(this);
+          }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder.class);
+            }
+
+            // Construct using yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessageV3
+                      .alwaysUseFieldBuilders) {
+              }
+            }
+            @java.lang.Override
+            public Builder clear() {
+              super.clear();
+              return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getDefaultInstanceForType() {
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme build() {
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme buildPartial() {
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme result = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme(this);
+              onBuilt();
+              return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+              return super.clone();
+            }
+            @java.lang.Override
+            public Builder setField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.setField(field, value);
+            }
+            @java.lang.Override
+            public Builder clearField(
+                com.google.protobuf.Descriptors.FieldDescriptor field) {
+              return super.clearField(field);
+            }
+            @java.lang.Override
+            public Builder clearOneof(
+                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              return super.clearOneof(oneof);
+            }
+            @java.lang.Override
+            public Builder setRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                int index, java.lang.Object value) {
+              return super.setRepeatedField(field, index, value);
+            }
+            @java.lang.Override
+            public Builder addRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.addRepeatedField(field, value);
+            }
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) {
+                return mergeFrom((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme other) {
+              if (other == yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance()) return this;
+              this.mergeUnknownFields(other.unknownFields);
+              onChanged();
+              return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) e.getUnfinishedMessage();
+                throw e.unwrapIOException();
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)
+          }
+
+          // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme)
+          private static final yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme DEFAULT_INSTANCE;
+          static {
+            DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme();
+          }
+
+          public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+          }
+
+          private static final com.google.protobuf.Parser<HashColorScheme>
+              PARSER = new com.google.protobuf.AbstractParser<HashColorScheme>() {
+            @java.lang.Override
+            public HashColorScheme parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new HashColorScheme(input, extensionRegistry);
+            }
+          };
+
+          public static com.google.protobuf.Parser<HashColorScheme> parser() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<HashColorScheme> getParserForType() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+          }
+
+        }
+
         private int schemeCase_ = 0;
         private java.lang.Object scheme_;
         public enum SchemeCase
@@ -6017,6 +6476,7 @@ public final class ChartWidgetOuterClass {
           AUTOMATIC(1),
           STANDARD(2),
           GRADIENT(3),
+          HASH(4),
           SCHEME_NOT_SET(0);
           private final int value;
           private SchemeCase(int value) {
@@ -6037,6 +6497,7 @@ public final class ChartWidgetOuterClass {
               case 1: return AUTOMATIC;
               case 2: return STANDARD;
               case 3: return GRADIENT;
+              case 4: return HASH;
               case 0: return SCHEME_NOT_SET;
               default: return null;
             }
@@ -6181,6 +6642,49 @@ public final class ChartWidgetOuterClass {
           return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.GradientColorScheme.getDefaultInstance();
         }
 
+        public static final int HASH_FIELD_NUMBER = 4;
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         * @return Whether the hash field is set.
+         */
+        @java.lang.Override
+        public boolean hasHash() {
+          return schemeCase_ == 4;
+        }
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         * @return The hash.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getHash() {
+          if (schemeCase_ == 4) {
+             return (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+        }
+        /**
+         * <pre>
+         * Hash color scheme. Based on line name or value.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder getHashOrBuilder() {
+          if (schemeCase_ == 4) {
+             return (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -6204,6 +6708,9 @@ public final class ChartWidgetOuterClass {
           if (schemeCase_ == 3) {
             output.writeMessage(3, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.GradientColorScheme) scheme_);
           }
+          if (schemeCase_ == 4) {
+            output.writeMessage(4, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -6224,6 +6731,10 @@ public final class ChartWidgetOuterClass {
           if (schemeCase_ == 3) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(3, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.GradientColorScheme) scheme_);
+          }
+          if (schemeCase_ == 4) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -6254,6 +6765,10 @@ public final class ChartWidgetOuterClass {
               if (!getGradient()
                   .equals(other.getGradient())) return false;
               break;
+            case 4:
+              if (!getHash()
+                  .equals(other.getHash())) return false;
+              break;
             case 0:
             default:
           }
@@ -6280,6 +6795,10 @@ public final class ChartWidgetOuterClass {
             case 3:
               hash = (37 * hash) + GRADIENT_FIELD_NUMBER;
               hash = (53 * hash) + getGradient().hashCode();
+              break;
+            case 4:
+              hash = (37 * hash) + HASH_FIELD_NUMBER;
+              hash = (53 * hash) + getHash().hashCode();
               break;
             case 0:
             default:
@@ -6466,6 +6985,13 @@ public final class ChartWidgetOuterClass {
                 result.scheme_ = gradientBuilder_.build();
               }
             }
+            if (schemeCase_ == 4) {
+              if (hashBuilder_ == null) {
+                result.scheme_ = scheme_;
+              } else {
+                result.scheme_ = hashBuilder_.build();
+              }
+            }
             result.schemeCase_ = schemeCase_;
             onBuilt();
             return result;
@@ -6526,6 +7052,10 @@ public final class ChartWidgetOuterClass {
               }
               case GRADIENT: {
                 mergeGradient(other.getGradient());
+                break;
+              }
+              case HASH: {
+                mergeHash(other.getHash());
                 break;
               }
               case SCHEME_NOT_SET: {
@@ -7105,6 +7635,183 @@ public final class ChartWidgetOuterClass {
             schemeCase_ = 3;
             onChanged();;
             return gradientBuilder_;
+          }
+
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder> hashBuilder_;
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           * @return Whether the hash field is set.
+           */
+          @java.lang.Override
+          public boolean hasHash() {
+            return schemeCase_ == 4;
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           * @return The hash.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme getHash() {
+            if (hashBuilder_ == null) {
+              if (schemeCase_ == 4) {
+                return (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+            } else {
+              if (schemeCase_ == 4) {
+                return hashBuilder_.getMessage();
+              }
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          public Builder setHash(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme value) {
+            if (hashBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              scheme_ = value;
+              onChanged();
+            } else {
+              hashBuilder_.setMessage(value);
+            }
+            schemeCase_ = 4;
+            return this;
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          public Builder setHash(
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder builderForValue) {
+            if (hashBuilder_ == null) {
+              scheme_ = builderForValue.build();
+              onChanged();
+            } else {
+              hashBuilder_.setMessage(builderForValue.build());
+            }
+            schemeCase_ = 4;
+            return this;
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          public Builder mergeHash(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme value) {
+            if (hashBuilder_ == null) {
+              if (schemeCase_ == 4 &&
+                  scheme_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance()) {
+                scheme_ = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.newBuilder((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_)
+                    .mergeFrom(value).buildPartial();
+              } else {
+                scheme_ = value;
+              }
+              onChanged();
+            } else {
+              if (schemeCase_ == 4) {
+                hashBuilder_.mergeFrom(value);
+              }
+              hashBuilder_.setMessage(value);
+            }
+            schemeCase_ = 4;
+            return this;
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          public Builder clearHash() {
+            if (hashBuilder_ == null) {
+              if (schemeCase_ == 4) {
+                schemeCase_ = 0;
+                scheme_ = null;
+                onChanged();
+              }
+            } else {
+              if (schemeCase_ == 4) {
+                schemeCase_ = 0;
+                scheme_ = null;
+              }
+              hashBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder getHashBuilder() {
+            return getHashFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder getHashOrBuilder() {
+            if ((schemeCase_ == 4) && (hashBuilder_ != null)) {
+              return hashBuilder_.getMessageOrBuilder();
+            } else {
+              if (schemeCase_ == 4) {
+                return (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <pre>
+           * Hash color scheme. Based on line name or value.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme hash = 4;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder> 
+              getHashFieldBuilder() {
+            if (hashBuilder_ == null) {
+              if (!(schemeCase_ == 4)) {
+                scheme_ = yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
+              }
+              hashBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder>(
+                      (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_,
+                      getParentForChildren(),
+                      isClean());
+              scheme_ = null;
+            }
+            schemeCase_ = 4;
+            onChanged();;
+            return hashBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -18344,6 +19051,11 @@ public final class ChartWidgetOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_GradientColorScheme_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_HeatmapSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18387,7 +19099,7 @@ public final class ChartWidgetOuterClass {
       "gle/protobuf/wrappers.proto\032-yandex/clou" +
       "d/monitoring/v3/downsampling.proto\032,yand" +
       "ex/cloud/monitoring/v3/unit_format.proto" +
-      "\"\341 \n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
+      "\"\347!\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
       "\002 \001(\0132/.yandex.cloud.monitoring.v3.Chart" +
       "Widget.Queries\022]\n\026visualization_settings" +
       "\030\003 \001(\0132=.yandex.cloud.monitoring.v3.Char" +
@@ -18404,7 +19116,7 @@ public final class ChartWidgetOuterClass {
       "dget.Queries.Target\022>\n\014downsampling\030\002 \001(" +
       "\0132(.yandex.cloud.monitoring.v3.Downsampl" +
       "ing\032H\n\006Target\022\r\n\005query\030\001 \001(\t\022\021\n\ttext_mod" +
-      "e\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\276\023" +
+      "e\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\304\024" +
       "\n\025VisualizationSettings\022]\n\004type\030\001 \001(\0162O." +
       "yandex.cloud.monitoring.v3.ChartWidget.V" +
       "isualizationSettings.VisualizationType\022\021" +
@@ -18422,7 +19134,7 @@ public final class ChartWidgetOuterClass {
       "xis_settings\030\007 \001(\0132K.yandex.cloud.monito" +
       "ring.v3.ChartWidget.VisualizationSetting" +
       "s.YaxisSettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_l" +
-      "abels\030\t \001(\010\032\254\004\n\023ColorSchemeSettings\022{\n\ta" +
+      "abels\030\t \001(\010\032\262\005\n\023ColorSchemeSettings\022{\n\ta" +
       "utomatic\030\001 \001(\0132f.yandex.cloud.monitoring" +
       ".v3.ChartWidget.VisualizationSettings.Co" +
       "lorSchemeSettings.AutomaticColorSchemeH\000" +
@@ -18432,69 +19144,73 @@ public final class ChartWidgetOuterClass {
       "eH\000\022y\n\010gradient\030\003 \001(\0132e.yandex.cloud.mon" +
       "itoring.v3.ChartWidget.VisualizationSett" +
       "ings.ColorSchemeSettings.GradientColorSc" +
-      "hemeH\000\032\026\n\024AutomaticColorScheme\032\025\n\023Standa" +
-      "rdColorScheme\032i\n\023GradientColorScheme\022\023\n\013" +
-      "green_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022" +
-      "\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t" +
-      "B\010\n\006scheme\032e\n\017HeatmapSettings\022\023\n\013green_v" +
-      "alue\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_" +
-      "value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\364\001\n\005Ya" +
-      "xis\022U\n\004type\030\001 \001(\0162G.yandex.cloud.monitor" +
-      "ing.v3.ChartWidget.VisualizationSettings" +
-      ".YaxisType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030\003 \001(\t\022\013" +
-      "\n\003max\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162&.yande" +
-      "x.cloud.monitoring.v3.UnitFormat\022.\n\tprec" +
-      "ision\030\006 \001(\0132\033.google.protobuf.Int64Value" +
-      "\032\266\001\n\rYaxisSettings\022Q\n\004left\030\001 \001(\0132C.yande" +
-      "x.cloud.monitoring.v3.ChartWidget.Visual" +
-      "izationSettings.Yaxis\022R\n\005right\030\002 \001(\0132C.y" +
-      "andex.cloud.monitoring.v3.ChartWidget.Vi" +
-      "sualizationSettings.Yaxis\"\256\002\n\021Visualizat" +
-      "ionType\022\"\n\036VISUALIZATION_TYPE_UNSPECIFIE" +
-      "D\020\000\022\033\n\027VISUALIZATION_TYPE_LINE\020\001\022\034\n\030VISU" +
-      "ALIZATION_TYPE_STACK\020\002\022\035\n\031VISUALIZATION_" +
-      "TYPE_COLUMN\020\003\022\035\n\031VISUALIZATION_TYPE_POIN" +
-      "TS\020\004\022\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033\n\027VISU" +
-      "ALIZATION_TYPE_BARS\020\006\022#\n\037VISUALIZATION_T" +
-      "YPE_DISTRIBUTION\020\007\022\036\n\032VISUALIZATION_TYPE" +
-      "_HEATMAP\020\010\"o\n\013Interpolate\022\033\n\027INTERPOLATE" +
-      "_UNSPECIFIED\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024" +
-      "\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGH" +
-      "T\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNSPECIFI" +
-      "ED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYP" +
-      "E_LOGARITHMIC\020\002\"\304\001\n\021SeriesAggregation\022\"\n" +
-      "\036SERIES_AGGREGATION_UNSPECIFIED\020\000\022\032\n\026SER" +
-      "IES_AGGREGATION_AVG\020\001\022\032\n\026SERIES_AGGREGAT" +
-      "ION_MIN\020\002\022\032\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n" +
-      "\027SERIES_AGGREGATION_LAST\020\004\022\032\n\026SERIES_AGG" +
-      "REGATION_SUM\020\005\032\200\006\n\017SeriesOverrides\022\016\n\004na" +
-      "me\030\001 \001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000\022`\n\010se" +
-      "ttings\030\003 \001(\0132N.yandex.cloud.monitoring.v" +
-      "3.ChartWidget.SeriesOverrides.SeriesOver" +
-      "rideSettings\032\232\002\n\026SeriesOverrideSettings\022" +
-      "\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022]\n\004type\030\003 \001" +
-      "(\0162O.yandex.cloud.monitoring.v3.ChartWid" +
-      "get.SeriesOverrides.SeriesVisualizationT" +
-      "ype\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tgrow_down\030\005 \001" +
-      "(\010\022]\n\016yaxis_position\030\006 \001(\0162E.yandex.clou" +
+      "hemeH\000\022q\n\004hash\030\004 \001(\0132a.yandex.cloud.moni" +
+      "toring.v3.ChartWidget.VisualizationSetti" +
+      "ngs.ColorSchemeSettings.HashColorSchemeH" +
+      "\000\032\026\n\024AutomaticColorScheme\032\025\n\023StandardCol" +
+      "orScheme\032i\n\023GradientColorScheme\022\023\n\013green" +
+      "_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tre" +
+      "d_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\021\n\017H" +
+      "ashColorSchemeB\010\n\006scheme\032e\n\017HeatmapSetti" +
+      "ngs\022\023\n\013green_value\030\002 \001(\t\022\024\n\014yellow_value" +
+      "\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_valu" +
+      "e\030\005 \001(\t\032\364\001\n\005Yaxis\022U\n\004type\030\001 \001(\0162G.yandex" +
+      ".cloud.monitoring.v3.ChartWidget.Visuali" +
+      "zationSettings.YaxisType\022\r\n\005title\030\002 \001(\t\022" +
+      "\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_format" +
+      "\030\005 \001(\0162&.yandex.cloud.monitoring.v3.Unit" +
+      "Format\022.\n\tprecision\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64Value\032\266\001\n\rYaxisSettings\022Q\n\004left" +
+      "\030\001 \001(\0132C.yandex.cloud.monitoring.v3.Char" +
+      "tWidget.VisualizationSettings.Yaxis\022R\n\005r" +
+      "ight\030\002 \001(\0132C.yandex.cloud.monitoring.v3." +
+      "ChartWidget.VisualizationSettings.Yaxis\"" +
+      "\256\002\n\021VisualizationType\022\"\n\036VISUALIZATION_T" +
+      "YPE_UNSPECIFIED\020\000\022\033\n\027VISUALIZATION_TYPE_" +
+      "LINE\020\001\022\034\n\030VISUALIZATION_TYPE_STACK\020\002\022\035\n\031" +
+      "VISUALIZATION_TYPE_COLUMN\020\003\022\035\n\031VISUALIZA" +
+      "TION_TYPE_POINTS\020\004\022\032\n\026VISUALIZATION_TYPE" +
+      "_PIE\020\005\022\033\n\027VISUALIZATION_TYPE_BARS\020\006\022#\n\037V" +
+      "ISUALIZATION_TYPE_DISTRIBUTION\020\007\022\036\n\032VISU" +
+      "ALIZATION_TYPE_HEATMAP\020\010\"o\n\013Interpolate\022" +
+      "\033\n\027INTERPOLATE_UNSPECIFIED\020\000\022\026\n\022INTERPOL" +
+      "ATE_LINEAR\020\001\022\024\n\020INTERPOLATE_LEFT\020\002\022\025\n\021IN" +
+      "TERPOLATE_RIGHT\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_" +
+      "TYPE_UNSPECIFIED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020" +
+      "\001\022\032\n\026YAXIS_TYPE_LOGARITHMIC\020\002\"\304\001\n\021Series" +
+      "Aggregation\022\"\n\036SERIES_AGGREGATION_UNSPEC" +
+      "IFIED\020\000\022\032\n\026SERIES_AGGREGATION_AVG\020\001\022\032\n\026S" +
+      "ERIES_AGGREGATION_MIN\020\002\022\032\n\026SERIES_AGGREG" +
+      "ATION_MAX\020\003\022\033\n\027SERIES_AGGREGATION_LAST\020\004" +
+      "\022\032\n\026SERIES_AGGREGATION_SUM\020\005\032\200\006\n\017SeriesO" +
+      "verrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014target_index" +
+      "\030\002 \001(\tH\000\022`\n\010settings\030\003 \001(\0132N.yandex.clou" +
       "d.monitoring.v3.ChartWidget.SeriesOverri" +
-      "des.YaxisPosition\"b\n\rYaxisPosition\022\036\n\032YA" +
-      "XIS_POSITION_UNSPECIFIED\020\000\022\027\n\023YAXIS_POSI" +
-      "TION_LEFT\020\001\022\030\n\024YAXIS_POSITION_RIGHT\020\002\"\331\001" +
-      "\n\027SeriesVisualizationType\022)\n%SERIES_VISU" +
-      "ALIZATION_TYPE_UNSPECIFIED\020\000\022\"\n\036SERIES_V" +
-      "ISUALIZATION_TYPE_LINE\020\001\022#\n\037SERIES_VISUA" +
-      "LIZATION_TYPE_STACK\020\002\022$\n SERIES_VISUALIZ" +
-      "ATION_TYPE_COLUMN\020\003\022$\n SERIES_VISUALIZAT" +
-      "ION_TYPE_POINTS\020\004B\006\n\004type\0325\n\022NameHidingS" +
-      "ettings\022\020\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t" +
-      "\"\231\001\n\016FreezeDuration\022\037\n\033FREEZE_DURATION_U" +
-      "NSPECIFIED\020\000\022\030\n\024FREEZE_DURATION_HOUR\020\001\022\027" +
-      "\n\023FREEZE_DURATION_DAY\020\002\022\030\n\024FREEZE_DURATI" +
-      "ON_WEEK\020\003\022\031\n\025FREEZE_DURATION_MONTH\020\004Bk\n\036" +
-      "yandex.cloud.api.monitoring.v3ZIgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/monitoring/v3;monitoringb\006proto3"
+      "des.SeriesOverrideSettings\032\232\002\n\026SeriesOve" +
+      "rrideSettings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001" +
+      "(\t\022]\n\004type\030\003 \001(\0162O.yandex.cloud.monitori" +
+      "ng.v3.ChartWidget.SeriesOverrides.Series" +
+      "VisualizationType\022\022\n\nstack_name\030\004 \001(\t\022\021\n" +
+      "\tgrow_down\030\005 \001(\010\022]\n\016yaxis_position\030\006 \001(\016" +
+      "2E.yandex.cloud.monitoring.v3.ChartWidge" +
+      "t.SeriesOverrides.YaxisPosition\"b\n\rYaxis" +
+      "Position\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000" +
+      "\022\027\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSIT" +
+      "ION_RIGHT\020\002\"\331\001\n\027SeriesVisualizationType\022" +
+      ")\n%SERIES_VISUALIZATION_TYPE_UNSPECIFIED" +
+      "\020\000\022\"\n\036SERIES_VISUALIZATION_TYPE_LINE\020\001\022#" +
+      "\n\037SERIES_VISUALIZATION_TYPE_STACK\020\002\022$\n S" +
+      "ERIES_VISUALIZATION_TYPE_COLUMN\020\003\022$\n SER" +
+      "IES_VISUALIZATION_TYPE_POINTS\020\004B\006\n\004type\032" +
+      "5\n\022NameHidingSettings\022\020\n\010positive\030\001 \001(\010\022" +
+      "\r\n\005names\030\002 \003(\t\"\231\001\n\016FreezeDuration\022\037\n\033FRE" +
+      "EZE_DURATION_UNSPECIFIED\020\000\022\030\n\024FREEZE_DUR" +
+      "ATION_HOUR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002\022\030\n" +
+      "\024FREEZE_DURATION_WEEK\020\003\022\031\n\025FREEZE_DURATI" +
+      "ON_MONTH\020\004Bk\n\036yandex.cloud.api.monitorin" +
+      "g.v3ZIgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/monitoring/v3;monitoringb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18532,7 +19248,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor,
-        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Scheme", });
+        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Hash", "Scheme", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_fieldAccessorTable = new
@@ -18551,6 +19267,12 @@ public final class ChartWidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_GradientColorScheme_descriptor,
         new java.lang.String[] { "GreenValue", "YellowValue", "RedValue", "VioletValue", });
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor,
+        new java.lang.String[] { });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_HeatmapSettings_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_HeatmapSettings_fieldAccessorTable = new

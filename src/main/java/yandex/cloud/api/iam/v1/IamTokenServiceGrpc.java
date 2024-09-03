@@ -80,6 +80,37 @@ public final class IamTokenServiceGrpc {
     return getCreateForServiceAccountMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest,
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> getRevokeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Revoke",
+      requestType = yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.class,
+      responseType = yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest,
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> getRevokeMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> getRevokeMethod;
+    if ((getRevokeMethod = IamTokenServiceGrpc.getRevokeMethod) == null) {
+      synchronized (IamTokenServiceGrpc.class) {
+        if ((getRevokeMethod = IamTokenServiceGrpc.getRevokeMethod) == null) {
+          IamTokenServiceGrpc.getRevokeMethod = getRevokeMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Revoke"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IamTokenServiceMethodDescriptorSupplier("Revoke"))
+              .build();
+        }
+      }
+    }
+    return getRevokeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -133,7 +164,7 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Creates an IAM token for the specified identity.
+     * Create an IAM token for the specified identity.
      * </pre>
      */
     public void create(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest request,
@@ -143,12 +174,22 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Create iam token for service account.
+     * Create an IAM token for service account.
      * </pre>
      */
     public void createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateForServiceAccountMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Revoke the IAM token.
+     * </pre>
+     */
+    public void revoke(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -167,6 +208,13 @@ public final class IamTokenServiceGrpc {
                 yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest,
                 yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>(
                   this, METHODID_CREATE_FOR_SERVICE_ACCOUNT)))
+          .addMethod(
+            getRevokeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest,
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse>(
+                  this, METHODID_REVOKE)))
           .build();
     }
   }
@@ -190,7 +238,7 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Creates an IAM token for the specified identity.
+     * Create an IAM token for the specified identity.
      * </pre>
      */
     public void create(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest request,
@@ -201,13 +249,24 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Create iam token for service account.
+     * Create an IAM token for service account.
      * </pre>
      */
     public void createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateForServiceAccountMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Revoke the IAM token.
+     * </pre>
+     */
+    public void revoke(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRevokeMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -230,7 +289,7 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Creates an IAM token for the specified identity.
+     * Create an IAM token for the specified identity.
      * </pre>
      */
     public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse create(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest request) {
@@ -240,12 +299,22 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Create iam token for service account.
+     * Create an IAM token for service account.
      * </pre>
      */
     public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateForServiceAccountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Revoke the IAM token.
+     * </pre>
+     */
+    public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse revoke(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRevokeMethod(), getCallOptions(), request);
     }
   }
 
@@ -268,7 +337,7 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Creates an IAM token for the specified identity.
+     * Create an IAM token for the specified identity.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> create(
@@ -279,7 +348,7 @@ public final class IamTokenServiceGrpc {
 
     /**
      * <pre>
-     * Create iam token for service account.
+     * Create an IAM token for service account.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> createForServiceAccount(
@@ -287,10 +356,22 @@ public final class IamTokenServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateForServiceAccountMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Revoke the IAM token.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse> revoke(
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRevokeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_CREATE_FOR_SERVICE_ACCOUNT = 1;
+  private static final int METHODID_REVOKE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -316,6 +397,10 @@ public final class IamTokenServiceGrpc {
         case METHODID_CREATE_FOR_SERVICE_ACCOUNT:
           serviceImpl.createForServiceAccount((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>) responseObserver);
+          break;
+        case METHODID_REVOKE:
+          serviceImpl.revoke((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.RevokeIamTokenResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -380,6 +465,7 @@ public final class IamTokenServiceGrpc {
               .setSchemaDescriptor(new IamTokenServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getCreateForServiceAccountMethod())
+              .addMethod(getRevokeMethod())
               .build();
         }
       }

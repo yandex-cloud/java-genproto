@@ -10877,7 +10877,7 @@ public final class ContainerOuterClass {
      * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
     long getMemory();
@@ -10887,7 +10887,7 @@ public final class ContainerOuterClass {
      * Number of cores available to the revision.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-4"];</code>
      * @return The cores.
      */
     long getCores();
@@ -11006,7 +11006,7 @@ public final class ContainerOuterClass {
      * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
      * </pre>
      *
-     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+     * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
      * @return The memory.
      */
     @java.lang.Override
@@ -11021,7 +11021,7 @@ public final class ContainerOuterClass {
      * Number of cores available to the revision.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-4"];</code>
      * @return The cores.
      */
     @java.lang.Override
@@ -11394,7 +11394,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return The memory.
        */
       @java.lang.Override
@@ -11406,7 +11406,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @param value The memory to set.
        * @return This builder for chaining.
        */
@@ -11421,7 +11421,7 @@ public final class ContainerOuterClass {
        * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
-       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
+       * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-8589934592"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMemory() {
@@ -11437,7 +11437,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-4"];</code>
        * @return The cores.
        */
       @java.lang.Override
@@ -11449,7 +11449,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-4"];</code>
        * @param value The cores to set.
        * @return This builder for chaining.
        */
@@ -11464,7 +11464,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-4"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCores() {
@@ -20276,8 +20276,8 @@ public final class ContainerOuterClass {
       "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\032\n" +
       "\007Command\022\017\n\007command\030\001 \003(\t\"\024\n\004Args\022\014\n\004arg" +
       "s\030\001 \003(\t\"o\n\tResources\022(\n\006memory\030\001 \001(\003B\030\372\307" +
-      "1\024134217728-4294967296\022\026\n\005cores\030\002 \001(\003B\007\372" +
-      "\3071\0030-2\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
+      "1\024134217728-8589934592\022\026\n\005cores\030\002 \001(\003B\007\372" +
+      "\3071\0030-4\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
       "\"(\n\017ProvisionPolicy\022\025\n\rmin_instances\030\001 \001" +
       "(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002" +
       " \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environment_variabl" +
@@ -20295,7 +20295,7 @@ public final class ContainerOuterClass {
       "-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\022\021\n" +
       "\tread_only\030\004 \001(\010\022:\n\020mount_point_path\030\005 \001" +
       "(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a-zA-Z/]*:\002\030\001" +
-      "J\004\010\003\020\004\"\215\004\n\005Mount\022:\n\020mount_point_path\030\002 \001" +
+      "J\004\010\003\020\004\"\223\004\n\005Mount\022:\n\020mount_point_path\030\002 \001" +
       "(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a-zA-Z/]*\022?\n\004" +
       "mode\030\003 \001(\01621.yandex.cloud.serverless.con" +
       "tainers.v1.Mount.Mode\022T\n\016object_storage\030" +
@@ -20308,10 +20308,10 @@ public final class ContainerOuterClass {
       "\010DiskSpec\022\024\n\004size\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock" +
       "_size\030\002 \001(\003\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020" +
       "\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006targ" +
-      "et\022\004\300\3011\001J\004\010\001\020\002B\201\001\n)yandex.cloud.api.serv" +
-      "erless.containers.v1ZTgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/serverles" +
-      "s/containers/v1;containersb\006proto3"
+      "et\022\004\300\3011\001J\004\010\004\020\nJ\004\010\001\020\002B\201\001\n)yandex.cloud.ap" +
+      "i.serverless.containers.v1ZTgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ser" +
+      "verless/containers/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2364,6 +2364,26 @@ public final class SecurityProfileServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getCaptchaIdBytes();
+
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 8;</code>
+     * @return The advancedRateLimiterProfileId.
+     */
+    java.lang.String getAdvancedRateLimiterProfileId();
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 8;</code>
+     * @return The bytes for advancedRateLimiterProfileId.
+     */
+    com.google.protobuf.ByteString
+        getAdvancedRateLimiterProfileIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.CreateSecurityProfileRequest}
@@ -2384,6 +2404,7 @@ public final class SecurityProfileServiceOuterClass {
       defaultAction_ = 0;
       securityRules_ = java.util.Collections.emptyList();
       captchaId_ = "";
+      advancedRateLimiterProfileId_ = "";
     }
 
     @java.lang.Override
@@ -2467,6 +2488,12 @@ public final class SecurityProfileServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               captchaId_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              advancedRateLimiterProfileId_ = s;
               break;
             }
             default: {
@@ -2884,6 +2911,52 @@ public final class SecurityProfileServiceOuterClass {
       }
     }
 
+    public static final int ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object advancedRateLimiterProfileId_;
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 8;</code>
+     * @return The advancedRateLimiterProfileId.
+     */
+    @java.lang.Override
+    public java.lang.String getAdvancedRateLimiterProfileId() {
+      java.lang.Object ref = advancedRateLimiterProfileId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        advancedRateLimiterProfileId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 8;</code>
+     * @return The bytes for advancedRateLimiterProfileId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdvancedRateLimiterProfileIdBytes() {
+      java.lang.Object ref = advancedRateLimiterProfileId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        advancedRateLimiterProfileId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2921,6 +2994,9 @@ public final class SecurityProfileServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(captchaId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, captchaId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, advancedRateLimiterProfileId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2961,6 +3037,9 @@ public final class SecurityProfileServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(captchaId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, captchaId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, advancedRateLimiterProfileId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2989,6 +3068,8 @@ public final class SecurityProfileServiceOuterClass {
           .equals(other.getSecurityRulesList())) return false;
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
+      if (!getAdvancedRateLimiterProfileId()
+          .equals(other.getAdvancedRateLimiterProfileId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3018,6 +3099,8 @@ public final class SecurityProfileServiceOuterClass {
       }
       hash = (37 * hash) + CAPTCHA_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCaptchaId().hashCode();
+      hash = (37 * hash) + ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAdvancedRateLimiterProfileId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3191,6 +3274,8 @@ public final class SecurityProfileServiceOuterClass {
         }
         captchaId_ = "";
 
+        advancedRateLimiterProfileId_ = "";
+
         return this;
       }
 
@@ -3234,6 +3319,7 @@ public final class SecurityProfileServiceOuterClass {
           result.securityRules_ = securityRulesBuilder_.build();
         }
         result.captchaId_ = captchaId_;
+        result.advancedRateLimiterProfileId_ = advancedRateLimiterProfileId_;
         onBuilt();
         return result;
       }
@@ -3327,6 +3413,10 @@ public final class SecurityProfileServiceOuterClass {
         }
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
+          onChanged();
+        }
+        if (!other.getAdvancedRateLimiterProfileId().isEmpty()) {
+          advancedRateLimiterProfileId_ = other.advancedRateLimiterProfileId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -4287,6 +4377,102 @@ public final class SecurityProfileServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object advancedRateLimiterProfileId_ = "";
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 8;</code>
+       * @return The advancedRateLimiterProfileId.
+       */
+      public java.lang.String getAdvancedRateLimiterProfileId() {
+        java.lang.Object ref = advancedRateLimiterProfileId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          advancedRateLimiterProfileId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 8;</code>
+       * @return The bytes for advancedRateLimiterProfileId.
+       */
+      public com.google.protobuf.ByteString
+          getAdvancedRateLimiterProfileIdBytes() {
+        java.lang.Object ref = advancedRateLimiterProfileId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          advancedRateLimiterProfileId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 8;</code>
+       * @param value The advancedRateLimiterProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdvancedRateLimiterProfileId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        advancedRateLimiterProfileId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdvancedRateLimiterProfileId() {
+        
+        advancedRateLimiterProfileId_ = getDefaultInstance().getAdvancedRateLimiterProfileId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 8;</code>
+       * @param value The bytes for advancedRateLimiterProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdvancedRateLimiterProfileIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        advancedRateLimiterProfileId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5171,6 +5357,26 @@ public final class SecurityProfileServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getCaptchaIdBytes();
+
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 9;</code>
+     * @return The advancedRateLimiterProfileId.
+     */
+    java.lang.String getAdvancedRateLimiterProfileId();
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 9;</code>
+     * @return The bytes for advancedRateLimiterProfileId.
+     */
+    com.google.protobuf.ByteString
+        getAdvancedRateLimiterProfileIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.smartwebsecurity.v1.UpdateSecurityProfileRequest}
@@ -5191,6 +5397,7 @@ public final class SecurityProfileServiceOuterClass {
       defaultAction_ = 0;
       securityRules_ = java.util.Collections.emptyList();
       captchaId_ = "";
+      advancedRateLimiterProfileId_ = "";
     }
 
     @java.lang.Override
@@ -5287,6 +5494,12 @@ public final class SecurityProfileServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               captchaId_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              advancedRateLimiterProfileId_ = s;
               break;
             }
             default: {
@@ -5742,6 +5955,52 @@ public final class SecurityProfileServiceOuterClass {
       }
     }
 
+    public static final int ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object advancedRateLimiterProfileId_;
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 9;</code>
+     * @return The advancedRateLimiterProfileId.
+     */
+    @java.lang.Override
+    public java.lang.String getAdvancedRateLimiterProfileId() {
+      java.lang.Object ref = advancedRateLimiterProfileId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        advancedRateLimiterProfileId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+     * </pre>
+     *
+     * <code>string advanced_rate_limiter_profile_id = 9;</code>
+     * @return The bytes for advancedRateLimiterProfileId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdvancedRateLimiterProfileIdBytes() {
+      java.lang.Object ref = advancedRateLimiterProfileId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        advancedRateLimiterProfileId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5782,6 +6041,9 @@ public final class SecurityProfileServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(captchaId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, captchaId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, advancedRateLimiterProfileId_);
       }
       unknownFields.writeTo(output);
     }
@@ -5826,6 +6088,9 @@ public final class SecurityProfileServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(captchaId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, captchaId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advancedRateLimiterProfileId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, advancedRateLimiterProfileId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5859,6 +6124,8 @@ public final class SecurityProfileServiceOuterClass {
           .equals(other.getSecurityRulesList())) return false;
       if (!getCaptchaId()
           .equals(other.getCaptchaId())) return false;
+      if (!getAdvancedRateLimiterProfileId()
+          .equals(other.getAdvancedRateLimiterProfileId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5892,6 +6159,8 @@ public final class SecurityProfileServiceOuterClass {
       }
       hash = (37 * hash) + CAPTCHA_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCaptchaId().hashCode();
+      hash = (37 * hash) + ADVANCED_RATE_LIMITER_PROFILE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAdvancedRateLimiterProfileId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6071,6 +6340,8 @@ public final class SecurityProfileServiceOuterClass {
         }
         captchaId_ = "";
 
+        advancedRateLimiterProfileId_ = "";
+
         return this;
       }
 
@@ -6119,6 +6390,7 @@ public final class SecurityProfileServiceOuterClass {
           result.securityRules_ = securityRulesBuilder_.build();
         }
         result.captchaId_ = captchaId_;
+        result.advancedRateLimiterProfileId_ = advancedRateLimiterProfileId_;
         onBuilt();
         return result;
       }
@@ -6215,6 +6487,10 @@ public final class SecurityProfileServiceOuterClass {
         }
         if (!other.getCaptchaId().isEmpty()) {
           captchaId_ = other.captchaId_;
+          onChanged();
+        }
+        if (!other.getAdvancedRateLimiterProfileId().isEmpty()) {
+          advancedRateLimiterProfileId_ = other.advancedRateLimiterProfileId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7327,6 +7603,102 @@ public final class SecurityProfileServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         captchaId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object advancedRateLimiterProfileId_ = "";
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 9;</code>
+       * @return The advancedRateLimiterProfileId.
+       */
+      public java.lang.String getAdvancedRateLimiterProfileId() {
+        java.lang.Object ref = advancedRateLimiterProfileId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          advancedRateLimiterProfileId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 9;</code>
+       * @return The bytes for advancedRateLimiterProfileId.
+       */
+      public com.google.protobuf.ByteString
+          getAdvancedRateLimiterProfileIdBytes() {
+        java.lang.Object ref = advancedRateLimiterProfileId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          advancedRateLimiterProfileId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 9;</code>
+       * @param value The advancedRateLimiterProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdvancedRateLimiterProfileId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        advancedRateLimiterProfileId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdvancedRateLimiterProfileId() {
+        
+        advancedRateLimiterProfileId_ = getDefaultInstance().getAdvancedRateLimiterProfileId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Advanced rate limiter profile ID to use with this security profile. Set empty to use default.
+       * </pre>
+       *
+       * <code>string advanced_rate_limiter_profile_id = 9;</code>
+       * @param value The bytes for advancedRateLimiterProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdvancedRateLimiterProfileIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        advancedRateLimiterProfileId_ = value;
         onChanged();
         return this;
       }
@@ -9272,7 +9644,7 @@ public final class SecurityProfileServiceOuterClass {
       "urityProfilesRequest\022\027\n\tfolder_id\030\001 \001(\tB" +
       "\004\350\3071\001\"l\n\034ListSecurityProfilesResponse\022L\n" +
       "\021security_profiles\030\001 \003(\01321.yandex.cloud." +
-      "smartwebsecurity.v1.SecurityProfile\"\232\003\n\034" +
+      "smartwebsecurity.v1.SecurityProfile\"\304\003\n\034" +
       "CreateSecurityProfileRequest\022\027\n\tfolder_i" +
       "d\030\001 \001(\tB\004\350\3071\001\022Z\n\006labels\030\002 \003(\0132J.yandex.c" +
       "loud.smartwebsecurity.v1.CreateSecurityP" +
@@ -9282,56 +9654,58 @@ public final class SecurityProfileServiceOuterClass {
       "SecurityProfile.DefaultAction\022F\n\016securit" +
       "y_rules\030\006 \003(\0132..yandex.cloud.smartwebsec" +
       "urity.v1.SecurityRule\022\022\n\ncaptcha_id\030\007 \001(" +
-      "\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"<\n\035CreateSecurityProfileMetadat" +
-      "a\022\033\n\023security_profile_id\030\001 \001(\t\"\325\003\n\034Updat" +
-      "eSecurityProfileRequest\022!\n\023security_prof" +
-      "ile_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022Z\n\006labels\030\003 " +
-      "\003(\0132J.yandex.cloud.smartwebsecurity.v1.U" +
-      "pdateSecurityProfileRequest.LabelsEntry\022" +
-      "\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022W\n\016de" +
-      "fault_action\030\006 \001(\0162?.yandex.cloud.smartw" +
-      "ebsecurity.v1.SecurityProfile.DefaultAct" +
-      "ion\022F\n\016security_rules\030\007 \003(\0132..yandex.clo" +
-      "ud.smartwebsecurity.v1.SecurityRule\022\022\n\nc" +
-      "aptcha_id\030\010 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\035UpdateSecurity" +
-      "ProfileMetadata\022\033\n\023security_profile_id\030\001" +
-      " \001(\t\"A\n\034DeleteSecurityProfileRequest\022!\n\023" +
-      "security_profile_id\030\001 \001(\tB\004\350\3071\001\"<\n\035Delet" +
-      "eSecurityProfileMetadata\022\033\n\023security_pro" +
-      "file_id\030\001 \001(\t2\267\010\n\026SecurityProfileService" +
-      "\022\272\001\n\003Get\022;.yandex.cloud.smartwebsecurity" +
-      ".v1.GetSecurityProfileRequest\0321.yandex.c" +
-      "loud.smartwebsecurity.v1.SecurityProfile" +
-      "\"C\202\323\344\223\002=\022;/smartwebsecurity/v1/securityP" +
-      "rofiles/{security_profile_id}\022\264\001\n\004List\022=" +
-      ".yandex.cloud.smartwebsecurity.v1.ListSe" +
-      "curityProfilesRequest\032>.yandex.cloud.sma" +
-      "rtwebsecurity.v1.ListSecurityProfilesRes" +
-      "ponse\"-\202\323\344\223\002\'\022%/smartwebsecurity/v1/secu" +
-      "rityProfiles\022\321\001\n\006Create\022>.yandex.cloud.s" +
-      "martwebsecurity.v1.CreateSecurityProfile" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"d\202\323\344\223\002*\"%/smartwebsecurity/v1/securit" +
-      "yProfiles:\001*\262\322*0\n\035CreateSecurityProfileM" +
-      "etadata\022\017SecurityProfile\022\347\001\n\006Update\022>.ya" +
-      "ndex.cloud.smartwebsecurity.v1.UpdateSec" +
-      "urityProfileRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"z\202\323\344\223\002@2;/smartwebsecurit" +
-      "y/v1/securityProfiles/{security_profile_" +
-      "id}:\001*\262\322*0\n\035UpdateSecurityProfileMetadat" +
-      "a\022\017SecurityProfile\022\352\001\n\006Delete\022>.yandex.c" +
-      "loud.smartwebsecurity.v1.DeleteSecurityP" +
-      "rofileRequest\032!.yandex.cloud.operation.O" +
-      "peration\"}\202\323\344\223\002=*;/smartwebsecurity/v1/s" +
-      "ecurityProfiles/{security_profile_id}\262\322*" +
-      "6\n\035DeleteSecurityProfileMetadata\022\025google" +
-      ".protobuf.EmptyB}\n$yandex.cloud.api.smar" +
-      "twebsecurity.v1ZUgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/smartwebsecuri" +
-      "ty/v1;smartwebsecurityb\006proto3"
+      "\t\022(\n advanced_rate_limiter_profile_id\030\010 " +
+      "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"<\n\035CreateSecurityProfileMetad" +
+      "ata\022\033\n\023security_profile_id\030\001 \001(\t\"\377\003\n\034Upd" +
+      "ateSecurityProfileRequest\022!\n\023security_pr" +
+      "ofile_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022Z\n\006labels\030" +
+      "\003 \003(\0132J.yandex.cloud.smartwebsecurity.v1" +
+      ".UpdateSecurityProfileRequest.LabelsEntr" +
+      "y\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022W\n\016" +
+      "default_action\030\006 \001(\0162?.yandex.cloud.smar" +
+      "twebsecurity.v1.SecurityProfile.DefaultA" +
+      "ction\022F\n\016security_rules\030\007 \003(\0132..yandex.c" +
+      "loud.smartwebsecurity.v1.SecurityRule\022\022\n" +
+      "\ncaptcha_id\030\010 \001(\t\022(\n advanced_rate_limit" +
+      "er_profile_id\030\t \001(\t\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\035UpdateSecu" +
+      "rityProfileMetadata\022\033\n\023security_profile_" +
+      "id\030\001 \001(\t\"A\n\034DeleteSecurityProfileRequest" +
+      "\022!\n\023security_profile_id\030\001 \001(\tB\004\350\3071\001\"<\n\035D" +
+      "eleteSecurityProfileMetadata\022\033\n\023security" +
+      "_profile_id\030\001 \001(\t2\267\010\n\026SecurityProfileSer" +
+      "vice\022\272\001\n\003Get\022;.yandex.cloud.smartwebsecu" +
+      "rity.v1.GetSecurityProfileRequest\0321.yand" +
+      "ex.cloud.smartwebsecurity.v1.SecurityPro" +
+      "file\"C\202\323\344\223\002=\022;/smartwebsecurity/v1/secur" +
+      "ityProfiles/{security_profile_id}\022\264\001\n\004Li" +
+      "st\022=.yandex.cloud.smartwebsecurity.v1.Li" +
+      "stSecurityProfilesRequest\032>.yandex.cloud" +
+      ".smartwebsecurity.v1.ListSecurityProfile" +
+      "sResponse\"-\202\323\344\223\002\'\022%/smartwebsecurity/v1/" +
+      "securityProfiles\022\321\001\n\006Create\022>.yandex.clo" +
+      "ud.smartwebsecurity.v1.CreateSecurityPro" +
+      "fileRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"d\202\323\344\223\002*\"%/smartwebsecurity/v1/sec" +
+      "urityProfiles:\001*\262\322*0\n\035CreateSecurityProf" +
+      "ileMetadata\022\017SecurityProfile\022\347\001\n\006Update\022" +
+      ">.yandex.cloud.smartwebsecurity.v1.Updat" +
+      "eSecurityProfileRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"z\202\323\344\223\002@2;/smartwebsec" +
+      "urity/v1/securityProfiles/{security_prof" +
+      "ile_id}:\001*\262\322*0\n\035UpdateSecurityProfileMet" +
+      "adata\022\017SecurityProfile\022\352\001\n\006Delete\022>.yand" +
+      "ex.cloud.smartwebsecurity.v1.DeleteSecur" +
+      "ityProfileRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"}\202\323\344\223\002=*;/smartwebsecurity/" +
+      "v1/securityProfiles/{security_profile_id" +
+      "}\262\322*6\n\035DeleteSecurityProfileMetadata\022\025go" +
+      "ogle.protobuf.EmptyB}\n$yandex.cloud.api." +
+      "smartwebsecurity.v1ZUgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/smartwebse" +
+      "curity/v1;smartwebsecurityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9366,7 +9740,7 @@ public final class SecurityProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", });
+        new java.lang.String[] { "FolderId", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", });
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_CreateSecurityProfileRequest_LabelsEntry_fieldAccessorTable = new
@@ -9384,7 +9758,7 @@ public final class SecurityProfileServiceOuterClass {
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_descriptor,
-        new java.lang.String[] { "SecurityProfileId", "UpdateMask", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", });
+        new java.lang.String[] { "SecurityProfileId", "UpdateMask", "Labels", "Name", "Description", "DefaultAction", "SecurityRules", "CaptchaId", "AdvancedRateLimiterProfileId", });
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_smartwebsecurity_v1_UpdateSecurityProfileRequest_LabelsEntry_fieldAccessorTable = new

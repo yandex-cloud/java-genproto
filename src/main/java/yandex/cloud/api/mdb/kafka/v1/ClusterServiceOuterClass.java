@@ -7847,6 +7847,26 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
+     * ID of the network to move the cluster to.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The networkId.
+     */
+    java.lang.String getNetworkId();
+    /**
+     * <pre>
+     * ID of the network to move the cluster to.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for networkId.
+     */
+    com.google.protobuf.ByteString
+        getNetworkIdBytes();
+
+    /**
+     * <pre>
      * IDs of subnets where the hosts are located or a new host is being created
      * </pre>
      *
@@ -7903,6 +7923,7 @@ public final class ClusterServiceOuterClass {
       description_ = "";
       name_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      networkId_ = "";
       subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -8019,6 +8040,12 @@ public final class ClusterServiceOuterClass {
                 maintenanceWindow_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkId_ = s;
               break;
             }
             case 90: {
@@ -8500,6 +8527,52 @@ public final class ClusterServiceOuterClass {
       return getMaintenanceWindow();
     }
 
+    public static final int NETWORK_ID_FIELD_NUMBER = 10;
+    private volatile java.lang.Object networkId_;
+    /**
+     * <pre>
+     * ID of the network to move the cluster to.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The networkId.
+     */
+    @java.lang.Override
+    public java.lang.String getNetworkId() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the network to move the cluster to.
+     * </pre>
+     *
+     * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for networkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkIdBytes() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int SUBNET_IDS_FIELD_NUMBER = 11;
     private com.google.protobuf.LazyStringList subnetIds_;
     /**
@@ -8595,6 +8668,9 @@ public final class ClusterServiceOuterClass {
       if (maintenanceWindow_ != null) {
         output.writeMessage(9, getMaintenanceWindow());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, networkId_);
+      }
       for (int i = 0; i < subnetIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, subnetIds_.getRaw(i));
       }
@@ -8650,6 +8726,9 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getMaintenanceWindow());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(networkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, networkId_);
+      }
       {
         int dataSize = 0;
         for (int i = 0; i < subnetIds_.size(); i++) {
@@ -8700,6 +8779,8 @@ public final class ClusterServiceOuterClass {
         if (!getMaintenanceWindow()
             .equals(other.getMaintenanceWindow())) return false;
       }
+      if (!getNetworkId()
+          .equals(other.getNetworkId())) return false;
       if (!getSubnetIdsList()
           .equals(other.getSubnetIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8742,6 +8823,8 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
         hash = (53 * hash) + getMaintenanceWindow().hashCode();
       }
+      hash = (37 * hash) + NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkId().hashCode();
       if (getSubnetIdsCount() > 0) {
         hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSubnetIdsList().hashCode();
@@ -8930,6 +9013,8 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
           maintenanceWindowBuilder_ = null;
         }
+        networkId_ = "";
+
         subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
@@ -8985,6 +9070,7 @@ public final class ClusterServiceOuterClass {
         } else {
           result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
         }
+        result.networkId_ = networkId_;
         if (((bitField0_ & 0x00000004) != 0)) {
           subnetIds_ = subnetIds_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -9073,6 +9159,10 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMaintenanceWindow()) {
           mergeMaintenanceWindow(other.getMaintenanceWindow());
+        }
+        if (!other.getNetworkId().isEmpty()) {
+          networkId_ = other.networkId_;
+          onChanged();
         }
         if (!other.subnetIds_.isEmpty()) {
           if (subnetIds_.isEmpty()) {
@@ -10212,6 +10302,102 @@ public final class ClusterServiceOuterClass {
           maintenanceWindow_ = null;
         }
         return maintenanceWindowBuilder_;
+      }
+
+      private java.lang.Object networkId_ = "";
+      /**
+       * <pre>
+       * ID of the network to move the cluster to.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The networkId.
+       */
+      public java.lang.String getNetworkId() {
+        java.lang.Object ref = networkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the network to move the cluster to.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for networkId.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkIdBytes() {
+        java.lang.Object ref = networkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the network to move the cluster to.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The networkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the network to move the cluster to.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetworkId() {
+        
+        networkId_ = getDefaultInstance().getNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the network to move the cluster to.
+       * </pre>
+       *
+       * <code>string network_id = 10 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for networkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkId_ = value;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -29720,7 +29906,7 @@ public final class ClusterServiceOuterClass {
       "_window\030\017 \001(\0132,.yandex.cloud.mdb.kafka.v" +
       "1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\n\"+\n\025Crea" +
-      "teClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\312\004" +
+      "teClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\342\004" +
       "\n\024UpdateClusterRequest\022 \n\ncluster_id\030\001 \001" +
       "(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032." +
       "google.protobuf.FieldMask\022\036\n\013description" +
@@ -29733,130 +29919,130 @@ public final class ClusterServiceOuterClass {
       "<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_group" +
       "_ids\030\007 \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\022" +
       "H\n\022maintenance_window\030\t \001(\0132,.yandex.clo" +
-      "ud.mdb.kafka.v1.MaintenanceWindow\022\022\n\nsub" +
-      "net_ids\030\013 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\n\020\013\"+\n\025UpdateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024Delet" +
-      "eClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\"\247\002\n\026ListClusterLogsReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rc" +
-      "olumn_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\007to_time\030\004 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\035\n\tpage_s" +
-      "ize\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\006 \001(" +
-      "\tB\t\212\3101\005<=100\022\036\n\026always_next_page_token\030\007" +
-      " \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000\"\256\001\n\tLog" +
-      "Record\022-\n\ttimestamp\030\001 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022B\n\007message\030\002 \003(\01321.yandex." +
-      "cloud.mdb.kafka.v1.LogRecord.MessageEntr" +
-      "y\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"f\n\027ListClusterLogsResponse\0222\n\004" +
-      "logs\030\001 \003(\0132$.yandex.cloud.mdb.kafka.v1.L" +
-      "ogRecord\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017Str" +
-      "eamLogRecord\0224\n\006record\030\001 \001(\0132$.yandex.cl" +
-      "oud.mdb.kafka.v1.LogRecord\022\031\n\021next_recor" +
-      "d_token\030\002 \001(\t\"\354\001\n\030StreamClusterLogsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\r" +
-      "column_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022+\n\007to_time\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\037\n\014recor" +
-      "d_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001(\t" +
-      "B\n\212\3101\006<=1000\"~\n\034ListClusterOperationsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
-      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"y\n\027ListClusterHostsRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListClusterHostsResp" +
-      "onse\022.\n\005hosts\030\001 \003(\0132\037.yandex.cloud.mdb.k" +
-      "afka.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"c\n" +
-      "\022MoveClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadat" +
-      "a\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_i" +
-      "d\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"7" +
-      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
-      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\312" +
-      "\002\n\034RescheduleMaintenanceRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022e\n\017reschedule_" +
-      "type\030\002 \001(\0162F.yandex.cloud.mdb.kafka.v1.R" +
-      "escheduleMaintenanceRequest.RescheduleTy" +
-      "peB\004\350\3071\001\0221\n\rdelayed_until\030\003 \001(\0132\032.google" +
-      ".protobuf.Timestamp\"n\n\016RescheduleType\022\037\n" +
-      "\033RESCHEDULE_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDI" +
-      "ATE\020\001\022\031\n\025NEXT_AVAILABLE_WINDOW\020\002\022\021\n\rSPEC" +
-      "IFIC_TIME\020\003\"l\n\035RescheduleMaintenanceMeta" +
-      "data\022\022\n\ncluster_id\030\001 \001(\t\0221\n\rdelayed_unti" +
-      "l\030\004 \001(\0132\032.google.protobuf.TimestampJ\004\010\002\020" +
-      "\0042\241\022\n\016ClusterService\022\210\001\n\003Get\022,.yandex.cl" +
-      "oud.mdb.kafka.v1.GetClusterRequest\032\".yan" +
-      "dex.cloud.mdb.kafka.v1.Cluster\"/\202\323\344\223\002)\022\'" +
-      "/managed-kafka/v1/clusters/{cluster_id}\022" +
-      "\213\001\n\004List\022..yandex.cloud.mdb.kafka.v1.Lis" +
-      "tClustersRequest\032/.yandex.cloud.mdb.kafk" +
-      "a.v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/mana" +
-      "ged-kafka/v1/clusters\022\247\001\n\006Create\022/.yande" +
-      "x.cloud.mdb.kafka.v1.CreateClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"I\202\323" +
-      "\344\223\002\037\"\032/managed-kafka/v1/clusters:\001*\262\322* \n" +
-      "\025CreateClusterMetadata\022\007Cluster\022\264\001\n\006Upda" +
-      "te\022/.yandex.cloud.mdb.kafka.v1.UpdateClu" +
-      "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"V\202\323\344\223\002,2\'/managed-kafka/v1/cluste" +
-      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
-      "adata\022\007Cluster\022\277\001\n\006Delete\022/.yandex.cloud" +
-      ".mdb.kafka.v1.DeleteClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"a\202\323\344\223\002)*\'/" +
-      "managed-kafka/v1/clusters/{cluster_id}\262\322" +
-      "*.\n\025DeleteClusterMetadata\022\025google.protob" +
-      "uf.Empty\022\263\001\n\004Move\022-.yandex.cloud.mdb.kaf" +
-      "ka.v1.MoveClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"Y\202\323\344\223\0021\",/managed-ka" +
-      "fka/v1/clusters/{cluster_id}:move:\001*\262\322*\036" +
-      "\n\023MoveClusterMetadata\022\007Cluster\022\264\001\n\005Start" +
-      "\022..yandex.cloud.mdb.kafka.v1.StartCluste" +
+      "ud.mdb.kafka.v1.MaintenanceWindow\022\034\n\nnet" +
+      "work_id\030\n \001(\tB\010\212\3101\004<=50\022\022\n\nsubnet_ids\030\013 " +
+      "\003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\247" +
+      "\002\n\026ListClusterLogsRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003" +
+      "(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026" +
+      "always_next_page_token\030\007 \001(\010\022\032\n\006filter\030\010" +
+      " \001(\tB\n\212\3101\006<=1000\"\256\001\n\tLogRecord\022-\n\ttimest" +
+      "amp\030\001 \001(\0132\032.google.protobuf.Timestamp\022B\n" +
+      "\007message\030\002 \003(\01321.yandex.cloud.mdb.kafka." +
+      "v1.LogRecord.MessageEntry\032.\n\014MessageEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\027Lis" +
+      "tClusterLogsResponse\0222\n\004logs\030\001 \003(\0132$.yan" +
+      "dex.cloud.mdb.kafka.v1.LogRecord\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006" +
+      "record\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1" +
+      ".LogRecord\022\031\n\021next_record_token\030\002 \001(\t\"\354\001" +
+      "\n\030StreamClusterLogsRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 " +
+      "\003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\037\n\014record_token\030\005 \001(\tB\t\212" +
+      "\3101\005<=100\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\"~\n\034" +
+      "ListClusterOperationsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"o\n\035ListClusterOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t\"y\n" +
+      "\027ListClusterHostsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"c\n\030ListClusterHostsResponse\022.\n\005hosts\030\001 " +
+      "\003(\0132\037.yandex.cloud.mdb.kafka.v1.Host\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"c\n\022MoveClusterRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n" +
+      "\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"b\n\023MoveClusterMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025desti" +
+      "nation_folder_id\030\003 \001(\t\"7\n\023StartClusterRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034RescheduleMai" +
+      "ntenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F.yan" +
+      "dex.cloud.mdb.kafka.v1.RescheduleMainten" +
+      "anceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdela" +
+      "yed_until\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE" +
+      "_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AV" +
+      "AILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035R" +
+      "escheduleMaintenanceMetadata\022\022\n\ncluster_" +
+      "id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google" +
+      ".protobuf.TimestampJ\004\010\002\020\0042\241\022\n\016ClusterSer" +
+      "vice\022\210\001\n\003Get\022,.yandex.cloud.mdb.kafka.v1" +
+      ".GetClusterRequest\032\".yandex.cloud.mdb.ka" +
+      "fka.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-kafka/v" +
+      "1/clusters/{cluster_id}\022\213\001\n\004List\022..yande" +
+      "x.cloud.mdb.kafka.v1.ListClustersRequest" +
+      "\032/.yandex.cloud.mdb.kafka.v1.ListCluster" +
+      "sResponse\"\"\202\323\344\223\002\034\022\032/managed-kafka/v1/clu" +
+      "sters\022\247\001\n\006Create\022/.yandex.cloud.mdb.kafk" +
+      "a.v1.CreateClusterRequest\032!.yandex.cloud" +
+      ".operation.Operation\"I\202\323\344\223\002\037\"\032/managed-k" +
+      "afka/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
+      "tadata\022\007Cluster\022\264\001\n\006Update\022/.yandex.clou" +
+      "d.mdb.kafka.v1.UpdateClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"V\202\323\344\223\002,2\'" +
+      "/managed-kafka/v1/clusters/{cluster_id}:" +
+      "\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\277" +
+      "\001\n\006Delete\022/.yandex.cloud.mdb.kafka.v1.De" +
+      "leteClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"a\202\323\344\223\002)*\'/managed-kafka/v1" +
+      "/clusters/{cluster_id}\262\322*.\n\025DeleteCluste" +
+      "rMetadata\022\025google.protobuf.Empty\022\263\001\n\004Mov" +
+      "e\022-.yandex.cloud.mdb.kafka.v1.MoveCluste" +
       "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"X\202\323\344\223\002/\"-/managed-kafka/v1/clusters/" +
-      "{cluster_id}:start\262\322*\037\n\024StartClusterMeta" +
-      "data\022\007Cluster\022\260\001\n\004Stop\022-.yandex.cloud.md" +
-      "b.kafka.v1.StopClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"V\202\323\344\223\002.\",/manag" +
-      "ed-kafka/v1/clusters/{cluster_id}:stop\262\322" +
-      "*\036\n\023StopClusterMetadata\022\007Cluster\022\351\001\n\025Res" +
-      "cheduleMaintenance\0227.yandex.cloud.mdb.ka" +
-      "fka.v1.RescheduleMaintenanceRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"t\202\323\344\223\002B\"=" +
-      "/managed-kafka/v1/clusters/{cluster_id}:" +
-      "rescheduleMaintenance:\001*\262\322*(\n\035Reschedule" +
-      "MaintenanceMetadata\022\007Cluster\022\247\001\n\010ListLog" +
-      "s\0221.yandex.cloud.mdb.kafka.v1.ListCluste" +
-      "rLogsRequest\0322.yandex.cloud.mdb.kafka.v1" +
-      ".ListClusterLogsResponse\"4\202\323\344\223\002.\022,/manag" +
-      "ed-kafka/v1/clusters/{cluster_id}:logs\022\254" +
-      "\001\n\nStreamLogs\0223.yandex.cloud.mdb.kafka.v" +
-      "1.StreamClusterLogsRequest\032*.yandex.clou" +
-      "d.mdb.kafka.v1.StreamLogRecord\";\202\323\344\223\0025\0223" +
-      "/managed-kafka/v1/clusters/{cluster_id}:" +
-      "stream_logs0\001\022\277\001\n\016ListOperations\0227.yande" +
-      "x.cloud.mdb.kafka.v1.ListClusterOperatio" +
-      "nsRequest\0328.yandex.cloud.mdb.kafka.v1.Li" +
-      "stClusterOperationsResponse\":\202\323\344\223\0024\0222/ma" +
-      "naged-kafka/v1/clusters/{cluster_id}/ope" +
-      "rations\022\253\001\n\tListHosts\0222.yandex.cloud.mdb" +
-      ".kafka.v1.ListClusterHostsRequest\0323.yand" +
-      "ex.cloud.mdb.kafka.v1.ListClusterHostsRe" +
-      "sponse\"5\202\323\344\223\002/\022-/managed-kafka/v1/cluste" +
-      "rs/{cluster_id}/hostsBd\n\035yandex.cloud.ap" +
-      "i.mdb.kafka.v1ZCgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/kafka/v1;ka" +
-      "fkab\006proto3"
+      "ion\"Y\202\323\344\223\0021\",/managed-kafka/v1/clusters/" +
+      "{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMet" +
+      "adata\022\007Cluster\022\264\001\n\005Start\022..yandex.cloud." +
+      "mdb.kafka.v1.StartClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"X\202\323\344\223\002/\"-/ma" +
+      "naged-kafka/v1/clusters/{cluster_id}:sta" +
+      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\260\001" +
+      "\n\004Stop\022-.yandex.cloud.mdb.kafka.v1.StopC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"V\202\323\344\223\002.\",/managed-kafka/v1/clus" +
+      "ters/{cluster_id}:stop\262\322*\036\n\023StopClusterM" +
+      "etadata\022\007Cluster\022\351\001\n\025RescheduleMaintenan" +
+      "ce\0227.yandex.cloud.mdb.kafka.v1.Reschedul" +
+      "eMaintenanceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"t\202\323\344\223\002B\"=/managed-kafka/v" +
+      "1/clusters/{cluster_id}:rescheduleMainte" +
+      "nance:\001*\262\322*(\n\035RescheduleMaintenanceMetad" +
+      "ata\022\007Cluster\022\247\001\n\010ListLogs\0221.yandex.cloud" +
+      ".mdb.kafka.v1.ListClusterLogsRequest\0322.y" +
+      "andex.cloud.mdb.kafka.v1.ListClusterLogs" +
+      "Response\"4\202\323\344\223\002.\022,/managed-kafka/v1/clus" +
+      "ters/{cluster_id}:logs\022\254\001\n\nStreamLogs\0223." +
+      "yandex.cloud.mdb.kafka.v1.StreamClusterL" +
+      "ogsRequest\032*.yandex.cloud.mdb.kafka.v1.S" +
+      "treamLogRecord\";\202\323\344\223\0025\0223/managed-kafka/v" +
+      "1/clusters/{cluster_id}:stream_logs0\001\022\277\001" +
+      "\n\016ListOperations\0227.yandex.cloud.mdb.kafk" +
+      "a.v1.ListClusterOperationsRequest\0328.yand" +
+      "ex.cloud.mdb.kafka.v1.ListClusterOperati" +
+      "onsResponse\":\202\323\344\223\0024\0222/managed-kafka/v1/c" +
+      "lusters/{cluster_id}/operations\022\253\001\n\tList" +
+      "Hosts\0222.yandex.cloud.mdb.kafka.v1.ListCl" +
+      "usterHostsRequest\0323.yandex.cloud.mdb.kaf" +
+      "ka.v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022-" +
+      "/managed-kafka/v1/clusters/{cluster_id}/" +
+      "hostsBd\n\035yandex.cloud.api.mdb.kafka.v1ZC" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29913,7 +30099,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", "SubnetIds", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", "MaintenanceWindow", "NetworkId", "SubnetIds", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

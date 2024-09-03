@@ -155,10 +155,15 @@ public final class Access {
      * <pre>
      * ID of the subject.
      * It can contain one of the following values:
-     * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+     * * `allAuthenticatedUsers`: A special public group that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
-     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     * * `allUsers`: A special public group that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
+     *    It can be used only if the [type] is `system`.
+     * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+     * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
@@ -171,10 +176,15 @@ public final class Access {
      * <pre>
      * ID of the subject.
      * It can contain one of the following values:
-     * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+     * * `allAuthenticatedUsers`: A special public group that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
-     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     * * `allUsers`: A special public group that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
+     *    It can be used only if the [type] is `system`.
+     * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+     * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
@@ -314,10 +324,15 @@ public final class Access {
      * <pre>
      * ID of the subject.
      * It can contain one of the following values:
-     * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+     * * `allAuthenticatedUsers`: A special public group that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
-     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     * * `allUsers`: A special public group that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
+     *    It can be used only if the [type] is `system`.
+     * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+     * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
@@ -342,10 +357,15 @@ public final class Access {
      * <pre>
      * ID of the subject.
      * It can contain one of the following values:
-     * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+     * * `allAuthenticatedUsers`: A special public group that represents anyone
      *    who is authenticated. It can be used only if the [type] is `system`.
-     * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+     * * `allUsers`: A special public group that represents anyone. No authentication is required.
      *    For example, you don't need to specify the IAM token in an API query.
+     *    It can be used only if the [type] is `system`.
+     * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+     * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+     *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
      * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
      *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
      * </pre>
@@ -750,10 +770,15 @@ public final class Access {
        * <pre>
        * ID of the subject.
        * It can contain one of the following values:
-       * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+       * * `allAuthenticatedUsers`: A special public group that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
-       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       * * `allUsers`: A special public group that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
+       *    It can be used only if the [type] is `system`.
+       * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+       * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
@@ -777,10 +802,15 @@ public final class Access {
        * <pre>
        * ID of the subject.
        * It can contain one of the following values:
-       * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+       * * `allAuthenticatedUsers`: A special public group that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
-       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       * * `allUsers`: A special public group that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
+       *    It can be used only if the [type] is `system`.
+       * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+       * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
@@ -805,10 +835,15 @@ public final class Access {
        * <pre>
        * ID of the subject.
        * It can contain one of the following values:
-       * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+       * * `allAuthenticatedUsers`: A special public group that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
-       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       * * `allUsers`: A special public group that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
+       *    It can be used only if the [type] is `system`.
+       * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+       * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
@@ -831,10 +866,15 @@ public final class Access {
        * <pre>
        * ID of the subject.
        * It can contain one of the following values:
-       * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+       * * `allAuthenticatedUsers`: A special public group that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
-       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       * * `allUsers`: A special public group that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
+       *    It can be used only if the [type] is `system`.
+       * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+       * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>
@@ -852,10 +892,15 @@ public final class Access {
        * <pre>
        * ID of the subject.
        * It can contain one of the following values:
-       * * `allAuthenticatedUsers`: A special system identifier that represents anyone
+       * * `allAuthenticatedUsers`: A special public group that represents anyone
        *    who is authenticated. It can be used only if the [type] is `system`.
-       * * `allUsers`: A special system identifier that represents anyone. No authentication is required.
+       * * `allUsers`: A special public group that represents anyone. No authentication is required.
        *    For example, you don't need to specify the IAM token in an API query.
+       *    It can be used only if the [type] is `system`.
+       * * `group:organization:&lt;id&gt;:users`: A special system group that represents all members of organization
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
+       * * `group:federation:&lt;id&gt;:users`: A special system group that represents all users of federation
+       *    with given &lt;id&gt;. It can be used only if the [type] is `system`.
        * * `&lt;cloud generated id&gt;`: An identifier that represents a user account.
        *    It can be used only if the [type] is `userAccount`, `federatedUser` or `serviceAccount`.
        * </pre>

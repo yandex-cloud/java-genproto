@@ -634,6 +634,88 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.greenplum.v1.CloudStorage cloud_storage = 26;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.CloudStorageOrBuilder getCloudStorageOrBuilder();
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @return A list containing the masterHostGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getMasterHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @return The count of masterHostGroupIds.
+     */
+    int getMasterHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @param index The index of the element to return.
+     * @return The masterHostGroupIds at the given index.
+     */
+    java.lang.String getMasterHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the masterHostGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMasterHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @return A list containing the segmentHostGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getSegmentHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @return The count of segmentHostGroupIds.
+     */
+    int getSegmentHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @param index The index of the element to return.
+     * @return The segmentHostGroupIds at the given index.
+     */
+    java.lang.String getSegmentHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segmentHostGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSegmentHostGroupIdsBytes(int index);
   }
   /**
    * <pre>
@@ -664,6 +746,8 @@ public final class ClusterOuterClass {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       userName_ = "";
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -915,6 +999,24 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                masterHostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              masterHostGroupIds_.add(s);
+              break;
+            }
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+                segmentHostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              segmentHostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -938,6 +1040,12 @@ public final class ClusterOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000008) != 0)) {
           hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          masterHostGroupIds_ = masterHostGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000020) != 0)) {
+          segmentHostGroupIds_ = segmentHostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2486,6 +2594,108 @@ public final class ClusterOuterClass {
       return getCloudStorage();
     }
 
+    public static final int MASTER_HOST_GROUP_IDS_FIELD_NUMBER = 27;
+    private com.google.protobuf.LazyStringList masterHostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @return A list containing the masterHostGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMasterHostGroupIdsList() {
+      return masterHostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @return The count of masterHostGroupIds.
+     */
+    public int getMasterHostGroupIdsCount() {
+      return masterHostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @param index The index of the element to return.
+     * @return The masterHostGroupIds at the given index.
+     */
+    public java.lang.String getMasterHostGroupIds(int index) {
+      return masterHostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the master subcluster.
+     * </pre>
+     *
+     * <code>repeated string master_host_group_ids = 27;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the masterHostGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMasterHostGroupIdsBytes(int index) {
+      return masterHostGroupIds_.getByteString(index);
+    }
+
+    public static final int SEGMENT_HOST_GROUP_IDS_FIELD_NUMBER = 28;
+    private com.google.protobuf.LazyStringList segmentHostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @return A list containing the segmentHostGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSegmentHostGroupIdsList() {
+      return segmentHostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @return The count of segmentHostGroupIds.
+     */
+    public int getSegmentHostGroupIdsCount() {
+      return segmentHostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @param index The index of the element to return.
+     * @return The segmentHostGroupIds at the given index.
+     */
+    public java.lang.String getSegmentHostGroupIds(int index) {
+      return segmentHostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the segment subcluster.
+     * </pre>
+     *
+     * <code>repeated string segment_host_group_ids = 28;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the segmentHostGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSegmentHostGroupIdsBytes(int index) {
+      return segmentHostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2577,6 +2787,12 @@ public final class ClusterOuterClass {
       }
       if (cloudStorage_ != null) {
         output.writeMessage(26, getCloudStorage());
+      }
+      for (int i = 0; i < masterHostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, masterHostGroupIds_.getRaw(i));
+      }
+      for (int i = 0; i < segmentHostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, segmentHostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2695,6 +2911,22 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getCloudStorage());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < masterHostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(masterHostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getMasterHostGroupIdsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < segmentHostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(segmentHostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSegmentHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2781,6 +3013,10 @@ public final class ClusterOuterClass {
         if (!getCloudStorage()
             .equals(other.getCloudStorage())) return false;
       }
+      if (!getMasterHostGroupIdsList()
+          .equals(other.getMasterHostGroupIdsList())) return false;
+      if (!getSegmentHostGroupIdsList()
+          .equals(other.getSegmentHostGroupIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2869,6 +3105,14 @@ public final class ClusterOuterClass {
       if (hasCloudStorage()) {
         hash = (37 * hash) + CLOUD_STORAGE_FIELD_NUMBER;
         hash = (53 * hash) + getCloudStorage().hashCode();
+      }
+      if (getMasterHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + MASTER_HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getMasterHostGroupIdsList().hashCode();
+      }
+      if (getSegmentHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + SEGMENT_HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentHostGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3115,6 +3359,10 @@ public final class ClusterOuterClass {
           cloudStorage_ = null;
           cloudStorageBuilder_ = null;
         }
+        masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -3216,6 +3464,16 @@ public final class ClusterOuterClass {
         } else {
           result.cloudStorage_ = cloudStorageBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          masterHostGroupIds_ = masterHostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.masterHostGroupIds_ = masterHostGroupIds_;
+        if (((bitField0_ & 0x00000020) != 0)) {
+          segmentHostGroupIds_ = segmentHostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.segmentHostGroupIds_ = segmentHostGroupIds_;
         onBuilt();
         return result;
       }
@@ -3380,6 +3638,26 @@ public final class ClusterOuterClass {
         }
         if (other.hasCloudStorage()) {
           mergeCloudStorage(other.getCloudStorage());
+        }
+        if (!other.masterHostGroupIds_.isEmpty()) {
+          if (masterHostGroupIds_.isEmpty()) {
+            masterHostGroupIds_ = other.masterHostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureMasterHostGroupIdsIsMutable();
+            masterHostGroupIds_.addAll(other.masterHostGroupIds_);
+          }
+          onChanged();
+        }
+        if (!other.segmentHostGroupIds_.isEmpty()) {
+          if (segmentHostGroupIds_.isEmpty()) {
+            segmentHostGroupIds_ = other.segmentHostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureSegmentHostGroupIdsIsMutable();
+            segmentHostGroupIds_.addAll(other.segmentHostGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6393,6 +6671,298 @@ public final class ClusterOuterClass {
         }
         return cloudStorageBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMasterHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          masterHostGroupIds_ = new com.google.protobuf.LazyStringArrayList(masterHostGroupIds_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @return A list containing the masterHostGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMasterHostGroupIdsList() {
+        return masterHostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @return The count of masterHostGroupIds.
+       */
+      public int getMasterHostGroupIdsCount() {
+        return masterHostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param index The index of the element to return.
+       * @return The masterHostGroupIds at the given index.
+       */
+      public java.lang.String getMasterHostGroupIds(int index) {
+        return masterHostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the masterHostGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMasterHostGroupIdsBytes(int index) {
+        return masterHostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param index The index to set the value at.
+       * @param value The masterHostGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMasterHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMasterHostGroupIdsIsMutable();
+        masterHostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param value The masterHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMasterHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMasterHostGroupIdsIsMutable();
+        masterHostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param values The masterHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMasterHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMasterHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, masterHostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMasterHostGroupIds() {
+        masterHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the master subcluster.
+       * </pre>
+       *
+       * <code>repeated string master_host_group_ids = 27;</code>
+       * @param value The bytes of the masterHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMasterHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMasterHostGroupIdsIsMutable();
+        masterHostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSegmentHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          segmentHostGroupIds_ = new com.google.protobuf.LazyStringArrayList(segmentHostGroupIds_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @return A list containing the segmentHostGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSegmentHostGroupIdsList() {
+        return segmentHostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @return The count of segmentHostGroupIds.
+       */
+      public int getSegmentHostGroupIdsCount() {
+        return segmentHostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param index The index of the element to return.
+       * @return The segmentHostGroupIds at the given index.
+       */
+      public java.lang.String getSegmentHostGroupIds(int index) {
+        return segmentHostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the segmentHostGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSegmentHostGroupIdsBytes(int index) {
+        return segmentHostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param index The index to set the value at.
+       * @param value The segmentHostGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSegmentHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentHostGroupIdsIsMutable();
+        segmentHostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param value The segmentHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegmentHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSegmentHostGroupIdsIsMutable();
+        segmentHostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param values The segmentHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSegmentHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSegmentHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, segmentHostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSegmentHostGroupIds() {
+        segmentHostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the segment subcluster.
+       * </pre>
+       *
+       * <code>repeated string segment_host_group_ids = 28;</code>
+       * @param value The bytes of the segmentHostGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSegmentHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSegmentHostGroupIdsIsMutable();
+        segmentHostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6553,16 +7123,28 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigSetOrBuilder getPoolOrBuilder();
 
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      * @return Whether the backgroundActivities field is set.
      */
     boolean hasBackgroundActivities();
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      * @return The backgroundActivities.
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getBackgroundActivities();
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder getBackgroundActivitiesOrBuilder();
@@ -7013,6 +7595,10 @@ public final class ClusterOuterClass {
     public static final int BACKGROUND_ACTIVITIES_FIELD_NUMBER = 6;
     private yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig backgroundActivities_;
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      * @return Whether the backgroundActivities field is set.
      */
@@ -7021,6 +7607,10 @@ public final class ClusterOuterClass {
       return backgroundActivities_ != null;
     }
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      * @return The backgroundActivities.
      */
@@ -7029,6 +7619,10 @@ public final class ClusterOuterClass {
       return backgroundActivities_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance() : backgroundActivities_;
     }
     /**
+     * <pre>
+     * Managed Greenplum® background tasks configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
      */
     @java.lang.Override
@@ -8463,6 +9057,10 @@ public final class ClusterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder> backgroundActivitiesBuilder_;
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        * @return Whether the backgroundActivities field is set.
        */
@@ -8470,6 +9068,10 @@ public final class ClusterOuterClass {
         return backgroundActivitiesBuilder_ != null || backgroundActivities_ != null;
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        * @return The backgroundActivities.
        */
@@ -8481,6 +9083,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public Builder setBackgroundActivities(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig value) {
@@ -8497,6 +9103,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public Builder setBackgroundActivities(
@@ -8511,6 +9121,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public Builder mergeBackgroundActivities(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig value) {
@@ -8529,6 +9143,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public Builder clearBackgroundActivities() {
@@ -8543,6 +9161,10 @@ public final class ClusterOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder getBackgroundActivitiesBuilder() {
@@ -8551,6 +9173,10 @@ public final class ClusterOuterClass {
         return getBackgroundActivitiesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder getBackgroundActivitiesOrBuilder() {
@@ -8562,6 +9188,10 @@ public final class ClusterOuterClass {
         }
       }
       /**
+       * <pre>
+       * Managed Greenplum® background tasks configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11636,6 +12266,16 @@ public final class ClusterOuterClass {
      * @return The dataTransfer.
      */
     boolean getDataTransfer();
+
+    /**
+     * <pre>
+     * Allow access for YandexQuery.
+     * </pre>
+     *
+     * <code>bool yandex_query = 5;</code>
+     * @return The yandexQuery.
+     */
+    boolean getYandexQuery();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Access}
@@ -11695,6 +12335,11 @@ public final class ClusterOuterClass {
             case 24: {
 
               dataTransfer_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              yandexQuery_ = input.readBool();
               break;
             }
             default: {
@@ -11774,6 +12419,21 @@ public final class ClusterOuterClass {
       return dataTransfer_;
     }
 
+    public static final int YANDEX_QUERY_FIELD_NUMBER = 5;
+    private boolean yandexQuery_;
+    /**
+     * <pre>
+     * Allow access for YandexQuery.
+     * </pre>
+     *
+     * <code>bool yandex_query = 5;</code>
+     * @return The yandexQuery.
+     */
+    @java.lang.Override
+    public boolean getYandexQuery() {
+      return yandexQuery_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11797,6 +12457,9 @@ public final class ClusterOuterClass {
       if (dataTransfer_ != false) {
         output.writeBool(3, dataTransfer_);
       }
+      if (yandexQuery_ != false) {
+        output.writeBool(5, yandexQuery_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11817,6 +12480,10 @@ public final class ClusterOuterClass {
       if (dataTransfer_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, dataTransfer_);
+      }
+      if (yandexQuery_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, yandexQuery_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11839,6 +12506,8 @@ public final class ClusterOuterClass {
           != other.getWebSql()) return false;
       if (getDataTransfer()
           != other.getDataTransfer()) return false;
+      if (getYandexQuery()
+          != other.getYandexQuery()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11859,6 +12528,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DATA_TRANSFER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataTransfer());
+      hash = (37 * hash) + YANDEX_QUERY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getYandexQuery());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11998,6 +12670,8 @@ public final class ClusterOuterClass {
 
         dataTransfer_ = false;
 
+        yandexQuery_ = false;
+
         return this;
       }
 
@@ -12027,6 +12701,7 @@ public final class ClusterOuterClass {
         result.dataLens_ = dataLens_;
         result.webSql_ = webSql_;
         result.dataTransfer_ = dataTransfer_;
+        result.yandexQuery_ = yandexQuery_;
         onBuilt();
         return result;
       }
@@ -12083,6 +12758,9 @@ public final class ClusterOuterClass {
         }
         if (other.getDataTransfer() != false) {
           setDataTransfer(other.getDataTransfer());
+        }
+        if (other.getYandexQuery() != false) {
+          setYandexQuery(other.getYandexQuery());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12238,6 +12916,49 @@ public final class ClusterOuterClass {
       public Builder clearDataTransfer() {
         
         dataTransfer_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean yandexQuery_ ;
+      /**
+       * <pre>
+       * Allow access for YandexQuery.
+       * </pre>
+       *
+       * <code>bool yandex_query = 5;</code>
+       * @return The yandexQuery.
+       */
+      @java.lang.Override
+      public boolean getYandexQuery() {
+        return yandexQuery_;
+      }
+      /**
+       * <pre>
+       * Allow access for YandexQuery.
+       * </pre>
+       *
+       * <code>bool yandex_query = 5;</code>
+       * @param value The yandexQuery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYandexQuery(boolean value) {
+        
+        yandexQuery_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for YandexQuery.
+       * </pre>
+       *
+       * <code>bool yandex_query = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYandexQuery() {
+        
+        yandexQuery_ = false;
         onChanged();
         return this;
       }
@@ -15018,7 +15739,7 @@ public final class ClusterOuterClass {
       "1/config.proto\032/yandex/cloud/mdb/greenpl" +
       "um/v1/maintenance.proto\032\'yandex/cloud/md" +
       "b/greenplum/v1/pxf.proto\032\035yandex/cloud/v" +
-      "alidation.proto\"\373\013\n\007Cluster\022\n\n\002id\030\001 \001(\t\022" +
+      "alidation.proto\"\272\014\n\007Cluster\022\n\n\002id\030\001 \001(\t\022" +
       "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\032\n\004name\030\004 \001(\t" +
       "B\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132..yandex." +
@@ -15048,58 +15769,61 @@ public final class ClusterOuterClass {
       "cluster_config\030\030 \001(\0132/.yandex.cloud.mdb." +
       "greenplum.v1.ClusterConfigSet\022B\n\rcloud_s" +
       "torage\030\032 \001(\0132+.yandex.cloud.mdb.greenplu" +
-      "m.v1.CloudStorage\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022" +
-      "\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTI" +
-      "ON\020\001\022\r\n\tPRESTABLE\020\002\"O\n\006Health\022\022\n\016HEALTH_" +
-      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
-      "ED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006Status\022\022\n\016STATUS" +
-      "_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n" +
-      "\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007" +
-      "STOPPED\020\006\022\014\n\010STARTING\020\007J\004\010\031\020\032\"\317\006\n\020Cluste" +
-      "rConfigSet\022s\n\031greenplum_config_set_6_17\030" +
-      "\001 \001(\01325.yandex.cloud.mdb.greenplum.v1.Gr" +
-      "eenplumConfigSet6_17H\000R\027greenplumConfigS" +
-      "et_6_17\022s\n\031greenplum_config_set_6_19\030\002 \001" +
-      "(\01325.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfigSet6_19H\000R\027greenplumConfigSet_" +
-      "6_19\022s\n\031greenplum_config_set_6_21\030\004 \001(\0132" +
-      "5.yandex.cloud.mdb.greenplum.v1.Greenplu" +
-      "mConfigSet6_21H\000R\027greenplumConfigSet_6_2" +
-      "1\022s\n\031greenplum_config_set_6_22\030\005 \001(\01325.y" +
-      "andex.cloud.mdb.greenplum.v1.GreenplumCo" +
-      "nfigSet6_22H\000R\027greenplumConfigSet_6_22\022j" +
-      "\n\026greenplum_config_set_6\030\t \001(\01322.yandex." +
-      "cloud.mdb.greenplum.v1.GreenplumConfigSe" +
-      "t6H\000R\024greenplumConfigSet_6\022F\n\004pool\030\003 \001(\013" +
-      "28.yandex.cloud.mdb.greenplum.v1.Connect" +
-      "ionPoolerConfigSet\022X\n\025background_activit" +
-      "ies\030\006 \001(\01329.yandex.cloud.mdb.greenplum.v" +
-      "1.BackgroundActivitiesConfig\022?\n\npxf_conf" +
-      "ig\030\010 \001(\0132+.yandex.cloud.mdb.greenplum.v1" +
-      ".PXFConfigSetB\022\n\020greenplum_configJ\004\010\007\020\010\"" +
-      "=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
-      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\260\002\n\017GreenplumConf" +
-      "ig\022\017\n\007version\030\001 \001(\t\0223\n\023backup_window_sta" +
-      "rt\030\002 \001(\0132\026.google.type.TimeOfDay\022H\n\031back" +
-      "up_retain_period_days\030\t \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\010\372\3071\0041-60\0225\n\006access\030\003 \001" +
-      "(\0132%.yandex.cloud.mdb.greenplum.v1.Acces" +
-      "s\022\031\n\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_i" +
-      "d\030\005 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\006 " +
-      "\001(\010J\004\010\007\020\t\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017" +
-      "\n\007web_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\326" +
-      "\001\n\026GreenplumRestoreConfig\0223\n\023backup_wind" +
-      "ow_start\030\001 \001(\0132\026.google.type.TimeOfDay\0225" +
-      "\n\006access\030\002 \001(\0132%.yandex.cloud.mdb.greenp" +
-      "lum.v1.Access\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50" +
-      "\022\033\n\tsubnet_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_" +
-      "public_ip\030\005 \001(\010\"A\n\020RestoreResources\022\032\n\022r" +
-      "esource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001" +
-      "(\003\"\036\n\014CloudStorage\022\016\n\006enable\030\001 \001(\010Bp\n!ya" +
-      "ndex.cloud.api.mdb.greenplum.v1ZKgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/greenplum/v1;greenplumb\006proto3"
+      "m.v1.CloudStorage\022\035\n\025master_host_group_i" +
+      "ds\030\033 \003(\t\022\036\n\026segment_host_group_ids\030\034 \003(\t" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UN" +
+      "SPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE" +
+      "\020\002\"O\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\016\n\nUNBALANCE" +
+      "D\020\004\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CRE" +
+      "ATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDAT" +
+      "ING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STAR" +
+      "TING\020\007J\004\010\031\020\032\"\317\006\n\020ClusterConfigSet\022s\n\031gre" +
+      "enplum_config_set_6_17\030\001 \001(\01325.yandex.cl" +
+      "oud.mdb.greenplum.v1.GreenplumConfigSet6" +
+      "_17H\000R\027greenplumConfigSet_6_17\022s\n\031greenp" +
+      "lum_config_set_6_19\030\002 \001(\01325.yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumConfigSet6_19" +
+      "H\000R\027greenplumConfigSet_6_19\022s\n\031greenplum" +
+      "_config_set_6_21\030\004 \001(\01325.yandex.cloud.md" +
+      "b.greenplum.v1.GreenplumConfigSet6_21H\000R" +
+      "\027greenplumConfigSet_6_21\022s\n\031greenplum_co" +
+      "nfig_set_6_22\030\005 \001(\01325.yandex.cloud.mdb.g" +
+      "reenplum.v1.GreenplumConfigSet6_22H\000R\027gr" +
+      "eenplumConfigSet_6_22\022j\n\026greenplum_confi" +
+      "g_set_6\030\t \001(\01322.yandex.cloud.mdb.greenpl" +
+      "um.v1.GreenplumConfigSet6H\000R\024greenplumCo" +
+      "nfigSet_6\022F\n\004pool\030\003 \001(\01328.yandex.cloud.m" +
+      "db.greenplum.v1.ConnectionPoolerConfigSe" +
+      "t\022X\n\025background_activities\030\006 \001(\01329.yande" +
+      "x.cloud.mdb.greenplum.v1.BackgroundActiv" +
+      "itiesConfig\022?\n\npxf_config\030\010 \001(\0132+.yandex" +
+      ".cloud.mdb.greenplum.v1.PXFConfigSetB\022\n\020" +
+      "greenplum_configJ\004\010\007\020\010\"=\n\nMonitoring\022\014\n\004" +
+      "name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030" +
+      "\003 \001(\t\"\260\002\n\017GreenplumConfig\022\017\n\007version\030\001 \001" +
+      "(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.google" +
+      ".type.TimeOfDay\022H\n\031backup_retain_period_" +
+      "days\030\t \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\010\372\3071\0041-60\0225\n\006access\030\003 \001(\0132%.yandex.cloud" +
+      ".mdb.greenplum.v1.Access\022\031\n\007zone_id\030\004 \001(" +
+      "\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101\004<=50" +
+      "\022\030\n\020assign_public_ip\030\006 \001(\010J\004\010\007\020\t\"_\n\006Acce" +
+      "ss\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025" +
+      "\n\rdata_transfer\030\003 \001(\010\022\024\n\014yandex_query\030\005 " +
+      "\001(\010J\004\010\004\020\005\"\326\001\n\026GreenplumRestoreConfig\0223\n\023" +
+      "backup_window_start\030\001 \001(\0132\026.google.type." +
+      "TimeOfDay\0225\n\006access\030\002 \001(\0132%.yandex.cloud" +
+      ".mdb.greenplum.v1.Access\022\031\n\007zone_id\030\003 \001(" +
+      "\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(\tB\010\212\3101\004<=50" +
+      "\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n\020RestoreRes" +
+      "ources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdi" +
+      "sk_size\030\002 \001(\003\"\036\n\014CloudStorage\022\016\n\006enable\030" +
+      "\001 \001(\010Bp\n!yandex.cloud.api.mdb.greenplum." +
+      "v1ZKgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/greenplum/v1;greenplumb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15117,7 +15841,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Config", "Description", "Labels", "Environment", "Monitoring", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentHostCount", "SegmentInHost", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "UserName", "DeletionProtection", "HostGroupIds", "ClusterConfig", "CloudStorage", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Config", "Description", "Labels", "Environment", "Monitoring", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentHostCount", "SegmentInHost", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "UserName", "DeletionProtection", "HostGroupIds", "ClusterConfig", "CloudStorage", "MasterHostGroupIds", "SegmentHostGroupIds", });
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -15147,7 +15871,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", "WebSql", "DataTransfer", });
+        new java.lang.String[] { "DataLens", "WebSql", "DataTransfer", "YandexQuery", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumRestoreConfig_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumRestoreConfig_fieldAccessorTable = new

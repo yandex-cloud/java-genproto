@@ -15062,6 +15062,16 @@ public final class ClusterOuterClass {
      * @return The dataLens.
      */
     boolean getDataLens();
+
+    /**
+     * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     * @return The webSql.
+     */
+    boolean getWebSql();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.Access}
@@ -15113,6 +15123,11 @@ public final class ClusterOuterClass {
               dataLens_ = input.readBool();
               break;
             }
+            case 16: {
+
+              webSql_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15160,6 +15175,21 @@ public final class ClusterOuterClass {
       return dataLens_;
     }
 
+    public static final int WEB_SQL_FIELD_NUMBER = 2;
+    private boolean webSql_;
+    /**
+     * <pre>
+     * Allow access for Web SQL.
+     * </pre>
+     *
+     * <code>bool web_sql = 2;</code>
+     * @return The webSql.
+     */
+    @java.lang.Override
+    public boolean getWebSql() {
+      return webSql_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15177,6 +15207,9 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         output.writeBool(1, dataLens_);
       }
+      if (webSql_ != false) {
+        output.writeBool(2, webSql_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15189,6 +15222,10 @@ public final class ClusterOuterClass {
       if (dataLens_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, dataLens_);
+      }
+      if (webSql_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, webSql_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15207,6 +15244,8 @@ public final class ClusterOuterClass {
 
       if (getDataLens()
           != other.getDataLens()) return false;
+      if (getWebSql()
+          != other.getWebSql()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15221,6 +15260,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDataLens());
+      hash = (37 * hash) + WEB_SQL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWebSql());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15356,6 +15398,8 @@ public final class ClusterOuterClass {
         super.clear();
         dataLens_ = false;
 
+        webSql_ = false;
+
         return this;
       }
 
@@ -15383,6 +15427,7 @@ public final class ClusterOuterClass {
       public yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Access buildPartial() {
         yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Access result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Access(this);
         result.dataLens_ = dataLens_;
+        result.webSql_ = webSql_;
         onBuilt();
         return result;
       }
@@ -15433,6 +15478,9 @@ public final class ClusterOuterClass {
         if (other == yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Access.getDefaultInstance()) return this;
         if (other.getDataLens() != false) {
           setDataLens(other.getDataLens());
+        }
+        if (other.getWebSql() != false) {
+          setWebSql(other.getWebSql());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15502,6 +15550,49 @@ public final class ClusterOuterClass {
       public Builder clearDataLens() {
         
         dataLens_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean webSql_ ;
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @return The webSql.
+       */
+      @java.lang.Override
+      public boolean getWebSql() {
+        return webSql_;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @param value The webSql to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebSql(boolean value) {
+        
+        webSql_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for Web SQL.
+       * </pre>
+       *
+       * <code>bool web_sql = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebSql() {
+        
+        webSql_ = false;
         onChanged();
         return this;
       }
@@ -16908,17 +16999,17 @@ public final class ClusterOuterClass {
       "\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_" +
       "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResour" +
       "ces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_" +
-      "size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Acce" +
-      "ss\022\021\n\tdata_lens\030\001 \001(\010\"\347\001\n\023DiskSizeAutosc" +
-      "aling\022K\n\027planned_usage_threshold\030\001 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-1" +
-      "00\022M\n\031emergency_usage_threshold\030\002 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-10" +
-      "0\0224\n\017disk_size_limit\030\003 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueBd\n\035yandex.cloud.api.mdb." +
-      "redis.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/redis/v1;redisb\006p" +
-      "roto3"
+      "size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Acce" +
+      "ss\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\347" +
+      "\001\n\023DiskSizeAutoscaling\022K\n\027planned_usage_" +
+      "threshold\030\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_t" +
+      "hreshold\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64ValueBd\n\035yand" +
+      "ex.cloud.api.mdb.redis.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/mdb/" +
+      "redis/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16987,7 +17078,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Access_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Access_descriptor,
-        new java.lang.String[] { "DataLens", });
+        new java.lang.String[] { "DataLens", "WebSql", });
     internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_redis_v1_DiskSizeAutoscaling_fieldAccessorTable = new
