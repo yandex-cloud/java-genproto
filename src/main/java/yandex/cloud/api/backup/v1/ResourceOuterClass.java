@@ -4034,6 +4034,26 @@ public final class ResourceOuterClass {
      * @return The resultCode.
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code getResultCode();
+
+    /**
+     * <pre>
+     * Task error message if task finished with not OK code
+     * </pre>
+     *
+     * <code>string error = 13;</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <pre>
+     * Task error message if task finished with not OK code
+     * </pre>
+     *
+     * <code>string error = 13;</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Task}
@@ -4053,6 +4073,7 @@ public final class ResourceOuterClass {
       status_ = 0;
       computeInstanceId_ = "";
       resultCode_ = 0;
+      error_ = "";
     }
 
     @java.lang.Override
@@ -4188,6 +4209,12 @@ public final class ResourceOuterClass {
               int rawValue = input.readEnum();
 
               resultCode_ = rawValue;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              error_ = s;
               break;
             }
             default: {
@@ -5017,6 +5044,52 @@ public final class ResourceOuterClass {
       return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.UNRECOGNIZED : result;
     }
 
+    public static final int ERROR_FIELD_NUMBER = 13;
+    private volatile java.lang.Object error_;
+    /**
+     * <pre>
+     * Task error message if task finished with not OK code
+     * </pre>
+     *
+     * <code>string error = 13;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Task error message if task finished with not OK code
+     * </pre>
+     *
+     * <code>string error = 13;</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5066,6 +5139,9 @@ public final class ResourceOuterClass {
       }
       if (resultCode_ != yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Code.CODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(12, resultCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, error_);
       }
       unknownFields.writeTo(output);
     }
@@ -5122,6 +5198,9 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, resultCode_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, error_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5173,6 +5252,8 @@ public final class ResourceOuterClass {
       if (!getComputeInstanceId()
           .equals(other.getComputeInstanceId())) return false;
       if (resultCode_ != other.resultCode_) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5220,6 +5301,8 @@ public final class ResourceOuterClass {
       hash = (53 * hash) + getComputeInstanceId().hashCode();
       hash = (37 * hash) + RESULT_CODE_FIELD_NUMBER;
       hash = (53 * hash) + resultCode_;
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5397,6 +5480,8 @@ public final class ResourceOuterClass {
 
         resultCode_ = 0;
 
+        error_ = "";
+
         return this;
       }
 
@@ -5455,6 +5540,7 @@ public final class ResourceOuterClass {
         }
         result.computeInstanceId_ = computeInstanceId_;
         result.resultCode_ = resultCode_;
+        result.error_ = error_;
         onBuilt();
         return result;
       }
@@ -5540,6 +5626,10 @@ public final class ResourceOuterClass {
         }
         if (other.resultCode_ != 0) {
           setResultCodeValue(other.getResultCodeValue());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6703,6 +6793,102 @@ public final class ResourceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <pre>
+       * Task error message if task finished with not OK code
+       * </pre>
+       *
+       * <code>string error = 13;</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Task error message if task finished with not OK code
+       * </pre>
+       *
+       * <code>string error = 13;</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Task error message if task finished with not OK code
+       * </pre>
+       *
+       * <code>string error = 13;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task error message if task finished with not OK code
+       * </pre>
+       *
+       * <code>string error = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        
+        error_ = getDefaultInstance().getError();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Task error message if task finished with not OK code
+       * </pre>
+       *
+       * <code>string error = 13;</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        error_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6802,7 +6988,7 @@ public final class ResourceOuterClass {
       "nitStatus\022\033\n\027INIT_STATUS_UNSPECIFIED\020\000\022\017" +
       "\n\013REGISTERING\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED" +
       "_REGISTRATION\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress" +
-      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\250\006\n\004Tas" +
+      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\267\006\n\004Tas" +
       "k\022\n\n\002id\030\001 \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpo" +
       "licy_id\030\003 \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.clo" +
       "ud.backup.v1.Task.Type\0222\n\010progress\030\005 \001(\013" +
@@ -6815,19 +7001,19 @@ public final class ResourceOuterClass {
       "leted_at\030\n \001(\0132\032.google.protobuf.Timesta" +
       "mp\022\033\n\023compute_instance_id\030\013 \001(\t\0226\n\013resul" +
       "t_code\030\014 \001(\0162!.yandex.cloud.backup.v1.Ta" +
-      "sk.Code\"j\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n" +
-      "\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\022\020" +
-      "\n\014APPLY_POLICY\020\004\022\021\n\rREVOKE_POLICY\020\005\"d\n\006S" +
-      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUE" +
-      "D\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED" +
-      "\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPEC" +
-      "IFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022" +
-      "\r\n\tCANCELLED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOU" +
-      "T\020\006*C\n\014ResourceType\022\035\n\031RESOURCE_TYPE_UNS" +
-      "PECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032yand" +
-      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/backup/" +
-      "v1;backupb\006proto3"
+      "sk.Code\022\r\n\005error\030\r \001(\t\"j\n\004Type\022\024\n\020TYPE_U" +
+      "NSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022" +
+      "\014\n\010RECOVERY\020\003\022\020\n\014APPLY_POLICY\020\004\022\021\n\rREVOK" +
+      "E_POLICY\020\005\"d\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STAR" +
+      "TED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code" +
+      "\022\024\n\020CODE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020" +
+      "\002\022\013\n\007WARNING\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDON" +
+      "ED\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014ResourceType\022\035\n\031RE" +
+      "SOURCE_TYPE_UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007" +
+      "\n\003BMS\020\002B_\n\032yandex.cloud.api.backup.v1ZAg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6851,7 +7037,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_backup_v1_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Task_descriptor,
-        new java.lang.String[] { "Id", "Cancellable", "PolicyId", "Type", "Progress", "Status", "EnqueuedAt", "StartedAt", "UpdatedAt", "CompletedAt", "ComputeInstanceId", "ResultCode", });
+        new java.lang.String[] { "Id", "Cancellable", "PolicyId", "Type", "Progress", "Status", "EnqueuedAt", "StartedAt", "UpdatedAt", "CompletedAt", "ComputeInstanceId", "ResultCode", "Error", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

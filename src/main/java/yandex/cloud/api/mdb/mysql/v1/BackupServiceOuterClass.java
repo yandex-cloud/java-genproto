@@ -4080,34 +4080,42 @@ public final class BackupServiceOuterClass {
       "\n.yandex/cloud/mdb/mysql/v1/backup_servi" +
       "ce.proto\022\031yandex.cloud.mdb.mysql.v1\032\034goo" +
       "gle/api/annotations.proto\032\035yandex/cloud/" +
-      "validation.proto\032&yandex/cloud/mdb/mysql" +
-      "/v1/backup.proto\"+\n\020GetBackupRequest\022\027\n\t" +
-      "backup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBackupsRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"m\n\023ListBackupsRespons" +
-      "e\0222\n\007backups\030\001 \003(\0132!.yandex.cloud.mdb.my" +
-      "sql.v1.Backup\022\"\n\017next_page_token\030\002 \001(\tB\t" +
-      "\212\3101\005<=100\".\n\023DeleteBackupRequest\022\027\n\tback" +
-      "up_id\030\001 \001(\tB\004\350\3071\001\"=\n\024DeleteBackupMetadat" +
-      "a\022\021\n\tbackup_id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "2\241\002\n\rBackupService\022\204\001\n\003Get\022+.yandex.clou" +
-      "d.mdb.mysql.v1.GetBackupRequest\032!.yandex" +
-      ".cloud.mdb.mysql.v1.Backup\"-\202\323\344\223\002\'\022%/man" +
-      "aged-mysql/v1/backups/{backup_id}\022\210\001\n\004Li" +
-      "st\022-.yandex.cloud.mdb.mysql.v1.ListBacku" +
-      "psRequest\032..yandex.cloud.mdb.mysql.v1.Li" +
-      "stBackupsResponse\"!\202\323\344\223\002\033\022\031/managed-mysq" +
-      "l/v1/backupsBd\n\035yandex.cloud.api.mdb.mys" +
-      "ql.v1ZCgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/mysql/v1;mysqlb\006prot" +
-      "o3"
+      "validation.proto\032 yandex/cloud/api/opera" +
+      "tion.proto\032&yandex/cloud/operation/opera" +
+      "tion.proto\032&yandex/cloud/mdb/mysql/v1/ba" +
+      "ckup.proto\"+\n\020GetBackupRequest\022\027\n\tbackup" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBackupsRequest\022\037\n" +
+      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"m\n\023ListBackupsResponse\0222\n\007b" +
+      "ackups\030\001 \003(\0132!.yandex.cloud.mdb.mysql.v1" +
+      ".Backup\022\"\n\017next_page_token\030\002 \001(\tB\t\212\3101\005<=" +
+      "100\".\n\023DeleteBackupRequest\022\027\n\tbackup_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"=\n\024DeleteBackupMetadata\022\021\n\tb" +
+      "ackup_id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t2\337\003\n\rB" +
+      "ackupService\022\204\001\n\003Get\022+.yandex.cloud.mdb." +
+      "mysql.v1.GetBackupRequest\032!.yandex.cloud" +
+      ".mdb.mysql.v1.Backup\"-\202\323\344\223\002\'\022%/managed-m" +
+      "ysql/v1/backups/{backup_id}\022\210\001\n\004List\022-.y" +
+      "andex.cloud.mdb.mysql.v1.ListBackupsRequ" +
+      "est\032..yandex.cloud.mdb.mysql.v1.ListBack" +
+      "upsResponse\"!\202\323\344\223\002\033\022\031/managed-mysql/v1/b" +
+      "ackups\022\273\001\n\006Delete\022..yandex.cloud.mdb.mys" +
+      "ql.v1.DeleteBackupRequest\032!.yandex.cloud" +
+      ".operation.Operation\"^\202\323\344\223\002\'*%/managed-m" +
+      "ysql/v1/backups/{backup_id}\262\322*-\n\024DeleteB" +
+      "ackupMetadata\022\025google.protobuf.EmptyBd\n\035" +
+      "yandex.cloud.api.mdb.mysql.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/mysql/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_mysql_v1_GetBackupRequest_descriptor =
@@ -4143,6 +4151,7 @@ public final class BackupServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
@@ -4150,6 +4159,8 @@ public final class BackupServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.getDescriptor();
   }
 

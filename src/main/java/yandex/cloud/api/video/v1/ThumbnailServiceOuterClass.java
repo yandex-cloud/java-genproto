@@ -7044,47 +7044,53 @@ public final class ThumbnailServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n-yandex/cloud/video/v1/thumbnail_servic" +
-      "e.proto\022\025yandex.cloud.video.v1\032 yandex/c" +
-      "loud/api/operation.proto\032&yandex/cloud/o" +
-      "peration/operation.proto\032%yandex/cloud/v" +
-      "ideo/v1/thumbnail.proto\"W\n\024ListThumbnail" +
-      "Request\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tpage_size" +
-      "\030d \001(\003\022\022\n\npage_token\030e \001(\tJ\004\010\002\020d\"l\n\025List" +
-      "ThumbnailResponse\0224\n\nthumbnails\030\001 \003(\0132 ." +
-      "yandex.cloud.video.v1.Thumbnail\022\027\n\017next_" +
-      "page_token\030d \001(\tJ\004\010\002\020d\",\n\026CreateThumbnai" +
-      "lRequest\022\022\n\nchannel_id\030\001 \001(\t\"/\n\027CreateTh" +
-      "umbnailMetadata\022\024\n\014thumbnail_id\030\001 \001(\t\"M\n" +
-      " BatchGenerateDownloadURLsRequest\022\022\n\ncha" +
-      "nnel_id\030\001 \001(\t\022\025\n\rthumbnail_ids\030\002 \003(\t\"g\n!" +
-      "BatchGenerateDownloadURLsResponse\022B\n\rdow" +
-      "nload_urls\030\001 \003(\0132+.yandex.cloud.video.v1" +
-      ".ThumbnailDownloadURL\"B\n\024ThumbnailDownlo" +
-      "adURL\022\024\n\014thumbnail_id\030\001 \001(\t\022\024\n\014download_" +
-      "url\030\002 \001(\t\"9\n!GenerateThumbnailUploadURLR" +
-      "equest\022\024\n\014thumbnail_id\030\001 \001(\t\"8\n\"Generate" +
-      "ThumbnailUploadURLResponse\022\022\n\nupload_url" +
-      "\030\001 \001(\t2\236\004\n\020ThumbnailService\022c\n\004List\022+.ya" +
-      "ndex.cloud.video.v1.ListThumbnailRequest" +
-      "\032,.yandex.cloud.video.v1.ListThumbnailRe" +
-      "sponse\"\000\022\204\001\n\006Create\022-.yandex.cloud.video" +
-      ".v1.CreateThumbnailRequest\032!.yandex.clou" +
-      "d.operation.Operation\"(\262\322*$\n\027CreateThumb" +
-      "nailMetadata\022\tThumbnail\022\220\001\n\031BatchGenerat" +
-      "eDownloadURLs\0227.yandex.cloud.video.v1.Ba" +
-      "tchGenerateDownloadURLsRequest\0328.yandex." +
-      "cloud.video.v1.BatchGenerateDownloadURLs" +
-      "Response\"\000\022\212\001\n\021GenerateUploadURL\0228.yande" +
-      "x.cloud.video.v1.GenerateThumbnailUpload" +
-      "URLRequest\0329.yandex.cloud.video.v1.Gener" +
-      "ateThumbnailUploadURLResponse\"\000B\\\n\031yande" +
-      "x.cloud.api.video.v1Z?github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/video/v1;" +
-      "videob\006proto3"
+      "e.proto\022\025yandex.cloud.video.v1\032\034google/a" +
+      "pi/annotations.proto\032 yandex/cloud/api/o" +
+      "peration.proto\032&yandex/cloud/operation/o" +
+      "peration.proto\032%yandex/cloud/video/v1/th" +
+      "umbnail.proto\"W\n\024ListThumbnailRequest\022\022\n" +
+      "\nchannel_id\030\001 \001(\t\022\021\n\tpage_size\030d \001(\003\022\022\n\n" +
+      "page_token\030e \001(\tJ\004\010\002\020d\"l\n\025ListThumbnailR" +
+      "esponse\0224\n\nthumbnails\030\001 \003(\0132 .yandex.clo" +
+      "ud.video.v1.Thumbnail\022\027\n\017next_page_token" +
+      "\030d \001(\tJ\004\010\002\020d\",\n\026CreateThumbnailRequest\022\022" +
+      "\n\nchannel_id\030\001 \001(\t\"/\n\027CreateThumbnailMet" +
+      "adata\022\024\n\014thumbnail_id\030\001 \001(\t\"M\n BatchGene" +
+      "rateDownloadURLsRequest\022\022\n\nchannel_id\030\001 " +
+      "\001(\t\022\025\n\rthumbnail_ids\030\002 \003(\t\"g\n!BatchGener" +
+      "ateDownloadURLsResponse\022B\n\rdownload_urls" +
+      "\030\001 \003(\0132+.yandex.cloud.video.v1.Thumbnail" +
+      "DownloadURL\"B\n\024ThumbnailDownloadURL\022\024\n\014t" +
+      "humbnail_id\030\001 \001(\t\022\024\n\014download_url\030\002 \001(\t\"" +
+      "9\n!GenerateThumbnailUploadURLRequest\022\024\n\014" +
+      "thumbnail_id\030\001 \001(\t\"8\n\"GenerateThumbnailU" +
+      "ploadURLResponse\022\022\n\nupload_url\030\001 \001(\t2\322\005\n" +
+      "\020ThumbnailService\022\177\n\004List\022+.yandex.cloud" +
+      ".video.v1.ListThumbnailRequest\032,.yandex." +
+      "cloud.video.v1.ListThumbnailResponse\"\034\202\323" +
+      "\344\223\002\026\022\024/video/v1/thumbnails\022\243\001\n\006Create\022-." +
+      "yandex.cloud.video.v1.CreateThumbnailReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "G\202\323\344\223\002\031\"\024/video/v1/thumbnails:\001*\262\322*$\n\027Cr" +
+      "eateThumbnailMetadata\022\tThumbnail\022\311\001\n\031Bat" +
+      "chGenerateDownloadURLs\0227.yandex.cloud.vi" +
+      "deo.v1.BatchGenerateDownloadURLsRequest\032" +
+      "8.yandex.cloud.video.v1.BatchGenerateDow" +
+      "nloadURLsResponse\"9\202\323\344\223\0023\"./video/v1/thu" +
+      "mbnails:batchGenerateDownloadURLs:\001*\022\312\001\n" +
+      "\021GenerateUploadURL\0228.yandex.cloud.video." +
+      "v1.GenerateThumbnailUploadURLRequest\0329.y" +
+      "andex.cloud.video.v1.GenerateThumbnailUp" +
+      "loadURLResponse\"@\202\323\344\223\002:\"5/video/v1/thumb" +
+      "nails/{thumbnail_id}:generateUploadURL:\001" +
+      "*B\\\n\031yandex.cloud.api.video.v1Z?github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.video.v1.ThumbnailOuterClass.getDescriptor(),
@@ -7145,9 +7151,11 @@ public final class ThumbnailServiceOuterClass {
         new java.lang.String[] { "UploadUrl", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.video.v1.ThumbnailOuterClass.getDescriptor();

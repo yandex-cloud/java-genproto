@@ -231,6 +231,33 @@ public final class ChartWidgetOuterClass {
      * @return The freeze.
      */
     yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.FreezeDuration getFreeze();
+
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     * @return Whether the repeat field is set.
+     */
+    boolean hasRepeat();
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     * @return The repeat.
+     */
+    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getRepeat();
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     */
+    yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder getRepeatOrBuilder();
   }
   /**
    * <pre>
@@ -362,6 +389,19 @@ public final class ChartWidgetOuterClass {
               int rawValue = input.readEnum();
 
               freeze_ = rawValue;
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder subBuilder = null;
+              if (repeat_ != null) {
+                subBuilder = repeat_.toBuilder();
+              }
+              repeat_ = input.readMessage(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(repeat_);
+                repeat_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -16901,6 +16941,803 @@ public final class ChartWidgetOuterClass {
 
     }
 
+    public interface RepeatSettingsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @return A list containing the repeatBy.
+       */
+      java.util.List<java.lang.String>
+          getRepeatByList();
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @return The count of repeatBy.
+       */
+      int getRepeatByCount();
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @param index The index of the element to return.
+       * @return The repeatBy at the given index.
+       */
+      java.lang.String getRepeatBy(int index);
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the repeatBy at the given index.
+       */
+      com.google.protobuf.ByteString
+          getRepeatByBytes(int index);
+
+      /**
+       * <pre>
+       * Max number of chart in one row.
+       * </pre>
+       *
+       * <code>int64 max_charts_in_row = 2;</code>
+       * @return The maxChartsInRow.
+       */
+      long getMaxChartsInRow();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings}
+     */
+    public static final class RepeatSettings extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings)
+        RepeatSettingsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RepeatSettings.newBuilder() to construct.
+      private RepeatSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RepeatSettings() {
+        repeatBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RepeatSettings();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RepeatSettings(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  repeatBy_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                repeatBy_.add(s);
+                break;
+              }
+              case 16: {
+
+                maxChartsInRow_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            repeatBy_ = repeatBy_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder.class);
+      }
+
+      public static final int REPEAT_BY_FIELD_NUMBER = 1;
+      private com.google.protobuf.LazyStringList repeatBy_;
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @return A list containing the repeatBy.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRepeatByList() {
+        return repeatBy_;
+      }
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @return The count of repeatBy.
+       */
+      public int getRepeatByCount() {
+        return repeatBy_.size();
+      }
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @param index The index of the element to return.
+       * @return The repeatBy at the given index.
+       */
+      public java.lang.String getRepeatBy(int index) {
+        return repeatBy_.get(index);
+      }
+      /**
+       * <pre>
+       * Parameters to repeat by.
+       * </pre>
+       *
+       * <code>repeated string repeat_by = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the repeatBy at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRepeatByBytes(int index) {
+        return repeatBy_.getByteString(index);
+      }
+
+      public static final int MAX_CHARTS_IN_ROW_FIELD_NUMBER = 2;
+      private long maxChartsInRow_;
+      /**
+       * <pre>
+       * Max number of chart in one row.
+       * </pre>
+       *
+       * <code>int64 max_charts_in_row = 2;</code>
+       * @return The maxChartsInRow.
+       */
+      @java.lang.Override
+      public long getMaxChartsInRow() {
+        return maxChartsInRow_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < repeatBy_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repeatBy_.getRaw(i));
+        }
+        if (maxChartsInRow_ != 0L) {
+          output.writeInt64(2, maxChartsInRow_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < repeatBy_.size(); i++) {
+            dataSize += computeStringSizeNoTag(repeatBy_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getRepeatByList().size();
+        }
+        if (maxChartsInRow_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, maxChartsInRow_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings other = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings) obj;
+
+        if (!getRepeatByList()
+            .equals(other.getRepeatByList())) return false;
+        if (getMaxChartsInRow()
+            != other.getMaxChartsInRow()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getRepeatByCount() > 0) {
+          hash = (37 * hash) + REPEAT_BY_FIELD_NUMBER;
+          hash = (53 * hash) + getRepeatByList().hashCode();
+        }
+        hash = (37 * hash) + MAX_CHARTS_IN_ROW_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getMaxChartsInRow());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings)
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.class, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          repeatBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          maxChartsInRow_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getDefaultInstanceForType() {
+          return yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings build() {
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings buildPartial() {
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings result = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            repeatBy_ = repeatBy_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.repeatBy_ = repeatBy_;
+          result.maxChartsInRow_ = maxChartsInRow_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings) {
+            return mergeFrom((yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings other) {
+          if (other == yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.getDefaultInstance()) return this;
+          if (!other.repeatBy_.isEmpty()) {
+            if (repeatBy_.isEmpty()) {
+              repeatBy_ = other.repeatBy_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRepeatByIsMutable();
+              repeatBy_.addAll(other.repeatBy_);
+            }
+            onChanged();
+          }
+          if (other.getMaxChartsInRow() != 0L) {
+            setMaxChartsInRow(other.getMaxChartsInRow());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.LazyStringList repeatBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureRepeatByIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            repeatBy_ = new com.google.protobuf.LazyStringArrayList(repeatBy_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @return A list containing the repeatBy.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getRepeatByList() {
+          return repeatBy_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @return The count of repeatBy.
+         */
+        public int getRepeatByCount() {
+          return repeatBy_.size();
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param index The index of the element to return.
+         * @return The repeatBy at the given index.
+         */
+        public java.lang.String getRepeatBy(int index) {
+          return repeatBy_.get(index);
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the repeatBy at the given index.
+         */
+        public com.google.protobuf.ByteString
+            getRepeatByBytes(int index) {
+          return repeatBy_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param index The index to set the value at.
+         * @param value The repeatBy to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRepeatBy(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepeatByIsMutable();
+          repeatBy_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param value The repeatBy to add.
+         * @return This builder for chaining.
+         */
+        public Builder addRepeatBy(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRepeatByIsMutable();
+          repeatBy_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param values The repeatBy to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllRepeatBy(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureRepeatByIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, repeatBy_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRepeatBy() {
+          repeatBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Parameters to repeat by.
+         * </pre>
+         *
+         * <code>repeated string repeat_by = 1;</code>
+         * @param value The bytes of the repeatBy to add.
+         * @return This builder for chaining.
+         */
+        public Builder addRepeatByBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureRepeatByIsMutable();
+          repeatBy_.add(value);
+          onChanged();
+          return this;
+        }
+
+        private long maxChartsInRow_ ;
+        /**
+         * <pre>
+         * Max number of chart in one row.
+         * </pre>
+         *
+         * <code>int64 max_charts_in_row = 2;</code>
+         * @return The maxChartsInRow.
+         */
+        @java.lang.Override
+        public long getMaxChartsInRow() {
+          return maxChartsInRow_;
+        }
+        /**
+         * <pre>
+         * Max number of chart in one row.
+         * </pre>
+         *
+         * <code>int64 max_charts_in_row = 2;</code>
+         * @param value The maxChartsInRow to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMaxChartsInRow(long value) {
+          
+          maxChartsInRow_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Max number of chart in one row.
+         * </pre>
+         *
+         * <code>int64 max_charts_in_row = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMaxChartsInRow() {
+          
+          maxChartsInRow_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings)
+      private static final yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings();
+      }
+
+      public static yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RepeatSettings>
+          PARSER = new com.google.protobuf.AbstractParser<RepeatSettings>() {
+        @java.lang.Override
+        public RepeatSettings parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RepeatSettings(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RepeatSettings> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RepeatSettings> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -17255,6 +18092,44 @@ public final class ChartWidgetOuterClass {
       return result == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.FreezeDuration.UNRECOGNIZED : result;
     }
 
+    public static final int REPEAT_FIELD_NUMBER = 10;
+    private yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings repeat_;
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     * @return Whether the repeat field is set.
+     */
+    @java.lang.Override
+    public boolean hasRepeat() {
+      return repeat_ != null;
+    }
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     * @return The repeat.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getRepeat() {
+      return repeat_ == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.getDefaultInstance() : repeat_;
+    }
+    /**
+     * <pre>
+     * Setting for repeat panel / repeat row
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder getRepeatOrBuilder() {
+      return getRepeat();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17295,6 +18170,9 @@ public final class ChartWidgetOuterClass {
       }
       if (freeze_ != yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.FreezeDuration.FREEZE_DURATION_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, freeze_);
+      }
+      if (repeat_ != null) {
+        output.writeMessage(10, getRepeat());
       }
       unknownFields.writeTo(output);
     }
@@ -17338,6 +18216,10 @@ public final class ChartWidgetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, freeze_);
       }
+      if (repeat_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getRepeat());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17379,6 +18261,11 @@ public final class ChartWidgetOuterClass {
       if (getDisplayLegend()
           != other.getDisplayLegend()) return false;
       if (freeze_ != other.freeze_) return false;
+      if (hasRepeat() != other.hasRepeat()) return false;
+      if (hasRepeat()) {
+        if (!getRepeat()
+            .equals(other.getRepeat())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17417,6 +18304,10 @@ public final class ChartWidgetOuterClass {
           getDisplayLegend());
       hash = (37 * hash) + FREEZE_FIELD_NUMBER;
       hash = (53 * hash) + freeze_;
+      if (hasRepeat()) {
+        hash = (37 * hash) + REPEAT_FIELD_NUMBER;
+        hash = (53 * hash) + getRepeat().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17589,6 +18480,12 @@ public final class ChartWidgetOuterClass {
 
         freeze_ = 0;
 
+        if (repeatBuilder_ == null) {
+          repeat_ = null;
+        } else {
+          repeat_ = null;
+          repeatBuilder_ = null;
+        }
         return this;
       }
 
@@ -17645,6 +18542,11 @@ public final class ChartWidgetOuterClass {
         result.title_ = title_;
         result.displayLegend_ = displayLegend_;
         result.freeze_ = freeze_;
+        if (repeatBuilder_ == null) {
+          result.repeat_ = repeat_;
+        } else {
+          result.repeat_ = repeatBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -17745,6 +18647,9 @@ public final class ChartWidgetOuterClass {
         }
         if (other.freeze_ != 0) {
           setFreezeValue(other.getFreezeValue());
+        }
+        if (other.hasRepeat()) {
+          mergeRepeat(other.getRepeat());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18957,6 +19862,161 @@ public final class ChartWidgetOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings repeat_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder> repeatBuilder_;
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       * @return Whether the repeat field is set.
+       */
+      public boolean hasRepeat() {
+        return repeatBuilder_ != null || repeat_ != null;
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       * @return The repeat.
+       */
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings getRepeat() {
+        if (repeatBuilder_ == null) {
+          return repeat_ == null ? yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.getDefaultInstance() : repeat_;
+        } else {
+          return repeatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public Builder setRepeat(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings value) {
+        if (repeatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          repeat_ = value;
+          onChanged();
+        } else {
+          repeatBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public Builder setRepeat(
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder builderForValue) {
+        if (repeatBuilder_ == null) {
+          repeat_ = builderForValue.build();
+          onChanged();
+        } else {
+          repeatBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public Builder mergeRepeat(yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings value) {
+        if (repeatBuilder_ == null) {
+          if (repeat_ != null) {
+            repeat_ =
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.newBuilder(repeat_).mergeFrom(value).buildPartial();
+          } else {
+            repeat_ = value;
+          }
+          onChanged();
+        } else {
+          repeatBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public Builder clearRepeat() {
+        if (repeatBuilder_ == null) {
+          repeat_ = null;
+          onChanged();
+        } else {
+          repeat_ = null;
+          repeatBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder getRepeatBuilder() {
+        
+        onChanged();
+        return getRepeatFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder getRepeatOrBuilder() {
+        if (repeatBuilder_ != null) {
+          return repeatBuilder_.getMessageOrBuilder();
+        } else {
+          return repeat_ == null ?
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.getDefaultInstance() : repeat_;
+        }
+      }
+      /**
+       * <pre>
+       * Setting for repeat panel / repeat row
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.ChartWidget.RepeatSettings repeat = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder> 
+          getRepeatFieldBuilder() {
+        if (repeatBuilder_ == null) {
+          repeatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettings.Builder, yandex.cloud.api.monitoring.v3.ChartWidgetOuterClass.ChartWidget.RepeatSettingsOrBuilder>(
+                  getRepeat(),
+                  getParentForChildren(),
+                  isClean());
+          repeat_ = null;
+        }
+        return repeatBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19085,6 +20145,11 @@ public final class ChartWidgetOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_NameHidingSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19099,7 +20164,7 @@ public final class ChartWidgetOuterClass {
       "gle/protobuf/wrappers.proto\032-yandex/clou" +
       "d/monitoring/v3/downsampling.proto\032,yand" +
       "ex/cloud/monitoring/v3/unit_format.proto" +
-      "\"\347!\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
+      "\"\357\"\n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
       "\002 \001(\0132/.yandex.cloud.monitoring.v3.Chart" +
       "Widget.Queries\022]\n\026visualization_settings" +
       "\030\003 \001(\0132=.yandex.cloud.monitoring.v3.Char" +
@@ -19111,106 +20176,109 @@ public final class ChartWidgetOuterClass {
       "gs\022\023\n\013description\030\006 \001(\t\022\r\n\005title\030\007 \001(\t\022\026" +
       "\n\016display_legend\030\010 \001(\010\022F\n\006freeze\030\t \001(\01626" +
       ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "FreezeDuration\032\334\001\n\007Queries\022G\n\007targets\030\001 " +
-      "\003(\01326.yandex.cloud.monitoring.v3.ChartWi" +
-      "dget.Queries.Target\022>\n\014downsampling\030\002 \001(" +
-      "\0132(.yandex.cloud.monitoring.v3.Downsampl" +
-      "ing\032H\n\006Target\022\r\n\005query\030\001 \001(\t\022\021\n\ttext_mod" +
-      "e\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\304\024" +
-      "\n\025VisualizationSettings\022]\n\004type\030\001 \001(\0162O." +
-      "yandex.cloud.monitoring.v3.ChartWidget.V" +
-      "isualizationSettings.VisualizationType\022\021" +
-      "\n\tnormalize\030\002 \001(\010\022^\n\013interpolate\030\003 \001(\0162I" +
+      "FreezeDuration\022F\n\006repeat\030\n \001(\01326.yandex." +
+      "cloud.monitoring.v3.ChartWidget.RepeatSe" +
+      "ttings\032\334\001\n\007Queries\022G\n\007targets\030\001 \003(\01326.ya" +
+      "ndex.cloud.monitoring.v3.ChartWidget.Que" +
+      "ries.Target\022>\n\014downsampling\030\002 \001(\0132(.yand" +
+      "ex.cloud.monitoring.v3.Downsampling\032H\n\006T" +
+      "arget\022\r\n\005query\030\001 \001(\t\022\021\n\ttext_mode\030\002 \001(\010\022" +
+      "\016\n\006hidden\030\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\304\024\n\025Visual" +
+      "izationSettings\022]\n\004type\030\001 \001(\0162O.yandex.c" +
+      "loud.monitoring.v3.ChartWidget.Visualiza" +
+      "tionSettings.VisualizationType\022\021\n\tnormal" +
+      "ize\030\002 \001(\010\022^\n\013interpolate\030\003 \001(\0162I.yandex." +
+      "cloud.monitoring.v3.ChartWidget.Visualiz" +
+      "ationSettings.Interpolate\022d\n\013aggregation" +
+      "\030\004 \001(\0162O.yandex.cloud.monitoring.v3.Char" +
+      "tWidget.VisualizationSettings.SeriesAggr" +
+      "egation\022p\n\025color_scheme_settings\030\005 \001(\0132Q" +
       ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "VisualizationSettings.Interpolate\022d\n\013agg" +
-      "regation\030\004 \001(\0162O.yandex.cloud.monitoring" +
-      ".v3.ChartWidget.VisualizationSettings.Se" +
-      "riesAggregation\022p\n\025color_scheme_settings" +
-      "\030\005 \001(\0132Q.yandex.cloud.monitoring.v3.Char" +
+      "VisualizationSettings.ColorSchemeSetting" +
+      "s\022g\n\020heatmap_settings\030\006 \001(\0132M.yandex.clo" +
+      "ud.monitoring.v3.ChartWidget.Visualizati" +
+      "onSettings.HeatmapSettings\022c\n\016yaxis_sett" +
+      "ings\030\007 \001(\0132K.yandex.cloud.monitoring.v3." +
+      "ChartWidget.VisualizationSettings.YaxisS" +
+      "ettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_labels\030\t " +
+      "\001(\010\032\262\005\n\023ColorSchemeSettings\022{\n\tautomatic" +
+      "\030\001 \001(\0132f.yandex.cloud.monitoring.v3.Char" +
       "tWidget.VisualizationSettings.ColorSchem" +
-      "eSettings\022g\n\020heatmap_settings\030\006 \001(\0132M.ya" +
-      "ndex.cloud.monitoring.v3.ChartWidget.Vis" +
-      "ualizationSettings.HeatmapSettings\022c\n\016ya" +
-      "xis_settings\030\007 \001(\0132K.yandex.cloud.monito" +
-      "ring.v3.ChartWidget.VisualizationSetting" +
-      "s.YaxisSettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_l" +
-      "abels\030\t \001(\010\032\262\005\n\023ColorSchemeSettings\022{\n\ta" +
-      "utomatic\030\001 \001(\0132f.yandex.cloud.monitoring" +
-      ".v3.ChartWidget.VisualizationSettings.Co" +
-      "lorSchemeSettings.AutomaticColorSchemeH\000" +
-      "\022y\n\010standard\030\002 \001(\0132e.yandex.cloud.monito" +
-      "ring.v3.ChartWidget.VisualizationSetting" +
-      "s.ColorSchemeSettings.StandardColorSchem" +
-      "eH\000\022y\n\010gradient\030\003 \001(\0132e.yandex.cloud.mon" +
-      "itoring.v3.ChartWidget.VisualizationSett" +
-      "ings.ColorSchemeSettings.GradientColorSc" +
-      "hemeH\000\022q\n\004hash\030\004 \001(\0132a.yandex.cloud.moni" +
-      "toring.v3.ChartWidget.VisualizationSetti" +
-      "ngs.ColorSchemeSettings.HashColorSchemeH" +
-      "\000\032\026\n\024AutomaticColorScheme\032\025\n\023StandardCol" +
-      "orScheme\032i\n\023GradientColorScheme\022\023\n\013green" +
-      "_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tre" +
-      "d_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\021\n\017H" +
-      "ashColorSchemeB\010\n\006scheme\032e\n\017HeatmapSetti" +
-      "ngs\022\023\n\013green_value\030\002 \001(\t\022\024\n\014yellow_value" +
-      "\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_valu" +
-      "e\030\005 \001(\t\032\364\001\n\005Yaxis\022U\n\004type\030\001 \001(\0162G.yandex" +
-      ".cloud.monitoring.v3.ChartWidget.Visuali" +
-      "zationSettings.YaxisType\022\r\n\005title\030\002 \001(\t\022" +
-      "\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_format" +
-      "\030\005 \001(\0162&.yandex.cloud.monitoring.v3.Unit" +
-      "Format\022.\n\tprecision\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64Value\032\266\001\n\rYaxisSettings\022Q\n\004left" +
-      "\030\001 \001(\0132C.yandex.cloud.monitoring.v3.Char" +
-      "tWidget.VisualizationSettings.Yaxis\022R\n\005r" +
-      "ight\030\002 \001(\0132C.yandex.cloud.monitoring.v3." +
-      "ChartWidget.VisualizationSettings.Yaxis\"" +
-      "\256\002\n\021VisualizationType\022\"\n\036VISUALIZATION_T" +
-      "YPE_UNSPECIFIED\020\000\022\033\n\027VISUALIZATION_TYPE_" +
-      "LINE\020\001\022\034\n\030VISUALIZATION_TYPE_STACK\020\002\022\035\n\031" +
-      "VISUALIZATION_TYPE_COLUMN\020\003\022\035\n\031VISUALIZA" +
-      "TION_TYPE_POINTS\020\004\022\032\n\026VISUALIZATION_TYPE" +
-      "_PIE\020\005\022\033\n\027VISUALIZATION_TYPE_BARS\020\006\022#\n\037V" +
-      "ISUALIZATION_TYPE_DISTRIBUTION\020\007\022\036\n\032VISU" +
-      "ALIZATION_TYPE_HEATMAP\020\010\"o\n\013Interpolate\022" +
-      "\033\n\027INTERPOLATE_UNSPECIFIED\020\000\022\026\n\022INTERPOL" +
-      "ATE_LINEAR\020\001\022\024\n\020INTERPOLATE_LEFT\020\002\022\025\n\021IN" +
-      "TERPOLATE_RIGHT\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_" +
-      "TYPE_UNSPECIFIED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020" +
-      "\001\022\032\n\026YAXIS_TYPE_LOGARITHMIC\020\002\"\304\001\n\021Series" +
-      "Aggregation\022\"\n\036SERIES_AGGREGATION_UNSPEC" +
-      "IFIED\020\000\022\032\n\026SERIES_AGGREGATION_AVG\020\001\022\032\n\026S" +
-      "ERIES_AGGREGATION_MIN\020\002\022\032\n\026SERIES_AGGREG" +
-      "ATION_MAX\020\003\022\033\n\027SERIES_AGGREGATION_LAST\020\004" +
-      "\022\032\n\026SERIES_AGGREGATION_SUM\020\005\032\200\006\n\017SeriesO" +
-      "verrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014target_index" +
-      "\030\002 \001(\tH\000\022`\n\010settings\030\003 \001(\0132N.yandex.clou" +
-      "d.monitoring.v3.ChartWidget.SeriesOverri" +
-      "des.SeriesOverrideSettings\032\232\002\n\026SeriesOve" +
-      "rrideSettings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001" +
-      "(\t\022]\n\004type\030\003 \001(\0162O.yandex.cloud.monitori" +
-      "ng.v3.ChartWidget.SeriesOverrides.Series" +
-      "VisualizationType\022\022\n\nstack_name\030\004 \001(\t\022\021\n" +
-      "\tgrow_down\030\005 \001(\010\022]\n\016yaxis_position\030\006 \001(\016" +
-      "2E.yandex.cloud.monitoring.v3.ChartWidge" +
-      "t.SeriesOverrides.YaxisPosition\"b\n\rYaxis" +
-      "Position\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000" +
-      "\022\027\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSIT" +
-      "ION_RIGHT\020\002\"\331\001\n\027SeriesVisualizationType\022" +
-      ")\n%SERIES_VISUALIZATION_TYPE_UNSPECIFIED" +
-      "\020\000\022\"\n\036SERIES_VISUALIZATION_TYPE_LINE\020\001\022#" +
-      "\n\037SERIES_VISUALIZATION_TYPE_STACK\020\002\022$\n S" +
-      "ERIES_VISUALIZATION_TYPE_COLUMN\020\003\022$\n SER" +
-      "IES_VISUALIZATION_TYPE_POINTS\020\004B\006\n\004type\032" +
-      "5\n\022NameHidingSettings\022\020\n\010positive\030\001 \001(\010\022" +
-      "\r\n\005names\030\002 \003(\t\"\231\001\n\016FreezeDuration\022\037\n\033FRE" +
-      "EZE_DURATION_UNSPECIFIED\020\000\022\030\n\024FREEZE_DUR" +
-      "ATION_HOUR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002\022\030\n" +
-      "\024FREEZE_DURATION_WEEK\020\003\022\031\n\025FREEZE_DURATI" +
-      "ON_MONTH\020\004Bk\n\036yandex.cloud.api.monitorin" +
-      "g.v3ZIgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/monitoring/v3;monitoringb" +
-      "\006proto3"
+      "eSettings.AutomaticColorSchemeH\000\022y\n\010stan" +
+      "dard\030\002 \001(\0132e.yandex.cloud.monitoring.v3." +
+      "ChartWidget.VisualizationSettings.ColorS" +
+      "chemeSettings.StandardColorSchemeH\000\022y\n\010g" +
+      "radient\030\003 \001(\0132e.yandex.cloud.monitoring." +
+      "v3.ChartWidget.VisualizationSettings.Col" +
+      "orSchemeSettings.GradientColorSchemeH\000\022q" +
+      "\n\004hash\030\004 \001(\0132a.yandex.cloud.monitoring.v" +
+      "3.ChartWidget.VisualizationSettings.Colo" +
+      "rSchemeSettings.HashColorSchemeH\000\032\026\n\024Aut" +
+      "omaticColorScheme\032\025\n\023StandardColorScheme" +
+      "\032i\n\023GradientColorScheme\022\023\n\013green_value\030\002" +
+      " \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030" +
+      "\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\021\n\017HashColor" +
+      "SchemeB\010\n\006scheme\032e\n\017HeatmapSettings\022\023\n\013g" +
+      "reen_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021" +
+      "\n\tred_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032" +
+      "\364\001\n\005Yaxis\022U\n\004type\030\001 \001(\0162G.yandex.cloud.m" +
+      "onitoring.v3.ChartWidget.VisualizationSe" +
+      "ttings.YaxisType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030\003" +
+      " \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162&" +
+      ".yandex.cloud.monitoring.v3.UnitFormat\022." +
+      "\n\tprecision\030\006 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\032\266\001\n\rYaxisSettings\022Q\n\004left\030\001 \001(\0132C" +
+      ".yandex.cloud.monitoring.v3.ChartWidget." +
+      "VisualizationSettings.Yaxis\022R\n\005right\030\002 \001" +
+      "(\0132C.yandex.cloud.monitoring.v3.ChartWid" +
+      "get.VisualizationSettings.Yaxis\"\256\002\n\021Visu" +
+      "alizationType\022\"\n\036VISUALIZATION_TYPE_UNSP" +
+      "ECIFIED\020\000\022\033\n\027VISUALIZATION_TYPE_LINE\020\001\022\034" +
+      "\n\030VISUALIZATION_TYPE_STACK\020\002\022\035\n\031VISUALIZ" +
+      "ATION_TYPE_COLUMN\020\003\022\035\n\031VISUALIZATION_TYP" +
+      "E_POINTS\020\004\022\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033" +
+      "\n\027VISUALIZATION_TYPE_BARS\020\006\022#\n\037VISUALIZA" +
+      "TION_TYPE_DISTRIBUTION\020\007\022\036\n\032VISUALIZATIO" +
+      "N_TYPE_HEATMAP\020\010\"o\n\013Interpolate\022\033\n\027INTER" +
+      "POLATE_UNSPECIFIED\020\000\022\026\n\022INTERPOLATE_LINE" +
+      "AR\020\001\022\024\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTERPOLAT" +
+      "E_RIGHT\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNS" +
+      "PECIFIED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAX" +
+      "IS_TYPE_LOGARITHMIC\020\002\"\304\001\n\021SeriesAggregat" +
+      "ion\022\"\n\036SERIES_AGGREGATION_UNSPECIFIED\020\000\022" +
+      "\032\n\026SERIES_AGGREGATION_AVG\020\001\022\032\n\026SERIES_AG" +
+      "GREGATION_MIN\020\002\022\032\n\026SERIES_AGGREGATION_MA" +
+      "X\020\003\022\033\n\027SERIES_AGGREGATION_LAST\020\004\022\032\n\026SERI" +
+      "ES_AGGREGATION_SUM\020\005\032\200\006\n\017SeriesOverrides" +
+      "\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000" +
+      "\022`\n\010settings\030\003 \001(\0132N.yandex.cloud.monito" +
+      "ring.v3.ChartWidget.SeriesOverrides.Seri" +
+      "esOverrideSettings\032\232\002\n\026SeriesOverrideSet" +
+      "tings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022]\n\004ty" +
+      "pe\030\003 \001(\0162O.yandex.cloud.monitoring.v3.Ch" +
+      "artWidget.SeriesOverrides.SeriesVisualiz" +
+      "ationType\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tgrow_do" +
+      "wn\030\005 \001(\010\022]\n\016yaxis_position\030\006 \001(\0162E.yande" +
+      "x.cloud.monitoring.v3.ChartWidget.Series" +
+      "Overrides.YaxisPosition\"b\n\rYaxisPosition" +
+      "\022\036\n\032YAXIS_POSITION_UNSPECIFIED\020\000\022\027\n\023YAXI" +
+      "S_POSITION_LEFT\020\001\022\030\n\024YAXIS_POSITION_RIGH" +
+      "T\020\002\"\331\001\n\027SeriesVisualizationType\022)\n%SERIE" +
+      "S_VISUALIZATION_TYPE_UNSPECIFIED\020\000\022\"\n\036SE" +
+      "RIES_VISUALIZATION_TYPE_LINE\020\001\022#\n\037SERIES" +
+      "_VISUALIZATION_TYPE_STACK\020\002\022$\n SERIES_VI" +
+      "SUALIZATION_TYPE_COLUMN\020\003\022$\n SERIES_VISU" +
+      "ALIZATION_TYPE_POINTS\020\004B\006\n\004type\0325\n\022NameH" +
+      "idingSettings\022\020\n\010positive\030\001 \001(\010\022\r\n\005names" +
+      "\030\002 \003(\t\032>\n\016RepeatSettings\022\021\n\trepeat_by\030\001 " +
+      "\003(\t\022\031\n\021max_charts_in_row\030\002 \001(\003\"\231\001\n\016Freez" +
+      "eDuration\022\037\n\033FREEZE_DURATION_UNSPECIFIED" +
+      "\020\000\022\030\n\024FREEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_D" +
+      "URATION_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003\022" +
+      "\031\n\025FREEZE_DURATION_MONTH\020\004Bk\n\036yandex.clo" +
+      "ud.api.monitoring.v3ZIgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/monitorin" +
+      "g/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19224,7 +20292,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor,
-        new java.lang.String[] { "Id", "Queries", "VisualizationSettings", "SeriesOverrides", "NameHidingSettings", "Description", "Title", "DisplayLegend", "Freeze", });
+        new java.lang.String[] { "Id", "Queries", "VisualizationSettings", "SeriesOverrides", "NameHidingSettings", "Description", "Title", "DisplayLegend", "Freeze", "Repeat", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_Queries_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_Queries_fieldAccessorTable = new
@@ -19309,6 +20377,12 @@ public final class ChartWidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_NameHidingSettings_descriptor,
         new java.lang.String[] { "Positive", "Names", });
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_ChartWidget_RepeatSettings_descriptor,
+        new java.lang.String[] { "RepeatBy", "MaxChartsInRow", });
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.monitoring.v3.DownsamplingOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.UnitFormatOuterClass.getDescriptor();

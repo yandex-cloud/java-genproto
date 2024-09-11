@@ -17331,7 +17331,7 @@ public final class TransferOuterClass {
 
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17340,7 +17340,7 @@ public final class TransferOuterClass {
     boolean hasTables();
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17349,7 +17349,7 @@ public final class TransferOuterClass {
     yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilter getTables();
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17362,27 +17362,96 @@ public final class TransferOuterClass {
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
      * Details here:
-     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * Deprecated: Use filters instead.
      * </pre>
      *
-     * <code>string filter = 2;</code>
+     * <code>string filter = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
-    java.lang.String getFilter();
+    @java.lang.Deprecated java.lang.String getFilter();
     /**
      * <pre>
      * Filtering criterion. This can be comparison operators for numeric, string, and
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
      * Details here:
-     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * Deprecated: Use filters instead.
      * </pre>
      *
-     * <code>string filter = 2;</code>
+     * <code>string filter = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for filter.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @return A list containing the filters.
+     */
+    java.util.List<java.lang.String>
+        getFiltersList();
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @return The count of filters.
+     */
+    int getFiltersCount();
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @param index The index of the element to return.
+     * @return The filters at the given index.
+     */
+    java.lang.String getFilters(int index);
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filters at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFiltersBytes(int index);
   }
   /**
    * <pre>
@@ -17405,6 +17474,7 @@ public final class TransferOuterClass {
     }
     private FilterRowsTransformer() {
       filter_ = "";
+      filters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -17427,6 +17497,7 @@ public final class TransferOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -17456,6 +17527,15 @@ public final class TransferOuterClass {
               filter_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                filters_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              filters_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -17471,6 +17551,9 @@ public final class TransferOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          filters_ = filters_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -17492,7 +17575,7 @@ public final class TransferOuterClass {
     private yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilter tables_;
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17504,7 +17587,7 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17516,7 +17599,7 @@ public final class TransferOuterClass {
     }
     /**
      * <pre>
-     * List of included and excluded tables
+     * List of included and excluded tables.
      * </pre>
      *
      * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17534,14 +17617,16 @@ public final class TransferOuterClass {
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
      * Details here:
-     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * Deprecated: Use filters instead.
      * </pre>
      *
-     * <code>string filter = 2;</code>
+     * <code>string filter = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The filter.
      */
     @java.lang.Override
-    public java.lang.String getFilter() {
+    @java.lang.Deprecated public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -17559,14 +17644,16 @@ public final class TransferOuterClass {
      * Boolean values,
      * comparison to NULL, and checking whether a substring is part of a string.
      * Details here:
-     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * Deprecated: Use filters instead.
      * </pre>
      *
-     * <code>string filter = 2;</code>
+     * <code>string filter = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for filter.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -17578,6 +17665,81 @@ public final class TransferOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList filters_;
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @return A list containing the filters.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFiltersList() {
+      return filters_;
+    }
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @return The count of filters.
+     */
+    public int getFiltersCount() {
+      return filters_.size();
+    }
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @param index The index of the element to return.
+     * @return The filters at the given index.
+     */
+    public java.lang.String getFilters(int index) {
+      return filters_.get(index);
+    }
+    /**
+     * <pre>
+     * Data is transported if it satisfies at least one of filters. Consider that there
+     * is OR statement between filters.
+     * Each filter can be comparison operators for numeric, string, and Boolean values,
+     * comparison to NULL, and
+     * checking whether a substring is part of a string.
+     * Details in docs:
+     * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+     * </pre>
+     *
+     * <code>repeated string filters = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filters at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFiltersBytes(int index) {
+      return filters_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -17600,6 +17762,9 @@ public final class TransferOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
+      for (int i = 0; i < filters_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filters_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17615,6 +17780,14 @@ public final class TransferOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < filters_.size(); i++) {
+          dataSize += computeStringSizeNoTag(filters_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFiltersList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17638,6 +17811,8 @@ public final class TransferOuterClass {
       }
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getFiltersList()
+          .equals(other.getFiltersList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17655,6 +17830,10 @@ public final class TransferOuterClass {
       }
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      if (getFiltersCount() > 0) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFiltersList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17803,6 +17982,8 @@ public final class TransferOuterClass {
         }
         filter_ = "";
 
+        filters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -17829,12 +18010,18 @@ public final class TransferOuterClass {
       @java.lang.Override
       public yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer buildPartial() {
         yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer result = new yandex.cloud.api.datatransfer.v1.TransferOuterClass.FilterRowsTransformer(this);
+        int from_bitField0_ = bitField0_;
         if (tablesBuilder_ == null) {
           result.tables_ = tables_;
         } else {
           result.tables_ = tablesBuilder_.build();
         }
         result.filter_ = filter_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          filters_ = filters_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.filters_ = filters_;
         onBuilt();
         return result;
       }
@@ -17890,6 +18077,16 @@ public final class TransferOuterClass {
           filter_ = other.filter_;
           onChanged();
         }
+        if (!other.filters_.isEmpty()) {
+          if (filters_.isEmpty()) {
+            filters_ = other.filters_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFiltersIsMutable();
+            filters_.addAll(other.filters_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -17918,13 +18115,14 @@ public final class TransferOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilter tables_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilter, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilter.Builder, yandex.cloud.api.datatransfer.v1.TransferOuterClass.TablesFilterOrBuilder> tablesBuilder_;
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17935,7 +18133,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17950,7 +18148,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17970,7 +18168,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -17988,7 +18186,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -18010,7 +18208,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -18028,7 +18226,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -18040,7 +18238,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -18055,7 +18253,7 @@ public final class TransferOuterClass {
       }
       /**
        * <pre>
-       * List of included and excluded tables
+       * List of included and excluded tables.
        * </pre>
        *
        * <code>.yandex.cloud.datatransfer.v1.TablesFilter tables = 1;</code>
@@ -18081,13 +18279,15 @@ public final class TransferOuterClass {
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
        * Details here:
-       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * Deprecated: Use filters instead.
        * </pre>
        *
-       * <code>string filter = 2;</code>
+       * <code>string filter = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The filter.
        */
-      public java.lang.String getFilter() {
+      @java.lang.Deprecated public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -18105,13 +18305,15 @@ public final class TransferOuterClass {
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
        * Details here:
-       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * Deprecated: Use filters instead.
        * </pre>
        *
-       * <code>string filter = 2;</code>
+       * <code>string filter = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for filter.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getFilterBytes() {
         java.lang.Object ref = filter_;
         if (ref instanceof String) {
@@ -18130,14 +18332,16 @@ public final class TransferOuterClass {
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
        * Details here:
-       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * Deprecated: Use filters instead.
        * </pre>
        *
-       * <code>string filter = 2;</code>
+       * <code>string filter = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The filter to set.
        * @return This builder for chaining.
        */
-      public Builder setFilter(
+      @java.lang.Deprecated public Builder setFilter(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -18153,13 +18357,15 @@ public final class TransferOuterClass {
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
        * Details here:
-       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * Deprecated: Use filters instead.
        * </pre>
        *
-       * <code>string filter = 2;</code>
+       * <code>string filter = 2 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearFilter() {
+      @java.lang.Deprecated public Builder clearFilter() {
         
         filter_ = getDefaultInstance().getFilter();
         onChanged();
@@ -18171,14 +18377,16 @@ public final class TransferOuterClass {
        * Boolean values,
        * comparison to NULL, and checking whether a substring is part of a string.
        * Details here:
-       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * Deprecated: Use filters instead.
        * </pre>
        *
-       * <code>string filter = 2;</code>
+       * <code>string filter = 2 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
-      public Builder setFilterBytes(
+      @java.lang.Deprecated public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -18186,6 +18394,206 @@ public final class TransferOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList filters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFiltersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          filters_ = new com.google.protobuf.LazyStringArrayList(filters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @return A list containing the filters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFiltersList() {
+        return filters_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @return The count of filters.
+       */
+      public int getFiltersCount() {
+        return filters_.size();
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param index The index of the element to return.
+       * @return The filters at the given index.
+       */
+      public java.lang.String getFilters(int index) {
+        return filters_.get(index);
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the filters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFiltersBytes(int index) {
+        return filters_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The filters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilters(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFiltersIsMutable();
+        filters_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param value The filters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilters(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFiltersIsMutable();
+        filters_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param values The filters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFilters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFiltersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, filters_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilters() {
+        filters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data is transported if it satisfies at least one of filters. Consider that there
+       * is OR statement between filters.
+       * Each filter can be comparison operators for numeric, string, and Boolean values,
+       * comparison to NULL, and
+       * checking whether a substring is part of a string.
+       * Details in docs:
+       * https://yandex.cloud/en-ru/docs/data-transfer/concepts/data-transformation#append-only-sources.
+       * </pre>
+       *
+       * <code>repeated string filters = 3;</code>
+       * @param value The bytes of the filters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFiltersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFiltersIsMutable();
+        filters_.add(value);
         onChanged();
         return this;
       }
@@ -21752,39 +22160,40 @@ public final class TransferOuterClass {
       "er\022\024\n\014shards_count\030\003 \001(\003\"y\n\030TableSplitte" +
       "rTransformer\022:\n\006tables\030\001 \001(\0132*.yandex.cl" +
       "oud.datatransfer.v1.TablesFilter\022\017\n\007colu" +
-      "mns\030\002 \003(\t\022\020\n\010splitter\030\003 \001(\t\"c\n\025FilterRow" +
+      "mns\030\002 \003(\t\022\020\n\010splitter\030\003 \001(\t\"x\n\025FilterRow" +
       "sTransformer\022:\n\006tables\030\001 \001(\0132*.yandex.cl" +
-      "oud.datatransfer.v1.TablesFilter\022\016\n\006filt" +
-      "er\030\002 \001(\t\"\306\005\n\013Transformer\022H\n\nmask_field\030\001" +
-      " \001(\01322.yandex.cloud.datatransfer.v1.Mask" +
-      "FieldTransformerH\000\022P\n\016filter_columns\030\002 \001" +
-      "(\01326.yandex.cloud.datatransfer.v1.Filter" +
-      "ColumnsTransformerH\000\022N\n\rrename_tables\030\004 " +
-      "\001(\01325.yandex.cloud.datatransfer.v1.Renam" +
-      "eTablesTransformerH\000\022Y\n\023replace_primary_" +
-      "key\030\006 \001(\0132:.yandex.cloud.datatransfer.v1" +
-      ".ReplacePrimaryKeyTransformerH\000\022N\n\021conve" +
-      "rt_to_string\030\007 \001(\01321.yandex.cloud.datatr" +
-      "ansfer.v1.ToStringTransformerH\000\022O\n\023shard" +
-      "er_transformer\030\t \001(\01320.yandex.cloud.data" +
-      "transfer.v1.SharderTransformerH\000\022\\\n\032tabl" +
-      "e_splitter_transformer\030\r \001(\01326.yandex.cl" +
-      "oud.datatransfer.v1.TableSplitterTransfo" +
-      "rmerH\000\022J\n\013filter_rows\030\016 \001(\01323.yandex.clo" +
-      "ud.datatransfer.v1.FilterRowsTransformer" +
-      "H\000B\r\n\013transformerJ\004\010\003\020\004J\004\010\005\020\006J\004\010\010\020\tJ\004\010\n\020" +
-      "\r\"Q\n\016Transformation\022?\n\014transformers\030\001 \003(" +
-      "\0132).yandex.cloud.datatransfer.v1.Transfo" +
-      "rmer*p\n\014TransferType\022\035\n\031TRANSFER_TYPE_UN" +
-      "SPECIFIED\020\000\022\032\n\026SNAPSHOT_AND_INCREMENT\020\001\022" +
-      "\021\n\rSNAPSHOT_ONLY\020\002\022\022\n\016INCREMENT_ONLY\020\003*\233" +
-      "\001\n\016TransferStatus\022\037\n\033TRANSFER_STATUS_UNS" +
-      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\013\n\007CREATED\020\002\022\013\n" +
-      "\007RUNNING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\t\n" +
-      "\005ERROR\020\006\022\020\n\014SNAPSHOTTING\020\007\022\010\n\004DONE\020\010Bq\n " +
-      "yandex.cloud.api.datatransfer.v1ZMgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/datatransfer/v1;datatransferb\006proto3"
+      "oud.datatransfer.v1.TablesFilter\022\022\n\006filt" +
+      "er\030\002 \001(\tB\002\030\001\022\017\n\007filters\030\003 \003(\t\"\306\005\n\013Transf" +
+      "ormer\022H\n\nmask_field\030\001 \001(\01322.yandex.cloud" +
+      ".datatransfer.v1.MaskFieldTransformerH\000\022" +
+      "P\n\016filter_columns\030\002 \001(\01326.yandex.cloud.d" +
+      "atatransfer.v1.FilterColumnsTransformerH" +
+      "\000\022N\n\rrename_tables\030\004 \001(\01325.yandex.cloud." +
+      "datatransfer.v1.RenameTablesTransformerH" +
+      "\000\022Y\n\023replace_primary_key\030\006 \001(\0132:.yandex." +
+      "cloud.datatransfer.v1.ReplacePrimaryKeyT" +
+      "ransformerH\000\022N\n\021convert_to_string\030\007 \001(\0132" +
+      "1.yandex.cloud.datatransfer.v1.ToStringT" +
+      "ransformerH\000\022O\n\023sharder_transformer\030\t \001(" +
+      "\01320.yandex.cloud.datatransfer.v1.Sharder" +
+      "TransformerH\000\022\\\n\032table_splitter_transfor" +
+      "mer\030\r \001(\01326.yandex.cloud.datatransfer.v1" +
+      ".TableSplitterTransformerH\000\022J\n\013filter_ro" +
+      "ws\030\016 \001(\01323.yandex.cloud.datatransfer.v1." +
+      "FilterRowsTransformerH\000B\r\n\013transformerJ\004" +
+      "\010\003\020\004J\004\010\005\020\006J\004\010\010\020\tJ\004\010\n\020\r\"Q\n\016Transformation" +
+      "\022?\n\014transformers\030\001 \003(\0132).yandex.cloud.da" +
+      "tatransfer.v1.Transformer*p\n\014TransferTyp" +
+      "e\022\035\n\031TRANSFER_TYPE_UNSPECIFIED\020\000\022\032\n\026SNAP" +
+      "SHOT_AND_INCREMENT\020\001\022\021\n\rSNAPSHOT_ONLY\020\002\022" +
+      "\022\n\016INCREMENT_ONLY\020\003*\233\001\n\016TransferStatus\022\037" +
+      "\n\033TRANSFER_STATUS_UNSPECIFIED\020\000\022\014\n\010CREAT" +
+      "ING\020\001\022\013\n\007CREATED\020\002\022\013\n\007RUNNING\020\003\022\014\n\010STOPP" +
+      "ING\020\004\022\013\n\007STOPPED\020\005\022\t\n\005ERROR\020\006\022\020\n\014SNAPSHO" +
+      "TTING\020\007\022\010\n\004DONE\020\010Bq\n yandex.cloud.api.da" +
+      "tatransfer.v1ZMgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/datatransfer/v1;" +
+      "datatransferb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21904,7 +22313,7 @@ public final class TransferOuterClass {
     internal_static_yandex_cloud_datatransfer_v1_FilterRowsTransformer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_FilterRowsTransformer_descriptor,
-        new java.lang.String[] { "Tables", "Filter", });
+        new java.lang.String[] { "Tables", "Filter", "Filters", });
     internal_static_yandex_cloud_datatransfer_v1_Transformer_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_datatransfer_v1_Transformer_fieldAccessorTable = new

@@ -18160,95 +18160,105 @@ public final class VideoServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/video/v1/video_service.pr" +
-      "oto\022\025yandex.cloud.video.v1\032 google/proto" +
-      "buf/field_mask.proto\032 yandex/cloud/api/o" +
-      "peration.proto\032&yandex/cloud/operation/o" +
-      "peration.proto\032$yandex/cloud/video/v1/ma" +
-      "nifest.proto\032!yandex/cloud/video/v1/vide" +
-      "o.proto\"#\n\017GetVideoRequest\022\020\n\010video_id\030\001" +
-      " \001(\t\"u\n\020ListVideoRequest\022\022\n\nchannel_id\030\001" +
-      " \001(\t\022\021\n\tpage_size\030d \001(\003\022\022\n\npage_token\030e " +
-      "\001(\t\022\020\n\010order_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010" +
-      "\002\020d\"`\n\021ListVideoResponse\022,\n\006videos\030\001 \003(\013" +
-      "2\034.yandex.cloud.video.v1.Video\022\027\n\017next_p" +
-      "age_token\030d \001(\tJ\004\010\002\020d\"\351\003\n\022CreateVideoReq" +
-      "uest\022\022\n\nchannel_id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022" +
-      "\023\n\013description\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001" +
-      "(\t\022F\n\006labels\030\310\001 \003(\01325.yandex.cloud.video" +
-      ".v1.CreateVideoRequest.LabelsEntry\0227\n\004tu" +
-      "sd\030\350\007 \001(\0132&.yandex.cloud.video.v1.VideoT" +
-      "USDParamsH\000\022H\n\rpublic_access\030\320\017 \001(\0132..ya" +
-      "ndex.cloud.video.v1.VideoPublicAccessPar" +
-      "amsH\001\022Q\n\022auth_system_access\030\322\017 \001(\01322.yan" +
-      "dex.cloud.video.v1.VideoAuthSystemAccess" +
-      "ParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001B\010\n\006sourceB\017\n\raccess_righ" +
-      "tsJ\006\010\311\001\020\350\007J\006\010\351\007\020\320\017J\006\010\321\017\020\322\017J\005\010\005\020\310\001\"7\n\017Vid" +
-      "eoTUSDParams\022\021\n\tfile_size\030\001 \001(\003\022\021\n\tfile_" +
-      "name\030\002 \001(\t\"\031\n\027VideoPublicAccessParams\"\035\n" +
-      "\033VideoAuthSystemAccessParams\"\'\n\023CreateVi" +
-      "deoMetadata\022\020\n\010video_id\030\001 \001(\t\"\314\003\n\022Update" +
-      "VideoRequest\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022\r" +
-      "\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014th" +
-      "umbnail_id\030\005 \001(\t\022F\n\006labels\030\310\001 \003(\01325.yand" +
-      "ex.cloud.video.v1.UpdateVideoRequest.Lab" +
-      "elsEntry\022H\n\rpublic_access\030\320\017 \001(\0132..yande" +
-      "x.cloud.video.v1.VideoPublicAccessParams" +
-      "H\000\022Q\n\022auth_system_access\030\322\017 \001(\01322.yandex" +
-      ".cloud.video.v1.VideoAuthSystemAccessPar" +
-      "amsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001B\017\n\raccess_rightsJ\006\010\311\001\020\320\017J\006\010" +
-      "\321\017\020\322\017J\005\010\006\020\310\001\"\'\n\023UpdateVideoMetadata\022\020\n\010v" +
-      "ideo_id\030\001 \001(\t\"&\n\022DeleteVideoRequest\022\020\n\010v" +
-      "ideo_id\030\001 \001(\t\"\'\n\023DeleteVideoMetadata\022\020\n\010" +
-      "video_id\030\001 \001(\t\"\300\001\n\031PerformVideoActionReq" +
-      "uest\022\020\n\010video_id\030\001 \001(\t\022=\n\007publish\030\350\007 \001(\013" +
-      "2).yandex.cloud.video.v1.PublishVideoAct" +
-      "ionH\000\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud" +
-      ".video.v1.UnpublishVideoActionH\000B\010\n\006acti" +
-      "onJ\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024Unpub" +
-      "lishVideoAction\".\n\032PerformVideoActionMet" +
-      "adata\022\020\n\010video_id\030\001 \001(\t\"f\n\030GetVideoPlaye" +
-      "rURLRequest\022\020\n\010video_id\030\001 \001(\t\0228\n\006params\030" +
-      "\002 \001(\0132(.yandex.cloud.video.v1.VideoPlaye" +
-      "rParams\"C\n\021VideoPlayerParams\022\014\n\004mute\030\001 \001" +
-      "(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"=\n\031" +
-      "GetVideoPlayerURLResponse\022\022\n\nplayer_url\030" +
-      "\001 \001(\t\022\014\n\004html\030\002 \001(\t\",\n\030GetVideoManifests" +
-      "Request\022\020\n\010video_id\030\001 \001(\t\"O\n\031GetVideoMan" +
-      "ifestsResponse\0222\n\tmanifests\030\001 \003(\0132\037.yand" +
-      "ex.cloud.video.v1.Manifest2\263\007\n\014VideoServ" +
-      "ice\022M\n\003Get\022&.yandex.cloud.video.v1.GetVi" +
-      "deoRequest\032\034.yandex.cloud.video.v1.Video" +
-      "\"\000\022[\n\004List\022\'.yandex.cloud.video.v1.ListV" +
-      "ideoRequest\032(.yandex.cloud.video.v1.List" +
-      "VideoResponse\"\000\022x\n\006Create\022).yandex.cloud" +
-      ".video.v1.CreateVideoRequest\032!.yandex.cl" +
-      "oud.operation.Operation\" \262\322*\034\n\023CreateVid" +
-      "eoMetadata\022\005Video\022x\n\006Update\022).yandex.clo" +
-      "ud.video.v1.UpdateVideoRequest\032!.yandex." +
-      "cloud.operation.Operation\" \262\322*\034\n\023UpdateV" +
-      "ideoMetadata\022\005Video\022\210\001\n\006Delete\022).yandex." +
-      "cloud.video.v1.DeleteVideoRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"0\262\322*,\n\023Dele" +
-      "teVideoMetadata\022\025google.protobuf.Empty\022\215" +
-      "\001\n\rPerformAction\0220.yandex.cloud.video.v1" +
-      ".PerformVideoActionRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\'\262\322*#\n\032PerformVide" +
-      "oActionMetadata\022\005Video\022s\n\014GetPlayerURL\022/" +
-      ".yandex.cloud.video.v1.GetVideoPlayerURL" +
-      "Request\0320.yandex.cloud.video.v1.GetVideo" +
-      "PlayerURLResponse\"\000\022s\n\014GetManifests\022/.ya" +
-      "ndex.cloud.video.v1.GetVideoManifestsReq" +
-      "uest\0320.yandex.cloud.video.v1.GetVideoMan" +
-      "ifestsResponse\"\000B\\\n\031yandex.cloud.api.vid" +
-      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/video/v1;videob\006proto3"
+      "oto\022\025yandex.cloud.video.v1\032\034google/api/a" +
+      "nnotations.proto\032 google/protobuf/field_" +
+      "mask.proto\032 yandex/cloud/api/operation.p" +
+      "roto\032&yandex/cloud/operation/operation.p" +
+      "roto\032$yandex/cloud/video/v1/manifest.pro" +
+      "to\032!yandex/cloud/video/v1/video.proto\"#\n" +
+      "\017GetVideoRequest\022\020\n\010video_id\030\001 \001(\t\"u\n\020Li" +
+      "stVideoRequest\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tpa" +
+      "ge_size\030d \001(\003\022\022\n\npage_token\030e \001(\t\022\020\n\010ord" +
+      "er_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"`\n\021Lis" +
+      "tVideoResponse\022,\n\006videos\030\001 \003(\0132\034.yandex." +
+      "cloud.video.v1.Video\022\027\n\017next_page_token\030" +
+      "d \001(\tJ\004\010\002\020d\"\351\003\n\022CreateVideoRequest\022\022\n\nch" +
+      "annel_id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\023\n\013descrip" +
+      "tion\030\003 \001(\t\022\024\n\014thumbnail_id\030\004 \001(\t\022F\n\006labe" +
+      "ls\030\310\001 \003(\01325.yandex.cloud.video.v1.Create" +
+      "VideoRequest.LabelsEntry\0227\n\004tusd\030\350\007 \001(\0132" +
+      "&.yandex.cloud.video.v1.VideoTUSDParamsH" +
+      "\000\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.cloud" +
+      ".video.v1.VideoPublicAccessParamsH\001\022Q\n\022a" +
+      "uth_system_access\030\322\017 \001(\01322.yandex.cloud." +
+      "video.v1.VideoAuthSystemAccessParamsH\001\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001B\010\n\006sourceB\017\n\raccess_rightsJ\006\010\311\001\020\350\007" +
+      "J\006\010\351\007\020\320\017J\006\010\321\017\020\322\017J\005\010\005\020\310\001\"7\n\017VideoTUSDPara" +
+      "ms\022\021\n\tfile_size\030\001 \001(\003\022\021\n\tfile_name\030\002 \001(\t" +
+      "\"\031\n\027VideoPublicAccessParams\"\035\n\033VideoAuth" +
+      "SystemAccessParams\"\'\n\023CreateVideoMetadat" +
+      "a\022\020\n\010video_id\030\001 \001(\t\"\314\003\n\022UpdateVideoReque" +
+      "st\022\020\n\010video_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022\r\n\005title\030\003 " +
+      "\001(\t\022\023\n\013description\030\004 \001(\t\022\024\n\014thumbnail_id" +
+      "\030\005 \001(\t\022F\n\006labels\030\310\001 \003(\01325.yandex.cloud.v" +
+      "ideo.v1.UpdateVideoRequest.LabelsEntry\022H" +
+      "\n\rpublic_access\030\320\017 \001(\0132..yandex.cloud.vi" +
+      "deo.v1.VideoPublicAccessParamsH\000\022Q\n\022auth" +
+      "_system_access\030\322\017 \001(\01322.yandex.cloud.vid" +
+      "eo.v1.VideoAuthSystemAccessParamsH\000\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001B\017\n\raccess_rightsJ\006\010\311\001\020\320\017J\006\010\321\017\020\322\017J\005\010\006\020" +
+      "\310\001\"\'\n\023UpdateVideoMetadata\022\020\n\010video_id\030\001 " +
+      "\001(\t\"&\n\022DeleteVideoRequest\022\020\n\010video_id\030\001 " +
+      "\001(\t\"\'\n\023DeleteVideoMetadata\022\020\n\010video_id\030\001" +
+      " \001(\t\"\300\001\n\031PerformVideoActionRequest\022\020\n\010vi" +
+      "deo_id\030\001 \001(\t\022=\n\007publish\030\350\007 \001(\0132).yandex." +
+      "cloud.video.v1.PublishVideoActionH\000\022A\n\tu" +
+      "npublish\030\351\007 \001(\0132+.yandex.cloud.video.v1." +
+      "UnpublishVideoActionH\000B\010\n\006actionJ\005\010\002\020\350\007\"" +
+      "\024\n\022PublishVideoAction\"\026\n\024UnpublishVideoA" +
+      "ction\".\n\032PerformVideoActionMetadata\022\020\n\010v" +
+      "ideo_id\030\001 \001(\t\"f\n\030GetVideoPlayerURLReques" +
+      "t\022\020\n\010video_id\030\001 \001(\t\0228\n\006params\030\002 \001(\0132(.ya" +
+      "ndex.cloud.video.v1.VideoPlayerParams\"C\n" +
+      "\021VideoPlayerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010auto" +
+      "play\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"=\n\031GetVideoPl" +
+      "ayerURLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004h" +
+      "tml\030\002 \001(\t\",\n\030GetVideoManifestsRequest\022\020\n" +
+      "\010video_id\030\001 \001(\t\"O\n\031GetVideoManifestsResp" +
+      "onse\0222\n\tmanifests\030\001 \003(\0132\037.yandex.cloud.v" +
+      "ideo.v1.Manifest2\352\t\n\014VideoService\022p\n\003Get" +
+      "\022&.yandex.cloud.video.v1.GetVideoRequest" +
+      "\032\034.yandex.cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033" +
+      "/video/v1/videos/{video_id}\022s\n\004List\022\'.ya" +
+      "ndex.cloud.video.v1.ListVideoRequest\032(.y" +
+      "andex.cloud.video.v1.ListVideoResponse\"\030" +
+      "\202\323\344\223\002\022\022\020/video/v1/videos\022\223\001\n\006Create\022).ya" +
+      "ndex.cloud.video.v1.CreateVideoRequest\032!" +
+      ".yandex.cloud.operation.Operation\";\202\323\344\223\002" +
+      "\025\"\020/video/v1/videos:\001*\262\322*\034\n\023CreateVideoM" +
+      "etadata\022\005Video\022\236\001\n\006Update\022).yandex.cloud" +
+      ".video.v1.UpdateVideoRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"F\202\323\344\223\002 2\033/video/" +
+      "v1/videos/{video_id}:\001*\262\322*\034\n\023UpdateVideo" +
+      "Metadata\022\005Video\022\253\001\n\006Delete\022).yandex.clou" +
+      "d.video.v1.DeleteVideoRequest\032!.yandex.c" +
+      "loud.operation.Operation\"S\202\323\344\223\002\035*\033/video" +
+      "/v1/videos/{video_id}\262\322*,\n\023DeleteVideoMe" +
+      "tadata\022\025google.protobuf.Empty\022\301\001\n\rPerfor" +
+      "mAction\0220.yandex.cloud.video.v1.PerformV" +
+      "ideoActionRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"[\202\323\344\223\002.\")/video/v1/videos/{" +
+      "video_id}:performAction:\001*\262\322*#\n\032PerformV" +
+      "ideoActionMetadata\022\005Video\022\243\001\n\014GetPlayerU" +
+      "RL\022/.yandex.cloud.video.v1.GetVideoPlaye" +
+      "rURLRequest\0320.yandex.cloud.video.v1.GetV" +
+      "ideoPlayerURLResponse\"0\202\323\344\223\002*\022(/video/v1" +
+      "/videos/{video_id}:getPlayerURL\022\243\001\n\014GetM" +
+      "anifests\022/.yandex.cloud.video.v1.GetVide" +
+      "oManifestsRequest\0320.yandex.cloud.video.v" +
+      "1.GetVideoManifestsResponse\"0\202\323\344\223\002*\022(/vi" +
+      "deo/v1/videos/{video_id}:getManifestsB\\\n" +
+      "\031yandex.cloud.api.video.v1Z?github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/vid" +
+      "eo/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -18395,9 +18405,11 @@ public final class VideoServiceOuterClass {
         new java.lang.String[] { "Manifests", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

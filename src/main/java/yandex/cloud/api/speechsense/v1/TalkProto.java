@@ -478,6 +478,21 @@ public final class TalkProto {
      * <code>.yandex.cloud.speechsense.v1.analysis.TextClassifiers text_classifiers = 17;</code>
      */
     yandex.cloud.api.speechsense.v1.analysis.TextClassifiersProto.TextClassifiersOrBuilder getTextClassifiersOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     * @return Whether the summarization field is set.
+     */
+    boolean hasSummarization();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     * @return The summarization.
+     */
+    yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization getSummarization();
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     */
+    yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder getSummarizationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.speechsense.v1.Talk}
@@ -700,6 +715,19 @@ public final class TalkProto {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(textClassifiers_);
                 textClassifiers_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder subBuilder = null;
+              if (summarization_ != null) {
+                subBuilder = summarization_.toBuilder();
+              }
+              summarization_ = input.readMessage(yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summarization_);
+                summarization_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1327,6 +1355,32 @@ public final class TalkProto {
       return getTextClassifiers();
     }
 
+    public static final int SUMMARIZATION_FIELD_NUMBER = 18;
+    private yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization summarization_;
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     * @return Whether the summarization field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummarization() {
+      return summarization_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     * @return The summarization.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization getSummarization() {
+      return summarization_ == null ? yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.getDefaultInstance() : summarization_;
+    }
+    /**
+     * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder getSummarizationOrBuilder() {
+      return getSummarization();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1391,6 +1445,9 @@ public final class TalkProto {
       }
       if (textClassifiers_ != null) {
         output.writeMessage(17, getTextClassifiers());
+      }
+      if (summarization_ != null) {
+        output.writeMessage(18, getSummarization());
       }
       unknownFields.writeTo(output);
     }
@@ -1466,6 +1523,10 @@ public final class TalkProto {
       if (textClassifiers_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getTextClassifiers());
+      }
+      if (summarization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getSummarization());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1543,6 +1604,11 @@ public final class TalkProto {
         if (!getTextClassifiers()
             .equals(other.getTextClassifiers())) return false;
       }
+      if (hasSummarization() != other.hasSummarization()) return false;
+      if (hasSummarization()) {
+        if (!getSummarization()
+            .equals(other.getSummarization())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1609,6 +1675,10 @@ public final class TalkProto {
       if (hasTextClassifiers()) {
         hash = (37 * hash) + TEXT_CLASSIFIERS_FIELD_NUMBER;
         hash = (53 * hash) + getTextClassifiers().hashCode();
+      }
+      if (hasSummarization()) {
+        hash = (37 * hash) + SUMMARIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSummarization().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1818,6 +1888,12 @@ public final class TalkProto {
           textClassifiers_ = null;
           textClassifiersBuilder_ = null;
         }
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
         return this;
       }
 
@@ -1909,6 +1985,11 @@ public final class TalkProto {
           result.textClassifiers_ = textClassifiers_;
         } else {
           result.textClassifiers_ = textClassifiersBuilder_.build();
+        }
+        if (summarizationBuilder_ == null) {
+          result.summarization_ = summarization_;
+        } else {
+          result.summarization_ = summarizationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2044,6 +2125,9 @@ public final class TalkProto {
         }
         if (other.hasTextClassifiers()) {
           mergeTextClassifiers(other.getTextClassifiers());
+        }
+        if (other.hasSummarization()) {
+          mergeSummarization(other.getSummarization());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4099,6 +4183,125 @@ public final class TalkProto {
         }
         return textClassifiersBuilder_;
       }
+
+      private yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization summarization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder> summarizationBuilder_;
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       * @return Whether the summarization field is set.
+       */
+      public boolean hasSummarization() {
+        return summarizationBuilder_ != null || summarization_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       * @return The summarization.
+       */
+      public yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization getSummarization() {
+        if (summarizationBuilder_ == null) {
+          return summarization_ == null ? yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.getDefaultInstance() : summarization_;
+        } else {
+          return summarizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public Builder setSummarization(yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization value) {
+        if (summarizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summarization_ = value;
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public Builder setSummarization(
+          yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder builderForValue) {
+        if (summarizationBuilder_ == null) {
+          summarization_ = builderForValue.build();
+          onChanged();
+        } else {
+          summarizationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public Builder mergeSummarization(yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization value) {
+        if (summarizationBuilder_ == null) {
+          if (summarization_ != null) {
+            summarization_ =
+              yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.newBuilder(summarization_).mergeFrom(value).buildPartial();
+          } else {
+            summarization_ = value;
+          }
+          onChanged();
+        } else {
+          summarizationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public Builder clearSummarization() {
+        if (summarizationBuilder_ == null) {
+          summarization_ = null;
+          onChanged();
+        } else {
+          summarization_ = null;
+          summarizationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder getSummarizationBuilder() {
+        
+        onChanged();
+        return getSummarizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      public yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder getSummarizationOrBuilder() {
+        if (summarizationBuilder_ != null) {
+          return summarizationBuilder_.getMessageOrBuilder();
+        } else {
+          return summarization_ == null ?
+              yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.getDefaultInstance() : summarization_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.speechsense.v1.analysis.Summarization summarization = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder> 
+          getSummarizationFieldBuilder() {
+        if (summarizationBuilder_ == null) {
+          summarizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.Summarization.Builder, yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.SummarizationOrBuilder>(
+                  getSummarization(),
+                  getParentForChildren(),
+                  isClean());
+          summarization_ = null;
+        }
+        return summarizationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5122,42 +5325,45 @@ public final class TalkProto {
       "ce_statistics.proto\032<yandex/cloud/speech" +
       "sense/v1/analysis/speech_statistics.prot" +
       "o\0328yandex/cloud/speechsense/v1/analysis/" +
-      "transcription.proto\032;yandex/cloud/speech" +
-      "sense/v1/analysis/text_classifiers.proto" +
-      "\0321yandex/cloud/speechsense/v1/analysis/p" +
-      "oints.proto\"\351\006\n\004Talk\022\n\n\002id\030\001 \001(\t\022\027\n\017orga" +
-      "nization_id\030\002 \001(\t\022\020\n\010space_id\030\003 \001(\t\022\025\n\rc" +
-      "onnection_id\030\004 \001(\t\022\023\n\013project_ids\030\005 \003(\t\022" +
-      "\022\n\ncreated_by\030\006 \001(\t\022.\n\ncreated_at\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\023\n\013modified_" +
-      "by\030\010 \001(\t\022/\n\013modified_at\030\t \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\0227\n\013talk_fields\030\n \003(\0132\"" +
-      ".yandex.cloud.speechsense.v1.Field\022J\n\rtr" +
-      "anscription\030\013 \001(\01323.yandex.cloud.speechs" +
-      "ense.v1.analysis.Transcription\022Q\n\021speech" +
-      "_statistics\030\014 \001(\01326.yandex.cloud.speechs" +
-      "ense.v1.analysis.SpeechStatistics\022S\n\022sil" +
-      "ence_statistics\030\r \001(\01327.yandex.cloud.spe" +
-      "echsense.v1.analysis.SilenceStatistics\022Y" +
-      "\n\025interrupts_statistics\030\016 \001(\0132:.yandex.c" +
-      "loud.speechsense.v1.analysis.InterruptsS" +
-      "tatistics\022]\n\027conversation_statistics\030\017 \001" +
-      "(\0132<.yandex.cloud.speechsense.v1.analysi" +
-      "s.ConversationStatistics\022<\n\006points\030\020 \001(\013" +
-      "2,.yandex.cloud.speechsense.v1.analysis." +
-      "Points\022O\n\020text_classifiers\030\021 \001(\01325.yande" +
-      "x.cloud.speechsense.v1.analysis.TextClas" +
-      "sifiers\"Z\n\005Field\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t\0224\n\004type\030\003 \001(\0162&.yandex.cloud.speec" +
-      "hsense.v1.FieldType*\257\001\n\tFieldType\022\032\n\026FIE" +
-      "LD_TYPE_UNSPECIFIED\020\000\022\025\n\021FIELD_TYPE_STRI" +
-      "NG\020\001\022\025\n\021FIELD_TYPE_NUMBER\020\002\022\026\n\022FIELD_TYP" +
-      "E_DECIMAL\020\003\022\026\n\022FIELD_TYPE_BOOLEAN\020\004\022\023\n\017F" +
-      "IELD_TYPE_DATE\020\005\022\023\n\017FIELD_TYPE_JSON\020\006By\n" +
-      "\037yandex.cloud.api.speechsense.v1B\tTalkPr" +
-      "otoZKgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/speechsense/v1;speechsense" +
-      "b\006proto3"
+      "summarization.proto\0328yandex/cloud/speech" +
+      "sense/v1/analysis/transcription.proto\032;y" +
+      "andex/cloud/speechsense/v1/analysis/text" +
+      "_classifiers.proto\0321yandex/cloud/speechs" +
+      "ense/v1/analysis/points.proto\"\265\007\n\004Talk\022\n" +
+      "\n\002id\030\001 \001(\t\022\027\n\017organization_id\030\002 \001(\t\022\020\n\010s" +
+      "pace_id\030\003 \001(\t\022\025\n\rconnection_id\030\004 \001(\t\022\023\n\013" +
+      "project_ids\030\005 \003(\t\022\022\n\ncreated_by\030\006 \001(\t\022.\n" +
+      "\ncreated_at\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\023\n\013modified_by\030\010 \001(\t\022/\n\013modified_a" +
+      "t\030\t \001(\0132\032.google.protobuf.Timestamp\0227\n\013t" +
+      "alk_fields\030\n \003(\0132\".yandex.cloud.speechse" +
+      "nse.v1.Field\022J\n\rtranscription\030\013 \001(\01323.ya" +
+      "ndex.cloud.speechsense.v1.analysis.Trans" +
+      "cription\022Q\n\021speech_statistics\030\014 \001(\01326.ya" +
+      "ndex.cloud.speechsense.v1.analysis.Speec" +
+      "hStatistics\022S\n\022silence_statistics\030\r \001(\0132" +
+      "7.yandex.cloud.speechsense.v1.analysis.S" +
+      "ilenceStatistics\022Y\n\025interrupts_statistic" +
+      "s\030\016 \001(\0132:.yandex.cloud.speechsense.v1.an" +
+      "alysis.InterruptsStatistics\022]\n\027conversat" +
+      "ion_statistics\030\017 \001(\0132<.yandex.cloud.spee" +
+      "chsense.v1.analysis.ConversationStatisti" +
+      "cs\022<\n\006points\030\020 \001(\0132,.yandex.cloud.speech" +
+      "sense.v1.analysis.Points\022O\n\020text_classif" +
+      "iers\030\021 \001(\01325.yandex.cloud.speechsense.v1" +
+      ".analysis.TextClassifiers\022J\n\rsummarizati" +
+      "on\030\022 \001(\01323.yandex.cloud.speechsense.v1.a" +
+      "nalysis.Summarization\"Z\n\005Field\022\014\n\004name\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t\0224\n\004type\030\003 \001(\0162&.yand" +
+      "ex.cloud.speechsense.v1.FieldType*\257\001\n\tFi" +
+      "eldType\022\032\n\026FIELD_TYPE_UNSPECIFIED\020\000\022\025\n\021F" +
+      "IELD_TYPE_STRING\020\001\022\025\n\021FIELD_TYPE_NUMBER\020" +
+      "\002\022\026\n\022FIELD_TYPE_DECIMAL\020\003\022\026\n\022FIELD_TYPE_" +
+      "BOOLEAN\020\004\022\023\n\017FIELD_TYPE_DATE\020\005\022\023\n\017FIELD_" +
+      "TYPE_JSON\020\006By\n\037yandex.cloud.api.speechse" +
+      "nse.v1B\tTalkProtoZKgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/speechsense/" +
+      "v1;speechsenseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5167,6 +5373,7 @@ public final class TalkProto {
           yandex.cloud.api.speechsense.v1.analysis.InterruptsStatisticsProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.analysis.SilenceStatisticsProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.analysis.SpeechStatisticsProto.getDescriptor(),
+          yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.analysis.TranscriptionProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.analysis.TextClassifiersProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.analysis.PointsProto.getDescriptor(),
@@ -5176,7 +5383,7 @@ public final class TalkProto {
     internal_static_yandex_cloud_speechsense_v1_Talk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_Talk_descriptor,
-        new java.lang.String[] { "Id", "OrganizationId", "SpaceId", "ConnectionId", "ProjectIds", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "TalkFields", "Transcription", "SpeechStatistics", "SilenceStatistics", "InterruptsStatistics", "ConversationStatistics", "Points", "TextClassifiers", });
+        new java.lang.String[] { "Id", "OrganizationId", "SpaceId", "ConnectionId", "ProjectIds", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "TalkFields", "Transcription", "SpeechStatistics", "SilenceStatistics", "InterruptsStatistics", "ConversationStatistics", "Points", "TextClassifiers", "Summarization", });
     internal_static_yandex_cloud_speechsense_v1_Field_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_speechsense_v1_Field_fieldAccessorTable = new
@@ -5188,6 +5395,7 @@ public final class TalkProto {
     yandex.cloud.api.speechsense.v1.analysis.InterruptsStatisticsProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.SilenceStatisticsProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.SpeechStatisticsProto.getDescriptor();
+    yandex.cloud.api.speechsense.v1.analysis.SummarizationProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.TranscriptionProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.TextClassifiersProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.analysis.PointsProto.getDescriptor();

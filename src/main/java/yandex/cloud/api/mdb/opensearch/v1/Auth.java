@@ -814,6 +814,33 @@ public final class Auth {
      */
     com.google.protobuf.ByteString
         getSubjectKeyBytes();
+
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     * @return Whether the jwtDefaultExpirationTimeout field is set.
+     */
+    boolean hasJwtDefaultExpirationTimeout();
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     * @return The jwtDefaultExpirationTimeout.
+     */
+    com.google.protobuf.Int64Value getJwtDefaultExpirationTimeout();
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getJwtDefaultExpirationTimeoutOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SAMLSettings}
@@ -904,6 +931,19 @@ public final class Auth {
               java.lang.String s = input.readStringRequireUtf8();
 
               subjectKey_ = s;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (jwtDefaultExpirationTimeout_ != null) {
+                subBuilder = jwtDefaultExpirationTimeout_.toBuilder();
+              }
+              jwtDefaultExpirationTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jwtDefaultExpirationTimeout_);
+                jwtDefaultExpirationTimeout_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1194,6 +1234,44 @@ public final class Auth {
       }
     }
 
+    public static final int JWT_DEFAULT_EXPIRATION_TIMEOUT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value jwtDefaultExpirationTimeout_;
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     * @return Whether the jwtDefaultExpirationTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasJwtDefaultExpirationTimeout() {
+      return jwtDefaultExpirationTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     * @return The jwtDefaultExpirationTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getJwtDefaultExpirationTimeout() {
+      return jwtDefaultExpirationTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : jwtDefaultExpirationTimeout_;
+    }
+    /**
+     * <pre>
+     * default jwt expiration timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getJwtDefaultExpirationTimeoutOrBuilder() {
+      return getJwtDefaultExpirationTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1229,6 +1307,9 @@ public final class Auth {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, subjectKey_);
       }
+      if (jwtDefaultExpirationTimeout_ != null) {
+        output.writeMessage(8, getJwtDefaultExpirationTimeout());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1261,6 +1342,10 @@ public final class Auth {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subjectKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, subjectKey_);
       }
+      if (jwtDefaultExpirationTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getJwtDefaultExpirationTimeout());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1290,6 +1375,11 @@ public final class Auth {
           .equals(other.getRolesKey())) return false;
       if (!getSubjectKey()
           .equals(other.getSubjectKey())) return false;
+      if (hasJwtDefaultExpirationTimeout() != other.hasJwtDefaultExpirationTimeout()) return false;
+      if (hasJwtDefaultExpirationTimeout()) {
+        if (!getJwtDefaultExpirationTimeout()
+            .equals(other.getJwtDefaultExpirationTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1316,6 +1406,10 @@ public final class Auth {
       hash = (53 * hash) + getRolesKey().hashCode();
       hash = (37 * hash) + SUBJECT_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getSubjectKey().hashCode();
+      if (hasJwtDefaultExpirationTimeout()) {
+        hash = (37 * hash) + JWT_DEFAULT_EXPIRATION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getJwtDefaultExpirationTimeout().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1463,6 +1557,12 @@ public final class Auth {
 
         subjectKey_ = "";
 
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          jwtDefaultExpirationTimeout_ = null;
+        } else {
+          jwtDefaultExpirationTimeout_ = null;
+          jwtDefaultExpirationTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -1496,6 +1596,11 @@ public final class Auth {
         result.dashboardsUrl_ = dashboardsUrl_;
         result.rolesKey_ = rolesKey_;
         result.subjectKey_ = subjectKey_;
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          result.jwtDefaultExpirationTimeout_ = jwtDefaultExpirationTimeout_;
+        } else {
+          result.jwtDefaultExpirationTimeout_ = jwtDefaultExpirationTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1569,6 +1674,9 @@ public final class Auth {
         if (!other.getSubjectKey().isEmpty()) {
           subjectKey_ = other.subjectKey_;
           onChanged();
+        }
+        if (other.hasJwtDefaultExpirationTimeout()) {
+          mergeJwtDefaultExpirationTimeout(other.getJwtDefaultExpirationTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2155,6 +2263,161 @@ public final class Auth {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Int64Value jwtDefaultExpirationTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> jwtDefaultExpirationTimeoutBuilder_;
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       * @return Whether the jwtDefaultExpirationTimeout field is set.
+       */
+      public boolean hasJwtDefaultExpirationTimeout() {
+        return jwtDefaultExpirationTimeoutBuilder_ != null || jwtDefaultExpirationTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       * @return The jwtDefaultExpirationTimeout.
+       */
+      public com.google.protobuf.Int64Value getJwtDefaultExpirationTimeout() {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          return jwtDefaultExpirationTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : jwtDefaultExpirationTimeout_;
+        } else {
+          return jwtDefaultExpirationTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public Builder setJwtDefaultExpirationTimeout(com.google.protobuf.Int64Value value) {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jwtDefaultExpirationTimeout_ = value;
+          onChanged();
+        } else {
+          jwtDefaultExpirationTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public Builder setJwtDefaultExpirationTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          jwtDefaultExpirationTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          jwtDefaultExpirationTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public Builder mergeJwtDefaultExpirationTimeout(com.google.protobuf.Int64Value value) {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          if (jwtDefaultExpirationTimeout_ != null) {
+            jwtDefaultExpirationTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(jwtDefaultExpirationTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            jwtDefaultExpirationTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          jwtDefaultExpirationTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public Builder clearJwtDefaultExpirationTimeout() {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          jwtDefaultExpirationTimeout_ = null;
+          onChanged();
+        } else {
+          jwtDefaultExpirationTimeout_ = null;
+          jwtDefaultExpirationTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getJwtDefaultExpirationTimeoutBuilder() {
+        
+        onChanged();
+        return getJwtDefaultExpirationTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getJwtDefaultExpirationTimeoutOrBuilder() {
+        if (jwtDefaultExpirationTimeoutBuilder_ != null) {
+          return jwtDefaultExpirationTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return jwtDefaultExpirationTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : jwtDefaultExpirationTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * default jwt expiration timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value jwt_default_expiration_timeout = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getJwtDefaultExpirationTimeoutFieldBuilder() {
+        if (jwtDefaultExpirationTimeoutBuilder_ == null) {
+          jwtDefaultExpirationTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getJwtDefaultExpirationTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          jwtDefaultExpirationTimeout_ = null;
+        }
+        return jwtDefaultExpirationTimeoutBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2228,23 +2491,27 @@ public final class Auth {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/mdb/opensearch/v1/auth.pr" +
-      "oto\022\036yandex.cloud.mdb.opensearch.v1\032\035yan" +
-      "dex/cloud/validation.proto\"J\n\014AuthSettin" +
-      "gs\022:\n\004saml\030\001 \001(\0132,.yandex.cloud.mdb.open" +
-      "search.v1.SAMLSettings\"\353\001\n\014SAMLSettings\022" +
-      "\017\n\007enabled\030\001 \001(\010\022 \n\ridp_entity_id\030\002 \001(\tB" +
-      "\t\212\3101\005<=250\022&\n\021idp_metadata_file\030\003 \001(\014B\013\212" +
-      "\3101\007<=10000\022\037\n\014sp_entity_id\030\004 \001(\tB\t\212\3101\005<=" +
-      "250\022!\n\016dashboards_url\030\005 \001(\tB\t\212\3101\005<=250\022\034" +
-      "\n\troles_key\030\006 \001(\tB\t\212\3101\005<=250\022\036\n\013subject_" +
-      "key\030\007 \001(\tB\t\212\3101\005<=250Bs\n\"yandex.cloud.api" +
-      ".mdb.opensearch.v1ZMgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/opensea" +
-      "rch/v1;opensearchb\006proto3"
+      "oto\022\036yandex.cloud.mdb.opensearch.v1\032\036goo" +
+      "gle/protobuf/wrappers.proto\032\035yandex/clou" +
+      "d/validation.proto\"J\n\014AuthSettings\022:\n\004sa" +
+      "ml\030\001 \001(\0132,.yandex.cloud.mdb.opensearch.v" +
+      "1.SAMLSettings\"\260\002\n\014SAMLSettings\022\017\n\007enabl" +
+      "ed\030\001 \001(\010\022 \n\ridp_entity_id\030\002 \001(\tB\t\212\3101\005<=2" +
+      "50\022&\n\021idp_metadata_file\030\003 \001(\014B\013\212\3101\007<=100" +
+      "00\022\037\n\014sp_entity_id\030\004 \001(\tB\t\212\3101\005<=250\022!\n\016d" +
+      "ashboards_url\030\005 \001(\tB\t\212\3101\005<=250\022\034\n\troles_" +
+      "key\030\006 \001(\tB\t\212\3101\005<=250\022\036\n\013subject_key\030\007 \001(" +
+      "\tB\t\212\3101\005<=250\022C\n\036jwt_default_expiration_t" +
+      "imeout\030\010 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eBs\n\"yandex.cloud.api.mdb.opensearch.v1Z" +
+      "Mgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/mdb/opensearch/v1;opensearchb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_opensearch_v1_AuthSettings_descriptor =
@@ -2258,12 +2525,13 @@ public final class Auth {
     internal_static_yandex_cloud_mdb_opensearch_v1_SAMLSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_SAMLSettings_descriptor,
-        new java.lang.String[] { "Enabled", "IdpEntityId", "IdpMetadataFile", "SpEntityId", "DashboardsUrl", "RolesKey", "SubjectKey", });
+        new java.lang.String[] { "Enabled", "IdpEntityId", "IdpMetadataFile", "SpEntityId", "DashboardsUrl", "RolesKey", "SubjectKey", "JwtDefaultExpirationTimeout", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

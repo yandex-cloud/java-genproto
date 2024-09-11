@@ -21320,107 +21320,119 @@ public final class StreamLineServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n/yandex/cloud/video/v1/stream_line_serv" +
-      "ice.proto\022\025yandex.cloud.video.v1\032 google" +
-      "/protobuf/field_mask.proto\032 yandex/cloud" +
-      "/api/operation.proto\032&yandex/cloud/opera" +
-      "tion/operation.proto\032\'yandex/cloud/video" +
-      "/v1/stream_line.proto\".\n\024GetStreamLineRe" +
-      "quest\022\026\n\016stream_line_id\030\001 \001(\t\"{\n\026ListStr" +
-      "eamLinesRequest\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tp" +
-      "age_size\030d \001(\003\022\022\n\npage_token\030e \001(\t\022\020\n\010or" +
-      "der_by\030f \001(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"q\n\027Li" +
-      "stStreamLinesResponse\0227\n\014stream_lines\030\001 " +
-      "\003(\0132!.yandex.cloud.video.v1.StreamLine\022\027" +
-      "\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\367\005\n\027Create" +
-      "StreamLineRequest\022\022\n\nchannel_id\030\001 \001(\t\022\r\n" +
-      "\005title\030\002 \001(\t\022\024\n\014thumbnail_id\030\003 \001(\t\022K\n\006la" +
-      "bels\030\310\001 \003(\0132:.yandex.cloud.video.v1.Crea" +
-      "teStreamLineRequest.LabelsEntry\022;\n\trtmp_" +
-      "push\030\350\007 \001(\0132%.yandex.cloud.video.v1.RTMP" +
-      "PushParamsH\000\0229\n\010srt_push\030\351\007 \001(\0132$.yandex" +
-      ".cloud.video.v1.SRTPushParamsH\000\022;\n\trtmp_" +
-      "pull\030\352\007 \001(\0132%.yandex.cloud.video.v1.RTMP" +
-      "PullParamsH\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex" +
-      ".cloud.video.v1.SRTPullParamsH\000\0229\n\010tcp_p" +
-      "ull\030\354\007 \001(\0132$.yandex.cloud.video.v1.TCPPu" +
-      "llParamsH\000\022;\n\trtsp_pull\030\356\007 \001(\0132%.yandex." +
-      "cloud.video.v1.RTSPPullParamsH\000\022?\n\013manua" +
-      "l_line\030\320\017 \001(\0132\'.yandex.cloud.video.v1.Ma" +
-      "nualLineParamsH\001\022;\n\tauto_line\030\321\017 \001(\0132%.y" +
-      "andex.cloud.video.v1.AutoLineParamsH\001\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001B\016\n\014input_paramsB\022\n\020line_type_params" +
-      "J\006\010\311\001\020\350\007J\006\010\355\007\020\356\007J\006\010\357\007\020\320\017J\005\010\004\020\310\001\"2\n\030Creat" +
-      "eStreamLineMetadata\022\026\n\016stream_line_id\030\001 " +
-      "\001(\t\"\221\005\n\027UpdateStreamLineRequest\022\026\n\016strea" +
-      "m_line_id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\024" +
-      "\n\014thumbnail_id\030\004 \001(\t\022K\n\006labels\030\310\001 \003(\0132:." +
-      "yandex.cloud.video.v1.UpdateStreamLineRe" +
-      "quest.LabelsEntry\022;\n\trtmp_push\030\350\007 \001(\0132%." +
-      "yandex.cloud.video.v1.RTMPPushParamsH\000\0229" +
-      "\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.video.v" +
-      "1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132%." +
-      "yandex.cloud.video.v1.RTMPPullParamsH\000\0229" +
-      "\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.video.v" +
-      "1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$.y" +
-      "andex.cloud.video.v1.TCPPullParamsH\000\022;\n\t" +
-      "rtsp_pull\030\356\007 \001(\0132%.yandex.cloud.video.v1" +
-      ".RTSPPullParamsH\000\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014input_params" +
-      "J\006\010\311\001\020\350\007J\006\010\355\007\020\356\007J\005\010\005\020\310\001\"2\n\030UpdateStreamL" +
-      "ineMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027D" +
-      "eleteStreamLineRequest\022\026\n\016stream_line_id" +
-      "\030\001 \001(\t\"2\n\030DeleteStreamLineMetadata\022\026\n\016st" +
-      "ream_line_id\030\001 \001(\t\"\277\001\n\030PerformLineAction" +
-      "Request\022\026\n\016stream_line_id\030\001 \001(\t\022:\n\010activ" +
-      "ate\030\350\007 \001(\0132%.yandex.cloud.video.v1.Activ" +
-      "ateActionH\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.yande" +
-      "x.cloud.video.v1.DeactivateActionH\000B\010\n\006a" +
-      "ctionJ\005\010\002\020\350\007\"3\n\031PerformLineActionMetadat" +
-      "a\022\026\n\016stream_line_id\030\001 \001(\t\"\020\n\016RTMPPushPar" +
-      "ams\"\017\n\rSRTPushParams\"\035\n\016RTMPPullParams\022\013" +
-      "\n\003url\030\001 \001(\t\"\034\n\rSRTPullParams\022\013\n\003url\030\001 \001(" +
-      "\t\"\034\n\rTCPPullParams\022\013\n\003url\030\002 \001(\t\"\035\n\016RTSPP" +
-      "ullParams\022\013\n\003url\030\001 \001(\t\"\022\n\020ManualLinePara" +
-      "ms\"\020\n\016AutoLineParams\"\020\n\016ActivateAction\"\022" +
-      "\n\020DeactivateAction\"-\n\023GetStreamKeyReques" +
-      "t\022\026\n\016stream_line_id\030\001 \001(\t\"0\n\026UpdateStrea" +
-      "mKeyRequest\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027U" +
-      "pdateStreamKeyMetadata\022\026\n\016stream_line_id" +
-      "\030\001 \001(\t2\211\010\n\021StreamLineService\022W\n\003Get\022+.ya" +
-      "ndex.cloud.video.v1.GetStreamLineRequest" +
-      "\032!.yandex.cloud.video.v1.StreamLine\"\000\022g\n" +
-      "\004List\022-.yandex.cloud.video.v1.ListStream" +
-      "LinesRequest\032..yandex.cloud.video.v1.Lis" +
-      "tStreamLinesResponse\"\000\022\207\001\n\006Create\022..yand" +
-      "ex.cloud.video.v1.CreateStreamLineReques" +
-      "t\032!.yandex.cloud.operation.Operation\"*\262\322" +
-      "*&\n\030CreateStreamLineMetadata\022\nStreamLine" +
-      "\022\207\001\n\006Update\022..yandex.cloud.video.v1.Upda" +
-      "teStreamLineRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"*\262\322*&\n\030UpdateStreamLineMe" +
-      "tadata\022\nStreamLine\022\222\001\n\006Delete\022..yandex.c" +
-      "loud.video.v1.DeleteStreamLineRequest\032!." +
-      "yandex.cloud.operation.Operation\"5\262\322*1\n\030" +
-      "DeleteStreamLineMetadata\022\025google.protobu" +
-      "f.Empty\022\220\001\n\rPerformAction\022/.yandex.cloud" +
-      ".video.v1.PerformLineActionRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"+\262\322*\'\n\031Per" +
-      "formLineActionMetadata\022\nStreamLine\022b\n\014Ge" +
-      "tStreamKey\022*.yandex.cloud.video.v1.GetSt" +
-      "reamKeyRequest\032$.yandex.cloud.video.v1.P" +
-      "ushStreamKey\"\000\022\221\001\n\017UpdateStreamKey\022-.yan" +
-      "dex.cloud.video.v1.UpdateStreamKeyReques" +
-      "t\032!.yandex.cloud.operation.Operation\",\262\322" +
-      "*(\n\027UpdateStreamKeyMetadata\022\rPushStreamK" +
-      "eyB\\\n\031yandex.cloud.api.video.v1Z?github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/video/v1;videob\006proto3"
+      "ice.proto\022\025yandex.cloud.video.v1\032\034google" +
+      "/api/annotations.proto\032 google/protobuf/" +
+      "field_mask.proto\032 yandex/cloud/api/opera" +
+      "tion.proto\032&yandex/cloud/operation/opera" +
+      "tion.proto\032\'yandex/cloud/video/v1/stream" +
+      "_line.proto\".\n\024GetStreamLineRequest\022\026\n\016s" +
+      "tream_line_id\030\001 \001(\t\"{\n\026ListStreamLinesRe" +
+      "quest\022\022\n\nchannel_id\030\001 \001(\t\022\021\n\tpage_size\030d" +
+      " \001(\003\022\022\n\npage_token\030e \001(\t\022\020\n\010order_by\030f \001" +
+      "(\t\022\016\n\006filter\030g \001(\tJ\004\010\002\020d\"q\n\027ListStreamLi" +
+      "nesResponse\0227\n\014stream_lines\030\001 \003(\0132!.yand" +
+      "ex.cloud.video.v1.StreamLine\022\027\n\017next_pag" +
+      "e_token\030d \001(\tJ\004\010\002\020d\"\367\005\n\027CreateStreamLine" +
+      "Request\022\022\n\nchannel_id\030\001 \001(\t\022\r\n\005title\030\002 \001" +
+      "(\t\022\024\n\014thumbnail_id\030\003 \001(\t\022K\n\006labels\030\310\001 \003(" +
+      "\0132:.yandex.cloud.video.v1.CreateStreamLi" +
+      "neRequest.LabelsEntry\022;\n\trtmp_push\030\350\007 \001(" +
+      "\0132%.yandex.cloud.video.v1.RTMPPushParams" +
+      "H\000\0229\n\010srt_push\030\351\007 \001(\0132$.yandex.cloud.vid" +
+      "eo.v1.SRTPushParamsH\000\022;\n\trtmp_pull\030\352\007 \001(" +
+      "\0132%.yandex.cloud.video.v1.RTMPPullParams" +
+      "H\000\0229\n\010srt_pull\030\353\007 \001(\0132$.yandex.cloud.vid" +
+      "eo.v1.SRTPullParamsH\000\0229\n\010tcp_pull\030\354\007 \001(\013" +
+      "2$.yandex.cloud.video.v1.TCPPullParamsH\000" +
+      "\022;\n\trtsp_pull\030\356\007 \001(\0132%.yandex.cloud.vide" +
+      "o.v1.RTSPPullParamsH\000\022?\n\013manual_line\030\320\017 " +
+      "\001(\0132\'.yandex.cloud.video.v1.ManualLinePa" +
+      "ramsH\001\022;\n\tauto_line\030\321\017 \001(\0132%.yandex.clou" +
+      "d.video.v1.AutoLineParamsH\001\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014in" +
+      "put_paramsB\022\n\020line_type_paramsJ\006\010\311\001\020\350\007J\006" +
+      "\010\355\007\020\356\007J\006\010\357\007\020\320\017J\005\010\004\020\310\001\"2\n\030CreateStreamLin" +
+      "eMetadata\022\026\n\016stream_line_id\030\001 \001(\t\"\221\005\n\027Up" +
+      "dateStreamLineRequest\022\026\n\016stream_line_id\030" +
+      "\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022\r\n\005title\030\003 \001(\t\022\024\n\014thumbnai" +
+      "l_id\030\004 \001(\t\022K\n\006labels\030\310\001 \003(\0132:.yandex.clo" +
+      "ud.video.v1.UpdateStreamLineRequest.Labe" +
+      "lsEntry\022;\n\trtmp_push\030\350\007 \001(\0132%.yandex.clo" +
+      "ud.video.v1.RTMPPushParamsH\000\0229\n\010srt_push" +
+      "\030\351\007 \001(\0132$.yandex.cloud.video.v1.SRTPushP" +
+      "aramsH\000\022;\n\trtmp_pull\030\352\007 \001(\0132%.yandex.clo" +
+      "ud.video.v1.RTMPPullParamsH\000\0229\n\010srt_pull" +
+      "\030\353\007 \001(\0132$.yandex.cloud.video.v1.SRTPullP" +
+      "aramsH\000\0229\n\010tcp_pull\030\354\007 \001(\0132$.yandex.clou" +
+      "d.video.v1.TCPPullParamsH\000\022;\n\trtsp_pull\030" +
+      "\356\007 \001(\0132%.yandex.cloud.video.v1.RTSPPullP" +
+      "aramsH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001B\016\n\014input_paramsJ\006\010\311\001\020\350\007J\006" +
+      "\010\355\007\020\356\007J\005\010\005\020\310\001\"2\n\030UpdateStreamLineMetadat" +
+      "a\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027DeleteStrea" +
+      "mLineRequest\022\026\n\016stream_line_id\030\001 \001(\t\"2\n\030" +
+      "DeleteStreamLineMetadata\022\026\n\016stream_line_" +
+      "id\030\001 \001(\t\"\277\001\n\030PerformLineActionRequest\022\026\n" +
+      "\016stream_line_id\030\001 \001(\t\022:\n\010activate\030\350\007 \001(\013" +
+      "2%.yandex.cloud.video.v1.ActivateActionH" +
+      "\000\022>\n\ndeactivate\030\351\007 \001(\0132\'.yandex.cloud.vi" +
+      "deo.v1.DeactivateActionH\000B\010\n\006actionJ\005\010\002\020" +
+      "\350\007\"3\n\031PerformLineActionMetadata\022\026\n\016strea" +
+      "m_line_id\030\001 \001(\t\"\020\n\016RTMPPushParams\"\017\n\rSRT" +
+      "PushParams\"\035\n\016RTMPPullParams\022\013\n\003url\030\001 \001(" +
+      "\t\"\034\n\rSRTPullParams\022\013\n\003url\030\001 \001(\t\"\034\n\rTCPPu" +
+      "llParams\022\013\n\003url\030\002 \001(\t\"\035\n\016RTSPPullParams\022" +
+      "\013\n\003url\030\001 \001(\t\"\022\n\020ManualLineParams\"\020\n\016Auto" +
+      "LineParams\"\020\n\016ActivateAction\"\022\n\020Deactiva" +
+      "teAction\"-\n\023GetStreamKeyRequest\022\026\n\016strea" +
+      "m_line_id\030\001 \001(\t\"0\n\026UpdateStreamKeyReques" +
+      "t\022\026\n\016stream_line_id\030\001 \001(\t\"1\n\027UpdateStrea" +
+      "mKeyMetadata\022\026\n\016stream_line_id\030\001 \001(\t2\221\013\n" +
+      "\021StreamLineService\022\205\001\n\003Get\022+.yandex.clou" +
+      "d.video.v1.GetStreamLineRequest\032!.yandex" +
+      ".cloud.video.v1.StreamLine\".\202\323\344\223\002(\022&/vid" +
+      "eo/v1/streamLines/{stream_line_id}\022\204\001\n\004L" +
+      "ist\022-.yandex.cloud.video.v1.ListStreamLi" +
+      "nesRequest\032..yandex.cloud.video.v1.ListS" +
+      "treamLinesResponse\"\035\202\323\344\223\002\027\022\025/video/v1/st" +
+      "reamLines\022\247\001\n\006Create\022..yandex.cloud.vide" +
+      "o.v1.CreateStreamLineRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"J\202\323\344\223\002\032\"\025/video/" +
+      "v1/streamLines:\001*\262\322*&\n\030CreateStreamLineM" +
+      "etadata\022\nStreamLine\022\270\001\n\006Update\022..yandex." +
+      "cloud.video.v1.UpdateStreamLineRequest\032!" +
+      ".yandex.cloud.operation.Operation\"[\202\323\344\223\002" +
+      "+2&/video/v1/streamLines/{stream_line_id" +
+      "}:\001*\262\322*&\n\030UpdateStreamLineMetadata\022\nStre" +
+      "amLine\022\300\001\n\006Delete\022..yandex.cloud.video.v" +
+      "1.DeleteStreamLineRequest\032!.yandex.cloud" +
+      ".operation.Operation\"c\202\323\344\223\002(*&/video/v1/" +
+      "streamLines/{stream_line_id}\262\322*1\n\030Delete" +
+      "StreamLineMetadata\022\025google.protobuf.Empt" +
+      "y\022\317\001\n\rPerformAction\022/.yandex.cloud.video" +
+      ".v1.PerformLineActionRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"j\202\323\344\223\0029\"4/video/" +
+      "v1/streamLines/{stream_line_id}:performA" +
+      "ction:\001*\262\322*\'\n\031PerformLineActionMetadata\022" +
+      "\nStreamLine\022\235\001\n\014GetStreamKey\022*.yandex.cl" +
+      "oud.video.v1.GetStreamKeyRequest\032$.yande" +
+      "x.cloud.video.v1.PushStreamKey\";\202\323\344\223\0025\0223" +
+      "/video/v1/streamLines/{stream_line_id}:g" +
+      "etStreamKey\022\322\001\n\017UpdateStreamKey\022-.yandex" +
+      ".cloud.video.v1.UpdateStreamKeyRequest\032!" +
+      ".yandex.cloud.operation.Operation\"m\202\323\344\223\002" +
+      ";26/video/v1/streamLines/{stream_line_id" +
+      "}:updateStreamKey:\001*\262\322*(\n\027UpdateStreamKe" +
+      "yMetadata\022\rPushStreamKeyB\\\n\031yandex.cloud" +
+      ".api.video.v1Z?github.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/video/v1;videob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -21584,9 +21596,11 @@ public final class StreamLineServiceOuterClass {
         new java.lang.String[] { "StreamLineId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

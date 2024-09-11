@@ -54,6 +54,26 @@ public final class ImbalancePointOuterClass {
      * @return The rps.
      */
     long getRps();
+
+    /**
+     * <pre>
+     * Imbalance reason comment.
+     * </pre>
+     *
+     * <code>string comment = 3;</code>
+     * @return The comment.
+     */
+    java.lang.String getComment();
+    /**
+     * <pre>
+     * Imbalance reason comment.
+     * </pre>
+     *
+     * <code>string comment = 3;</code>
+     * @return The bytes for comment.
+     */
+    com.google.protobuf.ByteString
+        getCommentBytes();
   }
   /**
    * <pre>
@@ -72,6 +92,7 @@ public final class ImbalancePointOuterClass {
       super(builder);
     }
     private ImbalancePoint() {
+      comment_ = "";
     }
 
     @java.lang.Override
@@ -120,6 +141,12 @@ public final class ImbalancePointOuterClass {
             case 16: {
 
               rps_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              comment_ = s;
               break;
             }
             default: {
@@ -207,6 +234,52 @@ public final class ImbalancePointOuterClass {
       return rps_;
     }
 
+    public static final int COMMENT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object comment_;
+    /**
+     * <pre>
+     * Imbalance reason comment.
+     * </pre>
+     *
+     * <code>string comment = 3;</code>
+     * @return The comment.
+     */
+    @java.lang.Override
+    public java.lang.String getComment() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        comment_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Imbalance reason comment.
+     * </pre>
+     *
+     * <code>string comment = 3;</code>
+     * @return The bytes for comment.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommentBytes() {
+      java.lang.Object ref = comment_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        comment_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -227,6 +300,9 @@ public final class ImbalancePointOuterClass {
       if (rps_ != 0L) {
         output.writeInt64(2, rps_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, comment_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -243,6 +319,9 @@ public final class ImbalancePointOuterClass {
       if (rps_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, rps_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(comment_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, comment_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -266,6 +345,8 @@ public final class ImbalancePointOuterClass {
       }
       if (getRps()
           != other.getRps()) return false;
+      if (!getComment()
+          .equals(other.getComment())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -284,6 +365,8 @@ public final class ImbalancePointOuterClass {
       hash = (37 * hash) + RPS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getRps());
+      hash = (37 * hash) + COMMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getComment().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -429,6 +512,8 @@ public final class ImbalancePointOuterClass {
         }
         rps_ = 0L;
 
+        comment_ = "";
+
         return this;
       }
 
@@ -461,6 +546,7 @@ public final class ImbalancePointOuterClass {
           result.at_ = atBuilder_.build();
         }
         result.rps_ = rps_;
+        result.comment_ = comment_;
         onBuilt();
         return result;
       }
@@ -514,6 +600,10 @@ public final class ImbalancePointOuterClass {
         }
         if (other.getRps() != 0L) {
           setRps(other.getRps());
+        }
+        if (!other.getComment().isEmpty()) {
+          comment_ = other.comment_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -741,6 +831,102 @@ public final class ImbalancePointOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object comment_ = "";
+      /**
+       * <pre>
+       * Imbalance reason comment.
+       * </pre>
+       *
+       * <code>string comment = 3;</code>
+       * @return The comment.
+       */
+      public java.lang.String getComment() {
+        java.lang.Object ref = comment_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          comment_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Imbalance reason comment.
+       * </pre>
+       *
+       * <code>string comment = 3;</code>
+       * @return The bytes for comment.
+       */
+      public com.google.protobuf.ByteString
+          getCommentBytes() {
+        java.lang.Object ref = comment_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          comment_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Imbalance reason comment.
+       * </pre>
+       *
+       * <code>string comment = 3;</code>
+       * @param value The comment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComment(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        comment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Imbalance reason comment.
+       * </pre>
+       *
+       * <code>string comment = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComment() {
+        
+        comment_ = getDefaultInstance().getComment();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Imbalance reason comment.
+       * </pre>
+       *
+       * <code>string comment = 3;</code>
+       * @param value The bytes for comment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        comment_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -811,12 +997,12 @@ public final class ImbalancePointOuterClass {
       "\n:yandex/cloud/loadtesting/api/v1/test/i" +
       "mbalance_point.proto\022$yandex.cloud.loadt" +
       "esting.api.v1.test\032\037google/protobuf/time" +
-      "stamp.proto\"E\n\016ImbalancePoint\022&\n\002at\030\001 \001(" +
+      "stamp.proto\"V\n\016ImbalancePoint\022&\n\002at\030\001 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\013\n\003rps\030\002 \001" +
-      "(\003By\n(yandex.cloud.api.loadtesting.api.v" +
-      "1.testZMgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/loadtesting/api/v1/test" +
-      ";testb\006proto3"
+      "(\003\022\017\n\007comment\030\003 \001(\tBy\n(yandex.cloud.api." +
+      "loadtesting.api.v1.testZMgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/loadte" +
+      "sting/api/v1/test;testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -828,7 +1014,7 @@ public final class ImbalancePointOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_test_ImbalancePoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_test_ImbalancePoint_descriptor,
-        new java.lang.String[] { "At", "Rps", });
+        new java.lang.String[] { "At", "Rps", "Comment", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
