@@ -29781,6 +29781,33 @@ public final class ClusterServiceOuterClass {
        * @return The enum numeric value on the wire of roles at the given index.
        */
       int getRolesValue(int index);
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       */
+      yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * <pre>
@@ -29904,6 +29931,19 @@ public final class ClusterServiceOuterClass {
                   roles_.add(rawValue);
                 }
                 input.popLimit(oldLimit);
+                break;
+              }
+              case 66: {
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -30241,6 +30281,44 @@ public final class ClusterServiceOuterClass {
       }
       private int rolesMemoizedSerializedSize;
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 8;
+      private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -30280,6 +30358,9 @@ public final class ClusterServiceOuterClass {
         }
         for (int i = 0; i < roles_.size(); i++) {
           output.writeEnumNoTag(roles_.get(i));
+        }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(8, getDiskSizeAutoscaling());
         }
         unknownFields.writeTo(output);
       }
@@ -30333,6 +30414,10 @@ public final class ClusterServiceOuterClass {
               .computeUInt32SizeNoTag(dataSize);
           }rolesMemoizedSerializedSize = dataSize;
         }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getDiskSizeAutoscaling());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -30364,6 +30449,11 @@ public final class ClusterServiceOuterClass {
         if (getAssignPublicIp()
             != other.getAssignPublicIp()) return false;
         if (!roles_.equals(other.roles_)) return false;
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -30398,6 +30488,10 @@ public final class ClusterServiceOuterClass {
         if (getRolesCount() > 0) {
           hash = (37 * hash) + ROLES_FIELD_NUMBER;
           hash = (53 * hash) + roles_.hashCode();
+        }
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -30554,6 +30648,12 @@ public final class ClusterServiceOuterClass {
 
           roles_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000004);
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -30604,6 +30704,11 @@ public final class ClusterServiceOuterClass {
             bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.roles_ = roles_;
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -30694,6 +30799,9 @@ public final class ClusterServiceOuterClass {
               roles_.addAll(other.roles_);
             }
             onChanged();
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -31540,6 +31648,161 @@ public final class ClusterServiceOuterClass {
           }
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 8;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -33586,6 +33849,33 @@ public final class ClusterServiceOuterClass {
        * @return The assignPublicIp.
        */
       boolean getAssignPublicIp();
+
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      boolean hasDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DashboardsCreateSpec.NodeGroup}
@@ -33681,6 +33971,19 @@ public final class ClusterServiceOuterClass {
               case 48: {
 
                 assignPublicIp_ = input.readBool();
+                break;
+              }
+              case 58: {
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+                if (diskSizeAutoscaling_ != null) {
+                  subBuilder = diskSizeAutoscaling_.toBuilder();
+                }
+                diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(diskSizeAutoscaling_);
+                  diskSizeAutoscaling_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -33937,6 +34240,44 @@ public final class ClusterServiceOuterClass {
         return assignPublicIp_;
       }
 
+      public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 7;
+      private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        return getDiskSizeAutoscaling();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -33968,6 +34309,9 @@ public final class ClusterServiceOuterClass {
         }
         if (assignPublicIp_ != false) {
           output.writeBool(6, assignPublicIp_);
+        }
+        if (diskSizeAutoscaling_ != null) {
+          output.writeMessage(7, getDiskSizeAutoscaling());
         }
         unknownFields.writeTo(output);
       }
@@ -34009,6 +34353,10 @@ public final class ClusterServiceOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(6, assignPublicIp_);
         }
+        if (diskSizeAutoscaling_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getDiskSizeAutoscaling());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -34039,6 +34387,11 @@ public final class ClusterServiceOuterClass {
             .equals(other.getSubnetIdsList())) return false;
         if (getAssignPublicIp()
             != other.getAssignPublicIp()) return false;
+        if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+        if (hasDiskSizeAutoscaling()) {
+          if (!getDiskSizeAutoscaling()
+              .equals(other.getDiskSizeAutoscaling())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -34070,6 +34423,10 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getAssignPublicIp());
+        if (hasDiskSizeAutoscaling()) {
+          hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+          hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -34219,6 +34576,12 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
           assignPublicIp_ = false;
 
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
           return this;
         }
 
@@ -34264,6 +34627,11 @@ public final class ClusterServiceOuterClass {
           }
           result.subnetIds_ = subnetIds_;
           result.assignPublicIp_ = assignPublicIp_;
+          if (diskSizeAutoscalingBuilder_ == null) {
+            result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+          } else {
+            result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -34344,6 +34712,9 @@ public final class ClusterServiceOuterClass {
           }
           if (other.getAssignPublicIp() != false) {
             setAssignPublicIp(other.getAssignPublicIp());
+          }
+          if (other.hasDiskSizeAutoscaling()) {
+            mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -35002,6 +35373,161 @@ public final class ClusterServiceOuterClass {
           assignPublicIp_ = false;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         * @return Whether the diskSizeAutoscaling field is set.
+         */
+        public boolean hasDiskSizeAutoscaling() {
+          return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         * @return The diskSizeAutoscaling.
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          } else {
+            return diskSizeAutoscalingBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            diskSizeAutoscaling_ = value;
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public Builder setDiskSizeAutoscaling(
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = builderForValue.build();
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            if (diskSizeAutoscaling_ != null) {
+              diskSizeAutoscaling_ =
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+            } else {
+              diskSizeAutoscaling_ = value;
+            }
+            onChanged();
+          } else {
+            diskSizeAutoscalingBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public Builder clearDiskSizeAutoscaling() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscaling_ = null;
+            onChanged();
+          } else {
+            diskSizeAutoscaling_ = null;
+            diskSizeAutoscalingBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+          
+          onChanged();
+          return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+          if (diskSizeAutoscalingBuilder_ != null) {
+            return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+          } else {
+            return diskSizeAutoscaling_ == null ?
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+          }
+        }
+        /**
+         * <pre>
+         * Disk size autoscaling settings
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+            getDiskSizeAutoscalingFieldBuilder() {
+          if (diskSizeAutoscalingBuilder_ == null) {
+            diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                    getDiskSizeAutoscaling(),
+                    getParentForChildren(),
+                    isClean());
+            diskSizeAutoscaling_ = null;
+          }
+          return diskSizeAutoscalingBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -51019,6 +51545,33 @@ public final class ClusterServiceOuterClass {
      * @return The assignPublicIp.
      */
     boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.OpenSearchNodeGroupUpdateSpec}
@@ -51131,6 +51684,19 @@ public final class ClusterServiceOuterClass {
             case 48: {
 
               assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -51422,6 +51988,44 @@ public final class ClusterServiceOuterClass {
       return assignPublicIp_;
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -51458,6 +52062,9 @@ public final class ClusterServiceOuterClass {
       }
       if (assignPublicIp_ != false) {
         output.writeBool(6, assignPublicIp_);
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(7, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -51508,6 +52115,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, assignPublicIp_);
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -51537,6 +52148,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSubnetIdsList())) return false;
       if (getAssignPublicIp()
           != other.getAssignPublicIp()) return false;
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -51570,6 +52186,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIp());
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -51719,6 +52339,12 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000004);
         assignPublicIp_ = false;
 
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         return this;
       }
 
@@ -51768,6 +52394,11 @@ public final class ClusterServiceOuterClass {
         }
         result.subnetIds_ = subnetIds_;
         result.assignPublicIp_ = assignPublicIp_;
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -51854,6 +52485,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getAssignPublicIp() != false) {
           setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -52604,6 +53238,161 @@ public final class ClusterServiceOuterClass {
         assignPublicIp_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -55781,6 +56570,33 @@ public final class ClusterServiceOuterClass {
      * @return The assignPublicIp.
      */
     boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DashboardsNodeGroupUpdateSpec}
@@ -55869,6 +56685,19 @@ public final class ClusterServiceOuterClass {
             case 40: {
 
               assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -56079,6 +56908,44 @@ public final class ClusterServiceOuterClass {
       return assignPublicIp_;
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -56107,6 +56974,9 @@ public final class ClusterServiceOuterClass {
       }
       if (assignPublicIp_ != false) {
         output.writeBool(5, assignPublicIp_);
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(6, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -56145,6 +57015,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, assignPublicIp_);
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -56173,6 +57047,11 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSubnetIdsList())) return false;
       if (getAssignPublicIp()
           != other.getAssignPublicIp()) return false;
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -56202,6 +57081,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIp());
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -56349,6 +57232,12 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         assignPublicIp_ = false;
 
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         return this;
       }
 
@@ -56393,6 +57282,11 @@ public final class ClusterServiceOuterClass {
         }
         result.subnetIds_ = subnetIds_;
         result.assignPublicIp_ = assignPublicIp_;
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -56469,6 +57363,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getAssignPublicIp() != false) {
           setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -57031,6 +57928,161 @@ public final class ClusterServiceOuterClass {
         assignPublicIp_ = false;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DiskSizeAutoscaling disk_size_autoscaling = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -62830,7 +63882,7 @@ public final class ClusterServiceOuterClass {
       ".mdb.opensearch.v1.DashboardsCreateSpec\022" +
       "6\n\006access\030\005 \001(\0132&.yandex.cloud.mdb.opens" +
       "earch.v1.Access\".\n\017KeystoreSetting\022\014\n\004na" +
-      "me\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\200\005\n\024OpenSearchCr" +
+      "me\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\324\005\n\024OpenSearchCr" +
       "eateSpec\022\017\n\007plugins\030\001 \003(\t\022S\n\013node_groups" +
       "\030\002 \003(\0132>.yandex.cloud.mdb.opensearch.v1." +
       "OpenSearchCreateSpec.NodeGroup\022k\n\023opense" +
@@ -62838,7 +63890,7 @@ public final class ClusterServiceOuterClass {
       "pensearch.v1.config.OpenSearchConfig2H\000R" +
       "\022opensearchConfig_2\022J\n\021keystore_settings" +
       "\030\004 \003(\0132/.yandex.cloud.mdb.opensearch.v1." +
-      "KeystoreSetting\032\276\002\n\tNodeGroup\022,\n\004name\030\001 " +
+      "KeystoreSetting\032\222\003\n\tNodeGroup\022,\n\004name\030\001 " +
       "\001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022<\n\tr" +
       "esources\030\002 \001(\0132).yandex.cloud.mdb.opense" +
       "arch.v1.Resources\022\034\n\013hosts_count\030\003 \001(\003B\007" +
@@ -62846,247 +63898,255 @@ public final class ClusterServiceOuterClass {
       "=50\022$\n\nsubnet_ids\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=5" +
       "0\022\030\n\020assign_public_ip\030\006 \001(\010\022C\n\005roles\030\007 \003" +
       "(\01624.yandex.cloud.mdb.opensearch.v1.Open" +
-      "Search.GroupRoleB\010\n\006config\"\325\002\n\024Dashboard" +
-      "sCreateSpec\022S\n\013node_groups\030\002 \003(\0132>.yande" +
-      "x.cloud.mdb.opensearch.v1.DashboardsCrea" +
-      "teSpec.NodeGroup\032\347\001\n\tNodeGroup\022,\n\004name\030\001" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022<\n\t" +
-      "resources\030\002 \001(\0132).yandex.cloud.mdb.opens" +
-      "earch.v1.Resources\022\034\n\013hosts_count\030\003 \001(\003B" +
-      "\007\372\3071\003>=1\022\020\n\010zone_ids\030\004 \003(\t\022$\n\nsubnet_ids" +
-      "\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=50\022\030\n\020assign_publi" +
-      "c_ip\030\006 \001(\010\"\245\002\n\020ConfigUpdateSpec\022\017\n\007versi" +
-      "on\030\001 \001(\t\022\034\n\016admin_password\030\002 \001(\tB\004\350\3071\001\022T" +
-      "\n\017opensearch_spec\030\003 \001(\0132;.yandex.cloud.m" +
-      "db.opensearch.v1.OpenSearchClusterUpdate" +
-      "Spec\022T\n\017dashboards_spec\030\004 \001(\0132;.yandex.c" +
-      "loud.mdb.opensearch.v1.DashboardsCluster" +
-      "UpdateSpec\0226\n\006access\030\005 \001(\0132&.yandex.clou" +
-      "d.mdb.opensearch.v1.Access\"\227\002\n\033OpenSearc" +
-      "hClusterUpdateSpec\022\017\n\007plugins\030\001 \003(\t\022k\n\023o" +
-      "pensearch_config_2\030\002 \001(\01328.yandex.cloud." +
-      "mdb.opensearch.v1.config.OpenSearchConfi" +
-      "g2H\000R\022opensearchConfig_2\022N\n\025set_keystore" +
-      "_settings\030\003 \003(\0132/.yandex.cloud.mdb.opens" +
-      "earch.v1.KeystoreSetting\022 \n\030remove_keyst" +
-      "ore_settings\030\004 \003(\tB\010\n\006config\"\035\n\033Dashboar" +
-      "dsClusterUpdateSpec\"8\n\024BackupClusterRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
-      "\025BackupClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"\300\005\n\025RestoreClusterRequest\022\027\n\tbackup_i" +
-      "d\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\t" +
-      "B\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(\0132A.yandex.cl" +
-      "oud.mdb.opensearch.v1.RestoreClusterRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\022H\n\013environment\030\005 \001(\01623.yandex.cloud.mdb" +
-      ".opensearch.v1.Cluster.Environment\022K\n\013co" +
-      "nfig_spec\030\006 \001(\01320.yandex.cloud.mdb.opens" +
-      "earch.v1.ConfigCreateSpecB\004\350\3071\001\022 \n\nnetwo" +
-      "rk_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_gr" +
-      "oup_ids\030\010 \003(\t\022\032\n\022service_account_id\030\t \001(" +
-      "\t\022\033\n\023deletion_protection\030\n \001(\010\022\037\n\tfolder" +
-      "_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022maintenance_w" +
-      "indow\030\014 \001(\01321.yandex.cloud.mdb.opensearc" +
-      "h.v1.MaintenanceWindow\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\026Restore" +
-      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tb" +
-      "ackup_id\030\002 \001(\t\"\317\002\n\034RescheduleMaintenance" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022j\n\017reschedule_type\030\002 \001(\0162K.yandex.clou" +
+      "Search.GroupRole\022R\n\025disk_size_autoscalin" +
+      "g\030\010 \001(\01323.yandex.cloud.mdb.opensearch.v1" +
+      ".DiskSizeAutoscalingB\010\n\006config\"\251\003\n\024Dashb" +
+      "oardsCreateSpec\022S\n\013node_groups\030\002 \003(\0132>.y" +
+      "andex.cloud.mdb.opensearch.v1.Dashboards" +
+      "CreateSpec.NodeGroup\032\273\002\n\tNodeGroup\022,\n\004na" +
+      "me\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022<\n\tresources\030\002 \001(\0132).yandex.cloud.mdb.o" +
+      "pensearch.v1.Resources\022\034\n\013hosts_count\030\003 " +
+      "\001(\003B\007\372\3071\003>=1\022\020\n\010zone_ids\030\004 \003(\t\022$\n\nsubnet" +
+      "_ids\030\005 \003(\tB\020\202\3101\004<=10\212\3101\004<=50\022\030\n\020assign_p" +
+      "ublic_ip\030\006 \001(\010\022R\n\025disk_size_autoscaling\030" +
+      "\007 \001(\01323.yandex.cloud.mdb.opensearch.v1.D" +
+      "iskSizeAutoscaling\"\245\002\n\020ConfigUpdateSpec\022" +
+      "\017\n\007version\030\001 \001(\t\022\034\n\016admin_password\030\002 \001(\t" +
+      "B\004\350\3071\001\022T\n\017opensearch_spec\030\003 \001(\0132;.yandex" +
+      ".cloud.mdb.opensearch.v1.OpenSearchClust" +
+      "erUpdateSpec\022T\n\017dashboards_spec\030\004 \001(\0132;." +
+      "yandex.cloud.mdb.opensearch.v1.Dashboard" +
+      "sClusterUpdateSpec\0226\n\006access\030\005 \001(\0132&.yan" +
+      "dex.cloud.mdb.opensearch.v1.Access\"\227\002\n\033O" +
+      "penSearchClusterUpdateSpec\022\017\n\007plugins\030\001 " +
+      "\003(\t\022k\n\023opensearch_config_2\030\002 \001(\01328.yande" +
+      "x.cloud.mdb.opensearch.v1.config.OpenSea" +
+      "rchConfig2H\000R\022opensearchConfig_2\022N\n\025set_" +
+      "keystore_settings\030\003 \003(\0132/.yandex.cloud.m" +
+      "db.opensearch.v1.KeystoreSetting\022 \n\030remo" +
+      "ve_keystore_settings\030\004 \003(\tB\010\n\006config\"\035\n\033" +
+      "DashboardsClusterUpdateSpec\"8\n\024BackupClu" +
+      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"+\n\025BackupClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"\300\005\n\025RestoreClusterRequest\022\027\n\t" +
+      "backup_id\030\001 \001(\tB\004\350\3071\001\022,\n\004name\030\002 \001(\tB\036\350\3071" +
+      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\022\222\001\n\006labels\030\004 \003(\0132A.y" +
+      "andex.cloud.mdb.opensearch.v1.RestoreClu" +
+      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022H\n\013environment\030\005 \001(\01623.yandex.c" +
+      "loud.mdb.opensearch.v1.Cluster.Environme" +
+      "nt\022K\n\013config_spec\030\006 \001(\01320.yandex.cloud.m" +
+      "db.opensearch.v1.ConfigCreateSpecB\004\350\3071\001\022" +
+      " \n\nnetwork_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022sec" +
+      "urity_group_ids\030\010 \003(\t\022\032\n\022service_account" +
+      "_id\030\t \001(\t\022\033\n\023deletion_protection\030\n \001(\010\022\037" +
+      "\n\tfolder_id\030\013 \001(\tB\014\350\3071\001\212\3101\004<=50\022M\n\022maint" +
+      "enance_window\030\014 \001(\01321.yandex.cloud.mdb.o" +
+      "pensearch.v1.MaintenanceWindow\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n" +
+      "\026RestoreClusterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\317\002\n\034RescheduleMai" +
+      "ntenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022j\n\017reschedule_type\030\002 \001(\0162K.yan" +
+      "dex.cloud.mdb.opensearch.v1.RescheduleMa" +
+      "intenanceRequest.RescheduleTypeB\004\350\3071\001\0221\n" +
+      "\rdelayed_until\030\003 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE" +
+      "_TYPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NE" +
+      "XT_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003" +
+      "\"l\n\035RescheduleMaintenanceMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampJ\004\010\002\020\004\"{\n\031ListCl" +
+      "usterBackupsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032L" +
+      "istClusterBackupsResponse\0227\n\007backups\030\001 \003" +
+      "(\0132&.yandex.cloud.mdb.opensearch.v1.Back" +
+      "up\022\027\n\017next_page_token\030\002 \001(\t\"R\n DeleteOpe" +
+      "nSearchNodeGroupRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n Upda" +
+      "teOpenSearchNodeGroupRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\307" +
+      "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_m" +
+      "ask\030\003 \001(\0132\032.google.protobuf.FieldMask\022V\n" +
+      "\017node_group_spec\030\004 \001(\0132=.yandex.cloud.md" +
+      "b.opensearch.v1.OpenSearchNodeGroupUpdat" +
+      "eSpec\"\313\002\n\035OpenSearchNodeGroupUpdateSpec\022" +
+      "<\n\tresources\030\001 \001(\0132).yandex.cloud.mdb.op" +
+      "ensearch.v1.Resources\022\023\n\013hosts_count\030\002 \001" +
+      "(\003\022C\n\005roles\030\003 \003(\01624.yandex.cloud.mdb.ope" +
+      "nsearch.v1.OpenSearch.GroupRole\022\020\n\010zone_" +
+      "ids\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_" +
+      "public_ip\030\006 \001(\010\022R\n\025disk_size_autoscaling" +
+      "\030\007 \001(\01323.yandex.cloud.mdb.opensearch.v1." +
+      "DiskSizeAutoscaling\"\232\001\n\035AddOpenSearchNod" +
+      "eGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022W\n\017node_group_spec\030\002 \001(\0132>.yande" +
+      "x.cloud.mdb.opensearch.v1.OpenSearchCrea" +
+      "teSpec.NodeGroup\"r\n DeleteDashboardsNode" +
+      "GroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
+      "-zA-Z0-9_-]*\"\373\001\n UpdateDashboardsNodeGro" +
+      "upRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA" +
+      "-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google." +
+      "protobuf.FieldMask\022V\n\017node_group_spec\030\004 " +
+      "\001(\0132=.yandex.cloud.mdb.opensearch.v1.Das" +
+      "hboardsNodeGroupUpdateSpec\"\206\002\n\035Dashboard" +
+      "sNodeGroupUpdateSpec\022<\n\tresources\030\001 \001(\0132" +
+      ").yandex.cloud.mdb.opensearch.v1.Resourc" +
+      "es\022\023\n\013hosts_count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(" +
+      "\t\022\022\n\nsubnet_ids\030\004 \003(\t\022\030\n\020assign_public_i" +
+      "p\030\005 \001(\010\022R\n\025disk_size_autoscaling\030\006 \001(\01323" +
+      ".yandex.cloud.mdb.opensearch.v1.DiskSize" +
+      "Autoscaling\"\232\001\n\035AddDashboardsNodeGroupRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "W\n\017node_group_spec\030\002 \001(\0132>.yandex.cloud." +
+      "mdb.opensearch.v1.DashboardsCreateSpec.N" +
+      "odeGroup\"8\n\024AddNodeGroupMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027UpdateNode" +
+      "GroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\";\n\027DeleteNodeGroupMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthS" +
+      "ettingsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"}\n\031UpdateAuthSettingsRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010setti" +
+      "ngs\030\002 \001(\0132,.yandex.cloud.mdb.opensearch." +
+      "v1.AuthSettings\"0\n\032UpdateAuthSettingsMet" +
+      "adata\022\022\n\ncluster_id\030\001 \001(\t2\322\'\n\016ClusterSer" +
+      "vice\022\227\001\n\003Get\0221.yandex.cloud.mdb.opensear" +
+      "ch.v1.GetClusterRequest\032\'.yandex.cloud.m" +
+      "db.opensearch.v1.Cluster\"4\202\323\344\223\002.\022,/manag" +
+      "ed-opensearch/v1/clusters/{cluster_id}\022\232" +
+      "\001\n\004List\0223.yandex.cloud.mdb.opensearch.v1" +
+      ".ListClustersRequest\0324.yandex.cloud.mdb." +
+      "opensearch.v1.ListClustersResponse\"\'\202\323\344\223" +
+      "\002!\022\037/managed-opensearch/v1/clusters\022\261\001\n\006" +
+      "Create\0224.yandex.cloud.mdb.opensearch.v1." +
+      "CreateClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"N\202\323\344\223\002$\"\037/managed-opense" +
+      "arch/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
+      "tadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.clou" +
+      "d.mdb.opensearch.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
+      "\223\00212,/managed-opensearch/v1/clusters/{cl" +
+      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
+      "\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.o" +
+      "pensearch.v1.DeleteClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"f\202\323\344\223\002.*,/m" +
+      "anaged-opensearch/v1/clusters/{cluster_i" +
+      "d}\262\322*.\n\025DeleteClusterMetadata\022\025google.pr" +
+      "otobuf.Empty\022\302\001\n\006Backup\0224.yandex.cloud.m" +
+      "db.opensearch.v1.BackupClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"_\202\323\344\223\0025" +
+      "\"3/managed-opensearch/v1/clusters/{clust" +
+      "er_id}:backup\262\322* \n\025BackupClusterMetadata" +
+      "\022\007Cluster\022\274\001\n\007Restore\0225.yandex.cloud.mdb" +
+      ".opensearch.v1.RestoreClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"W\202\323\344\223\002,\"" +
+      "\'/managed-opensearch/v1/clusters:restore" +
+      ":\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster" +
+      "\022\363\001\n\025RescheduleMaintenance\022<.yandex.clou" +
       "d.mdb.opensearch.v1.RescheduleMaintenanc" +
-      "eRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdelayed" +
-      "_until\030\003 \001(\0132\032.google.protobuf.Timestamp" +
-      "\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE_UN" +
-      "SPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAIL" +
-      "ABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035Resc" +
-      "heduleMaintenanceMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampJ\004\010\002\020\004\"{\n\031ListClusterBac" +
-      "kupsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\n" +
-      "page_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\032ListClust" +
-      "erBackupsResponse\0227\n\007backups\030\001 \003(\0132&.yan" +
-      "dex.cloud.mdb.opensearch.v1.Backup\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"R\n DeleteOpenSearchN" +
-      "odeGroupRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\"\373\001\n UpdateOpenSe" +
-      "archNodeGroupRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022V\n\017node_gr" +
-      "oup_spec\030\004 \001(\0132=.yandex.cloud.mdb.opense" +
-      "arch.v1.OpenSearchNodeGroupUpdateSpec\"\367\001" +
-      "\n\035OpenSearchNodeGroupUpdateSpec\022<\n\tresou" +
-      "rces\030\001 \001(\0132).yandex.cloud.mdb.opensearch" +
-      ".v1.Resources\022\023\n\013hosts_count\030\002 \001(\003\022C\n\005ro" +
-      "les\030\003 \003(\01624.yandex.cloud.mdb.opensearch." +
-      "v1.OpenSearch.GroupRole\022\020\n\010zone_ids\030\004 \003(" +
-      "\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_public_i" +
-      "p\030\006 \001(\010\"\232\001\n\035AddOpenSearchNodeGroupReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017n" +
-      "ode_group_spec\030\002 \001(\0132>.yandex.cloud.mdb." +
-      "opensearch.v1.OpenSearchCreateSpec.NodeG" +
-      "roup\"r\n DeleteDashboardsNodeGroupRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004na" +
-      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
-      "\"\373\001\n UpdateDashboardsNodeGroupRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030" +
-      "\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022/\n" +
-      "\013update_mask\030\003 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022V\n\017node_group_spec\030\004 \001(\0132=.yandex" +
-      ".cloud.mdb.opensearch.v1.DashboardsNodeG" +
-      "roupUpdateSpec\"\262\001\n\035DashboardsNodeGroupUp" +
-      "dateSpec\022<\n\tresources\030\001 \001(\0132).yandex.clo" +
-      "ud.mdb.opensearch.v1.Resources\022\023\n\013hosts_" +
-      "count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(\t\022\022\n\nsubnet_" +
-      "ids\030\004 \003(\t\022\030\n\020assign_public_ip\030\005 \001(\010\"\232\001\n\035" +
-      "AddDashboardsNodeGroupRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node_group_sp" +
-      "ec\030\002 \001(\0132>.yandex.cloud.mdb.opensearch.v" +
-      "1.DashboardsCreateSpec.NodeGroup\"8\n\024AddN" +
-      "odeGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004" +
-      "name\030\002 \001(\t\";\n\027UpdateNodeGroupMetadata\022\022\n" +
-      "\ncluster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027Delet" +
-      "eNodeGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\":\n\026GetAuthSettingsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"}\n\031Upda" +
-      "teAuthSettingsRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001(\0132,.yand" +
-      "ex.cloud.mdb.opensearch.v1.AuthSettings\"" +
-      "0\n\032UpdateAuthSettingsMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t2\322\'\n\016ClusterService\022\227\001\n\003Get\0221.y" +
-      "andex.cloud.mdb.opensearch.v1.GetCluster" +
-      "Request\032\'.yandex.cloud.mdb.opensearch.v1" +
-      ".Cluster\"4\202\323\344\223\002.\022,/managed-opensearch/v1" +
-      "/clusters/{cluster_id}\022\232\001\n\004List\0223.yandex" +
-      ".cloud.mdb.opensearch.v1.ListClustersReq" +
-      "uest\0324.yandex.cloud.mdb.opensearch.v1.Li" +
-      "stClustersResponse\"\'\202\323\344\223\002!\022\037/managed-ope" +
-      "nsearch/v1/clusters\022\261\001\n\006Create\0224.yandex." +
-      "cloud.mdb.opensearch.v1.CreateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "N\202\323\344\223\002$\"\037/managed-opensearch/v1/clusters" +
-      ":\001*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022" +
-      "\276\001\n\006Update\0224.yandex.cloud.mdb.opensearch" +
-      ".v1.UpdateClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"[\202\323\344\223\00212,/managed-op" +
-      "ensearch/v1/clusters/{cluster_id}:\001*\262\322* " +
-      "\n\025UpdateClusterMetadata\022\007Cluster\022\311\001\n\006Del" +
-      "ete\0224.yandex.cloud.mdb.opensearch.v1.Del" +
-      "eteClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"f\202\323\344\223\002.*,/managed-opensearc" +
-      "h/v1/clusters/{cluster_id}\262\322*.\n\025DeleteCl" +
-      "usterMetadata\022\025google.protobuf.Empty\022\302\001\n" +
-      "\006Backup\0224.yandex.cloud.mdb.opensearch.v1" +
-      ".BackupClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"_\202\323\344\223\0025\"3/managed-opens" +
-      "earch/v1/clusters/{cluster_id}:backup\262\322*" +
-      " \n\025BackupClusterMetadata\022\007Cluster\022\274\001\n\007Re" +
-      "store\0225.yandex.cloud.mdb.opensearch.v1.R" +
-      "estoreClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"W\202\323\344\223\002,\"\'/managed-opense" +
-      "arch/v1/clusters:restore:\001*\262\322*!\n\026Restore" +
-      "ClusterMetadata\022\007Cluster\022\363\001\n\025RescheduleM" +
-      "aintenance\022<.yandex.cloud.mdb.opensearch" +
-      ".v1.RescheduleMaintenanceRequest\032!.yande" +
-      "x.cloud.operation.Operation\"y\202\323\344\223\002G\"B/ma" +
-      "naged-opensearch/v1/clusters/{cluster_id" +
-      "}:rescheduleMaintenance:\001*\262\322*(\n\035Reschedu" +
-      "leMaintenanceMetadata\022\007Cluster\022\302\001\n\013ListB" +
-      "ackups\0229.yandex.cloud.mdb.opensearch.v1." +
-      "ListClusterBackupsRequest\032:.yandex.cloud" +
-      ".mdb.opensearch.v1.ListClusterBackupsRes" +
-      "ponse\"<\202\323\344\223\0026\0224/managed-opensearch/v1/cl" +
-      "usters/{cluster_id}/backups\022\275\001\n\004Move\0222.y" +
-      "andex.cloud.mdb.opensearch.v1.MoveCluste" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"^\202\323\344\223\0026\"1/managed-opensearch/v1/clus" +
-      "ters/{cluster_id}:move:\001*\262\322*\036\n\023MoveClust" +
-      "erMetadata\022\007Cluster\022\276\001\n\005Start\0223.yandex.c" +
-      "loud.mdb.opensearch.v1.StartClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"]\202" +
-      "\323\344\223\0024\"2/managed-opensearch/v1/clusters/{" +
-      "cluster_id}:start\262\322*\037\n\024StartClusterMetad" +
-      "ata\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb" +
-      ".opensearch.v1.StopClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"[\202\323\344\223\0023\"1/m" +
-      "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}:stop\262\322*\036\n\023StopClusterMetadata\022\007Cluste" +
-      "r\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.opense" +
-      "arch.v1.ListClusterLogsRequest\0327.yandex." +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"y\202\323\344\223\002G\"B/managed-opensearch/v1/clus" +
+      "ters/{cluster_id}:rescheduleMaintenance:" +
+      "\001*\262\322*(\n\035RescheduleMaintenanceMetadata\022\007C" +
+      "luster\022\302\001\n\013ListBackups\0229.yandex.cloud.md" +
+      "b.opensearch.v1.ListClusterBackupsReques" +
+      "t\032:.yandex.cloud.mdb.opensearch.v1.ListC" +
+      "lusterBackupsResponse\"<\202\323\344\223\0026\0224/managed-" +
+      "opensearch/v1/clusters/{cluster_id}/back" +
+      "ups\022\275\001\n\004Move\0222.yandex.cloud.mdb.opensear" +
+      "ch.v1.MoveClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"^\202\323\344\223\0026\"1/managed-op" +
+      "ensearch/v1/clusters/{cluster_id}:move:\001" +
+      "*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\276\001\n\005" +
+      "Start\0223.yandex.cloud.mdb.opensearch.v1.S" +
+      "tartClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"]\202\323\344\223\0024\"2/managed-opensear" +
+      "ch/v1/clusters/{cluster_id}:start\262\322*\037\n\024S" +
+      "tartClusterMetadata\022\007Cluster\022\272\001\n\004Stop\0222." +
+      "yandex.cloud.mdb.opensearch.v1.StopClust" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"[\202\323\344\223\0023\"1/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
+      "Metadata\022\007Cluster\022\266\001\n\010ListLogs\0226.yandex." +
       "cloud.mdb.opensearch.v1.ListClusterLogsR" +
-      "esponse\"9\202\323\344\223\0023\0221/managed-opensearch/v1/" +
-      "clusters/{cluster_id}:logs\022\273\001\n\nStreamLog" +
-      "s\0228.yandex.cloud.mdb.opensearch.v1.Strea" +
-      "mClusterLogsRequest\032/.yandex.cloud.mdb.o" +
-      "pensearch.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/m" +
+      "equest\0327.yandex.cloud.mdb.opensearch.v1." +
+      "ListClusterLogsResponse\"9\202\323\344\223\0023\0221/manage" +
+      "d-opensearch/v1/clusters/{cluster_id}:lo" +
+      "gs\022\273\001\n\nStreamLogs\0228.yandex.cloud.mdb.ope" +
+      "nsearch.v1.StreamClusterLogsRequest\032/.ya" +
+      "ndex.cloud.mdb.opensearch.v1.StreamLogRe" +
+      "cord\"@\202\323\344\223\002:\0228/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}:stream_logs0\001\022\316\001\n\016Lis" +
+      "tOperations\022<.yandex.cloud.mdb.opensearc" +
+      "h.v1.ListClusterOperationsRequest\032=.yand" +
+      "ex.cloud.mdb.opensearch.v1.ListClusterOp" +
+      "erationsResponse\"?\202\323\344\223\0029\0227/managed-opens" +
+      "earch/v1/clusters/{cluster_id}/operation" +
+      "s\022\272\001\n\tListHosts\0227.yandex.cloud.mdb.opens" +
+      "earch.v1.ListClusterHostsRequest\0328.yande" +
+      "x.cloud.mdb.opensearch.v1.ListClusterHos" +
+      "tsResponse\":\202\323\344\223\0024\0222/managed-opensearch/" +
+      "v1/clusters/{cluster_id}/hosts\022\373\001\n\026AddOp" +
+      "enSearchNodeGroup\022=.yandex.cloud.mdb.ope" +
+      "nsearch.v1.AddOpenSearchNodeGroupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\177\202\323\344" +
+      "\223\002H\"C/managed-opensearch/v1/clusters/{cl" +
+      "uster_id}/opensearch/node_groups:\001*\262\322*-\n" +
+      "\024AddNodeGroupMetadata\022\025google.protobuf.E" +
+      "mpty\022\211\002\n\031DeleteOpenSearchNodeGroup\022@.yan" +
+      "dex.cloud.mdb.opensearch.v1.DeleteOpenSe" +
+      "archNodeGroupRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\206\001\202\323\344\223\002L*J/managed-opens" +
+      "earch/v1/clusters/{cluster_id}/opensearc" +
+      "h/node_groups/{name}\262\322*0\n\027DeleteNodeGrou" +
+      "pMetadata\022\025google.protobuf.Empty\022\214\002\n\031Upd" +
+      "ateOpenSearchNodeGroup\022@.yandex.cloud.md" +
+      "b.opensearch.v1.UpdateOpenSearchNodeGrou" +
+      "pRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\211\001\202\323\344\223\002O2J/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}/opensearch/node_group" +
+      "s/{name}:\001*\262\322*0\n\027UpdateNodeGroupMetadata" +
+      "\022\025google.protobuf.Empty\022\373\001\n\026AddDashboard" +
+      "sNodeGroup\022=.yandex.cloud.mdb.opensearch" +
+      ".v1.AddDashboardsNodeGroupRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"\177\202\323\344\223\002H\"C/m" +
       "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}:stream_logs0\001\022\316\001\n\016ListOperations\022<.ya" +
-      "ndex.cloud.mdb.opensearch.v1.ListCluster" +
-      "OperationsRequest\032=.yandex.cloud.mdb.ope" +
-      "nsearch.v1.ListClusterOperationsResponse" +
-      "\"?\202\323\344\223\0029\0227/managed-opensearch/v1/cluster" +
-      "s/{cluster_id}/operations\022\272\001\n\tListHosts\022" +
-      "7.yandex.cloud.mdb.opensearch.v1.ListClu" +
-      "sterHostsRequest\0328.yandex.cloud.mdb.open" +
-      "search.v1.ListClusterHostsResponse\":\202\323\344\223" +
-      "\0024\0222/managed-opensearch/v1/clusters/{clu" +
-      "ster_id}/hosts\022\373\001\n\026AddOpenSearchNodeGrou" +
-      "p\022=.yandex.cloud.mdb.opensearch.v1.AddOp" +
-      "enSearchNodeGroupRequest\032!.yandex.cloud." +
-      "operation.Operation\"\177\202\323\344\223\002H\"C/managed-op" +
-      "ensearch/v1/clusters/{cluster_id}/opense" +
-      "arch/node_groups:\001*\262\322*-\n\024AddNodeGroupMet" +
-      "adata\022\025google.protobuf.Empty\022\211\002\n\031DeleteO" +
-      "penSearchNodeGroup\022@.yandex.cloud.mdb.op" +
-      "ensearch.v1.DeleteOpenSearchNodeGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\206\001\202\323\344\223\002L*J/managed-opensearch/v1/cluster" +
-      "s/{cluster_id}/opensearch/node_groups/{n" +
-      "ame}\262\322*0\n\027DeleteNodeGroupMetadata\022\025googl" +
-      "e.protobuf.Empty\022\214\002\n\031UpdateOpenSearchNod" +
-      "eGroup\022@.yandex.cloud.mdb.opensearch.v1." +
-      "UpdateOpenSearchNodeGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\211\001\202\323\344\223\002O2J/m" +
-      "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}/opensearch/node_groups/{name}:\001*\262\322*0\n" +
-      "\027UpdateNodeGroupMetadata\022\025google.protobu" +
-      "f.Empty\022\373\001\n\026AddDashboardsNodeGroup\022=.yan" +
-      "dex.cloud.mdb.opensearch.v1.AddDashboard" +
-      "sNodeGroupRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\177\202\323\344\223\002H\"C/managed-opensearc" +
-      "h/v1/clusters/{cluster_id}/dashboards/no" +
-      "de_groups:\001*\262\322*-\n\024AddNodeGroupMetadata\022\025" +
-      "google.protobuf.Empty\022\211\002\n\031DeleteDashboar" +
-      "dsNodeGroup\022@.yandex.cloud.mdb.opensearc" +
-      "h.v1.DeleteDashboardsNodeGroupRequest\032!." +
-      "yandex.cloud.operation.Operation\"\206\001\202\323\344\223\002" +
-      "L*J/managed-opensearch/v1/clusters/{clus" +
-      "ter_id}/dashboards/node_groups/{name}\262\322*" +
-      "0\n\027DeleteNodeGroupMetadata\022\025google.proto" +
-      "buf.Empty\022\214\002\n\031UpdateDashboardsNodeGroup\022" +
-      "@.yandex.cloud.mdb.opensearch.v1.UpdateD" +
-      "ashboardsNodeGroupRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\211\001\202\323\344\223\002O2J/managed-" +
-      "opensearch/v1/clusters/{cluster_id}/dash" +
-      "boards/node_groups/{name}:\001*\262\322*0\n\027Update" +
-      "NodeGroupMetadata\022\025google.protobuf.Empty" +
-      "\022\262\001\n\017GetAuthSettings\0226.yandex.cloud.mdb." +
-      "opensearch.v1.GetAuthSettingsRequest\032,.y" +
-      "andex.cloud.mdb.opensearch.v1.AuthSettin" +
-      "gs\"9\202\323\344\223\0023\0221/managed-opensearch/v1/clust" +
-      "ers/{cluster_id}/auth\022\336\001\n\022UpdateAuthSett" +
-      "ings\0229.yandex.cloud.mdb.opensearch.v1.Up" +
-      "dateAuthSettingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"j\202\323\344\223\0026\0321/managed-ope" +
-      "nsearch/v1/clusters/{cluster_id}/auth:\001*" +
-      "\262\322**\n\032UpdateAuthSettingsMetadata\022\014AuthSe" +
-      "ttingsBs\n\"yandex.cloud.api.mdb.opensearc" +
-      "h.v1ZMgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/opensearch/v1;opensea" +
-      "rchb\006proto3"
+      "d}/dashboards/node_groups:\001*\262\322*-\n\024AddNod" +
+      "eGroupMetadata\022\025google.protobuf.Empty\022\211\002" +
+      "\n\031DeleteDashboardsNodeGroup\022@.yandex.clo" +
+      "ud.mdb.opensearch.v1.DeleteDashboardsNod" +
+      "eGroupRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\206\001\202\323\344\223\002L*J/managed-opensearch/v" +
+      "1/clusters/{cluster_id}/dashboards/node_" +
+      "groups/{name}\262\322*0\n\027DeleteNodeGroupMetada" +
+      "ta\022\025google.protobuf.Empty\022\214\002\n\031UpdateDash" +
+      "boardsNodeGroup\022@.yandex.cloud.mdb.opens" +
+      "earch.v1.UpdateDashboardsNodeGroupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\211\001\202" +
+      "\323\344\223\002O2J/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/dashboards/node_groups/{name" +
+      "}:\001*\262\322*0\n\027UpdateNodeGroupMetadata\022\025googl" +
+      "e.protobuf.Empty\022\262\001\n\017GetAuthSettings\0226.y" +
+      "andex.cloud.mdb.opensearch.v1.GetAuthSet" +
+      "tingsRequest\032,.yandex.cloud.mdb.opensear" +
+      "ch.v1.AuthSettings\"9\202\323\344\223\0023\0221/managed-ope" +
+      "nsearch/v1/clusters/{cluster_id}/auth\022\336\001" +
+      "\n\022UpdateAuthSettings\0229.yandex.cloud.mdb." +
+      "opensearch.v1.UpdateAuthSettingsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"j\202\323\344\223" +
+      "\0026\0321/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}/auth:\001*\262\322**\n\032UpdateAuthSettings" +
+      "Metadata\022\014AuthSettingsBs\n\"yandex.cloud.a" +
+      "pi.mdb.opensearch.v1ZMgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/opens" +
+      "earch/v1;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -63288,7 +64348,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchCreateSpec_NodeGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchCreateSpec_NodeGroup_descriptor,
-        new java.lang.String[] { "Name", "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", "Roles", });
+        new java.lang.String[] { "Name", "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", "Roles", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsCreateSpec_descriptor =
       getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsCreateSpec_fieldAccessorTable = new
@@ -63300,7 +64360,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsCreateSpec_NodeGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsCreateSpec_NodeGroup_descriptor,
-        new java.lang.String[] { "Name", "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", });
+        new java.lang.String[] { "Name", "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_ConfigUpdateSpec_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_opensearch_v1_ConfigUpdateSpec_fieldAccessorTable = new
@@ -63390,7 +64450,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_descriptor,
-        new java.lang.String[] { "Resources", "HostsCount", "Roles", "ZoneIds", "SubnetIds", "AssignPublicIp", });
+        new java.lang.String[] { "Resources", "HostsCount", "Roles", "ZoneIds", "SubnetIds", "AssignPublicIp", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(42);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_fieldAccessorTable = new
@@ -63414,7 +64474,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_descriptor,
-        new java.lang.String[] { "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", });
+        new java.lang.String[] { "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", "DiskSizeAutoscaling", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_fieldAccessorTable = new

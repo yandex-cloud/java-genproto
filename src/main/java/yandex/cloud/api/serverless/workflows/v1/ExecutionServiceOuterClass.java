@@ -3302,16 +3302,28 @@ public final class ExecutionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      * @return Whether the execution field is set.
      */
     boolean hasExecution();
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      * @return The execution.
      */
     yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution getExecution();
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionOrBuilder getExecutionOrBuilder();
@@ -3409,6 +3421,10 @@ public final class ExecutionServiceOuterClass {
     public static final int EXECUTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution execution_;
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      * @return Whether the execution field is set.
      */
@@ -3417,6 +3433,10 @@ public final class ExecutionServiceOuterClass {
       return execution_ != null;
     }
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      * @return The execution.
      */
@@ -3425,6 +3445,10 @@ public final class ExecutionServiceOuterClass {
       return execution_ == null ? yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution.getDefaultInstance() : execution_;
     }
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
      */
     @java.lang.Override
@@ -3751,6 +3775,10 @@ public final class ExecutionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution, yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution.Builder, yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionOrBuilder> executionBuilder_;
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        * @return Whether the execution field is set.
        */
@@ -3758,6 +3786,10 @@ public final class ExecutionServiceOuterClass {
         return executionBuilder_ != null || execution_ != null;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        * @return The execution.
        */
@@ -3769,6 +3801,10 @@ public final class ExecutionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public Builder setExecution(yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution value) {
@@ -3785,6 +3821,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public Builder setExecution(
@@ -3799,6 +3839,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public Builder mergeExecution(yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution value) {
@@ -3817,6 +3861,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public Builder clearExecution() {
@@ -3831,6 +3879,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.Execution.Builder getExecutionBuilder() {
@@ -3839,6 +3891,10 @@ public final class ExecutionServiceOuterClass {
         return getExecutionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionOrBuilder getExecutionOrBuilder() {
@@ -3850,6 +3906,10 @@ public final class ExecutionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Execution execution = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4527,16 +4587,28 @@ public final class ExecutionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      * @return Whether the execution field is set.
      */
     boolean hasExecution();
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      * @return The execution.
      */
     yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview getExecution();
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreviewOrBuilder getExecutionOrBuilder();
@@ -4692,6 +4764,10 @@ public final class ExecutionServiceOuterClass {
     public static final int EXECUTION_FIELD_NUMBER = 1;
     private yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview execution_;
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      * @return Whether the execution field is set.
      */
@@ -4700,6 +4776,10 @@ public final class ExecutionServiceOuterClass {
       return execution_ != null;
     }
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      * @return The execution.
      */
@@ -4708,6 +4788,10 @@ public final class ExecutionServiceOuterClass {
       return execution_ == null ? yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview.getDefaultInstance() : execution_;
     }
     /**
+     * <pre>
+     * Workflow execution details.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
      */
     @java.lang.Override
@@ -5151,6 +5235,10 @@ public final class ExecutionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview, yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview.Builder, yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreviewOrBuilder> executionBuilder_;
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        * @return Whether the execution field is set.
        */
@@ -5158,6 +5246,10 @@ public final class ExecutionServiceOuterClass {
         return executionBuilder_ != null || execution_ != null;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        * @return The execution.
        */
@@ -5169,6 +5261,10 @@ public final class ExecutionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public Builder setExecution(yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview value) {
@@ -5185,6 +5281,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public Builder setExecution(
@@ -5199,6 +5299,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public Builder mergeExecution(yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview value) {
@@ -5217,6 +5321,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public Builder clearExecution() {
@@ -5231,6 +5339,10 @@ public final class ExecutionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreview.Builder getExecutionBuilder() {
@@ -5239,6 +5351,10 @@ public final class ExecutionServiceOuterClass {
         return getExecutionFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.ExecutionOuterClass.ExecutionPreviewOrBuilder getExecutionOrBuilder() {
@@ -5250,6 +5366,10 @@ public final class ExecutionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow execution details.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.ExecutionPreview execution = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

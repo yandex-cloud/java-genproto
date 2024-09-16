@@ -3,6 +3,9 @@ package yandex.cloud.api.serverless.workflows.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Set of methods for managing Workflows Executions.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,6 +218,9 @@ public final class ExecutionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Set of methods for managing Workflows Executions.
+   * </pre>
    */
   public static abstract class ExecutionServiceImplBase implements io.grpc.BindableService {
 
@@ -310,6 +316,9 @@ public final class ExecutionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Set of methods for managing Workflows Executions.
+   * </pre>
    */
   public static final class ExecutionServiceStub extends io.grpc.stub.AbstractAsyncStub<ExecutionServiceStub> {
     private ExecutionServiceStub(
@@ -380,6 +389,9 @@ public final class ExecutionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Set of methods for managing Workflows Executions.
+   * </pre>
    */
   public static final class ExecutionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExecutionServiceBlockingStub> {
     private ExecutionServiceBlockingStub(
@@ -445,6 +457,9 @@ public final class ExecutionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Set of methods for managing Workflows Executions.
+   * </pre>
    */
   public static final class ExecutionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExecutionServiceFutureStub> {
     private ExecutionServiceFutureStub(

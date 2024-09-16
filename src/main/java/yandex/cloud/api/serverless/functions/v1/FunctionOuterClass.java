@@ -3294,6 +3294,22 @@ public final class FunctionOuterClass {
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
+      /**
+       * <pre>
+       * Version will be deleted soon.
+       * </pre>
+       *
+       * <code>OBSOLETE = 3;</code>
+       */
+      OBSOLETE(3),
+      /**
+       * <pre>
+       * Version is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 4;</code>
+       */
+      DELETING(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -3317,6 +3333,22 @@ public final class FunctionOuterClass {
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
+      /**
+       * <pre>
+       * Version will be deleted soon.
+       * </pre>
+       *
+       * <code>OBSOLETE = 3;</code>
+       */
+      public static final int OBSOLETE_VALUE = 3;
+      /**
+       * <pre>
+       * Version is being deleted.
+       * </pre>
+       *
+       * <code>DELETING = 4;</code>
+       */
+      public static final int DELETING_VALUE = 4;
 
 
       public final int getNumber() {
@@ -3346,6 +3378,8 @@ public final class FunctionOuterClass {
           case 0: return STATUS_UNSPECIFIED;
           case 1: return CREATING;
           case 2: return ACTIVE;
+          case 3: return OBSOLETE;
+          case 4: return DELETING;
           default: return null;
         }
       }
@@ -22684,7 +22718,7 @@ public final class FunctionOuterClass {
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
       "\t:\0028\001\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
       "\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022" +
-      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\204\n\n\007Version\022\n\n\002id\030\001 \001(\t" +
+      "\t\n\005ERROR\020\004J\004\010\007\020\010\"\240\n\n\007Version\022\n\n\002id\030\001 \001(\t" +
       "\022\023\n\013function_id\030\002 \001(\t\022\036\n\013description\030\003 \001" +
       "(\tB\t\212\3101\0050-256\022.\n\ncreated_at\030\005 \001(\0132\032.goog" +
       "le.protobuf.Timestamp\022\017\n\007runtime\030\006 \001(\t\022\022" +
@@ -22714,63 +22748,64 @@ public final class FunctionOuterClass {
       "ud.serverless.functions.v1.Mount\0322\n\020Envi" +
       "ronmentEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
       ":\0028\001\032;\n\031NamedServiceAccountsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022S" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"V\n\006Status\022\026\n\022S" +
       "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
-      "IVE\020\002J\004\010\004\020\005J\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006" +
-      "memory\030\001 \001(\003B\030\372\3071\024134217728-8589934592\"O" +
-      "\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013" +
-      "object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"" +
-      "A\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\ts" +
-      "ubnet_id\030\002 \003(\tB\n\212\3101\002>0\220\3101\001\"\370\001\n\rScalingPo" +
-      "licy\022\023\n\013function_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022." +
-      "\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022/\n\013modified_at\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022#\n\033provisioned_instances" +
-      "_count\030\006 \001(\003\022\034\n\024zone_instances_limit\030\007 \001" +
-      "(\003\022\033\n\023zone_requests_limit\030\010 \001(\003J\004\010\005\020\006\"b\n" +
-      "\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022" +
-      "\013\n\003key\030\003 \001(\t\022\036\n\024environment_variable\030\004 \001" +
-      "(\tH\000B\013\n\treference\"\340\001\n\nLogOptions\022\020\n\010disa" +
-      "bled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([" +
-      "a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolde" +
-      "r_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{" +
-      "0,63})?H\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.cl" +
-      "oud.logging.v1.LogLevel.LevelB\r\n\013destina" +
-      "tion\"\243\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001(\t" +
-      "B\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pref" +
-      "ix\030\002 \001(\t\0229\n\020mount_point_name\030\003 \001(\tB\037\350\3071\001" +
-      "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021\n\tread_only" +
-      "\030\004 \001(\010:\002\030\001\"\203\004\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001" +
-      "\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(" +
-      "\01620.yandex.cloud.serverless.functions.v1" +
-      ".Mount.Mode\022S\n\016object_storage\030\n \001(\01329.ya" +
-      "ndex.cloud.serverless.functions.v1.Mount" +
-      ".ObjectStorageH\000\022S\n\023ephemeral_disk_spec\030" +
-      "\013 \001(\01324.yandex.cloud.serverless.function" +
-      "s.v1.Mount.DiskSpecH\000\032R\n\rObjectStorage\0221" +
-      "\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-" +
-      "9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n" +
-      "\004size\030\001 \001(\003B\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\"" +
-      ";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ON" +
-      "LY\020\001\022\016\n\nREAD_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\002" +
-      "\020\003J\004\010\004\020\n\"\336\003\n\025AsyncInvocationConfig\022 \n\rre" +
-      "tries_count\030\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_" +
-      "target\030\002 \001(\0132J.yandex.cloud.serverless.f" +
-      "unctions.v1.AsyncInvocationConfig.Respon" +
-      "seTargetB\004\350\3071\001\022h\n\016failure_target\030\003 \001(\0132J" +
-      ".yandex.cloud.serverless.functions.v1.As" +
-      "yncInvocationConfig.ResponseTargetB\004\350\3071\001" +
-      "\022\032\n\022service_account_id\030\004 \001(\t\032\262\001\n\016Respons" +
-      "eTarget\022I\n\014empty_target\030\001 \001(\01321.yandex.c" +
-      "loud.serverless.functions.v1.EmptyTarget" +
-      "H\000\022E\n\nymq_target\030\002 \001(\0132/.yandex.cloud.se" +
-      "rverless.functions.v1.YMQTargetH\000B\016\n\006tar" +
-      "get\022\004\300\3011\001\"N\n\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(" +
-      "\tB\004\350\3071\001\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"\r\n\013EmptyTargetB~\n(yandex.cloud" +
-      ".api.serverless.functions.v1ZRgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/s" +
-      "erverless/functions/v1;functionsb\006proto3"
+      "IVE\020\002\022\014\n\010OBSOLETE\020\003\022\014\n\010DELETING\020\004J\004\010\004\020\005J" +
+      "\004\010\013\020\014J\004\010\017\020\020\"5\n\tResources\022(\n\006memory\030\001 \001(\003" +
+      "B\030\372\3071\024134217728-8589934592\"O\n\007Package\022\031\n" +
+      "\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013object_name\030" +
+      "\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"A\n\014Connectiv" +
+      "ity\022\022\n\nnetwork_id\030\001 \001(\t\022\035\n\tsubnet_id\030\002 \003" +
+      "(\tB\n\212\3101\002>0\220\3101\001\"\370\001\n\rScalingPolicy\022\023\n\013func" +
+      "tion_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated_at" +
+      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n\013mo" +
+      "dified_at\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022#\n\033provisioned_instances_count\030\006 \001(\003" +
+      "\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zone_r" +
+      "equests_limit\030\010 \001(\003J\004\010\005\020\006\"b\n\006Secret\022\n\n\002i" +
+      "d\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t" +
+      "\022\036\n\024environment_variable\030\004 \001(\tH\000B\013\n\trefe" +
+      "rence\"\340\001\n\nLogOptions\022\020\n\010disabled\030\001 \001(\010\022;" +
+      "\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-z" +
+      "A-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id\030\003 \001(\tB#" +
+      "\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\022:\n" +
+      "\tmin_level\030\004 \001(\0162\'.yandex.cloud.logging." +
+      "v1.LogLevel.LevelB\r\n\013destination\"\243\001\n\014Sto" +
+      "rageMount\0221\n\tbucket_id\030\001 \001(\tB\036\350\3071\001\212\3101\0043-" +
+      "63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006prefix\030\002 \001(\t\0229\n\020" +
+      "mount_point_name\030\003 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071" +
+      "\016[-_0-9a-zA-Z]*\022\021\n\tread_only\030\004 \001(\010:\002\030\001\"\203" +
+      "\004\n\005Mount\022-\n\004name\030\001 \001(\tB\037\350\3071\001\212\3101\0051-100\362\3071" +
+      "\016[-_0-9a-zA-Z]*\022>\n\004mode\030\003 \001(\01620.yandex.c" +
+      "loud.serverless.functions.v1.Mount.Mode\022" +
+      "S\n\016object_storage\030\n \001(\01329.yandex.cloud.s" +
+      "erverless.functions.v1.Mount.ObjectStora" +
+      "geH\000\022S\n\023ephemeral_disk_spec\030\013 \001(\01324.yand" +
+      "ex.cloud.serverless.functions.v1.Mount.D" +
+      "iskSpecH\000\032R\n\rObjectStorage\0221\n\tbucket_id\030" +
+      "\001 \001(\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n" +
+      "\006prefix\030\002 \001(\t\0324\n\010DiskSpec\022\024\n\004size\030\001 \001(\003B" +
+      "\006\372\3071\002>0\022\022\n\nblock_size\030\002 \001(\003\";\n\004Mode\022\024\n\020M" +
+      "ODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD" +
+      "_WRITE\020\002B\016\n\006target\022\004\300\3011\001J\004\010\002\020\003J\004\010\004\020\n\"\336\003\n" +
+      "\025AsyncInvocationConfig\022 \n\rretries_count\030" +
+      "\001 \001(\003B\t\372\3071\0050-100\022h\n\016success_target\030\002 \001(\013" +
+      "2J.yandex.cloud.serverless.functions.v1." +
+      "AsyncInvocationConfig.ResponseTargetB\004\350\307" +
+      "1\001\022h\n\016failure_target\030\003 \001(\0132J.yandex.clou" +
+      "d.serverless.functions.v1.AsyncInvocatio" +
+      "nConfig.ResponseTargetB\004\350\3071\001\022\032\n\022service_" +
+      "account_id\030\004 \001(\t\032\262\001\n\016ResponseTarget\022I\n\014e" +
+      "mpty_target\030\001 \001(\01321.yandex.cloud.serverl" +
+      "ess.functions.v1.EmptyTargetH\000\022E\n\nymq_ta" +
+      "rget\030\002 \001(\0132/.yandex.cloud.serverless.fun" +
+      "ctions.v1.YMQTargetH\000B\016\n\006target\022\004\300\3011\001\"N\n" +
+      "\tYMQTarget\022\027\n\tqueue_arn\030\001 \001(\tB\004\350\3071\001\022(\n\022s" +
+      "ervice_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\r\n" +
+      "\013EmptyTargetB~\n(yandex.cloud.api.serverl" +
+      "ess.functions.v1ZRgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/serverless/fu" +
+      "nctions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

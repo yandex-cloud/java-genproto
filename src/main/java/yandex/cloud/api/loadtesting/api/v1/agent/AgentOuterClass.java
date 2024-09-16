@@ -273,6 +273,33 @@ public final class AgentOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     * @return Whether the logSettings field is set.
+     */
+    boolean hasLogSettings();
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     * @return The logSettings.
+     */
+    yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings getLogSettings();
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder getLogSettingsOrBuilder();
   }
   /**
    * <pre>
@@ -401,6 +428,19 @@ public final class AgentOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder subBuilder = null;
+              if (logSettings_ != null) {
+                subBuilder = logSettings_.toBuilder();
+              }
+              logSettings_ = input.readMessage(yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSettings_);
+                logSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -949,6 +989,44 @@ public final class AgentOuterClass {
       return map.get(key);
     }
 
+    public static final int LOG_SETTINGS_FIELD_NUMBER = 13;
+    private yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings logSettings_;
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     * @return Whether the logSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogSettings() {
+      return logSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     * @return The logSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings getLogSettings() {
+      return logSettings_ == null ? yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.getDefaultInstance() : logSettings_;
+    }
+    /**
+     * <pre>
+     * Agent log settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder getLogSettingsOrBuilder() {
+      return getLogSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -996,6 +1074,9 @@ public final class AgentOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           12);
+      if (logSettings_ != null) {
+        output.writeMessage(13, getLogSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1048,6 +1129,10 @@ public final class AgentOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, labels__);
       }
+      if (logSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getLogSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1082,6 +1167,11 @@ public final class AgentOuterClass {
           .equals(other.getAgentVersionId())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasLogSettings() != other.hasLogSettings()) return false;
+      if (hasLogSettings()) {
+        if (!getLogSettings()
+            .equals(other.getLogSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1116,6 +1206,10 @@ public final class AgentOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasLogSettings()) {
+        hash = (37 * hash) + LOG_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1295,6 +1389,12 @@ public final class AgentOuterClass {
         agentVersionId_ = "";
 
         internalGetMutableLabels().clear();
+        if (logSettingsBuilder_ == null) {
+          logSettings_ = null;
+        } else {
+          logSettings_ = null;
+          logSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1337,6 +1437,11 @@ public final class AgentOuterClass {
         result.agentVersionId_ = agentVersionId_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (logSettingsBuilder_ == null) {
+          result.logSettings_ = logSettings_;
+        } else {
+          result.logSettings_ = logSettingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1428,6 +1533,9 @@ public final class AgentOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasLogSettings()) {
+          mergeLogSettings(other.getLogSettings());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2513,6 +2621,161 @@ public final class AgentOuterClass {
             .putAll(values);
         return this;
       }
+
+      private yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings logSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder> logSettingsBuilder_;
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       * @return Whether the logSettings field is set.
+       */
+      public boolean hasLogSettings() {
+        return logSettingsBuilder_ != null || logSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       * @return The logSettings.
+       */
+      public yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings getLogSettings() {
+        if (logSettingsBuilder_ == null) {
+          return logSettings_ == null ? yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.getDefaultInstance() : logSettings_;
+        } else {
+          return logSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public Builder setLogSettings(yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings value) {
+        if (logSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSettings_ = value;
+          onChanged();
+        } else {
+          logSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public Builder setLogSettings(
+          yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder builderForValue) {
+        if (logSettingsBuilder_ == null) {
+          logSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public Builder mergeLogSettings(yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings value) {
+        if (logSettingsBuilder_ == null) {
+          if (logSettings_ != null) {
+            logSettings_ =
+              yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.newBuilder(logSettings_).mergeFrom(value).buildPartial();
+          } else {
+            logSettings_ = value;
+          }
+          onChanged();
+        } else {
+          logSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public Builder clearLogSettings() {
+        if (logSettingsBuilder_ == null) {
+          logSettings_ = null;
+          onChanged();
+        } else {
+          logSettings_ = null;
+          logSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder getLogSettingsBuilder() {
+        
+        onChanged();
+        return getLogSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder getLogSettingsOrBuilder() {
+        if (logSettingsBuilder_ != null) {
+          return logSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return logSettings_ == null ?
+              yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.getDefaultInstance() : logSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Agent log settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.loadtesting.api.v1.agent.LogSettings log_settings = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder> 
+          getLogSettingsFieldBuilder() {
+        if (logSettingsBuilder_ == null) {
+          logSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettings.Builder, yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.LogSettingsOrBuilder>(
+                  getLogSettings(),
+                  getParentForChildren(),
+                  isClean());
+          logSettings_ = null;
+        }
+        return logSettingsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2588,32 +2851,36 @@ public final class AgentOuterClass {
       "\n1yandex/cloud/loadtesting/api/v1/agent/" +
       "agent.proto\022%yandex.cloud.loadtesting.ap" +
       "i.v1.agent\0322yandex/cloud/loadtesting/api" +
-      "/v1/agent/status.proto\"\354\002\n\005Agent\022\n\n\002id\030\001" +
-      " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n" +
-      "\013description\030\004 \001(\t\022\033\n\023compute_instance_i" +
-      "d\030\005 \001(\t\022=\n\006status\030\007 \001(\0162-.yandex.cloud.l" +
-      "oadtesting.api.v1.agent.Status\022\016\n\006errors" +
-      "\030\010 \003(\t\022\026\n\016current_job_id\030\t \001(\t\022\030\n\020agent_" +
-      "version_id\030\n \001(\t\022H\n\006labels\030\014 \003(\01328.yande" +
-      "x.cloud.loadtesting.api.v1.agent.Agent.L" +
-      "abelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\007J\004\010\013\020\014B|\n)yandex." +
-      "cloud.api.loadtesting.api.v1.agentZOgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/loadtesting/api/v1/agent;agentb\006pro" +
-      "to3"
+      "/v1/agent/status.proto\0328yandex/cloud/loa" +
+      "dtesting/api/v1/agent/log_settings.proto" +
+      "\"\266\003\n\005Agent\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
+      "\t\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\033\n\023" +
+      "compute_instance_id\030\005 \001(\t\022=\n\006status\030\007 \001(" +
+      "\0162-.yandex.cloud.loadtesting.api.v1.agen" +
+      "t.Status\022\016\n\006errors\030\010 \003(\t\022\026\n\016current_job_" +
+      "id\030\t \001(\t\022\030\n\020agent_version_id\030\n \001(\t\022H\n\006la" +
+      "bels\030\014 \003(\01328.yandex.cloud.loadtesting.ap" +
+      "i.v1.agent.Agent.LabelsEntry\022H\n\014log_sett" +
+      "ings\030\r \001(\01322.yandex.cloud.loadtesting.ap" +
+      "i.v1.agent.LogSettings\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\006\020\007J\004\010\013\020" +
+      "\014B|\n)yandex.cloud.api.loadtesting.api.v1" +
+      ".agentZOgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/loadtesting/api/v1/agen" +
+      "t;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.loadtesting.api.v1.agent.StatusOuterClass.getDescriptor(),
+          yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "ComputeInstanceId", "Status", "Errors", "CurrentJobId", "AgentVersionId", "Labels", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "ComputeInstanceId", "Status", "Errors", "CurrentJobId", "AgentVersionId", "Labels", "LogSettings", });
     internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_LabelsEntry_descriptor =
       internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_LabelsEntry_fieldAccessorTable = new
@@ -2621,6 +2888,7 @@ public final class AgentOuterClass {
         internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     yandex.cloud.api.loadtesting.api.v1.agent.StatusOuterClass.getDescriptor();
+    yandex.cloud.api.loadtesting.api.v1.agent.LogSettingsOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

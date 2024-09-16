@@ -6625,16 +6625,28 @@ public final class WorkflowServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      * @return Whether the workflow field is set.
      */
     boolean hasWorkflow();
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      * @return The workflow.
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow getWorkflow();
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowOrBuilder getWorkflowOrBuilder();
@@ -6732,6 +6744,10 @@ public final class WorkflowServiceOuterClass {
     public static final int WORKFLOW_FIELD_NUMBER = 1;
     private yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow workflow_;
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      * @return Whether the workflow field is set.
      */
@@ -6740,6 +6756,10 @@ public final class WorkflowServiceOuterClass {
       return workflow_ != null;
     }
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      * @return The workflow.
      */
@@ -6748,6 +6768,10 @@ public final class WorkflowServiceOuterClass {
       return workflow_ == null ? yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow.getDefaultInstance() : workflow_;
     }
     /**
+     * <pre>
+     * Workflow properties.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
      */
     @java.lang.Override
@@ -7074,6 +7098,10 @@ public final class WorkflowServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowOrBuilder> workflowBuilder_;
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        * @return Whether the workflow field is set.
        */
@@ -7081,6 +7109,10 @@ public final class WorkflowServiceOuterClass {
         return workflowBuilder_ != null || workflow_ != null;
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        * @return The workflow.
        */
@@ -7092,6 +7124,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public Builder setWorkflow(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow value) {
@@ -7108,6 +7144,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public Builder setWorkflow(
@@ -7122,6 +7162,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public Builder mergeWorkflow(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow value) {
@@ -7140,6 +7184,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public Builder clearWorkflow() {
@@ -7154,6 +7202,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.Workflow.Builder getWorkflowBuilder() {
@@ -7162,6 +7214,10 @@ public final class WorkflowServiceOuterClass {
         return getWorkflowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowOrBuilder getWorkflowOrBuilder() {
@@ -7173,6 +7229,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Workflow properties.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.workflows.v1.Workflow workflow = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9590,24 +9650,44 @@ public final class WorkflowServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     java.util.List<yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview> 
         getWorkflowsList();
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview getWorkflows(int index);
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     int getWorkflowsCount();
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreviewOrBuilder> 
         getWorkflowsOrBuilderList();
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreviewOrBuilder getWorkflowsOrBuilder(
@@ -9740,6 +9820,10 @@ public final class WorkflowServiceOuterClass {
     public static final int WORKFLOWS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview> workflows_;
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     @java.lang.Override
@@ -9747,6 +9831,10 @@ public final class WorkflowServiceOuterClass {
       return workflows_;
     }
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     @java.lang.Override
@@ -9755,6 +9843,10 @@ public final class WorkflowServiceOuterClass {
       return workflows_;
     }
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     @java.lang.Override
@@ -9762,6 +9854,10 @@ public final class WorkflowServiceOuterClass {
       return workflows_.size();
     }
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     @java.lang.Override
@@ -9769,6 +9865,10 @@ public final class WorkflowServiceOuterClass {
       return workflows_.get(index);
     }
     /**
+     * <pre>
+     * List of Workflows.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
      */
     @java.lang.Override
@@ -10201,6 +10301,10 @@ public final class WorkflowServiceOuterClass {
           yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.Builder, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreviewOrBuilder> workflowsBuilder_;
 
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview> getWorkflowsList() {
@@ -10211,6 +10315,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public int getWorkflowsCount() {
@@ -10221,6 +10329,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview getWorkflows(int index) {
@@ -10231,6 +10343,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder setWorkflows(
@@ -10248,6 +10364,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder setWorkflows(
@@ -10262,6 +10382,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder addWorkflows(yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview value) {
@@ -10278,6 +10402,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder addWorkflows(
@@ -10295,6 +10423,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder addWorkflows(
@@ -10309,6 +10441,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder addWorkflows(
@@ -10323,6 +10459,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder addAllWorkflows(
@@ -10338,6 +10478,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder clearWorkflows() {
@@ -10351,6 +10495,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public Builder removeWorkflows(int index) {
@@ -10364,6 +10512,10 @@ public final class WorkflowServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.Builder getWorkflowsBuilder(
@@ -10371,6 +10523,10 @@ public final class WorkflowServiceOuterClass {
         return getWorkflowsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreviewOrBuilder getWorkflowsOrBuilder(
@@ -10381,6 +10537,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreviewOrBuilder> 
@@ -10392,6 +10552,10 @@ public final class WorkflowServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.Builder addWorkflowsBuilder() {
@@ -10399,6 +10563,10 @@ public final class WorkflowServiceOuterClass {
             yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.Builder addWorkflowsBuilder(
@@ -10407,6 +10575,10 @@ public final class WorkflowServiceOuterClass {
             index, yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of Workflows.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.serverless.workflows.v1.WorkflowPreview workflows = 1;</code>
        */
       public java.util.List<yandex.cloud.api.serverless.workflows.v1.WorkflowOuterClass.WorkflowPreview.Builder> 
