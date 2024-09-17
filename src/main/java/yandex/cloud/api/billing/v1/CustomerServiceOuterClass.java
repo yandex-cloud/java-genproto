@@ -3310,6 +3310,9 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * ID of the reseller that customer will be associated with.
+     * Value must match either one of the two regular expressions: 
+     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3319,6 +3322,9 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * ID of the reseller that customer will be associated with.
+     * Value must match either one of the two regular expressions: 
+     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3330,6 +3336,7 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * Name of the customer.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -3339,6 +3346,7 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * Name of the customer.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -3483,6 +3491,9 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * ID of the reseller that customer will be associated with.
+     * Value must match either one of the two regular expressions: 
+     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3504,6 +3515,9 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * ID of the reseller that customer will be associated with.
+     * Value must match either one of the two regular expressions: 
+     * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+     * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
      * </pre>
      *
      * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3529,6 +3543,7 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * Name of the customer.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -3550,6 +3565,7 @@ public final class CustomerServiceOuterClass {
     /**
      * <pre>
      * Name of the customer.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -3961,6 +3977,9 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * ID of the reseller that customer will be associated with.
+       * Value must match either one of the two regular expressions: 
+       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3981,6 +4000,9 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * ID of the reseller that customer will be associated with.
+       * Value must match either one of the two regular expressions: 
+       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4002,6 +4024,9 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * ID of the reseller that customer will be associated with.
+       * Value must match either one of the two regular expressions: 
+       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4021,6 +4046,9 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * ID of the reseller that customer will be associated with.
+       * Value must match either one of the two regular expressions: 
+       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4035,6 +4063,9 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * ID of the reseller that customer will be associated with.
+       * Value must match either one of the two regular expressions: 
+       * `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[0-9a-f]{32})$` 
+       * or `^[a-z][-a-zA-Z0-9.]{0,48}[a-zA-Z0-9]$`.
        * </pre>
        *
        * <code>string reseller_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4057,6 +4088,7 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * Name of the customer.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -4077,6 +4109,7 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * Name of the customer.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -4098,6 +4131,7 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * Name of the customer.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -4117,6 +4151,7 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * Name of the customer.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>
@@ -4131,6 +4166,7 @@ public final class CustomerServiceOuterClass {
       /**
        * <pre>
        * Name of the customer.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.required) = true];</code>

@@ -59,6 +59,16 @@ public final class ProviderServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Don't create default policies while activating the provider.
+     * </pre>
+     *
+     * <code>bool skip_default_policy = 4 [(.yandex.cloud.required) = false];</code>
+     * @return The skipDefaultPolicy.
+     */
+    boolean getSkipDefaultPolicy();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ActivateProviderRequest}
@@ -117,6 +127,11 @@ public final class ProviderServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
+              break;
+            }
+            case 32: {
+
+              skipDefaultPolicy_ = input.readBool();
               break;
             }
             default: {
@@ -245,6 +260,21 @@ public final class ProviderServiceOuterClass {
       }
     }
 
+    public static final int SKIP_DEFAULT_POLICY_FIELD_NUMBER = 4;
+    private boolean skipDefaultPolicy_;
+    /**
+     * <pre>
+     * Don't create default policies while activating the provider.
+     * </pre>
+     *
+     * <code>bool skip_default_policy = 4 [(.yandex.cloud.required) = false];</code>
+     * @return The skipDefaultPolicy.
+     */
+    @java.lang.Override
+    public boolean getSkipDefaultPolicy() {
+      return skipDefaultPolicy_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -265,6 +295,9 @@ public final class ProviderServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
+      if (skipDefaultPolicy_ != false) {
+        output.writeBool(4, skipDefaultPolicy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -279,6 +312,10 @@ public final class ProviderServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (skipDefaultPolicy_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, skipDefaultPolicy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -299,6 +336,8 @@ public final class ProviderServiceOuterClass {
           .equals(other.getFolderId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (getSkipDefaultPolicy()
+          != other.getSkipDefaultPolicy()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -314,6 +353,9 @@ public final class ProviderServiceOuterClass {
       hash = (53 * hash) + getFolderId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SKIP_DEFAULT_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSkipDefaultPolicy());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -451,6 +493,8 @@ public final class ProviderServiceOuterClass {
 
         name_ = "";
 
+        skipDefaultPolicy_ = false;
+
         return this;
       }
 
@@ -479,6 +523,7 @@ public final class ProviderServiceOuterClass {
         yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ActivateProviderRequest result = new yandex.cloud.api.backup.v1.ProviderServiceOuterClass.ActivateProviderRequest(this);
         result.folderId_ = folderId_;
         result.name_ = name_;
+        result.skipDefaultPolicy_ = skipDefaultPolicy_;
         onBuilt();
         return result;
       }
@@ -534,6 +579,9 @@ public final class ProviderServiceOuterClass {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getSkipDefaultPolicy() != false) {
+          setSkipDefaultPolicy(other.getSkipDefaultPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -757,6 +805,49 @@ public final class ProviderServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean skipDefaultPolicy_ ;
+      /**
+       * <pre>
+       * Don't create default policies while activating the provider.
+       * </pre>
+       *
+       * <code>bool skip_default_policy = 4 [(.yandex.cloud.required) = false];</code>
+       * @return The skipDefaultPolicy.
+       */
+      @java.lang.Override
+      public boolean getSkipDefaultPolicy() {
+        return skipDefaultPolicy_;
+      }
+      /**
+       * <pre>
+       * Don't create default policies while activating the provider.
+       * </pre>
+       *
+       * <code>bool skip_default_policy = 4 [(.yandex.cloud.required) = false];</code>
+       * @param value The skipDefaultPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkipDefaultPolicy(boolean value) {
+        
+        skipDefaultPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Don't create default policies while activating the provider.
+       * </pre>
+       *
+       * <code>bool skip_default_policy = 4 [(.yandex.cloud.required) = false];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkipDefaultPolicy() {
+        
+        skipDefaultPolicy_ = false;
         onChanged();
         return this;
       }
@@ -2947,26 +3038,27 @@ public final class ProviderServiceOuterClass {
       "api/annotations.proto\032 yandex/cloud/api/" +
       "operation.proto\032&yandex/cloud/operation/" +
       "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\"T\n\027ActivateProviderRequest\022\037\n\tfol" +
+      ".proto\"w\n\027ActivateProviderRequest\022\037\n\tfol" +
       "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004name\030\003 \001(\t" +
-      "B\004\350\3071\001J\004\010\002\020\003\";\n\030ActivateProviderMetadata" +
-      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\035Lis" +
-      "tActivatedProvidersRequest\022\037\n\tfolder_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"H\n\036ListActivatedProv" +
-      "idersResponse\022\021\n\tfolder_id\030\001 \001(\t\022\r\n\005name" +
-      "s\030\003 \003(\tJ\004\010\002\020\0032\367\002\n\017ProviderService\022\304\001\n\010Ac" +
-      "tivate\022/.yandex.cloud.backup.v1.Activate" +
-      "ProviderRequest\032!.yandex.cloud.operation" +
-      ".Operation\"d\202\323\344\223\002)\"$/backup/v1/providers" +
-      "/{name}:activate:\001*\262\322*1\n\030ActivateProvide" +
-      "rMetadata\022\025google.protobuf.Empty\022\234\001\n\rLis" +
-      "tActivated\0225.yandex.cloud.backup.v1.List" +
-      "ActivatedProvidersRequest\0326.yandex.cloud" +
-      ".backup.v1.ListActivatedProvidersRespons" +
-      "e\"\034\202\323\344\223\002\026\022\024/backup/v1/providersB_\n\032yande" +
-      "x.cloud.api.backup.v1ZAgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/backup/v" +
-      "1;backupb\006proto3"
+      "B\004\350\3071\001\022!\n\023skip_default_policy\030\004 \001(\010B\004\350\3071" +
+      "\000J\004\010\002\020\003\";\n\030ActivateProviderMetadata\022\037\n\tf" +
+      "older_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"@\n\035ListActi" +
+      "vatedProvidersRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"H\n\036ListActivatedProviders" +
+      "Response\022\021\n\tfolder_id\030\001 \001(\t\022\r\n\005names\030\003 \003" +
+      "(\tJ\004\010\002\020\0032\367\002\n\017ProviderService\022\304\001\n\010Activat" +
+      "e\022/.yandex.cloud.backup.v1.ActivateProvi" +
+      "derRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"d\202\323\344\223\002)\"$/backup/v1/providers/{nam" +
+      "e}:activate:\001*\262\322*1\n\030ActivateProviderMeta" +
+      "data\022\025google.protobuf.Empty\022\234\001\n\rListActi" +
+      "vated\0225.yandex.cloud.backup.v1.ListActiv" +
+      "atedProvidersRequest\0326.yandex.cloud.back" +
+      "up.v1.ListActivatedProvidersResponse\"\034\202\323" +
+      "\344\223\002\026\022\024/backup/v1/providersB_\n\032yandex.clo" +
+      "ud.api.backup.v1ZAgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/backup/v1;bac" +
+      "kupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2981,7 +3073,7 @@ public final class ProviderServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ActivateProviderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ActivateProviderRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", });
+        new java.lang.String[] { "FolderId", "Name", "SkipDefaultPolicy", });
     internal_static_yandex_cloud_backup_v1_ActivateProviderMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_ActivateProviderMetadata_fieldAccessorTable = new

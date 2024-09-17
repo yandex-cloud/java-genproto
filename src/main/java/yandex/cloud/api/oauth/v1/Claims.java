@@ -408,6 +408,33 @@ public final class Claims {
      * <code>.yandex.cloud.oauth.Federation federation = 100;</code>
      */
     yandex.cloud.api.oauth.v1.Claims.FederationOrBuilder getFederationOrBuilder();
+
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    boolean hasLastAuthenticatedAt();
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    com.google.protobuf.Timestamp getLastAuthenticatedAt();
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -544,6 +571,19 @@ public final class Claims {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(federation_);
                 federation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 842: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastAuthenticatedAt_ != null) {
+                subBuilder = lastAuthenticatedAt_.toBuilder();
+              }
+              lastAuthenticatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastAuthenticatedAt_);
+                lastAuthenticatedAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1115,6 +1155,44 @@ public final class Claims {
       return getFederation();
     }
 
+    public static final int LAST_AUTHENTICATED_AT_FIELD_NUMBER = 105;
+    private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     * @return Whether the lastAuthenticatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     * @return The lastAuthenticatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+      return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+    }
+    /**
+     * <pre>
+     * Last time the access token was created. Filled only for federated users (not for global users).
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+      return getLastAuthenticatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1165,6 +1243,9 @@ public final class Claims {
       if (federation_ != null) {
         output.writeMessage(100, getFederation());
       }
+      if (lastAuthenticatedAt_ != null) {
+        output.writeMessage(105, getLastAuthenticatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1212,6 +1293,10 @@ public final class Claims {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getFederation());
       }
+      if (lastAuthenticatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(105, getLastAuthenticatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1253,6 +1338,11 @@ public final class Claims {
         if (!getFederation()
             .equals(other.getFederation())) return false;
       }
+      if (hasLastAuthenticatedAt() != other.hasLastAuthenticatedAt()) return false;
+      if (hasLastAuthenticatedAt()) {
+        if (!getLastAuthenticatedAt()
+            .equals(other.getLastAuthenticatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1289,6 +1379,10 @@ public final class Claims {
       if (hasFederation()) {
         hash = (37 * hash) + FEDERATION_FIELD_NUMBER;
         hash = (53 * hash) + getFederation().hashCode();
+      }
+      if (hasLastAuthenticatedAt()) {
+        hash = (37 * hash) + LAST_AUTHENTICATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getLastAuthenticatedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1455,6 +1549,12 @@ public final class Claims {
           federation_ = null;
           federationBuilder_ = null;
         }
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -1496,6 +1596,11 @@ public final class Claims {
           result.federation_ = federation_;
         } else {
           result.federation_ = federationBuilder_.build();
+        }
+        if (lastAuthenticatedAtBuilder_ == null) {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAt_;
+        } else {
+          result.lastAuthenticatedAt_ = lastAuthenticatedAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1590,6 +1695,9 @@ public final class Claims {
         }
         if (other.hasFederation()) {
           mergeFederation(other.getFederation());
+        }
+        if (other.hasLastAuthenticatedAt()) {
+          mergeLastAuthenticatedAt(other.getLastAuthenticatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2833,6 +2941,161 @@ public final class Claims {
         }
         return federationBuilder_;
       }
+
+      private com.google.protobuf.Timestamp lastAuthenticatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastAuthenticatedAtBuilder_;
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       * @return Whether the lastAuthenticatedAt field is set.
+       */
+      public boolean hasLastAuthenticatedAt() {
+        return lastAuthenticatedAtBuilder_ != null || lastAuthenticatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       * @return The lastAuthenticatedAt.
+       */
+      public com.google.protobuf.Timestamp getLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          return lastAuthenticatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        } else {
+          return lastAuthenticatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public Builder setLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastAuthenticatedAt_ = value;
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public Builder setLastAuthenticatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public Builder mergeLastAuthenticatedAt(com.google.protobuf.Timestamp value) {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          if (lastAuthenticatedAt_ != null) {
+            lastAuthenticatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(lastAuthenticatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            lastAuthenticatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          lastAuthenticatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public Builder clearLastAuthenticatedAt() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAt_ = null;
+          onChanged();
+        } else {
+          lastAuthenticatedAt_ = null;
+          lastAuthenticatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastAuthenticatedAtBuilder() {
+        
+        onChanged();
+        return getLastAuthenticatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastAuthenticatedAtOrBuilder() {
+        if (lastAuthenticatedAtBuilder_ != null) {
+          return lastAuthenticatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return lastAuthenticatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastAuthenticatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Last time the access token was created. Filled only for federated users (not for global users).
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_authenticated_at = 105;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastAuthenticatedAtFieldBuilder() {
+        if (lastAuthenticatedAtBuilder_ == null) {
+          lastAuthenticatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastAuthenticatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          lastAuthenticatedAt_ = null;
+        }
+        return lastAuthenticatedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3704,27 +3967,31 @@ public final class Claims {
   static {
     java.lang.String[] descriptorData = {
       "\n\037yandex/cloud/oauth/claims.proto\022\022yande" +
-      "x.cloud.oauth\032\035yandex/cloud/validation.p" +
-      "roto\"\332\002\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\022\022\n\ngiven_name\030\003 " +
-      "\001(\t\022\023\n\013family_name\030\004 \001(\t\022\032\n\022preferred_us" +
-      "ername\030\007 \001(\t\022\017\n\007picture\030\t \001(\t\022\r\n\005email\030\013" +
-      " \001(\t\022\020\n\010zoneinfo\030\017 \001(\t\022\016\n\006locale\030\020 \001(\t\022\024" +
-      "\n\014phone_number\030\021 \001(\t\0221\n\010sub_type\030c \001(\0162\037" +
-      ".yandex.cloud.oauth.SubjectType\0222\n\nfeder" +
-      "ation\030d \001(\0132\036.yandex.cloud.oauth.Federat" +
-      "ionJ\004\010\010\020\tJ\004\010\n\020\013J\004\010\014\020\017J\004\010\022\020cJ\004\010\005\020\007\":\n\nFed" +
-      "eration\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004nam" +
-      "e\030\003 \001(\tJ\004\010\002\020\003*j\n\013SubjectType\022\034\n\030SUBJECT_" +
-      "TYPE_UNSPECIFIED\020\000\022\020\n\014USER_ACCOUNT\020\001\022\023\n\017" +
-      "SERVICE_ACCOUNT\020\002\022\t\n\005GROUP\020\003\022\013\n\007INVITEE\020" +
-      "\004BY\n\031yandex.cloud.api.oauth.v1Z<github.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/oauth;oauthb\006proto3"
+      "x.cloud.oauth\032\037google/protobuf/timestamp" +
+      ".proto\032\035yandex/cloud/validation.proto\"\255\003" +
+      "\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\014\n\004name\030\002 \001(\t\022\022\n\ngiven_name\030\003 \001(\t\022\023\n\013" +
+      "family_name\030\004 \001(\t\022\032\n\022preferred_username\030" +
+      "\007 \001(\t\022\017\n\007picture\030\t \001(\t\022\r\n\005email\030\013 \001(\t\022\020\n" +
+      "\010zoneinfo\030\017 \001(\t\022\016\n\006locale\030\020 \001(\t\022\024\n\014phone" +
+      "_number\030\021 \001(\t\0221\n\010sub_type\030c \001(\0162\037.yandex" +
+      ".cloud.oauth.SubjectType\0222\n\nfederation\030d" +
+      " \001(\0132\036.yandex.cloud.oauth.Federation\0229\n\025" +
+      "last_authenticated_at\030i \001(\0132\032.google.pro" +
+      "tobuf.TimestampJ\004\010\010\020\tJ\004\010\n\020\013J\004\010\014\020\017J\004\010\022\020cJ" +
+      "\004\010\005\020\007J\004\010e\020fJ\004\010f\020gJ\004\010g\020hJ\004\010h\020i\":\n\nFederat" +
+      "ion\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004name\030\003 " +
+      "\001(\tJ\004\010\002\020\003*j\n\013SubjectType\022\034\n\030SUBJECT_TYPE" +
+      "_UNSPECIFIED\020\000\022\020\n\014USER_ACCOUNT\020\001\022\023\n\017SERV" +
+      "ICE_ACCOUNT\020\002\022\t\n\005GROUP\020\003\022\013\n\007INVITEE\020\004BY\n" +
+      "\031yandex.cloud.api.oauth.v1Z<github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/oau" +
+      "th;oauthb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_oauth_SubjectClaims_descriptor =
@@ -3732,7 +3999,7 @@ public final class Claims {
     internal_static_yandex_cloud_oauth_SubjectClaims_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_oauth_SubjectClaims_descriptor,
-        new java.lang.String[] { "Sub", "Name", "GivenName", "FamilyName", "PreferredUsername", "Picture", "Email", "Zoneinfo", "Locale", "PhoneNumber", "SubType", "Federation", });
+        new java.lang.String[] { "Sub", "Name", "GivenName", "FamilyName", "PreferredUsername", "Picture", "Email", "Zoneinfo", "Locale", "PhoneNumber", "SubType", "Federation", "LastAuthenticatedAt", });
     internal_static_yandex_cloud_oauth_Federation_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_oauth_Federation_fieldAccessorTable = new
@@ -3745,6 +4012,7 @@ public final class Claims {
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

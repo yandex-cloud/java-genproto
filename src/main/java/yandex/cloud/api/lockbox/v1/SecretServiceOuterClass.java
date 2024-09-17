@@ -3934,6 +3934,23 @@ public final class SecretServiceOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    boolean hasPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder();
+
+    public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.CreateSecretRequest.PayloadSpecificationCase getPayloadSpecificationCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.lockbox.v1.CreateSecretRequest}
@@ -4044,6 +4061,20 @@ public final class SecretServiceOuterClass {
               deletionProtection_ = input.readBool();
               break;
             }
+            case 74: {
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder subBuilder = null;
+              if (payloadSpecificationCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_).toBuilder();
+              }
+              payloadSpecification_ =
+                  input.readMessage(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+                payloadSpecification_ = subBuilder.buildPartial();
+              }
+              payloadSpecificationCase_ = 9;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4089,6 +4120,45 @@ public final class SecretServiceOuterClass {
       return yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.CreateSecretRequest.class, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.CreateSecretRequest.Builder.class);
+    }
+
+    private int payloadSpecificationCase_ = 0;
+    private java.lang.Object payloadSpecification_;
+    public enum PayloadSpecificationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PASSWORD_PAYLOAD_SPECIFICATION(9),
+      PAYLOADSPECIFICATION_NOT_SET(0);
+      private final int value;
+      private PayloadSpecificationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadSpecificationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadSpecificationCase forNumber(int value) {
+        switch (value) {
+          case 9: return PASSWORD_PAYLOAD_SPECIFICATION;
+          case 0: return PAYLOADSPECIFICATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadSpecificationCase
+    getPayloadSpecificationCase() {
+      return PayloadSpecificationCase.forNumber(
+          payloadSpecificationCase_);
     }
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
@@ -4497,6 +4567,37 @@ public final class SecretServiceOuterClass {
       return deletionProtection_;
     }
 
+    public static final int PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER = 9;
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordPayloadSpecification() {
+      return payloadSpecificationCase_ == 9;
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+      if (payloadSpecificationCase_ == 9) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+      if (payloadSpecificationCase_ == 9) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4537,6 +4638,9 @@ public final class SecretServiceOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(8, deletionProtection_);
+      }
+      if (payloadSpecificationCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
       }
       unknownFields.writeTo(output);
     }
@@ -4580,6 +4684,10 @@ public final class SecretServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, deletionProtection_);
       }
+      if (payloadSpecificationCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4611,6 +4719,15 @@ public final class SecretServiceOuterClass {
           .equals(other.getVersionPayloadEntriesList())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (!getPayloadSpecificationCase().equals(other.getPayloadSpecificationCase())) return false;
+      switch (payloadSpecificationCase_) {
+        case 9:
+          if (!getPasswordPayloadSpecification()
+              .equals(other.getPasswordPayloadSpecification())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4643,6 +4760,14 @@ public final class SecretServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      switch (payloadSpecificationCase_) {
+        case 9:
+          hash = (37 * hash) + PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER;
+          hash = (53 * hash) + getPasswordPayloadSpecification().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4818,6 +4943,8 @@ public final class SecretServiceOuterClass {
         }
         deletionProtection_ = false;
 
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
         return this;
       }
 
@@ -4862,6 +4989,14 @@ public final class SecretServiceOuterClass {
           result.versionPayloadEntries_ = versionPayloadEntriesBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
+        if (payloadSpecificationCase_ == 9) {
+          if (passwordPayloadSpecificationBuilder_ == null) {
+            result.payloadSpecification_ = payloadSpecification_;
+          } else {
+            result.payloadSpecification_ = passwordPayloadSpecificationBuilder_.build();
+          }
+        }
+        result.payloadSpecificationCase_ = payloadSpecificationCase_;
         onBuilt();
         return result;
       }
@@ -4961,6 +5096,15 @@ public final class SecretServiceOuterClass {
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
         }
+        switch (other.getPayloadSpecificationCase()) {
+          case PASSWORD_PAYLOAD_SPECIFICATION: {
+            mergePasswordPayloadSpecification(other.getPasswordPayloadSpecification());
+            break;
+          }
+          case PAYLOADSPECIFICATION_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4989,6 +5133,21 @@ public final class SecretServiceOuterClass {
         }
         return this;
       }
+      private int payloadSpecificationCase_ = 0;
+      private java.lang.Object payloadSpecification_;
+      public PayloadSpecificationCase
+          getPayloadSpecificationCase() {
+        return PayloadSpecificationCase.forNumber(
+            payloadSpecificationCase_);
+      }
+
+      public Builder clearPayloadSpecification() {
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object folderId_ = "";
@@ -5991,6 +6150,147 @@ public final class SecretServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> passwordPayloadSpecificationBuilder_;
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       * @return Whether the passwordPayloadSpecification field is set.
+       */
+      @java.lang.Override
+      public boolean hasPasswordPayloadSpecification() {
+        return payloadSpecificationCase_ == 9;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       * @return The passwordPayloadSpecification.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 9) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        } else {
+          if (payloadSpecificationCase_ == 9) {
+            return passwordPayloadSpecificationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      public Builder setPasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payloadSpecification_ = value;
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      public Builder setPasswordPayloadSpecification(
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder builderForValue) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          payloadSpecification_ = builderForValue.build();
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(builderForValue.build());
+        }
+        payloadSpecificationCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      public Builder mergePasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 9 &&
+              payloadSpecification_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance()) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.newBuilder((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payloadSpecification_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadSpecificationCase_ == 9) {
+            passwordPayloadSpecificationBuilder_.mergeFrom(value);
+          }
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      public Builder clearPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 9) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadSpecificationCase_ == 9) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+          }
+          passwordPayloadSpecificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder getPasswordPayloadSpecificationBuilder() {
+        return getPasswordPayloadSpecificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+        if ((payloadSpecificationCase_ == 9) && (passwordPayloadSpecificationBuilder_ != null)) {
+          return passwordPayloadSpecificationBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadSpecificationCase_ == 9) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> 
+          getPasswordPayloadSpecificationFieldBuilder() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (!(payloadSpecificationCase_ == 9)) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+          }
+          passwordPayloadSpecificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder>(
+                  (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_,
+                  getParentForChildren(),
+                  isClean());
+          payloadSpecification_ = null;
+        }
+        payloadSpecificationCase_ = 9;
+        onChanged();;
+        return passwordPayloadSpecificationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6988,6 +7288,23 @@ public final class SecretServiceOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    boolean hasPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder();
+
+    public yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.UpdateSecretRequest.PayloadSpecificationCase getPayloadSpecificationCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.lockbox.v1.UpdateSecretRequest}
@@ -7087,6 +7404,20 @@ public final class SecretServiceOuterClass {
               deletionProtection_ = input.readBool();
               break;
             }
+            case 58: {
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder subBuilder = null;
+              if (payloadSpecificationCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_).toBuilder();
+              }
+              payloadSpecification_ =
+                  input.readMessage(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+                payloadSpecification_ = subBuilder.buildPartial();
+              }
+              payloadSpecificationCase_ = 7;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7129,6 +7460,45 @@ public final class SecretServiceOuterClass {
       return yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.UpdateSecretRequest.class, yandex.cloud.api.lockbox.v1.SecretServiceOuterClass.UpdateSecretRequest.Builder.class);
+    }
+
+    private int payloadSpecificationCase_ = 0;
+    private java.lang.Object payloadSpecification_;
+    public enum PayloadSpecificationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PASSWORD_PAYLOAD_SPECIFICATION(7),
+      PAYLOADSPECIFICATION_NOT_SET(0);
+      private final int value;
+      private PayloadSpecificationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadSpecificationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadSpecificationCase forNumber(int value) {
+        switch (value) {
+          case 7: return PASSWORD_PAYLOAD_SPECIFICATION;
+          case 0: return PAYLOADSPECIFICATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadSpecificationCase
+    getPayloadSpecificationCase() {
+      return PayloadSpecificationCase.forNumber(
+          payloadSpecificationCase_);
     }
 
     public static final int SECRET_ID_FIELD_NUMBER = 1;
@@ -7419,6 +7789,37 @@ public final class SecretServiceOuterClass {
       return deletionProtection_;
     }
 
+    public static final int PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER = 7;
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordPayloadSpecification() {
+      return payloadSpecificationCase_ == 7;
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+      if (payloadSpecificationCase_ == 7) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+      if (payloadSpecificationCase_ == 7) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7453,6 +7854,9 @@ public final class SecretServiceOuterClass {
           5);
       if (deletionProtection_ != false) {
         output.writeBool(6, deletionProtection_);
+      }
+      if (payloadSpecificationCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
       }
       unknownFields.writeTo(output);
     }
@@ -7490,6 +7894,10 @@ public final class SecretServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, deletionProtection_);
       }
+      if (payloadSpecificationCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7520,6 +7928,15 @@ public final class SecretServiceOuterClass {
           other.internalGetLabels())) return false;
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (!getPayloadSpecificationCase().equals(other.getPayloadSpecificationCase())) return false;
+      switch (payloadSpecificationCase_) {
+        case 7:
+          if (!getPasswordPayloadSpecification()
+              .equals(other.getPasswordPayloadSpecification())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7548,6 +7965,14 @@ public final class SecretServiceOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      switch (payloadSpecificationCase_) {
+        case 7:
+          hash = (37 * hash) + PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER;
+          hash = (53 * hash) + getPasswordPayloadSpecification().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7718,6 +8143,8 @@ public final class SecretServiceOuterClass {
         internalGetMutableLabels().clear();
         deletionProtection_ = false;
 
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
         return this;
       }
 
@@ -7756,6 +8183,14 @@ public final class SecretServiceOuterClass {
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         result.deletionProtection_ = deletionProtection_;
+        if (payloadSpecificationCase_ == 7) {
+          if (passwordPayloadSpecificationBuilder_ == null) {
+            result.payloadSpecification_ = payloadSpecification_;
+          } else {
+            result.payloadSpecification_ = passwordPayloadSpecificationBuilder_.build();
+          }
+        }
+        result.payloadSpecificationCase_ = payloadSpecificationCase_;
         onBuilt();
         return result;
       }
@@ -7824,6 +8259,15 @@ public final class SecretServiceOuterClass {
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
         }
+        switch (other.getPayloadSpecificationCase()) {
+          case PASSWORD_PAYLOAD_SPECIFICATION: {
+            mergePasswordPayloadSpecification(other.getPasswordPayloadSpecification());
+            break;
+          }
+          case PAYLOADSPECIFICATION_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7852,6 +8296,21 @@ public final class SecretServiceOuterClass {
         }
         return this;
       }
+      private int payloadSpecificationCase_ = 0;
+      private java.lang.Object payloadSpecification_;
+      public PayloadSpecificationCase
+          getPayloadSpecificationCase() {
+        return PayloadSpecificationCase.forNumber(
+            payloadSpecificationCase_);
+      }
+
+      public Builder clearPayloadSpecification() {
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object secretId_ = "";
@@ -8497,6 +8956,147 @@ public final class SecretServiceOuterClass {
         deletionProtection_ = false;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> passwordPayloadSpecificationBuilder_;
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       * @return Whether the passwordPayloadSpecification field is set.
+       */
+      @java.lang.Override
+      public boolean hasPasswordPayloadSpecification() {
+        return payloadSpecificationCase_ == 7;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       * @return The passwordPayloadSpecification.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 7) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        } else {
+          if (payloadSpecificationCase_ == 7) {
+            return passwordPayloadSpecificationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      public Builder setPasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payloadSpecification_ = value;
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      public Builder setPasswordPayloadSpecification(
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder builderForValue) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          payloadSpecification_ = builderForValue.build();
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(builderForValue.build());
+        }
+        payloadSpecificationCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      public Builder mergePasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 7 &&
+              payloadSpecification_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance()) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.newBuilder((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payloadSpecification_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadSpecificationCase_ == 7) {
+            passwordPayloadSpecificationBuilder_.mergeFrom(value);
+          }
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      public Builder clearPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 7) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadSpecificationCase_ == 7) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+          }
+          passwordPayloadSpecificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder getPasswordPayloadSpecificationBuilder() {
+        return getPasswordPayloadSpecificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+        if ((payloadSpecificationCase_ == 7) && (passwordPayloadSpecificationBuilder_ != null)) {
+          return passwordPayloadSpecificationBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadSpecificationCase_ == 7) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> 
+          getPasswordPayloadSpecificationFieldBuilder() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (!(payloadSpecificationCase_ == 7)) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+          }
+          passwordPayloadSpecificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder>(
+                  (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_,
+                  getParentForChildren(),
+                  isClean());
+          payloadSpecification_ = null;
+        }
+        payloadSpecificationCase_ = 7;
+        onChanged();;
+        return passwordPayloadSpecificationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22947,7 +23547,7 @@ public final class SecretServiceOuterClass {
       "token\030\003 \001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsRes" +
       "ponse\0220\n\007secrets\030\001 \003(\0132\037.yandex.cloud.lo" +
       "ckbox.v1.Secret\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\346\003\n\023CreateSecretRequest\022\037\n\tfolder_id\030\001 " +
+      "\"\340\004\n\023CreateSecretRequest\022\037\n\tfolder_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=1" +
       "00\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006" +
       "labels\030\004 \003(\01328.yandex.cloud.lockbox.v1.C" +
@@ -22958,130 +23558,136 @@ public final class SecretServiceOuterClass {
       "<=256\022V\n\027version_payload_entries\030\007 \003(\0132+" +
       ".yandex.cloud.lockbox.v1.PayloadEntryCha" +
       "ngeB\010\202\3101\004<=32\022\033\n\023deletion_protection\030\010 \001" +
-      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"=\n\024CreateSecretMetadata\022\021\n\tsec" +
-      "ret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\377\002\n\023Upd" +
-      "ateSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.google." +
-      "protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=10" +
-      "24\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud.lockb" +
-      "ox.v1.UpdateSecretRequest.LabelsEntryB?\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63" +
-      "\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_prote" +
-      "ction\030\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"7\n\024UpdateSecretMetada" +
-      "ta\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\023D" +
-      "eleteSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetadata\022\021\n\ts" +
-      "ecret_id\030\001 \001(\t\"8\n\025ActivateSecretRequest\022" +
-      "\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026Acti" +
-      "vateSecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\":\n" +
-      "\027DeactivateSecretRequest\022\037\n\tsecret_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecretMet" +
-      "adata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021AddVersionR" +
-      "equest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024\022N\n\017payl" +
-      "oad_entries\030\003 \003(\0132+.yandex.cloud.lockbox" +
-      ".v1.PayloadEntryChangeB\010\202\3101\004<=32\022!\n\017base" +
-      "_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVersio" +
-      "nMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_" +
-      "id\030\002 \001(\t\"t\n\023ListVersionsRequest\022\037\n\tsecre" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"c\n\024ListVersionsResponse\0222\n\010versio" +
-      "ns\030\001 \003(\0132 .yandex.cloud.lockbox.v1.Versi" +
-      "on\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!Schedule" +
-      "VersionDestructionRequest\022\037\n\tsecret_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003 \001(\0132\031.g" +
-      "oogle.protobuf.Duration\"{\n\"ScheduleVersi" +
-      "onDestructionMetadata\022\021\n\tsecret_id\030\001 \001(\t" +
-      "\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_at\030\003 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"d\n\037CancelVe" +
-      "rsionDestructionRequest\022\037\n\tsecret_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"I\n CancelVersionDestructionMe" +
-      "tadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030" +
-      "\002 \001(\t\"|\n\033ListSecretOperationsRequest\022\037\n\t" +
-      "secret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
-      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
-      "B\t\212\3101\005<=100\"n\n\034ListSecretOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t2\351\025\n\rSecretService\022z\n\003Get\022).yandex.cl" +
-      "oud.lockbox.v1.GetSecretRequest\032\037.yandex" +
-      ".cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!\022\037/lockb" +
-      "ox/v1/secrets/{secret_id}\022~\n\004List\022+.yand" +
-      "ex.cloud.lockbox.v1.ListSecretsRequest\032," +
-      ".yandex.cloud.lockbox.v1.ListSecretsResp" +
-      "onse\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secrets\022\233\001\n\006Cr" +
-      "eate\022,.yandex.cloud.lockbox.v1.CreateSec" +
-      "retRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secrets:\001*\262\322*" +
-      "\036\n\024CreateSecretMetadata\022\006Secret\022\247\001\n\006Upda" +
-      "te\022,.yandex.cloud.lockbox.v1.UpdateSecre" +
-      "tRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"L\202\323\344\223\002$2\037/lockbox/v1/secrets/{secret" +
-      "_id}:\001*\262\322*\036\n\024UpdateSecretMetadata\022\006Secre" +
-      "t\022\244\001\n\006Delete\022,.yandex.cloud.lockbox.v1.D" +
-      "eleteSecretRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"I\202\323\344\223\002!*\037/lockbox/v1/secre" +
-      "ts/{secret_id}\262\322*\036\n\024DeleteSecretMetadata" +
-      "\022\006Secret\022\263\001\n\010Activate\022..yandex.cloud.loc" +
-      "kbox.v1.ActivateSecretRequest\032!.yandex.c" +
-      "loud.operation.Operation\"T\202\323\344\223\002*\"(/lockb" +
-      "ox/v1/secrets/{secret_id}:activate\262\322* \n\026" +
-      "ActivateSecretMetadata\022\006Secret\022\273\001\n\nDeact" +
-      "ivate\0220.yandex.cloud.lockbox.v1.Deactiva" +
-      "teSecretRequest\032!.yandex.cloud.operation" +
-      ".Operation\"X\202\323\344\223\002,\"*/lockbox/v1/secrets/" +
-      "{secret_id}:deactivate\262\322*\"\n\030DeactivateSe" +
-      "cretMetadata\022\006Secret\022\235\001\n\014ListVersions\022,." +
-      "yandex.cloud.lockbox.v1.ListVersionsRequ" +
-      "est\032-.yandex.cloud.lockbox.v1.ListVersio" +
-      "nsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/secrets/" +
-      "{secret_id}/versions\022\263\001\n\nAddVersion\022*.ya" +
-      "ndex.cloud.lockbox.v1.AddVersionRequest\032" +
-      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
-      "\002/\"*/lockbox/v1/secrets/{secret_id}:addV" +
-      "ersion:\001*\262\322*\035\n\022AddVersionMetadata\022\007Versi" +
-      "on\022\363\001\n\032ScheduleVersionDestruction\022:.yand" +
-      "ex.cloud.lockbox.v1.ScheduleVersionDestr" +
-      "uctionRequest\032!.yandex.cloud.operation.O" +
-      "peration\"v\202\323\344\223\002?\":/lockbox/v1/secrets/{s" +
-      "ecret_id}:scheduleVersionDestruction:\001*\262" +
-      "\322*-\n\"ScheduleVersionDestructionMetadata\022" +
-      "\007Version\022\353\001\n\030CancelVersionDestruction\0228." +
-      "yandex.cloud.lockbox.v1.CancelVersionDes" +
-      "tructionRequest\032!.yandex.cloud.operation" +
-      ".Operation\"r\202\323\344\223\002=\"8/lockbox/v1/secrets/" +
-      "{secret_id}:cancelVersionDestruction:\001*\262" +
-      "\322*+\n CancelVersionDestructionMetadata\022\007V" +
-      "ersion\022\261\001\n\016ListOperations\0224.yandex.cloud" +
-      ".lockbox.v1.ListSecretOperationsRequest\032" +
-      "5.yandex.cloud.lockbox.v1.ListSecretOper" +
-      "ationsResponse\"2\202\323\344\223\002,\022*/lockbox/v1/secr" +
-      "ets/{secret_id}/operations\022\263\001\n\022ListAcces" +
-      "sBindings\022..yandex.cloud.access.ListAcce" +
-      "ssBindingsRequest\032/.yandex.cloud.access." +
-      "ListAccessBindingsResponse\"<\202\323\344\223\0026\0224/loc" +
-      "kbox/v1/secrets/{resource_id}:listAccess" +
-      "Bindings\022\342\001\n\021SetAccessBindings\022-.yandex." +
-      "cloud.access.SetAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"{\202\323\344\223\0028" +
-      "\"3/lockbox/v1/secrets/{resource_id}:setA" +
-      "ccessBindings:\001*\262\322*9\n access.SetAccessBi" +
-      "ndingsMetadata\022\025google.protobuf.Empty\022\357\001" +
-      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
-      "cess.UpdateAccessBindingsRequest\032!.yande" +
-      "x.cloud.operation.Operation\"\201\001\202\323\344\223\002;\"6/l" +
-      "ockbox/v1/secrets/{resource_id}:updateAc" +
-      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
-      "BindingsMetadata\022\025google.protobuf.EmptyB" +
-      "b\n\033yandex.cloud.api.lockbox.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/lockbox/v1;lockboxb\006proto3"
+      "(\010\022_\n\036password_payload_specification\030\t \001" +
+      "(\01325.yandex.cloud.lockbox.v1.PasswordPay" +
+      "loadSpecificationH\000\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n\025payload_sp" +
+      "ecification\"=\n\024CreateSecretMetadata\022\021\n\ts" +
+      "ecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\371\003\n\023U" +
+      "pdateSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=" +
+      "1024\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud.loc" +
+      "kbox.v1.UpdateSecretRequest.LabelsEntryB" +
+      "?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=" +
+      "63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_pro" +
+      "tection\030\006 \001(\010\022_\n\036password_payload_specif" +
+      "ication\030\007 \001(\01325.yandex.cloud.lockbox.v1." +
+      "PasswordPayloadSpecificationH\000\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\027\n" +
+      "\025payload_specification\"7\n\024UpdateSecretMe" +
+      "tadata\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
+      "6\n\023DeleteSecretRequest\022\037\n\tsecret_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetadata\022" +
+      "\021\n\tsecret_id\030\001 \001(\t\"8\n\025ActivateSecretRequ" +
+      "est\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026" +
+      "ActivateSecretMetadata\022\021\n\tsecret_id\030\001 \001(" +
+      "\t\":\n\027DeactivateSecretRequest\022\037\n\tsecret_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecre" +
+      "tMetadata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021AddVers" +
+      "ionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024\022N\n\017" +
+      "payload_entries\030\003 \003(\0132+.yandex.cloud.loc" +
+      "kbox.v1.PayloadEntryChangeB\010\202\3101\004<=32\022!\n\017" +
+      "base_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVe" +
+      "rsionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nvers" +
+      "ion_id\030\002 \001(\t\"t\n\023ListVersionsRequest\022\037\n\ts" +
+      "ecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"c\n\024ListVersionsResponse\0222\n\010ve" +
+      "rsions\030\001 \003(\0132 .yandex.cloud.lockbox.v1.V" +
+      "ersion\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!Sche" +
+      "duleVersionDestructionRequest\022\037\n\tsecret_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003 \001(\013" +
+      "2\031.google.protobuf.Duration\"{\n\"ScheduleV" +
+      "ersionDestructionMetadata\022\021\n\tsecret_id\030\001" +
+      " \001(\t\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_at\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\"d\n\037Canc" +
+      "elVersionDestructionRequest\022\037\n\tsecret_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"I\n CancelVersionDestructi" +
+      "onMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion" +
+      "_id\030\002 \001(\t\"|\n\033ListSecretOperationsRequest" +
+      "\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
+      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
+      " \001(\tB\t\212\3101\005<=100\"n\n\034ListSecretOperationsR" +
+      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
+      "ud.operation.Operation\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t2\351\025\n\rSecretService\022z\n\003Get\022).yande" +
+      "x.cloud.lockbox.v1.GetSecretRequest\032\037.ya" +
+      "ndex.cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!\022\037/l" +
+      "ockbox/v1/secrets/{secret_id}\022~\n\004List\022+." +
+      "yandex.cloud.lockbox.v1.ListSecretsReque" +
+      "st\032,.yandex.cloud.lockbox.v1.ListSecrets" +
+      "Response\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secrets\022\233\001" +
+      "\n\006Create\022,.yandex.cloud.lockbox.v1.Creat" +
+      "eSecretRequest\032!.yandex.cloud.operation." +
+      "Operation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secrets:\001" +
+      "*\262\322*\036\n\024CreateSecretMetadata\022\006Secret\022\247\001\n\006" +
+      "Update\022,.yandex.cloud.lockbox.v1.UpdateS" +
+      "ecretRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"L\202\323\344\223\002$2\037/lockbox/v1/secrets/{se" +
+      "cret_id}:\001*\262\322*\036\n\024UpdateSecretMetadata\022\006S" +
+      "ecret\022\244\001\n\006Delete\022,.yandex.cloud.lockbox." +
+      "v1.DeleteSecretRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"I\202\323\344\223\002!*\037/lockbox/v1/s" +
+      "ecrets/{secret_id}\262\322*\036\n\024DeleteSecretMeta" +
+      "data\022\006Secret\022\263\001\n\010Activate\022..yandex.cloud" +
+      ".lockbox.v1.ActivateSecretRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"T\202\323\344\223\002*\"(/l" +
+      "ockbox/v1/secrets/{secret_id}:activate\262\322" +
+      "* \n\026ActivateSecretMetadata\022\006Secret\022\273\001\n\nD" +
+      "eactivate\0220.yandex.cloud.lockbox.v1.Deac" +
+      "tivateSecretRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"X\202\323\344\223\002,\"*/lockbox/v1/secr" +
+      "ets/{secret_id}:deactivate\262\322*\"\n\030Deactiva" +
+      "teSecretMetadata\022\006Secret\022\235\001\n\014ListVersion" +
+      "s\022,.yandex.cloud.lockbox.v1.ListVersions" +
+      "Request\032-.yandex.cloud.lockbox.v1.ListVe" +
+      "rsionsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/secr" +
+      "ets/{secret_id}/versions\022\263\001\n\nAddVersion\022" +
+      "*.yandex.cloud.lockbox.v1.AddVersionRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"V" +
+      "\202\323\344\223\002/\"*/lockbox/v1/secrets/{secret_id}:" +
+      "addVersion:\001*\262\322*\035\n\022AddVersionMetadata\022\007V" +
+      "ersion\022\363\001\n\032ScheduleVersionDestruction\022:." +
+      "yandex.cloud.lockbox.v1.ScheduleVersionD" +
+      "estructionRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"v\202\323\344\223\002?\":/lockbox/v1/secret" +
+      "s/{secret_id}:scheduleVersionDestruction" +
+      ":\001*\262\322*-\n\"ScheduleVersionDestructionMetad" +
+      "ata\022\007Version\022\353\001\n\030CancelVersionDestructio" +
+      "n\0228.yandex.cloud.lockbox.v1.CancelVersio" +
+      "nDestructionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"r\202\323\344\223\002=\"8/lockbox/v1/secr" +
+      "ets/{secret_id}:cancelVersionDestruction" +
+      ":\001*\262\322*+\n CancelVersionDestructionMetadat" +
+      "a\022\007Version\022\261\001\n\016ListOperations\0224.yandex.c" +
+      "loud.lockbox.v1.ListSecretOperationsRequ" +
+      "est\0325.yandex.cloud.lockbox.v1.ListSecret" +
+      "OperationsResponse\"2\202\323\344\223\002,\022*/lockbox/v1/" +
+      "secrets/{secret_id}/operations\022\263\001\n\022ListA" +
+      "ccessBindings\022..yandex.cloud.access.List" +
+      "AccessBindingsRequest\032/.yandex.cloud.acc" +
+      "ess.ListAccessBindingsResponse\"<\202\323\344\223\0026\0224" +
+      "/lockbox/v1/secrets/{resource_id}:listAc" +
+      "cessBindings\022\342\001\n\021SetAccessBindings\022-.yan" +
+      "dex.cloud.access.SetAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"{\202\323" +
+      "\344\223\0028\"3/lockbox/v1/secrets/{resource_id}:" +
+      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
+      "ssBindingsMetadata\022\025google.protobuf.Empt" +
+      "y\022\357\001\n\024UpdateAccessBindings\0220.yandex.clou" +
+      "d.access.UpdateAccessBindingsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"\201\001\202\323\344\223\002;" +
+      "\"6/lockbox/v1/secrets/{resource_id}:upda" +
+      "teAccessBindings:\001*\262\322*<\n#access.UpdateAc" +
+      "cessBindingsMetadata\022\025google.protobuf.Em" +
+      "ptyBb\n\033yandex.cloud.api.lockbox.v1ZCgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/lockbox/v1;lockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23125,7 +23731,7 @@ public final class SecretServiceOuterClass {
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "KmsKeyId", "VersionDescription", "VersionPayloadEntries", "DeletionProtection", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "KmsKeyId", "VersionDescription", "VersionPayloadEntries", "DeletionProtection", "PasswordPayloadSpecification", "PayloadSpecification", });
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_CreateSecretRequest_LabelsEntry_fieldAccessorTable = new
@@ -23143,7 +23749,7 @@ public final class SecretServiceOuterClass {
     internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_descriptor,
-        new java.lang.String[] { "SecretId", "UpdateMask", "Name", "Description", "Labels", "DeletionProtection", });
+        new java.lang.String[] { "SecretId", "UpdateMask", "Name", "Description", "Labels", "DeletionProtection", "PasswordPayloadSpecification", "PayloadSpecification", });
     internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_UpdateSecretRequest_LabelsEntry_fieldAccessorTable = new

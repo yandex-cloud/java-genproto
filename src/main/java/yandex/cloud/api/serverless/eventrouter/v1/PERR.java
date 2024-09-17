@@ -12627,16 +12627,28 @@ public final class PERR {
         getServiceAccountIdBytes();
 
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      * @return Whether the batchSettings field is set.
      */
     boolean hasBatchSettings();
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      * @return The batchSettings.
      */
     yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings getBatchSettings();
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      */
     yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
@@ -12893,6 +12905,10 @@ public final class PERR {
     public static final int BATCH_SETTINGS_FIELD_NUMBER = 4;
     private yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings batchSettings_;
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      * @return Whether the batchSettings field is set.
      */
@@ -12901,6 +12917,10 @@ public final class PERR {
       return batchSettings_ != null;
     }
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      * @return The batchSettings.
      */
@@ -12909,6 +12929,10 @@ public final class PERR {
       return batchSettings_ == null ? yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings.getDefaultInstance() : batchSettings_;
     }
     /**
+     * <pre>
+     * Batch settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
      */
     @java.lang.Override
@@ -13574,6 +13598,10 @@ public final class PERR {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings, yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings.Builder, yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettingsOrBuilder> batchSettingsBuilder_;
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        * @return Whether the batchSettings field is set.
        */
@@ -13581,6 +13609,10 @@ public final class PERR {
         return batchSettingsBuilder_ != null || batchSettings_ != null;
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        * @return The batchSettings.
        */
@@ -13592,6 +13624,10 @@ public final class PERR {
         }
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public Builder setBatchSettings(yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings value) {
@@ -13608,6 +13644,10 @@ public final class PERR {
         return this;
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public Builder setBatchSettings(
@@ -13622,6 +13662,10 @@ public final class PERR {
         return this;
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public Builder mergeBatchSettings(yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings value) {
@@ -13640,6 +13684,10 @@ public final class PERR {
         return this;
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public Builder clearBatchSettings() {
@@ -13654,6 +13702,10 @@ public final class PERR {
         return this;
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettings.Builder getBatchSettingsBuilder() {
@@ -13662,6 +13714,10 @@ public final class PERR {
         return getBatchSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       public yandex.cloud.api.serverless.eventrouter.v1.PERR.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
@@ -13673,6 +13729,10 @@ public final class PERR {
         }
       }
       /**
+       * <pre>
+       * Batch settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.serverless.eventrouter.v1.BatchSettings batch_settings = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

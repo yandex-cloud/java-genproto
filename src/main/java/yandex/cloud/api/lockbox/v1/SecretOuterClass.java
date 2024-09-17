@@ -254,6 +254,23 @@ public final class SecretOuterClass {
      * @return The deletionProtection.
      */
     boolean getDeletionProtection();
+
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    boolean hasPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder();
+
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.Secret.PayloadSpecificationCase getPayloadSpecificationCase();
   }
   /**
    * <pre>
@@ -389,6 +406,20 @@ public final class SecretOuterClass {
             case 80: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder subBuilder = null;
+              if (payloadSpecificationCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_).toBuilder();
+              }
+              payloadSpecification_ =
+                  input.readMessage(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+                payloadSpecification_ = subBuilder.buildPartial();
+              }
+              payloadSpecificationCase_ = 11;
               break;
             }
             default: {
@@ -587,6 +618,45 @@ public final class SecretOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.lockbox.v1.Secret.Status)
+    }
+
+    private int payloadSpecificationCase_ = 0;
+    private java.lang.Object payloadSpecification_;
+    public enum PayloadSpecificationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PASSWORD_PAYLOAD_SPECIFICATION(11),
+      PAYLOADSPECIFICATION_NOT_SET(0);
+      private final int value;
+      private PayloadSpecificationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadSpecificationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadSpecificationCase forNumber(int value) {
+        switch (value) {
+          case 11: return PASSWORD_PAYLOAD_SPECIFICATION;
+          case 0: return PAYLOADSPECIFICATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadSpecificationCase
+    getPayloadSpecificationCase() {
+      return PayloadSpecificationCase.forNumber(
+          payloadSpecificationCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1034,6 +1104,37 @@ public final class SecretOuterClass {
       return deletionProtection_;
     }
 
+    public static final int PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER = 11;
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordPayloadSpecification() {
+      return payloadSpecificationCase_ == 11;
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+      if (payloadSpecificationCase_ == 11) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+      if (payloadSpecificationCase_ == 11) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1080,6 +1181,9 @@ public final class SecretOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(10, deletionProtection_);
+      }
+      if (payloadSpecificationCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
       }
       unknownFields.writeTo(output);
     }
@@ -1131,6 +1235,10 @@ public final class SecretOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, deletionProtection_);
       }
+      if (payloadSpecificationCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1171,6 +1279,15 @@ public final class SecretOuterClass {
       }
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (!getPayloadSpecificationCase().equals(other.getPayloadSpecificationCase())) return false;
+      switch (payloadSpecificationCase_) {
+        case 11:
+          if (!getPasswordPayloadSpecification()
+              .equals(other.getPasswordPayloadSpecification())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1209,6 +1326,14 @@ public final class SecretOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      switch (payloadSpecificationCase_) {
+        case 11:
+          hash = (37 * hash) + PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER;
+          hash = (53 * hash) + getPasswordPayloadSpecification().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1395,6 +1520,8 @@ public final class SecretOuterClass {
         }
         deletionProtection_ = false;
 
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
         return this;
       }
 
@@ -1441,6 +1568,14 @@ public final class SecretOuterClass {
           result.currentVersion_ = currentVersionBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
+        if (payloadSpecificationCase_ == 11) {
+          if (passwordPayloadSpecificationBuilder_ == null) {
+            result.payloadSpecification_ = payloadSpecification_;
+          } else {
+            result.payloadSpecification_ = passwordPayloadSpecificationBuilder_.build();
+          }
+        }
+        result.payloadSpecificationCase_ = payloadSpecificationCase_;
         onBuilt();
         return result;
       }
@@ -1523,6 +1658,15 @@ public final class SecretOuterClass {
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
         }
+        switch (other.getPayloadSpecificationCase()) {
+          case PASSWORD_PAYLOAD_SPECIFICATION: {
+            mergePasswordPayloadSpecification(other.getPasswordPayloadSpecification());
+            break;
+          }
+          case PAYLOADSPECIFICATION_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1551,6 +1695,21 @@ public final class SecretOuterClass {
         }
         return this;
       }
+      private int payloadSpecificationCase_ = 0;
+      private java.lang.Object payloadSpecification_;
+      public PayloadSpecificationCase
+          getPayloadSpecificationCase() {
+        return PayloadSpecificationCase.forNumber(
+            payloadSpecificationCase_);
+      }
+
+      public Builder clearPayloadSpecification() {
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object id_ = "";
@@ -2618,6 +2777,147 @@ public final class SecretOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> passwordPayloadSpecificationBuilder_;
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       * @return Whether the passwordPayloadSpecification field is set.
+       */
+      @java.lang.Override
+      public boolean hasPasswordPayloadSpecification() {
+        return payloadSpecificationCase_ == 11;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       * @return The passwordPayloadSpecification.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 11) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        } else {
+          if (payloadSpecificationCase_ == 11) {
+            return passwordPayloadSpecificationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      public Builder setPasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payloadSpecification_ = value;
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      public Builder setPasswordPayloadSpecification(
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder builderForValue) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          payloadSpecification_ = builderForValue.build();
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(builderForValue.build());
+        }
+        payloadSpecificationCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      public Builder mergePasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 11 &&
+              payloadSpecification_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance()) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.newBuilder((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payloadSpecification_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadSpecificationCase_ == 11) {
+            passwordPayloadSpecificationBuilder_.mergeFrom(value);
+          }
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      public Builder clearPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 11) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadSpecificationCase_ == 11) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+          }
+          passwordPayloadSpecificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder getPasswordPayloadSpecificationBuilder() {
+        return getPasswordPayloadSpecificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+        if ((payloadSpecificationCase_ == 11) && (passwordPayloadSpecificationBuilder_ != null)) {
+          return passwordPayloadSpecificationBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadSpecificationCase_ == 11) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> 
+          getPasswordPayloadSpecificationFieldBuilder() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (!(payloadSpecificationCase_ == 11)) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+          }
+          passwordPayloadSpecificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder>(
+                  (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_,
+                  getParentForChildren(),
+                  isClean());
+          payloadSpecification_ = null;
+        }
+        payloadSpecificationCase_ = 11;
+        onChanged();;
+        return passwordPayloadSpecificationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2851,6 +3151,23 @@ public final class SecretOuterClass {
      */
     com.google.protobuf.ByteString
         getPayloadEntryKeysBytes(int index);
+
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    boolean hasPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification();
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     */
+    yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder();
+
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.Version.PayloadSpecificationCase getPayloadSpecificationCase();
   }
   /**
    * Protobuf type {@code yandex.cloud.lockbox.v1.Version}
@@ -2960,6 +3277,20 @@ public final class SecretOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               payloadEntryKeys_.add(s);
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder subBuilder = null;
+              if (payloadSpecificationCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_).toBuilder();
+              }
+              payloadSpecification_ =
+                  input.readMessage(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+                payloadSpecification_ = subBuilder.buildPartial();
+              }
+              payloadSpecificationCase_ = 8;
               break;
             }
             default: {
@@ -3147,6 +3478,45 @@ public final class SecretOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.lockbox.v1.Version.Status)
+    }
+
+    private int payloadSpecificationCase_ = 0;
+    private java.lang.Object payloadSpecification_;
+    public enum PayloadSpecificationCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PASSWORD_PAYLOAD_SPECIFICATION(8),
+      PAYLOADSPECIFICATION_NOT_SET(0);
+      private final int value;
+      private PayloadSpecificationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadSpecificationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadSpecificationCase forNumber(int value) {
+        switch (value) {
+          case 8: return PASSWORD_PAYLOAD_SPECIFICATION;
+          case 0: return PAYLOADSPECIFICATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadSpecificationCase
+    getPayloadSpecificationCase() {
+      return PayloadSpecificationCase.forNumber(
+          payloadSpecificationCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -3444,6 +3814,37 @@ public final class SecretOuterClass {
       return payloadEntryKeys_.getByteString(index);
     }
 
+    public static final int PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER = 8;
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     * @return Whether the passwordPayloadSpecification field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordPayloadSpecification() {
+      return payloadSpecificationCase_ == 8;
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     * @return The passwordPayloadSpecification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+      if (payloadSpecificationCase_ == 8) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+      if (payloadSpecificationCase_ == 8) {
+         return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+      }
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3478,6 +3879,9 @@ public final class SecretOuterClass {
       }
       for (int i = 0; i < payloadEntryKeys_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, payloadEntryKeys_.getRaw(i));
+      }
+      if (payloadSpecificationCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
       }
       unknownFields.writeTo(output);
     }
@@ -3517,6 +3921,10 @@ public final class SecretOuterClass {
         size += dataSize;
         size += 1 * getPayloadEntryKeysList().size();
       }
+      if (payloadSpecificationCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3551,6 +3959,15 @@ public final class SecretOuterClass {
       if (status_ != other.status_) return false;
       if (!getPayloadEntryKeysList()
           .equals(other.getPayloadEntryKeysList())) return false;
+      if (!getPayloadSpecificationCase().equals(other.getPayloadSpecificationCase())) return false;
+      switch (payloadSpecificationCase_) {
+        case 8:
+          if (!getPasswordPayloadSpecification()
+              .equals(other.getPasswordPayloadSpecification())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3581,6 +3998,14 @@ public final class SecretOuterClass {
       if (getPayloadEntryKeysCount() > 0) {
         hash = (37 * hash) + PAYLOAD_ENTRY_KEYS_FIELD_NUMBER;
         hash = (53 * hash) + getPayloadEntryKeysList().hashCode();
+      }
+      switch (payloadSpecificationCase_) {
+        case 8:
+          hash = (37 * hash) + PASSWORD_PAYLOAD_SPECIFICATION_FIELD_NUMBER;
+          hash = (53 * hash) + getPasswordPayloadSpecification().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3737,6 +4162,8 @@ public final class SecretOuterClass {
 
         payloadEntryKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
         return this;
       }
 
@@ -3783,6 +4210,14 @@ public final class SecretOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.payloadEntryKeys_ = payloadEntryKeys_;
+        if (payloadSpecificationCase_ == 8) {
+          if (passwordPayloadSpecificationBuilder_ == null) {
+            result.payloadSpecification_ = payloadSpecification_;
+          } else {
+            result.payloadSpecification_ = passwordPayloadSpecificationBuilder_.build();
+          }
+        }
+        result.payloadSpecificationCase_ = payloadSpecificationCase_;
         onBuilt();
         return result;
       }
@@ -3862,6 +4297,15 @@ public final class SecretOuterClass {
           }
           onChanged();
         }
+        switch (other.getPayloadSpecificationCase()) {
+          case PASSWORD_PAYLOAD_SPECIFICATION: {
+            mergePasswordPayloadSpecification(other.getPasswordPayloadSpecification());
+            break;
+          }
+          case PAYLOADSPECIFICATION_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3890,6 +4334,21 @@ public final class SecretOuterClass {
         }
         return this;
       }
+      private int payloadSpecificationCase_ = 0;
+      private java.lang.Object payloadSpecification_;
+      public PayloadSpecificationCase
+          getPayloadSpecificationCase() {
+        return PayloadSpecificationCase.forNumber(
+            payloadSpecificationCase_);
+      }
+
+      public Builder clearPayloadSpecification() {
+        payloadSpecificationCase_ = 0;
+        payloadSpecification_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.lang.Object id_ = "";
@@ -4718,6 +5177,147 @@ public final class SecretOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> passwordPayloadSpecificationBuilder_;
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       * @return Whether the passwordPayloadSpecification field is set.
+       */
+      @java.lang.Override
+      public boolean hasPasswordPayloadSpecification() {
+        return payloadSpecificationCase_ == 8;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       * @return The passwordPayloadSpecification.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 8) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        } else {
+          if (payloadSpecificationCase_ == 8) {
+            return passwordPayloadSpecificationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      public Builder setPasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payloadSpecification_ = value;
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      public Builder setPasswordPayloadSpecification(
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder builderForValue) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          payloadSpecification_ = builderForValue.build();
+          onChanged();
+        } else {
+          passwordPayloadSpecificationBuilder_.setMessage(builderForValue.build());
+        }
+        payloadSpecificationCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      public Builder mergePasswordPayloadSpecification(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification value) {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 8 &&
+              payloadSpecification_ != yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance()) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.newBuilder((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payloadSpecification_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadSpecificationCase_ == 8) {
+            passwordPayloadSpecificationBuilder_.mergeFrom(value);
+          }
+          passwordPayloadSpecificationBuilder_.setMessage(value);
+        }
+        payloadSpecificationCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      public Builder clearPasswordPayloadSpecification() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (payloadSpecificationCase_ == 8) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadSpecificationCase_ == 8) {
+            payloadSpecificationCase_ = 0;
+            payloadSpecification_ = null;
+          }
+          passwordPayloadSpecificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder getPasswordPayloadSpecificationBuilder() {
+        return getPasswordPayloadSpecificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder getPasswordPayloadSpecificationOrBuilder() {
+        if ((payloadSpecificationCase_ == 8) && (passwordPayloadSpecificationBuilder_ != null)) {
+          return passwordPayloadSpecificationBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadSpecificationCase_ == 8) {
+            return (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_;
+          }
+          return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.lockbox.v1.PasswordPayloadSpecification password_payload_specification = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder> 
+          getPasswordPayloadSpecificationFieldBuilder() {
+        if (passwordPayloadSpecificationBuilder_ == null) {
+          if (!(payloadSpecificationCase_ == 8)) {
+            payloadSpecification_ = yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+          }
+          passwordPayloadSpecificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder>(
+                  (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) payloadSpecification_,
+                  getParentForChildren(),
+                  isClean());
+          payloadSpecification_ = null;
+        }
+        payloadSpecificationCase_ = 8;
+        onChanged();;
+        return passwordPayloadSpecificationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4771,6 +5371,2164 @@ public final class SecretOuterClass {
 
   }
 
+  public interface PasswordPayloadSpecificationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.lockbox.v1.PasswordPayloadSpecification)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * key of the entry to store generated password value
+     * </pre>
+     *
+     * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The passwordKey.
+     */
+    java.lang.String getPasswordKey();
+    /**
+     * <pre>
+     * key of the entry to store generated password value
+     * </pre>
+     *
+     * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for passwordKey.
+     */
+    com.google.protobuf.ByteString
+        getPasswordKeyBytes();
+
+    /**
+     * <pre>
+     * password length; by default, a reasonable length will be decided
+     * </pre>
+     *
+     * <code>int64 length = 2 [(.yandex.cloud.value) = "&lt;=256"];</code>
+     * @return The length.
+     */
+    long getLength();
+
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     * @return Whether the includeUppercase field is set.
+     */
+    boolean hasIncludeUppercase();
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     * @return The includeUppercase.
+     */
+    com.google.protobuf.BoolValue getIncludeUppercase();
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIncludeUppercaseOrBuilder();
+
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     * @return Whether the includeLowercase field is set.
+     */
+    boolean hasIncludeLowercase();
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     * @return The includeLowercase.
+     */
+    com.google.protobuf.BoolValue getIncludeLowercase();
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIncludeLowercaseOrBuilder();
+
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     * @return Whether the includeDigits field is set.
+     */
+    boolean hasIncludeDigits();
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     * @return The includeDigits.
+     */
+    com.google.protobuf.BoolValue getIncludeDigits();
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIncludeDigitsOrBuilder();
+
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     * @return Whether the includePunctuation field is set.
+     */
+    boolean hasIncludePunctuation();
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     * @return The includePunctuation.
+     */
+    com.google.protobuf.BoolValue getIncludePunctuation();
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getIncludePunctuationOrBuilder();
+
+    /**
+     * <pre>
+     * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+     * a string of specific punctuation characters to use (at most, all the 32)
+     * </pre>
+     *
+     * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+     * @return The includedPunctuation.
+     */
+    java.lang.String getIncludedPunctuation();
+    /**
+     * <pre>
+     * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+     * a string of specific punctuation characters to use (at most, all the 32)
+     * </pre>
+     *
+     * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+     * @return The bytes for includedPunctuation.
+     */
+    com.google.protobuf.ByteString
+        getIncludedPunctuationBytes();
+
+    /**
+     * <pre>
+     * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+     * </pre>
+     *
+     * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+     * @return The excludedPunctuation.
+     */
+    java.lang.String getExcludedPunctuation();
+    /**
+     * <pre>
+     * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+     * </pre>
+     *
+     * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+     * @return The bytes for excludedPunctuation.
+     */
+    com.google.protobuf.ByteString
+        getExcludedPunctuationBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.lockbox.v1.PasswordPayloadSpecification}
+   */
+  public static final class PasswordPayloadSpecification extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.lockbox.v1.PasswordPayloadSpecification)
+      PasswordPayloadSpecificationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PasswordPayloadSpecification.newBuilder() to construct.
+    private PasswordPayloadSpecification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PasswordPayloadSpecification() {
+      passwordKey_ = "";
+      includedPunctuation_ = "";
+      excludedPunctuation_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PasswordPayloadSpecification();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PasswordPayloadSpecification(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              passwordKey_ = s;
+              break;
+            }
+            case 16: {
+
+              length_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (includeUppercase_ != null) {
+                subBuilder = includeUppercase_.toBuilder();
+              }
+              includeUppercase_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(includeUppercase_);
+                includeUppercase_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (includeLowercase_ != null) {
+                subBuilder = includeLowercase_.toBuilder();
+              }
+              includeLowercase_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(includeLowercase_);
+                includeLowercase_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (includeDigits_ != null) {
+                subBuilder = includeDigits_.toBuilder();
+              }
+              includeDigits_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(includeDigits_);
+                includeDigits_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (includePunctuation_ != null) {
+                subBuilder = includePunctuation_.toBuilder();
+              }
+              includePunctuation_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(includePunctuation_);
+                includePunctuation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              includedPunctuation_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              excludedPunctuation_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.lockbox.v1.SecretOuterClass.internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.class, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder.class);
+    }
+
+    public static final int PASSWORD_KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object passwordKey_;
+    /**
+     * <pre>
+     * key of the entry to store generated password value
+     * </pre>
+     *
+     * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The passwordKey.
+     */
+    @java.lang.Override
+    public java.lang.String getPasswordKey() {
+      java.lang.Object ref = passwordKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        passwordKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * key of the entry to store generated password value
+     * </pre>
+     *
+     * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for passwordKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPasswordKeyBytes() {
+      java.lang.Object ref = passwordKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        passwordKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LENGTH_FIELD_NUMBER = 2;
+    private long length_;
+    /**
+     * <pre>
+     * password length; by default, a reasonable length will be decided
+     * </pre>
+     *
+     * <code>int64 length = 2 [(.yandex.cloud.value) = "&lt;=256"];</code>
+     * @return The length.
+     */
+    @java.lang.Override
+    public long getLength() {
+      return length_;
+    }
+
+    public static final int INCLUDE_UPPERCASE_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue includeUppercase_;
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     * @return Whether the includeUppercase field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeUppercase() {
+      return includeUppercase_ != null;
+    }
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     * @return The includeUppercase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIncludeUppercase() {
+      return includeUppercase_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeUppercase_;
+    }
+    /**
+     * <pre>
+     * whether at least one A..Z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIncludeUppercaseOrBuilder() {
+      return getIncludeUppercase();
+    }
+
+    public static final int INCLUDE_LOWERCASE_FIELD_NUMBER = 4;
+    private com.google.protobuf.BoolValue includeLowercase_;
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     * @return Whether the includeLowercase field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeLowercase() {
+      return includeLowercase_ != null;
+    }
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     * @return The includeLowercase.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIncludeLowercase() {
+      return includeLowercase_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeLowercase_;
+    }
+    /**
+     * <pre>
+     * whether at least one a..z character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIncludeLowercaseOrBuilder() {
+      return getIncludeLowercase();
+    }
+
+    public static final int INCLUDE_DIGITS_FIELD_NUMBER = 5;
+    private com.google.protobuf.BoolValue includeDigits_;
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     * @return Whether the includeDigits field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludeDigits() {
+      return includeDigits_ != null;
+    }
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     * @return The includeDigits.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIncludeDigits() {
+      return includeDigits_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeDigits_;
+    }
+    /**
+     * <pre>
+     * whether at least one 0..9 character is included in the password, true by default
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIncludeDigitsOrBuilder() {
+      return getIncludeDigits();
+    }
+
+    public static final int INCLUDE_PUNCTUATION_FIELD_NUMBER = 6;
+    private com.google.protobuf.BoolValue includePunctuation_;
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     * @return Whether the includePunctuation field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncludePunctuation() {
+      return includePunctuation_ != null;
+    }
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     * @return The includePunctuation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getIncludePunctuation() {
+      return includePunctuation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includePunctuation_;
+    }
+    /**
+     * <pre>
+     * whether at least one punctuation character is included in the password, true by default
+     * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+     * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getIncludePunctuationOrBuilder() {
+      return getIncludePunctuation();
+    }
+
+    public static final int INCLUDED_PUNCTUATION_FIELD_NUMBER = 7;
+    private volatile java.lang.Object includedPunctuation_;
+    /**
+     * <pre>
+     * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+     * a string of specific punctuation characters to use (at most, all the 32)
+     * </pre>
+     *
+     * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+     * @return The includedPunctuation.
+     */
+    @java.lang.Override
+    public java.lang.String getIncludedPunctuation() {
+      java.lang.Object ref = includedPunctuation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        includedPunctuation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+     * a string of specific punctuation characters to use (at most, all the 32)
+     * </pre>
+     *
+     * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+     * @return The bytes for includedPunctuation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncludedPunctuationBytes() {
+      java.lang.Object ref = includedPunctuation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        includedPunctuation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXCLUDED_PUNCTUATION_FIELD_NUMBER = 8;
+    private volatile java.lang.Object excludedPunctuation_;
+    /**
+     * <pre>
+     * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+     * </pre>
+     *
+     * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+     * @return The excludedPunctuation.
+     */
+    @java.lang.Override
+    public java.lang.String getExcludedPunctuation() {
+      java.lang.Object ref = excludedPunctuation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        excludedPunctuation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+     * </pre>
+     *
+     * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+     * @return The bytes for excludedPunctuation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExcludedPunctuationBytes() {
+      java.lang.Object ref = excludedPunctuation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        excludedPunctuation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passwordKey_);
+      }
+      if (length_ != 0L) {
+        output.writeInt64(2, length_);
+      }
+      if (includeUppercase_ != null) {
+        output.writeMessage(3, getIncludeUppercase());
+      }
+      if (includeLowercase_ != null) {
+        output.writeMessage(4, getIncludeLowercase());
+      }
+      if (includeDigits_ != null) {
+        output.writeMessage(5, getIncludeDigits());
+      }
+      if (includePunctuation_ != null) {
+        output.writeMessage(6, getIncludePunctuation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(includedPunctuation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, includedPunctuation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(excludedPunctuation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, excludedPunctuation_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passwordKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passwordKey_);
+      }
+      if (length_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, length_);
+      }
+      if (includeUppercase_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getIncludeUppercase());
+      }
+      if (includeLowercase_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getIncludeLowercase());
+      }
+      if (includeDigits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getIncludeDigits());
+      }
+      if (includePunctuation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getIncludePunctuation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(includedPunctuation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, includedPunctuation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(excludedPunctuation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, excludedPunctuation_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification other = (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) obj;
+
+      if (!getPasswordKey()
+          .equals(other.getPasswordKey())) return false;
+      if (getLength()
+          != other.getLength()) return false;
+      if (hasIncludeUppercase() != other.hasIncludeUppercase()) return false;
+      if (hasIncludeUppercase()) {
+        if (!getIncludeUppercase()
+            .equals(other.getIncludeUppercase())) return false;
+      }
+      if (hasIncludeLowercase() != other.hasIncludeLowercase()) return false;
+      if (hasIncludeLowercase()) {
+        if (!getIncludeLowercase()
+            .equals(other.getIncludeLowercase())) return false;
+      }
+      if (hasIncludeDigits() != other.hasIncludeDigits()) return false;
+      if (hasIncludeDigits()) {
+        if (!getIncludeDigits()
+            .equals(other.getIncludeDigits())) return false;
+      }
+      if (hasIncludePunctuation() != other.hasIncludePunctuation()) return false;
+      if (hasIncludePunctuation()) {
+        if (!getIncludePunctuation()
+            .equals(other.getIncludePunctuation())) return false;
+      }
+      if (!getIncludedPunctuation()
+          .equals(other.getIncludedPunctuation())) return false;
+      if (!getExcludedPunctuation()
+          .equals(other.getExcludedPunctuation())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PASSWORD_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPasswordKey().hashCode();
+      hash = (37 * hash) + LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLength());
+      if (hasIncludeUppercase()) {
+        hash = (37 * hash) + INCLUDE_UPPERCASE_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludeUppercase().hashCode();
+      }
+      if (hasIncludeLowercase()) {
+        hash = (37 * hash) + INCLUDE_LOWERCASE_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludeLowercase().hashCode();
+      }
+      if (hasIncludeDigits()) {
+        hash = (37 * hash) + INCLUDE_DIGITS_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludeDigits().hashCode();
+      }
+      if (hasIncludePunctuation()) {
+        hash = (37 * hash) + INCLUDE_PUNCTUATION_FIELD_NUMBER;
+        hash = (53 * hash) + getIncludePunctuation().hashCode();
+      }
+      hash = (37 * hash) + INCLUDED_PUNCTUATION_FIELD_NUMBER;
+      hash = (53 * hash) + getIncludedPunctuation().hashCode();
+      hash = (37 * hash) + EXCLUDED_PUNCTUATION_FIELD_NUMBER;
+      hash = (53 * hash) + getExcludedPunctuation().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.lockbox.v1.PasswordPayloadSpecification}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.lockbox.v1.PasswordPayloadSpecification)
+        yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecificationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.lockbox.v1.SecretOuterClass.internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.lockbox.v1.SecretOuterClass.internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.class, yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        passwordKey_ = "";
+
+        length_ = 0L;
+
+        if (includeUppercaseBuilder_ == null) {
+          includeUppercase_ = null;
+        } else {
+          includeUppercase_ = null;
+          includeUppercaseBuilder_ = null;
+        }
+        if (includeLowercaseBuilder_ == null) {
+          includeLowercase_ = null;
+        } else {
+          includeLowercase_ = null;
+          includeLowercaseBuilder_ = null;
+        }
+        if (includeDigitsBuilder_ == null) {
+          includeDigits_ = null;
+        } else {
+          includeDigits_ = null;
+          includeDigitsBuilder_ = null;
+        }
+        if (includePunctuationBuilder_ == null) {
+          includePunctuation_ = null;
+        } else {
+          includePunctuation_ = null;
+          includePunctuationBuilder_ = null;
+        }
+        includedPunctuation_ = "";
+
+        excludedPunctuation_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.lockbox.v1.SecretOuterClass.internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getDefaultInstanceForType() {
+        return yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification build() {
+        yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification buildPartial() {
+        yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification result = new yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification(this);
+        result.passwordKey_ = passwordKey_;
+        result.length_ = length_;
+        if (includeUppercaseBuilder_ == null) {
+          result.includeUppercase_ = includeUppercase_;
+        } else {
+          result.includeUppercase_ = includeUppercaseBuilder_.build();
+        }
+        if (includeLowercaseBuilder_ == null) {
+          result.includeLowercase_ = includeLowercase_;
+        } else {
+          result.includeLowercase_ = includeLowercaseBuilder_.build();
+        }
+        if (includeDigitsBuilder_ == null) {
+          result.includeDigits_ = includeDigits_;
+        } else {
+          result.includeDigits_ = includeDigitsBuilder_.build();
+        }
+        if (includePunctuationBuilder_ == null) {
+          result.includePunctuation_ = includePunctuation_;
+        } else {
+          result.includePunctuation_ = includePunctuationBuilder_.build();
+        }
+        result.includedPunctuation_ = includedPunctuation_;
+        result.excludedPunctuation_ = excludedPunctuation_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) {
+          return mergeFrom((yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification other) {
+        if (other == yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification.getDefaultInstance()) return this;
+        if (!other.getPasswordKey().isEmpty()) {
+          passwordKey_ = other.passwordKey_;
+          onChanged();
+        }
+        if (other.getLength() != 0L) {
+          setLength(other.getLength());
+        }
+        if (other.hasIncludeUppercase()) {
+          mergeIncludeUppercase(other.getIncludeUppercase());
+        }
+        if (other.hasIncludeLowercase()) {
+          mergeIncludeLowercase(other.getIncludeLowercase());
+        }
+        if (other.hasIncludeDigits()) {
+          mergeIncludeDigits(other.getIncludeDigits());
+        }
+        if (other.hasIncludePunctuation()) {
+          mergeIncludePunctuation(other.getIncludePunctuation());
+        }
+        if (!other.getIncludedPunctuation().isEmpty()) {
+          includedPunctuation_ = other.includedPunctuation_;
+          onChanged();
+        }
+        if (!other.getExcludedPunctuation().isEmpty()) {
+          excludedPunctuation_ = other.excludedPunctuation_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object passwordKey_ = "";
+      /**
+       * <pre>
+       * key of the entry to store generated password value
+       * </pre>
+       *
+       * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The passwordKey.
+       */
+      public java.lang.String getPasswordKey() {
+        java.lang.Object ref = passwordKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          passwordKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * key of the entry to store generated password value
+       * </pre>
+       *
+       * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for passwordKey.
+       */
+      public com.google.protobuf.ByteString
+          getPasswordKeyBytes() {
+        java.lang.Object ref = passwordKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          passwordKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * key of the entry to store generated password value
+       * </pre>
+       *
+       * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The passwordKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        passwordKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key of the entry to store generated password value
+       * </pre>
+       *
+       * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPasswordKey() {
+        
+        passwordKey_ = getDefaultInstance().getPasswordKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * key of the entry to store generated password value
+       * </pre>
+       *
+       * <code>string password_key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for passwordKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        passwordKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long length_ ;
+      /**
+       * <pre>
+       * password length; by default, a reasonable length will be decided
+       * </pre>
+       *
+       * <code>int64 length = 2 [(.yandex.cloud.value) = "&lt;=256"];</code>
+       * @return The length.
+       */
+      @java.lang.Override
+      public long getLength() {
+        return length_;
+      }
+      /**
+       * <pre>
+       * password length; by default, a reasonable length will be decided
+       * </pre>
+       *
+       * <code>int64 length = 2 [(.yandex.cloud.value) = "&lt;=256"];</code>
+       * @param value The length to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLength(long value) {
+        
+        length_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * password length; by default, a reasonable length will be decided
+       * </pre>
+       *
+       * <code>int64 length = 2 [(.yandex.cloud.value) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLength() {
+        
+        length_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue includeUppercase_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> includeUppercaseBuilder_;
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       * @return Whether the includeUppercase field is set.
+       */
+      public boolean hasIncludeUppercase() {
+        return includeUppercaseBuilder_ != null || includeUppercase_ != null;
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       * @return The includeUppercase.
+       */
+      public com.google.protobuf.BoolValue getIncludeUppercase() {
+        if (includeUppercaseBuilder_ == null) {
+          return includeUppercase_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeUppercase_;
+        } else {
+          return includeUppercaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public Builder setIncludeUppercase(com.google.protobuf.BoolValue value) {
+        if (includeUppercaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          includeUppercase_ = value;
+          onChanged();
+        } else {
+          includeUppercaseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public Builder setIncludeUppercase(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (includeUppercaseBuilder_ == null) {
+          includeUppercase_ = builderForValue.build();
+          onChanged();
+        } else {
+          includeUppercaseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public Builder mergeIncludeUppercase(com.google.protobuf.BoolValue value) {
+        if (includeUppercaseBuilder_ == null) {
+          if (includeUppercase_ != null) {
+            includeUppercase_ =
+              com.google.protobuf.BoolValue.newBuilder(includeUppercase_).mergeFrom(value).buildPartial();
+          } else {
+            includeUppercase_ = value;
+          }
+          onChanged();
+        } else {
+          includeUppercaseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public Builder clearIncludeUppercase() {
+        if (includeUppercaseBuilder_ == null) {
+          includeUppercase_ = null;
+          onChanged();
+        } else {
+          includeUppercase_ = null;
+          includeUppercaseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIncludeUppercaseBuilder() {
+        
+        onChanged();
+        return getIncludeUppercaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIncludeUppercaseOrBuilder() {
+        if (includeUppercaseBuilder_ != null) {
+          return includeUppercaseBuilder_.getMessageOrBuilder();
+        } else {
+          return includeUppercase_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : includeUppercase_;
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one A..Z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_uppercase = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIncludeUppercaseFieldBuilder() {
+        if (includeUppercaseBuilder_ == null) {
+          includeUppercaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIncludeUppercase(),
+                  getParentForChildren(),
+                  isClean());
+          includeUppercase_ = null;
+        }
+        return includeUppercaseBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue includeLowercase_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> includeLowercaseBuilder_;
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       * @return Whether the includeLowercase field is set.
+       */
+      public boolean hasIncludeLowercase() {
+        return includeLowercaseBuilder_ != null || includeLowercase_ != null;
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       * @return The includeLowercase.
+       */
+      public com.google.protobuf.BoolValue getIncludeLowercase() {
+        if (includeLowercaseBuilder_ == null) {
+          return includeLowercase_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeLowercase_;
+        } else {
+          return includeLowercaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public Builder setIncludeLowercase(com.google.protobuf.BoolValue value) {
+        if (includeLowercaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          includeLowercase_ = value;
+          onChanged();
+        } else {
+          includeLowercaseBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public Builder setIncludeLowercase(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (includeLowercaseBuilder_ == null) {
+          includeLowercase_ = builderForValue.build();
+          onChanged();
+        } else {
+          includeLowercaseBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public Builder mergeIncludeLowercase(com.google.protobuf.BoolValue value) {
+        if (includeLowercaseBuilder_ == null) {
+          if (includeLowercase_ != null) {
+            includeLowercase_ =
+              com.google.protobuf.BoolValue.newBuilder(includeLowercase_).mergeFrom(value).buildPartial();
+          } else {
+            includeLowercase_ = value;
+          }
+          onChanged();
+        } else {
+          includeLowercaseBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public Builder clearIncludeLowercase() {
+        if (includeLowercaseBuilder_ == null) {
+          includeLowercase_ = null;
+          onChanged();
+        } else {
+          includeLowercase_ = null;
+          includeLowercaseBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIncludeLowercaseBuilder() {
+        
+        onChanged();
+        return getIncludeLowercaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIncludeLowercaseOrBuilder() {
+        if (includeLowercaseBuilder_ != null) {
+          return includeLowercaseBuilder_.getMessageOrBuilder();
+        } else {
+          return includeLowercase_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : includeLowercase_;
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one a..z character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_lowercase = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIncludeLowercaseFieldBuilder() {
+        if (includeLowercaseBuilder_ == null) {
+          includeLowercaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIncludeLowercase(),
+                  getParentForChildren(),
+                  isClean());
+          includeLowercase_ = null;
+        }
+        return includeLowercaseBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue includeDigits_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> includeDigitsBuilder_;
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       * @return Whether the includeDigits field is set.
+       */
+      public boolean hasIncludeDigits() {
+        return includeDigitsBuilder_ != null || includeDigits_ != null;
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       * @return The includeDigits.
+       */
+      public com.google.protobuf.BoolValue getIncludeDigits() {
+        if (includeDigitsBuilder_ == null) {
+          return includeDigits_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeDigits_;
+        } else {
+          return includeDigitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public Builder setIncludeDigits(com.google.protobuf.BoolValue value) {
+        if (includeDigitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          includeDigits_ = value;
+          onChanged();
+        } else {
+          includeDigitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public Builder setIncludeDigits(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (includeDigitsBuilder_ == null) {
+          includeDigits_ = builderForValue.build();
+          onChanged();
+        } else {
+          includeDigitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public Builder mergeIncludeDigits(com.google.protobuf.BoolValue value) {
+        if (includeDigitsBuilder_ == null) {
+          if (includeDigits_ != null) {
+            includeDigits_ =
+              com.google.protobuf.BoolValue.newBuilder(includeDigits_).mergeFrom(value).buildPartial();
+          } else {
+            includeDigits_ = value;
+          }
+          onChanged();
+        } else {
+          includeDigitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public Builder clearIncludeDigits() {
+        if (includeDigitsBuilder_ == null) {
+          includeDigits_ = null;
+          onChanged();
+        } else {
+          includeDigits_ = null;
+          includeDigitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIncludeDigitsBuilder() {
+        
+        onChanged();
+        return getIncludeDigitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIncludeDigitsOrBuilder() {
+        if (includeDigitsBuilder_ != null) {
+          return includeDigitsBuilder_.getMessageOrBuilder();
+        } else {
+          return includeDigits_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : includeDigits_;
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one 0..9 character is included in the password, true by default
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_digits = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIncludeDigitsFieldBuilder() {
+        if (includeDigitsBuilder_ == null) {
+          includeDigitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIncludeDigits(),
+                  getParentForChildren(),
+                  isClean());
+          includeDigits_ = null;
+        }
+        return includeDigitsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue includePunctuation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> includePunctuationBuilder_;
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       * @return Whether the includePunctuation field is set.
+       */
+      public boolean hasIncludePunctuation() {
+        return includePunctuationBuilder_ != null || includePunctuation_ != null;
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       * @return The includePunctuation.
+       */
+      public com.google.protobuf.BoolValue getIncludePunctuation() {
+        if (includePunctuationBuilder_ == null) {
+          return includePunctuation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includePunctuation_;
+        } else {
+          return includePunctuationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public Builder setIncludePunctuation(com.google.protobuf.BoolValue value) {
+        if (includePunctuationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          includePunctuation_ = value;
+          onChanged();
+        } else {
+          includePunctuationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public Builder setIncludePunctuation(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (includePunctuationBuilder_ == null) {
+          includePunctuation_ = builderForValue.build();
+          onChanged();
+        } else {
+          includePunctuationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public Builder mergeIncludePunctuation(com.google.protobuf.BoolValue value) {
+        if (includePunctuationBuilder_ == null) {
+          if (includePunctuation_ != null) {
+            includePunctuation_ =
+              com.google.protobuf.BoolValue.newBuilder(includePunctuation_).mergeFrom(value).buildPartial();
+          } else {
+            includePunctuation_ = value;
+          }
+          onChanged();
+        } else {
+          includePunctuationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public Builder clearIncludePunctuation() {
+        if (includePunctuationBuilder_ == null) {
+          includePunctuation_ = null;
+          onChanged();
+        } else {
+          includePunctuation_ = null;
+          includePunctuationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getIncludePunctuationBuilder() {
+        
+        onChanged();
+        return getIncludePunctuationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getIncludePunctuationOrBuilder() {
+        if (includePunctuationBuilder_ != null) {
+          return includePunctuationBuilder_.getMessageOrBuilder();
+        } else {
+          return includePunctuation_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : includePunctuation_;
+        }
+      }
+      /**
+       * <pre>
+       * whether at least one punctuation character is included in the password, true by default
+       * punctuation characters by default (there are 32): !"#$%&amp;'()*+,-./:;&lt;=&gt;?&#64;[&#92;]^_`{|}~
+       * to customize the punctuation characters, see included_punctuation and excluded_punctuation below
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue include_punctuation = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getIncludePunctuationFieldBuilder() {
+        if (includePunctuationBuilder_ == null) {
+          includePunctuationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getIncludePunctuation(),
+                  getParentForChildren(),
+                  isClean());
+          includePunctuation_ = null;
+        }
+        return includePunctuationBuilder_;
+      }
+
+      private java.lang.Object includedPunctuation_ = "";
+      /**
+       * <pre>
+       * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+       * a string of specific punctuation characters to use (at most, all the 32)
+       * </pre>
+       *
+       * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+       * @return The includedPunctuation.
+       */
+      public java.lang.String getIncludedPunctuation() {
+        java.lang.Object ref = includedPunctuation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          includedPunctuation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+       * a string of specific punctuation characters to use (at most, all the 32)
+       * </pre>
+       *
+       * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+       * @return The bytes for includedPunctuation.
+       */
+      public com.google.protobuf.ByteString
+          getIncludedPunctuationBytes() {
+        java.lang.Object ref = includedPunctuation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          includedPunctuation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+       * a string of specific punctuation characters to use (at most, all the 32)
+       * </pre>
+       *
+       * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+       * @param value The includedPunctuation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludedPunctuation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        includedPunctuation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+       * a string of specific punctuation characters to use (at most, all the 32)
+       * </pre>
+       *
+       * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludedPunctuation() {
+        
+        includedPunctuation_ = getDefaultInstance().getIncludedPunctuation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If include_punctuation is true, one of these two fields (not both) may be used optionally to customize the punctuation:
+       * a string of specific punctuation characters to use (at most, all the 32)
+       * </pre>
+       *
+       * <code>string included_punctuation = 7 [(.yandex.cloud.length) = "&lt;=32"];</code>
+       * @param value The bytes for includedPunctuation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludedPunctuationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        includedPunctuation_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object excludedPunctuation_ = "";
+      /**
+       * <pre>
+       * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+       * </pre>
+       *
+       * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+       * @return The excludedPunctuation.
+       */
+      public java.lang.String getExcludedPunctuation() {
+        java.lang.Object ref = excludedPunctuation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          excludedPunctuation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+       * </pre>
+       *
+       * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+       * @return The bytes for excludedPunctuation.
+       */
+      public com.google.protobuf.ByteString
+          getExcludedPunctuationBytes() {
+        java.lang.Object ref = excludedPunctuation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          excludedPunctuation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+       * </pre>
+       *
+       * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+       * @param value The excludedPunctuation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludedPunctuation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        excludedPunctuation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+       * </pre>
+       *
+       * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExcludedPunctuation() {
+        
+        excludedPunctuation_ = getDefaultInstance().getExcludedPunctuation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a string of punctuation characters to exclude from the default (at most 31, it's not allowed to exclude all the 32)
+       * </pre>
+       *
+       * <code>string excluded_punctuation = 8 [(.yandex.cloud.length) = "&lt;=31"];</code>
+       * @param value The bytes for excludedPunctuation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExcludedPunctuationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        excludedPunctuation_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.lockbox.v1.PasswordPayloadSpecification)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.lockbox.v1.PasswordPayloadSpecification)
+    private static final yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification();
+    }
+
+    public static yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PasswordPayloadSpecification>
+        PARSER = new com.google.protobuf.AbstractParser<PasswordPayloadSpecification>() {
+      @java.lang.Override
+      public PasswordPayloadSpecification parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PasswordPayloadSpecification(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PasswordPayloadSpecification> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PasswordPayloadSpecification> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.lockbox.v1.SecretOuterClass.PasswordPayloadSpecification getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_lockbox_v1_Secret_descriptor;
   private static final 
@@ -4786,6 +7544,11 @@ public final class SecretOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_lockbox_v1_Version_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4797,42 +7560,62 @@ public final class SecretOuterClass {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/lockbox/v1/secret.proto\022\027" +
       "yandex.cloud.lockbox.v1\032\037google/protobuf" +
-      "/timestamp.proto\"\324\003\n\006Secret\022\n\n\002id\030\001 \001(\t\022" +
-      "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t" +
-      "\022\023\n\013description\030\005 \001(\t\022;\n\006labels\030\006 \003(\0132+." +
-      "yandex.cloud.lockbox.v1.Secret.LabelsEnt" +
-      "ry\022\022\n\nkms_key_id\030\007 \001(\t\0226\n\006status\030\010 \001(\0162&" +
-      ".yandex.cloud.lockbox.v1.Secret.Status\0229" +
-      "\n\017current_version\030\t \001(\0132 .yandex.cloud.l" +
-      "ockbox.v1.Version\022\033\n\023deletion_protection" +
-      "\030\n \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "/timestamp.proto\032\035yandex/cloud/validatio" +
+      "n.proto\032\036google/protobuf/wrappers.proto\"" +
+      "\316\004\n\006Secret\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
+      "\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005" +
+      " \001(\t\022;\n\006labels\030\006 \003(\0132+.yandex.cloud.lock" +
+      "box.v1.Secret.LabelsEntry\022\022\n\nkms_key_id\030" +
+      "\007 \001(\t\0226\n\006status\030\010 \001(\0162&.yandex.cloud.loc" +
+      "kbox.v1.Secret.Status\0229\n\017current_version" +
+      "\030\t \001(\0132 .yandex.cloud.lockbox.v1.Version" +
+      "\022\033\n\023deletion_protection\030\n \001(\010\022_\n\036passwor" +
+      "d_payload_specification\030\013 \001(\01325.yandex.c" +
+      "loud.lockbox.v1.PasswordPayloadSpecifica" +
+      "tionH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
       "lue\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPEC" +
       "IFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010INA" +
-      "CTIVE\020\003\"\316\002\n\007Version\022\n\n\002id\030\001 \001(\t\022\021\n\tsecre" +
-      "t_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google." +
-      "protobuf.Timestamp\022.\n\ndestroy_at\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\023\n\013descriptio" +
-      "n\030\005 \001(\t\0227\n\006status\030\006 \001(\0162\'.yandex.cloud.l" +
-      "ockbox.v1.Version.Status\022\032\n\022payload_entr" +
-      "y_keys\030\007 \003(\t\"Z\n\006Status\022\026\n\022STATUS_UNSPECI" +
-      "FIED\020\000\022\n\n\006ACTIVE\020\001\022\035\n\031SCHEDULED_FOR_DEST" +
-      "RUCTION\020\002\022\r\n\tDESTROYED\020\003Bb\n\033yandex.cloud" +
-      ".api.lockbox.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/lockbox/v1;loc" +
-      "kboxb\006proto3"
+      "CTIVE\020\003B\027\n\025payload_specification\"\310\003\n\007Ver" +
+      "sion\022\n\n\002id\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t\022.\n\nc" +
+      "reated_at\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022.\n\ndestroy_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\023\n\013description\030\005 \001(\t\0227\n\006stat" +
+      "us\030\006 \001(\0162\'.yandex.cloud.lockbox.v1.Versi" +
+      "on.Status\022\032\n\022payload_entry_keys\030\007 \003(\t\022_\n" +
+      "\036password_payload_specification\030\010 \001(\01325." +
+      "yandex.cloud.lockbox.v1.PasswordPayloadS" +
+      "pecificationH\000\"Z\n\006Status\022\026\n\022STATUS_UNSPE" +
+      "CIFIED\020\000\022\n\n\006ACTIVE\020\001\022\035\n\031SCHEDULED_FOR_DE" +
+      "STRUCTION\020\002\022\r\n\tDESTROYED\020\003B\027\n\025payload_sp" +
+      "ecification\"\240\003\n\034PasswordPayloadSpecifica" +
+      "tion\022:\n\014password_key\030\001 \001(\tB$\350\3071\001\212\3101\005<=25" +
+      "6\362\3071\023[-_./\\\\@0-9a-zA-Z]+\022\031\n\006length\030\002 \001(\003" +
+      "B\t\372\3071\005<=256\0225\n\021include_uppercase\030\003 \001(\0132\032" +
+      ".google.protobuf.BoolValue\0225\n\021include_lo" +
+      "wercase\030\004 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\0222\n\016include_digits\030\005 \001(\0132\032.google.proto" +
+      "buf.BoolValue\0227\n\023include_punctuation\030\006 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022&\n\024includ" +
+      "ed_punctuation\030\007 \001(\tB\010\212\3101\004<=32\022&\n\024exclud" +
+      "ed_punctuation\030\010 \001(\tB\010\212\3101\004<=31Bb\n\033yandex" +
+      ".cloud.api.lockbox.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/lockbox/" +
+      "v1;lockboxb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_lockbox_v1_Secret_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_Secret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_Secret_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "KmsKeyId", "Status", "CurrentVersion", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "KmsKeyId", "Status", "CurrentVersion", "DeletionProtection", "PasswordPayloadSpecification", "PayloadSpecification", });
     internal_static_yandex_cloud_lockbox_v1_Secret_LabelsEntry_descriptor =
       internal_static_yandex_cloud_lockbox_v1_Secret_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_lockbox_v1_Secret_LabelsEntry_fieldAccessorTable = new
@@ -4844,8 +7627,24 @@ public final class SecretOuterClass {
     internal_static_yandex_cloud_lockbox_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_lockbox_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "SecretId", "CreatedAt", "DestroyAt", "Description", "Status", "PayloadEntryKeys", });
+        new java.lang.String[] { "Id", "SecretId", "CreatedAt", "DestroyAt", "Description", "Status", "PayloadEntryKeys", "PasswordPayloadSpecification", "PayloadSpecification", });
+    internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_lockbox_v1_PasswordPayloadSpecification_descriptor,
+        new java.lang.String[] { "PasswordKey", "Length", "IncludeUppercase", "IncludeLowercase", "IncludeDigits", "IncludePunctuation", "IncludedPunctuation", "ExcludedPunctuation", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

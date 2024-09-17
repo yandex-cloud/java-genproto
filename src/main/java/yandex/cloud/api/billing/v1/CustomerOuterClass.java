@@ -818,7 +818,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Name of the person.
+     * Optional. Name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -827,7 +828,8 @@ public final class CustomerOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the person.
+     * Optional. Name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -838,7 +840,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Long name of the person.
+     * Optional. Long name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string longname = 2;</code>
@@ -847,7 +850,8 @@ public final class CustomerOuterClass {
     java.lang.String getLongname();
     /**
      * <pre>
-     * Long name of the person.
+     * Optional. Long name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string longname = 2;</code>
@@ -858,7 +862,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Phone of the person.
+     * Optional. Phone of the person.
+     * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
      * </pre>
      *
      * <code>string phone = 3;</code>
@@ -867,7 +872,8 @@ public final class CustomerOuterClass {
     java.lang.String getPhone();
     /**
      * <pre>
-     * Phone of the person.
+     * Optional. Phone of the person.
+     * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
      * </pre>
      *
      * <code>string phone = 3;</code>
@@ -878,7 +884,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Email of the person.
+     * Optional. Email of the person.
+     * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
      * </pre>
      *
      * <code>string email = 4;</code>
@@ -887,7 +894,8 @@ public final class CustomerOuterClass {
     java.lang.String getEmail();
     /**
      * <pre>
-     * Email of the person.
+     * Optional. Email of the person.
+     * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
      * </pre>
      *
      * <code>string email = 4;</code>
@@ -898,7 +906,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Post code of the person.
+     * Optional. Post code of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_code = 5;</code>
@@ -907,7 +916,8 @@ public final class CustomerOuterClass {
     java.lang.String getPostCode();
     /**
      * <pre>
-     * Post code of the person.
+     * Optional. Post code of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_code = 5;</code>
@@ -918,7 +928,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Post address of the person.
+     * Optional. Post address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_address = 6;</code>
@@ -927,7 +938,8 @@ public final class CustomerOuterClass {
     java.lang.String getPostAddress();
     /**
      * <pre>
-     * Post address of the person.
+     * Optional. Post address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_address = 6;</code>
@@ -938,7 +950,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Legal address of the person.
+     * Optional. Legal address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string legal_address = 7;</code>
@@ -947,7 +960,8 @@ public final class CustomerOuterClass {
     java.lang.String getLegalAddress();
     /**
      * <pre>
-     * Legal address of the person.
+     * Optional. Legal address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string legal_address = 7;</code>
@@ -958,7 +972,8 @@ public final class CustomerOuterClass {
 
     /**
      * <pre>
-     * Tax identification number of the person.
+     * Optional. Tax identification number of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string tin = 8;</code>
@@ -967,7 +982,8 @@ public final class CustomerOuterClass {
     java.lang.String getTin();
     /**
      * <pre>
-     * Tax identification number of the person.
+     * Optional. Tax identification number of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string tin = 8;</code>
@@ -1117,7 +1133,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the person.
+     * Optional. Name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -1138,7 +1155,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Name of the person.
+     * Optional. Name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -1163,7 +1181,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object longname_;
     /**
      * <pre>
-     * Long name of the person.
+     * Optional. Long name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string longname = 2;</code>
@@ -1184,7 +1203,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Long name of the person.
+     * Optional. Long name of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string longname = 2;</code>
@@ -1209,7 +1229,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object phone_;
     /**
      * <pre>
-     * Phone of the person.
+     * Optional. Phone of the person.
+     * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
      * </pre>
      *
      * <code>string phone = 3;</code>
@@ -1230,7 +1251,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Phone of the person.
+     * Optional. Phone of the person.
+     * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
      * </pre>
      *
      * <code>string phone = 3;</code>
@@ -1255,7 +1277,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object email_;
     /**
      * <pre>
-     * Email of the person.
+     * Optional. Email of the person.
+     * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
      * </pre>
      *
      * <code>string email = 4;</code>
@@ -1276,7 +1299,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Email of the person.
+     * Optional. Email of the person.
+     * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
      * </pre>
      *
      * <code>string email = 4;</code>
@@ -1301,7 +1325,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object postCode_;
     /**
      * <pre>
-     * Post code of the person.
+     * Optional. Post code of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_code = 5;</code>
@@ -1322,7 +1347,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Post code of the person.
+     * Optional. Post code of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_code = 5;</code>
@@ -1347,7 +1373,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object postAddress_;
     /**
      * <pre>
-     * Post address of the person.
+     * Optional. Post address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_address = 6;</code>
@@ -1368,7 +1395,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Post address of the person.
+     * Optional. Post address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string post_address = 6;</code>
@@ -1393,7 +1421,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object legalAddress_;
     /**
      * <pre>
-     * Legal address of the person.
+     * Optional. Legal address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string legal_address = 7;</code>
@@ -1414,7 +1443,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Legal address of the person.
+     * Optional. Legal address of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string legal_address = 7;</code>
@@ -1439,7 +1469,8 @@ public final class CustomerOuterClass {
     private volatile java.lang.Object tin_;
     /**
      * <pre>
-     * Tax identification number of the person.
+     * Optional. Tax identification number of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string tin = 8;</code>
@@ -1460,7 +1491,8 @@ public final class CustomerOuterClass {
     }
     /**
      * <pre>
-     * Tax identification number of the person.
+     * Optional. Tax identification number of the person.
+     * String length is not limited.
      * </pre>
      *
      * <code>string tin = 8;</code>
@@ -1909,7 +1941,8 @@ public final class CustomerOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the person.
+       * Optional. Name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1929,7 +1962,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Name of the person.
+       * Optional. Name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1950,7 +1984,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Name of the person.
+       * Optional. Name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1969,7 +2004,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Name of the person.
+       * Optional. Name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -1983,7 +2019,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Name of the person.
+       * Optional. Name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -2005,7 +2042,8 @@ public final class CustomerOuterClass {
       private java.lang.Object longname_ = "";
       /**
        * <pre>
-       * Long name of the person.
+       * Optional. Long name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string longname = 2;</code>
@@ -2025,7 +2063,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Long name of the person.
+       * Optional. Long name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string longname = 2;</code>
@@ -2046,7 +2085,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Long name of the person.
+       * Optional. Long name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string longname = 2;</code>
@@ -2065,7 +2105,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Long name of the person.
+       * Optional. Long name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string longname = 2;</code>
@@ -2079,7 +2120,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Long name of the person.
+       * Optional. Long name of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string longname = 2;</code>
@@ -2101,7 +2143,8 @@ public final class CustomerOuterClass {
       private java.lang.Object phone_ = "";
       /**
        * <pre>
-       * Phone of the person.
+       * Optional. Phone of the person.
+       * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
        * </pre>
        *
        * <code>string phone = 3;</code>
@@ -2121,7 +2164,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Phone of the person.
+       * Optional. Phone of the person.
+       * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
        * </pre>
        *
        * <code>string phone = 3;</code>
@@ -2142,7 +2186,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Phone of the person.
+       * Optional. Phone of the person.
+       * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
        * </pre>
        *
        * <code>string phone = 3;</code>
@@ -2161,7 +2206,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Phone of the person.
+       * Optional. Phone of the person.
+       * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
        * </pre>
        *
        * <code>string phone = 3;</code>
@@ -2175,7 +2221,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Phone of the person.
+       * Optional. Phone of the person.
+       * Must be a valid telephone number or a valid [phoneword](https://en.m.wikipedia.org/wiki/Phoneword). 
        * </pre>
        *
        * <code>string phone = 3;</code>
@@ -2197,7 +2244,8 @@ public final class CustomerOuterClass {
       private java.lang.Object email_ = "";
       /**
        * <pre>
-       * Email of the person.
+       * Optional. Email of the person.
+       * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
        * </pre>
        *
        * <code>string email = 4;</code>
@@ -2217,7 +2265,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Email of the person.
+       * Optional. Email of the person.
+       * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
        * </pre>
        *
        * <code>string email = 4;</code>
@@ -2238,7 +2287,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Email of the person.
+       * Optional. Email of the person.
+       * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
        * </pre>
        *
        * <code>string email = 4;</code>
@@ -2257,7 +2307,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Email of the person.
+       * Optional. Email of the person.
+       * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
        * </pre>
        *
        * <code>string email = 4;</code>
@@ -2271,7 +2322,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Email of the person.
+       * Optional. Email of the person.
+       * Must be a valid [email address](https://en.wikipedia.org/wiki/Email_address).
        * </pre>
        *
        * <code>string email = 4;</code>
@@ -2293,7 +2345,8 @@ public final class CustomerOuterClass {
       private java.lang.Object postCode_ = "";
       /**
        * <pre>
-       * Post code of the person.
+       * Optional. Post code of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_code = 5;</code>
@@ -2313,7 +2366,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post code of the person.
+       * Optional. Post code of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_code = 5;</code>
@@ -2334,7 +2388,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post code of the person.
+       * Optional. Post code of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_code = 5;</code>
@@ -2353,7 +2408,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post code of the person.
+       * Optional. Post code of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_code = 5;</code>
@@ -2367,7 +2423,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post code of the person.
+       * Optional. Post code of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_code = 5;</code>
@@ -2389,7 +2446,8 @@ public final class CustomerOuterClass {
       private java.lang.Object postAddress_ = "";
       /**
        * <pre>
-       * Post address of the person.
+       * Optional. Post address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_address = 6;</code>
@@ -2409,7 +2467,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post address of the person.
+       * Optional. Post address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_address = 6;</code>
@@ -2430,7 +2489,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post address of the person.
+       * Optional. Post address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_address = 6;</code>
@@ -2449,7 +2509,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post address of the person.
+       * Optional. Post address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_address = 6;</code>
@@ -2463,7 +2524,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Post address of the person.
+       * Optional. Post address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string post_address = 6;</code>
@@ -2485,7 +2547,8 @@ public final class CustomerOuterClass {
       private java.lang.Object legalAddress_ = "";
       /**
        * <pre>
-       * Legal address of the person.
+       * Optional. Legal address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string legal_address = 7;</code>
@@ -2505,7 +2568,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Legal address of the person.
+       * Optional. Legal address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string legal_address = 7;</code>
@@ -2526,7 +2590,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Legal address of the person.
+       * Optional. Legal address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string legal_address = 7;</code>
@@ -2545,7 +2610,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Legal address of the person.
+       * Optional. Legal address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string legal_address = 7;</code>
@@ -2559,7 +2625,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Legal address of the person.
+       * Optional. Legal address of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string legal_address = 7;</code>
@@ -2581,7 +2648,8 @@ public final class CustomerOuterClass {
       private java.lang.Object tin_ = "";
       /**
        * <pre>
-       * Tax identification number of the person.
+       * Optional. Tax identification number of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string tin = 8;</code>
@@ -2601,7 +2669,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Tax identification number of the person.
+       * Optional. Tax identification number of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string tin = 8;</code>
@@ -2622,7 +2691,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Tax identification number of the person.
+       * Optional. Tax identification number of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string tin = 8;</code>
@@ -2641,7 +2711,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Tax identification number of the person.
+       * Optional. Tax identification number of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string tin = 8;</code>
@@ -2655,7 +2726,8 @@ public final class CustomerOuterClass {
       }
       /**
        * <pre>
-       * Tax identification number of the person.
+       * Optional. Tax identification number of the person.
+       * String length is not limited.
        * </pre>
        *
        * <code>string tin = 8;</code>

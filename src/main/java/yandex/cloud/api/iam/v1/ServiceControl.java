@@ -305,6 +305,14 @@ public final class ServiceControl {
        * <code>ERROR = 8;</code>
        */
       ERROR(8),
+      /**
+       * <pre>
+       * The service could be auto enabled.
+       * </pre>
+       *
+       * <code>DEFAULT = 9;</code>
+       */
+      DEFAULT(9),
       UNRECOGNIZED(-1),
       ;
 
@@ -376,6 +384,14 @@ public final class ServiceControl {
        * <code>ERROR = 8;</code>
        */
       public static final int ERROR_VALUE = 8;
+      /**
+       * <pre>
+       * The service could be auto enabled.
+       * </pre>
+       *
+       * <code>DEFAULT = 9;</code>
+       */
+      public static final int DEFAULT_VALUE = 9;
 
 
       public final int getNumber() {
@@ -411,6 +427,7 @@ public final class ServiceControl {
           case 6: return PAUSING;
           case 7: return DISABLING;
           case 8: return ERROR;
+          case 9: return DEFAULT;
           default: return null;
         }
       }
@@ -2528,20 +2545,20 @@ public final class ServiceControl {
       "\n)yandex/cloud/iam/v1/service_control.pr" +
       "oto\022\023yandex.cloud.iam.v1\032\037google/protobu" +
       "f/timestamp.proto\032\"yandex/cloud/iam/v1/r" +
-      "esource.proto\"\300\002\n\007Service\022\022\n\nservice_id\030" +
+      "esource.proto\"\315\002\n\007Service\022\022\n\nservice_id\030" +
       "\001 \001(\t\022/\n\010resource\030\002 \001(\0132\035.yandex.cloud.i" +
       "am.v1.Resource\022.\n\nupdated_at\030\003 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\0223\n\006status\030\004 \001(\0162#" +
-      ".yandex.cloud.iam.v1.Service.Status\"\212\001\n\006" +
+      ".yandex.cloud.iam.v1.Service.Status\"\227\001\n\006" +
       "Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007ENABLE" +
       "D\020\001\022\n\n\006PAUSED\020\002\022\014\n\010DISABLED\020\003\022\014\n\010ENABLIN" +
       "G\020\004\022\014\n\010RESUMING\020\005\022\013\n\007PAUSING\020\006\022\r\n\tDISABL" +
-      "ING\020\007\022\t\n\005ERROR\020\010\"W\n\014ServiceAgent\022\032\n\022serv" +
-      "ice_account_id\030\001 \001(\t\022\022\n\nservice_id\030\002 \001(\t" +
-      "\022\027\n\017microservice_id\030\003 \001(\tBV\n\027yandex.clou" +
-      "d.api.iam.v1Z;github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/iam/v1;iamb\006proto" +
-      "3"
+      "ING\020\007\022\t\n\005ERROR\020\010\022\013\n\007DEFAULT\020\t\"W\n\014Service" +
+      "Agent\022\032\n\022service_account_id\030\001 \001(\t\022\022\n\nser" +
+      "vice_id\030\002 \001(\t\022\027\n\017microservice_id\030\003 \001(\tBV" +
+      "\n\027yandex.cloud.api.iam.v1Z;github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/iam/" +
+      "v1;iamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
