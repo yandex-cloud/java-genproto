@@ -762,6 +762,37 @@ public final class ClusterServiceGrpc {
     return getAddShardMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddShardsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddShards",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddShardsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddShardsMethod;
+    if ((getAddShardsMethod = ClusterServiceGrpc.getAddShardsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getAddShardsMethod = ClusterServiceGrpc.getAddShardsMethod) == null) {
+          ClusterServiceGrpc.getAddShardsMethod = getAddShardsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddShards"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("AddShards"))
+              .build();
+        }
+      }
+    }
+    return getAddShardsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateShardMethod;
 
@@ -822,6 +853,37 @@ public final class ClusterServiceGrpc {
       }
     }
     return getDeleteShardMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteShards",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteShardsMethod;
+    if ((getDeleteShardsMethod = ClusterServiceGrpc.getDeleteShardsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getDeleteShardsMethod = ClusterServiceGrpc.getDeleteShardsMethod) == null) {
+          ClusterServiceGrpc.getDeleteShardsMethod = getDeleteShardsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteShards"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("DeleteShards"))
+              .build();
+        }
+      }
+    }
+    return getDeleteShardsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardGroupRequest,
@@ -1395,6 +1457,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates one or more shards in the specified cluster.
+     * </pre>
+     */
+    public void addShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddShardsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Modifies the specified shard.
      * </pre>
      */
@@ -1411,6 +1483,16 @@ public final class ClusterServiceGrpc {
     public void deleteShard(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShardMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shards (one or more).
+     * </pre>
+     */
+    public void deleteShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShardsMethod(), responseObserver);
     }
 
     /**
@@ -1674,6 +1756,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_SHARD)))
           .addMethod(
+            getAddShardsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_SHARDS)))
+          .addMethod(
             getUpdateShardMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -1687,6 +1776,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_SHARD)))
+          .addMethod(
+            getDeleteShardsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_SHARDS)))
           .addMethod(
             getGetShardGroupMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2036,6 +2132,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates one or more shards in the specified cluster.
+     * </pre>
+     */
+    public void addShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddShardsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Modifies the specified shard.
      * </pre>
      */
@@ -2054,6 +2161,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shards (one or more).
+     * </pre>
+     */
+    public void deleteShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteShardsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2415,6 +2533,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates one or more shards in the specified cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddShardsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Modifies the specified shard.
      * </pre>
      */
@@ -2431,6 +2559,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShard(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteShardMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shards (one or more).
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteShards(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteShardsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2795,6 +2933,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates one or more shards in the specified cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addShards(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddShardsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Modifies the specified shard.
      * </pre>
      */
@@ -2813,6 +2962,17 @@ public final class ClusterServiceGrpc {
         yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteShardMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified shards (one or more).
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteShards(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteShardsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -2939,17 +3099,19 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_GET_SHARD = 21;
   private static final int METHODID_LIST_SHARDS = 22;
   private static final int METHODID_ADD_SHARD = 23;
-  private static final int METHODID_UPDATE_SHARD = 24;
-  private static final int METHODID_DELETE_SHARD = 25;
-  private static final int METHODID_GET_SHARD_GROUP = 26;
-  private static final int METHODID_LIST_SHARD_GROUPS = 27;
-  private static final int METHODID_CREATE_SHARD_GROUP = 28;
-  private static final int METHODID_UPDATE_SHARD_GROUP = 29;
-  private static final int METHODID_DELETE_SHARD_GROUP = 30;
-  private static final int METHODID_LIST_EXTERNAL_DICTIONARIES = 31;
-  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 32;
-  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 33;
-  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 34;
+  private static final int METHODID_ADD_SHARDS = 24;
+  private static final int METHODID_UPDATE_SHARD = 25;
+  private static final int METHODID_DELETE_SHARD = 26;
+  private static final int METHODID_DELETE_SHARDS = 27;
+  private static final int METHODID_GET_SHARD_GROUP = 28;
+  private static final int METHODID_LIST_SHARD_GROUPS = 29;
+  private static final int METHODID_CREATE_SHARD_GROUP = 30;
+  private static final int METHODID_UPDATE_SHARD_GROUP = 31;
+  private static final int METHODID_DELETE_SHARD_GROUP = 32;
+  private static final int METHODID_LIST_EXTERNAL_DICTIONARIES = 33;
+  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 34;
+  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 35;
+  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 36;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3064,12 +3226,20 @@ public final class ClusterServiceGrpc {
           serviceImpl.addShard((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_ADD_SHARDS:
+          serviceImpl.addShards((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.AddClusterShardsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_UPDATE_SHARD:
           serviceImpl.updateShard((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE_SHARD:
           serviceImpl.deleteShard((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_SHARDS:
+          serviceImpl.deleteShards((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterShardsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET_SHARD_GROUP:
@@ -3193,8 +3363,10 @@ public final class ClusterServiceGrpc {
               .addMethod(getGetShardMethod())
               .addMethod(getListShardsMethod())
               .addMethod(getAddShardMethod())
+              .addMethod(getAddShardsMethod())
               .addMethod(getUpdateShardMethod())
               .addMethod(getDeleteShardMethod())
+              .addMethod(getDeleteShardsMethod())
               .addMethod(getGetShardGroupMethod())
               .addMethod(getListShardGroupsMethod())
               .addMethod(getCreateShardGroupMethod())
