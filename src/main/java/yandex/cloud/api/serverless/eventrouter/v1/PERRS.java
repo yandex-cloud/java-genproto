@@ -623,16 +623,28 @@ public final class PERRS {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return Whether the busId field is set.
      */
     boolean hasBusId();
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return The busId.
      */
     java.lang.String getBusId();
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return The bytes for busId.
      */
@@ -640,16 +652,28 @@ public final class PERRS {
         getBusIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return Whether the folderId field is set.
      */
     boolean hasFolderId();
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -865,6 +889,10 @@ public final class PERRS {
 
     public static final int BUS_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return Whether the busId field is set.
      */
@@ -872,6 +900,10 @@ public final class PERRS {
       return containerIdCase_ == 1;
     }
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return The busId.
      */
@@ -893,6 +925,10 @@ public final class PERRS {
       }
     }
     /**
+     * <pre>
+     * ID of the bus to list rules in.
+     * </pre>
+     *
      * <code>string bus_id = 1;</code>
      * @return The bytes for busId.
      */
@@ -917,6 +953,10 @@ public final class PERRS {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return Whether the folderId field is set.
      */
@@ -924,6 +964,10 @@ public final class PERRS {
       return containerIdCase_ == 2;
     }
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -945,6 +989,10 @@ public final class PERRS {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list rules in.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -1496,6 +1544,10 @@ public final class PERRS {
 
 
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @return Whether the busId field is set.
        */
@@ -1504,6 +1556,10 @@ public final class PERRS {
         return containerIdCase_ == 1;
       }
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @return The busId.
        */
@@ -1526,6 +1582,10 @@ public final class PERRS {
         }
       }
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @return The bytes for busId.
        */
@@ -1549,6 +1609,10 @@ public final class PERRS {
         }
       }
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @param value The busId to set.
        * @return This builder for chaining.
@@ -1564,6 +1628,10 @@ public final class PERRS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1576,6 +1644,10 @@ public final class PERRS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the bus to list rules in.
+       * </pre>
+       *
        * <code>string bus_id = 1;</code>
        * @param value The bytes for busId to set.
        * @return This builder for chaining.
@@ -1593,6 +1665,10 @@ public final class PERRS {
       }
 
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return Whether the folderId field is set.
        */
@@ -1601,6 +1677,10 @@ public final class PERRS {
         return containerIdCase_ == 2;
       }
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -1623,6 +1703,10 @@ public final class PERRS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -1646,6 +1730,10 @@ public final class PERRS {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1661,6 +1749,10 @@ public final class PERRS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1673,6 +1765,10 @@ public final class PERRS {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list rules in.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.

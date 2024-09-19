@@ -3184,7 +3184,7 @@ public final class PERCS {
 
     /**
      * <pre>
-     *&#47; ID of the bus to create a connector in.
+     * ID of the bus to create a connector in.
      * </pre>
      *
      * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3193,7 +3193,7 @@ public final class PERCS {
     java.lang.String getBusId();
     /**
      * <pre>
-     *&#47; ID of the bus to create a connector in.
+     * ID of the bus to create a connector in.
      * </pre>
      *
      * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3479,7 +3479,7 @@ public final class PERCS {
     private volatile java.lang.Object busId_;
     /**
      * <pre>
-     *&#47; ID of the bus to create a connector in.
+     * ID of the bus to create a connector in.
      * </pre>
      *
      * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3500,7 +3500,7 @@ public final class PERCS {
     }
     /**
      * <pre>
-     *&#47; ID of the bus to create a connector in.
+     * ID of the bus to create a connector in.
      * </pre>
      *
      * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4201,7 +4201,7 @@ public final class PERCS {
       private java.lang.Object busId_ = "";
       /**
        * <pre>
-       *&#47; ID of the bus to create a connector in.
+       * ID of the bus to create a connector in.
        * </pre>
        *
        * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4221,7 +4221,7 @@ public final class PERCS {
       }
       /**
        * <pre>
-       *&#47; ID of the bus to create a connector in.
+       * ID of the bus to create a connector in.
        * </pre>
        *
        * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4242,7 +4242,7 @@ public final class PERCS {
       }
       /**
        * <pre>
-       *&#47; ID of the bus to create a connector in.
+       * ID of the bus to create a connector in.
        * </pre>
        *
        * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4261,7 +4261,7 @@ public final class PERCS {
       }
       /**
        * <pre>
-       *&#47; ID of the bus to create a connector in.
+       * ID of the bus to create a connector in.
        * </pre>
        *
        * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4275,7 +4275,7 @@ public final class PERCS {
       }
       /**
        * <pre>
-       *&#47; ID of the bus to create a connector in.
+       * ID of the bus to create a connector in.
        * </pre>
        *
        * <code>string bus_id = 1 [(.yandex.cloud.required) = true];</code>
