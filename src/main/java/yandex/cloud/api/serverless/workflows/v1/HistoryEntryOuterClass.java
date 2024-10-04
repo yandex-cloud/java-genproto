@@ -251,6 +251,43 @@ public final class HistoryEntryOuterClass {
      */
     com.google.protobuf.ByteString
         getTypeBytes();
+
+    /**
+     * <pre>
+     * Number of attempts (including all retries of unsuccessful attempts). Value "1" means there were no retries.
+     * </pre>
+     *
+     * <code>int64 attempts = 12;</code>
+     * @return The attempts.
+     */
+    long getAttempts();
+
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     * @return Whether the lastError field is set.
+     */
+    boolean hasLastError();
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     * @return The lastError.
+     */
+    yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getLastError();
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     */
+    yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getLastErrorOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.workflows.v1.HistoryEntry}
@@ -395,6 +432,24 @@ public final class HistoryEntryOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               type_ = s;
+              break;
+            }
+            case 96: {
+
+              attempts_ = input.readInt64();
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder subBuilder = null;
+              if (lastError_ != null) {
+                subBuilder = lastError_.toBuilder();
+              }
+              lastError_ = input.readMessage(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastError_);
+                lastError_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -628,6 +683,1213 @@ public final class HistoryEntryOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.serverless.workflows.v1.HistoryEntry.Status)
+    }
+
+    public interface FailedAttemptOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the startedAt field is set.
+       */
+      boolean hasStartedAt();
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The startedAt.
+       */
+      com.google.protobuf.Timestamp getStartedAt();
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       * @return Whether the duration field is set.
+       */
+      boolean hasDuration();
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       * @return The duration.
+       */
+      com.google.protobuf.Duration getDuration();
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       */
+      com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       * @return Whether the error field is set.
+       */
+      boolean hasError();
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       * @return The error.
+       */
+      yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getError();
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       */
+      yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getErrorOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt}
+     */
+    public static final class FailedAttempt extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt)
+        FailedAttemptOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use FailedAttempt.newBuilder() to construct.
+      private FailedAttempt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private FailedAttempt() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FailedAttempt();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FailedAttempt(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (startedAt_ != null) {
+                  subBuilder = startedAt_.toBuilder();
+                }
+                startedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(startedAt_);
+                  startedAt_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Duration.Builder subBuilder = null;
+                if (duration_ != null) {
+                  subBuilder = duration_.toBuilder();
+                }
+                duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(duration_);
+                  duration_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder subBuilder = null;
+                if (error_ != null) {
+                  subBuilder = error_.toBuilder();
+                }
+                error_ = input.readMessage(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(error_);
+                  error_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.class, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.Builder.class);
+      }
+
+      public static final int STARTED_AT_FIELD_NUMBER = 1;
+      private com.google.protobuf.Timestamp startedAt_;
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the startedAt field is set.
+       */
+      @java.lang.Override
+      public boolean hasStartedAt() {
+        return startedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The startedAt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartedAt() {
+        return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+      }
+      /**
+       * <pre>
+       * Start timestamp for the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+        return getStartedAt();
+      }
+
+      public static final int DURATION_FIELD_NUMBER = 2;
+      private com.google.protobuf.Duration duration_;
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       * @return Whether the duration field is set.
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return duration_ != null;
+      }
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getDuration() {
+        return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+      }
+      /**
+       * <pre>
+       * Duration of the attempt.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        return getDuration();
+      }
+
+      public static final int ERROR_FIELD_NUMBER = 3;
+      private yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError error_;
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       * @return Whether the error field is set.
+       */
+      @java.lang.Override
+      public boolean hasError() {
+        return error_ != null;
+      }
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getError() {
+        return error_ == null ? yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : error_;
+      }
+      /**
+       * <pre>
+       * Error details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getErrorOrBuilder() {
+        return getError();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (startedAt_ != null) {
+          output.writeMessage(1, getStartedAt());
+        }
+        if (duration_ != null) {
+          output.writeMessage(2, getDuration());
+        }
+        if (error_ != null) {
+          output.writeMessage(3, getError());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (startedAt_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getStartedAt());
+        }
+        if (duration_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getDuration());
+        }
+        if (error_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getError());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt other = (yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt) obj;
+
+        if (hasStartedAt() != other.hasStartedAt()) return false;
+        if (hasStartedAt()) {
+          if (!getStartedAt()
+              .equals(other.getStartedAt())) return false;
+        }
+        if (hasDuration() != other.hasDuration()) return false;
+        if (hasDuration()) {
+          if (!getDuration()
+              .equals(other.getDuration())) return false;
+        }
+        if (hasError() != other.hasError()) return false;
+        if (hasError()) {
+          if (!getError()
+              .equals(other.getError())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasStartedAt()) {
+          hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
+          hash = (53 * hash) + getStartedAt().hashCode();
+        }
+        if (hasDuration()) {
+          hash = (37 * hash) + DURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getDuration().hashCode();
+        }
+        if (hasError()) {
+          hash = (37 * hash) + ERROR_FIELD_NUMBER;
+          hash = (53 * hash) + getError().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt)
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttemptOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.class, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (startedAtBuilder_ == null) {
+            startedAt_ = null;
+          } else {
+            startedAt_ = null;
+            startedAtBuilder_ = null;
+          }
+          if (durationBuilder_ == null) {
+            duration_ = null;
+          } else {
+            duration_ = null;
+            durationBuilder_ = null;
+          }
+          if (errorBuilder_ == null) {
+            error_ = null;
+          } else {
+            error_ = null;
+            errorBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt build() {
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt buildPartial() {
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt result = new yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt(this);
+          if (startedAtBuilder_ == null) {
+            result.startedAt_ = startedAt_;
+          } else {
+            result.startedAt_ = startedAtBuilder_.build();
+          }
+          if (durationBuilder_ == null) {
+            result.duration_ = duration_;
+          } else {
+            result.duration_ = durationBuilder_.build();
+          }
+          if (errorBuilder_ == null) {
+            result.error_ = error_;
+          } else {
+            result.error_ = errorBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt) {
+            return mergeFrom((yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt other) {
+          if (other == yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt.getDefaultInstance()) return this;
+          if (other.hasStartedAt()) {
+            mergeStartedAt(other.getStartedAt());
+          }
+          if (other.hasDuration()) {
+            mergeDuration(other.getDuration());
+          }
+          if (other.hasError()) {
+            mergeError(other.getError());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Timestamp startedAt_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the startedAt field is set.
+         */
+        public boolean hasStartedAt() {
+          return startedAtBuilder_ != null || startedAt_ != null;
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The startedAt.
+         */
+        public com.google.protobuf.Timestamp getStartedAt() {
+          if (startedAtBuilder_ == null) {
+            return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+          } else {
+            return startedAtBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setStartedAt(com.google.protobuf.Timestamp value) {
+          if (startedAtBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            startedAt_ = value;
+            onChanged();
+          } else {
+            startedAtBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setStartedAt(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (startedAtBuilder_ == null) {
+            startedAt_ = builderForValue.build();
+            onChanged();
+          } else {
+            startedAtBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
+          if (startedAtBuilder_ == null) {
+            if (startedAt_ != null) {
+              startedAt_ =
+                com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+            } else {
+              startedAt_ = value;
+            }
+            onChanged();
+          } else {
+            startedAtBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearStartedAt() {
+          if (startedAtBuilder_ == null) {
+            startedAt_ = null;
+            onChanged();
+          } else {
+            startedAt_ = null;
+            startedAtBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
+          
+          onChanged();
+          return getStartedAtFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+          if (startedAtBuilder_ != null) {
+            return startedAtBuilder_.getMessageOrBuilder();
+          } else {
+            return startedAt_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+          }
+        }
+        /**
+         * <pre>
+         * Start timestamp for the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Timestamp started_at = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getStartedAtFieldBuilder() {
+          if (startedAtBuilder_ == null) {
+            startedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getStartedAt(),
+                    getParentForChildren(),
+                    isClean());
+            startedAt_ = null;
+          }
+          return startedAtBuilder_;
+        }
+
+        private com.google.protobuf.Duration duration_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         * @return Whether the duration field is set.
+         */
+        public boolean hasDuration() {
+          return durationBuilder_ != null || duration_ != null;
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         * @return The duration.
+         */
+        public com.google.protobuf.Duration getDuration() {
+          if (durationBuilder_ == null) {
+            return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+          } else {
+            return durationBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public Builder setDuration(com.google.protobuf.Duration value) {
+          if (durationBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            duration_ = value;
+            onChanged();
+          } else {
+            durationBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public Builder setDuration(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (durationBuilder_ == null) {
+            duration_ = builderForValue.build();
+            onChanged();
+          } else {
+            durationBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public Builder mergeDuration(com.google.protobuf.Duration value) {
+          if (durationBuilder_ == null) {
+            if (duration_ != null) {
+              duration_ =
+                com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+            } else {
+              duration_ = value;
+            }
+            onChanged();
+          } else {
+            durationBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public Builder clearDuration() {
+          if (durationBuilder_ == null) {
+            duration_ = null;
+            onChanged();
+          } else {
+            duration_ = null;
+            durationBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public com.google.protobuf.Duration.Builder getDurationBuilder() {
+          
+          onChanged();
+          return getDurationFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+          if (durationBuilder_ != null) {
+            return durationBuilder_.getMessageOrBuilder();
+          } else {
+            return duration_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : duration_;
+          }
+        }
+        /**
+         * <pre>
+         * Duration of the attempt.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration duration = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getDurationFieldBuilder() {
+          if (durationBuilder_ == null) {
+            durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getDuration(),
+                    getParentForChildren(),
+                    isClean());
+            duration_ = null;
+          }
+          return durationBuilder_;
+        }
+
+        private yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError error_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder> errorBuilder_;
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         * @return Whether the error field is set.
+         */
+        public boolean hasError() {
+          return errorBuilder_ != null || error_ != null;
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         * @return The error.
+         */
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getError() {
+          if (errorBuilder_ == null) {
+            return error_ == null ? yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : error_;
+          } else {
+            return errorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public Builder setError(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError value) {
+          if (errorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            error_ = value;
+            onChanged();
+          } else {
+            errorBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public Builder setError(
+            yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder builderForValue) {
+          if (errorBuilder_ == null) {
+            error_ = builderForValue.build();
+            onChanged();
+          } else {
+            errorBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public Builder mergeError(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError value) {
+          if (errorBuilder_ == null) {
+            if (error_ != null) {
+              error_ =
+                yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.newBuilder(error_).mergeFrom(value).buildPartial();
+            } else {
+              error_ = value;
+            }
+            onChanged();
+          } else {
+            errorBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public Builder clearError() {
+          if (errorBuilder_ == null) {
+            error_ = null;
+            onChanged();
+          } else {
+            error_ = null;
+            errorBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder getErrorBuilder() {
+          
+          onChanged();
+          return getErrorFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getErrorOrBuilder() {
+          if (errorBuilder_ != null) {
+            return errorBuilder_.getMessageOrBuilder();
+          } else {
+            return error_ == null ?
+                yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : error_;
+          }
+        }
+        /**
+         * <pre>
+         * Error details.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError error = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder> 
+            getErrorFieldBuilder() {
+          if (errorBuilder_ == null) {
+            errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder>(
+                    getError(),
+                    getParentForChildren(),
+                    isClean());
+            error_ = null;
+          }
+          return errorBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.workflows.v1.HistoryEntry.FailedAttempt)
+      private static final yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt();
+      }
+
+      public static yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<FailedAttempt>
+          PARSER = new com.google.protobuf.AbstractParser<FailedAttempt>() {
+        @java.lang.Override
+        public FailedAttempt parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FailedAttempt(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<FailedAttempt> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FailedAttempt> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntry.FailedAttempt getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1031,6 +2293,59 @@ public final class HistoryEntryOuterClass {
       }
     }
 
+    public static final int ATTEMPTS_FIELD_NUMBER = 12;
+    private long attempts_;
+    /**
+     * <pre>
+     * Number of attempts (including all retries of unsuccessful attempts). Value "1" means there were no retries.
+     * </pre>
+     *
+     * <code>int64 attempts = 12;</code>
+     * @return The attempts.
+     */
+    @java.lang.Override
+    public long getAttempts() {
+      return attempts_;
+    }
+
+    public static final int LAST_ERROR_FIELD_NUMBER = 13;
+    private yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError lastError_;
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     * @return Whether the lastError field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastError() {
+      return lastError_ != null;
+    }
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     * @return The lastError.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getLastError() {
+      return lastError_ == null ? yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : lastError_;
+    }
+    /**
+     * <pre>
+     * Last received error details in case of retries.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getLastErrorOrBuilder() {
+      return getLastError();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1074,6 +2389,12 @@ public final class HistoryEntryOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, type_);
+      }
+      if (attempts_ != 0L) {
+        output.writeInt64(12, attempts_);
+      }
+      if (lastError_ != null) {
+        output.writeMessage(13, getLastError());
       }
       unknownFields.writeTo(output);
     }
@@ -1119,6 +2440,14 @@ public final class HistoryEntryOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, type_);
+      }
+      if (attempts_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(12, attempts_);
+      }
+      if (lastError_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getLastError());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1169,6 +2498,13 @@ public final class HistoryEntryOuterClass {
       if (status_ != other.status_) return false;
       if (!getType()
           .equals(other.getType())) return false;
+      if (getAttempts()
+          != other.getAttempts()) return false;
+      if (hasLastError() != other.hasLastError()) return false;
+      if (hasLastError()) {
+        if (!getLastError()
+            .equals(other.getLastError())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1210,6 +2546,13 @@ public final class HistoryEntryOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ATTEMPTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAttempts());
+      if (hasLastError()) {
+        hash = (37 * hash) + LAST_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getLastError().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1383,6 +2726,14 @@ public final class HistoryEntryOuterClass {
 
         type_ = "";
 
+        attempts_ = 0L;
+
+        if (lastErrorBuilder_ == null) {
+          lastError_ = null;
+        } else {
+          lastError_ = null;
+          lastErrorBuilder_ = null;
+        }
         return this;
       }
 
@@ -1439,6 +2790,12 @@ public final class HistoryEntryOuterClass {
         }
         result.status_ = status_;
         result.type_ = type_;
+        result.attempts_ = attempts_;
+        if (lastErrorBuilder_ == null) {
+          result.lastError_ = lastError_;
+        } else {
+          result.lastError_ = lastErrorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1520,6 +2877,12 @@ public final class HistoryEntryOuterClass {
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
           onChanged();
+        }
+        if (other.getAttempts() != 0L) {
+          setAttempts(other.getAttempts());
+        }
+        if (other.hasLastError()) {
+          mergeLastError(other.getLastError());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2781,6 +4144,204 @@ public final class HistoryEntryOuterClass {
         type_ = value;
         onChanged();
         return this;
+      }
+
+      private long attempts_ ;
+      /**
+       * <pre>
+       * Number of attempts (including all retries of unsuccessful attempts). Value "1" means there were no retries.
+       * </pre>
+       *
+       * <code>int64 attempts = 12;</code>
+       * @return The attempts.
+       */
+      @java.lang.Override
+      public long getAttempts() {
+        return attempts_;
+      }
+      /**
+       * <pre>
+       * Number of attempts (including all retries of unsuccessful attempts). Value "1" means there were no retries.
+       * </pre>
+       *
+       * <code>int64 attempts = 12;</code>
+       * @param value The attempts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAttempts(long value) {
+        
+        attempts_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of attempts (including all retries of unsuccessful attempts). Value "1" means there were no retries.
+       * </pre>
+       *
+       * <code>int64 attempts = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAttempts() {
+        
+        attempts_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError lastError_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder> lastErrorBuilder_;
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       * @return Whether the lastError field is set.
+       */
+      public boolean hasLastError() {
+        return lastErrorBuilder_ != null || lastError_ != null;
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       * @return The lastError.
+       */
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError getLastError() {
+        if (lastErrorBuilder_ == null) {
+          return lastError_ == null ? yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : lastError_;
+        } else {
+          return lastErrorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public Builder setLastError(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError value) {
+        if (lastErrorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastError_ = value;
+          onChanged();
+        } else {
+          lastErrorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public Builder setLastError(
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder builderForValue) {
+        if (lastErrorBuilder_ == null) {
+          lastError_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastErrorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public Builder mergeLastError(yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError value) {
+        if (lastErrorBuilder_ == null) {
+          if (lastError_ != null) {
+            lastError_ =
+              yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.newBuilder(lastError_).mergeFrom(value).buildPartial();
+          } else {
+            lastError_ = value;
+          }
+          onChanged();
+        } else {
+          lastErrorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public Builder clearLastError() {
+        if (lastErrorBuilder_ == null) {
+          lastError_ = null;
+          onChanged();
+        } else {
+          lastError_ = null;
+          lastErrorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder getLastErrorBuilder() {
+        
+        onChanged();
+        return getLastErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      public yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder getLastErrorOrBuilder() {
+        if (lastErrorBuilder_ != null) {
+          return lastErrorBuilder_.getMessageOrBuilder();
+        } else {
+          return lastError_ == null ?
+              yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.getDefaultInstance() : lastError_;
+        }
+      }
+      /**
+       * <pre>
+       * Last received error details in case of retries.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.workflows.v1.HistoryEntryError last_error = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder> 
+          getLastErrorFieldBuilder() {
+        if (lastErrorBuilder_ == null) {
+          lastErrorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryError.Builder, yandex.cloud.api.serverless.workflows.v1.HistoryEntryOuterClass.HistoryEntryErrorOrBuilder>(
+                  getLastError(),
+                  getParentForChildren(),
+                  isClean());
+          lastError_ = null;
+        }
+        return lastErrorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5099,6 +6660,11 @@ public final class HistoryEntryOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntryInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5126,7 +6692,7 @@ public final class HistoryEntryOuterClass {
       "istory_entry.proto\022$yandex.cloud.serverl" +
       "ess.workflows.v1\032\036google/protobuf/durati" +
       "on.proto\032\037google/protobuf/timestamp.prot" +
-      "o\032\035yandex/cloud/validation.proto\"\314\004\n\014His" +
+      "o\032\035yandex/cloud/validation.proto\"\356\006\n\014His" +
       "toryEntry\022\n\n\002id\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\023\n\013" +
       "description\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\0132\032." +
       "google.protobuf.Timestamp\022+\n\010duration\030\005 " +
@@ -5138,18 +6704,25 @@ public final class HistoryEntryOuterClass {
       ".cloud.serverless.workflows.v1.HistoryEn" +
       "tryError\022I\n\006status\030\t \001(\01629.yandex.cloud." +
       "serverless.workflows.v1.HistoryEntry.Sta" +
-      "tus\022\014\n\004type\030\n \001(\t\"|\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007STARTED\020\002\022" +
-      "\r\n\tCOMPLETED\020\003\022\n\n\006FAILED\020\004\022\024\n\020CANCEL_REQ" +
-      "UESTED\020\005\022\r\n\tCANCELLED\020\006\"8\n\021HistoryEntryI" +
-      "nput\022\024\n\ninput_json\030\001 \001(\tH\000B\r\n\005input\022\004\300\3011" +
-      "\001\";\n\022HistoryEntryOutput\022\025\n\013output_json\030\001" +
-      " \001(\tH\000B\016\n\006output\022\004\300\3011\001\"8\n\021HistoryEntryEr" +
-      "ror\022\017\n\007message\030\001 \001(\t\022\022\n\nerror_code\030\002 \001(\t" +
-      "B~\n(yandex.cloud.api.serverless.workflow" +
-      "s.v1ZRgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/serverless/workflows/v1;w" +
-      "orkflowsb\006proto3"
+      "tus\022\014\n\004type\030\n \001(\t\022\020\n\010attempts\030\014 \001(\003\022K\n\nl" +
+      "ast_error\030\r \001(\01327.yandex.cloud.serverles" +
+      "s.workflows.v1.HistoryEntryError\032\272\001\n\rFai" +
+      "ledAttempt\0224\n\nstarted_at\030\001 \001(\0132\032.google." +
+      "protobuf.TimestampB\004\350\3071\001\022+\n\010duration\030\002 \001" +
+      "(\0132\031.google.protobuf.Duration\022F\n\005error\030\003" +
+      " \001(\01327.yandex.cloud.serverless.workflows" +
+      ".v1.HistoryEntryError\"|\n\006Status\022\026\n\022STATU" +
+      "S_UNSPECIFIED\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007STARTE" +
+      "D\020\002\022\r\n\tCOMPLETED\020\003\022\n\n\006FAILED\020\004\022\024\n\020CANCEL" +
+      "_REQUESTED\020\005\022\r\n\tCANCELLED\020\006J\004\010\013\020\014\"8\n\021His" +
+      "toryEntryInput\022\024\n\ninput_json\030\001 \001(\tH\000B\r\n\005" +
+      "input\022\004\300\3011\001\";\n\022HistoryEntryOutput\022\025\n\013out" +
+      "put_json\030\001 \001(\tH\000B\016\n\006output\022\004\300\3011\001\"8\n\021Hist" +
+      "oryEntryError\022\017\n\007message\030\001 \001(\t\022\022\n\nerror_" +
+      "code\030\002 \001(\tB~\n(yandex.cloud.api.serverles" +
+      "s.workflows.v1ZRgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/serverless/work" +
+      "flows/v1;workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5163,7 +6736,13 @@ public final class HistoryEntryOuterClass {
     internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_descriptor,
-        new java.lang.String[] { "Id", "Title", "Description", "StartedAt", "Duration", "Input", "Output", "Error", "Status", "Type", });
+        new java.lang.String[] { "Id", "Title", "Description", "StartedAt", "Duration", "Input", "Output", "Error", "Status", "Type", "Attempts", "LastError", });
+    internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor =
+      internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntry_FailedAttempt_descriptor,
+        new java.lang.String[] { "StartedAt", "Duration", "Error", });
     internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntryInput_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_serverless_workflows_v1_HistoryEntryInput_fieldAccessorTable = new
@@ -5185,6 +6764,7 @@ public final class HistoryEntryOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DurationProto.getDescriptor();

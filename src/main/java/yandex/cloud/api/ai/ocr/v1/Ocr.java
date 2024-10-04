@@ -1812,7 +1812,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Angle of rotate image
+     * Angle of image rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -1821,7 +1821,7 @@ public final class Ocr {
     int getRotateValue();
     /**
      * <pre>
-     * Angle of rotate image
+     * Angle of image rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -2210,7 +2210,7 @@ public final class Ocr {
     private int rotate_;
     /**
      * <pre>
-     * Angle of rotate image
+     * Angle of image rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -2221,7 +2221,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Angle of rotate image
+     * Angle of image rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -3803,7 +3803,7 @@ public final class Ocr {
       private int rotate_ = 0;
       /**
        * <pre>
-       * Angle of rotate image
+       * Angle of image rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -3814,7 +3814,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate image
+       * Angle of image rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -3829,7 +3829,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate image
+       * Angle of image rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -3843,7 +3843,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate image
+       * Angle of image rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -3861,7 +3861,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate image
+       * Angle of image rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle rotate = 7;</code>
@@ -7597,7 +7597,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Angle of rotate line
+     * Angle of line rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -7606,7 +7606,7 @@ public final class Ocr {
     int getOrientationValue();
     /**
      * <pre>
-     * Angle of rotate line
+     * Angle of line rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -7953,7 +7953,7 @@ public final class Ocr {
     private int orientation_;
     /**
      * <pre>
-     * Angle of rotate line
+     * Angle of line rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -7964,7 +7964,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Angle of rotate line
+     * Angle of line rotation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -9314,7 +9314,7 @@ public final class Ocr {
       private int orientation_ = 0;
       /**
        * <pre>
-       * Angle of rotate line
+       * Angle of line rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -9325,7 +9325,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate line
+       * Angle of line rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -9340,7 +9340,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate line
+       * Angle of line rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -9354,7 +9354,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate line
+       * Angle of line rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>
@@ -9372,7 +9372,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Angle of rotate line
+       * Angle of line rotation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.Angle orientation = 5;</code>

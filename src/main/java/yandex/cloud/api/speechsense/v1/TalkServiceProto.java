@@ -12701,27 +12701,29 @@ public final class TalkServiceProto {
       "\004talk\030\001 \003(\0132!.yandex.cloud.speechsense.v" +
       "1.Talk*f\n\010UserRole\022\031\n\025USER_ROLE_UNSPECIF" +
       "IED\020\000\022\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n\020USER_RO" +
-      "LE_CLIENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\376\004\n\013TalkS" +
+      "LE_CLIENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\322\005\n\013TalkS" +
       "ervice\022s\n\016UploadAsStream\022..yandex.cloud." +
       "speechsense.v1.StreamTalkRequest\032/.yande" +
       "x.cloud.speechsense.v1.UploadTalkRespons" +
-      "e(\001\022i\n\006Upload\022..yandex.cloud.speechsense" +
-      ".v1.UploadTalkRequest\032/.yandex.cloud.spe" +
-      "echsense.v1.UploadTalkResponse\022m\n\nUpload" +
-      "Text\022..yandex.cloud.speechsense.v1.Uploa" +
-      "dTextRequest\032/.yandex.cloud.speechsense." +
-      "v1.UploadTextResponse\022\222\001\n\006Search\022..yande" +
-      "x.cloud.speechsense.v1.SearchTalkRequest" +
-      "\032/.yandex.cloud.speechsense.v1.SearchTal" +
-      "kResponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talks" +
-      "/search:\001*\022\212\001\n\003Get\022+.yandex.cloud.speech" +
-      "sense.v1.GetTalkRequest\032,.yandex.cloud.s" +
-      "peechsense.v1.GetTalkResponse\"(\202\323\344\223\002\"\"\035/" +
-      "speechsense/v1/talks/bulkGet:\001*B\200\001\n\037yand" +
-      "ex.cloud.api.speechsense.v1B\020TalkService" +
-      "ProtoZKgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/speechsense/v1;speechsen" +
-      "seb\006proto3"
+      "e(\001\022\222\001\n\006Upload\022..yandex.cloud.speechsens" +
+      "e.v1.UploadTalkRequest\032/.yandex.cloud.sp" +
+      "eechsense.v1.UploadTalkResponse\"\'\202\323\344\223\002!\"" +
+      "\034/speechsense/v1/talks/upload:\001*\022\232\001\n\nUpl" +
+      "oadText\022..yandex.cloud.speechsense.v1.Up" +
+      "loadTextRequest\032/.yandex.cloud.speechsen" +
+      "se.v1.UploadTextResponse\"+\202\323\344\223\002%\" /speec" +
+      "hsense/v1/talks/uploadText:\001*\022\222\001\n\006Search" +
+      "\022..yandex.cloud.speechsense.v1.SearchTal" +
+      "kRequest\032/.yandex.cloud.speechsense.v1.S" +
+      "earchTalkResponse\"\'\202\323\344\223\002!\"\034/speechsense/" +
+      "v1/talks/search:\001*\022\206\001\n\003Get\022+.yandex.clou" +
+      "d.speechsense.v1.GetTalkRequest\032,.yandex" +
+      ".cloud.speechsense.v1.GetTalkResponse\"$\202" +
+      "\323\344\223\002\036\"\031/speechsense/v1/talks/get:\001*B\200\001\n\037" +
+      "yandex.cloud.api.speechsense.v1B\020TalkSer" +
+      "viceProtoZKgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/speechsense/v1;speec" +
+      "hsenseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

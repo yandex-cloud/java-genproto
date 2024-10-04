@@ -2654,6 +2654,1214 @@ public final class BackupServiceOuterClass {
 
   }
 
+  public interface DeleteBackupRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.DeleteBackupRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.DeleteBackupRequest}
+   */
+  public static final class DeleteBackupRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.DeleteBackupRequest)
+      DeleteBackupRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBackupRequest.newBuilder() to construct.
+    private DeleteBackupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBackupRequest() {
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteBackupRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.class, yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.Builder.class);
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the backup to delete.
+     * </pre>
+     *
+     * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest other = (yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest) obj;
+
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.DeleteBackupRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.DeleteBackupRequest)
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.class, yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest build() {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest result = new yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest(this);
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest.getDefaultInstance()) return this;
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the backup to delete.
+       * </pre>
+       *
+       * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.DeleteBackupRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.DeleteBackupRequest)
+    private static final yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBackupRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBackupRequest>() {
+      @java.lang.Override
+      public DeleteBackupRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteBackupRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBackupRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBackupRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteBackupMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.redis.v1.DeleteBackupMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the deleting Redis backup.
+     * </pre>
+     *
+     * <code>string backup_id = 1;</code>
+     * @return The backupId.
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     * Required. ID of the deleting Redis backup.
+     * </pre>
+     *
+     * <code>string backup_id = 1;</code>
+     * @return The bytes for backupId.
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.redis.v1.DeleteBackupMetadata}
+   */
+  public static final class DeleteBackupMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.redis.v1.DeleteBackupMetadata)
+      DeleteBackupMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteBackupMetadata.newBuilder() to construct.
+    private DeleteBackupMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteBackupMetadata() {
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteBackupMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteBackupMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.class, yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.Builder.class);
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     * Required. ID of the deleting Redis backup.
+     * </pre>
+     *
+     * <code>string backup_id = 1;</code>
+     * @return The backupId.
+     */
+    @java.lang.Override
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the deleting Redis backup.
+     * </pre>
+     *
+     * <code>string backup_id = 1;</code>
+     * @return The bytes for backupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata other = (yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata) obj;
+
+      if (!getBackupId()
+          .equals(other.getBackupId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.redis.v1.DeleteBackupMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.redis.v1.DeleteBackupMetadata)
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.class, yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata build() {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata buildPartial() {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata result = new yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata(this);
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata other) {
+        if (other == yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata.getDefaultInstance()) return this;
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the deleting Redis backup.
+       * </pre>
+       *
+       * <code>string backup_id = 1;</code>
+       * @return The backupId.
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the deleting Redis backup.
+       * </pre>
+       *
+       * <code>string backup_id = 1;</code>
+       * @return The bytes for backupId.
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the deleting Redis backup.
+       * </pre>
+       *
+       * <code>string backup_id = 1;</code>
+       * @param value The backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the deleting Redis backup.
+       * </pre>
+       *
+       * <code>string backup_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the deleting Redis backup.
+       * </pre>
+       *
+       * <code>string backup_id = 1;</code>
+       * @param value The bytes for backupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.redis.v1.DeleteBackupMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.redis.v1.DeleteBackupMetadata)
+    private static final yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteBackupMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteBackupMetadata>() {
+      @java.lang.Override
+      public DeleteBackupMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteBackupMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteBackupMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteBackupMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.redis.v1.BackupServiceOuterClass.DeleteBackupMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_redis_v1_GetBackupRequest_descriptor;
   private static final 
@@ -2669,6 +3877,16 @@ public final class BackupServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_redis_v1_ListBackupsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2680,30 +3898,41 @@ public final class BackupServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n.yandex/cloud/mdb/redis/v1/backup_servi" +
       "ce.proto\022\031yandex.cloud.mdb.redis.v1\032\034goo" +
-      "gle/api/annotations.proto\032\035yandex/cloud/" +
-      "validation.proto\032&yandex/cloud/mdb/redis" +
-      "/v1/backup.proto\"+\n\020GetBackupRequest\022\027\n\t" +
-      "backup_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBackupsRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"b\n\023ListBackupsRespons" +
-      "e\0222\n\007backups\030\001 \003(\0132!.yandex.cloud.mdb.re" +
-      "dis.v1.Backup\022\027\n\017next_page_token\030\002 \001(\t2\241" +
-      "\002\n\rBackupService\022\204\001\n\003Get\022+.yandex.cloud." +
-      "mdb.redis.v1.GetBackupRequest\032!.yandex.c" +
-      "loud.mdb.redis.v1.Backup\"-\202\323\344\223\002\'\022%/manag" +
-      "ed-redis/v1/backups/{backup_id}\022\210\001\n\004List" +
-      "\022-.yandex.cloud.mdb.redis.v1.ListBackups" +
-      "Request\032..yandex.cloud.mdb.redis.v1.List" +
-      "BackupsResponse\"!\202\323\344\223\002\033\022\031/managed-redis/" +
-      "v1/backupsBd\n\035yandex.cloud.api.mdb.redis" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/redis/v1;redisb\006proto3"
+      "gle/api/annotations.proto\032 yandex/cloud/" +
+      "api/operation.proto\032&yandex/cloud/operat" +
+      "ion/operation.proto\032\035yandex/cloud/valida" +
+      "tion.proto\032&yandex/cloud/mdb/redis/v1/ba" +
+      "ckup.proto\"+\n\020GetBackupRequest\022\027\n\tbackup" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"s\n\022ListBackupsRequest\022\037\n" +
+      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"b\n\023ListBackupsResponse\0222\n\007b" +
+      "ackups\030\001 \003(\0132!.yandex.cloud.mdb.redis.v1" +
+      ".Backup\022\027\n\017next_page_token\030\002 \001(\t\".\n\023Dele" +
+      "teBackupRequest\022\027\n\tbackup_id\030\001 \001(\tB\004\350\3071\001" +
+      "\")\n\024DeleteBackupMetadata\022\021\n\tbackup_id\030\001 " +
+      "\001(\t2\337\003\n\rBackupService\022\204\001\n\003Get\022+.yandex.c" +
+      "loud.mdb.redis.v1.GetBackupRequest\032!.yan" +
+      "dex.cloud.mdb.redis.v1.Backup\"-\202\323\344\223\002\'\022%/" +
+      "managed-redis/v1/backups/{backup_id}\022\210\001\n" +
+      "\004List\022-.yandex.cloud.mdb.redis.v1.ListBa" +
+      "ckupsRequest\032..yandex.cloud.mdb.redis.v1" +
+      ".ListBackupsResponse\"!\202\323\344\223\002\033\022\031/managed-r" +
+      "edis/v1/backups\022\273\001\n\006Delete\022..yandex.clou" +
+      "d.mdb.redis.v1.DeleteBackupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"^\202\323\344\223\002\'*%/" +
+      "managed-redis/v1/backups/{backup_id}\262\322*-" +
+      "\n\024DeleteBackupMetadata\022\025google.protobuf." +
+      "EmptyBd\n\035yandex.cloud.api.mdb.redis.v1ZC" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/redis/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.redis.v1.BackupOuterClass.getDescriptor(),
         });
@@ -2725,15 +3954,30 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_ListBackupsResponse_descriptor,
         new java.lang.String[] { "Backups", "NextPageToken", });
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupRequest_descriptor,
+        new java.lang.String[] { "BackupId", });
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_redis_v1_DeleteBackupMetadata_descriptor,
+        new java.lang.String[] { "BackupId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.redis.v1.BackupOuterClass.getDescriptor();
   }

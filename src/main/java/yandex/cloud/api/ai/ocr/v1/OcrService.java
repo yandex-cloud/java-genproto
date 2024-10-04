@@ -41,9 +41,9 @@ public final class OcrService {
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
      ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-     ** Maximum file size: 20 MB.
+     ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
      ** Image size should not exceed 20M pixels (length x width).
-     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+     ** The number of pages in a PDF file should not exceed 1.
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -54,9 +54,9 @@ public final class OcrService {
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
      ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-     ** Maximum file size: 20 MB.
+     ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
      ** Image size should not exceed 20M pixels (length x width).
-     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+     ** The number of pages in a PDF file should not exceed 1.
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -67,7 +67,7 @@ public final class OcrService {
 
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -78,7 +78,7 @@ public final class OcrService {
         getLanguageCodesList();
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -88,7 +88,7 @@ public final class OcrService {
     int getLanguageCodesCount();
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -99,7 +99,7 @@ public final class OcrService {
     java.lang.String getLanguageCodes(int index);
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -112,7 +112,7 @@ public final class OcrService {
 
     /**
      * <pre>
-     * Model to use for text detection.
+     * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -121,7 +121,7 @@ public final class OcrService {
     java.lang.String getModel();
     /**
      * <pre>
-     * Model to use for text detection.
+     * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -316,9 +316,9 @@ public final class OcrService {
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
      ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-     ** Maximum file size: 20 MB.
+     ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
      ** Image size should not exceed 20M pixels (length x width).
-     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+     ** The number of pages in a PDF file should not exceed 1.
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -341,9 +341,9 @@ public final class OcrService {
      * <pre>
      * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
      ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-     ** Maximum file size: 20 MB.
+     ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
      ** Image size should not exceed 20M pixels (length x width).
-     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+     ** The number of pages in a PDF file should not exceed 1.
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -368,7 +368,7 @@ public final class OcrService {
     private com.google.protobuf.LazyStringList languageCodes_;
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -381,7 +381,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -393,7 +393,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -406,7 +406,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * List of the languages to recognize text.
+     * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
      * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
@@ -423,7 +423,7 @@ public final class OcrService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Model to use for text detection.
+     * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -444,7 +444,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * Model to use for text detection.
+     * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -941,9 +941,9 @@ public final class OcrService {
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
        ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-       ** Maximum file size: 20 MB.
+       ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
        ** Image size should not exceed 20M pixels (length x width).
-       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+       ** The number of pages in a PDF file should not exceed 1.
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -965,9 +965,9 @@ public final class OcrService {
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
        ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-       ** Maximum file size: 20 MB.
+       ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
        ** Image size should not exceed 20M pixels (length x width).
-       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+       ** The number of pages in a PDF file should not exceed 1.
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -990,9 +990,9 @@ public final class OcrService {
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
        ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-       ** Maximum file size: 20 MB.
+       ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
        ** Image size should not exceed 20M pixels (length x width).
-       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+       ** The number of pages in a PDF file should not exceed 1.
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -1013,9 +1013,9 @@ public final class OcrService {
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
        ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-       ** Maximum file size: 20 MB.
+       ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
        ** Image size should not exceed 20M pixels (length x width).
-       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+       ** The number of pages in a PDF file should not exceed 1.
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -1031,9 +1031,9 @@ public final class OcrService {
        * <pre>
        * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
        ** Supported file formats: `JPEG`, `PNG`, `PDF`.
-       ** Maximum file size: 20 MB.
+       ** Maximum file size: see [documentation](/docs/vision/concepts/limits).
        ** Image size should not exceed 20M pixels (length x width).
-       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
+       ** The number of pages in a PDF file should not exceed 1.
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -1061,7 +1061,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1074,7 +1074,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1086,7 +1086,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1099,7 +1099,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1113,7 +1113,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1134,7 +1134,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1154,7 +1154,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1172,7 +1172,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1187,7 +1187,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * List of the languages to recognize text.
+       * [List of the languages](/docs/vision/concepts/ocr/supported-languages) to recognize text.
        * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
@@ -1210,7 +1210,7 @@ public final class OcrService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Model to use for text detection.
+       * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1230,7 +1230,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1251,7 +1251,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1270,7 +1270,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1284,7 +1284,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * [Model](/docs/vision/concepts/ocr/template-recognition#models) to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1361,7 +1361,7 @@ public final class OcrService {
 
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1370,7 +1370,7 @@ public final class OcrService {
     boolean hasTextAnnotation();
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1379,7 +1379,7 @@ public final class OcrService {
     yandex.cloud.api.ai.ocr.v1.Ocr.TextAnnotation getTextAnnotation();
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1495,7 +1495,7 @@ public final class OcrService {
     private yandex.cloud.api.ai.ocr.v1.Ocr.TextAnnotation textAnnotation_;
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1507,7 +1507,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1519,7 +1519,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * Recognized text blocks in this page or text from entities.
+     * Recognized text blocks in page or text from entities.
      * </pre>
      *
      * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1882,7 +1882,7 @@ public final class OcrService {
           yandex.cloud.api.ai.ocr.v1.Ocr.TextAnnotation, yandex.cloud.api.ai.ocr.v1.Ocr.TextAnnotation.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1893,7 +1893,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1908,7 +1908,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1928,7 +1928,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1946,7 +1946,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1968,7 +1968,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1986,7 +1986,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -1998,7 +1998,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
@@ -2013,7 +2013,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Recognized text blocks in this page or text from entities.
+       * Recognized text blocks in page or text from entities.
        * </pre>
        *
        * <code>.yandex.cloud.ai.ocr.v1.TextAnnotation text_annotation = 1;</code>
