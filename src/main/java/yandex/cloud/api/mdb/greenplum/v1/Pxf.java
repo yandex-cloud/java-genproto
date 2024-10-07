@@ -5517,7 +5517,7 @@ public final class Pxf {
 
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -5527,7 +5527,7 @@ public final class Pxf {
     boolean hasPoolConnectionTimeout();
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -5537,7 +5537,7 @@ public final class Pxf {
     com.google.protobuf.Int64Value getPoolConnectionTimeout();
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -6228,7 +6228,7 @@ public final class Pxf {
     private com.google.protobuf.Int64Value poolConnectionTimeout_;
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -6241,7 +6241,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -6254,7 +6254,7 @@ public final class Pxf {
     }
     /**
      * <pre>
-     * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+     * Maximum time, in milliseconds, to wait for a connection from the pool.
      * The default value is `30000`.
      * </pre>
      *
@@ -8200,7 +8200,7 @@ public final class Pxf {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolConnectionTimeoutBuilder_;
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8212,7 +8212,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8228,7 +8228,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8249,7 +8249,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8268,7 +8268,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8291,7 +8291,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8310,7 +8310,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8323,7 +8323,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
@@ -8339,7 +8339,7 @@ public final class Pxf {
       }
       /**
        * <pre>
-       * Maximum amount of time, in milliseconds, after which an inactive connection is considered idle.
+       * Maximum time, in milliseconds, to wait for a connection from the pool.
        * The default value is `30000`.
        * </pre>
        *
