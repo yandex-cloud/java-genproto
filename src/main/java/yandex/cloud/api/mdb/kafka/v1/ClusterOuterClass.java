@@ -210,6 +210,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -219,6 +220,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -227,6 +229,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -235,6 +238,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -244,6 +248,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -254,6 +259,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -263,6 +269,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -272,6 +279,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -1618,6 +1626,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -1629,6 +1638,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -1641,6 +1651,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -1652,6 +1663,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -1663,6 +1675,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Description of monitoring systems relevant to the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -1678,6 +1691,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -1690,6 +1704,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -1702,6 +1717,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Configuration of the Apache Kafka® cluster.
+     * * The field is ignored for response of List method.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3543,6 +3559,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3557,6 +3574,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3571,6 +3589,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3585,6 +3604,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3606,6 +3626,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3624,6 +3645,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3644,6 +3666,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3665,6 +3688,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3683,6 +3707,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3701,6 +3726,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3720,6 +3746,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3737,6 +3764,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3754,6 +3782,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3765,6 +3794,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3779,6 +3809,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3794,6 +3825,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3805,6 +3837,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3817,6 +3850,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Description of monitoring systems relevant to the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.kafka.v1.Monitoring monitoring = 8;</code>
@@ -3846,6 +3880,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3857,6 +3892,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3872,6 +3908,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3892,6 +3929,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3910,6 +3948,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3932,6 +3971,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3950,6 +3990,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3962,6 +4003,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -3977,6 +4019,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Configuration of the Apache Kafka® cluster.
+       * * The field is ignored for response of List method.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec config = 9;</code>
@@ -5926,7 +5969,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -5935,7 +5978,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6179,6 +6222,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.DiskSizeAutoscaling disk_size_autoscaling = 11;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     * @return Whether the kraft field is set.
+     */
+    boolean hasKraft();
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     * @return The kraft.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getKraft();
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder getKraftOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -6332,6 +6402,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(diskSizeAutoscaling_);
                 diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder subBuilder = null;
+              if (kraft_ != null) {
+                subBuilder = kraft_.toBuilder();
+              }
+              kraft_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kraft_);
+                kraft_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8262,6 +8345,687 @@ public final class ClusterOuterClass {
 
     }
 
+    public interface KRaftOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       * @return Whether the resources field is set.
+       */
+      boolean hasResources();
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       * @return The resources.
+       */
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources getResources();
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       */
+      yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft}
+     */
+    public static final class KRaft extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft)
+        KRaftOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use KRaft.newBuilder() to construct.
+      private KRaft(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private KRaft() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new KRaft();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private KRaft(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder subBuilder = null;
+                if (resources_ != null) {
+                  subBuilder = resources_.toBuilder();
+                }
+                resources_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(resources_);
+                  resources_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder.class);
+      }
+
+      public static final int RESOURCES_FIELD_NUMBER = 1;
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources resources_;
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       * @return Whether the resources field is set.
+       */
+      @java.lang.Override
+      public boolean hasResources() {
+        return resources_ != null;
+      }
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       * @return The resources.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources getResources() {
+        return resources_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+      }
+      /**
+       * <pre>
+       * Resources allocated to KRaft controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+        return getResources();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (resources_ != null) {
+          output.writeMessage(1, getResources());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (resources_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getResources());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft) obj;
+
+        if (hasResources() != other.hasResources()) return false;
+        if (hasResources()) {
+          if (!getResources()
+              .equals(other.getResources())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasResources()) {
+          hash = (37 * hash) + RESOURCES_FIELD_NUMBER;
+          hash = (53 * hash) + getResources().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft)
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft build() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft buildPartial() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft(this);
+          if (resourcesBuilder_ == null) {
+            result.resources_ = resources_;
+          } else {
+            result.resources_ = resourcesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft) {
+            return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft other) {
+          if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.getDefaultInstance()) return this;
+          if (other.hasResources()) {
+            mergeResources(other.getResources());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources resources_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         * @return Whether the resources field is set.
+         */
+        public boolean hasResources() {
+          return resourcesBuilder_ != null || resources_ != null;
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         * @return The resources.
+         */
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources getResources() {
+          if (resourcesBuilder_ == null) {
+            return resources_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          } else {
+            return resourcesBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public Builder setResources(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            resources_ = value;
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public Builder setResources(
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder builderForValue) {
+          if (resourcesBuilder_ == null) {
+            resources_ = builderForValue.build();
+            onChanged();
+          } else {
+            resourcesBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public Builder mergeResources(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources value) {
+          if (resourcesBuilder_ == null) {
+            if (resources_ != null) {
+              resources_ =
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.newBuilder(resources_).mergeFrom(value).buildPartial();
+            } else {
+              resources_ = value;
+            }
+            onChanged();
+          } else {
+            resourcesBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public Builder clearResources() {
+          if (resourcesBuilder_ == null) {
+            resources_ = null;
+            onChanged();
+          } else {
+            resources_ = null;
+            resourcesBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder getResourcesBuilder() {
+          
+          onChanged();
+          return getResourcesFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder getResourcesOrBuilder() {
+          if (resourcesBuilder_ != null) {
+            return resourcesBuilder_.getMessageOrBuilder();
+          } else {
+            return resources_ == null ?
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.getDefaultInstance() : resources_;
+          }
+        }
+        /**
+         * <pre>
+         * Resources allocated to KRaft controller hosts.
+         * </pre>
+         *
+         * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder> 
+            getResourcesFieldBuilder() {
+          if (resourcesBuilder_ == null) {
+            resourcesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder>(
+                    getResources(),
+                    getParentForChildren(),
+                    isClean());
+            resources_ = null;
+          }
+          return resourcesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft)
+      private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft();
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<KRaft>
+          PARSER = new com.google.protobuf.AbstractParser<KRaft>() {
+        @java.lang.Override
+        public KRaft parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new KRaft(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<KRaft> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<KRaft> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public interface RestAPIConfigOrBuilder extends
         // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
         com.google.protobuf.MessageOrBuilder {
@@ -8775,7 +9539,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -8796,7 +9560,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -9144,6 +9908,44 @@ public final class ClusterOuterClass {
       return getDiskSizeAutoscaling();
     }
 
+    public static final int KRAFT_FIELD_NUMBER = 12;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft kraft_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     * @return Whether the kraft field is set.
+     */
+    @java.lang.Override
+    public boolean hasKraft() {
+      return kraft_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     * @return The kraft.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getKraft() {
+      return kraft_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.getDefaultInstance() : kraft_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for KRaft-controller hosts.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder getKraftOrBuilder() {
+      return getKraft();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9190,6 +9992,9 @@ public final class ClusterOuterClass {
       }
       if (diskSizeAutoscaling_ != null) {
         output.writeMessage(11, getDiskSizeAutoscaling());
+      }
+      if (kraft_ != null) {
+        output.writeMessage(12, getKraft());
       }
       unknownFields.writeTo(output);
     }
@@ -9247,6 +10052,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getDiskSizeAutoscaling());
       }
+      if (kraft_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getKraft());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9302,6 +10111,11 @@ public final class ClusterOuterClass {
         if (!getDiskSizeAutoscaling()
             .equals(other.getDiskSizeAutoscaling())) return false;
       }
+      if (hasKraft() != other.hasKraft()) return false;
+      if (hasKraft()) {
+        if (!getKraft()
+            .equals(other.getKraft())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9351,6 +10165,10 @@ public final class ClusterOuterClass {
       if (hasDiskSizeAutoscaling()) {
         hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
         hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
+      }
+      if (hasKraft()) {
+        hash = (37 * hash) + KRAFT_FIELD_NUMBER;
+        hash = (53 * hash) + getKraft().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9531,6 +10349,12 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
           diskSizeAutoscalingBuilder_ = null;
         }
+        if (kraftBuilder_ == null) {
+          kraft_ = null;
+        } else {
+          kraft_ = null;
+          kraftBuilder_ = null;
+        }
         return this;
       }
 
@@ -9596,6 +10420,11 @@ public final class ClusterOuterClass {
           result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
         } else {
           result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
+        if (kraftBuilder_ == null) {
+          result.kraft_ = kraft_;
+        } else {
+          result.kraft_ = kraftBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9686,6 +10515,9 @@ public final class ClusterOuterClass {
         if (other.hasDiskSizeAutoscaling()) {
           mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
+        if (other.hasKraft()) {
+          mergeKraft(other.getKraft());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9719,7 +10551,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -9739,7 +10571,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -9760,7 +10592,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -9779,7 +10611,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -9793,7 +10625,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.8`, `3.0`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -11024,6 +11856,161 @@ public final class ClusterOuterClass {
           diskSizeAutoscaling_ = null;
         }
         return diskSizeAutoscalingBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft kraft_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder> kraftBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       * @return Whether the kraft field is set.
+       */
+      public boolean hasKraft() {
+        return kraftBuilder_ != null || kraft_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       * @return The kraft.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft getKraft() {
+        if (kraftBuilder_ == null) {
+          return kraft_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.getDefaultInstance() : kraft_;
+        } else {
+          return kraftBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public Builder setKraft(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft value) {
+        if (kraftBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kraft_ = value;
+          onChanged();
+        } else {
+          kraftBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public Builder setKraft(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder builderForValue) {
+        if (kraftBuilder_ == null) {
+          kraft_ = builderForValue.build();
+          onChanged();
+        } else {
+          kraftBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public Builder mergeKraft(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft value) {
+        if (kraftBuilder_ == null) {
+          if (kraft_ != null) {
+            kraft_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.newBuilder(kraft_).mergeFrom(value).buildPartial();
+          } else {
+            kraft_ = value;
+          }
+          onChanged();
+        } else {
+          kraftBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public Builder clearKraft() {
+        if (kraftBuilder_ == null) {
+          kraft_ = null;
+          onChanged();
+        } else {
+          kraft_ = null;
+          kraftBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder getKraftBuilder() {
+        
+        onChanged();
+        return getKraftFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder getKraftOrBuilder() {
+        if (kraftBuilder_ != null) {
+          return kraftBuilder_.getMessageOrBuilder();
+        } else {
+          return kraft_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.getDefaultInstance() : kraft_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for KRaft-controller hosts.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.KRaft kraft = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder> 
+          getKraftFieldBuilder() {
+        if (kraftBuilder_ == null) {
+          kraftBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaft.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.KRaftOrBuilder>(
+                  getKraft(),
+                  getParentForChildren(),
+                  isClean());
+          kraft_ = null;
+        }
+        return kraftBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27067,6 +28054,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -27144,8 +28136,8 @@ public final class ClusterOuterClass {
       "\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003" +
       "\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020" +
       "\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 " +
-      "\001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\356" +
-      "\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n\005kafka\030" +
+      "\001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\354" +
+      "\007\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n\005kafka\030" +
       "\002 \001(\0132+.yandex.cloud.mdb.kafka.v1.Config" +
       "Spec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.yandex.c" +
       "loud.mdb.kafka.v1.ConfigSpec.Zookeeper\022\017" +
@@ -27157,96 +28149,100 @@ public final class ClusterOuterClass {
       "L\n\017rest_api_config\030\n \001(\01323.yandex.cloud." +
       "mdb.kafka.v1.ConfigSpec.RestAPIConfig\022M\n" +
       "\025disk_size_autoscaling\030\013 \001(\0132..yandex.cl" +
-      "oud.mdb.kafka.v1.DiskSizeAutoscaling\032\200\002\n" +
-      "\005Kafka\0227\n\tresources\030\001 \001(\0132$.yandex.cloud" +
-      ".mdb.kafka.v1.Resources\022V\n\020kafka_config_" +
-      "2_8\030\004 \001(\0132).yandex.cloud.mdb.kafka.v1.Ka" +
-      "fkaConfig2_8H\000R\017kafkaConfig_2_8\022P\n\016kafka" +
-      "_config_3\030\005 \001(\0132\'.yandex.cloud.mdb.kafka" +
-      ".v1.KafkaConfig3H\000R\rkafkaConfig_3B\016\n\014kaf" +
-      "ka_configJ\004\010\002\020\004\032D\n\tZookeeper\0227\n\tresource" +
-      "s\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Reso" +
-      "urces\032 \n\rRestAPIConfig\022\017\n\007enabled\030\001 \001(\010\"" +
-      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
-      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
-      "\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compression_type" +
-      "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
-      "essionType\022@\n\033log_flush_interval_message" +
-      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
-      "log_flush_interval_ms\030\003 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022D\n\037log_flush_scheduler_" +
-      "interval_ms\030\004 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
-      "n_hours\030\006 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0225\n\020log_retention_" +
-      "ms\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
-      "\021log_segment_bytes\030\t \001(\0132\033.google.protob" +
-      "uf.Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032" +
-      ".google.protobuf.BoolValue\022=\n\030socket_sen" +
-      "d_buffer_bytes\030\013 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022@\n\033socket_receive_buffer_bytes" +
-      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
-      "uto_create_topics_enable\030\r \001(\0132\032.google." +
-      "protobuf.BoolValue\0223\n\016num_partitions\030\016 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022?\n\032defau" +
-      "lt_replication_factor\030\017 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0226\n\021message_max_bytes\030\020 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022<\n\027repl" +
-      "ica_fetch_max_bytes\030\021 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(" +
-      "\t\022>\n\031offsets_retention_minutes\030\023 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022I\n\027sasl_enable" +
-      "d_mechanisms\030\024 \003(\0162(.yandex.cloud.mdb.ka" +
-      "fka.v1.SaslMechanism\"\276\t\n\014KafkaConfig3\022D\n" +
-      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
-      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
-      "_interval_messages\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
-      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0228\n\023log_retention" +
-      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025log_retention_min" +
-      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
-      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
-      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
-      "google.protobuf.Int64Value\022@\n\033socket_rec" +
-      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
-      "e\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016n" +
-      "um_partitions\030\016 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022?\n\032default_replication_factor\030\017" +
-      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021mes" +
-      "sage_max_bytes\030\020 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022<\n\027replica_fetch_max_bytes\030\021 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022\031\n\021ssl_c" +
-      "ipher_suites\030\022 \003(\t\022>\n\031offsets_retention_" +
-      "minutes\030\023 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162(.ya" +
-      "ndex.cloud.mdb.kafka.v1.SaslMechanism\"\203\003" +
-      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex" +
-      ".cloud.mdb.kafka.v1.Host.Role\0227\n\tresourc" +
-      "es\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Res" +
-      "ources\0226\n\006health\030\006 \001(\0162&.yandex.cloud.md" +
-      "b.kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(" +
-      "\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020R" +
-      "OLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPE" +
-      "R\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020\010\"\037\n\006Access\022\025\n" +
-      "\rdata_transfer\030\001 \001(\010\"\220\001\n\023DiskSizeAutosca" +
-      "ling\022.\n\027planned_usage_threshold\030\001 \001(\003B\r\350" +
-      "\3071\000\372\3071\0050-100\0220\n\031emergency_usage_threshol" +
-      "d\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_size_limi" +
-      "t\030\003 \001(\003Bd\n\035yandex.cloud.api.mdb.kafka.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "oud.mdb.kafka.v1.DiskSizeAutoscaling\022:\n\005" +
+      "kraft\030\014 \001(\0132+.yandex.cloud.mdb.kafka.v1." +
+      "ConfigSpec.KRaft\032\200\002\n\005Kafka\0227\n\tresources\030" +
+      "\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resour" +
+      "ces\022V\n\020kafka_config_2_8\030\004 \001(\0132).yandex.c" +
+      "loud.mdb.kafka.v1.KafkaConfig2_8H\000R\017kafk" +
+      "aConfig_2_8\022P\n\016kafka_config_3\030\005 \001(\0132\'.ya" +
+      "ndex.cloud.mdb.kafka.v1.KafkaConfig3H\000R\r" +
+      "kafkaConfig_3B\016\n\014kafka_configJ\004\010\002\020\004\032D\n\tZ" +
+      "ookeeper\0227\n\tresources\030\001 \001(\0132$.yandex.clo" +
+      "ud.mdb.kafka.v1.Resources\032@\n\005KRaft\0227\n\tre" +
+      "sources\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v" +
+      "1.Resources\032 \n\rRestAPIConfig\022\017\n\007enabled\030" +
+      "\001 \001(\010\"P\n\tResources\022\032\n\022resource_preset_id" +
+      "\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_i" +
+      "d\030\003 \001(\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compressio" +
+      "n_type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1" +
+      ".CompressionType\022@\n\033log_flush_interval_m" +
+      "essages\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022D\n\037log_flush_sche" +
+      "duler_interval_ms\030\004 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0228\n\023log_retention_bytes\030\005 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0228\n\023log_re" +
+      "tention_hours\030\006 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022:\n\025log_retention_minutes\030\007 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0225\n\020log_rete" +
+      "ntion_ms\030\010 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0226\n\021log_segment_bytes\030\t \001(\0132\033.google." +
+      "protobuf.Int64Value\0223\n\017log_preallocate\030\n" +
+      " \001(\0132\032.google.protobuf.BoolValue\022=\n\030sock" +
+      "et_send_buffer_bytes\030\013 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022@\n\033socket_receive_buffer" +
+      "_bytes\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022=\n\031auto_create_topics_enable\030\r \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\0223\n\016num_partitio" +
+      "ns\030\016 \001(\0132\033.google.protobuf.Int64Value\022?\n" +
+      "\032default_replication_factor\030\017 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0226\n\021message_max_by" +
+      "tes\030\020 \001(\0132\033.google.protobuf.Int64Value\022<" +
+      "\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022\031\n\021ssl_cipher_suite" +
+      "s\030\022 \003(\t\022>\n\031offsets_retention_minutes\030\023 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022I\n\027sasl_" +
+      "enabled_mechanisms\030\024 \003(\0162(.yandex.cloud." +
+      "mdb.kafka.v1.SaslMechanism\"\276\t\n\014KafkaConf" +
+      "ig3\022D\n\020compression_type\030\001 \001(\0162*.yandex.c" +
+      "loud.mdb.kafka.v1.CompressionType\022@\n\033log" +
+      "_flush_interval_messages\030\002 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025log_flush_interva" +
+      "l_ms\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "D\n\037log_flush_scheduler_interval_ms\030\004 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0228\n\023log_ret" +
+      "ention_bytes\030\005 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022:\n\025log_retenti" +
+      "on_minutes\030\007 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0226\n\021log_segment_byte" +
+      "s\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n\017" +
+      "log_preallocate\030\n \001(\0132\032.google.protobuf." +
+      "BoolValue\022=\n\030socket_send_buffer_bytes\030\013 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022@\n\033sock" +
+      "et_receive_buffer_bytes\030\014 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022=\n\031auto_create_topics" +
+      "_enable\030\r \001(\0132\032.google.protobuf.BoolValu" +
+      "e\0223\n\016num_partitions\030\016 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022?\n\032default_replication_fa" +
+      "ctor\030\017 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "6\n\021message_max_bytes\030\020 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022<\n\027replica_fetch_max_byt" +
+      "es\030\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n" +
+      "\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets_rete" +
+      "ntion_minutes\030\023 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022I\n\027sasl_enabled_mechanisms\030\024 \003(" +
+      "\0162(.yandex.cloud.mdb.kafka.v1.SaslMechan" +
+      "ism\"\203\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
+      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$." +
+      "yandex.cloud.mdb.kafka.v1.Host.Role\0227\n\tr" +
+      "esources\030\005 \001(\0132$.yandex.cloud.mdb.kafka." +
+      "v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex.cl" +
+      "oud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet_i" +
+      "d\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Rol" +
+      "e\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZO" +
+      "OKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIV" +
+      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020\010\"\037\n\006Acc" +
+      "ess\022\025\n\rdata_transfer\030\001 \001(\010\"\220\001\n\023DiskSizeA" +
+      "utoscaling\022.\n\027planned_usage_threshold\030\001 " +
+      "\001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_usage_th" +
+      "reshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_siz" +
+      "e_limit\030\003 \001(\003Bd\n\035yandex.cloud.api.mdb.ka" +
+      "fka.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27281,7 +28277,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", "DiskSizeAutoscaling", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", "DiskSizeAutoscaling", "Kraft", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -27294,8 +28290,14 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_descriptor,
         new java.lang.String[] { "Resources", });
-    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor =
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_KRaft_descriptor,
+        new java.lang.String[] { "Resources", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor =
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(3);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor,

@@ -27597,6 +27597,3324 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface ResizeProjectDiskRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.ResizeProjectDiskRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Set new size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 new_disk_size_gb = 2;</code>
+     * @return The newDiskSizeGb.
+     */
+    long getNewDiskSizeGb();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.ResizeProjectDiskRequest}
+   */
+  public static final class ResizeProjectDiskRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.ResizeProjectDiskRequest)
+      ResizeProjectDiskRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResizeProjectDiskRequest.newBuilder() to construct.
+    private ResizeProjectDiskRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResizeProjectDiskRequest() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResizeProjectDiskRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResizeProjectDiskRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 16: {
+
+              newDiskSizeGb_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_DISK_SIZE_GB_FIELD_NUMBER = 2;
+    private long newDiskSizeGb_;
+    /**
+     * <pre>
+     * Set new size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 new_disk_size_gb = 2;</code>
+     * @return The newDiskSizeGb.
+     */
+    @java.lang.Override
+    public long getNewDiskSizeGb() {
+      return newDiskSizeGb_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (newDiskSizeGb_ != 0L) {
+        output.writeInt64(2, newDiskSizeGb_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (newDiskSizeGb_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, newDiskSizeGb_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (getNewDiskSizeGb()
+          != other.getNewDiskSizeGb()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + NEW_DISK_SIZE_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNewDiskSizeGb());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.ResizeProjectDiskRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.ResizeProjectDiskRequest)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        newDiskSizeGb_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest(this);
+        result.projectId_ = projectId_;
+        result.newDiskSizeGb_ = newDiskSizeGb_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.getNewDiskSizeGb() != 0L) {
+          setNewDiskSizeGb(other.getNewDiskSizeGb());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long newDiskSizeGb_ ;
+      /**
+       * <pre>
+       * Set new size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 2;</code>
+       * @return The newDiskSizeGb.
+       */
+      @java.lang.Override
+      public long getNewDiskSizeGb() {
+        return newDiskSizeGb_;
+      }
+      /**
+       * <pre>
+       * Set new size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 2;</code>
+       * @param value The newDiskSizeGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewDiskSizeGb(long value) {
+        
+        newDiskSizeGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set new size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewDiskSizeGb() {
+        
+        newDiskSizeGb_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.ResizeProjectDiskRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.ResizeProjectDiskRequest)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResizeProjectDiskRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ResizeProjectDiskRequest>() {
+      @java.lang.Override
+      public ResizeProjectDiskRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResizeProjectDiskRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResizeProjectDiskRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResizeProjectDiskRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResizeProjectDiskMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project which resized project disk.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project which resized project disk.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Old size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 old_disk_size_gb = 2;</code>
+     * @return The oldDiskSizeGb.
+     */
+    long getOldDiskSizeGb();
+
+    /**
+     * <pre>
+     * New size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 new_disk_size_gb = 3;</code>
+     * @return The newDiskSizeGb.
+     */
+    long getNewDiskSizeGb();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata}
+   */
+  public static final class ResizeProjectDiskMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata)
+      ResizeProjectDiskMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResizeProjectDiskMetadata.newBuilder() to construct.
+    private ResizeProjectDiskMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResizeProjectDiskMetadata() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResizeProjectDiskMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResizeProjectDiskMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 16: {
+
+              oldDiskSizeGb_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              newDiskSizeGb_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project which resized project disk.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project which resized project disk.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OLD_DISK_SIZE_GB_FIELD_NUMBER = 2;
+    private long oldDiskSizeGb_;
+    /**
+     * <pre>
+     * Old size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 old_disk_size_gb = 2;</code>
+     * @return The oldDiskSizeGb.
+     */
+    @java.lang.Override
+    public long getOldDiskSizeGb() {
+      return oldDiskSizeGb_;
+    }
+
+    public static final int NEW_DISK_SIZE_GB_FIELD_NUMBER = 3;
+    private long newDiskSizeGb_;
+    /**
+     * <pre>
+     * New size project disk in gigabytes.
+     * </pre>
+     *
+     * <code>int64 new_disk_size_gb = 3;</code>
+     * @return The newDiskSizeGb.
+     */
+    @java.lang.Override
+    public long getNewDiskSizeGb() {
+      return newDiskSizeGb_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (oldDiskSizeGb_ != 0L) {
+        output.writeInt64(2, oldDiskSizeGb_);
+      }
+      if (newDiskSizeGb_ != 0L) {
+        output.writeInt64(3, newDiskSizeGb_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (oldDiskSizeGb_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, oldDiskSizeGb_);
+      }
+      if (newDiskSizeGb_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, newDiskSizeGb_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (getOldDiskSizeGb()
+          != other.getOldDiskSizeGb()) return false;
+      if (getNewDiskSizeGb()
+          != other.getNewDiskSizeGb()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + OLD_DISK_SIZE_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOldDiskSizeGb());
+      hash = (37 * hash) + NEW_DISK_SIZE_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNewDiskSizeGb());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        oldDiskSizeGb_ = 0L;
+
+        newDiskSizeGb_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata(this);
+        result.projectId_ = projectId_;
+        result.oldDiskSizeGb_ = oldDiskSizeGb_;
+        result.newDiskSizeGb_ = newDiskSizeGb_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.getOldDiskSizeGb() != 0L) {
+          setOldDiskSizeGb(other.getOldDiskSizeGb());
+        }
+        if (other.getNewDiskSizeGb() != 0L) {
+          setNewDiskSizeGb(other.getNewDiskSizeGb());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project which resized project disk.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project which resized project disk.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project which resized project disk.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project which resized project disk.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project which resized project disk.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long oldDiskSizeGb_ ;
+      /**
+       * <pre>
+       * Old size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 old_disk_size_gb = 2;</code>
+       * @return The oldDiskSizeGb.
+       */
+      @java.lang.Override
+      public long getOldDiskSizeGb() {
+        return oldDiskSizeGb_;
+      }
+      /**
+       * <pre>
+       * Old size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 old_disk_size_gb = 2;</code>
+       * @param value The oldDiskSizeGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOldDiskSizeGb(long value) {
+        
+        oldDiskSizeGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Old size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 old_disk_size_gb = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOldDiskSizeGb() {
+        
+        oldDiskSizeGb_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long newDiskSizeGb_ ;
+      /**
+       * <pre>
+       * New size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 3;</code>
+       * @return The newDiskSizeGb.
+       */
+      @java.lang.Override
+      public long getNewDiskSizeGb() {
+        return newDiskSizeGb_;
+      }
+      /**
+       * <pre>
+       * New size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 3;</code>
+       * @param value The newDiskSizeGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewDiskSizeGb(long value) {
+        
+        newDiskSizeGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New size project disk in gigabytes.
+       * </pre>
+       *
+       * <code>int64 new_disk_size_gb = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewDiskSizeGb() {
+        
+        newDiskSizeGb_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.ResizeProjectDiskMetadata)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResizeProjectDiskMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ResizeProjectDiskMetadata>() {
+      @java.lang.Override
+      public ResizeProjectDiskMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResizeProjectDiskMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResizeProjectDiskMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResizeProjectDiskMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DiskInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.DiskInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * Project disk size in gigabytes.
+     * </pre>
+     *
+     * <code>double disk_size_gb = 2;</code>
+     * @return The diskSizeGb.
+     */
+    double getDiskSizeGb();
+
+    /**
+     * <pre>
+     * Used project disk in gigabytes.
+     * </pre>
+     *
+     * <code>double disk_used_gb = 3;</code>
+     * @return The diskUsedGb.
+     */
+    double getDiskUsedGb();
+
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     * @return Whether the detailedUsage field is set.
+     */
+    boolean hasDetailedUsage();
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     * @return The detailedUsage.
+     */
+    yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDetailedUsage();
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     */
+    yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder getDetailedUsageOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.DiskInfo}
+   */
+  public static final class DiskInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.DiskInfo)
+      DiskInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskInfo.newBuilder() to construct.
+    private DiskInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskInfo() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 17: {
+
+              diskSizeGb_ = input.readDouble();
+              break;
+            }
+            case 25: {
+
+              diskUsedGb_ = input.readDouble();
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder subBuilder = null;
+              if (detailedUsage_ != null) {
+                subBuilder = detailedUsage_.toBuilder();
+              }
+              detailedUsage_ = input.readMessage(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(detailedUsage_);
+                detailedUsage_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.Builder.class);
+    }
+
+    public interface DetailedDiskInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Used project disk for user data in gigabytes.
+       * </pre>
+       *
+       * <code>double user_data_gb = 1;</code>
+       * @return The userDataGb.
+       */
+      double getUserDataGb();
+
+      /**
+       * <pre>
+       * Used project disk for packages in gigabytes.
+       * </pre>
+       *
+       * <code>double packages_gb = 2;</code>
+       * @return The packagesGb.
+       */
+      double getPackagesGb();
+
+      /**
+       * <pre>
+       * Used project disk for system data in gigabytes.
+       * </pre>
+       *
+       * <code>double system_data_gb = 3;</code>
+       * @return The systemDataGb.
+       */
+      double getSystemDataGb();
+
+      /**
+       * <pre>
+       * Free space project disk in gigabytes.
+       * </pre>
+       *
+       * <code>double free_space_gb = 4;</code>
+       * @return The freeSpaceGb.
+       */
+      double getFreeSpaceGb();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo}
+     */
+    public static final class DetailedDiskInfo extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo)
+        DetailedDiskInfoOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DetailedDiskInfo.newBuilder() to construct.
+      private DetailedDiskInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DetailedDiskInfo() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new DetailedDiskInfo();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DetailedDiskInfo(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+
+                userDataGb_ = input.readDouble();
+                break;
+              }
+              case 17: {
+
+                packagesGb_ = input.readDouble();
+                break;
+              }
+              case 25: {
+
+                systemDataGb_ = input.readDouble();
+                break;
+              }
+              case 33: {
+
+                freeSpaceGb_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder.class);
+      }
+
+      public static final int USER_DATA_GB_FIELD_NUMBER = 1;
+      private double userDataGb_;
+      /**
+       * <pre>
+       * Used project disk for user data in gigabytes.
+       * </pre>
+       *
+       * <code>double user_data_gb = 1;</code>
+       * @return The userDataGb.
+       */
+      @java.lang.Override
+      public double getUserDataGb() {
+        return userDataGb_;
+      }
+
+      public static final int PACKAGES_GB_FIELD_NUMBER = 2;
+      private double packagesGb_;
+      /**
+       * <pre>
+       * Used project disk for packages in gigabytes.
+       * </pre>
+       *
+       * <code>double packages_gb = 2;</code>
+       * @return The packagesGb.
+       */
+      @java.lang.Override
+      public double getPackagesGb() {
+        return packagesGb_;
+      }
+
+      public static final int SYSTEM_DATA_GB_FIELD_NUMBER = 3;
+      private double systemDataGb_;
+      /**
+       * <pre>
+       * Used project disk for system data in gigabytes.
+       * </pre>
+       *
+       * <code>double system_data_gb = 3;</code>
+       * @return The systemDataGb.
+       */
+      @java.lang.Override
+      public double getSystemDataGb() {
+        return systemDataGb_;
+      }
+
+      public static final int FREE_SPACE_GB_FIELD_NUMBER = 4;
+      private double freeSpaceGb_;
+      /**
+       * <pre>
+       * Free space project disk in gigabytes.
+       * </pre>
+       *
+       * <code>double free_space_gb = 4;</code>
+       * @return The freeSpaceGb.
+       */
+      @java.lang.Override
+      public double getFreeSpaceGb() {
+        return freeSpaceGb_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (java.lang.Double.doubleToRawLongBits(userDataGb_) != 0) {
+          output.writeDouble(1, userDataGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(packagesGb_) != 0) {
+          output.writeDouble(2, packagesGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(systemDataGb_) != 0) {
+          output.writeDouble(3, systemDataGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(freeSpaceGb_) != 0) {
+          output.writeDouble(4, freeSpaceGb_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (java.lang.Double.doubleToRawLongBits(userDataGb_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(1, userDataGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(packagesGb_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, packagesGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(systemDataGb_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, systemDataGb_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(freeSpaceGb_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, freeSpaceGb_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo) obj;
+
+        if (java.lang.Double.doubleToLongBits(getUserDataGb())
+            != java.lang.Double.doubleToLongBits(
+                other.getUserDataGb())) return false;
+        if (java.lang.Double.doubleToLongBits(getPackagesGb())
+            != java.lang.Double.doubleToLongBits(
+                other.getPackagesGb())) return false;
+        if (java.lang.Double.doubleToLongBits(getSystemDataGb())
+            != java.lang.Double.doubleToLongBits(
+                other.getSystemDataGb())) return false;
+        if (java.lang.Double.doubleToLongBits(getFreeSpaceGb())
+            != java.lang.Double.doubleToLongBits(
+                other.getFreeSpaceGb())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + USER_DATA_GB_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getUserDataGb()));
+        hash = (37 * hash) + PACKAGES_GB_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getPackagesGb()));
+        hash = (37 * hash) + SYSTEM_DATA_GB_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getSystemDataGb()));
+        hash = (37 * hash) + FREE_SPACE_GB_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getFreeSpaceGb()));
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo)
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          userDataGb_ = 0D;
+
+          packagesGb_ = 0D;
+
+          systemDataGb_ = 0D;
+
+          freeSpaceGb_ = 0D;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDefaultInstanceForType() {
+          return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo build() {
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo buildPartial() {
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo(this);
+          result.userDataGb_ = userDataGb_;
+          result.packagesGb_ = packagesGb_;
+          result.systemDataGb_ = systemDataGb_;
+          result.freeSpaceGb_ = freeSpaceGb_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo) {
+            return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo other) {
+          if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.getDefaultInstance()) return this;
+          if (other.getUserDataGb() != 0D) {
+            setUserDataGb(other.getUserDataGb());
+          }
+          if (other.getPackagesGb() != 0D) {
+            setPackagesGb(other.getPackagesGb());
+          }
+          if (other.getSystemDataGb() != 0D) {
+            setSystemDataGb(other.getSystemDataGb());
+          }
+          if (other.getFreeSpaceGb() != 0D) {
+            setFreeSpaceGb(other.getFreeSpaceGb());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private double userDataGb_ ;
+        /**
+         * <pre>
+         * Used project disk for user data in gigabytes.
+         * </pre>
+         *
+         * <code>double user_data_gb = 1;</code>
+         * @return The userDataGb.
+         */
+        @java.lang.Override
+        public double getUserDataGb() {
+          return userDataGb_;
+        }
+        /**
+         * <pre>
+         * Used project disk for user data in gigabytes.
+         * </pre>
+         *
+         * <code>double user_data_gb = 1;</code>
+         * @param value The userDataGb to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserDataGb(double value) {
+          
+          userDataGb_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Used project disk for user data in gigabytes.
+         * </pre>
+         *
+         * <code>double user_data_gb = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserDataGb() {
+          
+          userDataGb_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double packagesGb_ ;
+        /**
+         * <pre>
+         * Used project disk for packages in gigabytes.
+         * </pre>
+         *
+         * <code>double packages_gb = 2;</code>
+         * @return The packagesGb.
+         */
+        @java.lang.Override
+        public double getPackagesGb() {
+          return packagesGb_;
+        }
+        /**
+         * <pre>
+         * Used project disk for packages in gigabytes.
+         * </pre>
+         *
+         * <code>double packages_gb = 2;</code>
+         * @param value The packagesGb to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPackagesGb(double value) {
+          
+          packagesGb_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Used project disk for packages in gigabytes.
+         * </pre>
+         *
+         * <code>double packages_gb = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPackagesGb() {
+          
+          packagesGb_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double systemDataGb_ ;
+        /**
+         * <pre>
+         * Used project disk for system data in gigabytes.
+         * </pre>
+         *
+         * <code>double system_data_gb = 3;</code>
+         * @return The systemDataGb.
+         */
+        @java.lang.Override
+        public double getSystemDataGb() {
+          return systemDataGb_;
+        }
+        /**
+         * <pre>
+         * Used project disk for system data in gigabytes.
+         * </pre>
+         *
+         * <code>double system_data_gb = 3;</code>
+         * @param value The systemDataGb to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSystemDataGb(double value) {
+          
+          systemDataGb_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Used project disk for system data in gigabytes.
+         * </pre>
+         *
+         * <code>double system_data_gb = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSystemDataGb() {
+          
+          systemDataGb_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double freeSpaceGb_ ;
+        /**
+         * <pre>
+         * Free space project disk in gigabytes.
+         * </pre>
+         *
+         * <code>double free_space_gb = 4;</code>
+         * @return The freeSpaceGb.
+         */
+        @java.lang.Override
+        public double getFreeSpaceGb() {
+          return freeSpaceGb_;
+        }
+        /**
+         * <pre>
+         * Free space project disk in gigabytes.
+         * </pre>
+         *
+         * <code>double free_space_gb = 4;</code>
+         * @param value The freeSpaceGb to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFreeSpaceGb(double value) {
+          
+          freeSpaceGb_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Free space project disk in gigabytes.
+         * </pre>
+         *
+         * <code>double free_space_gb = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFreeSpaceGb() {
+          
+          freeSpaceGb_ = 0D;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo)
+      private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo();
+      }
+
+      public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DetailedDiskInfo>
+          PARSER = new com.google.protobuf.AbstractParser<DetailedDiskInfo>() {
+        @java.lang.Override
+        public DetailedDiskInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DetailedDiskInfo(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DetailedDiskInfo> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DetailedDiskInfo> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISK_SIZE_GB_FIELD_NUMBER = 2;
+    private double diskSizeGb_;
+    /**
+     * <pre>
+     * Project disk size in gigabytes.
+     * </pre>
+     *
+     * <code>double disk_size_gb = 2;</code>
+     * @return The diskSizeGb.
+     */
+    @java.lang.Override
+    public double getDiskSizeGb() {
+      return diskSizeGb_;
+    }
+
+    public static final int DISK_USED_GB_FIELD_NUMBER = 3;
+    private double diskUsedGb_;
+    /**
+     * <pre>
+     * Used project disk in gigabytes.
+     * </pre>
+     *
+     * <code>double disk_used_gb = 3;</code>
+     * @return The diskUsedGb.
+     */
+    @java.lang.Override
+    public double getDiskUsedGb() {
+      return diskUsedGb_;
+    }
+
+    public static final int DETAILED_USAGE_FIELD_NUMBER = 4;
+    private yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo detailedUsage_;
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     * @return Whether the detailedUsage field is set.
+     */
+    @java.lang.Override
+    public boolean hasDetailedUsage() {
+      return detailedUsage_ != null;
+    }
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     * @return The detailedUsage.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDetailedUsage() {
+      return detailedUsage_ == null ? yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.getDefaultInstance() : detailedUsage_;
+    }
+    /**
+     * <pre>
+     * Detailed information about the project disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder getDetailedUsageOrBuilder() {
+      return getDetailedUsage();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(diskSizeGb_) != 0) {
+        output.writeDouble(2, diskSizeGb_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(diskUsedGb_) != 0) {
+        output.writeDouble(3, diskUsedGb_);
+      }
+      if (detailedUsage_ != null) {
+        output.writeMessage(4, getDetailedUsage());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(diskSizeGb_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, diskSizeGb_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(diskUsedGb_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, diskUsedGb_);
+      }
+      if (detailedUsage_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDetailedUsage());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (java.lang.Double.doubleToLongBits(getDiskSizeGb())
+          != java.lang.Double.doubleToLongBits(
+              other.getDiskSizeGb())) return false;
+      if (java.lang.Double.doubleToLongBits(getDiskUsedGb())
+          != java.lang.Double.doubleToLongBits(
+              other.getDiskUsedGb())) return false;
+      if (hasDetailedUsage() != other.hasDetailedUsage()) return false;
+      if (hasDetailedUsage()) {
+        if (!getDetailedUsage()
+            .equals(other.getDetailedUsage())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + DISK_SIZE_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDiskSizeGb()));
+      hash = (37 * hash) + DISK_USED_GB_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDiskUsedGb()));
+      if (hasDetailedUsage()) {
+        hash = (37 * hash) + DETAILED_USAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getDetailedUsage().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.DiskInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.DiskInfo)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        diskSizeGb_ = 0D;
+
+        diskUsedGb_ = 0D;
+
+        if (detailedUsageBuilder_ == null) {
+          detailedUsage_ = null;
+        } else {
+          detailedUsage_ = null;
+          detailedUsageBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo(this);
+        result.projectId_ = projectId_;
+        result.diskSizeGb_ = diskSizeGb_;
+        result.diskUsedGb_ = diskUsedGb_;
+        if (detailedUsageBuilder_ == null) {
+          result.detailedUsage_ = detailedUsage_;
+        } else {
+          result.detailedUsage_ = detailedUsageBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.getDiskSizeGb() != 0D) {
+          setDiskSizeGb(other.getDiskSizeGb());
+        }
+        if (other.getDiskUsedGb() != 0D) {
+          setDiskUsedGb(other.getDiskUsedGb());
+        }
+        if (other.hasDetailedUsage()) {
+          mergeDetailedUsage(other.getDetailedUsage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double diskSizeGb_ ;
+      /**
+       * <pre>
+       * Project disk size in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_size_gb = 2;</code>
+       * @return The diskSizeGb.
+       */
+      @java.lang.Override
+      public double getDiskSizeGb() {
+        return diskSizeGb_;
+      }
+      /**
+       * <pre>
+       * Project disk size in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_size_gb = 2;</code>
+       * @param value The diskSizeGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskSizeGb(double value) {
+        
+        diskSizeGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Project disk size in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_size_gb = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskSizeGb() {
+        
+        diskSizeGb_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double diskUsedGb_ ;
+      /**
+       * <pre>
+       * Used project disk in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_used_gb = 3;</code>
+       * @return The diskUsedGb.
+       */
+      @java.lang.Override
+      public double getDiskUsedGb() {
+        return diskUsedGb_;
+      }
+      /**
+       * <pre>
+       * Used project disk in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_used_gb = 3;</code>
+       * @param value The diskUsedGb to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskUsedGb(double value) {
+        
+        diskUsedGb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used project disk in gigabytes.
+       * </pre>
+       *
+       * <code>double disk_used_gb = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskUsedGb() {
+        
+        diskUsedGb_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo detailedUsage_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder> detailedUsageBuilder_;
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       * @return Whether the detailedUsage field is set.
+       */
+      public boolean hasDetailedUsage() {
+        return detailedUsageBuilder_ != null || detailedUsage_ != null;
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       * @return The detailedUsage.
+       */
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo getDetailedUsage() {
+        if (detailedUsageBuilder_ == null) {
+          return detailedUsage_ == null ? yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.getDefaultInstance() : detailedUsage_;
+        } else {
+          return detailedUsageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public Builder setDetailedUsage(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo value) {
+        if (detailedUsageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          detailedUsage_ = value;
+          onChanged();
+        } else {
+          detailedUsageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public Builder setDetailedUsage(
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder builderForValue) {
+        if (detailedUsageBuilder_ == null) {
+          detailedUsage_ = builderForValue.build();
+          onChanged();
+        } else {
+          detailedUsageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public Builder mergeDetailedUsage(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo value) {
+        if (detailedUsageBuilder_ == null) {
+          if (detailedUsage_ != null) {
+            detailedUsage_ =
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.newBuilder(detailedUsage_).mergeFrom(value).buildPartial();
+          } else {
+            detailedUsage_ = value;
+          }
+          onChanged();
+        } else {
+          detailedUsageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public Builder clearDetailedUsage() {
+        if (detailedUsageBuilder_ == null) {
+          detailedUsage_ = null;
+          onChanged();
+        } else {
+          detailedUsage_ = null;
+          detailedUsageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder getDetailedUsageBuilder() {
+        
+        onChanged();
+        return getDetailedUsageFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder getDetailedUsageOrBuilder() {
+        if (detailedUsageBuilder_ != null) {
+          return detailedUsageBuilder_.getMessageOrBuilder();
+        } else {
+          return detailedUsage_ == null ?
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.getDefaultInstance() : detailedUsage_;
+        }
+      }
+      /**
+       * <pre>
+       * Detailed information about the project disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.DiskInfo.DetailedDiskInfo detailed_usage = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder> 
+          getDetailedUsageFieldBuilder() {
+        if (detailedUsageBuilder_ == null) {
+          detailedUsageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfo.Builder, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo.DetailedDiskInfoOrBuilder>(
+                  getDetailedUsage(),
+                  getParentForChildren(),
+                  isClean());
+          detailedUsage_ = null;
+        }
+        return detailedUsageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.DiskInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.DiskInfo)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskInfo>
+        PARSER = new com.google.protobuf.AbstractParser<DiskInfo>() {
+      @java.lang.Override
+      public DiskInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.DiskInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_CreateProjectRequest_descriptor;
   private static final 
@@ -27752,6 +31070,26 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_DiskInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -27874,103 +31212,118 @@ public final class ProjectServiceOuterClass {
       "\030\n\nproject_id\030\001 \001(\tB\004\350\3071\001\"x\n\035SetProjectR" +
       "estrictionsRequest\022\030\n\nproject_id\030\001 \001(\tB\004" +
       "\350\3071\001\022=\n\014restrictions\030\002 \003(\0132\'.yandex.clou" +
-      "d.datasphere.v2.Restriction*S\n\017Execution" +
-      "Status\022 \n\034EXECUTION_STATUS_UNSPECIFIED\020\000" +
-      "\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\242\034\n\016Pro" +
-      "jectService\022\245\001\n\006Create\0220.yandex.cloud.da" +
-      "tasphere.v2.CreateProjectRequest\032!.yande" +
-      "x.cloud.operation.Operation\"F\202\323\344\223\002\034\"\027/da" +
-      "tasphere/v2/projects:\001*\262\322* \n\025CreateProje" +
-      "ctMetadata\022\007Project\022\262\001\n\006Update\0220.yandex." +
-      "cloud.datasphere.v2.UpdateProjectRequest" +
-      "\032!.yandex.cloud.operation.Operation\"S\202\323\344" +
-      "\223\002)2$/datasphere/v2/projects/{project_id" +
-      "}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Project" +
-      "\022\275\001\n\006Delete\0220.yandex.cloud.datasphere.v2" +
-      ".DeleteProjectRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"^\202\323\344\223\002&*$/datasphere/v2" +
-      "/projects/{project_id}\262\322*.\n\025DeleteProjec" +
-      "tMetadata\022\025google.protobuf.Empty\022\275\001\n\004Ope" +
-      "n\022..yandex.cloud.datasphere.v2.OpenProje" +
-      "ctRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"b\202\323\344\223\002.\")/datasphere/v2/projects/{p" +
-      "roject_id}:open:\001*\262\322**\n\023OpenProjectMetad" +
-      "ata\022\023OpenProjectResponse\022\207\001\n\003Get\022-.yande" +
-      "x.cloud.datasphere.v2.GetProjectRequest\032" +
-      "#.yandex.cloud.datasphere.v2.Project\",\202\323" +
-      "\344\223\002&\022$/datasphere/v2/projects/{project_i" +
-      "d}\022\212\001\n\004List\022/.yandex.cloud.datasphere.v2" +
-      ".ListProjectsRequest\0320.yandex.cloud.data" +
-      "sphere.v2.ListProjectsResponse\"\037\202\323\344\223\002\031\022\027" +
-      "/datasphere/v2/projects\022\261\001\n\016GetUnitBalan" +
-      "ce\0221.yandex.cloud.datasphere.v2.GetUnitB" +
-      "alanceRequest\0322.yandex.cloud.datasphere." +
-      "v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/data" +
-      "sphere/v2/projects/{project_id}:unitBala" +
-      "nce\022\326\001\n\016SetUnitBalance\0221.yandex.cloud.da" +
-      "tasphere.v2.SetUnitBalanceRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"n\202\323\344\223\0025\"0/d" +
-      "atasphere/v2/projects/{project_id}:unitB" +
-      "alance:\001*\262\322*/\n\026SetUnitBalanceMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\322\001\n\007Execute\0223.yande" +
-      "x.cloud.datasphere.v2.ProjectExecutionRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"o\202\323\344\223\0021\",/datasphere/v2/projects/{proje" +
-      "ct_id}:execute:\001*\262\322*4\n\030ProjectExecutionM" +
-      "etadata\022\030ProjectExecutionResponse\022\253\001\n\016Ge" +
-      "tCellOutputs\022..yandex.cloud.datasphere.v" +
-      "2.CellOutputsRequest\032/.yandex.cloud.data" +
-      "sphere.v2.CellOutputsResponse\"8\202\323\344\223\0022\0220/" +
-      "datasphere/v2/projects/{project_id}:cell" +
-      "Outputs\022\275\001\n\021GetStateVariables\0224.yandex.c" +
-      "loud.datasphere.v2.GetStateVariablesRequ" +
-      "est\0325.yandex.cloud.datasphere.v2.GetStat" +
-      "eVariablesResponse\";\202\323\344\223\0025\0223/datasphere/" +
-      "v2/projects/{project_id}:stateVariables\022" +
-      "\263\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
-      "cess.ListAccessBindingsRequest\032/.yandex." +
-      "cloud.access.ListAccessBindingsResponse\"" +
-      "<\202\323\344\223\0026\0224/datasphere/v2/projects/{resour" +
-      "ce_id}:accessBindings\022\346\001\n\021SetAccessBindi" +
-      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\177\202\323\344\223\002<\"7/datasphere/v2/projects/{" +
-      "resource_id}:setAccessBindings:\001*\262\322*9\n S" +
-      "etProjectAccessBindingsMetadata\022\025google." +
-      "protobuf.Empty\022\363\001\n\024UpdateAccessBindings\022" +
-      "0.yandex.cloud.access.UpdateAccessBindin" +
-      "gsRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\205\001\202\323\344\223\002?2:/datasphere/v2/projects/{" +
-      "resource_id}:updateAccessBindings:\001*\262\322*<" +
-      "\n#UpdateProjectAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\302\001\n\013AddResource\0227.y" +
-      "andex.cloud.datasphere.v2.AddResourceToP" +
-      "rojectRequest\032!.yandex.cloud.operation.O" +
-      "peration\"W\202\323\344\223\0026\"1/datasphere/v2/project" +
-      "s/{resource_id}:addResource:\001*\262\322*\027\022\025goog" +
-      "le.protobuf.Empty\022\315\001\n\016RemoveResource\022<.y" +
-      "andex.cloud.datasphere.v2.RemoveResource" +
-      "FromProjectRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"Z\202\323\344\223\0029\"4/datasphere/v2/pr" +
-      "ojects/{resource_id}:removeResource:\001*\262\322" +
-      "*\027\022\025google.protobuf.Empty\022\230\001\n\023GetRestric" +
-      "tionsMeta\022\026.google.protobuf.Empty\0327.yand" +
-      "ex.cloud.datasphere.v2.GetRestrictionsMe" +
-      "taResponse\"0\202\323\344\223\002*\022(/datasphere/v2/proje" +
-      "cts/restrictionsMeta\022\271\001\n\017GetRestrictions" +
-      "\0229.yandex.cloud.datasphere.v2.GetProject" +
-      "RestrictionsRequest\0320.yandex.cloud.datas" +
-      "phere.v2.RestrictionsResponse\"9\202\323\344\223\0023\0221/" +
-      "datasphere/v2/projects/{project_id}:rest" +
-      "rictions\022\312\001\n\017SetRestrictions\0229.yandex.cl" +
-      "oud.datasphere.v2.SetProjectRestrictions" +
+      "d.datasphere.v2.Restriction\"V\n\030ResizePro" +
+      "jectDiskRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\030\n\020new_disk_size_gb\030\002 \001(\003\"c\n\031R" +
+      "esizeProjectDiskMetadata\022\022\n\nproject_id\030\001" +
+      " \001(\t\022\030\n\020old_disk_size_gb\030\002 \001(\003\022\030\n\020new_di" +
+      "sk_size_gb\030\003 \001(\003\"\207\002\n\010DiskInfo\022\022\n\nproject" +
+      "_id\030\001 \001(\t\022\024\n\014disk_size_gb\030\002 \001(\001\022\024\n\014disk_" +
+      "used_gb\030\003 \001(\001\022M\n\016detailed_usage\030\004 \001(\01325." +
+      "yandex.cloud.datasphere.v2.DiskInfo.Deta" +
+      "iledDiskInfo\032l\n\020DetailedDiskInfo\022\024\n\014user" +
+      "_data_gb\030\001 \001(\001\022\023\n\013packages_gb\030\002 \001(\001\022\026\n\016s" +
+      "ystem_data_gb\030\003 \001(\001\022\025\n\rfree_space_gb\030\004 \001" +
+      "(\001*S\n\017ExecutionStatus\022 \n\034EXECUTION_STATU" +
+      "S_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007AB" +
+      "ORTED\020\0032\265\035\n\016ProjectService\022\245\001\n\006Create\0220." +
+      "yandex.cloud.datasphere.v2.CreateProject" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"Y\202\323\344\223\0029\"4/datasphere/v2/projects/{pro" +
-      "ject_id}:setRestrictions:\001*\262\322*\026\022\024Restric" +
-      "tionsResponseBk\n\036yandex.cloud.api.datasp" +
-      "here.v2ZIgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/datasphere/v2;datasphe" +
-      "reb\006proto3"
+      "on\"F\202\323\344\223\002\034\"\027/datasphere/v2/projects:\001*\262\322" +
+      "* \n\025CreateProjectMetadata\022\007Project\022\262\001\n\006U" +
+      "pdate\0220.yandex.cloud.datasphere.v2.Updat" +
+      "eProjectRequest\032!.yandex.cloud.operation" +
+      ".Operation\"S\202\323\344\223\002)2$/datasphere/v2/proje" +
+      "cts/{project_id}:\001*\262\322* \n\025UpdateProjectMe" +
+      "tadata\022\007Project\022\275\001\n\006Delete\0220.yandex.clou" +
+      "d.datasphere.v2.DeleteProjectRequest\032!.y" +
+      "andex.cloud.operation.Operation\"^\202\323\344\223\002&*" +
+      "$/datasphere/v2/projects/{project_id}\262\322*" +
+      ".\n\025DeleteProjectMetadata\022\025google.protobu" +
+      "f.Empty\022\275\001\n\004Open\022..yandex.cloud.datasphe" +
+      "re.v2.OpenProjectRequest\032!.yandex.cloud." +
+      "operation.Operation\"b\202\323\344\223\002.\")/datasphere" +
+      "/v2/projects/{project_id}:open:\001*\262\322**\n\023O" +
+      "penProjectMetadata\022\023OpenProjectResponse\022" +
+      "\207\001\n\003Get\022-.yandex.cloud.datasphere.v2.Get" +
+      "ProjectRequest\032#.yandex.cloud.datasphere" +
+      ".v2.Project\",\202\323\344\223\002&\022$/datasphere/v2/proj" +
+      "ects/{project_id}\022\212\001\n\004List\022/.yandex.clou" +
+      "d.datasphere.v2.ListProjectsRequest\0320.ya" +
+      "ndex.cloud.datasphere.v2.ListProjectsRes" +
+      "ponse\"\037\202\323\344\223\002\031\022\027/datasphere/v2/projects\022\261" +
+      "\001\n\016GetUnitBalance\0221.yandex.cloud.datasph" +
+      "ere.v2.GetUnitBalanceRequest\0322.yandex.cl" +
+      "oud.datasphere.v2.GetUnitBalanceResponse" +
+      "\"8\202\323\344\223\0022\0220/datasphere/v2/projects/{proje" +
+      "ct_id}:unitBalance\022\326\001\n\016SetUnitBalance\0221." +
+      "yandex.cloud.datasphere.v2.SetUnitBalanc" +
+      "eRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"n\202\323\344\223\0025\"0/datasphere/v2/projects/{pr" +
+      "oject_id}:unitBalance:\001*\262\322*/\n\026SetUnitBal" +
+      "anceMetadata\022\025google.protobuf.Empty\022\322\001\n\007" +
+      "Execute\0223.yandex.cloud.datasphere.v2.Pro" +
+      "jectExecutionRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"o\202\323\344\223\0021\",/datasphere/v2/" +
+      "projects/{project_id}:execute:\001*\262\322*4\n\030Pr" +
+      "ojectExecutionMetadata\022\030ProjectExecution" +
+      "Response\022\253\001\n\016GetCellOutputs\022..yandex.clo" +
+      "ud.datasphere.v2.CellOutputsRequest\032/.ya" +
+      "ndex.cloud.datasphere.v2.CellOutputsResp" +
+      "onse\"8\202\323\344\223\0022\0220/datasphere/v2/projects/{p" +
+      "roject_id}:cellOutputs\022\275\001\n\021GetStateVaria" +
+      "bles\0224.yandex.cloud.datasphere.v2.GetSta" +
+      "teVariablesRequest\0325.yandex.cloud.datasp" +
+      "here.v2.GetStateVariablesResponse\";\202\323\344\223\002" +
+      "5\0223/datasphere/v2/projects/{project_id}:" +
+      "stateVariables\022\263\001\n\022ListAccessBindings\022.." +
+      "yandex.cloud.access.ListAccessBindingsRe" +
+      "quest\032/.yandex.cloud.access.ListAccessBi" +
+      "ndingsResponse\"<\202\323\344\223\0026\0224/datasphere/v2/p" +
+      "rojects/{resource_id}:accessBindings\022\346\001\n" +
+      "\021SetAccessBindings\022-.yandex.cloud.access" +
+      ".SetAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\177\202\323\344\223\002<\"7/dataspher" +
+      "e/v2/projects/{resource_id}:setAccessBin" +
+      "dings:\001*\262\322*9\n SetProjectAccessBindingsMe" +
+      "tadata\022\025google.protobuf.Empty\022\363\001\n\024Update" +
+      "AccessBindings\0220.yandex.cloud.access.Upd" +
+      "ateAccessBindingsRequest\032!.yandex.cloud." +
+      "operation.Operation\"\205\001\202\323\344\223\002?2:/dataspher" +
+      "e/v2/projects/{resource_id}:updateAccess" +
+      "Bindings:\001*\262\322*<\n#UpdateProjectAccessBind" +
+      "ingsMetadata\022\025google.protobuf.Empty\022\302\001\n\013" +
+      "AddResource\0227.yandex.cloud.datasphere.v2" +
+      ".AddResourceToProjectRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"W\202\323\344\223\0026\"1/datasp" +
+      "here/v2/projects/{resource_id}:addResour" +
+      "ce:\001*\262\322*\027\022\025google.protobuf.Empty\022\315\001\n\016Rem" +
+      "oveResource\022<.yandex.cloud.datasphere.v2" +
+      ".RemoveResourceFromProjectRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"Z\202\323\344\223\0029\"4/d" +
+      "atasphere/v2/projects/{resource_id}:remo" +
+      "veResource:\001*\262\322*\027\022\025google.protobuf.Empty" +
+      "\022\220\001\n\nResizeDisk\0224.yandex.cloud.dataspher" +
+      "e.v2.ResizeProjectDiskRequest\032!.yandex.c" +
+      "loud.operation.Operation\")\262\322*%\n\031ResizePr" +
+      "ojectDiskMetadata\022\010DiskInfo\022\230\001\n\023GetRestr" +
+      "ictionsMeta\022\026.google.protobuf.Empty\0327.ya" +
+      "ndex.cloud.datasphere.v2.GetRestrictions" +
+      "MetaResponse\"0\202\323\344\223\002*\022(/datasphere/v2/pro" +
+      "jects/restrictionsMeta\022\271\001\n\017GetRestrictio" +
+      "ns\0229.yandex.cloud.datasphere.v2.GetProje" +
+      "ctRestrictionsRequest\0320.yandex.cloud.dat" +
+      "asphere.v2.RestrictionsResponse\"9\202\323\344\223\0023\022" +
+      "1/datasphere/v2/projects/{project_id}:re" +
+      "strictions\022\312\001\n\017SetRestrictions\0229.yandex." +
+      "cloud.datasphere.v2.SetProjectRestrictio" +
+      "nsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"Y\202\323\344\223\0029\"4/datasphere/v2/projects/{p" +
+      "roject_id}:setRestrictions:\001*\262\322*\026\022\024Restr" +
+      "ictionsResponseBk\n\036yandex.cloud.api.data" +
+      "sphere.v2ZIgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/datasphere/v2;datasp" +
+      "hereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -28175,6 +31528,30 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_SetProjectRestrictionsRequest_descriptor,
         new java.lang.String[] { "ProjectId", "Restrictions", });
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "NewDiskSizeGb", });
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_ResizeProjectDiskMetadata_descriptor,
+        new java.lang.String[] { "ProjectId", "OldDiskSizeGb", "NewDiskSizeGb", });
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor,
+        new java.lang.String[] { "ProjectId", "DiskSizeGb", "DiskUsedGb", "DetailedUsage", });
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor =
+      internal_static_yandex_cloud_datasphere_v2_DiskInfo_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_DiskInfo_DetailedDiskInfo_descriptor,
+        new java.lang.String[] { "UserDataGb", "PackagesGb", "SystemDataGb", "FreeSpaceGb", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

@@ -514,6 +514,37 @@ public final class ProjectServiceGrpc {
     return getRemoveResourceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResizeDiskMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResizeDisk",
+      requestType = yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResizeDiskMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResizeDiskMethod;
+    if ((getResizeDiskMethod = ProjectServiceGrpc.getResizeDiskMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getResizeDiskMethod = ProjectServiceGrpc.getResizeDiskMethod) == null) {
+          ProjectServiceGrpc.getResizeDiskMethod = getResizeDiskMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResizeDisk"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("ResizeDisk"))
+              .build();
+        }
+      }
+    }
+    return getResizeDiskMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       yandex.cloud.api.datasphere.v2.Restrictions.GetRestrictionsMetaResponse> getGetRestrictionsMetaMethod;
 
@@ -822,6 +853,16 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * Resizes project disk
+     * </pre>
+     */
+    public void resizeDisk(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResizeDiskMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get meta information about available restrictions.
      * </pre>
      */
@@ -964,6 +1005,13 @@ public final class ProjectServiceGrpc {
                 yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_REMOVE_RESOURCE)))
+          .addMethod(
+            getResizeDiskMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESIZE_DISK)))
           .addMethod(
             getGetRestrictionsMetaMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1186,6 +1234,17 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * Resizes project disk
+     * </pre>
+     */
+    public void resizeDisk(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResizeDiskMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get meta information about available restrictions.
      * </pre>
      */
@@ -1395,6 +1454,16 @@ public final class ProjectServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeResource(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resizes project disk
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation resizeDisk(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResizeDiskMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1625,6 +1694,17 @@ public final class ProjectServiceGrpc {
 
     /**
      * <pre>
+     * Resizes project disk
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resizeDisk(
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResizeDiskMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Get meta information about available restrictions.
      * </pre>
      */
@@ -1673,9 +1753,10 @@ public final class ProjectServiceGrpc {
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 13;
   private static final int METHODID_ADD_RESOURCE = 14;
   private static final int METHODID_REMOVE_RESOURCE = 15;
-  private static final int METHODID_GET_RESTRICTIONS_META = 16;
-  private static final int METHODID_GET_RESTRICTIONS = 17;
-  private static final int METHODID_SET_RESTRICTIONS = 18;
+  private static final int METHODID_RESIZE_DISK = 16;
+  private static final int METHODID_GET_RESTRICTIONS_META = 17;
+  private static final int METHODID_GET_RESTRICTIONS = 18;
+  private static final int METHODID_SET_RESTRICTIONS = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1756,6 +1837,10 @@ public final class ProjectServiceGrpc {
           break;
         case METHODID_REMOVE_RESOURCE:
           serviceImpl.removeResource((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESIZE_DISK:
+          serviceImpl.resizeDisk((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.ResizeProjectDiskRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET_RESTRICTIONS_META:
@@ -1847,6 +1932,7 @@ public final class ProjectServiceGrpc {
               .addMethod(getUpdateAccessBindingsMethod())
               .addMethod(getAddResourceMethod())
               .addMethod(getRemoveResourceMethod())
+              .addMethod(getResizeDiskMethod())
               .addMethod(getGetRestrictionsMetaMethod())
               .addMethod(getGetRestrictionsMethod())
               .addMethod(getSetRestrictionsMethod())

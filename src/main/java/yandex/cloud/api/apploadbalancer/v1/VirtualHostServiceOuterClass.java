@@ -3163,6 +3163,33 @@ public final class VirtualHostServiceOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 8;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     * @return The rateLimit.
+     */
+    yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit();
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateVirtualHostRequest}
@@ -3273,6 +3300,19 @@ public final class VirtualHostServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(routeOptions_);
                 routeOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3748,6 +3788,44 @@ public final class VirtualHostServiceOuterClass {
       return getRouteOptions();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 9;
+    private yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit rateLimit_;
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit() {
+      return rateLimit_ == null ? yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3782,6 +3860,9 @@ public final class VirtualHostServiceOuterClass {
       }
       if (routeOptions_ != null) {
         output.writeMessage(8, getRouteOptions());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(9, getRateLimit());
       }
       unknownFields.writeTo(output);
     }
@@ -3822,6 +3903,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getRouteOptions());
       }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRateLimit());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3853,6 +3938,11 @@ public final class VirtualHostServiceOuterClass {
       if (hasRouteOptions()) {
         if (!getRouteOptions()
             .equals(other.getRouteOptions())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -3888,6 +3978,10 @@ public final class VirtualHostServiceOuterClass {
       if (hasRouteOptions()) {
         hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getRouteOptions().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4055,6 +4149,12 @@ public final class VirtualHostServiceOuterClass {
           routeOptions_ = null;
           routeOptionsBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -4120,6 +4220,11 @@ public final class VirtualHostServiceOuterClass {
           result.routeOptions_ = routeOptions_;
         } else {
           result.routeOptions_ = routeOptionsBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4267,6 +4372,9 @@ public final class VirtualHostServiceOuterClass {
         }
         if (other.hasRouteOptions()) {
           mergeRouteOptions(other.getRouteOptions());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5929,6 +6037,161 @@ public final class VirtualHostServiceOuterClass {
         }
         return routeOptionsBuilder_;
       }
+
+      private yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       * @return The rateLimit.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public Builder setRateLimit(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public Builder setRateLimit(
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public Builder mergeRateLimit(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7141,6 +7404,33 @@ public final class VirtualHostServiceOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 9;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     * @return The rateLimit.
+     */
+    yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit();
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateVirtualHostRequest}
@@ -7264,6 +7554,19 @@ public final class VirtualHostServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(routeOptions_);
                 routeOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -7810,6 +8113,44 @@ public final class VirtualHostServiceOuterClass {
       return getRouteOptions();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 10;
+    private yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit rateLimit_;
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit() {
+      return rateLimit_ == null ? yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * RateLimit is a rate limit configuration applied for a whole virtual host.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7847,6 +8188,9 @@ public final class VirtualHostServiceOuterClass {
       }
       if (routeOptions_ != null) {
         output.writeMessage(9, getRouteOptions());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(10, getRateLimit());
       }
       unknownFields.writeTo(output);
     }
@@ -7891,6 +8235,10 @@ public final class VirtualHostServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRouteOptions());
       }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getRateLimit());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7927,6 +8275,11 @@ public final class VirtualHostServiceOuterClass {
       if (hasRouteOptions()) {
         if (!getRouteOptions()
             .equals(other.getRouteOptions())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -7966,6 +8319,10 @@ public final class VirtualHostServiceOuterClass {
       if (hasRouteOptions()) {
         hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getRouteOptions().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8139,6 +8496,12 @@ public final class VirtualHostServiceOuterClass {
           routeOptions_ = null;
           routeOptionsBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -8209,6 +8572,11 @@ public final class VirtualHostServiceOuterClass {
           result.routeOptions_ = routeOptions_;
         } else {
           result.routeOptions_ = routeOptionsBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8359,6 +8727,9 @@ public final class VirtualHostServiceOuterClass {
         }
         if (other.hasRouteOptions()) {
           mergeRouteOptions(other.getRouteOptions());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10284,6 +10655,161 @@ public final class VirtualHostServiceOuterClass {
           routeOptions_ = null;
         }
         return routeOptionsBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       * @return The rateLimit.
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public Builder setRateLimit(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public Builder setRateLimit(
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public Builder mergeRateLimit(yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * RateLimit is a rate limit configuration applied for a whole virtual host.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.RateLimit rate_limit = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimit.Builder, yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.RateLimitOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17937,112 +18463,117 @@ public final class VirtualHostServiceOuterClass {
       "l_host_service.proto\022\037yandex.cloud.applo" +
       "adbalancer.v1\032\034google/api/annotations.pr" +
       "oto\032 google/protobuf/field_mask.proto\032 y" +
-      "andex/cloud/api/operation.proto\0322yandex/" +
-      "cloud/apploadbalancer/v1/virtual_host.pr" +
-      "oto\032&yandex/cloud/operation/operation.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"|\n\025Ge" +
-      "tVirtualHostRequest\022\034\n\016http_router_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*\350\307" +
-      "1\001\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?" +
-      "\"u\n\027ListVirtualHostsRequest\022\034\n\016http_rout" +
-      "er_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
-      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
-      "x\n\030ListVirtualHostsResponse\022C\n\rvirtual_h" +
-      "osts\030\001 \003(\0132,.yandex.cloud.apploadbalance" +
-      "r.v1.VirtualHost\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"\260\003\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
-      "outer_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"" +
-      "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\021\n\tau" +
-      "thority\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132&.yandex.c" +
-      "loud.apploadbalancer.v1.Route\022S\n\026modify_" +
-      "request_headers\030\006 \003(\01323.yandex.cloud.app" +
-      "loadbalancer.v1.HeaderModification\022T\n\027mo" +
-      "dify_response_headers\030\007 \003(\01323.yandex.clo" +
-      "ud.apploadbalancer.v1.HeaderModification" +
-      "\022D\n\rroute_options\030\010 \001(\0132-.yandex.cloud.a" +
-      "pploadbalancer.v1.RouteOptionsJ\004\010\004\020\005\"T\n\031" +
-      "CreateVirtualHostMetadata\022\034\n\016http_router" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001" +
-      "(\t\"\314\003\n\030UpdateVirtualHostRequest\022\034\n\016http_" +
-      "router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_na" +
-      "me\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022\021\n\tauthority\030\004 \003" +
-      "(\t\0226\n\006routes\030\006 \003(\0132&.yandex.cloud.apploa" +
-      "dbalancer.v1.Route\022S\n\026modify_request_hea" +
-      "ders\030\007 \003(\01323.yandex.cloud.apploadbalance" +
-      "r.v1.HeaderModification\022T\n\027modify_respon" +
-      "se_headers\030\010 \003(\01323.yandex.cloud.apploadb" +
-      "alancer.v1.HeaderModification\022D\n\rroute_o" +
-      "ptions\030\t \001(\0132-.yandex.cloud.apploadbalan" +
-      "cer.v1.RouteOptionsJ\004\010\005\020\006\"N\n\031UpdateVirtu" +
-      "alHostMetadata\022\026\n\016http_router_id\030\001 \001(\t\022\031" +
-      "\n\021virtual_host_name\030\002 \001(\t\"\177\n\030DeleteVirtu" +
-      "alHostRequest\022\034\n\016http_router_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*\350\3071\001\362\3071\"" +
-      "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\"N\n\031De" +
-      "leteVirtualHostMetadata\022\026\n\016http_router_i" +
-      "d\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"m\n\022Re" +
-      "moveRouteRequest\022\034\n\016http_router_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(\tB\004\350\3071\001\022" +
-      "\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\"\\\n\023RemoveRoute" +
-      "Metadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virt" +
-      "ual_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t\"" +
-      "\353\002\n\022UpdateRouteRequest\022\034\n\016http_router_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(\tB" +
-      "\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\022/\n\013updat" +
-      "e_mask\030\004 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022:\n\004http\030\005 \001(\0132*.yandex.cloud.apploadbal" +
-      "ancer.v1.HttpRouteH\000\022:\n\004grpc\030\006 \001(\0132*.yan" +
-      "dex.cloud.apploadbalancer.v1.GrpcRouteH\000" +
-      "\022D\n\rroute_options\030\007 \001(\0132-.yandex.cloud.a" +
-      "pploadbalancer.v1.RouteOptionsB\r\n\005route\022" +
-      "\004\300\3011\001\"\\\n\023UpdateRouteMetadata\022\026\n\016http_rou" +
-      "ter_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\022" +
-      "\022\n\nroute_name\030\003 \001(\t2\342\014\n\022VirtualHostServi" +
-      "ce\022\306\001\n\003Get\0226.yandex.cloud.apploadbalance" +
-      "r.v1.GetVirtualHostRequest\032,.yandex.clou" +
-      "d.apploadbalancer.v1.VirtualHost\"Y\202\323\344\223\002S" +
-      "\022Q/apploadbalancer/v1/httpRouters/{http_" +
-      "router_id}/virtualHosts/{virtual_host_na" +
-      "me}\022\302\001\n\004List\0228.yandex.cloud.apploadbalan" +
-      "cer.v1.ListVirtualHostsRequest\0329.yandex." +
+      "andex/cloud/api/operation.proto\0320yandex/" +
+      "cloud/apploadbalancer/v1/rate_limit.prot" +
+      "o\0322yandex/cloud/apploadbalancer/v1/virtu" +
+      "al_host.proto\032&yandex/cloud/operation/op" +
+      "eration.proto\032\035yandex/cloud/validation.p" +
+      "roto\"|\n\025GetVirtualHostRequest\022\034\n\016http_ro" +
+      "uter_id\030\001 \001(\tB\004\350\3071\001\022E\n\021virtual_host_name" +
+      "\030\002 \001(\tB*\350\3071\001\362\3071\"([a-z]([-a-z0-9]{0,61}[a" +
+      "-z0-9])?)?\"u\n\027ListVirtualHostsRequest\022\034\n" +
+      "\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"x\n\030ListVirtualHostsResponse\022C\n" +
+      "\rvirtual_hosts\030\001 \003(\0132,.yandex.cloud.appl" +
+      "oadbalancer.v1.VirtualHost\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"\360\003\n\030CreateVirtualHostRequest" +
+      "\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002" +
+      " \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9]" +
+      ")?)?\022\021\n\tauthority\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132" +
+      "&.yandex.cloud.apploadbalancer.v1.Route\022" +
+      "S\n\026modify_request_headers\030\006 \003(\01323.yandex" +
+      ".cloud.apploadbalancer.v1.HeaderModifica" +
+      "tion\022T\n\027modify_response_headers\030\007 \003(\01323." +
+      "yandex.cloud.apploadbalancer.v1.HeaderMo" +
+      "dification\022D\n\rroute_options\030\010 \001(\0132-.yand" +
+      "ex.cloud.apploadbalancer.v1.RouteOptions" +
+      "\022>\n\nrate_limit\030\t \001(\0132*.yandex.cloud.appl" +
+      "oadbalancer.v1.RateLimitJ\004\010\004\020\005\"T\n\031Create" +
+      "VirtualHostMetadata\022\034\n\016http_router_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001(\t\"\214\004\n" +
+      "\030UpdateVirtualHostRequest\022\034\n\016http_router" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001" +
+      "(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\022\021\n\tauthority\030\004 \003(\t\0226\n\006" +
+      "routes\030\006 \003(\0132&.yandex.cloud.apploadbalan" +
+      "cer.v1.Route\022S\n\026modify_request_headers\030\007" +
+      " \003(\01323.yandex.cloud.apploadbalancer.v1.H" +
+      "eaderModification\022T\n\027modify_response_hea" +
+      "ders\030\010 \003(\01323.yandex.cloud.apploadbalance" +
+      "r.v1.HeaderModification\022D\n\rroute_options" +
+      "\030\t \001(\0132-.yandex.cloud.apploadbalancer.v1" +
+      ".RouteOptions\022>\n\nrate_limit\030\n \001(\0132*.yand" +
+      "ex.cloud.apploadbalancer.v1.RateLimitJ\004\010" +
+      "\005\020\006\"N\n\031UpdateVirtualHostMetadata\022\026\n\016http" +
+      "_router_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 " +
+      "\001(\t\"\177\n\030DeleteVirtualHostRequest\022\034\n\016http_" +
+      "router_id\030\001 \001(\tB\004\350\3071\001\022E\n\021virtual_host_na" +
+      "me\030\002 \001(\tB*\350\3071\001\362\3071\"([a-z]([-a-z0-9]{0,61}" +
+      "[a-z0-9])?)?\"N\n\031DeleteVirtualHostMetadat" +
+      "a\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_hos" +
+      "t_name\030\002 \001(\t\"m\n\022RemoveRouteRequest\022\034\n\016ht" +
+      "tp_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host" +
+      "_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350" +
+      "\3071\001\"\\\n\023RemoveRouteMetadata\022\026\n\016http_route" +
+      "r_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n" +
+      "\nroute_name\030\003 \001(\t\"\353\002\n\022UpdateRouteRequest" +
+      "\022\034\n\016http_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtua" +
+      "l_host_name\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 " +
+      "\001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google." +
+      "protobuf.FieldMask\022:\n\004http\030\005 \001(\0132*.yande" +
+      "x.cloud.apploadbalancer.v1.HttpRouteH\000\022:" +
+      "\n\004grpc\030\006 \001(\0132*.yandex.cloud.apploadbalan" +
+      "cer.v1.GrpcRouteH\000\022D\n\rroute_options\030\007 \001(" +
+      "\0132-.yandex.cloud.apploadbalancer.v1.Rout" +
+      "eOptionsB\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMe" +
+      "tadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtua" +
+      "l_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014" +
+      "\n\022VirtualHostService\022\306\001\n\003Get\0226.yandex.cl" +
+      "oud.apploadbalancer.v1.GetVirtualHostReq" +
+      "uest\032,.yandex.cloud.apploadbalancer.v1.V" +
+      "irtualHost\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}/virtualHost" +
+      "s/{virtual_host_name}\022\302\001\n\004List\0228.yandex." +
       "cloud.apploadbalancer.v1.ListVirtualHost" +
-      "sResponse\"E\202\323\344\223\002?\022=/apploadbalancer/v1/h" +
-      "ttpRouters/{http_router_id}/virtualHosts" +
-      "\022\334\001\n\006Create\0229.yandex.cloud.apploadbalanc" +
-      "er.v1.CreateVirtualHostRequest\032!.yandex." +
-      "cloud.operation.Operation\"t\202\323\344\223\002B\"=/appl" +
-      "oadbalancer/v1/httpRouters/{http_router_" +
-      "id}/virtualHosts:\001*\262\322*(\n\031CreateVirtualHo" +
-      "stMetadata\022\013VirtualHost\022\361\001\n\006Update\0229.yan" +
-      "dex.cloud.apploadbalancer.v1.UpdateVirtu" +
-      "alHostRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\210\001\202\323\344\223\002V2Q/apploadbalancer/v1/h" +
-      "ttpRouters/{http_router_id}/virtualHosts" +
-      "/{virtual_host_name}:\001*\262\322*(\n\031UpdateVirtu" +
-      "alHostMetadata\022\013VirtualHost\022\370\001\n\006Delete\0229" +
-      ".yandex.cloud.apploadbalancer.v1.DeleteV" +
-      "irtualHostRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\217\001\202\323\344\223\002S*Q/apploadbalancer/" +
-      "v1/httpRouters/{http_router_id}/virtualH" +
-      "osts/{virtual_host_name}\262\322*2\n\031DeleteVirt" +
-      "ualHostMetadata\022\025google.protobuf.Empty\022\366" +
-      "\001\n\013RemoveRoute\0223.yandex.cloud.apploadbal" +
-      "ancer.v1.RemoveRouteRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\216\001\202\323\344\223\002b\"]/apploa" +
-      "dbalancer/v1/httpRouters/{http_router_id" +
-      "}/virtualHosts/{virtual_host_name}:remov" +
-      "eRoute:\001*\262\322*\"\n\023RemoveRouteMetadata\022\013Virt" +
-      "ualHost\022\366\001\n\013UpdateRoute\0223.yandex.cloud.a" +
-      "pploadbalancer.v1.UpdateRouteRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\216\001\202\323\344\223\002b" +
-      "\"]/apploadbalancer/v1/httpRouters/{http_" +
-      "router_id}/virtualHosts/{virtual_host_na" +
-      "me}:updateRoute:\001*\262\322*\"\n\023UpdateRouteMetad" +
-      "ata\022\013VirtualHostBz\n#yandex.cloud.api.app" +
-      "loadbalancer.v1ZSgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/apploadbalance" +
-      "r/v1;apploadbalancerb\006proto3"
+      "sRequest\0329.yandex.cloud.apploadbalancer." +
+      "v1.ListVirtualHostsResponse\"E\202\323\344\223\002?\022=/ap" +
+      "ploadbalancer/v1/httpRouters/{http_route" +
+      "r_id}/virtualHosts\022\334\001\n\006Create\0229.yandex.c" +
+      "loud.apploadbalancer.v1.CreateVirtualHos" +
+      "tRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"t\202\323\344\223\002B\"=/apploadbalancer/v1/httpRou" +
+      "ters/{http_router_id}/virtualHosts:\001*\262\322*" +
+      "(\n\031CreateVirtualHostMetadata\022\013VirtualHos" +
+      "t\022\361\001\n\006Update\0229.yandex.cloud.apploadbalan" +
+      "cer.v1.UpdateVirtualHostRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\210\001\202\323\344\223\002V2Q/ap" +
+      "ploadbalancer/v1/httpRouters/{http_route" +
+      "r_id}/virtualHosts/{virtual_host_name}:\001" +
+      "*\262\322*(\n\031UpdateVirtualHostMetadata\022\013Virtua" +
+      "lHost\022\370\001\n\006Delete\0229.yandex.cloud.apploadb" +
+      "alancer.v1.DeleteVirtualHostRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\217\001\202\323\344\223\002S*" +
+      "Q/apploadbalancer/v1/httpRouters/{http_r" +
+      "outer_id}/virtualHosts/{virtual_host_nam" +
+      "e}\262\322*2\n\031DeleteVirtualHostMetadata\022\025googl" +
+      "e.protobuf.Empty\022\366\001\n\013RemoveRoute\0223.yande" +
+      "x.cloud.apploadbalancer.v1.RemoveRouteRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRoute" +
+      "rs/{http_router_id}/virtualHosts/{virtua" +
+      "l_host_name}:removeRoute:\001*\262\322*\"\n\023RemoveR" +
+      "outeMetadata\022\013VirtualHost\022\366\001\n\013UpdateRout" +
+      "e\0223.yandex.cloud.apploadbalancer.v1.Upda" +
+      "teRouteRequest\032!.yandex.cloud.operation." +
+      "Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}/virtualHost" +
+      "s/{virtual_host_name}:updateRoute:\001*\262\322*\"" +
+      "\n\023UpdateRouteMetadata\022\013VirtualHostBz\n#ya" +
+      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/apploadbalancer/v1;apploadbalancerb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18050,6 +18581,7 @@ public final class VirtualHostServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -18077,7 +18609,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", });
+        new java.lang.String[] { "HttpRouterId", "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", "RateLimit", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateVirtualHostMetadata_fieldAccessorTable = new
@@ -18089,7 +18621,7 @@ public final class VirtualHostServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostRequest_descriptor,
-        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "UpdateMask", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", });
+        new java.lang.String[] { "HttpRouterId", "VirtualHostName", "UpdateMask", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", "RateLimit", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateVirtualHostMetadata_fieldAccessorTable = new
@@ -18146,6 +18678,7 @@ public final class VirtualHostServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.apploadbalancer.v1.RateLimitOuterClass.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

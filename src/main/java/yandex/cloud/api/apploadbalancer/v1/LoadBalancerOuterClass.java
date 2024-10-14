@@ -16418,6 +16418,36 @@ public final class LoadBalancerOuterClass {
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
+
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     * @return Whether the idleTimeout field is set.
+     */
+    boolean hasIdleTimeout();
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     * @return The idleTimeout.
+     */
+    com.google.protobuf.Duration getIdleTimeout();
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getIdleTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -16473,6 +16503,19 @@ public final class LoadBalancerOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               backendGroupId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (idleTimeout_ != null) {
+                subBuilder = idleTimeout_.toBuilder();
+              }
+              idleTimeout_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(idleTimeout_);
+                idleTimeout_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -16559,6 +16602,47 @@ public final class LoadBalancerOuterClass {
       }
     }
 
+    public static final int IDLE_TIMEOUT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration idleTimeout_;
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     * @return Whether the idleTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasIdleTimeout() {
+      return idleTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     * @return The idleTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getIdleTimeout() {
+      return idleTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : idleTimeout_;
+    }
+    /**
+     * <pre>
+     * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+     * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getIdleTimeoutOrBuilder() {
+      return getIdleTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16576,6 +16660,9 @@ public final class LoadBalancerOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendGroupId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backendGroupId_);
       }
+      if (idleTimeout_ != null) {
+        output.writeMessage(2, getIdleTimeout());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16587,6 +16674,10 @@ public final class LoadBalancerOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backendGroupId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backendGroupId_);
+      }
+      if (idleTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIdleTimeout());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16605,6 +16696,11 @@ public final class LoadBalancerOuterClass {
 
       if (!getBackendGroupId()
           .equals(other.getBackendGroupId())) return false;
+      if (hasIdleTimeout() != other.hasIdleTimeout()) return false;
+      if (hasIdleTimeout()) {
+        if (!getIdleTimeout()
+            .equals(other.getIdleTimeout())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16618,6 +16714,10 @@ public final class LoadBalancerOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BACKEND_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getBackendGroupId().hashCode();
+      if (hasIdleTimeout()) {
+        hash = (37 * hash) + IDLE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getIdleTimeout().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16757,6 +16857,12 @@ public final class LoadBalancerOuterClass {
         super.clear();
         backendGroupId_ = "";
 
+        if (idleTimeoutBuilder_ == null) {
+          idleTimeout_ = null;
+        } else {
+          idleTimeout_ = null;
+          idleTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -16784,6 +16890,11 @@ public final class LoadBalancerOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.StreamHandler(this);
         result.backendGroupId_ = backendGroupId_;
+        if (idleTimeoutBuilder_ == null) {
+          result.idleTimeout_ = idleTimeout_;
+        } else {
+          result.idleTimeout_ = idleTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -16835,6 +16946,9 @@ public final class LoadBalancerOuterClass {
         if (!other.getBackendGroupId().isEmpty()) {
           backendGroupId_ = other.backendGroupId_;
           onChanged();
+        }
+        if (other.hasIdleTimeout()) {
+          mergeIdleTimeout(other.getIdleTimeout());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16974,6 +17088,170 @@ public final class LoadBalancerOuterClass {
         backendGroupId_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Duration idleTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> idleTimeoutBuilder_;
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       * @return Whether the idleTimeout field is set.
+       */
+      public boolean hasIdleTimeout() {
+        return idleTimeoutBuilder_ != null || idleTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       * @return The idleTimeout.
+       */
+      public com.google.protobuf.Duration getIdleTimeout() {
+        if (idleTimeoutBuilder_ == null) {
+          return idleTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : idleTimeout_;
+        } else {
+          return idleTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public Builder setIdleTimeout(com.google.protobuf.Duration value) {
+        if (idleTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          idleTimeout_ = value;
+          onChanged();
+        } else {
+          idleTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public Builder setIdleTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (idleTimeoutBuilder_ == null) {
+          idleTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          idleTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public Builder mergeIdleTimeout(com.google.protobuf.Duration value) {
+        if (idleTimeoutBuilder_ == null) {
+          if (idleTimeout_ != null) {
+            idleTimeout_ =
+              com.google.protobuf.Duration.newBuilder(idleTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            idleTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          idleTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public Builder clearIdleTimeout() {
+        if (idleTimeoutBuilder_ == null) {
+          idleTimeout_ = null;
+          onChanged();
+        } else {
+          idleTimeout_ = null;
+          idleTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public com.google.protobuf.Duration.Builder getIdleTimeoutBuilder() {
+        
+        onChanged();
+        return getIdleTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getIdleTimeoutOrBuilder() {
+        if (idleTimeoutBuilder_ != null) {
+          return idleTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return idleTimeout_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : idleTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The idle timeout is duration during which no data is transmitted or received on either the upstream or downstream connection. 
+       * If not configured, the default idle timeout is 1 hour. Setting it to 0 disables the timeout.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration idle_timeout = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getIdleTimeoutFieldBuilder() {
+        if (idleTimeoutBuilder_ == null) {
+          idleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getIdleTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          idleTimeout_ = null;
+        }
+        return idleTimeoutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25016,105 +25294,108 @@ public final class LoadBalancerOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/apploadbalancer/v1/load_b" +
       "alancer.proto\022\037yandex.cloud.apploadbalan" +
-      "cer.v1\032\037google/protobuf/timestamp.proto\032" +
-      "\035yandex/cloud/validation.proto\032-yandex/c" +
-      "loud/apploadbalancer/v1/logging.proto\0322y" +
-      "andex/cloud/apploadbalancer/v1/target_gr" +
-      "oup.proto\"\247\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014" +
-      "\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfol" +
-      "der_id\030\004 \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cl" +
-      "oud.apploadbalancer.v1.LoadBalancer.Labe" +
-      "lsEntry\022D\n\006status\030\006 \001(\01624.yandex.cloud.a" +
-      "pploadbalancer.v1.LoadBalancer.Status\022\021\n" +
-      "\tregion_id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022<\n\t" +
-      "listeners\030\t \003(\0132).yandex.cloud.apploadba" +
-      "lancer.v1.Listener\022L\n\021allocation_policy\030" +
-      "\n \001(\01321.yandex.cloud.apploadbalancer.v1." +
-      "AllocationPolicy\022\024\n\014log_group_id\030\013 \001(\t\022\032" +
-      "\n\022security_group_ids\030\014 \003(\t\022.\n\ncreated_at" +
-      "\030\r \001(\0132\032.google.protobuf.Timestamp\022K\n\021au" +
-      "to_scale_policy\030\016 \001(\01320.yandex.cloud.app" +
-      "loadbalancer.v1.AutoScalePolicy\022@\n\013log_o" +
-      "ptions\030\017 \001(\0132+.yandex.cloud.apploadbalan" +
-      "cer.v1.LogOptions\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"q\n\006Status\022\026\n\022ST" +
-      "ATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010STAR" +
-      "TING\020\002\022\n\n\006ACTIVE\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOP" +
-      "PED\020\005\022\014\n\010DELETING\020\006\"\237\002\n\007Address\022U\n\025exter" +
-      "nal_ipv4_address\030\001 \001(\01324.yandex.cloud.ap" +
-      "ploadbalancer.v1.ExternalIpv4AddressH\000\022U" +
-      "\n\025internal_ipv4_address\030\002 \001(\01324.yandex.c" +
-      "loud.apploadbalancer.v1.InternalIpv4Addr" +
-      "essH\000\022U\n\025external_ipv6_address\030\003 \001(\01324.y" +
-      "andex.cloud.apploadbalancer.v1.ExternalI" +
-      "pv6AddressH\000B\017\n\007address\022\004\300\3011\001\"&\n\023Externa" +
-      "lIpv4Address\022\017\n\007address\030\001 \001(\t\"9\n\023Interna" +
-      "lIpv4Address\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_" +
-      "id\030\002 \001(\t\"&\n\023ExternalIpv6Address\022\017\n\007addre" +
-      "ss\030\001 \001(\t\"M\n\010Location\022\025\n\007zone_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\021\n\tsubnet_id\030\002 \001(\t\022\027\n\017disable_traffi" +
-      "c\030\003 \001(\010\"]\n\020AllocationPolicy\022I\n\tlocations" +
-      "\030\001 \003(\0132).yandex.cloud.apploadbalancer.v1" +
-      ".LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listener\022\022\n\004n" +
-      "ame\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(\0132).yan" +
-      "dex.cloud.apploadbalancer.v1.Endpoint\022=\n" +
-      "\004http\030\003 \001(\0132-.yandex.cloud.apploadbalanc" +
-      "er.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\0132,.yand" +
-      "ex.cloud.apploadbalancer.v1.TlsListenerH" +
-      "\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud.appload" +
-      "balancer.v1.StreamListenerH\000B\020\n\010listener" +
-      "\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001 \003(\0132(." +
-      "yandex.cloud.apploadbalancer.v1.AddressB" +
-      "\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-6553" +
-      "5\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001(\0132,.ya" +
-      "ndex.cloud.apploadbalancer.v1.HttpHandle" +
-      "r\022=\n\tredirects\030\002 \001(\0132*.yandex.cloud.appl" +
-      "oadbalancer.v1.Redirects\"\232\001\n\013TlsListener" +
-      "\022J\n\017default_handler\030\001 \001(\0132+.yandex.cloud" +
-      ".apploadbalancer.v1.TlsHandlerB\004\350\3071\001\022?\n\014" +
-      "sni_handlers\030\002 \003(\0132).yandex.cloud.apploa" +
-      "dbalancer.v1.SniMatch\"W\n\016StreamListener\022" +
-      "E\n\007handler\030\001 \001(\0132..yandex.cloud.apploadb" +
-      "alancer.v1.StreamHandlerB\004\350\3071\001\".\n\014Http2O" +
-      "ptions\022\036\n\026max_concurrent_streams\030\001 \001(\003\"/" +
-      "\n\rStreamHandler\022\036\n\020backend_group_id\030\001 \001(" +
-      "\tB\004\350\3071\001\"\266\001\n\013HttpHandler\022\026\n\016http_router_i" +
-      "d\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex." +
-      "cloud.apploadbalancer.v1.Http2OptionsH\000\022" +
-      "\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022rewrite_reque" +
-      "st_id\030\004 \001(\010B\023\n\021protocol_settings\"\"\n\tRedi" +
-      "rects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010SniMatc" +
-      "h\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\002 " +
-      "\003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.yandex.cl" +
-      "oud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"" +
-      "\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 \001(\0132,.y" +
-      "andex.cloud.apploadbalancer.v1.HttpHandl" +
-      "erH\000\022H\n\016stream_handler\030\004 \001(\0132..yandex.cl" +
-      "oud.apploadbalancer.v1.StreamHandlerH\000\022\037" +
-      "\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017\n\007handl" +
-      "er\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 \001(\013" +
-      "2>.yandex.cloud.apploadbalancer.v1.Targe" +
-      "tState.HealthcheckStatus\022=\n\006target\030\002 \001(\013" +
-      "2\'.yandex.cloud.apploadbalancer.v1.Targe" +
-      "tB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_sta" +
-      "tuses\030\001 \003(\0132B.yandex.cloud.apploadbalanc" +
-      "er.v1.TargetState.ZoneHealthcheckStatus\032" +
-      "\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.cloud." +
-      "apploadbalancer.v1.TargetState.Status\022\030\n" +
-      "\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022STA" +
-      "TUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PARTIA" +
-      "LLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAINING" +
-      "\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScalePolicy\022!\n\rmi" +
-      "n_zone_size\030\001 \001(\003B\n\372\3071\0060-1000\022\034\n\010max_siz" +
-      "e\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yandex.cloud.api." +
-      "apploadbalancer.v1ZSgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/apploadbala" +
-      "ncer/v1;apploadbalancerb\006proto3"
+      "cer.v1\032\036google/protobuf/duration.proto\032\037" +
+      "google/protobuf/timestamp.proto\032\035yandex/" +
+      "cloud/validation.proto\032-yandex/cloud/app" +
+      "loadbalancer/v1/logging.proto\0322yandex/cl" +
+      "oud/apploadbalancer/v1/target_group.prot" +
+      "o\"\247\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
+      " \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\004" +
+      " \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cloud.appl" +
+      "oadbalancer.v1.LoadBalancer.LabelsEntry\022" +
+      "D\n\006status\030\006 \001(\01624.yandex.cloud.apploadba" +
+      "lancer.v1.LoadBalancer.Status\022\021\n\tregion_" +
+      "id\030\007 \001(\t\022\022\n\nnetwork_id\030\010 \001(\t\022<\n\tlistener" +
+      "s\030\t \003(\0132).yandex.cloud.apploadbalancer.v" +
+      "1.Listener\022L\n\021allocation_policy\030\n \001(\01321." +
+      "yandex.cloud.apploadbalancer.v1.Allocati" +
+      "onPolicy\022\024\n\014log_group_id\030\013 \001(\t\022\032\n\022securi" +
+      "ty_group_ids\030\014 \003(\t\022.\n\ncreated_at\030\r \001(\0132\032" +
+      ".google.protobuf.Timestamp\022K\n\021auto_scale" +
+      "_policy\030\016 \001(\01320.yandex.cloud.apploadbala" +
+      "ncer.v1.AutoScalePolicy\022@\n\013log_options\030\017" +
+      " \001(\0132+.yandex.cloud.apploadbalancer.v1.L" +
+      "ogOptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"q\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n" +
+      "\n\006ACTIVE\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n" +
+      "\010DELETING\020\006\"\237\002\n\007Address\022U\n\025external_ipv4" +
+      "_address\030\001 \001(\01324.yandex.cloud.apploadbal" +
+      "ancer.v1.ExternalIpv4AddressH\000\022U\n\025intern" +
+      "al_ipv4_address\030\002 \001(\01324.yandex.cloud.app" +
+      "loadbalancer.v1.InternalIpv4AddressH\000\022U\n" +
+      "\025external_ipv6_address\030\003 \001(\01324.yandex.cl" +
+      "oud.apploadbalancer.v1.ExternalIpv6Addre" +
+      "ssH\000B\017\n\007address\022\004\300\3011\001\"&\n\023ExternalIpv4Add" +
+      "ress\022\017\n\007address\030\001 \001(\t\"9\n\023InternalIpv4Add" +
+      "ress\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t" +
+      "\"&\n\023ExternalIpv6Address\022\017\n\007address\030\001 \001(\t" +
+      "\"M\n\010Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\ts" +
+      "ubnet_id\030\002 \001(\t\022\027\n\017disable_traffic\030\003 \001(\010\"" +
+      "]\n\020AllocationPolicy\022I\n\tlocations\030\001 \003(\0132)" +
+      ".yandex.cloud.apploadbalancer.v1.Locatio" +
+      "nB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listener\022\022\n\004name\030\001 \001(" +
+      "\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(\0132).yandex.clou" +
+      "d.apploadbalancer.v1.Endpoint\022=\n\004http\030\003 " +
+      "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
+      "tpListenerH\000\022;\n\003tls\030\004 \001(\0132,.yandex.cloud" +
+      ".apploadbalancer.v1.TlsListenerH\000\022A\n\006str" +
+      "eam\030\005 \001(\0132/.yandex.cloud.apploadbalancer" +
+      ".v1.StreamListenerH\000B\020\n\010listener\022\004\300\3011\001\"q" +
+      "\n\010Endpoint\022C\n\taddresses\030\001 \003(\0132(.yandex.c" +
+      "loud.apploadbalancer.v1.AddressB\006\202\3101\002>0\022" +
+      " \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\214\001\n\014Ht" +
+      "tpListener\022=\n\007handler\030\001 \001(\0132,.yandex.clo" +
+      "ud.apploadbalancer.v1.HttpHandler\022=\n\tred" +
+      "irects\030\002 \001(\0132*.yandex.cloud.apploadbalan" +
+      "cer.v1.Redirects\"\232\001\n\013TlsListener\022J\n\017defa" +
+      "ult_handler\030\001 \001(\0132+.yandex.cloud.appload" +
+      "balancer.v1.TlsHandlerB\004\350\3071\001\022?\n\014sni_hand" +
+      "lers\030\002 \003(\0132).yandex.cloud.apploadbalance" +
+      "r.v1.SniMatch\"W\n\016StreamListener\022E\n\007handl" +
+      "er\030\001 \001(\0132..yandex.cloud.apploadbalancer." +
+      "v1.StreamHandlerB\004\350\3071\001\".\n\014Http2Options\022\036" +
+      "\n\026max_concurrent_streams\030\001 \001(\003\"`\n\rStream" +
+      "Handler\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "/\n\014idle_timeout\030\002 \001(\0132\031.google.protobuf." +
+      "Duration\"\266\001\n\013HttpHandler\022\026\n\016http_router_" +
+      "id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex" +
+      ".cloud.apploadbalancer.v1.Http2OptionsH\000" +
+      "\022\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022rewrite_requ" +
+      "est_id\030\004 \001(\010B\023\n\021protocol_settings\"\"\n\tRed" +
+      "irects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010SniMat" +
+      "ch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\002" +
+      " \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.yandex.c" +
+      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
+      "\"\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 \001(\0132,." +
+      "yandex.cloud.apploadbalancer.v1.HttpHand" +
+      "lerH\000\022H\n\016stream_handler\030\004 \001(\0132..yandex.c" +
+      "loud.apploadbalancer.v1.StreamHandlerH\000\022" +
+      "\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017\n\007hand" +
+      "ler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 \001(" +
+      "\0132>.yandex.cloud.apploadbalancer.v1.Targ" +
+      "etState.HealthcheckStatus\022=\n\006target\030\002 \001(" +
+      "\0132\'.yandex.cloud.apploadbalancer.v1.Targ" +
+      "etB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_st" +
+      "atuses\030\001 \003(\0132B.yandex.cloud.apploadbalan" +
+      "cer.v1.TargetState.ZoneHealthcheckStatus" +
+      "\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.cloud" +
+      ".apploadbalancer.v1.TargetState.Status\022\030" +
+      "\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022ST" +
+      "ATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PARTI" +
+      "ALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAININ" +
+      "G\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScalePolicy\022!\n\rm" +
+      "in_zone_size\030\001 \001(\003B\n\372\3071\0060-1000\022\034\n\010max_si" +
+      "ze\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yandex.cloud.api" +
+      ".apploadbalancer.v1ZSgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/apploadbal" +
+      "ancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor(),
@@ -25209,7 +25490,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_StreamHandler_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StreamHandler_descriptor,
-        new java.lang.String[] { "BackendGroupId", });
+        new java.lang.String[] { "BackendGroupId", "IdleTimeout", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpHandler_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpHandler_fieldAccessorTable = new
@@ -25267,6 +25548,7 @@ public final class LoadBalancerOuterClass {
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.apploadbalancer.v1.Logging.getDescriptor();

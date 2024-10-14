@@ -13486,6 +13486,94 @@ public final class Jobs {
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder getLocalModulesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Python version reduced to major.minor
+     * </pre>
+     *
+     * <code>string python_version = 3;</code>
+     * @return The pythonVersion.
+     */
+    java.lang.String getPythonVersion();
+    /**
+     * <pre>
+     * Python version reduced to major.minor
+     * </pre>
+     *
+     * <code>string python_version = 3;</code>
+     * @return The bytes for pythonVersion.
+     */
+    com.google.protobuf.ByteString
+        getPythonVersionBytes();
+
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @return A list containing the requirements.
+     */
+    java.util.List<java.lang.String>
+        getRequirementsList();
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @return The count of requirements.
+     */
+    int getRequirementsCount();
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @param index The index of the element to return.
+     * @return The requirements at the given index.
+     */
+    java.lang.String getRequirements(int index);
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requirements at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRequirementsBytes(int index);
+
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     * @return Whether the pipOptions field is set.
+     */
+    boolean hasPipOptions();
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     * @return The pipOptions.
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getPipOptions();
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder getPipOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.PythonEnv}
@@ -13502,6 +13590,8 @@ public final class Jobs {
     private PythonEnv() {
       condaYaml_ = "";
       localModules_ = java.util.Collections.emptyList();
+      pythonVersion_ = "";
+      requirements_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -13550,6 +13640,34 @@ public final class Jobs {
                   input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.File.parser(), extensionRegistry));
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pythonVersion_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                requirements_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              requirements_.add(s);
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder subBuilder = null;
+              if (pipOptions_ != null) {
+                subBuilder = pipOptions_.toBuilder();
+              }
+              pipOptions_ = input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pipOptions_);
+                pipOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -13567,6 +13685,9 @@ public final class Jobs {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           localModules_ = java.util.Collections.unmodifiableList(localModules_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          requirements_ = requirements_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -13691,6 +13812,141 @@ public final class Jobs {
       return localModules_.get(index);
     }
 
+    public static final int PYTHON_VERSION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pythonVersion_;
+    /**
+     * <pre>
+     * Python version reduced to major.minor
+     * </pre>
+     *
+     * <code>string python_version = 3;</code>
+     * @return The pythonVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getPythonVersion() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pythonVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Python version reduced to major.minor
+     * </pre>
+     *
+     * <code>string python_version = 3;</code>
+     * @return The bytes for pythonVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPythonVersionBytes() {
+      java.lang.Object ref = pythonVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pythonVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUIREMENTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList requirements_;
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @return A list containing the requirements.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRequirementsList() {
+      return requirements_;
+    }
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @return The count of requirements.
+     */
+    public int getRequirementsCount() {
+      return requirements_.size();
+    }
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @param index The index of the element to return.
+     * @return The requirements at the given index.
+     */
+    public java.lang.String getRequirements(int index) {
+      return requirements_.get(index);
+    }
+    /**
+     * <pre>
+     * List of pip requirements
+     * </pre>
+     *
+     * <code>repeated string requirements = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the requirements at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRequirementsBytes(int index) {
+      return requirements_.getByteString(index);
+    }
+
+    public static final int PIP_OPTIONS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions pipOptions_;
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     * @return Whether the pipOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipOptions() {
+      return pipOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     * @return The pipOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getPipOptions() {
+      return pipOptions_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.getDefaultInstance() : pipOptions_;
+    }
+    /**
+     * <pre>
+     * Pip install options
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder getPipOptionsOrBuilder() {
+      return getPipOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13711,6 +13967,15 @@ public final class Jobs {
       for (int i = 0; i < localModules_.size(); i++) {
         output.writeMessage(2, localModules_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pythonVersion_);
+      }
+      for (int i = 0; i < requirements_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, requirements_.getRaw(i));
+      }
+      if (pipOptions_ != null) {
+        output.writeMessage(5, getPipOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13726,6 +13991,21 @@ public final class Jobs {
       for (int i = 0; i < localModules_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, localModules_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pythonVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pythonVersion_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < requirements_.size(); i++) {
+          dataSize += computeStringSizeNoTag(requirements_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRequirementsList().size();
+      }
+      if (pipOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPipOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13746,6 +14026,15 @@ public final class Jobs {
           .equals(other.getCondaYaml())) return false;
       if (!getLocalModulesList()
           .equals(other.getLocalModulesList())) return false;
+      if (!getPythonVersion()
+          .equals(other.getPythonVersion())) return false;
+      if (!getRequirementsList()
+          .equals(other.getRequirementsList())) return false;
+      if (hasPipOptions() != other.hasPipOptions()) return false;
+      if (hasPipOptions()) {
+        if (!getPipOptions()
+            .equals(other.getPipOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13762,6 +14051,16 @@ public final class Jobs {
       if (getLocalModulesCount() > 0) {
         hash = (37 * hash) + LOCAL_MODULES_FIELD_NUMBER;
         hash = (53 * hash) + getLocalModulesList().hashCode();
+      }
+      hash = (37 * hash) + PYTHON_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getPythonVersion().hashCode();
+      if (getRequirementsCount() > 0) {
+        hash = (37 * hash) + REQUIREMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequirementsList().hashCode();
+      }
+      if (hasPipOptions()) {
+        hash = (37 * hash) + PIP_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPipOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13905,6 +14204,16 @@ public final class Jobs {
         } else {
           localModulesBuilder_.clear();
         }
+        pythonVersion_ = "";
+
+        requirements_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (pipOptionsBuilder_ == null) {
+          pipOptions_ = null;
+        } else {
+          pipOptions_ = null;
+          pipOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -13941,6 +14250,17 @@ public final class Jobs {
           result.localModules_ = localModules_;
         } else {
           result.localModules_ = localModulesBuilder_.build();
+        }
+        result.pythonVersion_ = pythonVersion_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          requirements_ = requirements_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.requirements_ = requirements_;
+        if (pipOptionsBuilder_ == null) {
+          result.pipOptions_ = pipOptions_;
+        } else {
+          result.pipOptions_ = pipOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -14019,6 +14339,23 @@ public final class Jobs {
               localModulesBuilder_.addAllMessages(other.localModules_);
             }
           }
+        }
+        if (!other.getPythonVersion().isEmpty()) {
+          pythonVersion_ = other.pythonVersion_;
+          onChanged();
+        }
+        if (!other.requirements_.isEmpty()) {
+          if (requirements_.isEmpty()) {
+            requirements_ = other.requirements_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureRequirementsIsMutable();
+            requirements_.addAll(other.requirements_);
+          }
+          onChanged();
+        }
+        if (other.hasPipOptions()) {
+          mergePipOptions(other.getPipOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14457,6 +14794,403 @@ public final class Jobs {
         }
         return localModulesBuilder_;
       }
+
+      private java.lang.Object pythonVersion_ = "";
+      /**
+       * <pre>
+       * Python version reduced to major.minor
+       * </pre>
+       *
+       * <code>string python_version = 3;</code>
+       * @return The pythonVersion.
+       */
+      public java.lang.String getPythonVersion() {
+        java.lang.Object ref = pythonVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pythonVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version reduced to major.minor
+       * </pre>
+       *
+       * <code>string python_version = 3;</code>
+       * @return The bytes for pythonVersion.
+       */
+      public com.google.protobuf.ByteString
+          getPythonVersionBytes() {
+        java.lang.Object ref = pythonVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pythonVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Python version reduced to major.minor
+       * </pre>
+       *
+       * <code>string python_version = 3;</code>
+       * @param value The pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pythonVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version reduced to major.minor
+       * </pre>
+       *
+       * <code>string python_version = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPythonVersion() {
+        
+        pythonVersion_ = getDefaultInstance().getPythonVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Python version reduced to major.minor
+       * </pre>
+       *
+       * <code>string python_version = 3;</code>
+       * @param value The bytes for pythonVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPythonVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pythonVersion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList requirements_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRequirementsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          requirements_ = new com.google.protobuf.LazyStringArrayList(requirements_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @return A list containing the requirements.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRequirementsList() {
+        return requirements_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @return The count of requirements.
+       */
+      public int getRequirementsCount() {
+        return requirements_.size();
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param index The index of the element to return.
+       * @return The requirements at the given index.
+       */
+      public java.lang.String getRequirements(int index) {
+        return requirements_.get(index);
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the requirements at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRequirementsBytes(int index) {
+        return requirements_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The requirements to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequirements(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRequirementsIsMutable();
+        requirements_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param value The requirements to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRequirements(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRequirementsIsMutable();
+        requirements_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param values The requirements to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRequirements(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRequirementsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, requirements_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequirements() {
+        requirements_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of pip requirements
+       * </pre>
+       *
+       * <code>repeated string requirements = 4;</code>
+       * @param value The bytes of the requirements to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRequirementsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureRequirementsIsMutable();
+        requirements_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions pipOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder> pipOptionsBuilder_;
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       * @return Whether the pipOptions field is set.
+       */
+      public boolean hasPipOptions() {
+        return pipOptionsBuilder_ != null || pipOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       * @return The pipOptions.
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getPipOptions() {
+        if (pipOptionsBuilder_ == null) {
+          return pipOptions_ == null ? yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.getDefaultInstance() : pipOptions_;
+        } else {
+          return pipOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public Builder setPipOptions(yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions value) {
+        if (pipOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pipOptions_ = value;
+          onChanged();
+        } else {
+          pipOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public Builder setPipOptions(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder builderForValue) {
+        if (pipOptionsBuilder_ == null) {
+          pipOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          pipOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public Builder mergePipOptions(yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions value) {
+        if (pipOptionsBuilder_ == null) {
+          if (pipOptions_ != null) {
+            pipOptions_ =
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.newBuilder(pipOptions_).mergeFrom(value).buildPartial();
+          } else {
+            pipOptions_ = value;
+          }
+          onChanged();
+        } else {
+          pipOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public Builder clearPipOptions() {
+        if (pipOptionsBuilder_ == null) {
+          pipOptions_ = null;
+          onChanged();
+        } else {
+          pipOptions_ = null;
+          pipOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder getPipOptionsBuilder() {
+        
+        onChanged();
+        return getPipOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder getPipOptionsOrBuilder() {
+        if (pipOptionsBuilder_ != null) {
+          return pipOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return pipOptions_ == null ?
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.getDefaultInstance() : pipOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Pip install options
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.jobs.PipOptions pip_options = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder> 
+          getPipOptionsFieldBuilder() {
+        if (pipOptionsBuilder_ == null) {
+          pipOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder>(
+                  getPipOptions(),
+                  getParentForChildren(),
+                  isClean());
+          pipOptions_ = null;
+        }
+        return pipOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14505,6 +15239,1274 @@ public final class Jobs {
 
     @java.lang.Override
     public yandex.cloud.api.datasphere.v2.jobs.Jobs.PythonEnv getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PipOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.jobs.PipOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * --index-url option
+     * </pre>
+     *
+     * <code>string index_url = 1;</code>
+     * @return The indexUrl.
+     */
+    java.lang.String getIndexUrl();
+    /**
+     * <pre>
+     * --index-url option
+     * </pre>
+     *
+     * <code>string index_url = 1;</code>
+     * @return The bytes for indexUrl.
+     */
+    com.google.protobuf.ByteString
+        getIndexUrlBytes();
+
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @return A list containing the extraIndexUrls.
+     */
+    java.util.List<java.lang.String>
+        getExtraIndexUrlsList();
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @return The count of extraIndexUrls.
+     */
+    int getExtraIndexUrlsCount();
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @param index The index of the element to return.
+     * @return The extraIndexUrls at the given index.
+     */
+    java.lang.String getExtraIndexUrls(int index);
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the extraIndexUrls at the given index.
+     */
+    com.google.protobuf.ByteString
+        getExtraIndexUrlsBytes(int index);
+
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @return A list containing the trustedHosts.
+     */
+    java.util.List<java.lang.String>
+        getTrustedHostsList();
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @return The count of trustedHosts.
+     */
+    int getTrustedHostsCount();
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @param index The index of the element to return.
+     * @return The trustedHosts at the given index.
+     */
+    java.lang.String getTrustedHosts(int index);
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTrustedHostsBytes(int index);
+
+    /**
+     * <pre>
+     * --no-deps option
+     * </pre>
+     *
+     * <code>bool no_deps = 4;</code>
+     * @return The noDeps.
+     */
+    boolean getNoDeps();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.PipOptions}
+   */
+  public static final class PipOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.jobs.PipOptions)
+      PipOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PipOptions.newBuilder() to construct.
+    private PipOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PipOptions() {
+      indexUrl_ = "";
+      extraIndexUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      trustedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PipOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PipOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              indexUrl_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                extraIndexUrls_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              extraIndexUrls_.add(s);
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                trustedHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              trustedHosts_.add(s);
+              break;
+            }
+            case 32: {
+
+              noDeps_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          extraIndexUrls_ = extraIndexUrls_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          trustedHosts_ = trustedHosts_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder.class);
+    }
+
+    public static final int INDEX_URL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object indexUrl_;
+    /**
+     * <pre>
+     * --index-url option
+     * </pre>
+     *
+     * <code>string index_url = 1;</code>
+     * @return The indexUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexUrl() {
+      java.lang.Object ref = indexUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        indexUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * --index-url option
+     * </pre>
+     *
+     * <code>string index_url = 1;</code>
+     * @return The bytes for indexUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexUrlBytes() {
+      java.lang.Object ref = indexUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        indexUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTRA_INDEX_URLS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList extraIndexUrls_;
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @return A list containing the extraIndexUrls.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getExtraIndexUrlsList() {
+      return extraIndexUrls_;
+    }
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @return The count of extraIndexUrls.
+     */
+    public int getExtraIndexUrlsCount() {
+      return extraIndexUrls_.size();
+    }
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @param index The index of the element to return.
+     * @return The extraIndexUrls at the given index.
+     */
+    public java.lang.String getExtraIndexUrls(int index) {
+      return extraIndexUrls_.get(index);
+    }
+    /**
+     * <pre>
+     * --extra-index-urls option
+     * </pre>
+     *
+     * <code>repeated string extra_index_urls = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the extraIndexUrls at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getExtraIndexUrlsBytes(int index) {
+      return extraIndexUrls_.getByteString(index);
+    }
+
+    public static final int TRUSTED_HOSTS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList trustedHosts_;
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @return A list containing the trustedHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrustedHostsList() {
+      return trustedHosts_;
+    }
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @return The count of trustedHosts.
+     */
+    public int getTrustedHostsCount() {
+      return trustedHosts_.size();
+    }
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @param index The index of the element to return.
+     * @return The trustedHosts at the given index.
+     */
+    public java.lang.String getTrustedHosts(int index) {
+      return trustedHosts_.get(index);
+    }
+    /**
+     * <pre>
+     * --trusted-hosts option
+     * </pre>
+     *
+     * <code>repeated string trusted_hosts = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTrustedHostsBytes(int index) {
+      return trustedHosts_.getByteString(index);
+    }
+
+    public static final int NO_DEPS_FIELD_NUMBER = 4;
+    private boolean noDeps_;
+    /**
+     * <pre>
+     * --no-deps option
+     * </pre>
+     *
+     * <code>bool no_deps = 4;</code>
+     * @return The noDeps.
+     */
+    @java.lang.Override
+    public boolean getNoDeps() {
+      return noDeps_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(indexUrl_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, indexUrl_);
+      }
+      for (int i = 0; i < extraIndexUrls_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, extraIndexUrls_.getRaw(i));
+      }
+      for (int i = 0; i < trustedHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, trustedHosts_.getRaw(i));
+      }
+      if (noDeps_ != false) {
+        output.writeBool(4, noDeps_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(indexUrl_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, indexUrl_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < extraIndexUrls_.size(); i++) {
+          dataSize += computeStringSizeNoTag(extraIndexUrls_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getExtraIndexUrlsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < trustedHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(trustedHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTrustedHostsList().size();
+      }
+      if (noDeps_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, noDeps_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions other = (yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions) obj;
+
+      if (!getIndexUrl()
+          .equals(other.getIndexUrl())) return false;
+      if (!getExtraIndexUrlsList()
+          .equals(other.getExtraIndexUrlsList())) return false;
+      if (!getTrustedHostsList()
+          .equals(other.getTrustedHostsList())) return false;
+      if (getNoDeps()
+          != other.getNoDeps()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_URL_FIELD_NUMBER;
+      hash = (53 * hash) + getIndexUrl().hashCode();
+      if (getExtraIndexUrlsCount() > 0) {
+        hash = (37 * hash) + EXTRA_INDEX_URLS_FIELD_NUMBER;
+        hash = (53 * hash) + getExtraIndexUrlsList().hashCode();
+      }
+      if (getTrustedHostsCount() > 0) {
+        hash = (37 * hash) + TRUSTED_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrustedHostsList().hashCode();
+      }
+      hash = (37 * hash) + NO_DEPS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getNoDeps());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.PipOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.jobs.PipOptions)
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.class, yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        indexUrl_ = "";
+
+        extraIndexUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        trustedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        noDeps_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions build() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions buildPartial() {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions(this);
+        int from_bitField0_ = bitField0_;
+        result.indexUrl_ = indexUrl_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          extraIndexUrls_ = extraIndexUrls_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.extraIndexUrls_ = extraIndexUrls_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          trustedHosts_ = trustedHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.trustedHosts_ = trustedHosts_;
+        result.noDeps_ = noDeps_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions other) {
+        if (other == yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions.getDefaultInstance()) return this;
+        if (!other.getIndexUrl().isEmpty()) {
+          indexUrl_ = other.indexUrl_;
+          onChanged();
+        }
+        if (!other.extraIndexUrls_.isEmpty()) {
+          if (extraIndexUrls_.isEmpty()) {
+            extraIndexUrls_ = other.extraIndexUrls_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureExtraIndexUrlsIsMutable();
+            extraIndexUrls_.addAll(other.extraIndexUrls_);
+          }
+          onChanged();
+        }
+        if (!other.trustedHosts_.isEmpty()) {
+          if (trustedHosts_.isEmpty()) {
+            trustedHosts_ = other.trustedHosts_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTrustedHostsIsMutable();
+            trustedHosts_.addAll(other.trustedHosts_);
+          }
+          onChanged();
+        }
+        if (other.getNoDeps() != false) {
+          setNoDeps(other.getNoDeps());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object indexUrl_ = "";
+      /**
+       * <pre>
+       * --index-url option
+       * </pre>
+       *
+       * <code>string index_url = 1;</code>
+       * @return The indexUrl.
+       */
+      public java.lang.String getIndexUrl() {
+        java.lang.Object ref = indexUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          indexUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * --index-url option
+       * </pre>
+       *
+       * <code>string index_url = 1;</code>
+       * @return The bytes for indexUrl.
+       */
+      public com.google.protobuf.ByteString
+          getIndexUrlBytes() {
+        java.lang.Object ref = indexUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          indexUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * --index-url option
+       * </pre>
+       *
+       * <code>string index_url = 1;</code>
+       * @param value The indexUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        indexUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --index-url option
+       * </pre>
+       *
+       * <code>string index_url = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexUrl() {
+        
+        indexUrl_ = getDefaultInstance().getIndexUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --index-url option
+       * </pre>
+       *
+       * <code>string index_url = 1;</code>
+       * @param value The bytes for indexUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        indexUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList extraIndexUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureExtraIndexUrlsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          extraIndexUrls_ = new com.google.protobuf.LazyStringArrayList(extraIndexUrls_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @return A list containing the extraIndexUrls.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getExtraIndexUrlsList() {
+        return extraIndexUrls_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @return The count of extraIndexUrls.
+       */
+      public int getExtraIndexUrlsCount() {
+        return extraIndexUrls_.size();
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param index The index of the element to return.
+       * @return The extraIndexUrls at the given index.
+       */
+      public java.lang.String getExtraIndexUrls(int index) {
+        return extraIndexUrls_.get(index);
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the extraIndexUrls at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getExtraIndexUrlsBytes(int index) {
+        return extraIndexUrls_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The extraIndexUrls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExtraIndexUrls(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExtraIndexUrlsIsMutable();
+        extraIndexUrls_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param value The extraIndexUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExtraIndexUrls(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureExtraIndexUrlsIsMutable();
+        extraIndexUrls_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param values The extraIndexUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllExtraIndexUrls(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureExtraIndexUrlsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, extraIndexUrls_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExtraIndexUrls() {
+        extraIndexUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --extra-index-urls option
+       * </pre>
+       *
+       * <code>repeated string extra_index_urls = 2;</code>
+       * @param value The bytes of the extraIndexUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addExtraIndexUrlsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureExtraIndexUrlsIsMutable();
+        extraIndexUrls_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList trustedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTrustedHostsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          trustedHosts_ = new com.google.protobuf.LazyStringArrayList(trustedHosts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @return A list containing the trustedHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTrustedHostsList() {
+        return trustedHosts_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @return The count of trustedHosts.
+       */
+      public int getTrustedHostsCount() {
+        return trustedHosts_.size();
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param index The index of the element to return.
+       * @return The trustedHosts at the given index.
+       */
+      public java.lang.String getTrustedHosts(int index) {
+        return trustedHosts_.get(index);
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the trustedHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTrustedHostsBytes(int index) {
+        return trustedHosts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The trustedHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustedHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustedHostsIsMutable();
+        trustedHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param value The trustedHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustedHostsIsMutable();
+        trustedHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param values The trustedHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTrustedHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTrustedHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trustedHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustedHosts() {
+        trustedHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --trusted-hosts option
+       * </pre>
+       *
+       * <code>repeated string trusted_hosts = 3;</code>
+       * @param value The bytes of the trustedHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTrustedHostsIsMutable();
+        trustedHosts_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean noDeps_ ;
+      /**
+       * <pre>
+       * --no-deps option
+       * </pre>
+       *
+       * <code>bool no_deps = 4;</code>
+       * @return The noDeps.
+       */
+      @java.lang.Override
+      public boolean getNoDeps() {
+        return noDeps_;
+      }
+      /**
+       * <pre>
+       * --no-deps option
+       * </pre>
+       *
+       * <code>bool no_deps = 4;</code>
+       * @param value The noDeps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoDeps(boolean value) {
+        
+        noDeps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * --no-deps option
+       * </pre>
+       *
+       * <code>bool no_deps = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNoDeps() {
+        
+        noDeps_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.jobs.PipOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.jobs.PipOptions)
+    private static final yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PipOptions>
+        PARSER = new com.google.protobuf.AbstractParser<PipOptions>() {
+      @java.lang.Override
+      public PipOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PipOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PipOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PipOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.PipOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24229,6 +26231,11 @@ public final class Jobs {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24318,53 +26325,58 @@ public final class Jobs {
       "DockerImageSpec\022\021\n\timage_url\030\001 \001(\t\022\020\n\010us" +
       "ername\030\002 \001(\t\022\035\n\023password_plain_text\030\003 \001(" +
       "\tH\000\022!\n\027password_ds_secret_name\030\004 \001(\tH\000B\n" +
-      "\n\010password\"]\n\tPythonEnv\022\022\n\nconda_yaml\030\001 " +
-      "\001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.clou" +
-      "d.datasphere.v2.jobs.File\"\323\001\n\021OutputData" +
-      "setDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
-      "(\t\022N\n\006labels\030\003 \003(\0132>.yandex.cloud.datasp" +
-      "here.v2.jobs.OutputDatasetDesc.LabelsEnt" +
-      "ry\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005 \001(\t\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "]\n\rOutputDataset\022@\n\004desc\030\001 \001(\01322.yandex." +
+      "\n\010password\"\315\001\n\tPythonEnv\022\022\n\nconda_yaml\030\001" +
+      " \001(\t\022<\n\rlocal_modules\030\002 \003(\0132%.yandex.clo" +
+      "ud.datasphere.v2.jobs.File\022\026\n\016python_ver" +
+      "sion\030\003 \001(\t\022\024\n\014requirements\030\004 \003(\t\022@\n\013pip_" +
+      "options\030\005 \001(\0132+.yandex.cloud.datasphere." +
+      "v2.jobs.PipOptions\"a\n\nPipOptions\022\021\n\tinde" +
+      "x_url\030\001 \001(\t\022\030\n\020extra_index_urls\030\002 \003(\t\022\025\n" +
+      "\rtrusted_hosts\030\003 \003(\t\022\017\n\007no_deps\030\004 \001(\010\"\323\001" +
+      "\n\021OutputDatasetDesc\022\014\n\004name\030\001 \001(\t\022\023\n\013des" +
+      "cription\030\002 \001(\t\022N\n\006labels\030\003 \003(\0132>.yandex." +
       "cloud.datasphere.v2.jobs.OutputDatasetDe" +
-      "sc\022\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004na" +
-      "me\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022/\n\013finish" +
-      "ed_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022" +
-      ":\n\006status\030\006 \001(\0162*.yandex.cloud.dataspher" +
-      "e.v2.jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rc" +
-      "reated_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F" +
-      "\n\016job_parameters\030\n \001(\0132..yandex.cloud.da" +
-      "tasphere.v2.jobs.JobParameters\0223\n\017data_e" +
-      "xpires_at\030\013 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_file" +
-      "s\030\r \003(\0132%.yandex.cloud.datasphere.v2.job" +
-      "s.File\0228\n\tlog_files\030\016 \003(\0132%.yandex.cloud" +
-      ".datasphere.v2.jobs.File\022?\n\020diagnostic_f" +
-      "iles\030\017 \003(\0132%.yandex.cloud.datasphere.v2." +
-      "jobs.File\022\027\n\017data_size_bytes\030\020 \001(\003\022.\n\nst" +
-      "arted_at\030\021 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\026\n\016status_details\030\022 \001(\t\022V\n\032actual_clo" +
-      "ud_instance_type\030\023 \001(\01322.yandex.cloud.da" +
-      "tasphere.v2.jobs.CloudInstanceType\022\025\n\rpa" +
-      "rent_job_id\030\024 \001(\t\022E\n\013file_errors\030\025 \003(\01320" +
-      ".yandex.cloud.datasphere.v2.jobs.FileUpl" +
-      "oadError\022G\n\017output_datasets\030\026 \003(\0132..yand" +
-      "ex.cloud.datasphere.v2.jobs.OutputDatase" +
-      "t\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003\"X\n\032G" +
-      "racefulShutdownParameters\022*\n\007timeout\030\001 \001" +
-      "(\0132\031.google.protobuf.Duration\022\016\n\006signal\030" +
-      "\002 \001(\003*O\n\023FileCompressionType\022%\n!FILE_COM" +
-      "PRESSION_TYPE_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022\007\n" +
-      "\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_STATUS_UNSPE" +
-      "CIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n" +
-      "\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERRO" +
-      "R\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCELLING\020\007B{\n#ya" +
-      "ndex.cloud.api.datasphere.v2.jobsB\004JobsZ" +
-      "Ngithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/datasphere/v2/jobs;datasphereb" +
-      "\006proto3"
+      "sc.LabelsEntry\022\017\n\007size_gb\030\004 \001(\003\022\013\n\003var\030\005" +
+      " \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"]\n\rOutputDataset\022@\n\004desc\030\001 \001" +
+      "(\01322.yandex.cloud.datasphere.v2.jobs.Out" +
+      "putDatasetDesc\022\n\n\002id\030\002 \001(\t\"\260\007\n\003Job\022\n\n\002id" +
+      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncr" +
+      "eated_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022/\n\013finished_at\030\005 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022:\n\006status\030\006 \001(\0162*.yandex.clo" +
+      "ud.datasphere.v2.jobs.JobStatus\022\016\n\006confi" +
+      "g\030\007 \001(\t\022\025\n\rcreated_by_id\030\010 \001(\t\022\022\n\nprojec" +
+      "t_id\030\t \001(\t\022F\n\016job_parameters\030\n \001(\0132..yan" +
+      "dex.cloud.datasphere.v2.jobs.JobParamete" +
+      "rs\0223\n\017data_expires_at\030\013 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\024\n\014data_cleared\030\014 \001(\010\022;\n" +
+      "\014output_files\030\r \003(\0132%.yandex.cloud.datas" +
+      "phere.v2.jobs.File\0228\n\tlog_files\030\016 \003(\0132%." +
+      "yandex.cloud.datasphere.v2.jobs.File\022?\n\020" +
+      "diagnostic_files\030\017 \003(\0132%.yandex.cloud.da" +
+      "tasphere.v2.jobs.File\022\027\n\017data_size_bytes" +
+      "\030\020 \001(\003\022.\n\nstarted_at\030\021 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\026\n\016status_details\030\022 \001(\t\022V" +
+      "\n\032actual_cloud_instance_type\030\023 \001(\01322.yan" +
+      "dex.cloud.datasphere.v2.jobs.CloudInstan" +
+      "ceType\022\025\n\rparent_job_id\030\024 \001(\t\022E\n\013file_er" +
+      "rors\030\025 \003(\01320.yandex.cloud.datasphere.v2." +
+      "jobs.FileUploadError\022G\n\017output_datasets\030" +
+      "\026 \003(\0132..yandex.cloud.datasphere.v2.jobs." +
+      "OutputDataset\" \n\tJobResult\022\023\n\013return_cod" +
+      "e\030\001 \001(\003\"X\n\032GracefulShutdownParameters\022*\n" +
+      "\007timeout\030\001 \001(\0132\031.google.protobuf.Duratio" +
+      "n\022\016\n\006signal\030\002 \001(\003*O\n\023FileCompressionType" +
+      "\022%\n!FILE_COMPRESSION_TYPE_UNSPECIFIED\020\000\022" +
+      "\010\n\004NONE\020\001\022\007\n\003ZIP\020\002*\221\001\n\tJobStatus\022\032\n\026JOB_" +
+      "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\tEX" +
+      "ECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUCCE" +
+      "SS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006\022\016\n\nCANCEL" +
+      "LING\020\007B{\n#yandex.cloud.api.datasphere.v2" +
+      ".jobsB\004JobsZNgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/datasphere/v2/jobs" +
+      ";datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24444,9 +26456,15 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_PythonEnv_descriptor,
-        new java.lang.String[] { "CondaYaml", "LocalModules", });
-    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor =
+        new java.lang.String[] { "CondaYaml", "LocalModules", "PythonVersion", "Requirements", "PipOptions", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_jobs_PipOptions_descriptor,
+        new java.lang.String[] { "IndexUrl", "ExtraIndexUrls", "TrustedHosts", "NoDeps", });
+    internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_descriptor,
@@ -24458,25 +26476,25 @@ public final class Jobs {
         internal_static_yandex_cloud_datasphere_v2_jobs_OutputDatasetDesc_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_OutputDataset_descriptor,
         new java.lang.String[] { "Desc", "Id", });
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor,
         new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", "LogFiles", "DiagnosticFiles", "DataSizeBytes", "StartedAt", "StatusDetails", "ActualCloudInstanceType", "ParentJobId", "FileErrors", "OutputDatasets", });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor,
         new java.lang.String[] { "ReturnCode", });
     internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_GracefulShutdownParameters_descriptor,

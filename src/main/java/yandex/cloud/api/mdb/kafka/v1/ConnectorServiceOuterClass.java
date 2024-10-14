@@ -46,7 +46,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -56,7 +56,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -209,7 +209,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -231,7 +231,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -676,7 +676,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -697,7 +697,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -719,7 +719,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -739,7 +739,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -754,7 +754,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -3731,7 +3731,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being created.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -3740,7 +3740,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being created.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -3890,7 +3890,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being created.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -3911,7 +3911,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being created.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -4350,7 +4350,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being created.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -4370,7 +4370,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being created.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -4391,7 +4391,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being created.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -4410,7 +4410,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being created.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -4424,7 +4424,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being created.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -4524,7 +4524,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -4534,7 +4534,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -4767,7 +4767,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -4789,7 +4789,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -5370,7 +5370,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -5391,7 +5391,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -5413,7 +5413,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -5433,7 +5433,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -5448,7 +5448,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -5855,7 +5855,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -5864,7 +5864,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -6014,7 +6014,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -6035,7 +6035,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being updated.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -6474,7 +6474,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -6494,7 +6494,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -6515,7 +6515,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -6534,7 +6534,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -6548,7 +6548,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being updated.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -6648,7 +6648,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -6658,7 +6658,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -6811,7 +6811,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -6833,7 +6833,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -7278,7 +7278,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -7299,7 +7299,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -7321,7 +7321,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -7341,7 +7341,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -7356,7 +7356,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -8246,7 +8246,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -8256,7 +8256,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -8409,7 +8409,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -8431,7 +8431,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -8876,7 +8876,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -8897,7 +8897,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -8919,7 +8919,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -8939,7 +8939,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -8954,7 +8954,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -9051,7 +9051,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is beign resumed.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -9060,7 +9060,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is beign resumed.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -9210,7 +9210,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is beign resumed.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -9231,7 +9231,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is beign resumed.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -9670,7 +9670,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is beign resumed.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -9690,7 +9690,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is beign resumed.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -9711,7 +9711,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is beign resumed.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -9730,7 +9730,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is beign resumed.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -9744,7 +9744,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is beign resumed.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -9844,7 +9844,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -9854,7 +9854,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -10007,7 +10007,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -10029,7 +10029,7 @@ public final class ConnectorServiceOuterClass {
      * To get this name, make a [ConnectorService.List] request.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -10474,7 +10474,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -10495,7 +10495,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -10517,7 +10517,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -10537,7 +10537,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -10552,7 +10552,7 @@ public final class ConnectorServiceOuterClass {
        * To get this name, make a [ConnectorService.List] request.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -10649,7 +10649,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being paused.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     java.lang.String getConnectorName();
@@ -10658,7 +10658,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being paused.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     com.google.protobuf.ByteString
@@ -10808,7 +10808,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being paused.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The connectorName.
      */
     @java.lang.Override
@@ -10829,7 +10829,7 @@ public final class ConnectorServiceOuterClass {
      * Name of the Apache Kafka® connector that is being paused.
      * </pre>
      *
-     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for connectorName.
      */
     @java.lang.Override
@@ -11268,7 +11268,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being paused.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The connectorName.
        */
       public java.lang.String getConnectorName() {
@@ -11288,7 +11288,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being paused.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for connectorName.
        */
       public com.google.protobuf.ByteString
@@ -11309,7 +11309,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being paused.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The connectorName to set.
        * @return This builder for chaining.
        */
@@ -11328,7 +11328,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being paused.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
       public Builder clearConnectorName() {
@@ -11342,7 +11342,7 @@ public final class ConnectorServiceOuterClass {
        * Name of the Apache Kafka® connector that is being paused.
        * </pre>
        *
-       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string connector_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_.a-zA-Z0-9]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for connectorName to set.
        * @return This builder for chaining.
        */
@@ -11491,85 +11491,85 @@ public final class ConnectorServiceOuterClass {
       "/operation.proto\032&yandex/cloud/operation" +
       "/operation.proto\032\035yandex/cloud/validatio" +
       "n.proto\032)yandex/cloud/mdb/kafka/v1/conne" +
-      "ctor.proto\"p\n\023GetConnectorRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector" +
-      "_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9" +
-      "_-]*\"w\n\025ListConnectorsRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"k\n\026ListConnectorsResponse\0228\n\nconne" +
-      "ctors\030\001 \003(\0132$.yandex.cloud.mdb.kafka.v1." +
-      "Connector\022\027\n\017next_page_token\030\002 \001(\t\"\202\001\n\026C" +
-      "reateConnectorRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022F\n\016connector_spec\030\002 \001(\0132" +
-      "(.yandex.cloud.mdb.kafka.v1.ConnectorSpe" +
-      "cB\004\350\3071\001\"f\n\027CreateConnectorMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\0227\n\016connector_name\030\002 \001(\tB\037" +
-      "\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"\362\001\n\026Upda" +
-      "teConnectorRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(\tB\037\350\307" +
-      "1\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_" +
-      "mask\030\003 \001(\0132\032.google.protobuf.FieldMask\022L" +
-      "\n\016connector_spec\030\004 \001(\0132..yandex.cloud.md" +
-      "b.kafka.v1.UpdateConnectorSpecB\004\350\3071\001\"t\n\027" +
-      "UpdateConnectorMetadata\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(" +
-      "\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"s\n\026De" +
-      "leteConnectorRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name\030\002 \001(\tB\037" +
-      "\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"E\n\027Delet" +
-      "eConnectorMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\026" +
-      "\n\016connector_name\030\002 \001(\t\"s\n\026ResumeConnecto" +
-      "rRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=25" +
-      "6\362\3071\016[a-zA-Z0-9_-]*\"f\n\027ResumeConnectorMe" +
-      "tadata\022\022\n\ncluster_id\030\001 \001(\t\0227\n\016connector_" +
-      "name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_" +
-      "-]*\"r\n\025PauseConnectorRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0227\n\016connector_name" +
-      "\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256\362\3071\016[a-zA-Z0-9_-]*\"" +
-      "e\n\026PauseConnectorMetadata\022\022\n\ncluster_id\030" +
-      "\001 \001(\t\0227\n\016connector_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<" +
-      "=256\362\3071\016[a-zA-Z0-9_-]*2\246\013\n\020ConnectorServ" +
-      "ice\022\250\001\n\003Get\022..yandex.cloud.mdb.kafka.v1." +
-      "GetConnectorRequest\032$.yandex.cloud.mdb.k" +
-      "afka.v1.Connector\"K\202\323\344\223\002E\022C/managed-kafk" +
-      "a/v1/clusters/{cluster_id}/connectors/{c" +
-      "onnector_name}\022\247\001\n\004List\0220.yandex.cloud.m" +
-      "db.kafka.v1.ListConnectorsRequest\0321.yand" +
-      "ex.cloud.mdb.kafka.v1.ListConnectorsResp" +
-      "onse\":\202\323\344\223\0024\0222/managed-kafka/v1/clusters" +
-      "/{cluster_id}/connectors\022\305\001\n\006Create\0221.ya" +
-      "ndex.cloud.mdb.kafka.v1.CreateConnectorR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"e\202\323\344\223\0027\"2/managed-kafka/v1/clusters/{c" +
-      "luster_id}/connectors:\001*\262\322*$\n\027CreateConn" +
-      "ectorMetadata\022\tConnector\022\326\001\n\006Update\0221.ya" +
-      "ndex.cloud.mdb.kafka.v1.UpdateConnectorR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"v\202\323\344\223\002H2C/managed-kafka/v1/clusters/{c" +
-      "luster_id}/connectors/{connector_name}:\001" +
-      "*\262\322*$\n\027UpdateConnectorMetadata\022\tConnecto" +
-      "r\022\337\001\n\006Delete\0221.yandex.cloud.mdb.kafka.v1" +
-      ".DeleteConnectorRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\177\202\323\344\223\002E*C/managed-kaf" +
-      "ka/v1/clusters/{cluster_id}/connectors/{" +
-      "connector_name}\262\322*0\n\027DeleteConnectorMeta" +
-      "data\022\025google.protobuf.Empty\022\335\001\n\006Resume\0221" +
-      ".yandex.cloud.mdb.kafka.v1.ResumeConnect" +
-      "orRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"}\202\323\344\223\002O\"J/managed-kafka/v1/clusters" +
-      "/{cluster_id}/connectors/resume/{connect" +
-      "or_name}:\001*\262\322*$\n\027ResumeConnectorMetadata" +
-      "\022\tConnector\022\331\001\n\005Pause\0220.yandex.cloud.mdb" +
-      ".kafka.v1.PauseConnectorRequest\032!.yandex" +
-      ".cloud.operation.Operation\"{\202\323\344\223\002N\"I/man" +
+      "ctor.proto\"q\n\023GetConnectorRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\016connector" +
+      "_name\030\002 \001(\tB \350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z" +
+      "0-9]*\"w\n\025ListConnectorsRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"k\n\026ListConnectorsResponse\0228\n\nconn" +
+      "ectors\030\001 \003(\0132$.yandex.cloud.mdb.kafka.v1" +
+      ".Connector\022\027\n\017next_page_token\030\002 \001(\t\"\202\001\n\026" +
+      "CreateConnectorRequest\022 \n\ncluster_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022F\n\016connector_spec\030\002 \001(\013" +
+      "2(.yandex.cloud.mdb.kafka.v1.ConnectorSp" +
+      "ecB\004\350\3071\001\"g\n\027CreateConnectorMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\0228\n\016connector_name\030\002 \001(\tB" +
+      " \350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z0-9]*\"\363\001\n\026Up" +
+      "dateConnectorRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0228\n\016connector_name\030\002 \001(\tB " +
+      "\350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z0-9]*\022/\n\013upda" +
+      "te_mask\030\003 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022L\n\016connector_spec\030\004 \001(\0132..yandex.cloud" +
+      ".mdb.kafka.v1.UpdateConnectorSpecB\004\350\3071\001\"" +
+      "u\n\027UpdateConnectorMetadata\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\016connector_name\030\002" +
+      " \001(\tB \350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z0-9]*\"t" +
+      "\n\026DeleteConnectorRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\016connector_name\030\002 \001" +
+      "(\tB \350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z0-9]*\"E\n\027" +
+      "DeleteConnectorMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\022\026\n\016connector_name\030\002 \001(\t\"t\n\026ResumeCon" +
+      "nectorRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\0228\n\016connector_name\030\002 \001(\tB \350\3071\001\212\3101" +
+      "\005<=256\362\3071\017[-_.a-zA-Z0-9]*\"g\n\027ResumeConne" +
+      "ctorMetadata\022\022\n\ncluster_id\030\001 \001(\t\0228\n\016conn" +
+      "ector_name\030\002 \001(\tB \350\3071\001\212\3101\005<=256\362\3071\017[-_.a" +
+      "-zA-Z0-9]*\"s\n\025PauseConnectorRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\016connect" +
+      "or_name\030\002 \001(\tB \350\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA" +
+      "-Z0-9]*\"f\n\026PauseConnectorMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\0228\n\016connector_name\030\002 \001(\tB \350" +
+      "\3071\001\212\3101\005<=256\362\3071\017[-_.a-zA-Z0-9]*2\246\013\n\020Conn" +
+      "ectorService\022\250\001\n\003Get\022..yandex.cloud.mdb." +
+      "kafka.v1.GetConnectorRequest\032$.yandex.cl" +
+      "oud.mdb.kafka.v1.Connector\"K\202\323\344\223\002E\022C/man" +
       "aged-kafka/v1/clusters/{cluster_id}/conn" +
-      "ectors/pause/{connector_name}:\001*\262\322*#\n\026Pa" +
-      "useConnectorMetadata\022\tConnectorBd\n\035yande" +
-      "x.cloud.api.mdb.kafka.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/mdb/k" +
-      "afka/v1;kafkab\006proto3"
+      "ectors/{connector_name}\022\247\001\n\004List\0220.yande" +
+      "x.cloud.mdb.kafka.v1.ListConnectorsReque" +
+      "st\0321.yandex.cloud.mdb.kafka.v1.ListConne" +
+      "ctorsResponse\":\202\323\344\223\0024\0222/managed-kafka/v1" +
+      "/clusters/{cluster_id}/connectors\022\305\001\n\006Cr" +
+      "eate\0221.yandex.cloud.mdb.kafka.v1.CreateC" +
+      "onnectorRequest\032!.yandex.cloud.operation" +
+      ".Operation\"e\202\323\344\223\0027\"2/managed-kafka/v1/cl" +
+      "usters/{cluster_id}/connectors:\001*\262\322*$\n\027C" +
+      "reateConnectorMetadata\022\tConnector\022\326\001\n\006Up" +
+      "date\0221.yandex.cloud.mdb.kafka.v1.UpdateC" +
+      "onnectorRequest\032!.yandex.cloud.operation" +
+      ".Operation\"v\202\323\344\223\002H2C/managed-kafka/v1/cl" +
+      "usters/{cluster_id}/connectors/{connecto" +
+      "r_name}:\001*\262\322*$\n\027UpdateConnectorMetadata\022" +
+      "\tConnector\022\337\001\n\006Delete\0221.yandex.cloud.mdb" +
+      ".kafka.v1.DeleteConnectorRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\177\202\323\344\223\002E*C/ma" +
+      "naged-kafka/v1/clusters/{cluster_id}/con" +
+      "nectors/{connector_name}\262\322*0\n\027DeleteConn" +
+      "ectorMetadata\022\025google.protobuf.Empty\022\335\001\n" +
+      "\006Resume\0221.yandex.cloud.mdb.kafka.v1.Resu" +
+      "meConnectorRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"}\202\323\344\223\002O\"J/managed-kafka/v1" +
+      "/clusters/{cluster_id}/connectors/resume" +
+      "/{connector_name}:\001*\262\322*$\n\027ResumeConnecto" +
+      "rMetadata\022\tConnector\022\331\001\n\005Pause\0220.yandex." +
+      "cloud.mdb.kafka.v1.PauseConnectorRequest" +
+      "\032!.yandex.cloud.operation.Operation\"{\202\323\344" +
+      "\223\002N\"I/managed-kafka/v1/clusters/{cluster" +
+      "_id}/connectors/pause/{connector_name}:\001" +
+      "*\262\322*#\n\026PauseConnectorMetadata\022\tConnector" +
+      "Bd\n\035yandex.cloud.api.mdb.kafka.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/kafka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
